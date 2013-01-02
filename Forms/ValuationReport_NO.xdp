@@ -1,0 +1,3964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2012-12-18T16:32:35Z" uuid="4cf830d2-6691-46e4-b0e9-62cb0a8273bb">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="Data" layout="tb" locale="sv_SE" restoreState="auto">
+      <pageSet>
+         <pageArea name="mpgPage1" id="Page1">
+            <subform w="202mm" minH="18mm" name="subDocumentHeader">
+               <bind match="dataRef" ref="$.Document.DocumentHeader"/>
+               <subform x="87mm" minH="22.225mm" name="subTestLabel" layout="tb" y="21mm" w="76.15mm">
+                  <bind match="none"/>
+                  <field name="fldTestLabelData" h="5.939mm" minW="32.514mm" presence="hidden">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font typeface="Arial" weight="bold" baselineShift="0pt" size="14pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1.0008mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <bind match="dataRef" ref="$.TestLabel"/>
+                     <?templateDesigner expand 1?></field>
+                  <field name="fldTestLabel" access="readOnly" minH="4mm" w="76mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="8pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <?templateDesigner expand 1?>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var receivedText = fldTestLabelData.rawValue;
+	//xfa.host.messageBox(receivedText);
+    
+	var cleanedValue = receivedText;
+//If form pre-population logic has converted &lt; and &gt; signs into &amp;lt; or &amp;gt; then un-comment below two lines. Those two lines will do the needed replacement (&amp;gt; to &gt;)
+	cleanedValue = receivedText.replace(/(\&amp;lt\;)/g,"&lt;");
+	cleanedValue = cleanedValue.replace(/(\&amp;gt\;)/g,"&gt;"); 
+
+//	xfa.host.messageBox("exdataTemplate.rawValue " + exdataTemplate.rawValue);
+
+	//How does rich text work in this sample?
+	//To set the data properly into a richtext supported TextField we have to little bit more than setting rawValue.
+	// The data needs to be stored in exData section of text field with a little formatting around. I call it 'exData envelope' where I inject the content at certain place. 
+	// The place in this envelope where the actual content needs to injected is represented with 'ccc'.
+	
+	//Get the envelope
+	var templateVal = subRichTextEnvelope.exdataTemplate.rawValue;
+	//replace 'ccc' with the data we received.
+	cleanedValue = templateVal.replace(/(ccc)/g,cleanedValue); 
+	
+	//show what's getting set into the textfield
+	//console.println(cleanedValue);
+	
+	//this is how we have to set the rich text data into the textfield's exData section.
+	this.value.exData.loadXML(cleanedValue,1,1);
+
+</script>
+                     </event>
+                     <bind match="none"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>TestLabel</p></body>
+                        </exData>
+                     </value>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <field name="DealerName" minW="134mm" y="13mm" x="9mm" minH="9mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="22pt"/>
+                  <margin topInset="1mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                  <bind match="dataRef" ref="$.DealerName"/>
+               </field>
+               <field name="fldDocumentName" minW="48mm" access="readOnly" x="153mm" y="13mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption reserve="45mm">
+                     <value>
+                        <text>Takstskjema</text>
+                     </value>
+                     <font typeface="Arial" size="22pt"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               </field>
+               <field name="ValuationNo" minW="21mm" access="readOnly" x="10mm" y="23mm" h="8mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption placement="top" reserve="4mm">
+                     <value>
+                        <text>Takstid:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.ValuationNo"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               </field>
+               <field name="PerformedBy" minH="8mm" minW="49mm" access="readOnly" x="31mm" y="23mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption placement="top" reserve="4mm">
+                     <value>
+                        <text>Utført av:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.PerformedBy"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               </field>
+               <field name="DateCreated" minH="8mm" minW="22mm" access="readOnly" x="103mm" y="23mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption placement="top" reserve="4mm">
+                     <value>
+                        <text>Dato:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.DateCreated"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               </field>
+               <field name="SellerName" minH="8mm" minW="72mm" access="readOnly" x="130mm" y="23mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption placement="top" reserve="4mm">
+                     <value>
+                        <text>Selger:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.SellerName"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               </field>
+               <subform w="200.025mm" h="50mm" name="subRichTextEnvelope" presence="hidden">
+                  <bind match="none"/>
+                  <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border>
+                              <?templateDesigner StyleID aped3?>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Envelope</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
+&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
+&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
+&gt;ccc&lt;/p&#xD;
+&gt;&lt;/body&#xD;
+&gt;&lt;/exData&#xD;
+&gt;</text>
+                     </value>
+                     <traversal>
+                        <traverse ref="txtTextArea2[0]"/>
+                     </traversal>
+                     <bind match="none"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform x="3mm" minH="22.225mm" name="subVerticalLabel" layout="tb" y="93mm" presence="hidden">
+                  <bind match="none"/>
+                  <field name="fldVerticalLabel" access="readOnly" minH="4mm" rotate="90" minW="55mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="8pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <?templateDesigner expand 1?>
+                     <bind match="none"/>
+                     <value>
+                        <text>VerticalLabel</text>
+                     </value>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <contentArea x="9mm" y="31mm" w="193mm" h="200mm" name="areaPage1" id="areaPage1_ID"/>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <draw name="LinBorderMpg1" y="10mm" x="8mm" w="194mm" h="280mm">
+               <value>
+                  <rectangle>
+                     <edge thickness="0.1mm"/>
+                     <corner radius="5.08mm" thickness="0.1mm"/>
+                  </rectangle>
+               </value>
+            </draw>
+            <occur min="1" max="1"/>
+            <subform x="8mm" y="237mm" w="193.998mm" h="51mm" name="subFoot">
+               <bind match="none"/>
+               <field name="TyresSummerVF" access="readOnly" w="11mm" h="5mm" y="33mm" x="86.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerVF"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresSummerHF" access="readOnly" w="11mm" h="5mm" y="33mm" x="97.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerHF"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresSummerVB" access="readOnly" w="11mm" h="5mm" y="33mm" x="108.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerVB"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresSummerHB" access="readOnly" w="11mm" h="5mm" y="33mm" x="119.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerHB"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresWinterVF" access="readOnly" w="11mm" h="5mm" y="38mm" x="86.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterVF"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresWinterHF" access="readOnly" w="11mm" h="5mm" y="38mm" x="97.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterHF"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresWinterVB" access="readOnly" w="11mm" h="5mm" y="38mm" x="108.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterVB"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresWinterHB" access="readOnly" w="11mm" h="5mm" y="38mm" x="119.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterHB"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="ValidThrough" access="readOnly" w="63mm" h="7mm" y="4mm" x="130.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.ValidThrough"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" weight="bold"/>
+                  <border>
+                     <edge thickness="0.1mm" presence="hidden"/>
+                     <corner thickness="0.1mm" presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="36mm">
+                     <value>
+                        <text>Tilbud gyldig til:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="ExpectedSalesPrice" access="readOnly" w="63mm" h="5mm" y="13mm" x="130.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.ExpectedSalesPrice"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="38mm">
+                     <value>
+                        <text>Antatt salgspris</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="DefectPriceTotal" access="readOnly" w="63mm" h="5mm" y="18mm" x="130.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.DefectPriceTotal"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="38mm">
+                     <value>
+                        <text>Påkost fra takst</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="RegistrationFee" access="readOnly" w="63mm" h="5mm" y="23mm" x="131mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.RegistrationFee"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="38mm">
+                     <value>
+                        <text>Omregistreringsavgift</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="PreparationCost" access="readOnly" w="63mm" h="5mm" y="28mm" x="130.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.PreparationCost"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="38mm">
+                     <value>
+                        <text>Klargjøringskostnader </text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="Comment" access="readOnly" w="32mm" h="5mm" y="28mm" x="54.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="29mm">
+                     <value>
+                        <text>Dekk mm</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="Comment" access="readOnly" w="32mm" h="5mm" y="33mm" x="54.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="29mm">
+                     <value>
+                        <text>Sommerdekk</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="Comment" access="readOnly" w="32mm" h="5mm" y="38mm" x="54.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="29mm">
+                     <value>
+                        <text>Vinterdekk</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="Comment" access="readOnly" w="11mm" h="5mm" y="28mm" x="86.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <value>
+                        <text>VF</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle" hAlign="center"/>
+                  </caption>
+               </field>
+               <field name="Comment" access="readOnly" w="121.001mm" h="21.644mm" x="0mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.Comment"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm" presence="hidden"/>
+                     <corner thickness="0.1mm" presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption placement="top" reserve="5.6444mm">
+                     <value>
+                        <text>Kommentar:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="Comment" access="readOnly" w="11mm" h="5mm" y="28mm" x="97.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <value>
+                        <text>HF</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle" hAlign="center"/>
+                  </caption>
+               </field>
+               <field name="Comment" access="readOnly" w="11mm" h="5mm" y="28mm" x="108.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <value>
+                        <text>VB</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle" hAlign="center"/>
+                  </caption>
+               </field>
+               <field name="Comment" access="readOnly" w="11mm" h="5mm" y="28mm" x="119.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <value>
+                        <text>HB</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle" hAlign="center"/>
+                  </caption>
+               </field>
+               <field name="SalesCost" access="readOnly" w="63mm" h="5mm" y="33mm" x="131mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.SalesCost"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="38mm">
+                     <value>
+                        <text>Sum salgsomkostninger</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="TradeinPrice" access="readOnly" w="63mm" h="5mm" y="38mm" x="131mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TradeinPrice"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="38mm">
+                     <value>
+                        <text>Antatt innbyttepris</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <draw name="Line1" y="23mm" x="39mm" w="0in" h="20mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.1mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <draw name="line2" y="13mm" x="170mm" w="0in" h="30.017mm">
+                  <value>
+                     <line slope="/">
+                        <edge thickness="0.1mm"/>
+                     </line>
+                  </value>
+               </draw>
+               <field name="SalesSignature" access="readOnly" w="76mm" h="8mm" y="43mm" x="55mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8.5pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="0mm" placement="top">
+                     <value>
+                        <text>Signatur selger:</text>
+                     </value>
+                  </caption>
+               </field>
+               <field name="Price" access="readOnly" w="63mm" h="8mm" y="43mm" x="130.998mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8.5pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="0mm" placement="top">
+                     <value>
+                        <text>Godkjenning innbyttepris og takst:</text>
+                     </value>
+                  </caption>
+               </field>
+               <field name="MileageConfirmed" access="readOnly" w="54.997mm" h="5mm" y="33.058mm" x="0mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.MileageConfirmed"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="39mm">
+                     <value>
+                        <text>Km.stand bekreftes</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="Signatur" access="readOnly" w="54.997mm" h="8mm" y="43.058mm" x="0mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8.5pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="1mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <caption reserve="0mm" placement="top">
+                     <value>
+                        <text>Signatur eier:</text>
+                     </value>
+                  </caption>
+               </field>
+               <field name="ChipTuned" access="readOnly" w="54.997mm" h="5mm" y="38.058mm" x="0mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.ChipTuned"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="39mm">
+                     <value>
+                        <text>Chiptunet</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="MajorDamage" access="readOnly" w="54.997mm" h="5mm" y="28.058mm" x="0mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.MajorDamage"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="39mm">
+                     <value>
+                        <text>Tidligere større skade</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="Encumbrance" access="readOnly" w="54.997mm" h="5mm" y="23.058mm" x="0mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.Encumbrance"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm" presence="hidden"/>
+                     <corner thickness="0.1mm" presence="hidden"/>
+                     <fill>
+                        <color value="255,128,0"/>
+                     </fill>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="39mm">
+                     <value>
+                        <text>Økonomiske heftelser</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></pageArea>
+         <pageArea name="mpgPage2" id="Page1_ID">
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <subform w="202mm" minH="18mm" name="subDocumentHeader">
+               <bind match="dataRef" ref="$.Document.DocumentHeader"/>
+               <subform x="87mm" minH="22.225mm" name="subTestLabel" layout="tb" y="17mm" w="76.15mm">
+                  <bind match="none"/>
+                  <field name="fldTestLabel" access="readOnly" minH="4mm" w="76mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="8pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <?templateDesigner expand 1?>
+                     <bind match="none"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>TestLabel</p></body>
+                        </exData>
+                     </value>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+
+var receivedText = xfa.resolveNode("Data.#pageSet.mpgPage1.subDocumentHeader.subTestLabel.fldTestLabelData").rawValue;
+	//xfa.host.messageBox(receivedText);
+    
+	var cleanedValue = receivedText;
+//If form pre-population logic has converted &lt; and &gt; signs into &amp;lt; or &amp;gt; then un-comment below two lines. Those two lines will do the needed replacement (&amp;gt; to &gt;)
+	cleanedValue = receivedText.replace(/(\&amp;lt\;)/g,"&lt;");
+	cleanedValue = cleanedValue.replace(/(\&amp;gt\;)/g,"&gt;"); 
+
+//	xfa.host.messageBox("exdataTemplate.rawValue " + exdataTemplate.rawValue);
+
+	//How does rich text work in this sample?
+	//To set the data properly into a richtext supported TextField we have to little bit more than setting rawValue.
+	// The data needs to be stored in exData section of text field with a little formatting around. I call it 'exData envelope' where I inject the content at certain place. 
+	// The place in this envelope where the actual content needs to injected is represented with 'ccc'.
+	
+	//Get the envelope
+	var templateVal = subRichTextEnvelope.exdataTemplate.rawValue;
+	//replace 'ccc' with the data we received.
+	cleanedValue = templateVal.replace(/(ccc)/g,cleanedValue); 
+	
+	//show what's getting set into the textfield
+	//console.println(cleanedValue);
+	
+	//this is how we have to set the rich text data into the textfield's exData section.
+	this.value.exData.loadXML(cleanedValue,1,1);
+</script>
+                     </event>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <field name="DealerName" minW="134mm" y="9mm" x="9mm" minH="9mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="22pt"/>
+                  <margin topInset="1mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                  <bind match="dataRef" ref="$.DealerName"/>
+               </field>
+               <field name="fldDocumentName" minW="48mm" access="readOnly" x="153mm" y="9mm" h="9mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption reserve="45mm">
+                     <value>
+                        <text>Takstskjema</text>
+                     </value>
+                     <font typeface="Arial" size="22pt"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="1mm"/>
+               </field>
+               <field name="ValuationNo" minW="21mm" access="readOnly" x="10mm" y="19mm" h="8mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption placement="top" reserve="4mm">
+                     <value>
+                        <text>Takstid:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.ValuationNo"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <?templateDesigner expand 1?></field>
+               <field name="PerformedBy" minH="8mm" minW="49mm" access="readOnly" x="31mm" y="19mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption placement="top" reserve="4mm">
+                     <value>
+                        <text>Utført av:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.PerformedBy"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               </field>
+               <field name="DateCreated" minH="8mm" minW="22mm" access="readOnly" x="103mm" y="19mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption placement="top" reserve="4mm">
+                     <value>
+                        <text>Dato:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.DateCreated"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               </field>
+               <field name="SellerName" minH="8mm" minW="72mm" access="readOnly" x="130mm" y="19mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption placement="top" reserve="4mm">
+                     <value>
+                        <text>Selger:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.SellerName"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               </field>
+               <?templateDesigner expand 1?>
+               <subform w="200.025mm" h="50mm" name="subRichTextEnvelope" presence="hidden">
+                  <bind match="none"/>
+                  <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border>
+                              <?templateDesigner StyleID aped3?>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Envelope</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
+&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
+&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
+&gt;ccc&lt;/p&#xD;
+&gt;&lt;/body&#xD;
+&gt;&lt;/exData&#xD;
+&gt;</text>
+                     </value>
+                     <traversal>
+                        <traverse ref="txtTextArea2[0]"/>
+                     </traversal>
+                     <bind match="none"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+            </subform>
+            <subform w="193.999mm" h="5mm" name="subHeaderText" x="8mm" y="27mm">
+               <bind match="none"/>
+               <field name="ErrorText2" access="readOnly" h="4mm" w="124mm" x="1mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption reserve="60mm">
+                     <value>
+                        <text>Skader fortsettelse:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="EquipmentText2" access="readOnly" h="4mm" w="67.999mm" x="125mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption reserve="40mm">
+                     <value>
+                        <text>Utstyr fortsettelse:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <?templateDesigner expand 0?>
+               <margin topInset="1mm"/>
+            </subform>
+            <contentArea x="9mm" y="32mm" w="193mm" h="249mm" name="areaPage2" id="areaPage2_ID"/>
+            <draw name="LinBorderMpg1" y="8mm" x="8mm" w="194mm" h="277mm">
+               <value>
+                  <rectangle>
+                     <edge thickness="0.1mm"/>
+                     <corner radius="5.08mm" thickness="0.1mm"/>
+                  </rectangle>
+               </value>
+            </draw>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="193mm" name="PageContent" layout="tb">
+         <bind match="none"/>
+         <subform w="192.999mm" name="subHeaderInfo">
+            <bind match="dataRef" ref="$.Document.HeaderInfo"/>
+            <field name="CarBrand" access="readOnly" h="8mm" y="0.001mm" w="31.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Merke:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarBrand"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="CarModel" access="readOnly" h="8mm" x="31.999mm" y="0.001mm" w="33.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Modell:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarModel"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="CarModelDesc" access="readOnly" h="8mm" x="65.999mm" y="0.001mm" w="49mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Variant:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarModelDesc"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="CarModelYear" access="readOnly" h="8mm" x="114.999mm" y="0.001mm" w="24mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Årsmodell:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarModelYear"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="0.5mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="Color" access="readOnly" h="8mm" x="138.999mm" y="0.001mm" w="33mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Farge:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.Color"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="CarRegNo" access="readOnly" h="8mm" x="171.999mm" y="0.001mm" w="20mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Kj.merke:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarRegNo"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="EngineVolume" access="readOnly" h="8mm" x="0mm" y="8mm" w="31.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Motorvolum/effekt:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.EngineVolume"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="EngineEffect" access="readOnly" h="4mm" y="12mm" x="14.999mm" w="16.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="dataRef" ref="$.EngineEffect"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <border>
+                  <edge thickness="0.1mm" presence="hidden"/>
+                  <corner thickness="0.1mm" presence="hidden"/>
+               </border>
+               <margin bottomInset="0.5mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="CarVIN" access="readOnly" h="8mm" x="31.999mm" y="8mm" w="52mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Understellsnr.:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarVIN"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="CarMileage" access="readOnly" h="8mm" x="83.999mm" y="8mm" w="31mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Km stand:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarMileage"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="FuelTypeText" access="readOnly" h="8mm" x="114.999mm" y="8mm" w="24mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Drivstoff:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.FuelTypeText"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="0.5mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="DateOfLastControl" access="readOnly" h="8mm" x="138.999mm" y="8mm" w="33mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>PKK utført:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.DateOfLastControl"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="Seats" access="readOnly" h="8mm" x="171.999mm" y="8mm" w="20mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.8787mm">
+                  <value>
+                     <text>Antall seter:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.Seats"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="CarGroupText" access="readOnly" h="8mm" y="16mm" w="31.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Kjøretøygruppe:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarGroupText"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="CarWeight" access="readOnly" h="8mm" x="31.999mm" y="16mm" w="33.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Vekt:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarWeight"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="GearType" access="readOnly" h="8mm" x="65.998mm" y="16mm" w="18mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Gear:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.GearType"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="CarBody" access="readOnly" h="8mm" x="83.999mm" y="16mm" w="31mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Karosseri:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarBody"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="CarRegDate" access="readOnly" h="8mm" x="114.999mm" y="16mm" w="24mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Reg.1. gang:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarRegDate"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="0.5mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="DateOfLastService" access="readOnly" h="8mm" x="138.999mm" y="16mm" w="53mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Siste service dato/km:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.DateOfLastService"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="NextServiceMileage" access="readOnly" h="4mm" y="20mm" x="158.999mm" w="16.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="dataRef" ref="$.NextServiceMileage"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <border>
+                  <edge thickness="0.1mm" presence="hidden"/>
+                  <corner thickness="0.1mm" presence="hidden"/>
+               </border>
+               <margin bottomInset="0.5mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="CustomerName" access="readOnly" h="8mm" y="24mm" w="65.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Eier/Bruker:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CustomerName"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <field name="Imported" access="readOnly" h="8mm" x="65.999mm" y="24mm" w="18mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Bruktimp.:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.Imported"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <margin topInset="1mm"/>
+            <field name="CarMileageAtDelivery" access="readOnly" h="8mm" x="83.999mm" y="24mm" w="31mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.678mm">
+                  <value>
+                     <text>Km innlevering:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarMileageAtDelivery"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="CarRegDateLast" access="readOnly" h="8mm" x="114.999mm" y="24mm" w="24mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Reg. siste gang:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <bind match="dataRef" ref="$.CarRegDateLast"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="0.5mm" rightInset="0mm" topInset="0mm"/>
+            </field>
+            <field name="TimingBeltDate" access="readOnly" h="8mm" x="138.999mm" y="24mm" w="53mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <caption placement="top" reserve="3.6mm">
+                  <value>
+                     <text>Registerreim skiftet dato/km:</text>
+                  </value>
+                  <font typeface="Arial" size="8.5pt" weight="bold" baselineShift="0pt"/>
+                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </caption>
+               <bind match="dataRef" ref="$.TimingBeltDate"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <para vAlign="middle"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+            </field>
+            <field name="TimingBeltMileage" access="readOnly" h="4mm" y="28mm" x="158.999mm" w="17mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="dataRef" ref="$.TimingBeltMileage"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="9pt"/>
+               <border>
+                  <edge thickness="0.1mm" presence="hidden"/>
+                  <corner thickness="0.1mm" presence="hidden"/>
+               </border>
+               <margin bottomInset="0.5mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+            </field>
+            <?templateDesigner expand 0?></subform>
+         <subform w="192.999mm" name="subDefectsOptionsArea" layout="tb">
+            <bind match="none"/>
+            <margin topInset="0mm"/>
+            <subform minH="9mm" layout="tb" name="subTopBottomBorder" w="193mm">
+               <bind match="none"/>
+               <subform w="192mm" minH="4mm" name="subDefectsAndOptionsHeader" layout="lr-tb">
+                  <bind match="none"/>
+                  <field name="ErrorText" access="readOnly" h="4mm" w="124mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <caption reserve="27.34mm">
+                        <value>
+                           <text>Feil/utbedringer</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <bind match="none"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                     </event>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <border>
+                        <edge thickness="0.1mm"/>
+                        <corner thickness="0.1mm"/>
+                     </border>
+                     <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>(A= Nytt/byttet B= Normal C=Noe svak D= Defekt/Mangel)</text>
+                     </value>
+                  </field>
+                  <field name="EquipmentText" access="readOnly" h="4mm" w="59.45mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <caption reserve="40mm">
+                        <value>
+                           <text>Utstyr</text>
+                        </value>
+                        <font typeface="Arial" size="8.5pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <bind match="none"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                     </event>
+                     <font typeface="Arial" size="9pt"/>
+                     <border>
+                        <edge thickness="0.1mm" presence="hidden"/>
+                        <corner thickness="0.1mm" presence="hidden"/>
+                     </border>
+                     <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                     <para vAlign="middle"/>
+                  </field>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <subform y="4mm" minH="7.292mm" layout="lr-tb" name="subDefectsOptionsWestern">
+                  <bind match="none"/>
+                  <subform w="124mm" minH="3.646mm" layout="tb" name="subDefectsTopBottom">
+                     <bind match="none"/>
+                     <subform name="subDefectsLeft" layout="lr-tb">
+                        <bind match="none"/>
+                        <subform minH="9mm" layout="lr-tb" name="subLeftBorder" w="124mm">
+                           <bind match="none"/>
+                           <subform layout="lr-tb" name="subLeftText">
+                              <bind match="none"/>
+                              <subform minH="3mm" layout="lr-tb" name="subBorderRight" w="124mm">
+                                 <bind match="none"/>
+                                 <subform minH="9mm" layout="tb" name="subLeftPart1Row">
+                                    <bind match="none"/>
+                                    <subform w="107mm" layout="tb" name="subTopToBottomWrapper">
+                                       <bind match="none"/>
+                                       <draw name="DefectCtrlPoint" w="107mm" minH="3.646mm">
+                                          <ui>
+                                             <textEdit/>
+                                          </ui>
+                                          <value>
+                                             <exData contentType="text/html">
+                                                <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:7.5pt;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField016239"/><span style="font-size:8.5pt"><span style="xfa-spacerun:yes">  </span></span></p></body>
+                                             </exData>
+                                          </value>
+                                          <font typeface="Arial" size="8.5pt"/>
+                                          <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                                          <para vAlign="middle"/>
+                                          <border>
+                                             <edge thickness="0.1mm" presence="hidden"/>
+                                             <corner thickness="0.1mm" presence="hidden"/>
+                                          </border>
+                                          <keep next="contentArea"/>
+                                       </draw>
+                                       <field name="floDefectCombined" h="9mm" id="floatingField016239" presence="hidden" access="readOnly" minW="62mm">
+                                          <ui>
+                                             <textEdit hScrollPolicy="off" multiLine="1" vScrollPolicy="off">
+                                                <border>
+                                                   <edge stroke="lowered"/>
+                                                </border>
+                                                <margin/>
+                                             </textEdit>
+                                          </ui>
+                                          <font typeface="Myriad Pro"/>
+                                          <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                                          <para vAlign="middle"/>
+                                          <bind match="dataRef" ref="$.Document.Defects.Defect[*].DefectInformation"/>
+                                          <event activity="initialize" name="event__initialize">
+                                             <script contentType="application/x-javascript">
+</script>
+                                          </event>
+                                       </field>
+                                       <occur min="21" max="-1"/>
+                                       <?templateDesigner expand 1?></subform>
+                                    <border>
+                                       <edge presence="hidden"/>
+                                       <corner/>
+                                       <corner presence="hidden"/>
+                                       <corner/>
+                                       <corner/>
+                                    </border>
+                                    <?templateDesigner expand 1?></subform>
+                                 <subform w="17mm" minH="3.646mm" layout="tb" name="subDefectPrice">
+                                    <bind match="none"/>
+                                    <subform w="17mm" minH="3.646mm" layout="tb" name="subTopToBottomWrapper">
+                                       <bind match="none"/>
+                                       <field name="DefectPrice" access="readOnly" w="17mm" minH="3.646mm">
+                                          <ui>
+                                             <textEdit>
+                                                <border presence="hidden"/>
+                                                <margin/>
+                                             </textEdit>
+                                          </ui>
+                                          <bind match="dataRef" ref="$.Document.Defects.Defect[*].DefectPrice"/>
+                                          <event activity="initialize" name="event__initialize">
+                                             <script contentType="application/x-javascript">//app.alert(this.rawValue);
+
+
+
+
+
+</script>
+                                          </event>
+                                          <font typeface="Arial" size="7.5pt"/>
+                                          <border>
+                                             <edge thickness="0.1mm" presence="hidden"/>
+                                             <corner thickness="0.1mm" presence="hidden"/>
+                                          </border>
+                                          <margin bottomInset="0mm" leftInset="1mm" rightInset="1.5mm" topInset="0mm"/>
+                                          <para vAlign="middle" hAlign="right"/>
+                                       </field>
+                                       <occur min="21" max="-1"/>
+                                       <?templateDesigner expand 1?></subform>
+                                    <?templateDesigner expand 1?></subform>
+                                 <border>
+                                    <edge presence="hidden"/>
+                                    <edge thickness="0.1mm" presence="hidden"/>
+                                    <edge presence="hidden"/>
+                                    <edge presence="hidden"/>
+                                    <corner/>
+                                    <corner thickness="0.1mm" presence="hidden"/>
+                                    <corner/>
+                                    <corner/>
+                                 </border>
+                                 <?templateDesigner expand 0?></subform>
+                              <?templateDesigner expand 1?></subform>
+                           <border>
+                              <edge presence="hidden"/>
+                              <edge thickness="0.1mm"/>
+                              <edge presence="hidden"/>
+                              <edge thickness="0.1mm"/>
+                              <corner/>
+                              <corner thickness="0.1mm"/>
+                              <corner/>
+                              <corner thickness="0.1mm"/>
+                           </border>
+                           <?templateDesigner expand 1?></subform>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <?templateDesigner expand 0?></subform>
+                     <subform layout="lr-tb" name="subBottom">
+                        <bind match="none"/>
+                        <subform name="subDamages" w="124mm" layout="tb">
+                           <bind match="none"/>
+                           <margin rightInset="0mm"/>
+                           <border>
+                              <edge thickness="0.1mm" presence="hidden"/>
+                              <corner thickness="0.1mm" presence="hidden"/>
+                              <edge thickness="0.1mm"/>
+                              <edge thickness="0.1mm" presence="hidden"/>
+                              <edge thickness="0.1mm" presence="hidden"/>
+                              <corner thickness="0.1mm"/>
+                              <corner thickness="0.1mm" presence="hidden"/>
+                              <corner thickness="0.1mm" presence="hidden"/>
+                           </border>
+                           <subform w="124mm" layout="tb" name="subDamagesHeader">
+                              <bind match="none"/>
+                              <field name="fldDamages" access="readOnly" h="4mm" w="59.45mm">
+                                 <ui>
+                                    <textEdit>
+                                       <border presence="hidden"/>
+                                       <margin/>
+                                    </textEdit>
+                                 </ui>
+                                 <caption reserve="40mm">
+                                    <value>
+                                       <text>Skader</text>
+                                    </value>
+                                    <font typeface="Arial" size="8.5pt" weight="bold"/>
+                                    <para vAlign="middle"/>
+                                 </caption>
+                                 <bind match="none"/>
+                                 <event activity="initialize" name="event__initialize">
+                                    <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                                 </event>
+                                 <font typeface="Arial" size="9pt"/>
+                                 <border>
+                                    <edge thickness="0.1mm" presence="hidden"/>
+                                    <corner thickness="0.1mm" presence="hidden"/>
+                                 </border>
+                                 <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                                 <para vAlign="middle"/>
+                              </field>
+                              <border>
+                                 <edge thickness="0.1mm"/>
+                                 <corner thickness="0.1mm"/>
+                              </border>
+                              <?templateDesigner expand 1?></subform>
+                           <subform w="110.55mm" h="69.354mm" name="subImages">
+                              <bind match="none"/>
+                              <field name="imgfCarDamage" w="82.55mm" h="69.354mm" x="28mm" y="0mm">
+                                 <ui>
+                                    <imageEdit data="embed"/>
+                                 </ui>
+                                 <bind match="dataRef" ref="$.Document.HeaderInfo.Image"/>
+                                 <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                                 <value>
+                                    <image contentType="application/octet-stream"/>
+                                 </value>
+                                 <desc>
+                                    <text name="embeddedHref">Unknown Embedded URI</text>
+                                 </desc>
+                              </field>
+                              <draw name="Image1" y="13.354mm" x="1mm" w="25.4mm" h="54mm">
+                                 <value>
+                                    <image contentType="image/gif">R0lGODlhVwC3AHcAACH5BAAAAAAALAAAAABXALcAhwAAAIAAAACAAICAAAAAgIAAgACAgMDAwMDc
+wKbK8AAAAAEBAQICAgMDAwYGBgcHBwgICAkJCQoKCgsLCw0NDQ4ODhMTExQUFBUVFRgYGBkZGRoa
+GhsbGxwcHB0dHR4eHh8fHyAgICMjIyQkJCUlJSYmJicnJygoKCoqKisrKywsLC0tLS4uLi8vLzEx
+MTIyMjMzMzQ0NDU1NTc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVF
+RUZGRkdHR0lJSUtLS0xMTE1NTU9PT1BQUFNTU1RUVFZWVldXV1hYWFpaWltbW1xcXF1dXV5eXmBg
+YGFhYWJiYmNjY2RkZGZmZmlpaWpqamtra2xsbG1tbW9vb3JycnNzc3R0dHV1dXd3d3h4eHt7e3x8
+fH19fX5+foCAgIKCgoODg4SEhIWFhYaGhoiIiImJiYqKioyMjI2NjY6OjpKSkpSUlJWVlZaWlpeX
+l5iYmJqampycnJ+fn6CgoKOjo6Wlpaenp6ioqKmpqaqqqq2tra+vr7KysrS0tLW1tbm5ubu7u7y8
+vL6+vr+/v8HBwcLCwsTExMfHx8jIyMnJyczMzM7OztDQ0NLS0tPT09TU1NXV1dbW1tjY2Nra2tvb
+29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u
+7u/v7/Dw8PHx8fLy8vPz8/T09PX19fj4+Pn5+fr6+vv7+/z8/P39/f///wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/78KCgpICAgP8AAAD/AP//AAAA//8A/wD/////
+/wj+AIMJHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNqTDgBhscVIjxs2OBBxAqPMCZsXAkRhkOX
+LGMudIkiwoWbOG9KUBEMpsyfBl1GYJAzJwMJPYEqJbgi2E2EGDAEa7p0qQinF6BKvVpVqQesWoN9
+JQigLICBZ7tS3AD2YNRgbMmiVXuR7VO3UuPOFZj2rNm0wczSRfj1rsG3Y/cG5ruYMWDAgwdeNVzw
+LVe0gh3P/Qs58tS2h6VS3fu48eLOngcKJVr05tGkchmf3qw4dVYUElrr5OlTtua/mFEPdiX8YG+F
+xVMPHJWhrIUXIEWSNIlSZcPkykV9AMBEudpQHgD+2LjlvSqoDgBy4Cq/9BOH9LnYK3UPQIcu+UDp
+77iP/+cGAPv1B9QLAQpo4IEIJqjgggw26OCDEEYo4YQUVmjhhRhmuFJHH4U0UkkneWTdhcclVOKE
+LpWFkIonSpiiigUJ1mKEVGXGF4yjWXhZZjZe5pBfAiYWGGcECTkkjAYB2Z9eNyIpEJOmCackflAC
+R1CVtP3mm3dCcgaZkVaWBiR2dO0IY48xZjmbk+XV6GRmOUYp55j4vYiajGlqpqVp3mXFJmawBfeY
+YFOSuVQphgo0o4OkhAfAc9F9SJ2IFo4CAgA30KJhQqRceoMtmyJkKQA1gBqqQZ1iauqpBI2y3af+
+rBaUKqyxEtTcDbXUWlAaM6yq66/ABivssMQWa+yxyCar7LLMRsQhDJFOF2JKGR5HCymkaErQog/2
+hoYEDByFxrbVDqTBAjk44UQOC2igWoZUaYCCFYQAAwwhVqDg7mcYXoXGAmcYdMYC4/pYoQe0SJCD
+LAbJkoMEtBh55JRJrpToQRuQwkAcCMXBAClYxlbVxQZlvHHHH4ccXJOO2Ugoj7O1TPJACEsQ8EFn
+QCwxzL7RqWfPQwI9M0H+LqCIQYoQHIzBcg1K6Jyl/SwmRfE+AQpBoDyxb5xN1xZzlIXK+XNEPp17
+RiGFDLxvoBVHvWZtYbtNMURZDfRtuBKM+y7+WS73dSbUfv8t6I0SdXZttgVxe9HQEdUChXPQeSht
+dUox/lAtMgBQRLCYAyDCKcB2/nnomY/+q+ign1566r+uLuwJpjcr++y012777bjnrvvuvPe+opfA
+/zlhWr+okoklkVDSyi6+7LJlhWexIsYhixDChx2BVMIIJKPwCf0vgvTgBx5jaHGFF3AAIYMXvFhu
+IAC7MELHGk0MwQMQSCQxAxFw9OK+gPBDhBuQQIMXEMEIYtjBELIwCFnMDDL/s5gq+hCFHljhC2i4
+whrKEIU2IAITncEOBCcSwYMAoBN1SIIOntAFLQDhC2kwQhrg4IgQIkdkEClhkjSxByXgoAz+VLDD
+D7ygAiGQQQ+QsCHf+qInOkXtZTpEyyfuUMEzqAEIPkBDFpKABkBkQolta4ySBPc172EEAKZQAxR0
+oAMYpCAIXBgCFd7Qh1SAsUl+GZRixOQ2jQAgFmxQAQ2WEAQd3GAIWyDDHCjxijtOjYlMBBrhokgW
+XxyCBUsAQxWkgAUziEEOehhELByZpTGKjU9zO2MwUGEISBTiD3jowyDykIhMKEIXIeTR0wjHSzwe
+CVB+XIVAfnGLTTxiEY/AxCdSER9KpqYWwYumhaApvFNREwCsq9U1sxmrbYbOLNxklTeBBU5hlSWc
+vkunOtfJzna6853wjKc8NfSsaIGIchj+UpyiykWQT0iBDoVIHD8H8jgAnAAY5MJQjjaxgAeg5xBM
+yZCPlACALtgBADQgWoYSc4kFQGAVurgAACJBMxP+z5kN0YsRACAGgagBAEcYCJR6WbjBxGUSAKDA
+KwQCCwksgBNPqpgYdYkkoqplLEAAgBkI4gUATEEgO5PN1KRmRqVcJYkVmAVBSNEAB5hiaUKN5Nfy
+uEu1NGUHAFiDQZwAgDDwS1AqmmoZqwoUGDQCAA+4QQpC4AETmMADPAAABGZxnBHKNW6DuYAkmhNN
+F+SisF2j6i9pWrmXXGgTRYCcPSdFrQp5ojktBVYo0BME5/3qFJcqkK5SMQLxrOdXrzgfAQBikKtf
+wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
+                                 </value>
+                                 <ui>
+                                    <imageEdit/>
+                                 </ui>
+                                 <desc>
+                                    <text name="embeddedHref">.\Images\Skadeikon.gif</text>
+                                 </desc>
+                              </draw>
+                              <?templateDesigner expand 1?></subform>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 0?></subform>
+                     <?templateDesigner expand 0?></subform>
+                  <subform x="123mm" w="68mm" minH="3.646mm" layout="tb" name="subOptionsTopBottom">
+                     <bind match="none"/>
+                     <subform w="68mm" minH="3.646mm" layout="lr-tb" name="subOptionsRight">
+                        <bind match="none"/>
+                        <field name="OptionDesc" minW="68mm" minH="3.646mm">
+                           <ui>
+                              <textEdit multiLine="1"/>
+                           </ui>
+                           <font typeface="Arial" size="7.5pt"/>
+                           <margin leftInset="1mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                           <caption>
+                              <value>
+                                 <exData contentType="text/html">
+                                    <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-valign:middle;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField010797"/></p></body>
+                                 </exData>
+                              </value>
+                              <para vAlign="middle"/>
+                           </caption>
+                           <bind match="dataRef" ref="$.Document.Options.Option[*].OptionDesc"/>
+                           <para vAlign="middle"/>
+                        </field>
+                        <occur max="-1"/>
+                        <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 0?>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.1mm"/>
+                        <corner/>
+                        <corner/>
+                        <corner/>
+                        <corner thickness="0.1mm"/>
+                     </border>
+                  </subform>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge thickness="0.1mm"/>
+                     <edge thickness="0.1mm"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner presence="hidden"/>
+                  <corner/>
+                  <corner presence="hidden"/>
+                  <corner/>
+               </border>
+               <margin topInset="5mm"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
+         <subform minH="7.292mm" layout="lr-tb" name="subDefectsOptionsWestern">
+            <bind match="none"/>
+            <subform w="124mm" minH="3.646mm" layout="tb" name="subDefectsTopBottom">
+               <bind match="none"/>
+               <subform name="subDefectsLeft" layout="lr-tb">
+                  <bind match="none"/>
+                  <subform minH="9mm" layout="lr-tb" name="subLeftBorder" w="124mm">
+                     <bind match="none"/>
+                     <subform layout="lr-tb" name="subLeftText">
+                        <bind match="none"/>
+                        <subform minH="3mm" layout="lr-tb" name="subBorderRight" w="124mm">
+                           <bind match="none"/>
+                           <subform minH="9mm" layout="tb" name="subLeftPart1Row">
+                              <bind match="none"/>
+                              <subform w="107mm" layout="tb" name="subTopToBottomWrapper">
+                                 <bind match="none"/>
+                                 <draw name="DefectCtrlPoint" w="107mm" minH="3.646mm">
+                                    <ui>
+                                       <textEdit/>
+                                    </ui>
+                                    <value>
+                                       <exData contentType="text/html">
+                                          <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:7.5pt;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField001388"/><span style="font-size:8.5pt"><span style="xfa-spacerun:yes">  </span></span></p></body>
+                                       </exData>
+                                    </value>
+                                    <font typeface="Arial" size="8.5pt"/>
+                                    <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                                    <para vAlign="middle"/>
+                                    <border>
+                                       <edge thickness="0.1mm" presence="hidden"/>
+                                       <corner thickness="0.1mm" presence="hidden"/>
+                                    </border>
+                                    <keep next="contentArea"/>
+                                 </draw>
+                                 <field name="floDefectCombined" h="9mm" presence="hidden" access="readOnly" minW="62mm" id="floatingField001388">
+                                    <ui>
+                                       <textEdit hScrollPolicy="off" multiLine="1" vScrollPolicy="off">
+                                          <border>
+                                             <edge stroke="lowered"/>
+                                          </border>
+                                          <margin/>
+                                       </textEdit>
+                                    </ui>
+                                    <font typeface="Myriad Pro"/>
+                                    <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                                    <para vAlign="middle"/>
+                                    <bind match="dataRef" ref="$.Document.RemainingDefects.Defect[*].DefectInformation"/>
+                                    <event activity="initialize" name="event__initialize">
+                                       <script contentType="application/x-javascript">
+</script>
+                                    </event>
+                                 </field>
+                                 <occur min="0" max="-1"/>
+                                 <?templateDesigner expand 1?></subform>
+                              <border>
+                                 <edge presence="hidden"/>
+                                 <corner/>
+                                 <corner presence="hidden"/>
+                                 <corner/>
+                                 <corner/>
+                              </border>
+                              <?templateDesigner expand 1?></subform>
+                           <subform w="17mm" minH="3.646mm" layout="tb" name="subDefectPrice">
+                              <bind match="none"/>
+                              <subform w="17mm" minH="3.646mm" layout="tb" name="subTopToBottomWrapper">
+                                 <bind match="none"/>
+                                 <occur min="0" max="-1"/>
+                                 <field name="DefectPrice" access="readOnly" w="17mm" minH="3.646mm">
+                                    <ui>
+                                       <textEdit>
+                                          <border presence="hidden"/>
+                                          <margin/>
+                                       </textEdit>
+                                    </ui>
+                                    <bind match="dataRef" ref="$.Document.RemainingDefects.Defect[*].DefectPrice"/>
+                                    <event activity="initialize" name="event__initialize">
+                                       <script contentType="application/x-javascript">//app.alert(this.rawValue);
+
+
+
+
+
+</script>
+                                    </event>
+                                    <font typeface="Arial" size="7.5pt"/>
+                                    <border>
+                                       <edge thickness="0.1mm" presence="hidden"/>
+                                       <corner thickness="0.1mm" presence="hidden"/>
+                                    </border>
+                                    <margin bottomInset="0mm" leftInset="1mm" rightInset="1.5mm" topInset="0mm"/>
+                                    <para vAlign="middle" hAlign="right"/>
+                                 </field>
+                                 <?templateDesigner expand 1?></subform>
+                              <?templateDesigner expand 1?></subform>
+                           <border>
+                              <edge presence="hidden"/>
+                              <edge thickness="0.1mm" presence="hidden"/>
+                              <edge presence="hidden"/>
+                              <edge presence="hidden"/>
+                              <corner/>
+                              <corner thickness="0.1mm" presence="hidden"/>
+                              <corner/>
+                              <corner/>
+                           </border>
+                           <?templateDesigner expand 0?></subform>
+                        <?templateDesigner expand 1?></subform>
+                     <border>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.1mm"/>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.1mm"/>
+                        <corner/>
+                        <corner thickness="0.1mm"/>
+                        <corner/>
+                        <corner thickness="0.1mm"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+                  <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 0?>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner thickness="0.1mm" presence="hidden"/>
+                  <corner/>
+                  <corner/>
+               </border>
+            </subform>
+            <subform x="123mm" w="68mm" minH="3.646mm" layout="tb" name="subOptionsTopBottom">
+               <bind match="none"/>
+               <subform w="68mm" minH="3.646mm" layout="lr-tb" name="subOptionsRight">
+                  <bind match="none"/>
+                  <field name="OptionDesc" minW="68mm" minH="3.646mm">
+                     <ui>
+                        <textEdit multiLine="1"/>
+                     </ui>
+                     <font typeface="Arial" size="7.5pt"/>
+                     <margin leftInset="1mm" rightInset="0.5mm" topInset="0.5mm" bottomInset="0.5mm"/>
+                     <caption>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField010797"/></p></body>
+                           </exData>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.RemainingOptions.Option[*].OptionDesc"/>
+                     <para vAlign="middle"/>
+                  </field>
+                  <occur max="-1" min="0"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <border>
+               <edge presence="hidden"/>
+               <edge thickness="0.1mm"/>
+               <edge thickness="0.1mm"/>
+               <edge thickness="0.1mm"/>
+               <corner/>
+               <corner thickness="0.1mm"/>
+               <corner thickness="0.1mm"/>
+               <corner thickness="0.1mm"/>
+            </border>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">10.0.2.20120224.1.869952.867557</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 172 46 00030011001D0025002600270029002A002B002E002F00320033003600370039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E009100A1 .:BCDFGHKLOPSTVabcdefghijklmnoprstuvy{}åØø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 188 49 0003000B000C001100120014001D0020002400250026002700280029002A002E00300031003300350036003700380039004400450046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ()./1:=ABCDEFGKMNPRSTUVabcdefgijklmnoprstuvyÅø?>
+      <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 124 31 00050006000B000C001100140027002B002F0031003300360037004400450046004700480049004A004F005000510052005300550056005700580059005B"#().1DHLNPSTabcdefglmnoprstuvx?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Stylesheet ..\..\..\..\..\Development\Styles MG1.xfs?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner Zoom 143?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName ..\ValuationReport\sp008078GP2_xslt_final.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="sv_SE" desc="Svenska (Sverige)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januari</month>
+            <month>februari</month>
+            <month>mars</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>augusti</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>söndag</day>
+            <day>måndag</day>
+            <day>tisdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lördag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sö</day>
+            <day>må</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lö</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>fm</meridiem>
+            <meridiem>em</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>f.Kr.</era>
+            <era>e.Kr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, YYYY MMMM DD</datePattern>
+         <datePattern name="long">YYYY MMMM D</datePattern>
+         <datePattern name="med">YYYY MMM D</datePattern>
+         <datePattern name="short">YYYY-MM-DD</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">'kl. 'HH.MM.SS Z</timePattern>
+         <timePattern name="long">HH.MM.SS Z</timePattern>
+         <timePattern name="med">HH.MM.SS</timePattern>
+         <timePattern name="short">HH.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $</numberPattern>
+         <numberPattern name="percent">z,zz9 %</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping"> </numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">SEK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2012-12-18T16:32:35Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:4cf830d2-6691-46e4-b0e9-62cb0a8273bb</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>10.0.2.20120224.1.869952.867557</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="Data">
+      <uri>.\VR_XSD_WORKING.xsd</uri>
+      <rootElement>Data</rootElement>
+      <?templateDesigner fileDigest shaHash="ytjKQru7bBtv0resWdqxOme8TX0="?></xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="Data">
+      <Data>
+         <JF_JOB_CARD/>
+         <DesignFilename/>
+         <PreambleFilename/>
+         <DocType/>
+         <Country/>
+         <LangCode/>
+         <DocHeaderBrand/>
+         <PreviewCode/>
+         <Copies/>
+         <TwoSided/>
+         <MediaControl>
+            <OutputTargets>
+               <File>
+                  <FileName/>
+               </File>
+               <Preview>
+                  <ClientAddress/>
+               </Preview>
+            </OutputTargets>
+         </MediaControl>
+         <Document>
+            <DocumentHeader>
+               <DealerName/>
+               <ValuationNo/>
+               <PerformedBy/>
+               <DateCreated/>
+               <SellerName/>
+            </DocumentHeader>
+            <HeaderInfo>
+               <CarBrand/>
+               <CarModel/>
+               <CarModelYear/>
+               <CarMileage/>
+               <CarRegDate/>
+               <CarRegDateLast/>
+               <CarRegNo/>
+               <EngineVolume/>
+               <EngineEffect/>
+               <CarVIN/>
+               <CarBody/>
+               <FuelTypeText/>
+               <Color/>
+               <TimingBeltDate/>
+               <CarGroupText/>
+               <CarWeight/>
+               <Imported/>
+               <CarMileageAtDelivery/>
+               <DateOfLastControl/>
+               <DateOfNextControl/>
+               <DateOfLastService/>
+               <CarMileageLastService/>
+               <CustomerName/>
+               <GearType/>
+               <CarModelDesc/>
+               <Seats/>
+               <TimingBeltMileage/>
+               <NextServiceMileage/>
+               <DefectPriceTotal/>
+               <Image/>
+               <Comment/>
+               <Encumbrance/>
+               <MajorDamage/>
+               <MileageConfirmed/>
+               <ChipTuned/>
+               <TyresSummerVF/>
+               <TyresSummerHF/>
+               <TyresSummerVB/>
+               <TyresSummerHB/>
+               <TyresWinterVF/>
+               <TyresWinterHF/>
+               <TyresWinterVB/>
+               <TyresWinterHB/>
+               <ValidThrough/>
+            </HeaderInfo>
+            <Defects>
+               <Defect dd:model="choice" dd:maxOccur="-1">
+                  <DefectInformation/>
+                  <dd:group>
+                     <DefectCtrlPoint/>
+                     <DefectGrade dd:minOccur="0" dd:nullType="exclude"/>
+                     <DefectDescription/>
+                     <DefectPrice/>
+                     <DefectInformation/>
+                  </dd:group>
+               </Defect>
+            </Defects>
+            <Options>
+               <Option dd:maxOccur="-1">
+                  <OptionDesc/>
+               </Option>
+            </Options>
+            <PAGEBREAK dd:dataNode="dataGroup"/>
+            <RemainingDefects>
+               <Defect dd:model="choice" dd:maxOccur="-1">
+                  <DefectInformation/>
+                  <dd:group>
+                     <DefectCtrlPoint/>
+                     <DefectGrade dd:minOccur="0" dd:nullType="exclude"/>
+                     <DefectDescription/>
+                     <DefectPrice/>
+                     <DefectInformation/>
+                  </dd:group>
+               </Defect>
+            </RemainingDefects>
+            <RemainingOptions>
+               <Option dd:maxOccur="-1">
+                  <OptionDesc/>
+               </Option>
+            </RemainingOptions>
+         </Document>
+      </Data>
+   </dd:dataDescription>
+</xfa:datasets>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="XFASchemaXSD">
+   <xs:element name="ValuationNo">
+      <xs:simpleType>
+         <xs:restriction base="xs:short">
+            <xs:enumeration value="550"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="ValidThrough">
+      <xs:simpleType>
+         <xs:restriction base="xs:date">
+            <xs:enumeration value="2012-10-25"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TyresWinterVF">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="8"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TyresWinterVB">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="8"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TyresWinterHF">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="8"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TyresWinterHB">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="8"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TyresSummerVF">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="7"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TyresSummerVB">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="7"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TyresSummerHF">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="7"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TyresSummerHB">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="7"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TwoSided">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="no"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TimingBeltMileage">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="45 850"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="TimingBeltDate">
+      <xs:simpleType>
+         <xs:restriction base="xs:date">
+            <xs:enumeration value="2012-10-01"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="SellerName">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="HANS-CHR.REFF / 90836786"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Seats">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="7"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="RemainingOptions">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Option" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="RemainingDefects">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Defect" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="PreviewCode">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="V"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Preview">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="ClientAddress"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="PreambleFilename">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="LANG_NO.pre"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="PerformedBy">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="HANS CHRISTIAN REFF"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="PAGEBREAK">
+      <xs:complexType/>
+   </xs:element>
+   <xs:element name="OutputTargets">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="File"/>
+            <xs:element ref="Preview"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="Options">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Option" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="OptionDesc">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="1 Avtagbart tilhengerfeste"/>
+            <xs:enumeration value="10 Vinterpakke touran"/>
+            <xs:enumeration value="11 Skandinavia"/>
+            <xs:enumeration value="12 17&quot; Goal Piggfri"/>
+            <xs:enumeration value="13 Avtagbart tilhengerfeste"/>
+            <xs:enumeration value="14 Skinnpakke kampanjepris"/>
+            <xs:enumeration value="15 Dvd europa"/>
+            <xs:enumeration value="16 Parkeringssensor bak"/>
+            <xs:enumeration value="17 3.setr.2 enkle seter"/>
+            <xs:enumeration value="18 17&quot;alu nardo sportsunderstell"/>
+            <xs:enumeration value="19 Rns 510 mp3 navigasjon farge 8ht"/>
+            <xs:enumeration value="2 Skinnpakke kampanjepris"/>
+            <xs:enumeration value="20 Bi-xenon med afs"/>
+            <xs:enumeration value="21 Parkeringsvarmer touran excl norge"/>
+            <xs:enumeration value="22 Vinterpakke touran"/>
+            <xs:enumeration value="23 Skandinavia"/>
+            <xs:enumeration value="24 17&quot; Goal Piggfri"/>
+            <xs:enumeration value="25 Avtagbart tilhengerfeste"/>
+            <xs:enumeration value="26 Skinnpakke kampanjepris"/>
+            <xs:enumeration value="27 Dvd europa"/>
+            <xs:enumeration value="28 Parkeringssensor bak"/>
+            <xs:enumeration value="29 3.setr.2 enkle seter"/>
+            <xs:enumeration value="3 Dvd europa"/>
+            <xs:enumeration value="30 17&quot;alu nardo sportsunderstell"/>
+            <xs:enumeration value="31 8 Rns 510 mp3 navigasjon farge 8ht"/>
+            <xs:enumeration value="32 9 Bi-xenon med afs"/>
+            <xs:enumeration value="33 Parkeringsvarmer touran excl norge"/>
+            <xs:enumeration value="34 Vinterpakke touran"/>
+            <xs:enumeration value="35 Skandinavia"/>
+            <xs:enumeration value="36 17&quot; Goal Piggfri"/>
+            <xs:enumeration value="37 Avtagbart tilhengerfeste"/>
+            <xs:enumeration value="38 Skinnpakke kampanjepris"/>
+            <xs:enumeration value="39 Dvd europa"/>
+            <xs:enumeration value="4 Parkeringssensor bak"/>
+            <xs:enumeration value="40 Parkeringssensor bak"/>
+            <xs:enumeration value="41 3.setr.2 enkle seter"/>
+            <xs:enumeration value="42 17&quot;alu nardo sportsunderstell"/>
+            <xs:enumeration value="43 Rns 510 mp3 navigasjon farge 8ht"/>
+            <xs:enumeration value="44 Bi-xenon med afs"/>
+            <xs:enumeration value="45 Parkeringsvarmer touran excl norge"/>
+            <xs:enumeration value="46 Vinterpakke touran"/>
+            <xs:enumeration value="47 Skandinavia"/>
+            <xs:enumeration value="48 17&quot; Goal Piggfri"/>
+            <xs:enumeration value="49 Avtagbart tilhengerfeste"/>
+            <xs:enumeration value="5 3.setr.2 enkle seter"/>
+            <xs:enumeration value="50 Skinnpakke kampanjepris"/>
+            <xs:enumeration value="51 Dvd europa"/>
+            <xs:enumeration value="52 Parkeringssensor bak"/>
+            <xs:enumeration value="53.setr.2 enkle seter"/>
+            <xs:enumeration value="54 17&quot;alu nardo sportsunderstell"/>
+            <xs:enumeration value="55 Rns 510 mp3 navigasjon farge 8ht"/>
+            <xs:enumeration value="56 Bi-xenon med afs"/>
+            <xs:enumeration value="57 Parkeringsvarmer touran excl norge"/>
+            <xs:enumeration value="58 Vinterpakke touran"/>
+            <xs:enumeration value="59 Skandinavia"/>
+            <xs:enumeration value="6 17&quot;alu nardo sportsunderstell"/>
+            <xs:enumeration value="60 17&quot; Goal Piggfri"/>
+            <xs:enumeration value="7 Rns 510 mp3 navigasjon farge 8ht"/>
+            <xs:enumeration value="8 Bi-xenon med afs"/>
+            <xs:enumeration value="9 Parkeringsvarmer touran excl norge"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Option">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="OptionDesc"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="NextServiceMileage">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="45 850"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="MileageConfirmed">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Ja"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="MediaControl">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="OutputTargets"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="MajorDamage">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Nei"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="LangCode">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="NO"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="JF_JOB_CARD" type="xs:string"/>
+   <xs:element name="Imported">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Nei"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Image" type="xs:anyURI"/>
+   <xs:element name="HeaderInfo">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="CarBrand"/>
+            <xs:element ref="CarModel"/>
+            <xs:element ref="CarModelYear"/>
+            <xs:element ref="CarMileage"/>
+            <xs:element ref="CarRegDate"/>
+            <xs:element ref="CarRegDateLast"/>
+            <xs:element ref="CarRegNo"/>
+            <xs:element ref="EngineVolume"/>
+            <xs:element ref="EngineEffect"/>
+            <xs:element ref="CarVIN"/>
+            <xs:element ref="CarBody"/>
+            <xs:element ref="FuelTypeText"/>
+            <xs:element ref="Color"/>
+            <xs:element ref="TimingBeltDate"/>
+            <xs:element ref="CarGroupText"/>
+            <xs:element ref="CarWeight"/>
+            <xs:element ref="Imported"/>
+            <xs:element ref="CarMileageAtDelivery"/>
+            <xs:element ref="DateOfLastControl"/>
+            <xs:element ref="DateOfNextControl"/>
+            <xs:element ref="DateOfLastService"/>
+            <xs:element ref="CarMileageLastService"/>
+            <xs:element ref="CustomerName"/>
+            <xs:element ref="GearType"/>
+            <xs:element ref="CarModelDesc"/>
+            <xs:element ref="Seats"/>
+            <xs:element ref="TimingBeltMileage"/>
+            <xs:element ref="NextServiceMileage"/>
+            <xs:element ref="DefectPriceTotal"/>
+            <xs:element ref="Image"/>
+            <xs:element ref="Comment"/>
+            <xs:element ref="Encumbrance"/>
+            <xs:element ref="MajorDamage"/>
+            <xs:element ref="MileageConfirmed"/>
+            <xs:element ref="ChipTuned"/>
+            <xs:element ref="TyresSummerVF"/>
+            <xs:element ref="TyresSummerHF"/>
+            <xs:element ref="TyresSummerVB"/>
+            <xs:element ref="TyresSummerHB"/>
+            <xs:element ref="TyresWinterVF"/>
+            <xs:element ref="TyresWinterHF"/>
+            <xs:element ref="TyresWinterVB"/>
+            <xs:element ref="TyresWinterHB"/>
+            <xs:element ref="ValidThrough"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="GearType">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Automat"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FuelTypeText">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Diesel"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FileName">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="ValuationReport.pdf"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="File">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="FileName"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="EngineVolume">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="1 896"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="EngineEffect">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="105"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Encumbrance">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Nei"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DocumentHeader">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="DealerName"/>
+            <xs:element ref="ValuationNo"/>
+            <xs:element ref="PerformedBy"/>
+            <xs:element ref="DateCreated"/>
+            <xs:element ref="SellerName"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="Document">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="DocumentHeader"/>
+            <xs:element ref="HeaderInfo"/>
+            <xs:element ref="Defects"/>
+            <xs:element ref="Options"/>
+            <xs:element ref="PAGEBREAK"/>
+            <xs:element ref="RemainingDefects"/>
+            <xs:element ref="RemainingOptions"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="DocType">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="ValuationReport"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DocHeaderBrand">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="I"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DesignFilename">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="ValuationReport_NO"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Defects">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Defect" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="DefectPriceTotal">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="41 825"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DefectPrice">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="10 500"/>
+            <xs:enumeration value="1 050"/>
+            <xs:enumeration value="1 234"/>
+            <xs:enumeration value="345"/>
+            <xs:enumeration value="3 456"/>
+            <xs:enumeration value="3 850"/>
+            <xs:enumeration value="4 534"/>
+            <xs:enumeration value="4 567"/>
+            <xs:enumeration value="5 500"/>
+            <xs:enumeration value="6 789"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DefectInformation" type="xs:string"/>
+   <xs:element name="DefectGrade">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value=""/>
+            <xs:enumeration value="C"/>
+            <xs:enumeration value="D"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DefectDescription" type="xs:string"/>
+   <xs:element name="DefectCtrlPoint">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="11.15 PKK beløp"/>
+            <xs:enumeration value="11.5 Lakk"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="15"/>
+            <xs:enumeration value="16"/>
+            <xs:enumeration value="17"/>
+            <xs:enumeration value="18"/>
+            <xs:enumeration value="19"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="20"/>
+            <xs:enumeration value="21"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="4.10 Refleks"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="6.3 Eksosanlegg"/>
+            <xs:enumeration value="6.7 Tilhengerfeste"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="7.1 Bilbelte"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Defect">
+      <xs:complexType>
+         <xs:choice>
+            <xs:element ref="DefectInformation"/>
+            <xs:sequence>
+               <xs:element ref="DefectCtrlPoint"/>
+               <xs:element ref="DefectGrade" minOccurs="0"/>
+               <xs:element ref="DefectDescription"/>
+               <xs:element ref="DefectPrice"/>
+               <xs:element ref="DefectInformation"/>
+            </xs:sequence>
+         </xs:choice>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="DealerName">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Felgen Auto"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DateOfNextControl">
+      <xs:simpleType>
+         <xs:restriction base="xs:date">
+            <xs:enumeration value="2012-10-02"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DateOfLastService">
+      <xs:simpleType>
+         <xs:restriction base="xs:date">
+            <xs:enumeration value="2012-10-02"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DateOfLastControl">
+      <xs:simpleType>
+         <xs:restriction base="xs:date">
+            <xs:enumeration value="2012-10-01"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DateCreated">
+      <xs:simpleType>
+         <xs:restriction base="xs:date">
+            <xs:enumeration value="2012-10-10"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Data">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="JF_JOB_CARD"/>
+            <xs:element ref="DesignFilename"/>
+            <xs:element ref="PreambleFilename"/>
+            <xs:element ref="DocType"/>
+            <xs:element ref="Country"/>
+            <xs:element ref="LangCode"/>
+            <xs:element ref="DocHeaderBrand"/>
+            <xs:element ref="PreviewCode"/>
+            <xs:element ref="Copies"/>
+            <xs:element ref="TwoSided"/>
+            <xs:element ref="MediaControl"/>
+            <xs:element ref="Document"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="CustomerName">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="ASTERIX REFF"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Country">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="NO"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Copies">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="1"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Comment" type="xs:string"/>
+   <xs:element name="Color">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="SLATE GREY      MET."/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="ClientAddress">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="NO000010194PC2"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="ChipTuned">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Nei"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarWeight">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="1 572"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarVIN">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="WVGZZZ1TZ9W073484"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarRegNo">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="BD61808"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarRegDateLast">
+      <xs:simpleType>
+         <xs:restriction base="xs:date">
+            <xs:enumeration value="2010-01-27"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarRegDate">
+      <xs:simpleType>
+         <xs:restriction base="xs:date">
+            <xs:enumeration value="2009-01-16"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarModelYear">
+      <xs:simpleType>
+         <xs:restriction base="xs:short">
+            <xs:enumeration value="2009"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarModelDesc">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="105 DPF EXCL DSG   X 7S"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarModel">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="TOURAN"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarMileageLastService">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="15"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarMileageAtDelivery">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="54 986"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarMileage">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="52 658"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarGroupText">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Personbil"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarBrand">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="VOLKSWAGEN"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="CarBody">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Flerbruksbil"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+</xs:schema></xdp:xdp>

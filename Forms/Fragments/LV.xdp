@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2012-12-17T15:25:55Z" uuid="65b11443-25ec-4440-ad06-4e6122796c26">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1static?>
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea x="15mm" y="69mm" w="190mm" h="200mm" name="areaPage1" id="areaPage1_ID"/>
+         </pageArea>
+      </pageSet>
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="LV">
+
+
+
+var AdditionalWorkText = "Papildus darbi, kuri ir saskaņoti ar klientu";
+var AmountToPay = "Jamaksā (LVL):";
+var Attention = "Kam:";
+var BankAccEUR = "Konts EUR:";
+var BankAccLVL = "Konts LVL:";
+var BankName = "Banka:";
+var CarColor = "Krāsa:";
+var CarDelivery = "Nodošanas laiks:";
+var CarEngine = "Dzinējs:";
+var CarFinishedDate = "Vienošanās:";
+var CarGearBox = "Ātrumkārba:";
+var CarLocation = "A/M atrašanās vieta stāvvietā:";
+var CarMileage = "Nobraukums:";
+var CarMileageCur = "Noskrējiens";
+var CarModelDesc = "Modeļa apraksts:";
+var CarPickUp = "Atgriešanas laiks:";
+var CarRegDate = "Reģ. datums:";
+var CarRegNo = "Reģ. Nr.:";
+var CarRemarks = "Piezīmes";
+var CarType = "a/m tips:";
+var CarVIN = "Šasijas Nr.:";
+var CheckList = "Pievērst uzmanību:";
+var Code = "Kods";
+var CompanyRegno = "Reģistrācijas Nr.:";
+var Confirmation = "Apstiprinājums";
+var ContactTxt = "Es piekrītu, ka mani personas dati (e-pasts, adrese, telefona Nr.) tiek izmantoti mērķiem, kas saistīti ar klientu ~apkalpošanu, aptauju veikšanai un man paredzētas informācijas nosūtīšanai.";
+//var ContNextPage = "Es piekrītu  manu datu apstrādei, tanī skaitā datu reģistrēšanai, ievadīšanai, glabāšanai un sakārtošanai.";
+var ContNextPage = "Turpinājums nākamajā lapā.";
+var ControlSignature = "Darbnīcas vadītāja paraksts";
+var CreditInvoice = "Kredītrēķins";
+var CreditNoRefInvoice = "Ref. Rēķina Nr.:";
+var CreditReason = "Kredītrēķina iemesls:";
+var CustomerAddress = "Saņemšanas adr.:";
+var CustomerLedgerNo = "Klienta Nr.:";
+var CustomerLegalAddressTotal = "Juridiskā adr.:";
+var CustomerName = "Klients:";
+var CustomerPhoneNo = "Telefons:";
+var CustomerVatPayerNo = "PVN maksātāja Nr.:";
+var Date = "Datums";
+var DateReviewed = "Datums";
+var DealerCompanyRegno = "Reģistrācijas Nr.:";
+var DealerIssueAddressTotal = "Izsniegšanas adr.:";
+var DealerLegalAddressTotal = "Juridiskā adr.:";
+var DealerNameLegal = "Pārdevējs:";
+var DealerNameMarketing = "Pārdevējs:";
+var DealerVatPayerNo = "PVN maksātāja Nr.:";
+var Discount = "Atl.%";
+var DocTypeCreditInvoice = "Kredītrēķins";
+var DocTypeInvoice = "Rēķins";
+var DocTypeInvoice = "Rēķins";
+var DocTypePrepayment = "Avansa pieprasījums";
+var DocTypePrepayment = "Avansa pieprasījums";
+var DocTypePriceEstimate = "Piedāvājums";
+var DocTypeWorkOrder = "Darba uzdevums";
+var DueDate = "Samaksāt līdz:";
+var DueDate_KON = "Samaksātās:";
+var DueDate_KRE = "Samaksāt līdz:";
+var EconomicalTransType = "Saimnieciskā darījuma apraksts:";
+var ExtensionsText = "Papildus izmaksas tiks iepriekš saskaņotas.";
+var ForeignSalesVat = "PVN 0% (LVL)";
+var GreetingsText = "Ar cieņu,";
+var Hour = "h";
+var InvoiceNo = "Rēķina Nr.:";
+var InvoiceTitle_F = "Rēķins";
+var InvoiceTitle_I = "Iekšējais rēķins";
+var InvoiceTitle_K = "Kredītrēķins";
+var InvoiceTitle_N = "Iekšējais kredītrēķins";
+var InvoiceTitle_P = "Avansa rēķins";
+var InvoiceTitle_Q = "Avansa kredītrēķins";
+var InvoiceType = "Pas. tips";
+var LocationSparepart = "Vieta";
+var LocationSparepartPrepicked = "Sagatavoto rezerves daļu atrašanās vieta";
+var MechanicNo = "Mehāniķa Nr.";
+var MechanicSignature = "Mehāniķa paraksts";
+var Name = "Vārds";
+var Of = "no";
+var OfferText = "Mūsu piedāvājums Jums:";
+var OurRef = "Piezīme:";
+var OwnerName = "Īpašnieks:";
+var Page = "Lapa";
+var PaymentTerms = "Apmaksas veids:";
+var PaymentTerms_Kon = "Skaidra nauda";
+var PaymentTerms_Kre = "Pārskaitījums";
+var PlannedValuation = "Vienošanās:";
+var PlannedVisit = "Plānotais apmeklējums:";
+var PlannedWorks = "Plānotie darbi:";
+var PrepaymentAmount = "Avanss (LVL):";
+var Preview = "Priekšskatījums";
+var Price = "Cena";
+var PriceEstimateNo = "Piedāvājums Nr.:";
+var PriceTotal = "Cena kopā";
+var PriceTotalColumn = "Summa bez PVN";
+var PriceTotalSum = "Pasūtījuma summa bez PVN (LVL):";
+var PriceTotalSum2 = "Kopā bez PVN (LVL)";
+var PriceTotalSumPrepay = "Avanss ar PVN (LVL)";
+var PriceVatTotalSum = "Kopā ar PVN (LVL):";
+var PriceVatTotalSumLocal = "Kopējā pasūtījuma summa (LVL):";
+var PriceVatTotalToPay = "Jamaksā ar PVN (LVL)";
+var Product = "Produkts";
+var Quantity = "Skaits";
+var ReceivedText_D = "Esmu saņēmis visas rēķinā uzrādītās preces.";
+var ReceivedText_V = "Esmu saņēmis rēķinā uzrādītās preces un pakalpojumus, kā arī izmantotās rezerves daļas.";
+var ReferenceNo = "Pasūtijums Nr.";
+var RemarkDate = "Datums";
+var RemarkPriority = "Prioaritāte";
+var RemarksText = "Esmu iepazīstināts ar piezīmēm.";
+var RemarkText = "Apraksts";
+var Remember = "Papildus:";
+var RestPayTotal = "Jamaksā ar PVN (LVL)";
+var Reviewed = "Klients iepazīstināts:";
+var ServiceAdvisor = "Servisa konsultants,";
+var ServiceAdvisorColon = "Servisa konsultants:";
+var ServiceEUText = "Darījums apliekams ar PVN pie pakalpojuma saņēmēja. Atsaucoties uz EK direktīvas 2006/112/EK 44. Paragrāfu.";
+var Signature = "Paraksts";
+var SignatureColon = "Paraksts:";
+var SignHere = "Paraksts";
+var SoldBy = "Pārdevējs:";
+var SparepartEU = 'PVN 0% saskaņā ar likuma "Par pievienotās vērtības nodokli" 28. panta 1. daļu.';
+var SpProducer = "SP ražotāja kods";
+var SwiftCode = "Kods:";
+var Task = "Uzdevums";
+var TaskId = "Uzdevums Nr.";
+var TaskLetter = "U";
+var ThankYouTextConfirmation = "Cienijamais klient, Mēs esam gandarīti, ka izvēlējāties mūsu servisa pakalpojumus.";
+var ThankYouTextPriceestimate = "Pateicamies par izrādīto intresi par mūsu pakalpojumiem.";
+var ThroughputNo = "Pasūtijums Nr.:";
+var TimeTotal = "Laiks kopā";
+var TransType_D = "Preču piegāde";
+var TransType_P = "Avanss";
+var TransType_V = "Pakalpojumu sniegšana";
+var Unit = "Merv";
+var UserName = "Lietotājs:";
+var VatAmount = "PVN (LVL)";
+var VatAmountColon = "PVN (LVL):";
+var VatIncluded = "Visas cenas norādītas ar PVN";
+var VatPayerNo = "PVN maksātāja Nr.:";
+var VatText = "PVN Netiek aprēķināts";
+var VatZeroText = "PVN 0% (LVL)";
+var VisitAddress = "Adrese:";
+var Work = "Darbs";
+var fldWorkOrder = "Darba uzdevums";
+var YesNo = "Jā/Nē";
+var YourRef = "Piezīme:";
+var YourServiceAdvisor = "Jūsu servisa konsultants,";
+
+               
+               
+
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle LV?></script>
+         </variables>
+      </subform>
+   </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 132?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2012-12-17T15:25:55Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:65b11443-25ec-4440-ad06-4e6122796c26</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">LV</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default"/>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.#subform.#variables.LV</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="da_DK" desc="Dansk (Danmark)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>marts</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sø</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lø</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet></xdp:xdp>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2012-12-17T15:26:48Z" uuid="3d534c4c-1b07-4f54-96a3-43016a373619">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1static?>
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <contentArea x="6.35mm" y="31.75mm" w="203.2mm" h="219.075mm" name="sub_Content"/>
+         </pageArea>
+      </pageSet>
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="LT">//Lithuania
+var fld_TitleType = "Lithuania_WO";
+
+var AdditionalWorkText = "Papildomas darbas, kuris yra patvirtintas kliento";
+var AmountToPay = "Mokėti (LTL):";
+var Attention = "Kam:";
+var BankaccCurrEUR = "(EUR)";
+var BankaccCurrLocal = "(LTL)";
+var BankAccEUR = "Banko sąskaita:";
+var BankAccLVL = "Banko sąskaita:";
+var BankName = "Bankas:";
+var CarColor = "Spalva:";
+var CarDelivery = "Atadvimo laikas:";
+var CarEngine = "Variklis:";
+var CarFinishedDate = "Susitarta:";
+var CarGearBox = "Pavarų dėžė:";
+var CarLocation = "Vieta a/m stovėjimo aikštelėje:";
+var CarMileage = "Rida:";
+var CarMileageCur = "a/m  kilometražas:";
+var CarModelDesc = "Modelio aprašymas:";
+var CarPickUp = "Grąžinimo laikas:";
+var CarRegDate = "Reg. data:";
+var CarRegNo = "Reg. Nr.:";
+var CarRemarks = "Pastabos";
+var CarType = "a/m tipas:";
+var CarVIN = "Kėbulo Nr.:";
+var CashRegNo = "Kasos aparato Nr.";
+var CheckList = "Atkreipkite dėmesį:";
+var Code = "Kodas";
+var CompanyRegno = "Įmonės kodas:";
+var Confirmation = "Patvirtinimas";
+var ContactTxt = "Aš sutinku dėl mano asmeninių duomenų (el.pašto, adreso, telefono nr.) panaudojimo klientų aptarnavimo tikslais.";
+//var ContNextPage = "Aš sutinku su mano asmeninių duomenų apdorojimu, įskaitant duomenų registravimą, įvedimą, saugojimą ir tvarkymą.";
+var ContNextPage = "Tęsinys kitame psl.";
+var ControlSignature = "Kontrolės parašas";
+var CreditInvoice = "Kreditinė PVM sąskaita-faktūra";
+var CreditNoRefInvoice = "Ref. Sąskaita Nr.:";
+var CreditReason = "Kreditavimo priežastis";
+var CustomerAddress = "Pristatymo adresas:";
+var CustomerLedgerNo = "Pirkėjo Nr.:";
+var CustomerLegalAddressTotal = "Juridinis adresas:";
+var CustomerName = "Klientas:";
+var CustomerPhoneNo = "Telefonas:";
+var CustomerVatPayerNo = "PVM mokėtojo kodas:";
+var Date = "Data";
+var DateOfInvoice = "Sąskaitos data";
+var DateReviewed = "Data";
+var DealerCompanyRegno = "Įmonės kodas:";
+var DealerLegalAddressTotal = "Juridinis adresas:";
+var DealerNameLegal = "Pardavėjas:";
+var DealerNameMarketing = "Pardavėjas:";
+var DealerVatPayerNo = "PVM mokėtojo kodas:";
+var Discount = "N. %";
+var DocTypeCreditInvoice = "Kreditinė PVM sąskaita-faktūra";
+var DocTypeInvoice = "PVM SĄSKAITA-FAKTŪRA";
+var DocTypeInvoice = "PVM SĄSKAITA-FAKTŪRA";
+var DocTypePrepayment = "Sąskaita išankstiniam apmokėjimui";
+var DocTypePrepayment = "Sąskaita išankstiniam apmokėjimui";
+var DocTypePriceEstimate = "Pasiūlymas";
+var DocTypeWorkOrder = "Darbo užsakymas";
+var DueDate = "Apmokėti iki:";
+var DueDate_KON = "Mokama:";
+var DueDate_KRE = "Apmokėti iki:";
+var ExtensionsText = "Mes jus informuosime jei bus atrasta papildomų problemų, kad galėtume susitarti dėl tolesnių veiksmų";
+var ForeignSalesVat = "PVM 0% (LTL)";
+var GreetingsText = "Nuoširdžiausi linkėjimai,";
+var Hour = "h";
+var InvoiceNo = "Nr.:";
+var InvoiceSeries = "Serija:";
+var InvoiceTitle_F = "PVM SĄSKAITA-FAKTŪRA";
+var InvoiceTitle_I = "Vidinė sąskaita-faktūra";
+var InvoiceTitle_K = "Kreditinė PVM sąskaita-faktūra";
+var InvoiceTitle_N = "Vidinė kreditinė sąskaita";
+var InvoiceTitle_P = "Išankstinio mokėjimo sąskaita";
+var InvoiceTitle_Q = "Išankstinio mokėjimo kreditinė sąskaita";
+var InvoiceType = "UT";
+var LocationSparepart = "Vieta";
+var LocationSparepartPrepicked = "Iš anksto pasirinktų atsarginių detalių vieta";
+var MechanicNo = "Mechaniko Nr.";
+var MechanicSignature = "Mechaniko parašas";
+var Name = "Pavardė";
+var No = "Nr.";
+var Of = "iš";
+var OfferText = "Mūsų pasiūlymas Jums yra:";
+var OurRef = "Pastaba:";
+var OwnerName = "Savininkas:";
+var Page = "Lapas";
+var PaymentTerms = "Mokėjimo sąlygos:";
+var PaymentTerms_Kon = "Grynieji pinigai";
+var PaymentTerms_Kre = "Pavedimu";
+var PlannedValuation = "Susitarta:";
+var PlannedVisit = "Apsilankymo data:";
+var PlannedWorks = "Planuojami darbai:";
+var PrepaymentAmount = "Užsakovo avansas (LTL):";
+var Preview = "Peržiūra";
+var Price = "Kaina";
+var PriceEstimateNo = "Pasiūlymas Nr.:";
+var PriceTotal = "Iš viso suma";
+var PriceTotalColumn = "Suma be PVM";
+var PriceTotalSum = "Užsakymo suma be PVM (LTL):";
+var PriceTotalSum2 = "Kaina be PVM (LTL)";
+var PriceTotalSumPrepay = "Užsakovo avansas (LTL)";
+var PriceVatTotalSum = "Viso su PVM (LTL):";
+var PriceVatTotalSumLocal = "Bendra užsakymo suma (LTL):";
+var PriceVatTotalToPay = "Mokėti su PVM (LTL)";
+var Product = "Gaminys";
+var Quantity = "Kiekis";
+var ReceiptNo = "Kvito Nr.";
+var ReceivedText_D = "Visas prekes ir paslaugas paminėtas s-f gavau.";
+var ReceivedText_V = "Visas prekes ir paslaugas paminėtas s-f gavau.";
+var ReferenceNo = "Praėjimo Nr.";
+var RemarkDate = "Data";
+var RemarkPriority = "Pirmenybė";
+var RemarksText = "Patvirtinu, kad aš esu susipažinęs su komentarais.";
+var RemarkText = "Aprašymas";
+var Remember = "Papildomai:";
+var RestPayTotal = "Mokėti su PVM (LTL)";
+var Reviewed = "Klientas informuotas:";
+var ServiceAdvisor = "Serviso konsultantas,";
+var ServiceAdvisorColon = "Serviso konsultantas:";
+var ServiceEUText = "Paslaugos nėra PVM objektas pagal LR PVM įst.13 str.";
+var Signature = "Parašas";
+var SignatureColon = "Parašas:";
+var SignHere = "Parašas";
+var SoldBy = "Pardavėjas:";
+var SparepartEU = "Prekių tiekimas į EU šalis PVM apmokestinamas 0% tarifu pagal LR PVM įst.49str.";
+var SpProducer = "SP gamintojo kodas";
+var SwiftCode = "SWIFT:";
+var Task = "Užduotis";
+var TaskId = "Užduotis Nr.";
+var TaskLetter = "U";
+var ThankYouTextConfirmation = "Brangus kliente, Dėkojame, kad kreipėtės į mūsų servisą dėl Jūsų automobilio aptarnavimo.";
+var ThankYouTextPriceestimate = "Dėkojame, kad kreipėtės į mūsų servisą dėl Jūsų automobilio aptarnavimo.";
+var ThroughputNo = "Praėjimo Nr.:";
+var TimeTotal = "Bendras laikas";
+var Unit = "Vnt";
+var UserName = "Vartotojas:";
+var VatAmount = "PVM (LTL)";
+var VatAmountCash = "PVM Suma";
+var VatAmountColon = "PVM (LTL):";
+var VatIncluded = "Visos kainos su PVM";
+var VatPayerNo = "PVM mok. kodas:";
+var VatRateCash = "PVM Tarifas";
+var VatText = "PVM neįskaičiuotas - paslaugos nėra PVM objektas";
+var VatZeroText = "PVM 0% (LTL)";
+var VisitAddress = "Adresas:";
+var Work = "Darbai";
+var fldWorkOrder = "Darbo užsakymas";
+var YesNo = "Taip / Ne";
+var YourRef = "Pastaba:";
+var YourServiceAdvisor = "Jūsų serviso konsultantas,";               
+               
+               
+               
+
+               
+               
+
+               
+               
+
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle LT?></script>
+         </variables>
+      </subform>
+   </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 128?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2012-12-17T15:26:48Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:3d534c4c-1b07-4f54-96a3-43016a373619</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">LT</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default"/>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.#subform.#variables.LT</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="da_DK" desc="Dansk (Danmark)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>marts</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sø</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lø</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet></xdp:xdp>
