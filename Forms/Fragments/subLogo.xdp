@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2012-11-30T07:42:21Z" uuid="76326ac1-5632-44ee-803f-67b1155a6fd7">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-03T14:53:51Z" uuid="50ae5c1a-037f-4dc5-9541-54d57933333d">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
-   <subform name="form1" locale="nb_NO" layout="tb">
+   <subform name="form1" locale="nb_NO" layout="tb" hAlign="right">
       <pageSet>
          <pageArea>
             <contentArea x="15mm" y="37mm" w="190mm" h="233mm" name="areaPage1" id="areaPage1_ID"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
-      <subform name="subLogo" presence="invisible" hAlign="right" layout="tb" w="29.15mm">
+      <subform name="subLogo" hAlign="right" layout="tb">
          <bind match="none"/>
          <event activity="initialize" name="event__initialize">
             <script contentType="application/x-javascript">
@@ -18,7 +18,7 @@ this.presence = "visible";
 this.access = "protected";
 </script>
          </event>
-         <field name="imgLogo" w="29.15mm" h="22.225mm" hAlign="right">
+         <field name="imgLogo" w="30mm" h="17mm" hAlign="right">
             <ui>
                <imageEdit data="embed"/>
             </ui>
@@ -29,15 +29,72 @@ this.access = "protected";
             <desc>
                <text name="embeddedHref">Unknown Embedded URI</text>
             </desc>
+            <border>
+               <edge thickness="0.2mm" presence="hidden"/>
+               <corner thickness="0.2mm" presence="hidden"/>
+            </border>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
+//app.alert(DocHeaderBrand);
+
+if ( DocHeaderBrand == "S")
+{
+this.parent.x = "169mm"
+this.parent.y = "9mm";	
+	this.w = "26.2mm";
+	this.h = "22.6mm";
+}
+else if ( DocHeaderBrand == "V")
+{
+	this.parent.x = "178mm"
+this.parent.y = "9mm";
+	this.w = "17.4mm";
+	this.h = "17.4mm";
+}
+else if ( DocHeaderBrand == "A" )
+{
+this.parent.x = "165mm"
+this.parent.y = "9mm";
+this.w = "30mm";
+	this.h = "17mm";
+
+}
+else if (DocHeaderBrand == "U")
+{
+
+	this.parent.x = "173mm"
+this.parent.y = "9mm";	
+	this.w = "22mm";
+	this.h = "23mm";
+}
+else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
+{
+		
+}
+
+this.presence = "visible";
+this.access = "protected";
+</script>
+            </event>
          </field>
          <?templateDesigner isFragment yes?>
          <?templateDesigner fragmentTitle subLogo?>
+         <border>
+            <edge presence="hidden"/>
+            <corner thickness="0.175mm" presence="hidden"/>
+         </border>
          <?templateDesigner expand 1?></subform>
       <?templateDesigner expand 1?>
    </subform>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(250000,250000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 143?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner SaveTaggedPDF 1?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 167?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -49,7 +106,6 @@ this.access = "protected";
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -64,14 +120,14 @@ this.access = "protected";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2012-11-30T07:42:21Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-03T14:53:51Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:76326ac1-5632-44ee-803f-67b1155a6fd7</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:50ae5c1a-037f-4dc5-9541-54d57933333d</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
