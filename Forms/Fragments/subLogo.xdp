@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-03T14:53:51Z" uuid="50ae5c1a-037f-4dc5-9541-54d57933333d">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-04T11:15:18Z" uuid="7d69274c-2380-47b9-bd43-6ff430253036">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="nb_NO" layout="tb" hAlign="right">
@@ -10,7 +10,7 @@
             <medium stock="a4" short="210mm" long="297mm"/>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
-      <subform name="subLogo" hAlign="right" layout="tb">
+      <subform name="subLogo" hAlign="right">
          <bind match="none"/>
          <event activity="initialize" name="event__initialize">
             <script contentType="application/x-javascript">
@@ -18,7 +18,7 @@ this.presence = "visible";
 this.access = "protected";
 </script>
          </event>
-         <field name="imgLogo" w="30mm" h="17mm" hAlign="right">
+         <field name="imgLogo" w="30mm" h="17mm" hAlign="right" presence="hidden">
             <ui>
                <imageEdit data="embed"/>
             </ui>
@@ -30,8 +30,12 @@ this.access = "protected";
                <text name="embeddedHref">Unknown Embedded URI</text>
             </desc>
             <border>
-               <edge thickness="0.2mm" presence="hidden"/>
-               <corner thickness="0.2mm" presence="hidden"/>
+               <edge thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </edge>
+               <corner thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </corner>
             </border>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
@@ -41,41 +45,51 @@ var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.Do
 
 if ( DocHeaderBrand == "S")
 {
-this.parent.x = "169mm"
-this.parent.y = "9mm";	
-	this.w = "26.2mm";
-	this.h = "22.6mm";
+	SkodaLogo.rawValue = this.rawValue;
+	SkodaLogo.presence = "visible";
+	this.rawValue = "";
+	VWLogo.presence = "hidden";
+	AudiServiceLogo.presence = "hidden";
+	AudiLogo.presence = "hidden";
 }
 else if ( DocHeaderBrand == "V")
 {
-	this.parent.x = "178mm"
-this.parent.y = "9mm";
-	this.w = "17.4mm";
-	this.h = "17.4mm";
+	VWLogo.rawValue = this.rawValue;
+	VWLogo.presence = "visible";
+	this.rawValue = "";
+	SkodaLogo.presence = "hidden";
+	AudiServiceLogo.presence = "hidden";
+	AudiLogo.presence = "hidden";
+
 }
 else if ( DocHeaderBrand == "A" )
 {
-this.parent.x = "165mm"
-this.parent.y = "9mm";
-this.w = "30mm";
-	this.h = "17mm";
-
+	AudiLogo.rawValue = this.rawValue;
+	AudiLogo.presence = "visible";
+	this.rawValue = "";
+	
+	VWLogo.presence = "hidden";
+	SkodaLogo.presence = "hidden";
+	AudiServiceLogo.presence = "hidden";
+	
 }
 else if (DocHeaderBrand == "U")
 {
-
-	this.parent.x = "173mm"
-this.parent.y = "9mm";	
-	this.w = "22mm";
-	this.h = "23mm";
+	AudiServiceLogo.rawValue = this.rawValue;
+	AudiServiceLogo.presence = "visible";
+	this.rawValue = "";
+	
+	VWLogo.presence = "hidden";
+	SkodaLogo.presence = "hidden";
+	AudiLogo.presence = "hidden";
 }
 else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
 {
 		
 }
 
-this.presence = "visible";
-this.access = "protected";
+//this.presence = "visible";
+//this.access = "protected";
 </script>
             </event>
          </field>
@@ -85,16 +99,118 @@ this.access = "protected";
             <edge presence="hidden"/>
             <corner thickness="0.175mm" presence="hidden"/>
          </border>
+         <field name="AudiLogo" w="30mm" h="17mm" hAlign="right">
+            <ui>
+               <imageEdit data="embed"/>
+            </ui>
+            <value>
+               <image contentType="application/octet-stream"/>
+            </value>
+            <bind match="dataRef" ref="$.Header.LogoImage"/>
+            <desc>
+               <text name="embeddedHref">Unknown Embedded URI</text>
+            </desc>
+            <border>
+               <edge thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </edge>
+               <corner thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </corner>
+            </border>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+this.access = "protected";
+</script>
+            </event>
+         </field>
+         <field name="VWLogo" w="17.4mm" h="17.4mm" hAlign="right" x="12.6mm" y="0.62mm">
+            <ui>
+               <imageEdit data="embed"/>
+            </ui>
+            <value>
+               <image contentType="application/octet-stream"/>
+            </value>
+            <bind match="dataRef" ref="$.Header.LogoImage"/>
+            <desc>
+               <text name="embeddedHref">Unknown Embedded URI</text>
+            </desc>
+            <border>
+               <edge thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </edge>
+               <corner thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </corner>
+            </border>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+this.access = "protected";
+</script>
+            </event>
+         </field>
+         <field name="AudiServiceLogo" w="22mm" h="23mm" hAlign="right" x="7.828mm" y="0.06mm">
+            <ui>
+               <imageEdit data="embed"/>
+            </ui>
+            <value>
+               <image contentType="application/octet-stream"/>
+            </value>
+            <bind match="dataRef" ref="$.Header.LogoImage"/>
+            <desc>
+               <text name="embeddedHref">Unknown Embedded URI</text>
+            </desc>
+            <border>
+               <edge thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </edge>
+               <corner thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </corner>
+            </border>
+            <?templateDesigner expand 1?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+this.access = "protected";
+</script>
+            </event>
+         </field>
+         <field name="SkodaLogo" w="22.2mm" h="26.6mm" hAlign="right" x="7.568mm" y="0.06mm">
+            <ui>
+               <imageEdit data="embed"/>
+            </ui>
+            <value>
+               <image contentType="application/octet-stream"/>
+            </value>
+            <bind match="dataRef" ref="$.Header.LogoImage"/>
+            <desc>
+               <text name="embeddedHref">Unknown Embedded URI</text>
+            </desc>
+            <border>
+               <edge thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </edge>
+               <corner thickness="0.1mm">
+                  <color value="255,0,0"/>
+               </corner>
+            </border>
+            <?templateDesigner expand 1?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+this.access = "protected";
+</script>
+            </event>
+         </field>
          <?templateDesigner expand 1?></subform>
       <?templateDesigner expand 1?>
    </subform>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(250000,250000), objsnap:0, guidesnap:0, pagecentersnap:0?>
-   <?templateDesigner FormTargetVersion 30?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 167?></template>
+   <?templateDesigner Zoom 154?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -106,6 +222,7 @@ this.access = "protected";
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -120,14 +237,14 @@ this.access = "protected";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-03T14:53:51Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-04T11:15:18Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:50ae5c1a-037f-4dc5-9541-54d57933333d</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:7d69274c-2380-47b9-bd43-6ff430253036</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
