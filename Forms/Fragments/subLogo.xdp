@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-03T14:53:51Z" uuid="50ae5c1a-037f-4dc5-9541-54d57933333d">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-04T06:17:26Z" uuid="44e24d3d-2a17-423c-bc62-5a232075622d">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="nb_NO" layout="tb" hAlign="right">
@@ -30,12 +30,12 @@ this.access = "protected";
                <text name="embeddedHref">Unknown Embedded URI</text>
             </desc>
             <border>
-               <edge thickness="0.2mm" presence="hidden"/>
-               <corner thickness="0.2mm" presence="hidden"/>
+               <edge thickness="0.1mm"/>
+               <corner thickness="0.1mm"/>
             </border>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
-
+this.border.presence = "hidden";
 var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
 //app.alert(DocHeaderBrand);
 
@@ -120,14 +120,14 @@ this.access = "protected";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-03T14:53:51Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-04T06:17:26Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:50ae5c1a-037f-4dc5-9541-54d57933333d</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:44e24d3d-2a17-423c-bc62-5a232075622d</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
