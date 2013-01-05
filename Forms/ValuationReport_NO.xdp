@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-05T13:14:56Z" uuid="29993a0d-7287-4d08-ad67-69935665305d">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-05T13:48:41Z" uuid="249b712c-6239-4642-8248-6cc50cd67c78">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -1215,7 +1215,7 @@ var receivedText = fldTestLabelData.rawValue;
                   </caption>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform x="1mm" y="51mm" usehref=".\Fragments\verticalLabel.xdp#som($template.#subform.verticalLabel)">
+            <subform x="1mm" y="105mm" usehref=".\Fragments\verticalLabel.xdp#som($template.#subform.verticalLabel)">
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
@@ -1554,7 +1554,36 @@ var receivedText = xfa.resolveNode("Data.#pageSet.mpgPage1.subDocumentHeader.sub
                   </rectangle>
                </value>
             </draw>
-            <?templateDesigner expand 1?></pageArea>
+            <?templateDesigner expand 1?>
+            <field name="verticalLabel" access="readOnly" h="4mm" w="49mm" x="2mm" y="155mm" rotate="90">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="none"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel.verticalTextLabel");
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="8pt"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>NameOfDocType_ServerDate</text>
+               </value>
+            </field>
+         </pageArea>
          <?templateDesigner expand 1?></pageSet>
       <subform w="193mm" name="PageContent" layout="tb">
          <bind match="none"/>
@@ -2942,15 +2971,13 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 184 49 00030011001D0025002600270029002A002B002E002F00310032003300350036003700390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E009100A1 .:BCDFGHKLNOPRSTV_abcdefghijklmnoprstuvy{}åØø?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 188 49 0003000B000C001100120014001D0020002400250026002700280029002A002E00300031003300350036003700380039004400450046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ()./1:=ABCDEFGKMNPRSTUVabcdefgijklmnoprstuvyÅø?>
-      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 36 9 00010027003500450046004A004D00550059 FTdeiltx?></subform>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 188 49 0003000B000C001100120014001D0020002400250026002700280029002A002E00300031003300350036003700380039004400450046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ()./1:=ABCDEFGKMNPRSTUVabcdefgijklmnoprstuvyÅø?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner Stylesheet ..\..\..\..\..\Development\Styles MG1.xfs?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner SavePDFWithLog 0?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -2966,9 +2993,10 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\ValuationReport\sp008078GP2_xslt_final.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Zoom 100?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 154?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
@@ -2981,6 +3009,7 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -3112,14 +3141,14 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-05T13:14:56Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-05T13:48:41Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:29993a0d-7287-4d08-ad67-69935665305d</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:249b712c-6239-4642-8248-6cc50cd67c78</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
