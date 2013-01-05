@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-05T13:42:48Z" uuid="77342025-1046-4d73-81e8-028640e6268b">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-05T13:58:38Z" uuid="45e952b2-2a9c-4e7b-acbc-0e5026be0f63">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -767,14 +767,14 @@ this.access = "protected";
 </script>
                </event>
                <border>
-                  <corner presence="visible" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="visible" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="visible" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="visible" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="visible" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="visible" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="visible" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="visible" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
                </border>
                <?templateDesigner expand 1?>
             </subform>
@@ -3568,8 +3568,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 154?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -3587,6 +3585,8 @@ this.caption.value.text = output;
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 154?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:50000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -3600,6 +3600,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -3969,14 +3970,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-05T13:42:48Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-05T13:58:38Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:77342025-1046-4d73-81e8-028640e6268b</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:45e952b2-2a9c-4e7b-acbc-0e5026be0f63</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
