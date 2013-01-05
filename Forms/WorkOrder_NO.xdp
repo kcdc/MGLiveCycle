@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-05T13:17:18Z" uuid="5532423a-0198-4f8d-a32c-6ac51bc933c3">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-05T13:33:25Z" uuid="5da70142-174b-4215-acb8-36ba5a243e01">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -744,8 +744,7 @@ this.access = "protected";
                </field>
                <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="107mm">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
@@ -1346,6 +1345,26 @@ var receivedText = fld_TestLabelData.rawValue;
                   </field>
                   <?templateDesigner expand 0?></subform>
                <?templateDesigner expand 1?></subform>
+            <field name="verticalLabel" minH="6mm" access="readOnly" minW="43.35mm" x="4mm" y="155.35mm" rotate="90">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
+               <para lineHeight="8pt" vAlign="middle" hAlign="right"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subHeader.verticalLabel.verticalTextLabel").rawValue;
+</script>
+               </event>
+               <value>
+                  <text>NameOfDocType_ServerDate</text>
+               </value>
+            </field>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
       <subform layout="tb" w="190mm" name="pageContent">
@@ -3529,7 +3548,7 @@ this.caption.value.text = output;
       </proto>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 124 31 000300060012002400250027002F00300031003200330035003600370039004200440045004700480049004C004E004F0050005200530055005600570059 #/ABDLMNOPRSTV_abdefiklmoprstv?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 132 33 000300060012002400250027002F003000310032003300350036003700390042004400450046004700480049004C004E004F0050005200530055005600570059005C #/ABDLMNOPRSTV_abcdefiklmoprstvy?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 188 49 0003000A00110012001D002400250026002700280029002A002C002E002F00300031003200330035003600370039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 './:ABCDEFGIKLMNOPRSTVabcdefghijklmnoprstuvyåø?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier New" 0 1 ISO-8859-1 4 44 12 0003002700440048004A004D0050005100520057006E Daegjmnotå?>
@@ -3557,9 +3576,9 @@ this.caption.value.text = output;
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\WorkOrderGP\WorkOrder500779GP1.xml?>
    <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 154?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:50000?>
-   <?templateDesigner Zoom 75?></template>
+   <?templateDesigner Guidelines v:375000;v:50000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -3941,14 +3960,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-05T13:17:18Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-05T13:33:25Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:5532423a-0198-4f8d-a32c-6ac51bc933c3</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:5da70142-174b-4215-acb8-36ba5a243e01</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
