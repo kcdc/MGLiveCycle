@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-05T13:58:57Z" uuid="04085cb1-56c9-45b7-a4fc-37ec0e131b30">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-07T20:15:26Z" uuid="52265279-0988-43b6-a0cc-499a262e15e3">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -55,7 +55,7 @@ else
                   </field>
                   <?templateDesigner expand 0?></subform>
                <bind match="none"/>
-               <field name="DealerNameMarketing" minW="155mm" y="13.07mm" x="15mm" minH="11mm" access="readOnly">
+               <field name="DealerNameMarketing" minW="155mm" y="8mm" x="15mm" minH="11mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -2640,7 +2640,7 @@ this.caption.value.text = output;
             <occur min="0" max="-1"/>
             <overflow leader="subTaskTitle"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="180mm" name="subMaterialsAndSparepartsHeader" layout="lr-tb">
+         <subform w="179mm" name="subMaterialsAndSparepartsHeader" layout="lr-tb">
             <bind match="none"/>
             <field name="LocationSparepart" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly">
                <ui>
@@ -2692,7 +2692,7 @@ this.caption.value.text = output;
 </script>
                </event>
             </field>
-            <field name="Product" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="48mm" h="4mm" access="readOnly">
+            <field name="Product" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="49mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -2717,12 +2717,15 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 this.caption.value.text = output;
 </script>
                </event>
+               <border>
+                  <margin/>
+               </border>
             </field>
-            <field name="TaskLetter" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="11.001mm" h="4mm" access="readOnly" x="0in" y="3mm">
+            <field name="TaskLetter" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="10mm" h="4mm" access="readOnly" x="0in" y="3mm">
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="10mm">
+               <caption reserve="9mm">
                   <value>
                      <text xliff:rid="A4A36B04-EA41-43AB-896F-AD331E9BC391">Oppdr</text>
                   </value>
@@ -2742,6 +2745,7 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 this.caption.value.text = output;
 </script>
                </event>
+               <margin leftInset="0mm"/>
             </field>
             <field name="InvoiceType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="17mm" h="4mm" access="readOnly" x="0in" y="6mm">
                <ui>
@@ -2771,7 +2775,7 @@ this.caption.value.text = output;
 </script>
                </event>
             </field>
-            <field name="Unit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="15mm" h="4mm" access="readOnly">
+            <field name="Unit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="14mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -2795,8 +2799,9 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 this.caption.value.text = output;
 </script>
                </event>
+               <margin leftInset="0mm"/>
             </field>
-            <field name="Quantity" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="11mm" h="4mm" access="readOnly" x="0in" y="9mm">
+            <field name="Quantity" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="12mm" h="4mm" access="readOnly" x="0in" y="9mm">
                <ui>
                   <textEdit/>
                </ui>
@@ -2820,6 +2825,7 @@ this.caption.value.text = output;
 
 </script>
                </event>
+               <margin leftInset="1mm"/>
             </field>
             <field name="Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="21mm" h="4mm" access="readOnly" x="0in" y="12mm">
                <ui>
@@ -2836,7 +2842,7 @@ this.caption.value.text = output;
                   </font>
                </caption>
                <bind match="none" ref=""/>
-               <margin rightInset="1mm"/>
+               <margin rightInset="1.2mm"/>
                <event activity="initialize" ref="$" name="event__initialize">
                   <script contentType="application/x-javascript">
 var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
@@ -2895,7 +2901,7 @@ this.caption.value.text = output;
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <field name="MaterialText" w="54mm" h="3.6mm" access="readOnly">
+               <field name="MaterialText" w="49mm" h="3.6mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -2925,7 +2931,7 @@ this.caption.value.text = output;
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <field name="MaterialOrderType" w="12mm" h="3.6mm" access="readOnly">
+               <field name="MaterialOrderType" w="17mm" h="3.6mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -2955,7 +2961,7 @@ this.caption.value.text = output;
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <field name="MaterialQuantity" w="13mm" h="3.6mm" access="readOnly">
+               <field name="MaterialQuantity" w="12mm" h="3.6mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -2970,7 +2976,7 @@ this.caption.value.text = output;
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <field name="MaterialPrice" w="20mm" h="3.6mm" access="readOnly">
+               <field name="MaterialPrice" w="21mm" h="3.6mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -3024,7 +3030,7 @@ this.caption.value.text = output;
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <field name="SparePartText" w="54mm" h="3.6mm" access="readOnly">
+               <field name="SparePartText" w="49mm" h="3.6mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -3054,7 +3060,7 @@ this.caption.value.text = output;
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <field name="SparePartOrderType" w="12mm" h="3.6mm" access="readOnly">
+               <field name="SparePartOrderType" w="17mm" h="3.6mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -3084,7 +3090,7 @@ this.caption.value.text = output;
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <field name="SparePartQuantity" w="13mm" h="3.6mm" access="readOnly">
+               <field name="SparePartQuantity" w="12mm" h="3.6mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -3099,7 +3105,7 @@ this.caption.value.text = output;
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <field name="SparePartPrice" w="20mm" h="3.6mm" access="readOnly">
+               <field name="SparePartPrice" w="21mm" h="3.6mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -3981,8 +3987,7 @@ this.caption.value.text = output;
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)">
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 0?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -4030,8 +4035,8 @@ this.caption.value.text = output;
             </field>
          </subform>
       </proto>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 128 32 00030006001200250027002F003100320033003500360037004200440045004600480049004A004C004E004F0050005200530055005600570059005C005E0060 #/BDLNOPRST_abcefgiklmoprstvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 196 51 0003000A00110012001D002400250026002700280029002A002C002D002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 './:ABCDEFGIJKLMNOPRSTUVabcdefghijklmnoprstuvyåø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
@@ -4043,6 +4048,8 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 125?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -4055,15 +4062,13 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\TestShare\Sample data\sp008490 - WorkOrder_LV.xml?>
+   <?templateDesigner DefaultPreviewDataFileName .\Testfiler\862_WorkOrder_Litauen .xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 154?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:50000;v:4850000;v:1000000;h:2350000?></template>
+   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -4075,7 +4080,6 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4445,14 +4449,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-05T13:58:57Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-07T20:15:26Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:04085cb1-56c9-45b7-a4fc-37ec0e131b30</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:52265279-0988-43b6-a0cc-499a262e15e3</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
