@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-05T13:58:38Z" uuid="45e952b2-2a9c-4e7b-acbc-0e5026be0f63">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-08T12:53:51Z" uuid="33404570-3f1a-43dc-98ff-254c7b743d40">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -11,7 +11,7 @@
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform x="1.931mm" y="6mm" w="203mm" h="67.93mm" name="subHeader">
                <bind match="none"/>
-               <field name="DealerNameMarketing" minW="155mm" y="7.07mm" x="13mm" minH="11mm" access="readOnly">
+               <field name="DealerNameMarketing" minW="155mm" y="7mm" x="13.069mm" minH="11mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -47,7 +47,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
 </script>
                   </event>
                </field>
-               <field name="fld_TitleType" y="18.07mm" x="13mm" h="7mm" minW="91mm" access="readOnly">
+               <field name="fld_TitleType" y="18mm" x="13.069mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -65,7 +65,7 @@ this.rawValue = output;
                   </event>
                   <bind match="none"/>
                </field>
-               <field name="TypeText" y="25.07mm" h="4mm" minW="91mm" x="13mm" access="readOnly">
+               <field name="TypeText" y="25mm" h="4mm" minW="91mm" x="13.069mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -177,7 +177,7 @@ if(this.rawValue != "" || null)
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform x="136.069mm" y="56mm" w="62mm" name="subDocInfo" layout="lr-tb">
+               <subform x="125.069mm" y="56mm" w="62mm" name="subDocInfo" layout="lr-tb">
                   <bind match="none"/>
                   <field name="ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
                      <ui>
@@ -216,7 +216,7 @@ if(this.rawValue != "" || null)
                      </value>
                   </field>
                   <?templateDesigner expand 0?></subform>
-               <subform x="136.069mm" y="36mm" w="67mm" minH="13mm" name="subDealerInfo">
+               <subform x="125.069mm" y="36mm" w="67mm" minH="13mm" name="subDealerInfo">
                   <bind match="none"/>
                   <?templateDesigner expand 0?>
                   <subform w="65mm" layout="tb" name="subDealerAddress" y="0mm">
@@ -257,7 +257,7 @@ if(this.rawValue != "" || null)
                      </field>
                   </subform>
                </subform>
-               <subform x="136.069mm" y="49mm" w="67mm" minH="4.318mm" name="subCompanyRegNo" layout="lr-tb">
+               <subform x="125.069mm" y="49mm" w="67mm" minH="4.318mm" name="subCompanyRegNo" layout="lr-tb">
                   <bind match="none"/>
                   <field name="DealerCompanyRegNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="58mm" h="4mm" access="readOnly">
                      <ui>
@@ -289,7 +289,7 @@ if(this.rawValue != "" || null)
                      <para vAlign="middle"/>
                   </field>
                   <?templateDesigner expand 0?></subform>
-               <subform x="124.069mm" minH="22.225mm" name="sub_TestLabel" layout="tb" y="30mm" w="76.15mm">
+               <subform x="113.069mm" minH="22.225mm" name="sub_TestLabel" layout="tb" y="30mm" w="76.15mm">
                   <bind match="none"/>
                   <field name="fld_TestLabelData" h="5.939mm" minW="32.514mm" presence="hidden">
                      <ui>
@@ -353,7 +353,7 @@ var receivedText = fld_TestLabelData.rawValue;
                   </field>
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
-            <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="191mm">
+            <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="179mm">
                <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
                <subform name="sub_FooterA" layout="tb" w="45mm">
                   <bind match="none"/>
@@ -504,7 +504,7 @@ var receivedText = fld_TestLabelData.rawValue;
                      <para vAlign="middle"/>
                      <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB6"/>
                   </field>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 0?></subform>
                <subform name="sub_FooterC" layout="tb" w="45mm">
                   <bind match="none"/>
                   <field name="FooterC1" w="40mm" minH="2.4mm" access="protected">
@@ -579,7 +579,7 @@ var receivedText = fld_TestLabelData.rawValue;
                      <para vAlign="middle"/>
                      <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC6"/>
                   </field>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 0?></subform>
                <bind match="none"/>
                <border>
                   <edge thickness="0.4mm"/>
@@ -591,7 +591,7 @@ var receivedText = fld_TestLabelData.rawValue;
                   <corner/>
                   <corner/>
                </border>
-               <subform w="178mm" layout="lr-tb" name="subPageNumering" hAlign="right">
+               <subform w="166mm" layout="lr-tb" name="subPageNumering" hAlign="right">
                   <bind match="none"/>
                   <field name="CurrentPageNumber" y="0mm" x="0mm" w="62mm" h="9mm" access="readOnly" presence="hidden" id="floatingField025818">
                      <ui>
@@ -612,7 +612,7 @@ var receivedText = fld_TestLabelData.rawValue;
                      <calculate override="error"/>
                      <bind match="none"/>
                      <?templateDesigner floatingFieldPlaceholder #?></field>
-                  <field name="NumberofPages" y="0mm" x="0mm" w="62mm" h="9mm" access="readOnly" presence="hidden" id="floatingField008521">
+                  <field name="NumberofPages" y="0mm" x="0mm" w="39mm" h="9mm" access="readOnly" presence="hidden" id="floatingField008521">
                      <ui>
                         <numericEdit>
                            <border>
@@ -644,9 +644,9 @@ var receivedText = fld_TestLabelData.rawValue;
                      <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
                      <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
                   </draw>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 0?></subform>
                <?templateDesigner expand 0?></subform>
-            <subform usehref=".\Fragments\subLogo.xdp#som($template.form1.subLogo)" hAlign="right" w="0in" anchorType="topLeft" x="164mm" y="8.989mm">
+            <subform usehref=".\Fragments\subLogo.xdp#som($template.form1.subLogo)" hAlign="right" w="0in" anchorType="topLeft" x="164mm" y="9mm">
                <bind/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
@@ -668,7 +668,7 @@ this.access = "protected";
                </border>
                <?templateDesigner expand 1?>
             </subform>
-            <contentArea x="16mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
+            <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
             <subform name="sub_FooterD" layout="tb" w="44mm" x="150mm" y="271mm">
                <bind match="none"/>
                <field name="FooterD1" w="40mm" minH="2.4mm" access="protected">
@@ -745,18 +745,18 @@ this.access = "protected";
                </field>
                <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="107mm">
-               <?templateDesigner expand 1?>
                <event activity="initialize" ref="$" name="event__initialize">
                   <script contentType="application/x-javascript">
 xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verticalTextLabel")
 </script>
                </event>
+               <?templateDesigner expand 1?>
             </subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
-            <contentArea y="41mm" w="190mm" h="220mm" name="areaPage1" id="areaPage1_ID_copy2" x="13mm"/>
-            <subform x="173mm" y="4mm" usehref=".\Fragments\subLogo.xdp#som($template.form1.subLogo)">
+            <contentArea y="41mm" w="190mm" h="220mm" name="areaPage1" id="areaPage1_ID_copy2" x="15mm"/>
+            <subform x="164mm" y="4mm" usehref=".\Fragments\subLogo.xdp#som($template.form1.subLogo)">
                <bind/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
@@ -778,7 +778,7 @@ this.access = "protected";
                </border>
                <?templateDesigner expand 1?>
             </subform>
-            <subform name="subFooter" layout="lr-tb" y="264mm" w="185mm" x="19mm">
+            <subform name="subFooter" layout="lr-tb" y="264mm" w="179mm" x="15mm">
                <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
                <subform name="sub_FooterA" layout="tb" w="45mm">
                   <bind match="none"/>
@@ -1148,7 +1148,7 @@ this.access = "protected";
                <?templateDesigner expand 0?></subform>
             <subform w="204.15mm" h="39mm" name="subHeader">
                <bind match="none"/>
-               <field name="fld_TitleType" y="18mm" x="13mm" h="7mm" minW="91mm" access="readOnly">
+               <field name="fld_TitleType" y="18mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1166,7 +1166,7 @@ this.rawValue = output;
                   </event>
                   <bind match="none"/>
                </field>
-               <field name="TypeText" y="25mm" h="4mm" minW="91mm" x="13mm" access="readOnly">
+               <field name="TypeText" y="25mm" h="4mm" minW="91mm" x="15mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -1218,7 +1218,7 @@ this.rawValue = output;
                      <bind match="none"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <field name="DealerNameMarketing" minW="155mm" y="7mm" x="13mm" minH="11mm" access="readOnly">
+               <field name="DealerNameMarketing" minW="155mm" y="7mm" x="15mm" minH="11mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -1266,6 +1266,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                         </value>
                      </caption>
                      <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
+                     <?templateDesigner expand 1?>
                   </field>
                   <field name="DateCreated" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
                      <ui>
@@ -1293,7 +1294,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                      </value>
                   </field>
                   <?templateDesigner expand 0?></subform>
-               <subform x="127mm" y="22mm" minH="22.225mm" name="sub_TestLabel" layout="tb" w="75.15mm">
+               <subform x="118mm" y="22mm" minH="22.225mm" name="sub_TestLabel" layout="tb" w="75.15mm">
                   <bind match="none"/>
                   <field name="fld_TestLabel" minH="12.7mm" access="readOnly" w="75mm">
                      <ui>
@@ -1376,7 +1377,7 @@ this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verti
             </field>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
-      <subform layout="tb" w="190mm" name="pageContent">
+      <subform layout="tb" w="179mm" name="pageContent">
          <bind match="none"/>
          <subform w="3.175mm" minH="8.703mm" layout="tb" name="subMetadata" presence="hidden">
             <bind match="none"/>
@@ -1413,11 +1414,11 @@ this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verti
                <bind match="dataRef" ref="$.Header.LangCode"/>
             </field>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subInformation" layout="tb">
+         <subform w="179mm" name="subInformation" layout="tb">
             <bind match="none"/>
-            <subform w="190.103mm" minH="33mm" name="subCustomerInfo" layout="lr-tb">
+            <subform w="179mm" minH="33mm" name="subCustomerInfo" layout="lr-tb">
                <bind match="none"/>
-               <subform w="189.999mm" name="subCustomerPhone" layout="lr-tb">
+               <subform w="179mm" name="subCustomerPhone" layout="lr-tb">
                   <bind match="none"/>
                   <field name="CustomerPhoneDay" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="31mm" h="4mm" access="readOnly">
                      <ui>
@@ -1471,9 +1472,9 @@ this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verti
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subCarInformation" layout="tb">
+         <subform w="179mm" name="subCarInformation" layout="tb">
             <bind match="none"/>
-            <subform w="190mm" name="subCarInfo" layout="lr-tb">
+            <subform w="179mm" name="subCarInfo" layout="lr-tb">
                <bind match="none"/>
                <field name="CarRegNo" minH="8mm" minW="22mm" access="readOnly">
                   <ui>
@@ -1577,7 +1578,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="CarModelDesc" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="83mm" access="readOnly">
+               <field name="CarModelDesc" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="72mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1788,11 +1789,11 @@ this.caption.value.text = output;
                </field>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subTopTextMain" layout="tb">
+         <subform w="179mm" name="subTopTextMain" layout="tb">
             <bind match="dataRef" ref="$.Document.TopTextMain"/>
-            <subform w="189.999mm" h="4mm" name="TopTextLines">
+            <subform w="179mm" h="4mm" name="TopTextLines">
                <bind match="dataRef" ref="$.TopTextLines[*]"/>
-               <field name="TopTextLine" minH="4mm" minW="189.999mm" access="readOnly" x="0mm">
+               <field name="TopTextLine" minH="4mm" minW="179mm" access="readOnly" x="0mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -1812,7 +1813,7 @@ this.caption.value.text = output;
             <margin topInset="1mm"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" layout="tb" name="subValuationInfo">
+         <subform w="179mm" layout="tb" name="subValuationInfo">
             <bind match="dataRef" ref="$.Document.ValuationInfo"/>
             <field name="PlannedValuationDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
@@ -1833,7 +1834,7 @@ this.caption.value.text = output;
             <margin topInset="1mm"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subPlannedVisit" layout="tb">
+         <subform w="179mm" name="subPlannedVisit" layout="tb">
             <bind match="dataRef" ref="$.Document.PlannedVisit"/>
             <field name="PlannedVisitDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
@@ -1854,7 +1855,7 @@ this.caption.value.text = output;
             <margin topInset="1mm"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subVisitInfo" layout="tb">
+         <subform w="179mm" name="subVisitInfo" layout="tb">
             <bind match="dataRef" ref="$.Document.VisitInfo"/>
             <margin topInset="1mm"/>
             <field name="ServiceAdvisor" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
@@ -1875,7 +1876,7 @@ this.caption.value.text = output;
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" layout="tb" name="subCarDelivery">
+         <subform w="179mm" layout="tb" name="subCarDelivery">
             <bind match="dataRef" ref="$.Document.CarDelivery"/>
             <field name="CarDeliveryDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
@@ -1895,7 +1896,7 @@ this.caption.value.text = output;
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 0?></subform>
-         <subform w="190mm" name="subCarPickUp" layout="tb">
+         <subform w="179mm" name="subCarPickUp" layout="tb">
             <bind match="dataRef" ref="$.Document.CarPickup"/>
             <field name="CarPickUpDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
@@ -1915,7 +1916,7 @@ this.caption.value.text = output;
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subCarFinished" layout="tb">
+         <subform w="179mm" name="subCarFinished" layout="tb">
             <bind match="dataRef" ref="$.Document.CarFinished"/>
             <field name="CarFinishedDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
@@ -1935,7 +1936,7 @@ this.caption.value.text = output;
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subCheckList">
+         <subform w="179mm" name="subCheckList">
             <bind match="dataRef" ref="$.Document.CheckList"/>
             <field name="CheckListText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="0.001mm" y="0mm">
                <ui>
@@ -2026,7 +2027,7 @@ this.caption.value.text = output;
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 0?></subform>
-         <subform w="190mm" minH="4mm" layout="tb" name="subReminderList">
+         <subform w="179mm" minH="4mm" layout="tb" name="subReminderList">
             <bind match="dataRef" ref="$.Document.ReminderList"/>
             <subform w="24mm" minH="4mm" layout="lr-tb" name="subReminderTitle">
                <bind match="none"/>
@@ -2056,7 +2057,7 @@ this.caption.value.text = output;
                   </event>
                </field>
                <?templateDesigner expand 1?></subform>
-            <subform w="190mm" layout="lr-tb" name="subReminder">
+            <subform w="179mm" layout="lr-tb" name="subReminder">
                <bind match="dataRef" ref="$.Reminder[*]"/>
                <field name="ReminderDescription" minH="4mm" minW="96mm" access="readOnly">
                   <ui>
@@ -2082,7 +2083,7 @@ this.caption.value.text = output;
                   </border>
                   <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                </field>
-               <field name="ReminderDescComment" minH="4mm" minW="94mm" access="readOnly">
+               <field name="ReminderDescComment" minH="4mm" minW="83mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -2111,13 +2112,13 @@ this.caption.value.text = output;
             <margin topInset="1mm"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform y="134.093mm" w="189.999mm" minH="8mm" layout="tb" name="subCommentsArea">
+         <subform y="134.093mm" w="179mm" minH="8mm" layout="tb" name="subCommentsArea">
             <bind match="none"/>
-            <subform w="189.999mm" layout="tb" name="subComments">
+            <subform w="179mm" layout="tb" name="subComments">
                <bind match="dataRef" ref="$.Document.Comments[*]"/>
                <subform name="subCustomerComment" layout="tb">
                   <bind match="none"/>
-                  <field name="CustomerComment" minH="4mm" access="readOnly" w="189.999mm">
+                  <field name="CustomerComment" minH="4mm" access="readOnly" w="179mm">
                      <ui>
                         <textEdit multiLine="1">
                            <border presence="hidden"/>
@@ -2135,7 +2136,7 @@ this.caption.value.text = output;
                   <?templateDesigner expand 1?></subform>
                <subform name="subInternalComment" layout="tb">
                   <bind match="none"/>
-                  <field name="InternalComment" minH="5mm" access="readOnly" w="189.999mm">
+                  <field name="InternalComment" minH="5mm" access="readOnly" w="179mm">
                      <ui>
                         <textEdit multiLine="1">
                            <border presence="hidden"/>
@@ -2157,7 +2158,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 0?></subform>
          <subform name="SubTasks" layout="tb">
             <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="0mm"/>
-            <subform w="190mm" name="subTaskTitle" layout="tb" id="subTaskTitle_ID">
+            <subform w="179mm" name="subTaskTitle" layout="tb" id="subTaskTitle_ID">
                <bind match="none"/>
                <field name="TaskTitle" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly">
                   <ui>
@@ -2190,9 +2191,9 @@ this.caption.value.text = output;
                <breakBefore/>
                <occur max="-1"/>
                <?templateDesigner expand 1?></subform>
-            <subform name="subTask" w="189.999mm" layout="tb">
+            <subform name="subTask" w="179mm" layout="tb">
                <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
-               <subform name="subTaskHeader" w="189.999mm" layout="lr-tb" id="subTaskHeader_ID">
+               <subform name="subTaskHeader" w="179mm" layout="lr-tb" id="subTaskHeader_ID">
                   <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
                   <field name="TaskId" w="7mm" h="3.6mm" access="readOnly">
                      <ui>
@@ -2219,9 +2220,9 @@ this.caption.value.text = output;
                      <para vAlign="middle"/>
                      <bind match="dataRef" ref="$.TaskName"/>
                   </field>
-                  <subform x="44mm" w="140mm" minH="3.6mm" layout="lr-tb" name="subTreatmentCodeinfo">
+                  <subform x="44mm" w="135mm" minH="3.6mm" layout="lr-tb" name="subTreatmentCodeinfo">
                      <bind match="none"/>
-                     <field name="TreatmentCodeInfo" h="3.6mm" minW="140mm" access="readOnly">
+                     <field name="TreatmentCodeInfo" h="3.6mm" minW="135mm" access="readOnly">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2235,9 +2236,9 @@ this.caption.value.text = output;
                      </field>
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
-                  <subform w="183.999mm" minH="3.6mm" layout="lr-tb" name="subTaskText">
+                  <subform w="179mm" minH="3.6mm" layout="lr-tb" name="subTaskText">
                      <bind match="none"/>
-                     <field name="TaskText" access="readOnly" w="183.999mm" minH="3.6mm">
+                     <field name="TaskText" access="readOnly" w="179mm" minH="3.6mm">
                         <ui>
                            <textEdit multiLine="1">
                               <border presence="hidden"/>
@@ -2258,9 +2259,9 @@ this.caption.value.text = output;
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
                <bind match="dataRef" ref="$.Task[*]"/>
-               <subform y="8mm" w="187.928mm" layout="tb" name="subTaskDetailsArea">
+               <subform y="8mm" w="179mm" layout="tb" name="subTaskDetailsArea">
                   <bind match="dataRef" ref="$.TaskDetails[*]"/>
-                  <subform w="187.792mm" h="3.6mm" name="subTaskDetails">
+                  <subform w="179mm" h="3.6mm" name="subTaskDetails">
                      <bind match="none"/>
                      <field name="WorkPosNo" h="3.6mm" minW="14mm" y="0.094mm" x="23mm" access="readOnly">
                         <ui>
@@ -2317,7 +2318,7 @@ this.caption.value.text = output;
                   <?templateDesigner expand 1?></subform>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
-            <subform w="187.96mm" name="subWorkPosTotHour" h="3.6mm">
+            <subform w="179mm" name="subWorkPosTotHour" h="3.6mm">
                <bind match="none"/>
                <keep intact="none"/>
                <field name="WorkPosTotHour" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="19mm" h="3.6mm" y="0.188mm" x="118mm" access="readOnly">
@@ -2350,7 +2351,7 @@ this.caption.value.text = output;
             <occur min="0" max="-1"/>
             <overflow leader="subTaskTitle"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subMaterialsAndSparepartsHeader" layout="lr-tb">
+         <subform w="179mm" name="subMaterialsAndSparepartsHeader" layout="lr-tb">
             <bind match="none"/>
             <field name="LocationSparePart" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly">
                <ui>
@@ -2464,7 +2465,7 @@ this.caption.value.text = output;
                </caption>
                <bind match="none" ref=""/>
             </field>
-            <field name="Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="13.001mm" h="4mm" access="readOnly" x="0in" y="15mm">
+            <field name="Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="12mm" h="4mm" access="readOnly" x="0in" y="15mm">
                <ui>
                   <textEdit/>
                </ui>
@@ -2496,7 +2497,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 0?>
             <occur max="-1"/>
          </subform>
-         <subform w="190mm" minH="7.2mm" layout="tb" name="subMaterialAndSpareparts">
+         <subform w="179mm" minH="7.2mm" layout="tb" name="subMaterialAndSpareparts">
             <bind match="none"/>
             <subform name="subMaterials" layout="lr-tb">
                <field name="MaterialLocation" w="24mm" h="3.6mm" access="readOnly">
@@ -2760,11 +2761,11 @@ this.caption.value.text = output;
             <overflow leader="subContPageMaterialsAndSparepartsHeader"/>
             <occur max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="190mm" name="subSparePartTotal" layout="tb">
+         <subform w="179mm" name="subSparePartTotal" layout="tb">
             <bind match="none"/>
             <margin topInset="2mm"/>
             <overflow trailer="overflowTrailer" leader="" target="mpgPage2"/>
-            <subform w="190.112mm" name="subPriceTotalSum" layout="tb">
+            <subform w="179mm" name="subPriceTotalSum" layout="tb">
                <bind match="none"/>
                <border>
                   <edge thickness="0.2mm"/>
@@ -2777,7 +2778,7 @@ this.caption.value.text = output;
                   <corner/>
                </border>
                <?templateDesigner expand 0?>
-               <subform w="190mm" name="subNettoAmount">
+               <subform w="179mm" name="subNettoAmount">
                   <bind match="none"/>
                   <keep intact="none"/>
                   <?templateDesigner expand 0?>
@@ -2806,9 +2807,9 @@ this.caption.value.text = output;
                      <margin topInset="0mm" bottomInset="0.5mm"/>
                   </field>
                </subform>
-               <subform w="117mm" name="subPriceTotalSumHolder" hAlign="right">
+               <subform w="105.995mm" name="subPriceTotalSumHolder" hAlign="right" h="12.105mm">
                   <bind match="none"/>
-                  <field name="VatPercent" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="72.664mm" h="6mm" access="readOnly" hAlign="right" x="21.224mm" y="0in">
+                  <field name="VatPercent" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="72.664mm" h="6mm" access="readOnly" hAlign="right" x="21.224mm" y="0mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -2825,7 +2826,7 @@ this.caption.value.text = output;
                         <margin/>
                      </border>
                   </field>
-                  <field name="PriceVatTotalSum" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106mm" h="6mm" access="readOnly" x="0in" y="6mm">
+                  <field name="PriceVatTotalSum" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106mm" h="6mm" access="readOnly" x="0mm" y="6mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -2849,7 +2850,7 @@ this.caption.value.text = output;
                      </event>
                      <border/>
                   </field>
-                  <field name="VatAmount" w="20mm" h="6mm" access="readOnly" hAlign="right" x="86.112mm">
+                  <field name="VatAmount" w="20mm" h="6mm" access="readOnly" hAlign="right" x="85.888mm" y="0mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -2866,10 +2867,10 @@ this.caption.value.text = output;
                   </field>
                   <?templateDesigner expand 1?></subform>
             </subform>
-            <subform w="189mm" h="6.292mm" name="subSumSparePart">
+            <subform w="179mm" h="6.292mm" name="subSumSparePart">
                <bind match="none"/>
                <occur min="0" max="-1"/>
-               <subform w="189mm" layout="tb" name="subSumSparePartMaterial">
+               <subform w="179mm" layout="tb" name="subSumSparePartMaterial">
                   <bind match="none"/>
                   <keep intact="contentArea"/>
                   <field name="SparePartTotAmount" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="45.999mm" h="6mm" access="readOnly">
@@ -2888,7 +2889,7 @@ this.caption.value.text = output;
                   </field>
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
-            <subform w="188.947mm" h="6.416mm" name="subSumMaterial">
+            <subform w="179mm" h="6.416mm" name="subSumMaterial">
                <bind match="none"/>
                <field name="MaterialTotAmount" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="45.999mm" h="6mm" access="readOnly" y="0.416mm" x="0in">
                   <ui>
@@ -2907,7 +2908,7 @@ this.caption.value.text = output;
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
-         <subform w="189mm" name="subCarRemarks" layout="tb">
+         <subform w="179mm" name="subCarRemarks" layout="tb">
             <bind match="none"/>
             <subform w="100mm" name="subTitle" layout="tb" id="subTitle_ID">
                <bind match="none"/>
@@ -2935,7 +2936,7 @@ this.caption.value.text = output;
                </field>
                <margin topInset="2mm"/>
                <?templateDesigner expand 1?></subform>
-            <subform w="182mm" name="subHeader" layout="lr-tb" id="subHeader_ID">
+            <subform w="179mm" name="subHeader" layout="lr-tb" id="subHeader_ID">
                <bind match="none"/>
                <field name="Priority" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="62.001mm" h="4mm" access="readOnly">
                   <ui>
@@ -2984,7 +2985,7 @@ this.caption.value.text = output;
                      <margin/>
                   </border>
                </field>
-               <field name="DateCreated" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="59.999mm" h="4mm" access="readOnly">
+               <field name="DateCreated" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="57mm" h="4mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3019,7 +3020,7 @@ this.caption.value.text = output;
                <keep intact="contentArea"/>
                <?templateDesigner expand 1?></subform>
             <overflow trailer="overflowTrailer" leader=""/>
-            <subform w="189mm" name="subCarRemark" layout="lr-tb">
+            <subform w="179mm" name="subCarRemark" layout="lr-tb">
                <bind match="none"/>
                <field name="RemarkPriority" h="3.6mm" minW="62mm" access="readOnly">
                   <ui>
@@ -3045,7 +3046,7 @@ this.caption.value.text = output;
                   <para vAlign="middle"/>
                   <bind match="dataRef" ref="$.Document.CarRemarks.CarRemark[*].RemarkText"/>
                </field>
-               <field name="RemarkDateCreated" h="3.6mm" minW="35mm" access="readOnly">
+               <field name="RemarkDateCreated" h="3.6mm" minW="32mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -3110,7 +3111,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 1?></subform>
             <margin bottomInset="0mm"/>
             <?templateDesigner expand 1?></subform>
-         <subform name="subLastPageInfo" w="190mm" layout="tb">
+         <subform name="subLastPageInfo" w="179mm" layout="tb">
             <bind match="none"/>
             <field name="Work" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="67.999mm" h="4mm" access="readOnly">
                <ui>
@@ -3130,7 +3131,7 @@ this.caption.value.text = output;
                <bind match="none" ref=""/>
                <para hAlign="center"/>
             </field>
-            <subform name="subAdditionalWork" w="181.101mm" h="30.08mm">
+            <subform name="subAdditionalWork" w="179mm" h="30.034mm">
                <bind match="none"/>
                <border>
                   <edge thickness="0.1mm"/>
@@ -3164,14 +3165,14 @@ this.caption.value.text = output;
                      <corner thickness="0.1mm"/>
                   </border>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subSignature" w="42mm" y="0mm" x="139mm" h="30mm">
+               <subform name="subSignature" w="40mm" x="139mm" h="30mm">
                   <bind match="none"/>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
                   <?templateDesigner expand 1?></subform>
-               <subform x="0.001mm" y="0mm" w="181.101mm" h="5.874mm" name="subTitle">
+               <subform x="0.001mm" y="0mm" w="179mm" h="5.874mm" name="subTitle">
                   <bind match="none"/>
                   <border>
                      <edge thickness="0.1mm"/>
@@ -3249,11 +3250,11 @@ this.caption.value.text = output;
                      <bind match="none" ref=""/>
                      <para hAlign="center"/>
                   </field>
-                  <field name="Signature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="42mm" h="4mm" access="readOnly" x="138.999mm" y="1.986mm">
+                  <field name="Signature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="40mm" h="4mm" access="readOnly" x="138.999mm" y="1.986mm">
                      <ui>
                         <textEdit/>
                      </ui>
-                     <caption reserve="41.4866mm">
+                     <caption reserve="40mm">
                         <value>
                            <text xliff:rid="F3752961-4B69-44D5-B070-D3CA4A011A03">Signatur:</text>
                         </value>
@@ -3274,10 +3275,10 @@ this.caption.value.text = output;
             <keep intact="contentArea"/>
             <overflow trailer="overflowTrailer"/>
             <margin topInset="5mm"/>
-            <subform w="187mm" name="subManualText" h="18.017mm">
+            <subform w="179mm" name="subManualText" h="18.017mm">
                <bind match="none"/>
                <margin topInset="1.778mm"/>
-               <field name="L_CarMileageCur" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="20.999mm" h="6mm" access="readOnly" y="0.461mm" x="0.001mm">
+               <field name="L_CarMileageCur" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="20.999mm" h="6mm" access="readOnly" y="1.373mm" x="0.001mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3296,7 +3297,7 @@ this.caption.value.text = output;
                   <para hAlign="right" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                </field>
-               <field name="CarMileageCurOut" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="22mm" h="6mm" access="readOnly" y="0.461mm" x="62mm">
+               <field name="CarMileageCurOut" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="22mm" h="6mm" access="readOnly" y="1.373mm" x="62mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3319,11 +3320,11 @@ this.caption.value.text = output;
                   </para>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                </field>
-               <field name="MechanicNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="29mm" h="6mm" access="readOnly" y="0.461mm" x="120mm">
+               <field name="MechanicNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="20mm" h="6mm" access="readOnly" y="1.373mm" x="120mm">
                   <ui>
                      <textEdit/>
                   </ui>
-                  <caption reserve="28.9716mm">
+                  <caption reserve="20mm">
                      <value>
                         <text xliff:rid="6A2DCA88-082D-438B-BD2C-58281BEF0D61">Mekaniker Id:</text>
                      </value>
@@ -3338,7 +3339,7 @@ this.caption.value.text = output;
                   <para hAlign="right" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                </field>
-               <draw name="lin_hFullbreddNormal" w="23mm" h="0in" x="151mm" y="4.239mm">
+               <draw name="lin_hFullbreddNormal" w="31.016mm" h="0in" x="141mm" y="5.372mm">
                   <value>
                      <line slope="/">
                         <edge thickness="0.1mm"/>
@@ -3348,7 +3349,7 @@ this.caption.value.text = output;
                      <defaultUi/>
                   </ui>
                </draw>
-               <field name="ControlSignature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="25.999mm" h="6mm" access="readOnly" y="7.742mm" x="0.001mm">
+               <field name="ControlSignature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="25.999mm" h="6mm" access="readOnly" y="8.373mm" x="0.001mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3367,7 +3368,7 @@ this.caption.value.text = output;
                   <para hAlign="right" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                </field>
-               <field name="SpProducer" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="34mm" h="6mm" access="readOnly" y="7.742mm" x="62mm">
+               <field name="SpProducer" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="34mm" h="6mm" access="readOnly" y="8.373mm" x="62mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3387,7 +3388,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                </field>
                <overflow trailer="overflowTrailer"/>
-               <draw name="lin_hFullbreddNormal" w="33mm" h="0in" x="83mm" y="4.239mm">
+               <draw name="lin_hFullbreddNormal" w="33mm" h="0in" x="83mm" y="5.373mm">
                   <value>
                      <line slope="/">
                         <edge thickness="0.1mm"/>
@@ -3397,7 +3398,7 @@ this.caption.value.text = output;
                      <defaultUi/>
                   </ui>
                </draw>
-               <field name="MechanicNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="29mm" h="6mm" access="readOnly" y="7.742mm" x="120mm">
+               <field name="MechanicNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="29mm" h="6mm" access="readOnly" y="8.373mm" x="120mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3416,7 +3417,7 @@ this.caption.value.text = output;
                   <para hAlign="right" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                </field>
-               <draw name="lin_hFullbreddNormal" w="30mm" h="0in" x="151mm" y="10.742mm">
+               <draw name="lin_hFullbreddNormal" w="27mm" h="0in" x="151mm" y="12.372mm">
                   <value>
                      <line slope="/">
                         <edge thickness="0.1mm"/>
@@ -3426,7 +3427,7 @@ this.caption.value.text = output;
                      <defaultUi/>
                   </ui>
                </draw>
-               <draw name="lin_hFullbreddNormal" w="30mm" h="0in" x="151mm" y="10.742mm">
+               <draw name="lin_hFullbreddNormal" w="23mm" h="0mm" x="96mm" y="12.372mm">
                   <value>
                      <line slope="/">
                         <edge thickness="0.1mm"/>
@@ -3436,7 +3437,7 @@ this.caption.value.text = output;
                      <defaultUi/>
                   </ui>
                </draw>
-               <draw name="lin_hFullbreddNormal" w="23mm" h="0mm" x="96mm" y="10.742mm">
+               <draw name="lin_hFullbreddNormal" w="33mm" h="0in" x="27mm" y="12.372mm">
                   <value>
                      <line slope="/">
                         <edge thickness="0.1mm"/>
@@ -3446,17 +3447,7 @@ this.caption.value.text = output;
                      <defaultUi/>
                   </ui>
                </draw>
-               <draw name="lin_hFullbreddNormal" w="33mm" h="0in" x="27mm" y="10.742mm">
-                  <value>
-                     <line slope="/">
-                        <edge thickness="0.1mm"/>
-                     </line>
-                  </value>
-                  <ui>
-                     <defaultUi/>
-                  </ui>
-               </draw>
-               <draw name="lin_hFullbreddNormal" w="31mm" h="0mm" x="24mm" y="4.239mm">
+               <draw name="lin_hFullbreddNormal" w="31mm" h="0mm" x="24mm" y="5.373mm">
                   <value>
                      <line slope="/">
                         <edge thickness="0.1mm"/>
@@ -3506,7 +3497,8 @@ this.caption.value.text = output;
          <script usehref=".\Fragments\getLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
          <?templateDesigner expand 1?></variables>
       <proto>
-         <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)">
+         <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)" w="179mm">
+            <margin/>
             <?templateDesigner expand 1?>
          </subform>
          <?templateDesigner expand 1?></proto>
@@ -3568,6 +3560,8 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 87?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -3580,15 +3574,13 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\WorkOrderGP\WorkOrder500779GP1.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\..\..\Data\Kunder\Möllergruppen Norge\Fas_1_Formulärkonstruktion\WorkOrder NO\Datafiler\WorkOrder500779GP1.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 154?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:50000?></template>
+   <?templateDesigner Guidelines v:375000;v:4850000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -3600,7 +3592,6 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -3970,14 +3961,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-05T13:58:38Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-08T12:53:51Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:45e952b2-2a9c-4e7b-acbc-0e5026be0f63</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:33404570-3f1a-43dc-98ff-254c7b743d40</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
