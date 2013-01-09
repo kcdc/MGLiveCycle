@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-09T13:32:16Z" uuid="57024434-082e-4e05-a9e1-46197a3c4ae2">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-09T20:01:21Z" uuid="57024434-082e-4e05-a9e1-46197a3c4ae2">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -10,11 +10,9 @@
          <pageArea name="mpgPage1" id="Page1">
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="5mm" y="106mm">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="110mm" y="21mm" presence="hidden">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="210mm" h="197.547mm" name="subHeader">
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
                   <bind match="none"/>
@@ -905,8 +903,7 @@ this.presence = "visible";
 this.access = "protected";
 </script>
                </event>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="210mm" h="193.339mm" name="subHeader">
                <bind match="none"/>
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
@@ -1102,6 +1099,65 @@ this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verti
                      <text>NameOfDocType_ServerDate</text>
                   </value>
                </field>
+               <subform x="124mm" y="20mm" minH="22.225mm" name="sub_TestLabel" layout="tb" w="75.15mm">
+                  <bind match="none"/>
+                  <field name="fld_TestLabel" minH="12.7mm" access="readOnly" w="75mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="8pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="none"/>
+                     <?templateDesigner expand 1?>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>TestLabel</p></body>
+                        </exData>
+                     </value>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var receivedText = fld_TestLabelData.rawValue;
+	//xfa.host.messageBox(receivedText);
+    
+	var cleanedValue = receivedText;
+//If form pre-population logic has converted &lt; and &gt; signs into &amp;lt; or &amp;gt; then un-comment below two lines. Those two lines will do the needed replacement (&amp;gt; to &gt;)
+	cleanedValue = receivedText.replace(/(\&amp;lt\;)/g,"&lt;");
+	cleanedValue = cleanedValue.replace(/(\&amp;gt\;)/g,"&gt;"); 
+
+//	xfa.host.messageBox("exdataTemplate.rawValue " + exdataTemplate.rawValue);
+
+	//How does rich text work in this sample?
+	//To set the data properly into a richtext supported TextField we have to little bit more than setting rawValue.
+	// The data needs to be stored in exData section of text field with a little formatting around. I call it 'exData envelope' where I inject the content at certain place. 
+	// The place in this envelope where the actual content needs to injected is represented with 'ccc'.
+	
+	//Get the envelope
+	var templateVal = sub_RichTextEnvelope.exdataTemplate.rawValue;
+	//replace 'ccc' with the data we received.
+	cleanedValue = templateVal.replace(/(ccc)/g,cleanedValue); 
+	
+	//show what's getting set into the textfield
+	//console.println(cleanedValue);
+	
+	//this is how we have to set the rich text data into the textfield's exData section.
+	this.value.exData.loadXML(cleanedValue,1,1);
+
+</script>
+                     </event>
+                  </field>
+                  <field name="fld_TestLabelData" h="5.939mm" minW="32.514mm" presence="hidden">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font typeface="Arial" weight="bold" baselineShift="0pt" size="14pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1.0008mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.TestLabel"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="179mm">
                <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
@@ -1581,8 +1637,7 @@ this.caption.value.text = output;
                      <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <?renderCache.bounds 5669 11339 0 0 0 0 0 0?>
-                     <?renderCache.textRun 1 / 0 0 8275 0 0 0 "Arial" 0 0 9000 ISO-8859-1?></draw>
+                     <?renderCache.bounds 5669 11339 0 0 0 0 0 0?></draw>
                   <field name="CustomerPhoneMobile" h="4mm" minW="20mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -1605,8 +1660,7 @@ this.caption.value.text = output;
                      <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <?renderCache.bounds 5669 11339 0 0 0 0 0 0?>
-                     <?renderCache.textRun 1 / 0 0 8275 0 0 0 "Arial" 0 0 9000 ISO-8859-1?></draw>
+                     <?renderCache.bounds 5669 11339 0 0 0 0 0 0?></draw>
                   <field name="CustomerPhoneOrder" h="4mm" minW="20mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -4059,12 +4113,12 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\WorkOrder_BA_full_logo.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 140?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?>
-   <?templateDesigner Zoom 154?></template>
+   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -4076,7 +4130,6 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4447,7 +4500,7 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-09T13:32:16Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-09T20:01:21Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
