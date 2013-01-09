@@ -1,85 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-09T10:05:56Z" uuid="6bc6317b-1fde-41a4-9333-60d23c3d0b93">
-<template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/2.6/">
-   <?formServer defaultPDFRenderFormat acrobat8.0static?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-09T13:29:06Z" uuid="733501bf-5aa5-40d4-8052-1da55c773d14">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
       <pageSet>
          <pageArea>
-            <medium long="297mm" short="210mm" stock="a4"/>
-            <contentArea h="283.663mm" id="contentArea_ID" w="136.297mm" y="6.32mm" name="ContentArea_1"/>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea y="42mm" w="184mm" h="227mm" name="areaPage2" id="areaPage1_ID_copy2" x="15mm"/>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
-      <subform name="overflowTrailer" id="overflowTrailer_ID" layout="tb" w="126.22mm">
+      <subform name="subLogoHolder">
          <bind match="none"/>
-         <margin leftInset="0mm" bottomInset="0mm" topInset="0mm"/>
-         <field name="ContNextPage" minH="2.853mm" minW="126.22mm">
+         <field name="imgLogo" y="0mm" x="0mm" w="10mm" h="7mm" hAlign="right">
             <ui>
-               <textEdit>
-                  <margin/>
-               </textEdit>
+               <textEdit/>
             </ui>
-            <font baselineShift="0pt" typeface="Arial" size="8pt" weight="bold"/>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="1.0583mm" topInset="0mm"/>
-            <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="bottom"/>
             <border>
-               <edge presence="hidden">
-                  <color value="7,157,196"/>
-               </edge>
-               <corner thickness="0.176mm" presence="hidden">
-                  <color value="7,157,196"/>
-               </corner>
+               <edge thickness="0.1mm" presence="hidden"/>
+               <corner thickness="0.1mm" presence="hidden"/>
             </border>
-            <caption reserve="125.1617mm">
-               <value>
-                  <text xliff:rid="8F6FCEA2-CB76-4350-AF8E-CC318E77FBA0">Forts. neste side</text>
-               </value>
-            </caption>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
 
-var output = getLanguages.getLanguageText(LangCode, this.name);
+this.border.presence = "hidden";
+var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
+//app.alert(DocHeaderBrand);
 
-this.caption.value.text = output;
+if ( DocHeaderBrand == "S")
+{
 
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.skodaLogo").rawValue = this.rawValue;
+	this.rawValue = "";
+
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.skodaLogo").presence = "visible";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.vwLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiServiceLogo").presence = "hidden"
+	
+	
+}
+else if ( DocHeaderBrand == "V")
+{
+xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.vwLogo").rawValue = this.rawValue;
+	this.rawValue = "";
+
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.skodaLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.vwLogo").presence = "visible";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiServiceLogo").presence = "hidden"
+}
+else if ( DocHeaderBrand == "A" )
+{
+xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiLogo").rawValue = this.rawValue;
+	this.rawValue = "";
+
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.skodaLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.vwLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiLogo").presence = "visible";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiServiceLogo").presence = "hidden"
+
+}
+else if (DocHeaderBrand == "U")
+{
+xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiServiceLogo").rawValue = this.rawValue;
+	this.rawValue = "";
+
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.skodaLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.vwLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiServiceLogo").presence = "visible"
+}
+
+else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
+{
+
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.skodaLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.vwLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiLogo").presence = "hidden";
+	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogo.audiServiceLogo").presence = "hidden"		
+}
 </script>
             </event>
+            <bind match="dataRef" ref="$.Header.LogoImage"/>
          </field>
-         <border>
-            <edge presence="hidden">
-               <color value="7,157,196"/>
-            </edge>
-            <edge presence="hidden"/>
-            <edge presence="hidden"/>
-            <edge presence="hidden"/>
-            <corner presence="hidden">
-               <color value="7,157,196"/>
-            </corner>
-            <corner/>
-            <corner/>
-            <corner/>
-         </border>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle overflowTrailer?>
+         <?templateDesigner fragmentTitle subLogoHolder?>
          <?templateDesigner expand 1?></subform>
-      <variables>
-         <script usehref=".\NO.xdp#som($template.form1.#subform.#variables.NO)"/>
-         <script usehref=".\getLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
-         <script usehref=".\LT.xdp#som($template.form1.#subform.#variables.LT)"/>
-         <script usehref=".\LV.xdp#som($template.form1.#subform.#variables.LV)"/>
-         <script usehref=".\EE.xdp#som($template.form1.#subform.#variables.EE)"/>
-         <?templateDesigner expand 1?></variables>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 44 11 00030011002900470048004C00510052005500560057 .Fdeinorst?>
    </subform>
-   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/2.5/?>
-   <?templateDesigner SaveTaggedPDF 1?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner FormTargetVersion 25?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Zoom 154?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
-<config xmlns="http://www.xfa.org/schema/xci/2.6/">
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
       <destination>pdf</destination>
@@ -95,23 +108,24 @@ this.caption.value.text = output;
          <!--  [0..n]  -->
          <fontInfo/>
          <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
       </pdf>
       <xdp>
          <packets>*</packets>
       </xdp>
    </present>
 </config>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.2.1-c043 52.437709, 2010/08/04-17:30:07        ">
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-09T10:05:56Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-09T13:29:06Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:6bc6317b-1fde-41a4-9333-60d23c3d0b93</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:733501bf-5aa5-40d4-8052-1da55c773d14</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -119,7 +133,7 @@ this.caption.value.text = output;
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">overflowTrailer</rdf:li>
+                        <rdf:li xml:lang="x-default">subLogoHolder</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
@@ -127,7 +141,7 @@ this.caption.value.text = output;
                         <rdf:li xml:lang="x-default"/>
                      </rdf:Alt>
                   </dc:description>
-                  <dc:identifier>$template.form1.overflowTrailer</dc:identifier>
+                  <dc:identifier>$template.form1.subLogoHolder</dc:identifier>
                   <lcd:fragmentRole>Subform</lcd:fragmentRole>
                </rdf:li>
             </rdf:Seq>
@@ -135,7 +149,7 @@ this.caption.value.text = output;
       </rdf:Description>
    </rdf:RDF>
 </x:xmpmeta>
-<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.6/">
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
    <locale name="da_DK" desc="Dansk (Danmark)">
       <calendarSymbols name="gregorian">
          <monthNames>
@@ -238,4 +252,4 @@ this.caption.value.text = output;
          <typeface name="Adobe Myungjo Std M"/>
       </typefaces>
    </locale>
-   <?originalXFAVersion http://www.xfa.org/schema/xfa-locale-set/2.1/?></localeSet></xdp:xdp>
+</localeSet></xdp:xdp>

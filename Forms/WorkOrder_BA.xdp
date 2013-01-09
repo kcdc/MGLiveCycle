@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-07T20:15:26Z" uuid="52265279-0988-43b6-a0cc-499a262e15e3">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-09T13:32:16Z" uuid="57024434-082e-4e05-a9e1-46197a3c4ae2">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -10,6 +10,9 @@
          <pageArea name="mpgPage1" id="Page1">
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="5mm" y="106mm">
+               <?templateDesigner expand 1?>
+            </subform>
+            <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="110mm" y="21mm" presence="hidden">
                <?templateDesigner expand 1?>
             </subform>
             <subform w="210mm" h="197.547mm" name="subHeader">
@@ -134,7 +137,7 @@ this.caption.value.text = output;
                   </field>
                   <field name="DateCreated" minH="4mm" access="readOnly" minW="117mm" x="62mm" y="1mm">
                      <ui>
-                        <textEdit multiLine="1">
+                        <textEdit>
                            <border presence="hidden"/>
                            <margin/>
                         </textEdit>
@@ -892,6 +895,18 @@ this.access = "protected";
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea y="42mm" w="190mm" h="227mm" name="areaPage2" id="areaPage1_ID_copy2" x="15mm"/>
+            <subform x="164mm" y="4mm" usehref=".\Fragments\subLogo.xdp#som($template.form1.subLogo)">
+               <bind/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+this.presence = "visible";
+this.access = "protected";
+</script>
+               </event>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform w="210mm" h="193.339mm" name="subHeader">
                <bind match="none"/>
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
@@ -1027,18 +1042,6 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
 </script>
                   </event>
                </field>
-               <subform x="173mm" y="4mm" usehref=".\Fragments\subLogo.xdp#som($template.form1.subLogo)">
-                  <bind/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-
-
-this.presence = "visible";
-this.access = "protected";
-</script>
-                  </event>
-                  <?templateDesigner expand 1?>
-               </subform>
                <subform x="15mm" y="31mm" w="179mm" h="6mm" name="subHeaderpart">
                   <bind match="none"/>
                   <field name="ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm" x="0in" y="1mm">
@@ -1088,7 +1091,7 @@ this.caption.value.text = output;
                   </ui>
                   <font typeface="Arial" size="9pt"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                  <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
+                  <bind match="none"/>
                   <para lineHeight="8pt" vAlign="middle" hAlign="right"/>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
@@ -2252,15 +2255,6 @@ this.caption.value.text = output;
                <para vAlign="middle"/>
             </field>
             <occur min="0" max="-1"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-            </event>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" minH="4mm" layout="tb" name="subReminderList">
             <bind match="none"/>
@@ -3487,7 +3481,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <margin topInset="3mm"/>
+               <margin topInset="3mm" bottomInset="3mm"/>
                <field name="Date" w="36mm" h="4.4mm" access="readOnly" hAlign="right" x="37mm" y="0.4mm">
                   <ui>
                      <textEdit>
@@ -3527,7 +3521,7 @@ this.rawValue = output;
             <?templateDesigner expand 1?></subform>
          <subform name="subLastPageInfo" w="190mm" layout="tb">
             <bind match="none"/>
-            <field name="AdditionalWorkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="179mm" h="4mm" access="readOnly">
+            <field name="AdditionalWorkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="179mm" h="14.2mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -3554,6 +3548,7 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 this.caption.value.text = output;
 </script>
                </event>
+               <margin topInset="9mm"/>
             </field>
             <subform name="subAdditionalWork" w="178.928mm" h="30.312mm">
                <bind match="none"/>
@@ -3747,7 +3742,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 1?></subform>
             <keep intact="contentArea"/>
             <overflow trailer="overflowTrailer"/>
-            <margin topInset="9mm"/>
+            <margin topInset="0mm"/>
             <subform w="187mm" name="subManualText" h="18.017mm">
                <bind match="none"/>
                <margin topInset="3mm"/>
@@ -3987,7 +3982,8 @@ this.caption.value.text = output;
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)">
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+         </subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -4035,8 +4031,8 @@ this.caption.value.text = output;
             </field>
          </subform>
       </proto>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 128 32 00030006001200250027002F003100320033003500360037004200440045004600480049004A004C004E004F0050005200530055005600570059005C005E0060 #/BDLNOPRST_abcefgiklmoprstvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 196 51 0003000A00110012001D002400250026002700280029002A002C002D002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 './:ABCDEFGIJKLMNOPRSTUVabcdefghijklmnoprstuvyåø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
@@ -4048,8 +4044,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 125?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -4062,13 +4056,15 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName .\Testfiler\862_WorkOrder_Litauen .xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\WorkOrder_BA_full_logo.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
+   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?>
+   <?templateDesigner Zoom 154?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -4080,6 +4076,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4217,9 +4214,9 @@ this.caption.value.text = output;
 </localeSet>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="WorkOrder">
-      <uri>.\XSD\WorkOrder.xsd</uri>
+      <uri>..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2012\XSD\schema\WorkOrder.xsd</uri>
       <rootElement>WorkOrder</rootElement>
-      <?templateDesigner fileDigest shaHash="4/fG07F7Ac+ViYoIrXxTQPnv/e8="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="sdja9P5VyWBvPc+GOuOlcA+06CM="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -4290,6 +4287,7 @@ this.caption.value.text = output;
                <DateCreated/>
                <TypeText/>
                <TestLabel/>
+               <VerticalLabel/>
             </DocumentHeader>
             <HeaderInfo>
                <CustomerVatPayer/>
@@ -4449,14 +4447,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-07T20:15:26Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-09T13:32:16Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:52265279-0988-43b6-a0cc-499a262e15e3</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:57024434-082e-4e05-a9e1-46197a3c4ae2</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -4578,6 +4576,7 @@ this.caption.value.text = output;
                               <xs:element name="DateCreated" type="xs:string"/>
                               <xs:element name="TypeText" type="xs:string"/>
                               <xs:element name="TestLabel" type="xs:string"/>
+                              <xs:element name="VerticalLabel"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -4631,7 +4630,7 @@ this.caption.value.text = output;
                      <xs:element name="TopTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="TopTextLines">
+                              <xs:element name="TopTextLines" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TopTextLine" type="xs:string"/>
@@ -4692,7 +4691,7 @@ this.caption.value.text = output;
                      <xs:element name="ReminderList">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="30" name="Reminder">
+                              <xs:element name="Reminder" maxOccurs="30">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ReminderDescription" type="xs:string"/>
@@ -4703,18 +4702,18 @@ this.caption.value.text = output;
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element maxOccurs="30" name="Comments">
+                     <xs:element name="Comments" maxOccurs="30">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="CustomerComment" type="xs:string"/>
-                              <xs:element maxOccurs="10" name="InternalComment" type="xs:string"/>
+                              <xs:element name="CustomerComment" type="xs:string" maxOccurs="10"/>
+                              <xs:element name="InternalComment" type="xs:string" maxOccurs="10"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="30" name="Task">
+                              <xs:element name="Task" maxOccurs="30">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskHeader">
@@ -4722,14 +4721,14 @@ this.caption.value.text = output;
                                              <xs:sequence>
                                                 <xs:element name="TaskId" type="xs:string"/>
                                                 <xs:element name="TaskName" type="xs:string"/>
-                                                <xs:element maxOccurs="4" name="TaskText" type="xs:string"/>
+                                                <xs:element name="TaskText" type="xs:string" maxOccurs="4"/>
                                                 <xs:element name="PriceVatTotalTask" type="xs:string"/>
                                                 <xs:element name="PriceInfo" type="xs:string"/>
                                                 <xs:element name="TreatmentCodeInfo" type="xs:string"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element maxOccurs="200" name="TaskDetails">
+                                       <xs:element name="TaskDetails" maxOccurs="200">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="WorkPosNo" type="xs:string"/>
@@ -4758,7 +4757,7 @@ this.caption.value.text = output;
                      <xs:element name="Spareparts">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="200" name="Material">
+                              <xs:element name="Material" maxOccurs="200">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="MaterialLocation" type="xs:string"/>
@@ -4773,7 +4772,7 @@ this.caption.value.text = output;
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
-                              <xs:element maxOccurs="200" name="Sparepart">
+                              <xs:element name="Sparepart" maxOccurs="200">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="SparePartLocation" type="xs:string"/>
@@ -4824,7 +4823,7 @@ this.caption.value.text = output;
                      <xs:element name="CarRemarks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="30" name="CarRemark">
+                              <xs:element name="CarRemark" maxOccurs="30">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="RemarkPriority" type="xs:string"/>
