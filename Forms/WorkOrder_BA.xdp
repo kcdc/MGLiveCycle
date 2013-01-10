@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T07:49:52Z" uuid="4dee379d-5d67-47f5-a735-54aa32de4bf8">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T08:22:39Z" uuid="1645094f-13b4-406c-b33d-59cc6b4800cd">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -1089,10 +1089,10 @@ this.caption.value.text = output;
                         <margin/>
                      </textEdit>
                   </ui>
-                  <font typeface="Arial" size="9pt"/>
+                  <font typeface="Arial" size="8pt"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
                   <bind match="none"/>
-                  <para lineHeight="8pt" vAlign="middle" hAlign="right"/>
+                  <para lineHeight="8pt" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
 this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verticalTextLabel").rawValue;
@@ -4121,9 +4121,9 @@ this.caption.value.text = output;
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 75?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?>
-   <?templateDesigner Zoom 140?></template>
+   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -4506,14 +4506,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-10T07:49:52Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-10T08:22:39Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:4dee379d-5d67-47f5-a735-54aa32de4bf8</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:1645094f-13b4-406c-b33d-59cc6b4800cd</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
