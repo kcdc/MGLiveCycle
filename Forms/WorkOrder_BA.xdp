@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-09T20:01:21Z" uuid="57024434-082e-4e05-a9e1-46197a3c4ae2">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T07:49:52Z" uuid="4dee379d-5d67-47f5-a735-54aa32de4bf8">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -10,9 +10,11 @@
          <pageArea name="mpgPage1" id="Page1">
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="5mm" y="106mm">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="110mm" y="21mm" presence="hidden">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform w="210mm" h="197.547mm" name="subHeader">
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
                   <bind match="none"/>
@@ -903,7 +905,8 @@ this.presence = "visible";
 this.access = "protected";
 </script>
                </event>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform w="210mm" h="193.339mm" name="subHeader">
                <bind match="none"/>
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
@@ -1637,7 +1640,8 @@ this.caption.value.text = output;
                      <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <?renderCache.bounds 5669 11339 0 0 0 0 0 0?></draw>
+                     <?renderCache.bounds 5669 11339 0 0 0 0 0 0?>
+                     <?renderCache.textRun 1 / 0 0 8275 0 0 0 "Arial" 0 0 9000 ISO-8859-1?></draw>
                   <field name="CustomerPhoneMobile" h="4mm" minW="20mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -1660,7 +1664,8 @@ this.caption.value.text = output;
                      <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <?renderCache.bounds 5669 11339 0 0 0 0 0 0?></draw>
+                     <?renderCache.bounds 5669 11339 0 0 0 0 0 0?>
+                     <?renderCache.textRun 1 / 0 0 8275 0 0 0 "Arial" 0 0 9000 ISO-8859-1?></draw>
                   <field name="CustomerPhoneOrder" h="4mm" minW="20mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -3305,7 +3310,7 @@ this.caption.value.text = output;
                   <?templateDesigner expand 1?></subform>
             </subform>
             <?templateDesigner expand 1?></subform>
-         <subform w="189mm" name="subCarRemarks" layout="tb">
+         <subform name="subCarRemarks" layout="tb">
             <bind match="none"/>
             <subform w="100mm" name="subTitle" layout="tb" id="subTitle_ID">
                <bind match="none"/>
@@ -3460,7 +3465,7 @@ this.caption.value.text = output;
             <subform y="11mm" w="179mm" minH="3.6mm" layout="tb" name="subCarRemarkMargin">
                <bind match="none"/>
                <subform w="179mm" name="subCarRemark" layout="lr-tb">
-                  <bind match="none"/>
+                  <bind match="dataRef" ref="$.Document.CarRemarks.CarRemark[*]"/>
                   <field name="RemarkPriority" h="3.6mm" minW="35mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -3471,7 +3476,7 @@ this.caption.value.text = output;
                      <font typeface="Arial" size="9pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.CarRemarks.CarRemark[*].RemarkPriority"/>
+                     <bind match="dataRef" ref="$.RemarkPriority"/>
                   </field>
                   <field name="RemarkDescription" h="3.6mm" minW="106mm" access="readOnly">
                      <ui>
@@ -3483,7 +3488,7 @@ this.caption.value.text = output;
                      <font typeface="Arial" size="9pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.CarRemarks.CarRemark[*].RemarkText"/>
+                     <bind match="dataRef" ref="$.RemarkText"/>
                   </field>
                   <field name="RemarkDateCreated" h="3.6mm" minW="38mm" access="readOnly">
                      <ui>
@@ -3495,7 +3500,7 @@ this.caption.value.text = output;
                      <font typeface="Arial" size="9pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
                      <para vAlign="middle" hAlign="right"/>
-                     <bind match="dataRef" ref="$.Document.CarRemarks.CarRemark[*].RemarkDate"/>
+                     <bind match="dataRef" ref="$.RemarkDate"/>
                   </field>
                   <occur min="0" max="-1"/>
                   <overflow leader="" trailer="overflowTrailer" target="mpgPage2"/>
@@ -4113,12 +4118,12 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\WorkOrder_BA_full_logo.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 140?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
+   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?>
+   <?templateDesigner Zoom 140?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -4130,6 +4135,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4500,14 +4506,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-09T20:01:21Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-10T07:49:52Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:57024434-082e-4e05-a9e1-46197a3c4ae2</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:4dee379d-5d67-47f5-a735-54aa32de4bf8</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
