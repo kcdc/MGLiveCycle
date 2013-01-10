@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T08:29:25Z" uuid="7e83485e-1c67-4cf0-b11a-303849394f97">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T09:31:17Z" uuid="47ad3e22-7e55-4874-a99f-487862102b4e">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="nb_NO" layout="tb" hAlign="right">
@@ -97,7 +97,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
             <edge presence="hidden"/>
             <corner thickness="0.175mm" presence="hidden"/>
          </border>
-         <field name="skodaLogo" w="22.6mm" h="26.2mm" hAlign="right" x="7.28mm" y="0.001mm">
+         <field name="skodaLogo" w="22.6mm" h="26.2mm" hAlign="right" x="7.8mm" y="0.001mm">
             <ui>
                <imageEdit data="embed"/>
             </ui>
@@ -139,7 +139,7 @@ this.access = "protected";
 </script>
             </event>
          </field>
-         <field name="audiLogo" w="30mm" h="17mm" hAlign="right" x="0.001mm" y="3.16mm">
+         <field name="audiLogo" w="29mm" h="16mm" hAlign="right" x="1.561mm" y="3.16mm">
             <ui>
                <imageEdit data="embed"/>
             </ui>
@@ -159,7 +159,7 @@ this.access = "protected";
 </script>
             </event>
          </field>
-         <field name="audiServiceLogo" w="22mm" h="23mm" hAlign="right" x="8mm" y="0.402mm">
+         <field name="audiServiceLogo" w="22mm" h="23mm" hAlign="right" x="8.52mm" y="0.402mm">
             <ui>
                <imageEdit data="embed"/>
             </ui>
@@ -215,14 +215,14 @@ this.access = "protected";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-10T08:29:25Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-10T09:31:17Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7e83485e-1c67-4cf0-b11a-303849394f97</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:47ad3e22-7e55-4874-a99f-487862102b4e</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
