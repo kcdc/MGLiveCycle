@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T15:21:32Z" uuid="16d028c7-1aba-40cf-8077-7aba33701940">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T16:47:34Z" uuid="5edf37a9-4728-4588-9483-173216754029">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -666,7 +666,8 @@ this.access = "protected";
                   <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
                   <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
                </border>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
             <subform name="sub_FooterD" layout="tb" w="44mm" x="150mm" y="271mm">
                <bind match="none"/>
@@ -2159,7 +2160,7 @@ this.caption.value.text = output;
             <occur max="-1" min="0"/>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTaskTitle" layout="tb" id="subTaskTitle_ID">
-            <bind match="none"/>
+            <bind match="dataRef" ref="$.Document.Tasks"/>
             <field name="TaskTitle" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="179mm" h="7.822mm" access="readOnly">
                <ui>
                   <textEdit/>
@@ -2210,7 +2211,7 @@ this.caption.value.text = output;
             <margin topInset="0mm"/>
             <breakAfter/>
             <breakBefore/>
-            <occur max="-1"/>
+            <occur max="-1" min="0"/>
             <keep intact="contentArea"/>
             <?templateDesigner expand 1?></subform>
          <subform name="SubTasks" layout="tb">
@@ -2282,7 +2283,7 @@ this.caption.value.text = output;
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <bind match="dataRef" ref="$.Task[*]"/>
+               <bind match="dataRef" ref="$.Document.Tasks.Task[*]"/>
                <subform y="8mm" w="179mm" layout="tb" name="subTaskDetailsArea">
                   <bind match="dataRef" ref="$.TaskDetails[*]"/>
                   <subform w="179mm" h="3.6mm" name="subTaskDetails">
@@ -2354,7 +2355,7 @@ this.caption.value.text = output;
                         <text xliff:rid="8A188D1E-862E-4E09-B6B6-7C6436EDE8D1">Totalt</text>
                      </value>
                   </caption>
-                  <bind match="dataRef" ref="$.TaskTotals.WorkPosTotHour"/>
+                  <bind match="dataRef" ref="$.Document.Tasks.TaskTotals.WorkPosTotHour"/>
                   <para hAlign="right"/>
                </field>
                <field name="WorkPosTotAmount" w="22mm" h="3.6mm" y="0mm" x="146mm" access="readOnly">
@@ -2367,11 +2368,11 @@ this.caption.value.text = output;
                   <font typeface="Arial" size="8.5pt" weight="bold"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para vAlign="middle" hAlign="right"/>
-                  <bind match="dataRef" ref="$.TaskTotals.WorkPosTotAmount"/>
+                  <bind match="dataRef" ref="$.Document.Tasks.TaskTotals.WorkPosTotAmount"/>
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 0?></subform>
-            <bind match="dataRef" ref="$.Document.Tasks"/>
+            <bind match="none"/>
             <occur min="0" max="-1"/>
             <overflow leader="subTaskTitle"/>
             <?templateDesigner expand 1?></subform>
@@ -3526,7 +3527,8 @@ this.caption.value.text = output;
       <proto>
          <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)" w="179mm">
             <margin/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -3586,8 +3588,6 @@ this.caption.value.text = output;
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
-   <?templateDesigner Zoom 128?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -3603,6 +3603,8 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\030_WorkOrder_S001IT01_20130110_123931_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 128?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -3988,14 +3990,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-10T15:21:32Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-10T16:47:34Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:16d028c7-1aba-40cf-8077-7aba33701940</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:5edf37a9-4728-4588-9483-173216754029</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
