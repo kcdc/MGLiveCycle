@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T16:47:34Z" uuid="5edf37a9-4728-4588-9483-173216754029">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-11T14:41:04Z" uuid="77d766a5-7e86-4c74-9aa4-7e1b47d203c2">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -131,26 +131,56 @@ this.rawValue = output;
                      <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerName"/>
                      <para lineHeight="8pt"/>
                   </field>
-                  <field name="UserName" minH="4mm" minW="70mm" access="readOnly">
-                     <ui>
-                        <textEdit multiLine="1">
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
-                     <para lineHeight="8pt"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  <subform y="4.079mm" w="70mm" minH="4mm" layout="tb" name="subUN">
+                     <bind match="none"/>
+                     <field name="UserName" minH="4mm" w="70mm" access="readOnly">
+                        <ui>
+                           <textEdit multiLine="1">
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
+                        <para lineHeight="8pt"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
+}
+
+
 if(this.rawValue != "" || null)
 {
 	WorkOrder.pageContent.subCarInformation.subEierBruker.UserName.rawValue = this.rawValue;
 }
+if (this.rawValue == null)
+{
+	this.parent.presence = "hidden";
+}
 </script>
-                     </event>
-                  </field>
+                        </event>
+                        <caption reserve="6.1626mm">
+                           <value>
+                              <text>Att:</text>
+                           </value>
+                           <font typeface="Arial" size="9pt" weight="bold"/>
+                        </caption>
+                     </field>
+                     <?templateDesigner expand 1?>
+                     <occur min="0" max="-1"/>
+                  </subform>
                   <field name="CustomerPostalAddress" minH="4mm" minW="70mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -1267,9 +1297,11 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                         <value>
                            <text>Gj.gangsnr.:</text>
                         </value>
+                        <font weight="bold"/>
                      </caption>
                      <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
                      <?templateDesigner expand 1?>
+                     <font weight="bold"/>
                   </field>
                   <field name="DateCreated" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
                      <ui>
@@ -3600,7 +3632,7 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\030_WorkOrder_S001IT01_20130110_123931_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\030_WorkOrder_S001IT01_20130110_100441_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner FormTargetVersion 30?>
@@ -3990,14 +4022,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-10T16:47:34Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-02-11T14:41:04Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:5edf37a9-4728-4588-9483-173216754029</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:77d766a5-7e86-4c74-9aa4-7e1b47d203c2</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
