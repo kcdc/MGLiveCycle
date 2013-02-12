@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2012-12-12T16:05:16Z" uuid="0bbb148f-0587-4cb3-b3a7-695668d9680c">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-12T14:35:42Z" uuid="52a263f6-0604-4e2e-9963-409814ae6eba">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -582,7 +582,7 @@ this.access = "protected";
                      <font typeface="Myriad Pro"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Line[*]"/>
+                     <bind match="dataRef" ref="$.PageDetail[*]"/>
                   </field>
                   <draw name="fldPageDetail" w="7.401569in" minH="3mm">
                      <ui>
@@ -686,8 +686,8 @@ this.access = "protected";
             </field>
          </subform>
       </proto>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 56 14 000300060012002F003600370044004500470048004C004F00560057 #/LSTabdeilst?>
       <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 48 12 00270033004400480049004A004C004F00520057005E0060DPaefgilot{}?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
@@ -696,6 +696,8 @@ this.access = "protected";
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 128?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -708,13 +710,11 @@ this.access = "protected";
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\STD\STD_xml.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\STD_example.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 143?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:50000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -728,7 +728,6 @@ this.access = "protected";
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -866,9 +865,9 @@ this.access = "protected";
 </localeSet>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="Std">
-      <uri>..\STD\Std.xsd</uri>
+      <uri>..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Std-ny.xsd</uri>
       <rootElement>Std</rootElement>
-      <?templateDesigner fileDigest shaHash="hEpiRtuL4L94KE6sq4h9nXpJYns="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="edc8AUuBXlu+bVJ1c5lUNfIdQLA="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -931,9 +930,9 @@ this.access = "protected";
                <DealerNameMarketing/>
                <TestLabel/>
             </DocumentHeader>
-            <Pages>
-               <Page dd:maxOccur="100">
-                  <Line dd:maxOccur="-1"/>
+            <Pages dd:maxOccur="10000">
+               <Page dd:maxOccur="10000">
+                  <PageDetail dd:maxOccur="-1"/>
                </Page>
             </Pages>
          </Document>
@@ -943,14 +942,14 @@ this.access = "protected";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2012-12-12T16:05:16Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-02-12T14:35:42Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:0bbb148f-0587-4cb3-b3a7-695668d9680c</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:52a263f6-0604-4e2e-9963-409814ae6eba</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -1062,13 +1061,13 @@ this.access = "protected";
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element name="Pages">
+                     <xs:element maxOccurs="10000" name="Pages">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Page" maxOccurs="100">
+                              <xs:element maxOccurs="10000" name="Page">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="Line" type="xs:string" maxOccurs="unbounded"/>
+                                       <xs:element maxOccurs="-1" name="PageDetail" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
