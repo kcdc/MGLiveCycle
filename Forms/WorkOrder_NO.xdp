@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-11T14:41:04Z" uuid="77d766a5-7e86-4c74-9aa4-7e1b47d203c2">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-12T13:31:54Z" uuid="21831eab-7e9a-4e0a-b1b3-31b70de36d27">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -329,11 +329,7 @@ if (this.rawValue == null)
                      <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1.0008mm" rightInset="0.5mm"/>
                      <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
                      <bind match="dataRef" ref="$.Document.DocumentHeader.TestLabel"/>
-                     <?templateDesigner expand 1?>
-                     <value>
-                        <text>TestLabel for Designer</text>
-                     </value>
-                  </field>
+                     <?templateDesigner expand 1?></field>
                   <field name="fld_TestLabel" access="readOnly" minH="12.7mm" w="76mm">
                      <ui>
                         <textEdit multiLine="1">
@@ -376,9 +372,7 @@ var receivedText = fld_TestLabelData.rawValue;
                      </event>
                      <bind match="none"/>
                      <value>
-                        <exData contentType="text/html">
-                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>TestLabel</p></body>
-                        </exData>
+                        <exData contentType="text/html"/>
                      </value>
                   </field>
                   <?templateDesigner expand 1?></subform>
@@ -1343,9 +1337,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                      <bind match="none"/>
                      <?templateDesigner expand 1?>
                      <value>
-                        <exData contentType="text/html">
-                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>TestLabel</p></body>
-                        </exData>
+                        <exData contentType="text/html"/>
                      </value>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
@@ -4022,14 +4014,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-02-11T14:41:04Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-02-12T13:31:54Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:77d766a5-7e86-4c74-9aa4-7e1b47d203c2</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:21831eab-7e9a-4e0a-b1b3-31b70de36d27</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
