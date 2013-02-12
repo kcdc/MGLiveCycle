@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-12T14:35:42Z" uuid="52a263f6-0604-4e2e-9963-409814ae6eba">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-12T15:06:30Z" uuid="615d0ed0-3814-48df-8c68-2cfd62dc5ed5">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -9,9 +9,13 @@
       <pageSet>
          <pageArea name="mpgPage1" id="Page1">
             <medium stock="a4" short="210mm" long="297mm"/>
-            <subform x="1.931mm" y="6.07mm" w="203mm" h="39.93mm" name="subHeader">
+            <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="112mm" y="29mm" presence="hidden">
+               <?templateDesigner expand 1?></subform>
+            <subform usehref=".\Fragments\subLogo.xdp#som($template.form1.subLogo)" x="170mm" y="6mm">
+               <?templateDesigner expand 1?></subform>
+            <subform x="1.931mm" y="6mm" w="203mm" h="39.93mm" name="subHeader">
                <bind match="none"/>
-               <field name="DealerNameMarketing" minW="155mm" y="7mm" x="13mm" minH="11mm" access="readOnly">
+               <field name="DealerNameMarketing" minW="155mm" y="7.07mm" x="13mm" minH="11mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -46,7 +50,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
 </script>
                   </event>
                </field>
-               <subform w="200.025mm" h="50mm" name="sub_RichTextEnvelope" x="4mm" y="5mm" presence="hidden">
+               <subform w="200.025mm" h="50mm" name="sub_RichTextEnvelope" x="4mm" y="5.07mm" presence="hidden">
                   <bind match="none"/>
                   <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
                      <ui>
@@ -83,7 +87,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                      <bind match="none"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform x="126.069mm" minH="22.225mm" name="sub_TestLabel" layout="tb" y="24.93mm" w="76.15mm">
+               <subform x="126.069mm" minH="22.225mm" name="sub_TestLabel" layout="tb" y="25mm" w="76.15mm">
                   <bind match="none"/>
                   <field name="fld_TestLabelData" h="5.939mm" minW="32.514mm" presence="hidden">
                      <ui>
@@ -142,7 +146,7 @@ var receivedText = fld_TestLabelData.rawValue;
                      </value>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="191mm">
                <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
                <subform name="sub_FooterA" layout="tb" w="45mm">
@@ -436,18 +440,6 @@ var receivedText = fld_TestLabelData.rawValue;
                   </draw>
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 0?></subform>
-            <subform x="175mm" y="6mm" usehref=".\Fragments\subLogo.xdp#som($template.form1.subLogo)">
-               <bind/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-
-this.presence = "visible";
-this.access = "protected";
-</script>
-               </event>
-               <?templateDesigner expand 1?>
-            </subform>
             <contentArea x="16mm" y="47mm" w="190mm" h="222mm" name="areaPage1" id="areaPage1_ID"/>
             <subform name="sub_FooterD" layout="tb" w="44mm" x="150mm" y="271mm">
                <bind match="none"/>
@@ -637,8 +629,7 @@ this.access = "protected";
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)">
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -686,8 +677,8 @@ this.access = "protected";
             </field>
          </subform>
       </proto>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 56 14 000300060012002F003600370044004500470048004C004F00560057 #/LSTabdeilst?>
       <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 48 12 00270033004400480049004A004C004F00520057005E0060DPaefgilot{}?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
@@ -696,8 +687,6 @@ this.access = "protected";
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 128?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -710,11 +699,13 @@ this.access = "protected";
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\STD_example.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2012\STD\STD_xml.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 128?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:50000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -728,6 +719,7 @@ this.access = "protected";
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -942,14 +934,14 @@ this.access = "protected";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-02-12T14:35:42Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-02-12T15:06:30Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:52a263f6-0604-4e2e-9963-409814ae6eba</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:615d0ed0-3814-48df-8c68-2cfd62dc5ed5</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">

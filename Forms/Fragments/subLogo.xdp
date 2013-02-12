@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T14:10:30Z" uuid="1e374623-0efe-49ff-91f3-622000af622c">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-12T15:09:10Z" uuid="6ed559f1-0216-46af-9579-584d336943bb">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="nb_NO" layout="tb" hAlign="right">
@@ -29,8 +29,8 @@ this.access = "protected";
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
 this.border.presence = "hidden";
-this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogoHolder.imgLogo").rawValue;
-xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subLogoHolder.imgLogo").rawValue = "";
+this.rawValue = xfa.resolveNode("mpgPage1.subLogoHolder.imgLogo").rawValue;
+xfa.resolveNode("mpgPage1.subLogoHolder.imgLogo").rawValue = "";
 var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
 //app.alert(DocHeaderBrand);
 
@@ -184,10 +184,10 @@ this.access = "protected";
    </subform>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(250000,250000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner SaveTaggedPDF 1?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Zoom 128?>
+   <?templateDesigner SaveTaggedPDF 1?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
@@ -200,7 +200,6 @@ this.access = "protected";
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -215,14 +214,14 @@ this.access = "protected";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-10T14:10:30Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-02-12T15:09:10Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:1e374623-0efe-49ff-91f3-622000af622c</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:6ed559f1-0216-46af-9579-584d336943bb</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
