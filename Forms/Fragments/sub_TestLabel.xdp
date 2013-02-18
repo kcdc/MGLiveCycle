@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
+         </pageArea>
+      </pageSet>
+      <subform minH="22.225mm" name="sub_TestLabel" layout="tb" w="76.15mm">
+         <bind match="none"/>
+         <field name="fld_TestLabelData" h="5.939mm" minW="32.514mm" presence="hidden">
+            <ui>
+               <textEdit/>
+            </ui>
+            <font typeface="Arial" weight="bold" baselineShift="0pt" size="14pt"/>
+            <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1.0008mm" rightInset="0.5mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            <bind match="dataRef" ref="$.Document.DocumentHeader.TestLabel"/>
+            <?templateDesigner expand 1?></field>
+         <field name="fld_TestLabel" access="readOnly" minH="12.7mm" w="76mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial" size="8pt"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+            <?templateDesigner expand 1?>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var receivedText = fld_TestLabelData.rawValue;
+	//xfa.host.messageBox(receivedText);
+    
+	var cleanedValue = receivedText;
+//If form pre-population logic has converted &lt; and &gt; signs into &amp;lt; or &amp;gt; then un-comment below two lines. Those two lines will do the needed replacement (&amp;gt; to &gt;)
+	cleanedValue = receivedText.replace(/(\&amp;lt\;)/g,"&lt;");
+	cleanedValue = cleanedValue.replace(/(\&amp;gt\;)/g,"&gt;"); 
+
+//	xfa.host.messageBox("exdataTemplate.rawValue " + exdataTemplate.rawValue);
+
+	//How does rich text work in this sample?
+	//To set the data properly into a richtext supported TextField we have to little bit more than setting rawValue.
+	// The data needs to be stored in exData section of text field with a little formatting around. I call it 'exData envelope' where I inject the content at certain place. 
+	// The place in this envelope where the actual content needs to injected is represented with 'ccc'.
+	
+	//Get the envelope
+	var templateVal = sub_RichTextEnvelope.exdataTemplate.rawValue;
+	//replace 'ccc' with the data we received.
+	cleanedValue = templateVal.replace(/(ccc)/g,cleanedValue); 
+	
+	//show what's getting set into the textfield
+	//console.println(cleanedValue);
+	
+	//this is how we have to set the rich text data into the textfield's exData section.
+	this.value.exData.loadXML(cleanedValue,1,1);
+
+</script>
+            </event>
+            <bind match="none"/>
+            <value>
+               <exData contentType="text/html"/>
+            </value>
+         </field>
+         <?templateDesigner expand 1?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle sub_TestLabel?></subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">sub_TestLabel</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default"/>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.sub_TestLabel</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

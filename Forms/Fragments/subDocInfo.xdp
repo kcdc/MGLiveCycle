@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
+         </pageArea>
+      </pageSet>
+      <subform w="62mm" name="subDocInfo" layout="lr-tb">
+         <bind match="none"/>
+         <field name="ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <caption reserve="23mm">
+               <value>
+                  <text>Gj.gangsnr.:</text>
+               </value>
+            </caption>
+            <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
+            <font weight="bold"/>
+         </field>
+         <field name="DateCreated" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <caption reserve="23mm">
+               <value>
+                  <text>Dato:</text>
+               </value>
+            </caption>
+            <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
+         </field>
+         <field name="OurRef" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <caption reserve="23mm">
+               <value>
+                  <text>Referanse:</text>
+               </value>
+            </caption>
+            <bind match="dataRef" ref="$.Document.HeaderInfo.OurRef"/>
+         </field>
+         <?templateDesigner expand 0?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle subDocInfo?></subform>
+      <proto>
+         <subform name="designer__stylesheet">
+            <subform name="SubformStyle1" w="203.2mm">
+               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
+            </subform>
+            <field name="TextFieldStyle_Top" minW="37mm" minH="8mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Arial"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <caption reserve="4mm" placement="top">
+                  <font size="8.5pt" typeface="Arial" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+               <para vAlign="middle"/>
+            </field>
+            <field name="TextFieldStyle_Left" minW="62mm" h="4.318mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Arial"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="23.4266mm">
+                  <font size="8.5pt" typeface="Arial" weight="bold"/>
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+            </field>
+         </subform>
+      </proto>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">subDocInfo</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default"/>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.subDocInfo</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
