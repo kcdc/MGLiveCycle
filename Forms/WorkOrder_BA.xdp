@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T12:27:59Z" uuid="6e016ab0-060b-4536-83af-654276c32809">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-25T13:31:03Z" uuid="73fa31e2-39a3-4163-a2ce-137b45d83808">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -10,9 +10,11 @@
          <pageArea name="mpgPage1" id="Page1">
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="5mm" y="106mm">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="110mm" y="21mm" presence="hidden">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform w="210mm" h="197.547mm" name="subHeader">
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
                   <bind match="none"/>
@@ -903,7 +905,8 @@ this.presence = "visible";
 this.access = "protected";
 </script>
                </event>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform w="210mm" h="193.339mm" name="subHeader">
                <bind match="none"/>
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
@@ -2243,7 +2246,7 @@ this.caption.value.text = output;
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="51mm">
+               <caption reserve="60.8157mm">
                   <value>
                      <text xliff:rid="EB6D1D5C-6F67-4BEF-B9FC-DBE714CB3C7D">Gjentatt reparasjon:</text>
                   </value>
@@ -2258,12 +2261,22 @@ this.caption.value.text = output;
                <value>
                   <text/>
                </value>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
             </field>
             <field name="Upgrade" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="8mm">
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="51mm">
+               <caption reserve="60.855mm">
                   <value>
                      <text xliff:rid="793B3326-FD13-4298-A833-808AA5156E54">Oppgraderings behov:</text>
                   </value>
@@ -2275,12 +2288,22 @@ this.caption.value.text = output;
                </caption>
                <bind match="dataRef" ref="$.Upgrade"/>
                <para vAlign="middle"/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
             </field>
             <field name="TPI" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="12mm">
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="51mm">
+               <caption reserve="60.8157mm">
                   <value>
                      <text xliff:rid="11524973-5F05-42E0-924D-A38560F8CC43">Aktuelle TPI'er:</text>
                   </value>
@@ -2292,12 +2315,22 @@ this.caption.value.text = output;
                </caption>
                <bind match="dataRef" ref="$.TPI"/>
                <para vAlign="middle"/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
             </field>
             <field name="PreControl" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="16.001mm">
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="51mm">
+               <caption reserve="60.8157mm">
                   <value>
                      <text xliff:rid="00900393-13BB-4414-A2D0-855B945C089F">Behov for forkontroll/prøvekjøring:</text>
                   </value>
@@ -2309,6 +2342,17 @@ this.caption.value.text = output;
                </caption>
                <bind match="dataRef" ref="$.PreControl"/>
                <para vAlign="middle"/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
@@ -3326,7 +3370,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
+                  <bind match="none" ref=""/>
                   <para hAlign="left" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                   <assist>
@@ -3345,9 +3389,9 @@ this.caption.value.text = output;
                </field>
                <margin topInset="2mm"/>
                <?templateDesigner expand 1?></subform>
-            <subform w="179mm" name="subHeader" layout="lr-tb" id="subHeader_ID">
+            <subform w="179mm" name="subHeader" id="subHeader_ID">
                <bind match="none"/>
-               <field name="RemarkPriority" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="35mm" h="4mm" access="readOnly">
+               <field name="RemarkPriority" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="35mm" h="4mm" access="readOnly" x="0.001mm" y="0mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3381,7 +3425,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="RemarkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="59.999mm" h="4mm" access="readOnly">
+               <field name="RemarkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="59.999mm" h="4mm" access="readOnly" x="35mm" y="0mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3415,7 +3459,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="RemarkDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="84.001mm" h="4mm" access="readOnly">
+               <field name="RemarkDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="84.001mm" h="4mm" access="readOnly" x="95mm" y="0mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3456,9 +3500,8 @@ this.caption.value.text = output;
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <keep intact="contentArea"/>
                <?templateDesigner expand 1?></subform>
-            <overflow trailer="overflowTrailer" leader=""/>
+            <overflow trailer="overflowTrailer" leader="subHeader"/>
             <subform y="11mm" w="179mm" minH="3.6mm" layout="tb" name="subCarRemarkMargin">
                <bind match="none"/>
                <subform w="179mm" name="subCarRemark" layout="lr-tb">
@@ -3500,7 +3543,7 @@ this.caption.value.text = output;
                      <bind match="dataRef" ref="$.RemarkDate"/>
                   </field>
                   <occur min="0" max="-1"/>
-                  <overflow leader="" trailer="overflowTrailer" target="mpgPage2"/>
+                  <overflow leader="" target="mpgPage2" trailer=""/>
                   <?templateDesigner expand 1?></subform>
                <margin topInset="1mm"/>
                <?templateDesigner expand 1?></subform>
@@ -3521,7 +3564,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
+                  <bind match="none" ref=""/>
                   <para hAlign="left" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0mm"/>
                   <assist>
@@ -4087,14 +4130,14 @@ this.caption.value.text = output;
             </field>
          </subform>
       </proto>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 132 33 00030006001200250027002A002F003100320033003500360037004200440045004600480049004A004C004E004F0050005200530055005600570059005C005E0060 #/BDGLNOPRST_abcefgiklmoprstvy{}?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 128 32 00030006001200250027002F003100320033003500360037004200440045004600480049004A004C004E004F0050005200530055005600570059005C005E0060 #/BDLNOPRST_abcefgiklmoprstvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 196 51 0003000A00110012001D002400250026002700280029002A002C002D002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 './:ABCDEFGIJKLMNOPRSTUVabcdefghijklmnoprstuvyåø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier New" 0 1 ISO-8859-1 4 44 12 0003002700440048004A004D0050005100520057006E Daegjmnotå?>
-      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 208 52 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F002000220025002600270028002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFGIMPTUVabcdefghilmnoprstvwxyz'?></subform>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
@@ -4112,15 +4155,15 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\WorkOrder_BA_full_logo.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\4-Testing Fase 1\Vedlegg til defects\7650\755_WorkOrder_S001IT01_20130221_101500_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 200?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?>
-   <?templateDesigner Zoom 500?></template>
+   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -4132,7 +4175,6 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4503,14 +4545,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-01-10T12:27:59Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-02-25T13:31:03Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:6e016ab0-060b-4536-83af-654276c32809</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:73fa31e2-39a3-4163-a2ce-137b45d83808</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">

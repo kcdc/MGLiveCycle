@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2012-12-17T15:26:48Z" uuid="3d534c4c-1b07-4f54-96a3-43016a373619">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-25T13:25:04Z" uuid="75ae0f6e-094b-48c9-bbbd-648b635340d2">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -105,6 +105,7 @@ var PaymentTerms_Kre = "Pavedimu";
 var PlannedValuation = "Susitarta:";
 var PlannedVisit = "Apsilankymo data:";
 var PlannedWorks = "Planuojami darbai:";
+var PreControl = "Pirminę patikrą / bandomasis važiavimas:";
 var PrepaymentAmount = "Užsakovo avansas (LTL):";
 var Preview = "Peržiūra";
 var Price = "Kaina";
@@ -128,6 +129,7 @@ var RemarkPriority = "Pirmenybė";
 var RemarksText = "Patvirtinu, kad aš esu susipažinęs su komentarais.";
 var RemarkText = "Aprašymas";
 var Remember = "Papildomai:";
+var RepeatedRepair = "Pakartotinis remontas:";
 var RestPayTotal = "Mokėti su PVM (LTL)";
 var Reviewed = "Klientas informuotas:";
 var ServiceAdvisor = "Serviso konsultantas,";
@@ -147,7 +149,9 @@ var ThankYouTextConfirmation = "Brangus kliente, Dėkojame, kad kreipėtės į m
 var ThankYouTextPriceestimate = "Dėkojame, kad kreipėtės į mūsų servisą dėl Jūsų automobilio aptarnavimo.";
 var ThroughputNo = "Praėjimo Nr.:";
 var TimeTotal = "Bendras laikas";
+var TPI = "Aktualus TPI:";
 var Unit = "Vnt";
+var Upgrade = "Akcija:";
 var UserName = "Vartotojas:";
 var VatAmount = "PVM (LTL)";
 var VatAmountCash = "PVM Suma";
@@ -173,14 +177,17 @@ var YourServiceAdvisor = "Jūsų serviso konsultantas,";
                
                
 
+               
+               
+
                <?templateDesigner isFragment yes?>
                <?templateDesigner fragmentTitle LT?></script>
          </variables>
       </subform>
    </subform>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 128?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 129?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -207,14 +214,14 @@ var YourServiceAdvisor = "Jūsų serviso konsultantas,";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2012-12-17T15:26:48Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-02-25T13:25:04Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3d534c4c-1b07-4f54-96a3-43016a373619</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:75ae0f6e-094b-48c9-bbbd-648b635340d2</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
