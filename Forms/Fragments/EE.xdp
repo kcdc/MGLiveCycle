@@ -261,8 +261,10 @@ var L_YourRef = "Märkus:";
 var L_YourServiceAdvisor = "Teie teeninduse konsultant,";
 
 		
+               
+               
                <?templateDesigner isFragment yes?>
-               <?templateDesigner fragmentTitle EN?></script>
+               <?templateDesigner fragmentTitle EE?></script>
          </variables>
       </subform>
    </subform>
@@ -316,7 +318,7 @@ var L_YourServiceAdvisor = "Teie teeninduse konsultant,";
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">EN</rdf:li>
+                        <rdf:li xml:lang="x-default">EE</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
