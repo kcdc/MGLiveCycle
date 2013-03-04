@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-04T08:21:00Z" uuid="5d58708d-5452-4847-a845-67a9129710e9">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-04T08:26:41Z" uuid="444e3bcb-01f5-4209-80c6-43924a5913ef">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -1505,11 +1505,11 @@ this.caption.value.text = output;
                      <value>
                         <text xliff:rid="8A188D1E-862E-4E09-B6B6-7C6436EDE8D1">Totalt:</text>
                      </value>
-                     <font weight="bold"/>
+                     <font weight="bold" size="8.5pt"/>
                   </caption>
                   <bind match="dataRef" ref="$.Document.Tasks.TaskTotals.WorkPosTotHour"/>
                   <para hAlign="right"/>
-                  <font weight="bold"/>
+                  <font weight="bold" size="8.5pt"/>
                   <event activity="initialize" ref="$" name="event__initialize">
                      <script contentType="application/x-javascript">
 
@@ -3446,14 +3446,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-04T08:21Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-03-04T08:26:41Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:5d58708d-5452-4847-a845-67a9129710e9</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:444e3bcb-01f5-4209-80c6-43924a5913ef</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
