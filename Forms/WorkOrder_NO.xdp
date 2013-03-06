@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-04T12:52:03Z" uuid="414c1787-39a3-4159-8ac6-4cc12c3a5d03">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-05T14:46:22Z" uuid="3dda05af-20b1-409d-b4b2-68d4377b55d2">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -2224,7 +2224,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
+                  <bind match="none" ref=""/>
                   <para hAlign="left" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                   <assist>
@@ -2232,8 +2232,6 @@ this.caption.value.text = output;
                   </assist>
                   <event activity="initialize" ref="$" name="event__initialize">
                      <script contentType="application/x-javascript">
-
-
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
@@ -2261,7 +2259,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
+                  <bind match="none" ref=""/>
                   <para hAlign="left" vAlign="bottom"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                   <assist>
@@ -2293,7 +2291,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
+                  <bind match="none" ref=""/>
                   <para hAlign="left" vAlign="bottom"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                   <assist>
@@ -2328,7 +2326,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
+                  <bind match="none" ref=""/>
                   <para hAlign="left" vAlign="bottom"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                   <assist>
@@ -2416,7 +2414,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
+                  <bind match="none" ref=""/>
                   <para hAlign="left" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                   <assist>
@@ -3059,12 +3057,12 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\4-Testing Fase 1\Vedlegg til defects\7456\030_WorkOrder_S001IT01_20130201_131556_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 133?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:4850000?></template>
+   <?templateDesigner Guidelines v:375000;v:4850000?>
+   <?templateDesigner Zoom 133?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -3076,6 +3074,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -3446,14 +3445,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-04T12:52:03Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-03-05T14:46:22Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:414c1787-39a3-4159-8ac6-4cc12c3a5d03</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:3dda05af-20b1-409d-b4b2-68d4377b55d2</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
