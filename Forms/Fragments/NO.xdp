@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-04T08:14:07Z" uuid="332c3999-1514-4fd3-abb2-18af211a4626">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-07T14:34:47Z" uuid="62726e4f-3ce2-4e19-a94e-3a1073db58b3">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -69,12 +69,12 @@ var L_AdditionalInfo = "Tilleggsinformasjon"
 var L_AdditionalLease = "Tilleggsleie/mnd**"
 var L_AdditionalLeaseVat = "Tilleggsleie/mnd**"
 var L_AdditionalWorkText = "Tilleggsarbeid"
-var L_AdditonalProduct = "**Tilleggsleie inkluderer:"
+var L_AdditionalProduct = "**Tilleggsleie inkluderer:"
 var L_AmountToPay = "Å betale:"
 var L_CarMileageCur = "KM stand inn:"
 var L_CarModelDesc = "Modell:"
-var L_CarModelYear = "Årsmodell:\t\t\t\t."
-var L_CarModelInfo = "Grunnpris:\t\t\t\t."
+var L_CarModelYear = "Årsmodell:"
+var L_CarModelInfo = "Grunnpris:"
 var L_CarPickUp = "Bil hentes:"
 var L_CarRegDate = "Reg.dato:"
 var L_CarRegNo = "Reg.nr.:"
@@ -152,7 +152,7 @@ var L_Insurance = "Forsikring"
 var L_InsuranceCompany = "Forhandler forikrer bilen i"
 var L_InsuranceMileage = "Kjørelengde pr. år, km:"
 var L_InsuranceNameRef = "Forsikringsref.:"
-var L_Interior = "Interiør:\t\t\t\t\t. "
+var L_Interior = "Interiør:"
 var L_InvoiceNo = "Fakturanr.:"
 var L_InvoiceNo_K = "Kreditnota:"
 var L_InvoiceNo_N = "Kreditnota.:"
@@ -238,7 +238,7 @@ var L_ReBuilds = "Ombygging montert utstyr"
 var L_ReceivedText_D = "Jeg har mottatt alle deler .. Delesalg"
 var L_ReceivedText_V = "Jeg har mottatt alle deler .service"
 var L_ReferenceNo = "Forskudd på gjennomgang"
-var L_RegistrationDesc = "Registrering pr.\t\t\t\t."
+var L_RegistrationDesc = "Registrering pr."
 var L_RemainingValue = "Restverdi"
 var L_RemarkDate = "Dato opprettet"
 var L_RemarkText = "Beskrivelse"
@@ -294,6 +294,9 @@ var L_AssumedTradeInPrice = "Antatt innbyttepris:"
                
                
 
+               
+               
+
                <?templateDesigner isFragment yes?>
                <?templateDesigner fragmentTitle NO?></script>
          </variables>
@@ -303,8 +306,8 @@ var L_AssumedTradeInPrice = "Antatt innbyttepris:"
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 129?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 129?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -334,14 +337,14 @@ var L_AssumedTradeInPrice = "Antatt innbyttepris:"
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-04T08:14:07Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-03-07T14:34:47Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:332c3999-1514-4fd3-abb2-18af211a4626</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:62726e4f-3ce2-4e19-a94e-3a1073db58b3</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
