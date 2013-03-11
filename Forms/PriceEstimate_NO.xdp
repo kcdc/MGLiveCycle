@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-11T06:55:33Z" uuid="3b363d96-7ace-478a-9fdb-1846342165b0">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-11T09:42:21Z" uuid="540d1749-6908-42e7-a3a9-23363841327a">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -53,11 +53,8 @@ this.presence = "hidden";
                   <para vAlign="middle"/>
                   <bind match="dataRef" ref="$.Document.DocumentHeader.TypeText"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var firstTitlePart = xfa.resolveNode("#pageSet.mpgPage1.subHeader.L_DocTypePriceEstimate").rawValue;
-var secondTitlePart = this.rawValue;
-
-this.rawValue = firstTitlePart+" "+secondTitlePart;
-
+                     <script contentType="application/x-javascript">
+this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.subHeader.L_DocTypePriceEstimate").rawValue;
 </script>
                   </event>
                </field>
@@ -165,12 +162,10 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="9.56mm" y="0.402mm">
                   <bind/>
                </field>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="109mm" y="19mm" presence="hidden">
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="105mm">
                <field h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm">
                   <para/>
@@ -178,8 +173,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                   <bind/>
                </field>
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <?templateDesigner expand 1?></pageArea>
@@ -1156,7 +1150,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" minH="7.2mm" layout="tb" name="Tasks">
             <bind match="dataRef" ref="$.Document.Tasks"/>
-            <subform w="179mm" name="subMaterialsAndSparepartsHeader" h="4.315mm">
+            <subform w="179mm" name="subMaterialsAndSparepartsHeader" h="4.315mm" id="subMaterialsAndSparepartsHeader_ID">
                <bind match="none"/>
                <border>
                   <edge presence="hidden"/>
@@ -1279,7 +1273,6 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <?templateDesigner expand 0?>
                <field name="L_Discount" w="22mm" h="4mm" access="readOnly" x="145mm" y="0.214mm">
                   <ui>
                      <textEdit>
@@ -1307,7 +1300,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform y="8.214mm" w="179mm" minH="3.6mm" layout="tb" name="subTask">
                <bind match="dataRef" ref="$.Task[*]"/>
                <subform name="subTaskHeader" layout="lr-tb" w="179mm">
@@ -1356,20 +1349,23 @@ this.caption.value.text = output;
                         <corner presence="hidden"/>
                      </border>
                   </field>
-                  <field name="fldPriceVatTotalTask" h="3.6mm" access="readOnly" minW="17mm" y="0.104mm" x="162mm">
+                  <field name="fldPriceVatTotalTask" y="0.104mm" x="162mm" h="3.6mm" access="readOnly" minW="17mm">
                      <ui>
-                        <textEdit>
+                        <numericEdit>
                            <margin/>
-                        </textEdit>
+                        </numericEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
                      <para vAlign="middle" hAlign="right"/>
-                     <bind match="dataRef" ref="$.PriceVatTotalTask"/>
                      <border>
                         <edge presence="hidden"/>
                         <corner presence="hidden"/>
                      </border>
+                     <bind match="dataRef" ref="$.PriceVatTotalTask"/>
+                     <format>
+                        <picture>num{z,zzz,zz9.99}</picture>
+                     </format>
                   </field>
                   <assist role="TR"/>
                   <bind match="dataRef" ref="$.TaskHeader"/>
@@ -1377,7 +1373,7 @@ this.caption.value.text = output;
                      <edge presence="hidden"/>
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-                  <subform y="3.6mm" w="162mm" minH="3.6mm" layout="lr-tb" name="subTaskText">
+                  <subform y="3.6mm" w="179mm" minH="3.6mm" layout="lr-tb" name="subTaskText">
                      <bind match="none"/>
                      <field name="fldTaskText" minH="3.6mm" access="readOnly" w="162mm">
                         <ui>
@@ -1398,10 +1394,9 @@ this.caption.value.text = output;
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subSpareparts" w="179mm" layout="lr-tb">
+               <subform name="subSpareparts" w="179mm" layout="tb">
                   <subform w="179mm" name="subSparepartsHolder">
                      <bind match="none"/>
-                     <keep intact="none"/>
                      <field name="fldSparePartText" w="100mm" h="3.6mm" access="readOnly" x="1mm">
                         <ui>
                            <textEdit>
@@ -1492,22 +1487,28 @@ this.caption.value.text = output;
                            <corner presence="hidden"/>
                         </border>
                         <?templateDesigner expand 1?></field>
-                     <field name="fldSparePartAmount" w="17mm" h="3.6mm" access="readOnly" x="162mm">
+                     <field name="fldSparePartAmount" x="162mm" w="17mm" h="3.6mm" access="readOnly">
                         <ui>
-                           <textEdit>
+                           <numericEdit>
                               <margin/>
-                           </textEdit>
+                           </numericEdit>
                         </ui>
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
                         <para vAlign="middle" hAlign="right"/>
-                        <bind match="dataRef" ref="$.SparePartAmount"/>
+                        <?templateDesigner expand 1?>
                         <border>
                            <edge presence="hidden"/>
                            <corner presence="hidden"/>
                         </border>
-                        <?templateDesigner expand 1?></field>
-                     <?templateDesigner expand 1?></subform>
+                        <bind match="dataRef" ref="$.SparePartAmount"/>
+                        <format>
+                           <picture>num{z,zzz,zz9.99}</picture>
+                        </format>
+                     </field>
+                     <?templateDesigner expand 1?>
+                     <keep intact="none"/>
+                  </subform>
                   <assist role="TR"/>
                   <bind match="dataRef" ref="$.Spareparts[*]"/>
                   <border>
@@ -1515,12 +1516,22 @@ this.caption.value.text = output;
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
                   <occur max="200" min="0"/>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+                  <breakAfter/>
+               </subform>
                <margin topInset="1mm"/>
                <occur min="0" max="30"/>
-               <?templateDesigner expand 1?></subform>
+               <overflow leader="subMaterialsAndSparepartsHeader"/>
+               <?templateDesigner expand 1?>
+               <keep intact="contentArea"/>
+               <breakAfter/>
+            </subform>
             <margin topInset="2mm"/>
-            <?templateDesigner expand 1?></subform>
+            <occur min="0" max="-1"/>
+            <overflow trailer="overflowTrailer" target="mpgPage2"/>
+            <?templateDesigner expand 1?>
+            <breakAfter/>
+         </subform>
          <subform w="179mm" h="4.905mm" name="subTotal">
             <bind match="none"/>
             <field name="L_VatAmount" w="39mm" h="3.6mm" access="readOnly" x="47mm" y="0.304mm">
@@ -1592,26 +1603,30 @@ this.caption.value.text = output;
 </script>
                </event>
             </field>
-            <field name="fldPriceVatTotalInfo" w="27mm" h="3.6mm" access="readOnly" x="135mm" y="0.304mm">
+            <field name="fldPriceVatTotalInfo" y="0.304mm" x="135mm" w="27mm" h="3.6mm" access="readOnly">
                <ui>
-                  <textEdit>
+                  <numericEdit>
                      <margin/>
-                  </textEdit>
+                  </numericEdit>
                </ui>
                <font typeface="Arial" size="9pt"/>
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para vAlign="middle"/>
-               <bind match="dataRef" ref="$.Document.Total.PriceVatTotalInfo"/>
+               <?templateDesigner expand 1?>
                <border>
                   <edge presence="hidden"/>
                   <corner presence="hidden"/>
                </border>
-               <?templateDesigner expand 1?></field>
+               <bind match="dataRef" ref="$.Document.Total.PriceVatTotalInfo"/>
+               <format>
+                  <picture>num{z,zzz,zz9.zzz}</picture>
+               </format>
+            </field>
             <field name="fldPriceVatTotalSum" y="0.304mm" x="162mm" w="17mm" h="3.6mm" access="readOnly">
                <ui>
-                  <textEdit>
+                  <numericEdit>
                      <margin/>
-                  </textEdit>
+                  </numericEdit>
                </ui>
                <font typeface="Arial" size="9pt"/>
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
@@ -1622,6 +1637,9 @@ this.caption.value.text = output;
                   <corner presence="hidden"/>
                </border>
                <bind match="dataRef" ref="$.Document.Total.PriceVatTotalSum"/>
+               <format>
+                  <picture>num{z,zzz,zz9.99}</picture>
+               </format>
             </field>
             <margin topInset="1mm"/>
             <border>
@@ -1834,6 +1852,8 @@ this.caption.value.text = output;
          <script usehref=".\Fragments\EN.xdp#som($template.form1.#subform.#variables.EN)"/>
          <?templateDesigner expand 1?></variables>
       <proto>
+         <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)">
+            <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -1860,11 +1880,11 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\PriceEstimate\TestData\Prisoverslag_Oppdatert.dax?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe A - Mverk\2- Prisoverslag SM\Oppdatert\Prisoverslag_Oppdatert.dax?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 96?>
+   <?templateDesigner Zoom 133?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -2011,14 +2031,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-11T06:55:33Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-03-11T09:42:21Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3b363d96-7ace-478a-9fdb-1846342165b0</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:540d1749-6908-42e7-a3a9-23363841327a</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
