@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
+            <medium stock="a4" short="210mm" long="297mm"/>
+         </pageArea>
+      </pageSet>
+      <subform name="subInformation" layout="tb">
+         <bind match="none"/>
+         <subform minH="33mm" name="subCustomerInfo" layout="lr-tb">
+            <bind match="none"/>
+            <subform w="114.999mm" name="subCustomerPhone">
+               <bind match="none"/>
+               <field name="L_CustomerPhoneOrder" w="28mm" h="4mm" access="readOnly" x="0mm" y="0.001mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="12.7691mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Tlf. dag:</text>
+                     </value>
+                  </caption>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneOrder"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+               </field>
+               <field name="L_CustomerPhonePrivat" w="27mm" h="4mm" access="readOnly" x="29.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="10.783mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Privat:</text>
+                     </value>
+                  </caption>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneFixed"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+               </field>
+               <field name="L_CustomerPhoneWork" w="29mm" h="4mm" access="readOnly" x="57.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="12mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Arbeid:</text>
+                     </value>
+                  </caption>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneWork"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+               </field>
+               <field name="L_CustomerPhoneMobile" w="28mm" h="4mm" access="readOnly" x="86.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Mobil:</text>
+                     </value>
+                  </caption>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneMobile"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+                  <?templateDesigner expand 1?></field>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.2mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.2mm" presence="hidden"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 1?></subform>
+         <keep intact="contentArea"/>
+         <?templateDesigner expand 1?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle subInformation?></subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">subInformation</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default"/>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.subInformation</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
