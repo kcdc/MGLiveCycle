@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-18T08:27:19Z" uuid="75a36e06-321a-4093-9db5-22995d4116c2">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-19T13:28:09Z" uuid="2d8138ca-33f7-48c5-9f09-2725534951e3">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -162,12 +162,10 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="9.56mm" y="0.402mm">
                   <bind/>
                </field>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="109mm" y="19mm" presence="hidden">
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="105mm">
                <field h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm">
                   <para/>
@@ -175,8 +173,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                   <bind/>
                </field>
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <?templateDesigner expand 1?></pageArea>
@@ -429,21 +426,6 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
             <bind/>
             <?templateDesigner expand 0?>
          </subform>
-         <subform name="subFinancingMetadata" layout="tb" presence="hidden">
-            <bind match="none"/>
-            <field name="FinanceType" h="9mm" minW="6mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <para vAlign="middle"/>
-               <bind match="dataRef" ref="$.Document.Financing.FinanceType"/>
-            </field>
-            <?templateDesigner expand 1?></subform>
          <bind match="none"/>
          <event activity="initialize" name="event__initialize">
             <script contentType="application/x-javascript">/*
@@ -476,13 +458,11 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
             <subform w="179mm" minH="33.001mm" name="subOuterHolder" x="0.001mm" y="0mm">
                <bind match="none"/>
                <subform x="0in" y="0in" usehref=".\Fragments\frgSubCustomerAddress.xdp#som($template.#subform.subCustomerAddress)">
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform x="117.999mm" y="0.002mm" w="61mm" minH="13mm" name="subDealerInfo">
                   <bind match="none"/>
                   <subform x="0in" y="0in" usehref=".\Fragments\frgSubDealerAddress.xdp#som($template.#subform.subDealerAddress)">
-                     <?templateDesigner expand 1?>
-                  </subform>
+                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
                <subform x="117.999mm" y="13mm" w="61mm" name="subCompanyRegNo">
                   <bind match="none"/>
@@ -536,8 +516,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm"/>
                   <?templateDesigner expand 1?></subform>
                <subform x="0in" y="26mm" usehref=".\Fragments\frgSubTelephone.xdp#som($template.#subform.subInformation)">
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform x="117.999mm" y="20mm" w="58mm" minH="11.5mm" name="subHolderOrderNo" layout="tb">
                   <bind match="none"/>
                   <field name="L_PriceEstimateNo" h="3.5mm" minW="58mm" access="readOnly">
@@ -631,8 +610,7 @@ this.caption.value.text = output;
          <subform w="179mm" name="subCarInformation" layout="tb" x="0.001mm" y="0mm">
             <bind match="none"/>
             <subform usehref=".\Fragments\frgSubCarInfo.xdp#som($template.#subform.subCarInfo)">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <border>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
@@ -645,8 +623,7 @@ this.caption.value.text = output;
             </border>
             <margin topInset="1mm"/>
             <subform usehref=".\Fragments\frgSubEierLeierBruker.xdp#som($template.form1.subEierBruker)">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTopTextMain" layout="tb" x="0.001mm" y="18.501mm">
             <bind match="dataRef" ref="$.Document.TopTextMain"/>
@@ -1323,19 +1300,25 @@ this.caption.value.text = output;
                   </field>
                   <field name="fldVatAmount" w="17mm" h="3.841mm" access="readOnly" hAlign="right">
                      <ui>
-                        <textEdit>
+                        <numericEdit>
                            <margin/>
-                        </textEdit>
+                        </numericEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
                      <para vAlign="middle" hAlign="right"/>
-                     <bind match="dataRef" ref="$.Document.Total.VatAmount"/>
+                     <?templateDesigner expand 1?>
                      <border>
                         <edge presence="hidden"/>
                         <corner presence="hidden"/>
                      </border>
-                     <?templateDesigner expand 1?></field>
+                     <bind match="dataRef" ref="$.Document.Total.VatAmount">
+                        <picture>num{z,zz9.99}</picture>
+                     </bind>
+                     <format>
+                        <picture>num{z,zz9.99}</picture>
+                     </format>
+                  </field>
                   <field name="fldPriceVatTotalSum" w="17mm" h="3.6mm" access="readOnly" hAlign="right">
                      <ui>
                         <numericEdit>
@@ -1571,8 +1554,7 @@ this.caption.value.text = output;
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)">
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -1750,14 +1732,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-18T08:27:19Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-03-19T13:28:09Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:75a36e06-321a-4093-9db5-22995d4116c2</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:2d8138ca-33f7-48c5-9f09-2725534951e3</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
