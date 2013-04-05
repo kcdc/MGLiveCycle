@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-08T10:49:11Z" uuid="40463d34-0cca-4756-a675-1cbe7f2157b0">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-04T09:48:38Z" uuid="04041497-194a-4a58-926b-5e6b2bee344e">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -12,7 +12,8 @@
             <subform x="1.931mm" y="6mm" w="203mm" h="37mm" name="subHeader">
                <bind match="none"/>
                <subform x="13.069mm" y="7mm" usehref=".\Fragments\DealerNameMarketing.xdp#som($template.#subform.DealerNameMarketing)">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <field name="L_DocTypeWorkOrder" y="18mm" x="13.069mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
@@ -47,9 +48,11 @@ this.rawValue = output;
                   </value>
                </field>
                <subform usehref=".\Fragments\sub_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="112.069mm" y="22mm">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <subform usehref=".\Fragments\sub_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <?templateDesigner expand 1?></subform>
             <subform x="15mm" y="270mm" usehref=".\Fragments\subFooter.xdp#som($template.#subform.subFooter)">
                <?templateDesigner expand 0?>
@@ -74,7 +77,8 @@ this.access = "protected";
                   <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
                   <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
                </border>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <contentArea x="15mm" y="43mm" w="190mm" h="225mm" name="areaPage1" id="areaPage1_ID"/>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="105mm">
                <event activity="initialize" ref="$" name="event__initialize">
@@ -82,9 +86,11 @@ this.access = "protected";
 xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verticalTextLabel")
 </script>
                </event>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="124mm" y="25mm" presence="hidden">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
@@ -969,7 +975,7 @@ this.caption.value.text = output;
 </script>
                </event>
             </field>
-            <occur min="0" max="-1"/>
+            <occur max="-1" min="0"/>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subCarPickUp" layout="tb">
             <bind match="dataRef" ref="$.Document.CarPickup"/>
@@ -1203,7 +1209,9 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+               <occur min="0" max="-1"/>
+            </subform>
             <subform w="179mm" layout="lr-tb" name="subReminder">
                <bind match="dataRef" ref="$.Reminder[*]"/>
                <field name="ReminderDescription" minH="4mm" minW="96mm" access="readOnly">
@@ -1261,7 +1269,7 @@ this.caption.value.text = output;
                         <font typeface="Arial" size="9pt" weight="bold"/>
                      </caption>
                   </field>
-                  <occur max="10"/>
+                  <occur max="10" min="0"/>
                   <?templateDesigner expand 1?></subform>
                <subform name="subInternalComment" layout="tb">
                   <bind match="none"/>
@@ -1279,10 +1287,10 @@ this.caption.value.text = output;
                         <font typeface="Arial" size="9pt" weight="bold"/>
                      </caption>
                   </field>
-                  <occur max="10"/>
+                  <occur max="10" min="0"/>
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
-            <margin topInset="8mm"/>
+            <margin topInset="5mm"/>
             <occur max="-1" min="0"/>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTaskTitle" layout="tb" id="subTaskTitle_ID">
@@ -1409,15 +1417,16 @@ this.caption.value.text = output;
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="25mm" rightInset="1mm"/>
                         <para vAlign="middle"/>
-                        <bind match="dataRef" ref="$.TaskText[*]"/>
+                        <bind match="dataRef" ref="$.TaskTexts[*].TaskText[*]"/>
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
 //app.alert(this.rawValue);
 </script>
                         </event>
                      </field>
+                     <?templateDesigner expand 1?>
                      <occur min="0" max="-1"/>
-                     <?templateDesigner expand 1?></subform>
+                  </subform>
                   <?templateDesigner expand 1?></subform>
                <bind match="dataRef" ref="$.Document.Tasks.Task[*]"/>
                <subform y="8mm" w="179mm" layout="tb" name="subTaskDetailsArea">
@@ -2973,7 +2982,8 @@ this.caption.value.text = output;
       <proto>
          <subform usehref=".\Fragments\overflowTrailer.xdp#som($template.form1.overflowTrailer)" w="179mm">
             <margin/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -3024,8 +3034,8 @@ this.caption.value.text = output;
       <proto>
          <field name="designer__defaultHyphenation"/>
       </proto>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 148 37 000300120024002500260027002F00300031003200330035003600370039004200440045004600480049004A004C004E004F005000510052005300550056005700580059005C005E0060 /ABCDLMNOPRSTV_abcefgiklmnoprstuvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 188 49 0003000A00110012001D002400250026002700280029002A002C002E002F00300031003200330035003600370039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 './:ABCDEFGIKLMNOPRSTVabcdefghijklmnoprstuvyåø?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
@@ -3036,6 +3046,7 @@ this.caption.value.text = output;
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner Zoom 130?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -3049,10 +3060,9 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\4-Testing Fase 1\Vedlegg til defects\7840\030_WorkOrder_S001EVP01_20130308_103806_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Workorder task text\018_WorkOrder_S001IT01_20130404_110200_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Zoom 133?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -3205,9 +3215,9 @@ this.caption.value.text = output;
 </localeSet>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="WorkOrder">
-      <uri>..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2012\XSD\schema\WorkOrder.xsd</uri>
+      <uri>..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Workorder task text\WorkOrderTaskText.xsd</uri>
       <rootElement>WorkOrder</rootElement>
-      <?templateDesigner fileDigest shaHash="sdja9P5VyWBvPc+GOuOlcA+06CM="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="0KLHExOEHoA+PeBCvBntdMIsJqU="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -3278,7 +3288,6 @@ this.caption.value.text = output;
                <DateCreated/>
                <TypeText/>
                <TestLabel/>
-               <VerticalLabel/>
             </DocumentHeader>
             <HeaderInfo>
                <CustomerVatPayer/>
@@ -3321,13 +3330,18 @@ this.caption.value.text = output;
                <CustomerPhoneOrder/>
                <CustomerPhoneWork/>
                <LocationPartsPrepicked/>
-               <PlannedValuationDate/>
+               <OurRef/>
+               <WarrentyRefLabel/>
+               <CustomerRef/>
             </HeaderInfo>
             <TopTextMain>
                <TopTextLines dd:maxOccur="10">
                   <TopTextLine/>
                </TopTextLines>
             </TopTextMain>
+            <ValuationInfo>
+               <PlannedValuationDate/>
+            </ValuationInfo>
             <PlannedVisit>
                <PlannedVisitTime/>
                <PlannedVisitDate/>
@@ -3365,9 +3379,11 @@ this.caption.value.text = output;
             <Tasks>
                <Task dd:maxOccur="30">
                   <TaskHeader>
+                     <TaskTexts dd:maxOccur="30">
+                        <TaskText dd:maxOccur="-1"/>
+                     </TaskTexts>
                      <TaskId/>
                      <TaskName/>
-                     <TaskText dd:maxOccur="4"/>
                      <PriceVatTotalTask/>
                      <PriceInfo/>
                      <TreatmentCodeInfo/>
@@ -3438,14 +3454,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-08T10:49:11Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-04T09:48:38Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:40463d34-0cca-4756-a675-1cbe7f2157b0</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:04041497-194a-4a58-926b-5e6b2bee344e</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -3567,7 +3583,6 @@ this.caption.value.text = output;
                               <xs:element name="DateCreated" type="xs:string"/>
                               <xs:element name="TypeText" type="xs:string"/>
                               <xs:element name="TestLabel" type="xs:string"/>
-                              <xs:element name="VerticalLabel"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -3614,20 +3629,29 @@ this.caption.value.text = output;
                               <xs:element name="CustomerPhoneOrder" type="xs:string"/>
                               <xs:element name="CustomerPhoneWork" type="xs:string"/>
                               <xs:element name="LocationPartsPrepicked" type="xs:string"/>
-                              <xs:element name="PlannedValuationDate" type="xs:string"/>
+                              <xs:element name="OurRef" type="xs:string"/>
+                              <xs:element name="WarrentyRefLabel" type="xs:string"/>
+                              <xs:element name="CustomerRef" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="TopTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="TopTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="TopTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TopTextLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="ValuationInfo">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="PlannedValuationDate" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -3682,7 +3706,7 @@ this.caption.value.text = output;
                      <xs:element name="ReminderList">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Reminder" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Reminder">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ReminderDescription" type="xs:string"/>
@@ -3693,33 +3717,39 @@ this.caption.value.text = output;
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element name="Comments" maxOccurs="30">
+                     <xs:element maxOccurs="30" name="Comments">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CustomerComment" type="xs:string" maxOccurs="10"/>
-                              <xs:element name="InternalComment" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="CustomerComment" type="xs:string"/>
+                              <xs:element maxOccurs="10" name="InternalComment" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Task" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Task">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskHeader">
                                           <xs:complexType>
                                              <xs:sequence>
+                                                <xs:element maxOccurs="30" name="TaskTexts">
+                                                   <xs:complexType>
+                                                      <xs:sequence>
+                                                         <xs:element maxOccurs="-1" name="TaskText" type="xs:string"/>
+                                                      </xs:sequence>
+                                                   </xs:complexType>
+                                                </xs:element>
                                                 <xs:element name="TaskId" type="xs:string"/>
                                                 <xs:element name="TaskName" type="xs:string"/>
-                                                <xs:element name="TaskText" type="xs:string" maxOccurs="4"/>
                                                 <xs:element name="PriceVatTotalTask" type="xs:string"/>
                                                 <xs:element name="PriceInfo" type="xs:string"/>
                                                 <xs:element name="TreatmentCodeInfo" type="xs:string"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="TaskDetails" maxOccurs="200">
+                                       <xs:element maxOccurs="200" name="TaskDetails">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="WorkPosNo" type="xs:string"/>
@@ -3748,7 +3778,7 @@ this.caption.value.text = output;
                      <xs:element name="Spareparts">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Material" maxOccurs="200">
+                              <xs:element maxOccurs="200" name="Material">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="MaterialLocation" type="xs:string"/>
@@ -3763,7 +3793,7 @@ this.caption.value.text = output;
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
-                              <xs:element name="Sparepart" maxOccurs="200">
+                              <xs:element maxOccurs="200" name="Sparepart">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="SparePartLocation" type="xs:string"/>
@@ -3814,7 +3844,7 @@ this.caption.value.text = output;
                      <xs:element name="CarRemarks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CarRemark" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="CarRemark">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="RemarkPriority" type="xs:string"/>
