@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-01T10:09:05Z" uuid="4fa75fe0-291b-4127-b975-1c242a7f20aa">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-01-10T12:27:59Z" uuid="6e016ab0-060b-4536-83af-654276c32809">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -10,15 +10,13 @@
          <pageArea name="mpgPage1" id="Page1">
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\verticalLabel.xdp#som($template.form1.verticalLabel)" x="5mm" y="106mm">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\subLogoHolder.xdp#som($template.form1.subLogoHolder)" x="110mm" y="21mm" presence="hidden">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="210mm" h="197.547mm" name="subHeader">
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
                   <bind match="none"/>
-                  <field name="L_Preview" access="readOnly" minH="12.7mm" rotate="90" minW="76mm">
+                  <field name="Preview" access="readOnly" minH="12.7mm" rotate="90" minW="76mm">
                      <ui>
                         <textEdit multiLine="1">
                            <border presence="hidden"/>
@@ -94,7 +92,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
 </script>
                   </event>
                   <?templateDesigner expand 1?></field>
-               <field name="L_DocTypeWorkOrder" y="24.07mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
+               <field name="fldWorkOrder" y="24.07mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -114,7 +112,7 @@ this.rawValue = output;
                   <?templateDesigner expand 1?></field>
                <subform x="15mm" y="31mm" w="179mm" h="6mm" name="subHeaderpart">
                   <bind match="none"/>
-                  <field name="L_ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm" x="0in" y="1mm">
+                  <field name="ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm" x="0in" y="1mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -135,7 +133,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field name="L_DateCreated" minH="4mm" access="readOnly" minW="117mm" x="62mm" y="1mm">
+                  <field name="DateCreated" minH="4mm" access="readOnly" minW="117mm" x="62mm" y="1mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -221,7 +219,7 @@ this.caption.value.text = output;
                            <script contentType="application/x-javascript">
 if(this.rawValue != "" || null)
 {
-	WorkOrder.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue = this.rawValue;
+	WorkOrder.pageContent.subCarInformation.subEierBruker.UserName.rawValue = this.rawValue;
 }
 </script>
                         </event>
@@ -283,7 +281,7 @@ if(this.rawValue != "" || null)
                   <bind match="none"/>
                   <subform w="88mm" layout="tb" name="subDealerAddress" y="2.9mm">
                      <bind match="none"/>
-                     <field name="L_DealerNameLegal" minH="4mm" access="readOnly" w="86.982mm">
+                     <field name="DealerNameLegal" minH="4mm" access="readOnly" w="86.982mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -310,7 +308,7 @@ this.caption.value.text = output;
 </script>
                         </event>
                      </field>
-                     <field name="L_DealerLegalAddressTotal" minH="4mm" access="readOnly" w="86.982mm">
+                     <field name="DealerLegalAddressTotal" minH="4mm" access="readOnly" w="86.982mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -338,7 +336,7 @@ this.caption.value.text = output;
 </script>
                         </event>
                      </field>
-                     <field name="L_DealerIssueAddressTotal" minH="4mm" access="readOnly" w="86.982mm">
+                     <field name="DealerIssueAddressTotal" minH="4mm" access="readOnly" w="86.982mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -365,7 +363,7 @@ this.caption.value.text = output;
 </script>
                         </event>
                      </field>
-                     <field name="L_CompanyRegno" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="86.982mm" h="4mm" access="readOnly">
+                     <field name="CompanyRegno" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="86.982mm" h="4mm" access="readOnly">
                         <ui>
                            <textEdit/>
                         </ui>
@@ -387,7 +385,7 @@ this.caption.value.text = output;
 </script>
                         </event>
                      </field>
-                     <field name="L_VatPayerNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm" minW="86.982mm">
+                     <field name="VatPayerNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm" minW="86.982mm">
                         <ui>
                            <textEdit/>
                         </ui>
@@ -841,7 +839,7 @@ var receivedText = fld_TestLabelData.rawValue;
                      <calculate override="error"/>
                      <bind match="none"/>
                      <?templateDesigner floatingFieldPlaceholder ##?></field>
-                  <field name="L_Page" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField024231" presence="hidden" access="readOnly">
+                  <field name="Page" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField024231" presence="hidden" access="readOnly">
                      <ui>
                         <textEdit>
                            <border>
@@ -905,13 +903,12 @@ this.presence = "visible";
 this.access = "protected";
 </script>
                </event>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="210mm" h="193.339mm" name="subHeader">
                <bind match="none"/>
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
                   <bind match="none"/>
-                  <field name="L_Preview" access="readOnly" minH="12.7mm" rotate="90" minW="76mm">
+                  <field name="Preview" access="readOnly" minH="12.7mm" rotate="90" minW="76mm">
                      <ui>
                         <textEdit multiLine="1">
                            <border presence="hidden"/>
@@ -951,7 +948,7 @@ else
                      </value>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <field name="L_DocTypeWorkOrder" y="24mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
+               <field name="fldWorkOrder" y="24mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1044,7 +1041,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                </field>
                <subform x="15mm" y="31mm" w="179mm" h="6mm" name="subHeaderpart">
                   <bind match="none"/>
-                  <field name="L_ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm" x="0in" y="1mm">
+                  <field name="ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm" x="0in" y="1mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -1238,7 +1235,7 @@ var receivedText = fld_TestLabelData.rawValue;
                      <para vAlign="middle"/>
                      <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA6"/>
                   </field>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
                <subform name="sub_FooterB" layout="tb" w="45mm">
                   <bind match="none"/>
                   <field name="FooterB1" w="40mm" minH="2.4mm" access="protected">
@@ -1515,7 +1512,7 @@ var receivedText = fld_TestLabelData.rawValue;
                      <calculate override="error"/>
                      <bind match="none"/>
                      <?templateDesigner floatingFieldPlaceholder ##?></field>
-                  <field name="L_Page" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField028673" presence="hidden" access="readOnly">
+                  <field name="Page" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField028673" presence="hidden" access="readOnly">
                      <ui>
                         <textEdit>
                            <border>
@@ -1686,7 +1683,7 @@ this.caption.value.text = output;
             <bind match="none"/>
             <subform w="179mm" name="subCarInfo" layout="lr-tb">
                <bind match="none"/>
-               <field name="L_CarRegNo" minH="8mm" minW="22mm" access="readOnly">
+               <field name="CarRegNo" minH="8mm" minW="22mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -1717,7 +1714,7 @@ this.caption.value.text = output;
                   </border>
                   <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                </field>
-               <field name="L_CarRegDate" minH="8mm" minW="23mm" access="readOnly">
+               <field name="CarRegDate" minH="8mm" minW="23mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -1748,7 +1745,7 @@ this.caption.value.text = output;
                   </border>
                   <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                </field>
-               <field name="L_CarMileage" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="22mm" access="readOnly">
+               <field name="CarMileage" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="22mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1768,7 +1765,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_CarVIN" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="40mm" access="readOnly">
+               <field name="CarVIN" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="40mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1788,7 +1785,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_CarModelDesc" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="71mm" access="readOnly">
+               <field name="CarModelDesc" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="71mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1808,7 +1805,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_CarType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="22mm" access="readOnly">
+               <field name="CarType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="22mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1829,11 +1826,11 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_CarColor" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="23mm" access="readOnly">
+               <field name="CarColor" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="23mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
-                  <caption reserve="3.9737mm">
+                  <caption>
                      <value>
                         <text xliff:rid="B2088332-310F-4B55-8735-4BB0681801DD">Farge:</text>
                      </value>
@@ -1850,7 +1847,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_CarGearBox" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="22mm" access="readOnly">
+               <field name="CarGearBox" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="22mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1866,12 +1863,12 @@ var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-
 this.caption.value.text = output;
+
 </script>
                   </event>
                </field>
-               <field name="L_CarEngine" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="77mm" access="readOnly">
+               <field name="CarEngine" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="77mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1894,7 +1891,7 @@ this.caption.value.text = output;
                </field>
                <keep intact="contentArea"/>
                <margin leftInset="1mm"/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <border>
                <edge thickness="0.1mm"/>
                <corner thickness="0.1mm"/>
@@ -1903,7 +1900,7 @@ this.caption.value.text = output;
             <subform w="144.999mm" minH="16mm" name="subEierBruker">
                <bind match="none"/>
                <keep intact="none"/>
-               <field name="L_OwnerName" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" x="0.001mm" y="0mm" access="readOnly">
+               <field name="OwnerName" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" x="0.001mm" y="0mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1924,7 +1921,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_UserName" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" x="106.999mm" y="0mm" access="readOnly">
+               <field name="UserName" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" x="106.999mm" y="0mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -1949,7 +1946,7 @@ this.caption.value.text = output;
             <subform w="144.999mm" minH="8mm" name="subBilplass">
                <bind match="none"/>
                <keep intact="none"/>
-               <field name="L_CarLocation" minH="8mm" minW="36.999mm" access="readOnly" x="0.001mm" y="0mm">
+               <field name="CarLocation" minH="8mm" minW="36.999mm" access="readOnly" x="0.001mm" y="0mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -1980,7 +1977,7 @@ this.caption.value.text = output;
                   </border>
                   <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                </field>
-               <field name="L_LocationSparepartPrepicked" minH="8mm" minW="37mm" access="readOnly" x="106.999mm" y="0mm">
+               <field name="LocationSparepartPrepicked" minH="8mm" minW="37mm" access="readOnly" x="106.999mm" y="0mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -2040,7 +2037,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" layout="tb" name="subValuationInfo">
             <bind match="dataRef" ref="$.Document.ValuationInfo"/>
-            <field name="L_PlannedValuation" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
+            <field name="PlannedValuation" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -2070,7 +2067,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subPlannedVisit" layout="tb">
             <bind match="dataRef" ref="$.Document.PlannedVisit"/>
-            <field name="L_PlannedVisit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
+            <field name="PlannedVisit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -2101,7 +2098,7 @@ this.caption.value.text = output;
          <subform w="179mm" name="subVisitInfo" layout="tb">
             <bind match="dataRef" ref="$.Document.VisitInfo"/>
             <margin topInset="0mm"/>
-            <field name="L_ServiceAdvisorColon" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
+            <field name="ServiceAdvisorColon" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -2130,7 +2127,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" layout="tb" name="subCarDelivery">
             <bind match="dataRef" ref="$.Document.CarDelivery"/>
-            <field name="L_CarDelivery" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
+            <field name="CarDelivery" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -2156,10 +2153,10 @@ this.caption.value.text = output;
                </event>
             </field>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subCarPickUp" layout="tb">
             <bind match="dataRef" ref="$.Document.CarPickup"/>
-            <field name="L_CarPickUp" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
+            <field name="CarPickUp" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -2188,7 +2185,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subCarFinished" layout="tb">
             <bind match="dataRef" ref="$.Document.CarFinished"/>
-            <field name="L_CarFinished" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
+            <field name="CarFinished" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -2217,7 +2214,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subCheckList">
             <bind match="dataRef" ref="$.Document.CheckList"/>
-            <field name="L_CheckList" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="0.001mm" y="0mm">
+            <field name="CheckList" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="0.001mm" y="0mm">
                <ui>
                   <textEdit/>
                </ui>
@@ -2242,11 +2239,11 @@ this.caption.value.text = output;
 </script>
                </event>
             </field>
-            <field name="L_RepeatedRepair" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="4mm">
+            <field name="RepeatedRepair" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="4mm">
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="60.8157mm">
+               <caption reserve="51mm">
                   <value>
                      <text xliff:rid="EB6D1D5C-6F67-4BEF-B9FC-DBE714CB3C7D">Gjentatt reparasjon:</text>
                   </value>
@@ -2261,22 +2258,12 @@ this.caption.value.text = output;
                <value>
                   <text/>
                </value>
-               <event activity="initialize" ref="$" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-               </event>
             </field>
-            <field name="L_Upgrade" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="8mm">
+            <field name="Upgrade" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="8mm">
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="60.855mm">
+               <caption reserve="51mm">
                   <value>
                      <text xliff:rid="793B3326-FD13-4298-A833-808AA5156E54">Oppgraderings behov:</text>
                   </value>
@@ -2288,22 +2275,12 @@ this.caption.value.text = output;
                </caption>
                <bind match="dataRef" ref="$.Upgrade"/>
                <para vAlign="middle"/>
-               <event activity="initialize" ref="$" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-               </event>
             </field>
-            <field name="L_TPI" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="12mm">
+            <field name="TPI" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="12mm">
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="60.8157mm">
+               <caption reserve="51mm">
                   <value>
                      <text xliff:rid="11524973-5F05-42E0-924D-A38560F8CC43">Aktuelle TPI'er:</text>
                   </value>
@@ -2315,22 +2292,12 @@ this.caption.value.text = output;
                </caption>
                <bind match="dataRef" ref="$.TPI"/>
                <para vAlign="middle"/>
-               <event activity="initialize" ref="$" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-               </event>
             </field>
-            <field name="L_PreControl" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="16.001mm">
+            <field name="PreControl" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="5mm" y="16.001mm">
                <ui>
                   <textEdit/>
                </ui>
-               <caption reserve="60.8157mm">
+               <caption reserve="51mm">
                   <value>
                      <text xliff:rid="00900393-13BB-4414-A2D0-855B945C089F">Behov for forkontroll/prøvekjøring:</text>
                   </value>
@@ -2342,17 +2309,6 @@ this.caption.value.text = output;
                </caption>
                <bind match="dataRef" ref="$.PreControl"/>
                <para vAlign="middle"/>
-               <event activity="initialize" ref="$" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-               </event>
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
@@ -2360,7 +2316,7 @@ this.caption.value.text = output;
             <bind match="none"/>
             <subform w="24mm" minH="4mm" layout="lr-tb" name="subReminderTitle">
                <bind match="none"/>
-               <field name="L_Remember" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly">
+               <field name="Remember" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2388,7 +2344,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 1?></subform>
             <subform w="179mm" layout="lr-tb" name="subReminder">
                <bind match="dataRef" ref="$.Document.ReminderList.Reminder[*]"/>
-               <field name="L_ReminderDescription" minH="4mm" minW="96mm" access="readOnly">
+               <field name="ReminderDescription" minH="4mm" minW="96mm" access="readOnly">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -2489,7 +2445,7 @@ this.caption.value.text = output;
             <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
             <subform w="179mm" name="subTaskTitle" layout="tb" id="subTaskTitle_ID">
                <bind match="none"/>
-               <field name="L_Task" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly">
+               <field name="Task" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2581,6 +2537,15 @@ this.caption.value.text = output;
                         <margin topInset="0mm" bottomInset="0mm" leftInset="110mm" rightInset="0mm"/>
                         <para vAlign="middle"/>
                         <bind match="dataRef" ref="$.TreatmentCodeInfo"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+                        </event>
                      </field>
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
@@ -2637,7 +2602,7 @@ this.caption.value.text = output;
                            <para vAlign="middle"/>
                            <bind match="dataRef" ref="$.WorkPosText"/>
                         </field>
-                        <field name="L_Hour" x="119mm" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" y="0.094mm" minW="19mm" h="3.6mm" access="readOnly">
+                        <field name="Hour" x="119mm" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" y="0.094mm" minW="19mm" h="3.6mm" access="readOnly">
                            <ui>
                               <textEdit/>
                            </ui>
@@ -2684,7 +2649,7 @@ this.caption.value.text = output;
                            <para vAlign="middle" hAlign="right"/>
                            <bind match="dataRef" ref="$.WorkPosAmount"/>
                         </field>
-                        <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 0?></subform>
                      <margin topInset="0mm"/>
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
@@ -2696,7 +2661,7 @@ this.caption.value.text = output;
             <subform w="178.989mm" name="subWorkPosTotHour" h="3.6mm">
                <bind match="none"/>
                <keep intact="none"/>
-               <field name="L_TimeTotal" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="42mm" h="3.788mm" y="0in" x="96mm" access="readOnly">
+               <field name="TimeTotal" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="42mm" h="3.788mm" y="0in" x="96mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2720,275 +2685,241 @@ this.caption.value.text = output;
                   </event>
                </field>
                <occur min="0" max="-1"/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <bind match="dataRef" ref="$.Document.Tasks"/>
             <occur min="0" max="-1"/>
             <overflow leader="subTaskTitle"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="179mm" minH="7.2mm" layout="tb" name="subMaterialAndSpareparts">
+         <subform w="179mm" name="subMaterialsAndSparepartsHeader" layout="lr-tb">
             <bind match="none"/>
-            <subform w="179mm" name="subMaterialsAndSparepartsHeader" layout="lr-tb">
-               <bind match="dataRef" ref="$.Document.Spareparts"/>
-               <field name="L_LocationSparepart" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <caption reserve="20mm">
-                     <value>
-                        <text xliff:rid="69B905BD-4E53-4AA8-B351-0706DB92F6B3">Lokasjon</text>
-                     </value>
-                     <font>
-                        <fill>
-                           <color/>
-                        </fill>
-                     </font>
-                  </caption>
-                  <bind match="none" ref=""/>
-                  <event activity="initialize" ref="$" name="event__initialize">
-                     <script contentType="application/x-javascript">
+            <field name="LocationSparepart" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <caption reserve="20mm">
+                  <value>
+                     <text xliff:rid="69B905BD-4E53-4AA8-B351-0706DB92F6B3">Lokasjon</text>
+                  </value>
+                  <font>
+                     <fill>
+                        <color/>
+                     </fill>
+                  </font>
+               </caption>
+               <bind match="none" ref=""/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
 var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="L_Code" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="32mm" h="4mm" access="readOnly">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <caption reserve="20mm">
-                     <value>
-                        <text xliff:rid="40796F83-22C1-4291-8D41-129D831AAC47">Kode</text>
-                     </value>
-                     <font>
-                        <fill>
-                           <color/>
-                        </fill>
-                     </font>
-                  </caption>
-                  <bind match="none" ref=""/>
-                  <event activity="initialize" ref="$" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-
-
-</script>
-                  </event>
-               </field>
-               <field name="L_Product" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="49mm" h="4mm" access="readOnly">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <caption reserve="20mm">
-                     <value>
-                        <text xliff:rid="79059181-84C4-49FB-AFB7-5271FFF66C28">Produkt</text>
-                     </value>
-                     <font>
-                        <fill>
-                           <color/>
-                        </fill>
-                     </font>
-                  </caption>
-                  <bind match="none" ref=""/>
-                  <event activity="initialize" ref="$" name="event__initialize">
-                     <script contentType="application/x-javascript">
-
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-                  <border>
-                     <margin/>
-                  </border>
-               </field>
-               <field name="L_TaskLetter" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="10mm" h="4mm" access="readOnly" x="0in" y="3mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <caption reserve="9mm">
-                     <value>
-                        <text xliff:rid="A4A36B04-EA41-43AB-896F-AD331E9BC391">Oppdr</text>
-                     </value>
-                     <font>
-                        <fill>
-                           <color/>
-                        </fill>
-                     </font>
-                  </caption>
-                  <bind match="none" ref=""/>
-                  <event activity="initialize" ref="$" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-                  <margin leftInset="0mm"/>
-               </field>
-               <field name="L_InvoiceType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="17mm" h="4mm" access="readOnly" x="0in" y="6mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <caption reserve="0mm">
-                     <value>
-                        <text xliff:rid="E8320520-98DB-4225-85CE-50A62BCA729A">Fakt.type</text>
-                     </value>
-                     <font>
-                        <fill>
-                           <color/>
-                        </fill>
-                     </font>
-                  </caption>
-                  <bind match="none" ref=""/>
-                  <border>
-                     <margin/>
-                  </border>
-                  <event activity="initialize" ref="$" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="L_Unit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="14mm" h="4mm" access="readOnly">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <caption reserve="0mm">
-                     <value>
-                        <text xliff:rid="6DD9D634-50A8-4054-9BB8-3E438841F70F">Unit</text>
-                     </value>
-                     <font>
-                        <fill>
-                           <color/>
-                        </fill>
-                     </font>
-                  </caption>
-                  <bind match="none" ref=""/>
-                  <event activity="initialize" ref="$" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-                  <margin leftInset="0mm"/>
-               </field>
-               <field name="L_Quantity" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="12mm" h="4mm" access="readOnly" x="0in" y="9mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <caption reserve="0mm">
-                     <value>
-                        <text xliff:rid="B292C3F8-E26E-427C-A575-E1B1F146B458">Antall</text>
-                     </value>
-                     <font>
-                        <fill>
-                           <color/>
-                        </fill>
-                     </font>
-                  </caption>
-                  <bind match="none" ref=""/>
-                  <event activity="initialize" ref="$" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-                  <margin leftInset="1mm"/>
-               </field>
-               <field name="L_Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="21mm" h="4mm" access="readOnly" x="0in" y="12mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <caption reserve="0mm" placement="right">
-                     <value>
-                        <text xliff:rid="6F72ADDA-0B9B-4C8C-A355-10331ECAB3E8">Enhetspris</text>
-                     </value>
-                     <font>
-                        <fill>
-                           <color/>
-                        </fill>
-                     </font>
-                  </caption>
-                  <bind match="none" ref=""/>
-                  <margin rightInset="1.2mm"/>
-                  <event activity="initialize" ref="$" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <border>
-                  <edge presence="hidden"/>
-                  <corner presence="hidden" thickness="0.176mm"/>
-                  <corner presence="hidden" thickness="0.176mm"/>
-                  <corner thickness="0.1mm"/>
-                  <corner presence="hidden" thickness="0.176mm"/>
-                  <edge presence="hidden"/>
-                  <edge thickness="0.1mm"/>
-                  <edge presence="hidden"/>
-               </border>
-               <margin topInset="4mm"/>
-               <breakBefore/>
-               <breakAfter/>
-               <occur max="-1" min="0"/>
-               <?templateDesigner expand 1?>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">try
-{
-
-	var numberOfMaterials = this.parent.subMaterials.instanceManager.count;
-
-}
-catch(e)
-{
-
-}
-
-try
-{
-
-	var numberOfSpareparts = this.parent.subSpareparts.instanceManager.count;
-
-}
-catch(e)
-{
-
-}
-
-
-if (numberOfSpareparts == null &amp;&amp; numberOfMaterials == null)
-{
-	this.presence = "hidden";
-}
 </script>
                </event>
-            </subform>
+            </field>
+            <field name="Code" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="32mm" h="4mm" access="readOnly">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <caption reserve="20mm">
+                  <value>
+                     <text xliff:rid="40796F83-22C1-4291-8D41-129D831AAC47">Kode</text>
+                  </value>
+                  <font>
+                     <fill>
+                        <color/>
+                     </fill>
+                  </font>
+               </caption>
+               <bind match="none" ref=""/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
+            </field>
+            <field name="Product" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="49mm" h="4mm" access="readOnly">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <caption reserve="20mm">
+                  <value>
+                     <text xliff:rid="79059181-84C4-49FB-AFB7-5271FFF66C28">Produkt</text>
+                  </value>
+                  <font>
+                     <fill>
+                        <color/>
+                     </fill>
+                  </font>
+               </caption>
+               <bind match="none" ref=""/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
+               <border>
+                  <margin/>
+               </border>
+            </field>
+            <field name="TaskLetter" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="10mm" h="4mm" access="readOnly" x="0in" y="3mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <caption reserve="9mm">
+                  <value>
+                     <text xliff:rid="A4A36B04-EA41-43AB-896F-AD331E9BC391">Oppdr</text>
+                  </value>
+                  <font>
+                     <fill>
+                        <color/>
+                     </fill>
+                  </font>
+               </caption>
+               <bind match="none" ref=""/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
+               <margin leftInset="0mm"/>
+            </field>
+            <field name="InvoiceType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="17mm" h="4mm" access="readOnly" x="0in" y="6mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <caption reserve="0mm">
+                  <value>
+                     <text xliff:rid="E8320520-98DB-4225-85CE-50A62BCA729A">Fakt.type</text>
+                  </value>
+                  <font>
+                     <fill>
+                        <color/>
+                     </fill>
+                  </font>
+               </caption>
+               <bind match="none" ref=""/>
+               <border>
+                  <margin/>
+               </border>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
+            </field>
+            <field name="Unit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="14mm" h="4mm" access="readOnly">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <caption reserve="0mm">
+                  <value>
+                     <text xliff:rid="6DD9D634-50A8-4054-9BB8-3E438841F70F">Unit</text>
+                  </value>
+                  <font>
+                     <fill>
+                        <color/>
+                     </fill>
+                  </font>
+               </caption>
+               <bind match="none" ref=""/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
+               <margin leftInset="0mm"/>
+            </field>
+            <field name="Quantity" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="12mm" h="4mm" access="readOnly" x="0in" y="9mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <caption reserve="0mm">
+                  <value>
+                     <text xliff:rid="B292C3F8-E26E-427C-A575-E1B1F146B458">Antall</text>
+                  </value>
+                  <font>
+                     <fill>
+                        <color/>
+                     </fill>
+                  </font>
+               </caption>
+               <bind match="none" ref=""/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+               </event>
+               <margin leftInset="1mm"/>
+            </field>
+            <field name="Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="21mm" h="4mm" access="readOnly" x="0in" y="12mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <caption reserve="0mm" placement="right">
+                  <value>
+                     <text xliff:rid="6F72ADDA-0B9B-4C8C-A355-10331ECAB3E8">Enhetspris</text>
+                  </value>
+                  <font>
+                     <fill>
+                        <color/>
+                     </fill>
+                  </font>
+               </caption>
+               <bind match="none" ref=""/>
+               <margin rightInset="1.2mm"/>
+               <event activity="initialize" ref="$" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
+            </field>
+            <border>
+               <edge presence="hidden"/>
+               <corner presence="hidden" thickness="0.176mm"/>
+               <corner presence="hidden" thickness="0.176mm"/>
+               <corner thickness="0.1mm"/>
+               <corner presence="hidden" thickness="0.176mm"/>
+               <edge presence="hidden"/>
+               <edge thickness="0.1mm"/>
+               <edge presence="hidden"/>
+            </border>
+            <margin topInset="4mm"/>
+            <breakBefore/>
+            <breakAfter/>
+            <occur max="-1"/>
+            <?templateDesigner expand 1?></subform>
+         <subform w="179mm" minH="7.2mm" layout="tb" name="subMaterialAndSpareparts">
+            <bind match="none"/>
             <subform name="subMaterials" layout="lr-tb">
                <field name="MaterialLocation" w="24mm" h="3.6mm" access="readOnly">
                   <ui>
@@ -3116,8 +3047,8 @@ if (numberOfSpareparts == null &amp;&amp; numberOfMaterials == null)
                   <edge presence="hidden"/>
                </border>
                <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-               <occur max="-1" min="0"/>
-               <?templateDesigner expand 1?></subform>
+               <occur min="0" max="-1"/>
+               <?templateDesigner expand 0?></subform>
             <subform name="subSpareparts" layout="lr-tb">
                <field name="SparePartLocation" w="24mm" h="3.6mm" access="readOnly">
                   <ui>
@@ -3249,7 +3180,7 @@ if (numberOfSpareparts == null &amp;&amp; numberOfMaterials == null)
                <?templateDesigner expand 1?></subform>
             <margin topInset="1mm"/>
             <overflow leader="subContPageMaterialsAndSparepartsHeader"/>
-            <occur max="-1" min="0"/>
+            <occur max="-1"/>
             <?templateDesigner expand 1?></subform>
          <subform w="190mm" name="subSparePartTotal" layout="tb">
             <bind match="none"/>
@@ -3267,9 +3198,11 @@ if (numberOfSpareparts == null &amp;&amp; numberOfMaterials == null)
                   <corner thickness="0.2mm" presence="hidden"/>
                   <corner/>
                </border>
+               <?templateDesigner expand 0?>
                <subform w="178.928mm" name="subNettoAmount" h="6mm">
                   <bind match="none"/>
                   <keep intact="none"/>
+                  <?templateDesigner expand 0?>
                   <border>
                      <edge presence="hidden"/>
                      <edge presence="hidden"/>
@@ -3280,7 +3213,7 @@ if (numberOfSpareparts == null &amp;&amp; numberOfMaterials == null)
                      <corner thickness="0.2mm"/>
                      <corner/>
                   </border>
-                  <field name="L_PriceTotalSum" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="95mm" h="4mm" access="readOnly" hAlign="right" x="84mm" y="0.8mm">
+                  <field name="PriceTotalSum" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="95mm" h="4mm" access="readOnly" hAlign="right" x="84mm" y="0.8mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -3303,10 +3236,10 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <?templateDesigner expand 1?></subform>
+               </subform>
                <subform w="95mm" name="subPriceTotalSumHolder" hAlign="right" h="13.201mm">
                   <bind match="none"/>
-                  <field name="L_VatAmountColon" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="76mm" h="6mm" access="readOnly" hAlign="right" x="0mm" y="0.001mm">
+                  <field name="VatAmountColon" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="76mm" h="6mm" access="readOnly" hAlign="right" x="0mm" y="0.001mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -3332,7 +3265,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field name="L_PriceVatTotalSum" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="95mm" h="6mm" access="readOnly" x="0mm" y="5.799mm">
+                  <field name="PriceVatTotalSum" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="95mm" h="6mm" access="readOnly" x="0mm" y="5.799mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -3356,7 +3289,7 @@ this.caption.value.text = output;
                      </event>
                      <border/>
                   </field>
-                  <field name="L_VatAmount" w="19.001mm" h="6mm" access="readOnly" hAlign="right" x="76mm" y="0.001mm">
+                  <field name="VatAmount" w="19.001mm" h="6mm" access="readOnly" hAlign="right" x="76mm" y="0.001mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -3372,13 +3305,13 @@ this.caption.value.text = output;
                      </border>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
+            </subform>
             <?templateDesigner expand 1?></subform>
          <subform name="subCarRemarks" layout="tb">
             <bind match="none"/>
             <subform w="100mm" name="subTitle" layout="tb" id="subTitle_ID">
                <bind match="none"/>
-               <field name="L_CarRemarks" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="59.999mm" h="5mm" access="readOnly">
+               <field name="CarRemarks" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="59.999mm" h="5mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3393,7 +3326,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="none" ref=""/>
+                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
                   <para hAlign="left" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0.5mm"/>
                   <assist>
@@ -3412,9 +3345,9 @@ this.caption.value.text = output;
                </field>
                <margin topInset="2mm"/>
                <?templateDesigner expand 1?></subform>
-            <subform w="179mm" name="subHeader" id="subHeader_ID">
+            <subform w="179mm" name="subHeader" layout="lr-tb" id="subHeader_ID">
                <bind match="none"/>
-               <field name="L_RemarkPriority" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="35mm" h="4mm" access="readOnly" x="0.001mm" y="0mm">
+               <field name="RemarkPriority" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="35mm" h="4mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3448,7 +3381,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_RemarkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="59.999mm" h="4mm" access="readOnly" x="35mm" y="0mm">
+               <field name="RemarkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="59.999mm" h="4mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3482,7 +3415,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_RemarkDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="84.001mm" h="4mm" access="readOnly" x="95mm" y="0mm">
+               <field name="RemarkDate" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="84.001mm" h="4mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3523,8 +3456,9 @@ this.caption.value.text = output;
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
+               <keep intact="contentArea"/>
                <?templateDesigner expand 1?></subform>
-            <overflow trailer="overflowTrailer" leader="subHeader"/>
+            <overflow trailer="overflowTrailer" leader=""/>
             <subform y="11mm" w="179mm" minH="3.6mm" layout="tb" name="subCarRemarkMargin">
                <bind match="none"/>
                <subform w="179mm" name="subCarRemark" layout="lr-tb">
@@ -3566,13 +3500,13 @@ this.caption.value.text = output;
                      <bind match="dataRef" ref="$.RemarkDate"/>
                   </field>
                   <occur min="0" max="-1"/>
-                  <overflow leader="" target="mpgPage2" trailer=""/>
+                  <overflow leader="" trailer="overflowTrailer" target="mpgPage2"/>
                   <?templateDesigner expand 1?></subform>
                <margin topInset="1mm"/>
                <?templateDesigner expand 1?></subform>
             <subform w="100mm" name="subCustomerShown" id="subTitle_ID_copy1">
                <bind match="none"/>
-               <field name="L_Reviewed" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="39mm" h="4.4mm" access="readOnly" x="0in" y="0in">
+               <field name="Reviewed" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="39mm" h="4.4mm" access="readOnly" x="0in" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3587,7 +3521,7 @@ this.caption.value.text = output;
                         </fill>
                      </font>
                   </caption>
-                  <bind match="none" ref=""/>
+                  <bind match="dataRef" ref="$.Document.SumMaterial.MaterialTotAmount"/>
                   <para hAlign="left" vAlign="middle"/>
                   <margin topInset="0mm" bottomInset="0mm"/>
                   <assist>
@@ -3604,7 +3538,7 @@ this.caption.value.text = output;
                   </event>
                </field>
                <margin topInset="3mm" bottomInset="3mm"/>
-               <field name="L_Date" w="36mm" h="4.4mm" access="readOnly" hAlign="right" x="37mm" y="0.4mm">
+               <field name="Date" w="36mm" h="4.4mm" access="readOnly" hAlign="right" x="37mm" y="0.4mm">
                   <ui>
                      <textEdit>
                         <margin/>
@@ -3643,7 +3577,7 @@ this.rawValue = output;
             <?templateDesigner expand 1?></subform>
          <subform name="subLastPageInfo" w="190mm" layout="tb">
             <bind match="none"/>
-            <field name="L_AdditionalWorkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="179mm" h="14.2mm" access="readOnly">
+            <field name="AdditionalWorkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="179mm" h="14.2mm" access="readOnly">
                <ui>
                   <textEdit/>
                </ui>
@@ -3719,7 +3653,7 @@ this.caption.value.text = output;
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <field name="L_Work" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="67.999mm" h="3.98mm" access="readOnly" x="0in" y="2.004mm">
+                  <field name="Work" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="67.999mm" h="3.98mm" access="readOnly" x="0in" y="2.004mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -3747,7 +3681,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field name="L_Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="21mm" h="4mm" access="readOnly" x="67.999mm" y="1.987mm">
+                  <field name="Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="21mm" h="4mm" access="readOnly" x="67.999mm" y="1.987mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -3775,7 +3709,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field name="L_Date" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="20mm" h="4mm" access="readOnly" x="88.999mm" y="2.004mm">
+                  <field name="Date" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="20mm" h="4mm" access="readOnly" x="88.999mm" y="2.004mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -3803,7 +3737,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field name="L_Name" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="28mm" h="3.983mm" access="readOnly" x="108.999mm" y="2.004mm">
+                  <field name="Name" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="28mm" h="3.983mm" access="readOnly" x="108.999mm" y="2.004mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -3831,7 +3765,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field name="L_Signature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="42mm" h="4mm" access="readOnly" x="136.999mm" y="1.987mm">
+                  <field name="Signature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="42mm" h="4mm" access="readOnly" x="136.999mm" y="1.987mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -3859,7 +3793,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 0?></subform>
                <overflow trailer="overflowTrailer"/>
                <?templateDesigner expand 1?></subform>
             <keep intact="contentArea"/>
@@ -3868,7 +3802,7 @@ this.caption.value.text = output;
             <subform w="187mm" name="subManualText" h="18.953mm">
                <bind match="none"/>
                <margin topInset="3mm"/>
-               <field name="L_CarMileageCur" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="20.999mm" h="6mm" access="readOnly" y="1.397mm" x="0.001mm">
+               <field name="CarMileageCur" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="20.999mm" h="6mm" access="readOnly" y="1.397mm" x="0.001mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3896,7 +3830,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_MechanicNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="29mm" h="6mm" access="readOnly" y="1.397mm" x="62mm">
+               <field name="MechanicNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="29mm" h="6mm" access="readOnly" y="1.397mm" x="62mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3934,7 +3868,7 @@ this.caption.value.text = output;
                      <defaultUi/>
                   </ui>
                </draw>
-               <field name="L_ControlSignature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="25.999mm" h="6mm" access="readOnly" y="8.678mm" x="0.001mm">
+               <field name="ControlSignature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="25.999mm" h="6mm" access="readOnly" y="8.678mm" x="0.001mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3963,7 +3897,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_SpProducer" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="34mm" h="6mm" access="readOnly" y="8.678mm" x="62mm">
+               <field name="SpProducer" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="34mm" h="6mm" access="readOnly" y="8.678mm" x="62mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -3992,7 +3926,7 @@ this.caption.value.text = output;
                   </event>
                </field>
                <overflow trailer="overflowTrailer"/>
-               <field name="L_MechanicSignature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="29mm" h="6mm" access="readOnly" y="1.278mm" x="120mm">
+               <field name="MechanicSignature" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="29mm" h="6mm" access="readOnly" y="1.278mm" x="120mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -4153,14 +4087,14 @@ this.caption.value.text = output;
             </field>
          </subform>
       </proto>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 128 32 00030006001200250027002F003100320033003500360037004200440045004600480049004A004C004E004F0050005200530055005600570059005C005E0060 #/BDLNOPRST_abcefgiklmoprstvy{}?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 132 33 00030006001200250027002A002F003100320033003500360037004200440045004600480049004A004C004E004F0050005200530055005600570059005C005E0060 #/BDGLNOPRST_abcefgiklmoprstvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 196 51 0003000A00110012001D002400250026002700280029002A002C002D002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 './:ABCDEFGIJKLMNOPRSTUVabcdefghijklmnoprstuvyåø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier New" 0 1 ISO-8859-1 4 44 12 0003002700440048004A004D0050005100520057006E Daegjmnotå?>
-      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 208 52 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F002000220025002600270028002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFGIMPTUVabcdefghilmnoprstvwxyz'?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
@@ -4178,15 +4112,15 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\4-Testing Fase 1\Vedlegg til defects\7653\755_WorkOrder_S001IT01_20130221_132858_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\WorkOrder_BA_full_logo.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 133?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
+   <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?>
+   <?templateDesigner Zoom 500?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -4198,6 +4132,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4568,14 +4503,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-01T10:09:05Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-10T12:27:59Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:4fa75fe0-291b-4127-b975-1c242a7f20aa</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:6e016ab0-060b-4536-83af-654276c32809</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
