@@ -1,60 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-02-18T14:23:13Z" uuid="14de647b-5d48-4267-9124-04903d95721f">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-04T12:44:06Z" uuid="09c8044c-2566-499d-9a17-16372a5b50d3">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
       <pageSet>
          <pageArea>
-            <medium stock="a4" short="210mm" long="297mm"/>
-            <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <contentArea x="6.35mm" y="31.75mm" w="203.2mm" h="219.075mm" name="sub_Content"/>
          </pageArea>
       </pageSet>
-      <subform name="DealerNameMarketing">
-         <bind match="none"/>
-         <field name="DealerNameMarketing" minW="155mm" y="0mm" minH="11mm" access="readOnly">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <font typeface="Arial" size="24pt" weight="bold"/>
-            <margin topInset="1mm" bottomInset="1mm" leftInset="0mm" rightInset="0mm"/>
-            <para vAlign="middle"/>
-            <bind match="dataRef" ref="$.Document.DocumentHeader.DealerNameMarketing"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-var DocHeaderBrand = this.parent.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
-//app.alert(DocHeaderBrand);
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="getLanguages">
+function getLanguageText(strLanguage, strObjName)
+{
+	var outputText = "";
+	//console.println(strLanguage);
+	
+	outputText = getLanguageFieldValue(strLanguage, strObjName)
+	
+	return outputText;
+}
 
-if ( DocHeaderBrand == "S")
+function getLanguageFieldValue(strLanguage, strObjName)
 {
-	this.font.typeface = "Skoda Pro";	
+	languageDotFieldValue = strLanguage+"."+strObjName;
+	return eval(languageDotFieldValue);
 }
-else if ( DocHeaderBrand == "V")
-{
-	this.font.typeface = "VolkswagenHeadline";	
-}
-else if ( DocHeaderBrand == "A" || DocHeaderBrand == "U")
-{
-	this.font.typeface = "Audi Type Extended";
 
-}
-else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
+function getLanguageSetting()
 {
+	var language = "";
+	var rootNode = "";
+	
+	try
+	{
+		rootNode = xfa.form.nodes.item(0);
+		language = rootNode.pageContent.subMetadata.LangCode.rawValue;
+	}
+	catch(e)
+	{
 		
+	}
+			
+	return language;
 }
-</script>
-            </event>
-         </field>
-         <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle DealerNameMarketing?></subform>
-      <?renderCache.subset "Comic Sans MS" 1 0 ISO-8859-1 4 16 4 0037004800560057Test?>
+               
+               
+
+               
+               
+               
+               
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle frg_ScriptGetLanguages?>
+               <?templateDesigner fragmentDescription GEN_X?></script>
+         </variables>
+      </subform>
    </subform>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 128?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 129?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -81,14 +88,14 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-02-18T14:23:13Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-03-04T12:44:06Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:14de647b-5d48-4267-9124-04903d95721f</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:09c8044c-2566-499d-9a17-16372a5b50d3</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -96,16 +103,16 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">DealerNameMarketing</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_ScriptGetLanguages</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">GEN_X</rdf:li>
                      </rdf:Alt>
                   </dc:description>
-                  <dc:identifier>$template.form1.DealerNameMarketing</dc:identifier>
-                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+                  <dc:identifier>$template.form1.#subform.#variables.getLanguages</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
                </rdf:li>
             </rdf:Seq>
          </lcd:fragmentCatalog>

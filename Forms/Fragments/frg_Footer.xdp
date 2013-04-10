@@ -402,12 +402,12 @@ this.rawValue = output;
                </value>
             </draw>
             <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle subFooter?>
-         <?templateDesigner expand 1?></subform>
+         <?templateDesigner fragmentTitle frg_Footer?>
+         <?templateDesigner fragmentDescription GEN_A?></subform>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 44 11 000300060012002F0033004200440048004A005E0060 #/LP_aeg{}?>
-   </subform>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 44 11 000300060012002F0033004200440048004A005E0060 #/LP_aeg{}?></subform>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
    <?templateDesigner FormTargetVersion 30?>
@@ -454,12 +454,12 @@ this.rawValue = output;
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">subFooter</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_Footer</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">GEN_A</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.subFooter</dc:identifier>

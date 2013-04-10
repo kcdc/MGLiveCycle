@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-04T13:15:12Z" uuid="2c534c24-7d77-489d-957d-00d5721308f5">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-22T08:30:05Z" uuid="6cf70491-57a0-4850-9255-72fa1c2059e2">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -8,122 +8,71 @@
          <pageArea>
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
-         </pageArea>
-      </pageSet>
-      <subform w="62mm" name="subDocInfo" layout="lr-tb">
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="3.175mm" minH="8.703mm" layout="tb" name="subMetadata">
          <bind match="none"/>
-         <field name="L_ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
+         <field name="DocHeaderBrand" w="3.175mm" h="3.175mm" presence="invisible">
             <ui>
-               <textEdit/>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
             </ui>
-            <caption reserve="23mm">
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption>
+               <para vAlign="middle"/>
                <value>
-                  <text>Gj.gangsnr.:</text>
+                  <text>Doc Header Brand</text>
                </value>
             </caption>
-            <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
-            <font weight="bold"/>
-            <event activity="initialize" ref="$" name="event__initialize">
-               <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-            </event>
+            <bind match="dataRef" ref="$.Header.DocHeaderBrand"/>
          </field>
-         <field name="L_Date" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
+         <field name="LangCode" w="3.175mm" h="0.217639in">
             <ui>
-               <textEdit/>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
             </ui>
-            <caption reserve="23mm">
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.Header.LangCode"/>
+         </field>
+         <field name="PreviewCode" w="62mm" h="9mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <caption reserve="25mm">
+               <para vAlign="middle"/>
                <value>
-                  <text>Dato:</text>
+                  <text>Preview Code</text>
                </value>
             </caption>
-            <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
-            <event activity="initialize" ref="$" name="event__initialize">
-               <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output+":";
-</script>
-            </event>
+            <bind match="dataRef" ref="$.Header.PreviewCode"/>
          </field>
-         <field name="L_OurRef" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm">
-            <ui>
-               <textEdit/>
-            </ui>
-            <caption reserve="23mm">
-               <value>
-                  <text>Referanse:</text>
-               </value>
-            </caption>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.OurRef"/>
-            <event activity="initialize" ref="$" name="event__initialize">
-               <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-            </event>
-         </field>
+         <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle subDocInfo?>
-         <?templateDesigner expand 1?></subform>
-      <proto>
-         <subform name="designer__stylesheet">
-            <subform name="SubformStyle1" w="203.2mm">
-               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
-            </subform>
-            <field name="TextFieldStyle_Top" minW="37mm" minH="8mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font size="9pt" typeface="Arial"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <caption reserve="4mm" placement="top">
-                  <font size="8.5pt" typeface="Arial" weight="bold"/>
-                  <para vAlign="bottom"/>
-               </caption>
-               <border>
-                  <edge presence="hidden"/>
-               </border>
-               <para vAlign="middle"/>
-            </field>
-            <field name="TextFieldStyle_Left" minW="62mm" h="4.318mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font size="9pt" typeface="Arial"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <para vAlign="middle"/>
-               <caption reserve="23.4266mm">
-                  <font size="8.5pt" typeface="Arial" weight="bold"/>
-                  <para vAlign="middle"/>
-               </caption>
-               <border>
-                  <edge presence="hidden"/>
-               </border>
-            </field>
-         </subform>
-      </proto>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 60 15 0011001D0027002A0035004400480049004A004D00510052005500560057.:DGRaefgjnorst?>
-   </subform>
+         <?templateDesigner fragmentTitle frg_Metadata?>
+         <?templateDesigner fragmentDescription GEN_X?></subform>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 64 16 0001002300240025002900310042004400450046004A004F0050005300570058 BCDHPacdeinorvw?></subform>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 133?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 142?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -150,14 +99,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-04T13:15:12Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-03-22T08:30:05Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:2c534c24-7d77-489d-957d-00d5721308f5</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:6cf70491-57a0-4850-9255-72fa1c2059e2</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -165,15 +114,15 @@ this.caption.value.text = output;
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">subDocInfo</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_Metadata</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">GEN_X</rdf:li>
                      </rdf:Alt>
                   </dc:description>
-                  <dc:identifier>$template.form1.subDocInfo</dc:identifier>
+                  <dc:identifier>$template.form1.subMetadata</dc:identifier>
                   <lcd:fragmentRole>Subform</lcd:fragmentRole>
                </rdf:li>
             </rdf:Seq>

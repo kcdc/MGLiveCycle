@@ -292,8 +292,15 @@ var L_BankName = "Bankgiro:";
                
                
 
+               
+               
+               
+               
+               
+               
                <?templateDesigner isFragment yes?>
-               <?templateDesigner fragmentTitle EN?></script>
+               <?templateDesigner fragmentTitle frg_LangNO?>
+               <?templateDesigner fragmentDescription NO_X?></script>
          </variables>
       </subform>
    </subform>
@@ -347,12 +354,12 @@ var L_BankName = "Bankgiro:";
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">EN</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_LangNO</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">NO_X</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.#subform.#variables.NO</dc:identifier>

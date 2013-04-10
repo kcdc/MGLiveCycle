@@ -91,8 +91,6 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
             </event>
             <bind match="none"/>
             <?templateDesigner expand 1?></field>
-         <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle subLogo?>
          <border>
             <edge presence="hidden"/>
             <corner thickness="0.175mm" presence="hidden"/>
@@ -179,9 +177,11 @@ this.access = "protected";
 </script>
             </event>
          </field>
-         <?templateDesigner expand 1?></subform>
-      <?templateDesigner expand 1?>
-   </subform>
+         <?templateDesigner expand 1?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle frg_Logo?>
+         <?templateDesigner fragmentDescription GEN_X?></subform>
+      <?templateDesigner expand 1?></subform>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(250000,250000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner FormTargetVersion 30?>
@@ -229,12 +229,12 @@ this.access = "protected";
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">subLogo</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_Logo</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">GEN_X</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.subLogo</dc:identifier>

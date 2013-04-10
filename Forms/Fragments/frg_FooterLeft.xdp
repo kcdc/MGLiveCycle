@@ -672,10 +672,10 @@
             <caption reserve="0mm" placement="top"/>
          </field>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle frgSubFooterLeft?></subform>
+         <?templateDesigner fragmentTitle frg_FooterLeft?>
+         <?templateDesigner fragmentDescription BA_B?></subform>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 124 33 000300110025002600270029002B002E00360037003900440045004700480049004A004B004C004E004F00500051005200530055005600570058009100A1 .BCDFHKSTVabdefghiklmnoprstuØø?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 36 9 001D002E0044004800500051005200550057:Kaemnort?>
-   </subform>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 36 9 001D002E0044004800500051005200550057:Kaemnort?></subform>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Zoom 200?>
    <?templateDesigner SaveTaggedPDF 1?>
@@ -721,12 +721,12 @@
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">frgSubFooterLeft</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_FooterLeft</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">BA_B</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.subFooterLeft</dc:identifier>
