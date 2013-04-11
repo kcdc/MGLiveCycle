@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-11T12:33:59Z" uuid="44da773c-3bea-44d3-a5eb-6d1b7e5233c3">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-11T13:59:57Z" uuid="38d42dee-23f0-4c6b-9429-175164df4496">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -8,23 +8,20 @@
    <subform name="AcceptanceCheck" layout="tb" locale="da_DK" restoreState="auto">
       <pageSet>
          <pageArea name="mpgPage1" id="Page1">
-            <contentArea x="12.7mm" w="192mm" h="203.2mm" name="areaPage1" y="44.45mm"/>
-            <subform x="12.7mm" y="6.35mm" minH="36.575mm" name="subHeader" layout="tb">
+            <contentArea x="9mm" w="192mm" h="203.2mm" name="areaPage1" y="44.45mm"/>
+            <subform x="9mm" y="6mm" minH="36.575mm" name="subHeader" layout="tb">
                <bind match="none"/>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform name="subTitleHolder" h="19.152mm">
                   <bind match="none"/>
                   <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="79.375mm" y="6.35mm">
                      <bind/>
-                     <?templateDesigner expand 1?>
-                  </subform>
+                     <?templateDesigner expand 1?></subform>
                   <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
                      <bind/>
-                     <?templateDesigner expand 1?>
-                  </subform>
+                     <?templateDesigner expand 1?></subform>
                   <field name="fldDocTitle" y="11mm" h="8mm" minW="91mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -50,9 +47,8 @@
                      <corner presence="visible" stroke="solid" thickness="0.1mm"/>
                      <corner presence="visible" stroke="solid" thickness="0.1mm"/>
                   </border>
-                  <?templateDesigner expand 1?>
-               </subform>
-               <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)" w="192mm" x="12.7mm" y="247.65mm">
                <margin/>
@@ -63,13 +59,11 @@
          <?templateDesigner expand 1?></pageSet>
       <subform name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <subform usehref=".\Fragments\frg_CarInfo.xdp#som($template.form1.subHeaderInfo)">
             <bind ref="$record.Document.HeaderInfo" match="dataRef"/>
             <margin bottomInset="3mm"/>
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 0?></subform>
          <subform name="subControlOuterBorder" w="192mm" layout="tb">
             <bind match="none"/>
             <margin topInset="0mm"/>
@@ -79,9 +73,9 @@
             </border>
             <subform name="subHeaderRow" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb" anchorType="middleCenter" x="1.476375in" y="0.125in">
                   <bind match="none"/>
-                  <field name="fldKontrollPunkt" minW="20mm" access="readOnly" h="4mm" x="25.4mm" y="2.1mm">
+                  <field name="fldKontrollPunkt" access="readOnly" h="6.35mm" hAlign="center" minW="18.533mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -89,13 +83,13 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
                      <bind match="none"/>
-                     <caption reserve="0in">
+                     <caption reserve="18.3748mm">
                         <value>
                            <text>Kontrollpunkt</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom" hAlign="center"/>
                      </caption>
                   </field>
                   <border>
@@ -108,10 +102,11 @@
                      <corner/>
                      <corner/>
                   </border>
+                  <keep intact="contentArea"/>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint" w="106mm" h="6.35mm">
+               <subform name="subRemarkOnPoint" w="106mm" layout="tb" anchorType="bottomLeft" x="2.95275in" y="0.25in">
                   <bind match="none"/>
-                  <field name="fldMerknad" minW="20mm" access="readOnly" h="4mm" x="42.475mm" y="2.1mm">
+                  <field name="fldMerknad" access="readOnly" h="6.35mm" anchorType="middleCenter" hAlign="center" w="20mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -119,13 +114,13 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Merknad</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom" hAlign="center"/>
                      </caption>
                   </field>
                   <border>
@@ -138,10 +133,11 @@
                      <corner/>
                      <corner/>
                   </border>
+                  <keep intact="contentArea"/>
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm" h="6.35mm">
                   <bind match="none"/>
-                  <field name="fldOK" minW="5.8mm" access="readOnly" h="4mm" x="3.15mm" y="2.1mm">
+                  <field name="fldOK" minW="5.8mm" access="readOnly" h="4mm" x="3mm" y="2.1mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -172,7 +168,7 @@
                <?templateDesigner expand 0?></subform>
             <subform name="subExternalInternalRow" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -184,7 +180,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollPunktExternalInternal" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollPunktExternalInternal" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -192,17 +188,19 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Kontrollert mot takst (utvendig/innvendig)</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
+                     <para vAlign="bottom"/>
                   </field>
-                  <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+                  <keep intact="contentArea"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -214,7 +212,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldControlledExternalInternal" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldControlledExternalInternal" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -233,7 +231,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkControlledExternalInternal" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkControlledExternalInternal" y="2.2mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -250,8 +248,8 @@
                         <text/>
                      </items>
                      <bind match="dataRef" ref="$record.Document.ControlPoints.DamageAfterValuationCheck"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?></field>
+                  <?templateDesigner expand 0?></subform>
                <border>
                   <edge presence="hidden"/>
                   <edge presence="hidden"/>
@@ -262,10 +260,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform name="subMileageReadingRow" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -277,7 +275,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollPunktMileageReading" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollPunktMileageReading" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -285,17 +283,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Lest av km stand</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -307,7 +305,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldControlledMileageReading" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldControlledMileageReading" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -326,7 +324,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkControlledMileageReading" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkControlledMileageReading" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -358,7 +356,7 @@
                <?templateDesigner expand 0?></subform>
             <subform name="subTyresRow" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -370,7 +368,8 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollPunktTyres" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <?templateDesigner expand 1?>
+                  <field name="fldKontrollPunktTyres" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -378,17 +377,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Hjulsett kontrollert</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
-                  <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               </subform>
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -400,7 +399,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldTyres" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldTyres" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -419,7 +418,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkTyres" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkTyres" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -451,7 +450,7 @@
                <?templateDesigner expand 0?></subform>
             <subform name="subToolsTriangleRow" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -463,7 +462,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollPunktToolsTriangle" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollPunktToolsTriangle" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -471,17 +470,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Verktøy, varseltrekant og tilhørende utstyr i bil</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -493,7 +492,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldToolsTriangle" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldToolsTriangle" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -512,7 +511,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkToolsTriangle" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkToolsTriangle" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -544,7 +543,7 @@
                <?templateDesigner expand 0?></subform>
             <subform name="subKeys" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -556,7 +555,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollPunktKeys" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollPunktKeys" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -564,17 +563,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Alle nøkler til bil</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -586,7 +585,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKeys" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldKeys" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -605,7 +604,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkKeys" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkKeys" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -634,10 +633,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subServiceHandbook" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -649,7 +648,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollPunktServiceHandbook" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollPunktServiceHandbook" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -657,17 +656,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Vognmappe med servicehefte etc.</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -679,7 +678,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldServiceHandbook" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldServiceHandbook" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -698,7 +697,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkServiceHandbook" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkServiceHandbook" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -727,10 +726,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subRegistrationBook" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -742,7 +741,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollPunktRegistrationBook" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollPunktRegistrationBook" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -750,17 +749,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Vognkort del 1 og 2, underskrevet salgsmelding</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -772,7 +771,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldRegistrationBook" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldRegistrationBook" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -791,7 +790,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkRegistrationBook" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkRegistrationBook" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -820,10 +819,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subPKK" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -835,7 +834,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollPKK" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollPKK" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -843,17 +842,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>PKK Skjema</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -865,7 +864,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldPKK" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldPKK" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -884,7 +883,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkPKK" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkPKK" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -913,10 +912,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subEncumbrancePrint" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -928,7 +927,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollEncumbrancePrint" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollEncumbrancePrint" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -936,17 +935,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Utskrift av evt. heftelser fra Brønnøysund</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -958,7 +957,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldEncumbrancePrint" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldEncumbrancePrint" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -977,7 +976,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkEncumbrancePrint" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkEncumbrancePrint" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1009,7 +1008,7 @@
                <?templateDesigner expand 0?></subform>
             <subform name="subStereoCodes" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1021,7 +1020,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollStereoCodes" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollStereoCodes" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1029,17 +1028,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Kodekort radio og alarm</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1051,7 +1050,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldStereoCodes" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldStereoCodes" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1070,7 +1069,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkStereoCodes" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkStereoCodes" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1102,7 +1101,7 @@
                <?templateDesigner expand 0?></subform>
             <subform name="subRemovableTowbar" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="9.085mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1114,7 +1113,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollRemovableTowbar" access="readOnly" w="75mm" y="2.1mm" minH="4mm">
+                  <field name="fldKontrollRemovableTowbar" access="readOnly" w="75mm" minH="9.7mm">
                      <ui>
                         <textEdit multiLine="1">
                            <border presence="hidden"/>
@@ -1122,17 +1121,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Tilhengerfestekule med tilbehør hvis løs, Adapter til kontakt</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                   </field>
-                  <?templateDesigner expand 0?></subform>
-               <subform name="subRemarkOnPoint" h="9.085mm">
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1144,7 +1143,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldRemovableTowbar" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldRemovableTowbar" minW="106mm" access="readOnly" h="9.7mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1160,10 +1159,12 @@
                      </caption>
                      <para vAlign="middle"/>
                   </field>
-                  <?templateDesigner expand 0?></subform>
-               <subform name="subOKOnPoint" w="11mm" h="9.085mm">
+                  <?templateDesigner expand 0?>
+                  <keep intact="contentArea"/>
+               </subform>
+               <subform name="subOKOnPoint" w="11mm" h="9.7mm">
                   <bind match="none"/>
-                  <field name="chkRemovableTowbar" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkRemovableTowbar" y="4.7mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1192,10 +1193,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subTrunkCover" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1207,7 +1208,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollTrunkCover" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollTrunkCover" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1215,17 +1216,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Bagasjeromstildekning</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1237,7 +1238,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldTrunkCover" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldTrunkCover" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1256,7 +1257,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkTrunkCover" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkTrunkCover" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1288,7 +1289,7 @@
                <?templateDesigner expand 0?></subform>
             <subform name="subSatelliteNavigation" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1300,7 +1301,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollSatelliteNavigation" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollSatelliteNavigation" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1308,17 +1309,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Navigasjon med kartverk</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1330,7 +1331,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldSatelliteNavigation" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldSatelliteNavigation" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1349,7 +1350,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkSatelliteNavigation" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkSatelliteNavigation" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1381,7 +1382,7 @@
                <?templateDesigner expand 0?></subform>
             <subform name="subReflectiveVest" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1393,7 +1394,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollReflectiveVest" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollReflectiveVest" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1401,17 +1402,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Refleksvest</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1423,7 +1424,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldReflectiveVest" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldReflectiveVest" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1442,7 +1443,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkReflectiveVest" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkReflectiveVest" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1471,10 +1472,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subVideoSystem" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1486,7 +1487,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollVideoSystem" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollVideoSystem" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1494,17 +1495,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>DVD system og hodetelefoner</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1516,7 +1517,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldVideoSystem" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldVideoSystem" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1535,7 +1536,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkVideoSystem" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkVideoSystem" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1564,10 +1565,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subBlockHeaterCord" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1579,7 +1580,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollBlockHeaterCord" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollBlockHeaterCord" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1587,17 +1588,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Motorvarmerkabel</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1609,7 +1610,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldBlockHeaterCord" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldBlockHeaterCord" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1628,7 +1629,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkBlockHeaterCord" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkBlockHeaterCord" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1657,10 +1658,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subAccidentClaim" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1672,7 +1673,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollAccidentClaim" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollAccidentClaim" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1680,17 +1681,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Skademelding glass/skade</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1702,7 +1703,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldAccidentClaim" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldAccidentClaim" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1721,7 +1722,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkAccidentClaim" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkAccidentClaim" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1750,10 +1751,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subDeductablePayment" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1765,7 +1766,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollDeductablePayment" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollDeductablePayment" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1773,17 +1774,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Innbetalt egenandel ved skade</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1795,7 +1796,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldDeductablePayment" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldDeductablePayment" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1814,7 +1815,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkDeductablePayment" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkDeductablePayment" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1843,10 +1844,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subEtcTransponder" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1858,7 +1859,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollEtcTransponder" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollEtcTransponder" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1866,17 +1867,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Køfribrikke</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1888,7 +1889,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldEtcTransponder" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldEtcTransponder" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1907,7 +1908,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkEtcTransponder" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkEtcTransponder" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -1936,10 +1937,10 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subParkingHeaterRC" layout="lr-tb">
                <bind match="none"/>
-               <subform name="subControlPoint" w="75mm" h="6.35mm">
+               <subform name="subControlPoint" w="75mm" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1951,7 +1952,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldKontrollParkingHeaterRC" minW="20mm" access="readOnly" h="4mm" y="2.1mm">
+                  <field name="fldKontrollParkingHeaterRC" minW="75mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -1959,17 +1960,17 @@
                         </textEdit>
                      </ui>
                      <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
                      <bind match="none"/>
                      <caption reserve="0in">
                         <value>
                            <text>Fjernkontroll parkeringsvarmer</text>
                         </value>
-                        <para vAlign="middle"/>
+                        <para vAlign="bottom"/>
                      </caption>
                      <?templateDesigner expand 1?></field>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subRemarkOnPoint">
+               <subform name="subRemarkOnPoint" layout="tb">
                   <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
@@ -1981,7 +1982,7 @@
                      <corner/>
                      <corner/>
                   </border>
-                  <field name="fldParkingHeaterRC" minW="106mm" access="readOnly" y="2.1mm" h="4mm">
+                  <field name="fldParkingHeaterRC" minW="106mm" access="readOnly" h="6.35mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -2000,7 +2001,7 @@
                   <?templateDesigner expand 1?></subform>
                <subform name="subOKOnPoint" w="11mm">
                   <bind match="none"/>
-                  <field name="chkParkingHeaterRC" y="2.1mm" x="3.15mm" w="4mm" h="4mm">
+                  <field name="chkParkingHeaterRC" y="2.1mm" x="3.5mm" w="4mm" h="4mm">
                      <ui>
                         <checkButton mark="check">
                            <border>
@@ -2029,8 +2030,8 @@
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <?templateDesigner expand 0?></subform>
-            <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform name="subComments" w="192mm" layout="tb">
             <bind match="none"/>
             <occur min="0" max="-1"/>
@@ -2131,7 +2132,7 @@
                   <corner presence="hidden"/>
                </border>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <?templateDesigner expand 1?></subform>
       <variables>
          <script usehref=".\Fragments\frg_LangNO.xdp#som($template.form1.#subform.#variables.NO)"/>
@@ -2144,9 +2145,10 @@
       </desc>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Adobe Pi Std" 0 0 UTF-16 2 4 004F?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 208 53 0003000B000C000F001100120014001500240025002600270029002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E006000A1 (),./12ABCDFHIKLMNOPRSTUV_abcdefghijklmnoprstuvy{}ø?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 164 43 0003001100120014001D00240025002700280029002A002E003000330035003600370038003900440046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ./1:ABDEFGKMPRSTUVacdefgijklmnoprstuvyÅø?></subform>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 164 43 0003001100120014001D00240025002700280029002A002E003000330035003600370038003900440046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ./1:ABDEFGKMPRSTUVacdefgijklmnoprstuvyÅø?>
+      <?renderCache.subset "ITC Zapf Dingbats" 0 0 fontSpecific 4 4 1 00174?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 36 9 00010027003500450046004A004D00550059 FTdeiltx?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner DefaultLanguage JavaScript?>
@@ -2163,15 +2165,15 @@
    <?templateDesigner XDPPreviewFormat 20?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(79375,79375), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe B - Takst\Mottakskontroll\Mottakskontroll_AcceptanceCheck_20130115.xml?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 150?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines h:79400?></template>
+   <?templateDesigner Guidelines h:79400?>
+   <?templateDesigner Zoom 125?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -2183,7 +2185,6 @@
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -2211,14 +2212,14 @@
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-11T12:33:59Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-11T13:59:57Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:44da773c-3bea-44d3-a5eb-6d1b7e5233c3</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:38d42dee-23f0-4c6b-9429-175164df4496</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
