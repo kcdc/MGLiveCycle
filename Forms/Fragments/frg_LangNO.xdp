@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-05T06:18:34Z" uuid="352a69be-4fca-45b9-9167-54db4a344180">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
-   <?formServer defaultPDFRenderFormat acrobat9.1static?>
-   <subform name="form1" locale="no_NO" layout="tb">
+   <subform name="form1" locale="da_DK" layout="tb">
       <pageSet>
          <pageArea>
-            <medium stock="letter" short="8.5in" long="11in"/>
-            <contentArea x="6.35mm" y="31.75mm" w="203.2mm" h="219.075mm" name="sub_Content"/>
+            <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
+            <medium stock="a4" short="210mm" long="297mm"/>
          </pageArea>
       </pageSet>
       <subform>
          <variables>
             <script contentType="application/x-javascript" name="NO">
-		
 				var L_VatIncluded = "Alle priser inkl. MVA";
 var L_BBAgreementNo = "BB avtalenummer:";
 var L_CarColor = "Farge:";
@@ -298,56 +296,18 @@ var L_BankName = "Bankgiro:";
                
                
                
+               
+               
+               
+
                <?templateDesigner isFragment yes?>
-               <?templateDesigner fragmentTitle frg_LangNO?>
-               <?templateDesigner fragmentDescription NO_X?></script>
+               <?templateDesigner fragmentTitle frg_LangNO?></script>
          </variables>
       </subform>
    </subform>
-   <?templateDesigner SaveTaggedPDF 0?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner SavePDFWithLog 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 139?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
-<config xmlns="http://www.xfa.org/schema/xci/3.0/">
-   <agent name="designer">
-      <!--  [0..n]  -->
-      <destination>pdf</destination>
-      <pdf>
-         <!--  [0..n]  -->
-         <fontInfo/>
-      </pdf>
-   </agent>
-   <present>
-      <!--  [0..n]  -->
-      <destination>pdf</destination>
-      <pdf>
-         <!--  [0..n]  -->
-         <fontInfo>
-            <embed>0</embed>
-         </fontInfo>
-         <version>1.7</version>
-         <adobeExtensionLevel>5</adobeExtensionLevel>
-         <tagged>0</tagged>
-      </pdf>
-      <xdp>
-         <packets>*</packets>
-      </xdp>
-   </present>
-</config>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-05T06:18:34Z</xmp:MetadataDate>
-         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
-      </rdf:Description>
-      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
-         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
-      </rdf:Description>
-      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:352a69be-4fca-45b9-9167-54db4a344180</xmpMM:DocumentID>
-      </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
             <rdf:Seq>
@@ -359,7 +319,7 @@ var L_BankName = "Bankgiro:";
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">NO_X</rdf:li>
+                        <rdf:li xml:lang="x-default"/>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.#subform.#variables.NO</dc:identifier>
@@ -369,108 +329,4 @@ var L_BankName = "Bankgiro:";
          </lcd:fragmentCatalog>
       </rdf:Description>
    </rdf:RDF>
-</x:xmpmeta>
-<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
-   <locale name="no_NO" desc="Norsk (Norge)">
-      <calendarSymbols name="gregorian">
-         <monthNames>
-            <month>januar</month>
-            <month>februar</month>
-            <month>mars</month>
-            <month>april</month>
-            <month>mai</month>
-            <month>juni</month>
-            <month>juli</month>
-            <month>august</month>
-            <month>september</month>
-            <month>oktober</month>
-            <month>november</month>
-            <month>desember</month>
-         </monthNames>
-         <monthNames abbr="1">
-            <month>jan</month>
-            <month>feb</month>
-            <month>mar</month>
-            <month>apr</month>
-            <month>mai</month>
-            <month>jun</month>
-            <month>jul</month>
-            <month>aug</month>
-            <month>sep</month>
-            <month>okt</month>
-            <month>nov</month>
-            <month>des</month>
-         </monthNames>
-         <dayNames>
-            <day>sÃ¸ndag</day>
-            <day>mandag</day>
-            <day>tirsdag</day>
-            <day>onsdag</day>
-            <day>torsdag</day>
-            <day>fredag</day>
-            <day>lÃ¸rdag</day>
-         </dayNames>
-         <dayNames abbr="1">
-            <day>sÃ¸</day>
-            <day>ma</day>
-            <day>ti</day>
-            <day>on</day>
-            <day>to</day>
-            <day>fr</day>
-            <day>lÃ¸</day>
-         </dayNames>
-         <meridiemNames>
-            <meridiem>AM</meridiem>
-            <meridiem>PM</meridiem>
-         </meridiemNames>
-         <eraNames>
-            <era>F.KR.</era>
-            <era>E.KR.</era>
-         </eraNames>
-      </calendarSymbols>
-      <datePatterns>
-         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
-         <datePattern name="long">D. MMM YYYY</datePattern>
-         <datePattern name="med">DD/MM/YYYY</datePattern>
-         <datePattern name="short">DD/MM/YY</datePattern>
-      </datePatterns>
-      <timePatterns>
-         <timePattern name="full">H.MM.SS Z</timePattern>
-         <timePattern name="long">H.MM.SS Z</timePattern>
-         <timePattern name="med">H.MM.SS</timePattern>
-         <timePattern name="short">H.MM</timePattern>
-      </timePatterns>
-      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
-      <numberPatterns>
-         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
-         <numberPattern name="currency">$ z,zz9.99</numberPattern>
-         <numberPattern name="percent">z,zz9%</numberPattern>
-      </numberPatterns>
-      <numberSymbols>
-         <numberSymbol name="decimal">,</numberSymbol>
-         <numberSymbol name="grouping">.</numberSymbol>
-         <numberSymbol name="percent">%</numberSymbol>
-         <numberSymbol name="minus">-</numberSymbol>
-         <numberSymbol name="zero">0</numberSymbol>
-      </numberSymbols>
-      <currencySymbols>
-         <currencySymbol name="symbol">kr</currencySymbol>
-         <currencySymbol name="isoname">NOK</currencySymbol>
-         <currencySymbol name="decimal">,</currencySymbol>
-      </currencySymbols>
-      <typefaces>
-         <typeface name="Myriad Pro"/>
-         <typeface name="Minion Pro"/>
-         <typeface name="Courier Std"/>
-         <typeface name="Adobe Pi Std"/>
-         <typeface name="Adobe Hebrew"/>
-         <typeface name="Adobe Arabic"/>
-         <typeface name="Adobe Thai"/>
-         <typeface name="Kozuka Gothic Pro-VI M"/>
-         <typeface name="Kozuka Mincho Pro-VI R"/>
-         <typeface name="Adobe Ming Std L"/>
-         <typeface name="Adobe Song Std L"/>
-         <typeface name="Adobe Myungjo Std M"/>
-      </typefaces>
-   </locale>
-</localeSet></xdp:xdp>
+</x:xmpmeta></xdp:xdp>
