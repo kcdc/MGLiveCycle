@@ -47,7 +47,8 @@
          </field>
          <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle sub_RichTextEnvelope?></subform>
+         <?templateDesigner fragmentTitle frg_RichTextEnvelope?>
+         <?templateDesigner fragmentDescription GEN_X?></subform>
    </subform>
 </template>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
@@ -58,12 +59,12 @@
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">sub_RichTextEnvelope</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_RichTextEnvelope</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">GEN_X</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.sub_RichTextEnvelope</dc:identifier>

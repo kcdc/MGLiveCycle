@@ -115,7 +115,8 @@ if (this.rawValue == null)
          <keep intact="contentArea"/>
          <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle subCustomerAddress?></subform>
+         <?templateDesigner fragmentTitle frg_CustomerAddress?>
+         <?templateDesigner fragmentDescription NO_A?></subform>
    </subform>
 </template>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
@@ -126,12 +127,12 @@ if (this.rawValue == null)
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">subCustomerAddress</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_CustomerAddress</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">NO_A</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.subCustomerAddress</dc:identifier>

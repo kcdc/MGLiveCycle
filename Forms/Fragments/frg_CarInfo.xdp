@@ -826,10 +826,10 @@
          </field>
          <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle frgSubHeaderInfo?>
-         <?templateDesigner fragmentDescription Used for ValuationReport and PreCalculation type forms?></subform>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 160 42 0003001100120014001D00240025002700280029002A002E00300033003500360038003900440046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ./1:ABDEFGKMPRSUVacdefgijklmnoprstuvyÅø?>
-   </subform>
+         <?templateDesigner fragmentTitle frg_CarInfo?>
+         <?templateDesigner fragmentDescription NO_B
+Used for ValuationReport and PreCalculation type forms?></subform>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 160 42 0003001100120014001D00240025002700280029002A002E00300033003500360038003900440046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ./1:ABDEFGKMPRSUVacdefgijklmnoprstuvyÅø?></subform>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Zoom 130?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
@@ -874,12 +874,13 @@
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">frgSubHeaderInfo</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_CarInfo</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">Used for ValuationReport and PreCalculation type forms</rdf:li>
+                        <rdf:li xml:lang="x-default">NO_B
+Used for ValuationReport and PreCalculation type forms</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.subHeaderInfo</dc:identifier>

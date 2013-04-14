@@ -1,131 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-26T12:27:57Z" uuid="190f2a83-615c-49a4-bf06-761d65537bb2">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-11T12:54:20Z" uuid="5a875a26-0ece-42bb-abfc-11132f6e0aea">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
       <pageSet>
          <pageArea>
-            <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
+            <contentArea x="12.7mm" w="192mm" h="203.2mm" name="mpg1ContentArea" y="44.45mm"/>
             <medium stock="a4" short="210mm" long="297mm"/>
          </pageArea>
       </pageSet>
-      <subform w="179.064mm" name="subEierBruker" h="8.786mm">
+      <subform name="subIdDonebyDateSalemanInformation" w="192.062mm">
          <bind match="none"/>
-         <keep intact="none"/>
-         <field name="L_OwnerName" w="40mm" h="8mm" access="readOnly" x="0.001mm" y="0.5mm">
+         <field name="fldValuationNo" access="readOnly" x="0mm" y="0mm" h="8mm" w="21mm">
             <ui>
                <textEdit>
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
             </ui>
-            <font size="9pt" typeface="Arial"/>
-            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="3.5756mm" placement="top">
-               <font size="8.5pt" typeface="Arial" weight="bold"/>
-               <para vAlign="middle"/>
+            <caption placement="top" reserve="4mm">
                <value>
-                  <text>Eier:</text>
+                  <text>Takstid:</text>
                </value>
+               <font typeface="Arial" size="8.5pt" weight="bold"/>
+               <para vAlign="bottom"/>
             </caption>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.OwnerName"/>
+            <bind match="dataRef" ref="$.ValuationNo"/>
             <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">if(this.rawValue == "" || this.rawValue == null)
-{
-	this.presence = "hidden";
-}
+               <script contentType="application/x-javascript">
 
-var LangCode = getLanguages.getLanguageSetting();
 
-var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+
+
 </script>
             </event>
+            <font typeface="Arial" size="9pt"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge presence="hidden"/>
+            </border>
+            <margin bottomInset="0mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
          </field>
-         <field name="L_LeaserName" w="40mm" h="8mm" access="readOnly" x="67mm" y="0.5mm">
+         <field name="fldPerformedBy" access="readOnly" x="21mm" y="0mm" w="49mm" h="8mm">
             <ui>
                <textEdit>
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
             </ui>
-            <font size="9pt" typeface="Arial"/>
-            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="3.2388mm" placement="top">
-               <font size="8.5pt" typeface="Arial" weight="bold"/>
-               <para vAlign="middle"/>
+            <caption placement="top" reserve="4mm">
                <value>
-                  <text>Leier:</text>
+                  <text>Utført av:</text>
                </value>
+               <font typeface="Arial" size="8.5pt" weight="bold"/>
+               <para vAlign="bottom"/>
             </caption>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.LeaserName"/>
+            <bind match="dataRef" ref="$.PerformedBy"/>
             <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">if(this.rawValue == "" || this.rawValue == null)
-{
-	this.presence = "hidden";
-}
+               <script contentType="application/x-javascript">
 
-var LangCode = getLanguages.getLanguageSetting();
 
-var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+
+
 </script>
             </event>
+            <font typeface="Arial" size="9pt"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge presence="hidden"/>
+            </border>
+            <margin bottomInset="0mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
          </field>
-         <field name="L_UserName" w="40mm" h="8mm" access="readOnly" x="107.2mm" y="0.5mm">
+         <field name="fldDateCreated" access="readOnly" x="93mm" y="0mm" w="22mm" h="8mm">
             <ui>
                <textEdit>
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
             </ui>
-            <font size="9pt" typeface="Arial"/>
-            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="3.7784mm" placement="top">
-               <font size="8.5pt" typeface="Arial" weight="bold"/>
-               <para vAlign="middle"/>
+            <caption placement="top" reserve="4mm">
                <value>
-                  <text>Bruker:</text>
+                  <text>Dato:</text>
                </value>
+               <font typeface="Arial" size="8.5pt" weight="bold"/>
+               <para vAlign="bottom"/>
             </caption>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
+            <bind match="dataRef" ref="$.DateCreated"/>
             <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">if(this.rawValue == "" || this.rawValue == null)
-{
-	this.presence = "hidden";
-}
-var LangCode = getLanguages.getLanguageSetting();
+               <script contentType="application/x-javascript">
 
-var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+
+
+
 </script>
             </event>
+            <font typeface="Arial" size="9pt"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge presence="hidden"/>
+            </border>
+            <margin bottomInset="0mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
+         </field>
+         <field name="fldSellerName" access="readOnly" x="120mm" w="72mm" h="8mm">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <caption placement="top" reserve="4mm">
+               <value>
+                  <text>Selger:</text>
+               </value>
+               <font typeface="Arial" size="8.5pt" weight="bold"/>
+               <para vAlign="bottom"/>
+            </caption>
+            <bind match="dataRef" ref="$.SellerName"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+            </event>
+            <font typeface="Arial" size="9pt"/>
+            <para vAlign="middle"/>
+            <border>
+               <edge presence="hidden"/>
+            </border>
+            <margin bottomInset="0mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
          </field>
          <border>
-            <edge presence="hidden"/>
-            <corner thickness="0.176mm" presence="hidden"/>
-            <corner thickness="0.176mm" presence="hidden"/>
-            <corner thickness="0.2mm" presence="hidden"/>
-            <corner thickness="0.176mm" presence="hidden"/>
-            <edge presence="hidden"/>
-            <edge thickness="0.2mm" presence="hidden"/>
-            <edge presence="hidden"/>
+            <edge thickness="0.1mm" presence="hidden"/>
+            <corner thickness="0.1mm" presence="hidden"/>
          </border>
          <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle frgSubEierLeierBruker?></subform>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 36 9 001D00250028002F0048004C004E00550058:BELeikru?>
+         <?templateDesigner fragmentTitle frg_IdDonebyDateSalemanInformation?>
+         <?templateDesigner fragmentDescription NO_B?></subform>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 80 21 0003001D00270036003700380044004700480049004A004C004E004F0052005500560057005900A1 :DSTUadefgiklorstvø?>
    </subform>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 130?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner Zoom 92?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -152,14 +176,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-26T12:27:57Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-11T12:54:20Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:190f2a83-615c-49a4-bf06-761d65537bb2</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:5a875a26-0ece-42bb-abfc-11132f6e0aea</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -167,15 +191,15 @@ this.caption.value.text = output;
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">frgSubEierLeierBruker</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_IdDonebyDateSalemanInformation</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">NO_B</rdf:li>
                      </rdf:Alt>
                   </dc:description>
-                  <dc:identifier>$template.form1.subEierBruker</dc:identifier>
+                  <dc:identifier>$template.form1.subIdDonebyDateSalemanInformation</dc:identifier>
                   <lcd:fragmentRole>Subform</lcd:fragmentRole>
                </rdf:li>
             </rdf:Seq>

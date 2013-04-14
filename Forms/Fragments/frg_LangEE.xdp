@@ -263,8 +263,13 @@ var L_YourServiceAdvisor = "Teie teeninduse konsultant,";
 		
                
                
+               
+               
+               
+               
                <?templateDesigner isFragment yes?>
-               <?templateDesigner fragmentTitle EE?></script>
+               <?templateDesigner fragmentTitle frg_LangEE?>
+               <?templateDesigner fragmentDescription BA_X?></script>
          </variables>
       </subform>
    </subform>
@@ -318,12 +323,12 @@ var L_YourServiceAdvisor = "Teie teeninduse konsultant,";
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">EE</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_LangEE</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">BA_X</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.#subform.#variables.EE</dc:identifier>
