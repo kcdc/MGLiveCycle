@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-43-21 10:43:11" uuid="b8aada33-545a-4e72-8565-ec6e6bade5f4">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1static?>
+   <subform name="form1" locale="no_NO" layout="tb">
+      <pageSet>
+         <pageArea>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <contentArea x="6.35mm" y="31.75mm" w="203.2mm" h="219.075mm" name="sub_Content"/>
+         </pageArea>
+      </pageSet>
+      <subform>
+         <variables>
+            <script contentType="application/x-javascript" name="EE">
+		
+				var L_AdditionalInfo = "Täiendav informatsioon";
+var L_AdditionalLease = "Täiendavad kuumaksud **";
+var L_AdditionalLeaseVat = "Täiendavad kuumaksud **";
+var L_AdditionalWorkText = "Lisatööd, mis on kliendiga kokku lepitud.";
+var L_AdditonalProduct = "** Täiendavad maksud:";
+var L_AmountToPay = "Maksta (EUR):";
+var L_ArrangementFee = "Lepingutasu";
+var L_ArrangementFeeVat = "Lepingutasu";
+var L_AssumedTradeInPrice = "Eeldatav tagasiostu hind:";
+var L_Attention = "Kasutaja:";
+var L_BankAccEUR = "IBAN:";
+var L_BankAccLVL = "Arveldusarve:";
+var L_BankName = "Pank:";
+var L_CarColor = "Sõiduki värvus:\t\t\t\t\t.";
+var L_CarDelivery = "Teeninduse aeg:";
+var L_CarEngine = "Mootori nr:";
+var L_CarGearBox = "Käigukast:";
+var L_CarLocation = "Parkimiskoht:";
+var L_CarMileage = "Läbisõit:";
+var L_CarMileageCur = "Läbisõit:";
+var L_CarModelDesc = "Mudel:";
+var L_CarModelInfo = "Baashind:\t\t\t\t";
+var L_CarModelYear = "Mudeliaasta:\t\t\t\t";
+var L_CarPickUp = "Sõiduk valmis:";
+var L_CarPriceestimateTerms = "Pakkumine ei ole siduv ja võib muutuda";
+var L_CarRegDate = "Esmane reg:";
+var L_CarRegNo = "Reg. märk:";
+var L_CarRemarks = "Märkused:";
+var L_CarSalesContract = "Leping";
+var L_CarSalesPriceestimate = "Pakkumine";
+var L_CarType = "Mudelikood:";
+var L_CarVIN = "Tehasetähis:";
+var L_CheckList = "Tähelepanu:";
+var L_Co2 = "Co2 heide gr/km";
+var L_Code = "Kood";
+var L_ColorInfo = "Sõiduki värvus:\t\t\t\t\t.";
+var L_CompanyRegno = "Registrikood:";
+var L_Confirmation = "Pakkumise kinnitus";
+var L_ContactTxt = "Siia tekst selle kohta et klient lubab kasutada tema andmeid tulevikus";
+var L_ContNextPage = "Jätkub järgmisel lehel";
+var L_ContractNo = "Lepingu nr:";
+var L_ControlSignature = "Kontrollija allkiri:";
+var L_Coverage = "Kindlustusväärtus:";
+var L_CreditInvoice = "Kreeditarve";
+var L_CreditNoRefInvoice = "Alusarve:";
+var L_CreditReason = "Kreeditarve põhjus:";
+var L_CustomerAddress = "Tarneaadress:";
+var L_CustomerCompanyRegNo = "RegNr:";
+var L_CustomerLedgerNo = "Kliendi kood:";
+var L_CustomerLegalAddressTotal = "Juriidiline aadress:";
+var L_CustomerName = "Klient:";
+var L_CustomerPhoneMobile = "Mobiil:";
+var L_CustomerPhoneNo = "Telefon:";
+var L_CustomerPhonePrivat = "Telefon:";
+var L_CustomerPhoneWork = "Telefon:";
+var L_CustomerVatPayerNo = "Maksja KMKR:";
+var L_Date = "Kuupäev";
+var L_DateOfInvoice = "Arve kuupäev:";
+var L_DateReviewed = "Kuupäev";
+var L_DealerCompanyRegno = "Registrikood:";
+var L_DealerLegalAddressTotal = "Jur. aadress:";
+var L_DealerNameLegal = "Müüja:";
+var L_DealerNameMarketing = "Müüja:";
+var L_DealerVatPayerNo = "KMKR:";
+var L_DeltermsText5 = "Kätteandmiskoht:";
+var L_DeltermsText7 = "Eeldatav tarneaeg NN/AA:";
+var L_DifferenceAmount = "Summa:";
+var L_Discount = "Allah %";
+var L_DiscountPE = "Allah %";
+var L_DocTypeCreditInvoice = "Kreeditarve";
+var L_DocTypeInvoice = "Arve";
+var L_DocTypePrepayment = "Ettemaks:";
+var L_DocTypePriceEstimate = "Pakkumine";
+var L_DocTypeWorkOrder = "Töötellimus";
+var L_DueDate = "Maksetähtaeg:";
+var L_DueDate_KON = "Makse kuupäev:";
+var L_DueDate_KRE = "Maksetähtaeg:";
+var L_EnvironmentalClass = "Energiaklass:";
+var L_ExtensionsText = "Me võtame Teiega ühendust, kui on vaja teha lisatöid.";
+var L_Financing = "Finantseering";
+var L_ForeignSalesVat = "Käibemaks 0% (EUR)";
+var L_FreightPriceTotal = "Tarnekulud";
+var L_GreetingsText = "Lugupidamisega,";
+var L_Hour = "Tund";
+var L_Insurance = "Kindlustus";
+var L_InsuranceMileage = "Aastane läbisõit km:";
+var L_Interior = "Sisu:\t\t\t\t\t.";
+var L_InvoiceNo = "Arve nr.:";
+var L_InvoiceTitle_F = "Arve";
+var L_InvoiceTitle_I = "Sisemine arve";
+var L_InvoiceTitle_K = "Kreeditarve";
+var L_InvoiceTitle_N = "Sisemine kreeditarve";
+var L_InvoiceTitle_P = "Ettemaksuarve";
+var L_InvoiceTitle_Q = "Ettemaksuarve kreeditarve:";
+var L_InvoiceTitle_S = "Koondarve";
+var L_InvoiceType = "Tüüp";
+var L_LeaseMonth = "Kuumakse";
+var L_LeaseMonthVat = "Kuumakse";
+var L_LeaserFinancingCompany = "Finantspakkumine ei ole siduv ja peab ootama panga vastust";
+var L_LeaserFinancingCompany2 = "Pakkumine võib muutuda enne lepingu sõlmimist";
+var L_LeaserName = "Liisingu võtja:";
+var L_LeaserPersonalId = "Isikukood:";
+var L_LeaseTotal = "Kuumaksud kokku";
+var L_LeaseTotalVat = "Kuumaksud kokku";
+var L_Leasing = "Liisingu võtja:";
+var L_LoanTradeInPrice = "Tagasiostetav sõiduk";
+var L_LocationSparepart = "Aadress";
+var L_LocationSparepartPrepicked = "Komplekteeritud varuosade aadress";
+var L_MechanicNo = "Mehaaniku nr";
+var L_MechanicSignature = "Mehaaniku allkiri";
+var L_Name = "Nimi";
+var L_NationalOptionpriceTotal = "Diileri poolt paigaldatav lisavarustus";
+var L_NationalOptions = "Diileri poolt paigaldatav lisavarustus";
+var L_No = "Nr.";
+var L_Nox = "Nox heide mg/km";
+var L_NumberOfPeriods = "Periood (kuud):";
+var L_Of = "/";
+var L_OfferText = "Meie pakkumine Teile:";
+var L_OnDelivery = "Esmane makse:";
+var L_OnDeliveryCash = "Esmane makse2:";
+var L_OnDeliveryDesc = "Sissemakse";
+var L_OnDeliveryRentalAmount = "ilma KM";
+var L_OnDeliveryRentalAmountVat = "koos KM";
+var L_OnDeliveryVatAmount = "KM";
+var L_OptionDiscount = "Tehase lisavarustuse allahindlus";
+var L_OptionPriceTotal = "Tehase lisavarustus";
+var L_Options = "Tehase lisavarustus";
+var L_OrderNo = "TellNr:";
+var L_OurRef = "Märkused:";
+var L_OwnerName = "Omanik:";
+var L_Page = "Lk";
+var L_PaymentTerms = "Maksetingimus:";
+var L_PaymentTerms_Kon = "Sularaha";
+var L_PaymentTerms_Kre = "Ülekanne";
+var L_PaymentType = "Makseliik:";
+var L_PlannedValuation = "Kokkulepe:";
+var L_PlannedVisit = "Teeninduse aeg:";
+var L_PlannedWorks = "Planeeritud tööd:";
+var L_PreControl = "Teostada eelkontroll / proovisõit:";
+var L_PrepaymentCar = "Ettemaks:";
+var L_PrepaymentAmount = "Ettemaks (EUR):";
+var L_PrePaymentCash = "Ettemaks:";
+var L_PrePaymentComCar = "Ettemaks (tagasiost)";
+var L_PrePaymentTotal = "Ettemaks kokku:";
+var L_Preview = "Eelvaade";
+var L_Price = "Hind";
+var L_PriceEstimateNo = "Pakkumise nr:";
+var L_PriceInfoEnd1 = "KM arvutamise alus";
+var L_PriceInfoEnd2 = "* = ilma KM";
+var L_PriceInformation = "Hinnainfo";
+var L_PriceMileageExeeded = "km hind:";
+var L_PriceMileageExeededVat = "km hind:";
+var L_PriceTotal = "Hind kokku";
+var L_PriceTotalColumn = "Summa KM-ta";
+var L_PriceTotalSum = "Tellimuse summa ilma KM:";
+var L_PriceTotalSum2 = "Tellimuse summa ilma KM:";
+var L_PriceTotalSumCarSales = "Summa kokku:";
+var L_PriceTotalSumPrepay = "Ettemaks:";
+var L_PriceType_B = "Summa koos KM";
+var L_PriceType_N = "Summa ilma KM";
+var L_PriceVatTotalSum = "Arve kokku (EUR):";
+var L_PriceVatTotalSumLocal = "Arve kokku (EUR):";
+var L_PriceVatTotalToPay = "Maksta jäänud (EUR):";
+var L_Product = "Kirjeldus";
+var L_Quantity = "Kogus";
+var L_RebuildPriceTotal = "Ümberehituse ";
+var L_ReBuilds = "Ümberehituse kirjeldus";
+var L_ReceivedText_D = "Olen kätte saanud kõik varuosad.";
+var L_ReceivedText_V = "Olen kätte saanud kõik varuosad ja hooldused.";
+var L_ReferenceNo = "Pakkumise nr:";
+var L_RegistrationDesc = "Registreerimise tasud.\t\t\t\t.";
+var L_RemainingValue = "Jääkväärtus:";
+var L_RemarkDate = "Kuupäev";
+var L_RemarkPriority = "Prioriteet";
+var L_RemarksText = "Tutvunud:";
+var L_RemarkText = "Kirjeldus";
+var L_Remember = "Täiendavalt:";
+var L_RentalCalculation = "Liisingu andmed (* = ilma KM)";
+var L_RepeatedRepair = "Korduvremont:";
+var L_RestPayTotal = "Maksta jäänud (EUR):";
+var L_Reviewed = "Üle vaadanud:";
+var L_SalesRep = "Müügikonsultant2:";
+var L_ServiceAdvisor = "Teeninduse konsultant,";
+var L_ServiceAdvisorColon = "Teeninduse konsultant:";
+var L_ServiceCharge = "Kuumaks";
+var L_ServiceChargeVat = "Kuumaks";
+var L_ServiceEUText = "??????";
+var L_Signature = "Allkiri";
+var L_SignatureColon = "Allkiri:";
+var L_SignatureDate = "Kuupäev";
+var L_SignHere = "Allkiri";
+var L_SoldBy = "Müüja:";
+var L_SparepartEU = "2006/112/EC 138";
+var L_SpProducer = "SP kood";
+var L_SumExtraOptions = "Diileri poolt paigaldatud lisavarustuse summa";
+var L_SVAPriceTotal = "Teeindusleping";
+var L_SwiftCode = "SWIFT:";
+var L_Task = "Ülesanne";
+var L_TaskId = "Ülesande number";
+var L_TaskLetter = "Ü";
+var L_ThankYouTextConfirmation = "Täname Teid, et otsustasite meie teenuse kasuks!";
+var L_ThankYouTextPriceestimate = "Täname Teid, et tundsite huvi meie teenuste vastu!";
+var L_ThroughputNo = "Pakkumise nr:";
+var L_TimeTotal = "Aeg kokku";
+var L_TotalCostPerYear = "Esimese aasta maksed kokku";
+var L_TotalDiscount = "Allahindlused kokku";
+var L_TotalMileage = "Läbisõit kokku";
+var L_TotalMileagePerYear = "Läbisõit aastas";
+var L_TPI = "TPI:";
+var L_TradeIn = "Tagasiost";
+var L_TradeInCarBrand = "Mark:";
+var L_TradeInColor = "Värvus:";
+var L_TradeInEncumbrance = "Panditud:";
+var L_TradeInMileage = "Spidomeetri näit:";
+var L_TradeInModelDesc = "Mudel:";
+var L_TradeInPrice = "Tagasiostu hind:";
+var L_TradeInRegDate = "Esmane registreerimine:";
+var L_TradeInRegisteredYear = "Mudeliaasta:";
+var L_TradeInRegistrationFeePaid = "Maksud makstud?";
+var L_TradeInRegno = "RegNr:";
+var L_TradeInText = "Trade-in price is given according that the car is in same condition as the price avaluation took place. The buyer ensures that the trade-in car is own property, and that the car is not mortgaged beyond the information given. The buyer also ensures that all taxes are paid, and the milage is correct";
+var L_TradeInVIN = "VIN:";
+var L_Unit = "Ühik";
+var L_Upgrade = "Aktsioon:";
+var L_UserName = "Kasutaja:";
+var L_VatAmount = "Käibemaks (EUR):";
+var L_VatAmountCash = "KM kokku:";
+var L_VatAmountColon = "Käibemaks (EUR):";
+var L_VatBasis = "KM alus:";
+var L_VatContract = "KM alus:";
+var L_VatIncluded = "Kõik hinnad sisaldavad käibemaksu";
+var L_VatPayerNo = "KMKR:";
+var L_VatRateCash = "Käibemaksu määr:";
+var L_VatText = "Ilma käibemaksuta";
+var L_VatZeroText = "KM 0% (EUR)";
+var L_VehicleDiscount = "Sõiduki allahindlus";
+var L_VehiclePrice = "Sõiduki hind:";
+var L_VisitAddress = "Aadress:";
+var L_VWMBFLoanEstablishFee = "Lepingutasu";
+var L_VWMBFPeriodLoanFee = "Igakuine lepingutasu";
+var L_Work = "Töö";
+var L_WorkOrder = "Töötellimus";
+var L_YesNo = "Jah      / Ei";
+var L_YourRef = "Märkus:";
+var L_YourServiceAdvisor = "Teie teeninduse konsultant,";
+
+		
+               
+               
+               
+               
+               
+               
+               <?templateDesigner isFragment yes?>
+               <?templateDesigner fragmentTitle frg_LangEE?>
+               <?templateDesigner fragmentDescription BA_X?></script>
+         </variables>
+      </subform>
+   </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 125?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner SavePDFWithLog 0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+         <tagged>0</tagged>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-01-30T09:43:33Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:b8aada33-545a-4e72-8565-ec6e6bade5f4</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">frg_LangEE</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">BA_X</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.#subform.#variables.EE</dc:identifier>
+                  <lcd:fragmentRole>ScriptObject</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="en_EN" desc="English (UK)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>january</month>
+            <month>februay</month>
+            <month>match</month>
+            <month>april</month>
+            <month>may</month>
+            <month>june</month>
+            <month>july</month>
+            <month>august</month>
+            <month>september</month>
+            <month>october</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>mai</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>sunday</day>
+            <day>monday</day>
+            <day>tuesday</day>
+            <day>wednesday</day>
+            <day>thursday</day>
+            <day>friday</day>
+            <day>saturday</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>su</day>
+            <day>mo</day>
+            <day>tu</day>
+            <day>we</day>
+            <day>th</day>
+            <day>fr</day>
+            <day>sa</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">Â£</currencySymbol>
+         <currencySymbol name="isoname">GBP</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet></xdp:xdp>

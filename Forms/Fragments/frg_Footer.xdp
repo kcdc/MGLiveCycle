@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T11:35:25Z" uuid="213f533c-4359-4f34-8bbe-37bf49157674">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1static?>
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform layout="lr-tb" name="subFooter" w="179mm">
+         <border>
+            <corner thickness="0.4mm"/>
+            <corner/>
+            <corner/>
+            <corner/>
+            <edge thickness="0.4mm"/>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+            <edge presence="hidden"/>
+         </border>
+         <margin bottomInset="1mm" leftInset="0mm" rightInset="0mm" topInset="1mm"/>
+         <bind match="none"/>
+         <subform layout="tb" name="sub_FooterA" w="44.655mm">
+            <bind match="none"/>
+            <field access="protected" minH="2.4mm" name="FooterA1" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterA1" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterA2" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterA2" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterA3" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterA3" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterA4" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterA4" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterA5" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterA5" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterA6" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterA6" match="dataRef"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform layout="tb" name="sub_FooterB" w="45mm">
+            <bind match="none"/>
+            <field access="protected" minH="2.4mm" name="FooterB1" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterB1" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterB2" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterB2" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterB3" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterB3" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterB4" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterB4" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterB5" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterB5" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterB6" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterB6" match="dataRef"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform layout="tb" name="sub_FooterC" w="45mm">
+            <bind match="none"/>
+            <field access="protected" minH="2.4mm" name="FooterC1" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterC1" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterC2" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterC2" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterC3" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterC3" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterC4" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterC4" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterC5" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterC5" match="dataRef"/>
+            </field>
+            <field access="protected" minH="2.4mm" name="FooterC6" minW="40mm">
+               <font typeface="Arial" size="6pt"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind ref="$.Document.DocumentHeader.FooterC6" match="dataRef"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform name="sub_FooterD" layout="tb" w="43.724mm">
+            <bind match="none"/>
+            <field name="FooterD1" minH="2.4mm" access="protected" minW="40mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="6pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD1"/>
+            </field>
+            <field name="FooterD2" minH="2.4mm" access="protected" minW="40mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="6pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD2"/>
+            </field>
+            <field name="FooterD3" minH="2.4mm" access="protected" minW="40mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="6pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD3"/>
+            </field>
+            <field name="FooterD4" minH="2.4mm" access="protected" minW="40mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="6pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD4"/>
+            </field>
+            <field name="FooterD5" minH="2.4mm" access="protected" minW="40mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="6pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD5"/>
+            </field>
+            <field name="FooterD6" minH="2.4mm" access="protected" minW="40mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="6pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD6"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform layout="lr-tb" hAlign="right" name="subPageNumering" w="166mm" anchorType="topRight" x="7.047236in" y="0.566917in">
+            <bind match="none"/>
+            <field name="L_Page" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField004334" presence="hidden" access="readOnly">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.rawValue = output;
+</script>
+               </event>
+            </field>
+            <field name="CurrentPageNumber" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField013214" access="readOnly" presence="hidden">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="ready" ref="$layout" name="event__layout_ready">
+                  <script contentType="application/x-javascript">this.rawValue = xfa.layout.page(this)
+</script>
+               </event>
+               <calculate override="error"/>
+               <bind match="none"/>
+               <?templateDesigner floatingFieldPlaceholder #?></field>
+            <field name="NumberofPages" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField014066" access="readOnly" presence="hidden">
+               <ui>
+                  <numericEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <event activity="ready" ref="$layout" name="event__layout_ready">
+                  <script contentType="application/x-javascript">this.rawValue = xfa.layout.pageCount()
+</script>
+               </event>
+               <calculate override="error"/>
+               <bind match="none"/>
+               <?templateDesigner floatingFieldPlaceholder ##?></field>
+            <draw h="7.985mm" hAlign="right" name="txtPageNumering" w="21.484mm">
+               <font typeface="Arial" baselineShift="0pt" size="9pt"/>
+               <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" hAlign="right"/>
+               <ui>
+                  <textEdit>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField004334"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField013214"/>/<span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField014066"/></p></body>
+                  </exData>
+               </value>
+            </draw>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle frg_Footer?>
+         <?templateDesigner fragmentDescription GEN_A?></subform>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 44 11 000300060012002F0033004200440048004A005E0060 #/LP_aeg{}?>
+   </subform>
+   <?templateDesigner SaveTaggedPDF 1?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 97?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-04-16T11:35:25Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:213f533c-4359-4f34-8bbe-37bf49157674</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">frg_Footer</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">GEN_A</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.subFooter</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="da_DK" desc="Dansk (Danmark)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>marts</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sø</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lø</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet></xdp:xdp>
