@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-15T13:39:54Z" uuid="4e533c36-3708-4a93-8f9a-3e8101082034">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T09:30:43Z" uuid="288f59a5-3dd2-4e6f-bad9-79cd53892900">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -12000,8 +12000,7 @@ lNhQ2+BpEdB9SVDiJPqSSdZHiDy35la1m9TG/YVLNy0m222KAAetz6xcapwQiakSJqRI/9k=</image>
             <occur min="1" max="1"/>
             <subform x="1mm" y="105mm" usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)">
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 0?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
@@ -12063,15 +12062,6 @@ lNhQ2+BpEdB9SVDiJPqSSdZHiDy35la1m9TG/YVLNy0m222KAAetz6xcapwQiakSJqRI/9k=</image>
                      </value>
                   </caption>
                   <bind match="dataRef" ref="$record.Document.HeaderInfo.CarRegNo"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
                </field>
                <subform x="87mm" minH="22.225mm" name="subTestLabel" layout="tb" y="9mm" w="76.15mm">
                   <bind match="none"/>
@@ -12189,11 +12179,10 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
          <bind match="none"/>
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="192mm" name="subHeaderInfo" layout="tb">
             <bind match="none"/>
-            <subform w="192mm" name="DocumentHeaderRow1">
+            <subform w="192mm" name="DocumentHeaderBrandKeysImportedRow" layout="lr-tb">
                <bind match="none"/>
                <draw name="txtCarBrand" w="26mm" h="6mm">
                   <ui>
@@ -12211,7 +12200,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 5 Merke 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldCarBrand" access="readOnly" w="38mm" h="6mm" x="25.999mm">
+               <field name="fldCarBrand" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12236,7 +12225,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtKeys" w="31.07mm" h="6mm" x="63.982mm">
+               <draw name="txtKeys" w="31mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12250,9 +12239,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
+                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 14 Antall nøkler 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldKeys" access="readOnly" w="23mm" h="6mm" x="94.999mm">
+               <field name="fldKeys" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12277,7 +12266,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtImported" w="50.069mm" h="6mm" x="118.015mm">
+               <draw name="txtImported" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12293,7 +12282,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 14 Bruktimportert 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldImported" access="readOnly" w="24mm" h="6mm" x="167.999mm">
+               <field name="fldImported" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12319,9 +12308,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <para vAlign="bottom"/>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow2">
+            <subform w="192mm" name="DocumentHeaderModelRustRegisterChangedDateRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtModel" y="0mm" w="26mm" h="6mm" x="0.001mm">
+               <draw name="txtModel" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12337,7 +12326,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 6 Modell 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldCarModel" access="readOnly" w="38mm" h="6mm" y="0mm" x="25.999mm">
+               <field name="fldCarModel" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12362,7 +12351,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtAntiRustWarranty" y="0mm" w="31.07mm" h="6mm" x="63.982mm">
+               <draw name="txtAntiRustWarranty" w="31mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12376,9 +12365,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
+                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 15 Antirustgaranti 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldAntiRustWarranty" access="readOnly" w="23mm" h="6mm" y="0mm" x="94.999mm">
+               <field name="fldAntiRustWarranty" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12403,7 +12392,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtTimingBeltDate" y="0mm" w="50.069mm" h="6mm" x="118.015mm">
+               <draw name="txtTimingBeltDate" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12419,7 +12408,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 26 Registerreim skiftet, dato 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldTimingBeltDate" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.999mm">
+               <field name="fldTimingBeltDate" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12445,9 +12434,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <para vAlign="bottom"/>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow3">
+            <subform w="192mm" name="DocumentHeaderVariantRegisterChangedKmRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarModelDesc" y="0mm" w="26mm" h="6mm" x="0.001mm">
+               <draw name="txtCarModelDesc" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12463,7 +12452,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 7 Variant 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldCarModelDesc" access="readOnly" w="69mm" h="6mm" y="0mm" x="25.999mm">
+               <field name="fldCarModelDesc" access="readOnly" w="69mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12488,23 +12477,28 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
                   <para vAlign="middle"/>
                </field>
-               <draw name="txtTimingBeltMileage" y="0mm" w="50.069mm" h="6mm" x="118.015mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <value>
-                     <text>Registerreim skiftet, km</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
-                  <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
-                  <border>
-                     <edge thickness="0.1mm"/>
-                     <corner thickness="0.1mm"/>
-                  </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 24 Registerreim skiftet, km 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldTimingBeltMileage" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.999mm">
+               <subform layout="lr-tb" name="subMargin">
+                  <bind match="none"/>
+                  <draw name="txtTimingBeltMileage" w="50.069mm" h="6mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>Registerreim skiftet, km</text>
+                     </value>
+                     <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <border>
+                        <edge thickness="0.1mm"/>
+                        <corner thickness="0.1mm"/>
+                     </border>
+                     <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
+                     <?renderCache.textRun 24 Registerreim skiftet, km 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+                  <margin leftInset="23mm"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?>
+               <field name="fldTimingBeltMileage" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12529,10 +12523,10 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow4">
+            </subform>
+            <subform w="192mm" name="DocumentHeaderWheelDriveWheelEngineLastServiceRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtDrivingWheel" y="0mm" w="26mm" h="6mm" x="0.001mm">
+               <draw name="txtDrivingWheel" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12548,7 +12542,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 8 Drivhjul 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldDrivingWheel" access="readOnly" w="38mm" h="6mm" y="0mm" x="25.999mm">
+               <field name="fldDrivingWheel" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12573,7 +12567,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtEngineVolume" y="0mm" w="31.07mm" h="6mm" x="63.982mm">
+               <draw name="txtEngineVolume" w="31mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12587,9 +12581,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
+                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 16 Motor, syl.volum 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldEngineVolume" access="readOnly" w="23mm" h="6mm" y="0mm" x="94.999mm">
+               <field name="fldEngineVolume" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12614,7 +12608,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtDateOfLastService" y="0mm" w="50.069mm" h="6mm" x="118.015mm">
+               <draw name="txtDateOfLastService" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12630,7 +12624,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 13 Siste service 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldDateOfLastService" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.999mm">
+               <field name="fldDateOfLastService" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12656,9 +12650,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <para vAlign="bottom"/>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow5">
+            <subform w="192mm" name="DocumentHeaderGearTypeEngineEffectPKKRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtGearType" w="26mm" h="6mm" y="0mm" x="0.001mm">
+               <draw name="txtGearType" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12674,7 +12668,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 7 Girtype 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldGearType" access="readOnly" w="38mm" h="6mm" y="0mm" x="25.999mm">
+               <field name="fldGearType" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12699,7 +12693,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtEngineEffect" y="0mm" w="31.07mm" h="6mm" x="63.982mm">
+               <draw name="txtEngineEffect" w="31mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12713,9 +12707,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
+                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 13 Motor, effekt 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldEngineEffect" access="readOnly" w="23mm" h="6mm" y="0mm" x="94.999mm">
+               <field name="fldEngineEffect" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12740,7 +12734,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtDateOfLastControl" y="0mm" w="50.069mm" h="6mm" x="118.015mm">
+               <draw name="txtDateOfLastControl" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12756,7 +12750,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 11 PKK utført 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldDateOfLastControl" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.999mm">
+               <field name="fldDateOfLastControl" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12782,9 +12776,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <para vAlign="bottom"/>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow6">
+            <subform w="192mm" name="DocumentHeaderCharacteristicsFuelServicesRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarRegNo" y="0mm" w="26mm" h="6mm" x="0.001mm">
+               <draw name="txtCarRegNo" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12800,7 +12794,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 11 Kjennemerke 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldCarRegNo" access="readOnly" w="38mm" h="6mm" y="0mm" x="25.998mm">
+               <field name="fldCarRegNo" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12825,7 +12819,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtFuelTypeText" y="0mm" w="31.07mm" h="6mm" x="63.981mm">
+               <draw name="txtFuelTypeText" w="31mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12839,9 +12833,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
+                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 9 Drivstoff 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldFuelTypeText" access="readOnly" w="23mm" h="6mm" y="0mm" x="94.998mm">
+               <field name="fldFuelTypeText" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12866,7 +12860,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtServiceHandbook" y="0mm" w="50.069mm" h="6mm" x="118mm">
+               <draw name="txtServiceHandbook" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12882,7 +12876,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 27 Servicehefte/servicer fulgt 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldServiceHandbook" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.998mm">
+               <field name="fldServiceHandbook" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12908,9 +12902,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <para vAlign="bottom"/>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow7">
+            <subform w="192mm" name="DocumentHeaderFrameNumberChipTunedInstructionsRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarVIN" y="0mm" w="26mm" h="6mm" x="0.001mm">
+               <draw name="txtCarVIN" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12926,7 +12920,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 12 Underst. nr. 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldCarVIN" access="readOnly" w="38mm" h="6mm" y="0mm" x="25.999mm">
+               <field name="fldCarVIN" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12951,7 +12945,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtChipTuned" y="0mm" w="31.07mm" h="6mm" x="63.982mm">
+               <draw name="txtChipTuned" w="31mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -12965,9 +12959,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
+                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 17 Trimmet/chiptunet 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldChipTuned" access="readOnly" w="23mm" h="6mm" y="0mm" x="94.999mm">
+               <field name="fldChipTuned" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12992,7 +12986,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtInstructionManual" y="0mm" w="50.069mm" h="6mm" x="117.999mm">
+               <draw name="txtInstructionManual" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13008,7 +13002,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 27 Vognmappe m/instruksjonsbok 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldInstructionManual" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.999mm">
+               <field name="fldInstructionManual" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13034,9 +13028,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <para vAlign="bottom"/>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow8">
+            <subform w="192mm" name="DocumentHeaderKmConfirmedKmDamagedEarlierRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarMileage" y="0mm" w="26mm" h="6mm" x="0.001mm">
+               <draw name="txtCarMileage" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13052,7 +13046,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 2 Km 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldCarMileage" access="readOnly" w="38mm" h="6mm" y="0mm" x="25.999mm">
+               <field name="fldCarMileage" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13077,7 +13071,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtMileageConfirmed" y="0mm" w="31.07mm" h="6mm" x="63.999mm">
+               <draw name="txtMileageConfirmed" w="31mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13091,9 +13085,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
+                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 12 Bekreftet km 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldMileageConfirmed" access="readOnly" w="23mm" h="6mm" y="0mm" x="94.999mm">
+               <field name="fldMileageConfirmed" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13118,7 +13112,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtMajorDamage" y="0mm" w="50.069mm" h="6mm" x="118.015mm">
+               <draw name="txtMajorDamage" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13134,7 +13128,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 23 Tidligere større skade 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldMajorDamage" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.999mm">
+               <field name="fldMajorDamage" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13160,9 +13154,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <para vAlign="bottom"/>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow9">
+            <subform w="192mm" name="DocumentHeaderYearModelAirBagsOutOfServiceEarlierUseRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarModelYear" y="0mm" w="26mm" h="6mm" x="0.001mm">
+               <draw name="txtCarModelYear" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13178,7 +13172,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 10 Årsmodell 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldCarModelYear" access="readOnly" w="38mm" h="6mm" y="0mm" x="25.999mm">
+               <field name="fldCarModelYear" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13203,7 +13197,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txAirbagDisabled" y="0mm" w="31.07mm" h="6mm" x="63.982mm">
+               <draw name="txAirbagDisabled" w="31mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13217,9 +13211,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
+                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 19 Koll.puter utkoblet 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldAirbagDisabled" access="readOnly" w="23mm" h="6mm" y="0mm" x="94.999mm">
+               <field name="fldAirbagDisabled" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13244,7 +13238,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtAbnormalUse" y="0mm" w="50.069mm" h="6mm" x="118.015mm">
+               <draw name="txtAbnormalUse" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13260,7 +13254,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 31 Tidligere annen enn normal bruk 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldAbnormalUse" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.999mm">
+               <field name="fldAbnormalUse" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13286,9 +13280,9 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <para vAlign="bottom"/>
                </field>
                <?templateDesigner expand 0?></subform>
-            <subform w="192mm" name="DocumentHeaderRow10">
+            <subform w="192mm" name="DocumentHeaderFirstRegistrationLiabilityReportDateRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarRegDate" y="0mm" w="26mm" h="6mm" x="0.001mm">
+               <draw name="txtCarRegDate" w="26mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13304,7 +13298,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 16 Reg.første gang 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldCarRegDate" access="readOnly" w="38mm" h="6mm" y="0mm" x="25.999mm">
+               <field name="fldCarRegDate" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13329,7 +13323,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtEncumbrance" y="0mm" w="31.07mm" h="6mm" x="63.982mm">
+               <draw name="txtEncumbrance" w="31.07mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13348,7 +13342,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 9 Heftelser 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldEncumbrance" access="readOnly" w="23mm" h="6mm" y="0mm" x="94.999mm">
+               <field name="fldEncumbrance" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13376,7 +13370,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtDateOfReport" y="0mm" w="50.069mm" h="6mm" x="118.015mm">
+               <draw name="txtDateOfReport" w="50.069mm" h="6mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -13392,7 +13386,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </border>
                   <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
                   <?renderCache.textRun 12 Rapport dato 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldDateOfReport" access="readOnly" w="24mm" h="6mm" y="0mm" x="167.999mm">
+               <field name="fldDateOfReport" access="readOnly" w="23.861mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -14470,15 +14464,15 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 224 59 00030005000B000C000F0010001100120014001D002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A000A1 "(),-./1:ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvyåæø?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 208 55 0003000F001000110012001D002400250026002700280029002A002B002C002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005C0063006E00A1 ,-./:ABCDEFGHIKLMNOPRSTUVabcdefghijklmnoprstuvxyÅåø?>
-      <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 172 45 00030005000B000C000F001100120014001D00240025002600270029002E0030003100330036003700440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 "(),./1:ABCDFKMNPSTabdefghijklmnoprstuvyåø?>
-      <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 120 31 00030028002C002E002F0031003200330035003700380044004700480049004A004B004C004E004F00500051005200550056005700580059005C00A1 EIKLNOPRTUadefghiklmnorstuvyø?>
-      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 72 18 0001002C00420045004600470048004A004C004D004E004F005000510053005400550056 Kadefgiklmnoprstu?></subform>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 184 48 0003000F001000110012001D0024002500270028002A002B002C002E00300031003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006300A1 ,-./:ABDEGHIKMNPRSTUVabcdefghijklmnoprstuvyÅø?>
+      <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 116 30 0003000B000C0011001D002E003000440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E ().:KMabdefghijklmnoprstuvyå?>
+      <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 120 31 00030028002C002E002F0031003200330035003700380044004700480049004A004B004C004E004F00500051005200550056005700580059005C00A1 EIKLNOPRTUadefghiklmnorstuvyø?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -14491,11 +14485,10 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\ConditionReport\Exempelfiler\Tilstandsrapport_ConditionReport_20130115.dax?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe B - Takst\Tilstandsrapport\Tilstandsrapport_ConditionReport_20130115.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 97?>
+   <?templateDesigner Zoom 150?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
@@ -14641,14 +14634,14 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-15T13:39:54Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-16T09:30:43Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:4e533c36-3708-4a93-8f9a-3e8101082034</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:288f59a5-3dd2-4e6f-bad9-79cd53892900</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
