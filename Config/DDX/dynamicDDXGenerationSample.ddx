@@ -1,0 +1,6 @@
+<ddx:DDX xmlns:ddx="http://ns.adobe.com/DDX/1.0/">
+    <ddx:PDF result="PDFComplete.pdf">
+        <ddx:PDF source="file:////D:\LCConfiguration\Attachments\\Contract.pdf"/>
+        <ddx:PDF source="file:////D:\LCConfiguration\Attachments\\Legal.pdf"/>
+    </ddx:PDF>
+</ddx:DDX>

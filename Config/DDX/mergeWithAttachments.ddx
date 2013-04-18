@@ -1,0 +1,8 @@
+<DDX xmlns="http://ns.adobe.com/DDX/1.0/">
+  <DDXProcessorSetting name="checkpoint" value="2500"/>
+  <PDF result="PDFComplete.pdf">
+    <PDF source="process:///process_data/@inRenderedPDF"/>
+    <NoXFA/>
+    <PDF source="process:///process_data/AssemblerResult/object/documents[@id='PDFComplete.pdf']"/>
+  </PDF>
+</DDX>

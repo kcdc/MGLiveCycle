@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adiarchive>
+	<invoice 
+		countrycode="LANDKODE"
+		archiveid="ARKIVNR"
+		archivedyear="ARKIVAAR"
+		doctype="RAPPORTID"
+		invoiceno="FAKTURANR"
+		custno="KUNDENR"
+		custname="NAVN"
+		invoicedate="FAKTDATO"
+		ordernumber="GJENNOMGNR"
+		backuppath="data\Country\JFNR\DocType\FNR\FAKTAR\FAKTMND"
+		pdfpath="pdf\Country\JFNR\DocType\FNR\FAKTAR\FAKTMND"
+		pdfname="I-FNR-FAKTNR-FAKTURANR.pdf"
+		depno="FNR"
+		depnojur="JFNR"
+		depname="FORHANDLERNAVN"
+		amount="BELOP"
+		vehicleregno="BILNR"
+		accountno="RESKONTRONR"
+	/>
+</adiarchive>

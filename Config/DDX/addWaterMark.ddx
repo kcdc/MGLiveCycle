@@ -1,0 +1,11 @@
+<DDX xmlns="http://ns.adobe.com/DDX/1.0/">
+<PDF result="process:///process_data/outputPDF">
+<Watermark opacity="50%" rotation="45">
+<StyledText>
+<p color="red" font-family="Minion Pro" font-size="72pt">TEST TEST TEST</p>
+</StyledText>
+</Watermark>
+  <PDF source="process:///process_data/inPDF"/>
+<NoXFA/>
+</PDF>
+</DDX>
