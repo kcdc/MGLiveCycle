@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T11:35:25Z" uuid="213f533c-4359-4f34-8bbe-37bf49157674">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-18T12:20:17Z" uuid="1a7724cd-57bb-4491-bade-3874196b17cc">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -25,7 +25,7 @@
          <bind match="none"/>
          <subform layout="tb" name="sub_FooterA" w="44.655mm">
             <bind match="none"/>
-            <field access="protected" minH="2.4mm" name="FooterA1" minW="40mm">
+            <field access="protected" name="FooterA1" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -37,7 +37,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterA1" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterA2" minW="40mm">
+            <field access="protected" name="FooterA2" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -49,7 +49,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterA2" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterA3" minW="40mm">
+            <field access="protected" name="FooterA3" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -61,7 +61,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterA3" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterA4" minW="40mm">
+            <field access="protected" name="FooterA4" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -73,7 +73,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterA4" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterA5" minW="40mm">
+            <field access="protected" name="FooterA5" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -85,7 +85,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterA5" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterA6" minW="40mm">
+            <field access="protected" name="FooterA6" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -100,7 +100,7 @@
             <?templateDesigner expand 1?></subform>
          <subform layout="tb" name="sub_FooterB" w="45mm">
             <bind match="none"/>
-            <field access="protected" minH="2.4mm" name="FooterB1" minW="40mm">
+            <field access="protected" name="FooterB1" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -112,7 +112,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterB1" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterB2" minW="40mm">
+            <field access="protected" name="FooterB2" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -124,7 +124,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterB2" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterB3" minW="40mm">
+            <field access="protected" name="FooterB3" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -136,7 +136,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterB3" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterB4" minW="40mm">
+            <field access="protected" name="FooterB4" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -148,7 +148,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterB4" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterB5" minW="40mm">
+            <field access="protected" name="FooterB5" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -160,7 +160,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterB5" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterB6" minW="40mm">
+            <field access="protected" name="FooterB6" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -175,7 +175,7 @@
             <?templateDesigner expand 1?></subform>
          <subform layout="tb" name="sub_FooterC" w="45mm">
             <bind match="none"/>
-            <field access="protected" minH="2.4mm" name="FooterC1" minW="40mm">
+            <field access="protected" name="FooterC1" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -187,7 +187,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterC1" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterC2" minW="40mm">
+            <field access="protected" name="FooterC2" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -199,7 +199,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterC2" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterC3" minW="40mm">
+            <field access="protected" name="FooterC3" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -211,7 +211,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterC3" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterC4" minW="40mm">
+            <field access="protected" name="FooterC4" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -223,7 +223,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterC4" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterC5" minW="40mm">
+            <field access="protected" name="FooterC5" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -235,7 +235,7 @@
                </ui>
                <bind ref="$.Document.DocumentHeader.FooterC5" match="dataRef"/>
             </field>
-            <field access="protected" minH="2.4mm" name="FooterC6" minW="40mm">
+            <field access="protected" name="FooterC6" minW="40mm" h="2.4mm">
                <font typeface="Arial" size="6pt"/>
                <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                <para vAlign="middle"/>
@@ -250,7 +250,7 @@
             <?templateDesigner expand 1?></subform>
          <subform name="sub_FooterD" layout="tb" w="43.724mm">
             <bind match="none"/>
-            <field name="FooterD1" minH="2.4mm" access="protected" minW="40mm">
+            <field name="FooterD1" access="protected" minW="40mm" h="2.4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -262,7 +262,7 @@
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD1"/>
             </field>
-            <field name="FooterD2" minH="2.4mm" access="protected" minW="40mm">
+            <field name="FooterD2" access="protected" minW="40mm" h="2.4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -274,7 +274,7 @@
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD2"/>
             </field>
-            <field name="FooterD3" minH="2.4mm" access="protected" minW="40mm">
+            <field name="FooterD3" access="protected" minW="40mm" h="2.4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -286,7 +286,7 @@
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD3"/>
             </field>
-            <field name="FooterD4" minH="2.4mm" access="protected" minW="40mm">
+            <field name="FooterD4" access="protected" minW="40mm" h="2.4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -298,7 +298,7 @@
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD4"/>
             </field>
-            <field name="FooterD5" minH="2.4mm" access="protected" minW="40mm">
+            <field name="FooterD5" access="protected" minW="40mm" h="2.4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -310,7 +310,7 @@
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD5"/>
             </field>
-            <field name="FooterD6" minH="2.4mm" access="protected" minW="40mm">
+            <field name="FooterD6" access="protected" minW="40mm" h="2.4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -411,10 +411,10 @@ this.rawValue = output;
    </subform>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 97?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?></template>
+   <?templateDesigner Zoom 131?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -441,14 +441,14 @@ this.rawValue = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-16T11:35:25Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-18T12:20:17Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:213f533c-4359-4f34-8bbe-37bf49157674</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:1a7724cd-57bb-4491-bade-3874196b17cc</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

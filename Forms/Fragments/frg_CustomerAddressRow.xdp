@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T10:42:23Z" uuid="24cb4d92-08e6-465f-8e48-0981632b679a">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-18T12:12:35Z" uuid="54d0451e-63b8-48cc-a89d-66ee31da01ee">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -74,9 +74,9 @@ if (this.rawValue == null)
             <occur min="0" max="-1"/>
             <keep intact="contentArea"/>
             <?templateDesigner expand 1?></subform>
-         <field name="fldCustomerPostalAddress" minH="4mm" minW="70mm" access="readOnly">
+         <field name="fldCustomerPostalAddress" minH="4mm" access="readOnly" w="70mm">
             <ui>
-               <textEdit>
+               <textEdit multiLine="1">
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
@@ -85,9 +85,9 @@ if (this.rawValue == null)
             <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
             <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPostalAddress"/>
          </field>
-         <field name="fldCustomerPostalCityZip" minH="4mm" minW="70mm" access="readOnly">
+         <field name="fldCustomerPostalCityZip" minH="4mm" access="readOnly" w="70mm">
             <ui>
-               <textEdit>
+               <textEdit multiLine="1">
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
@@ -96,9 +96,9 @@ if (this.rawValue == null)
             <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
             <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPostalCityZip"/>
          </field>
-         <field name="fldCustomerCountry" minH="4mm" minW="70mm" access="readOnly">
+         <field name="fldCustomerCountry" minH="4mm" access="readOnly" w="70mm">
             <ui>
-               <textEdit>
+               <textEdit multiLine="1">
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
@@ -114,10 +114,10 @@ if (this.rawValue == null)
          <?templateDesigner fragmentDescription NO_A?></subform>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 12 3 001D00240057:At?>
    </subform>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 97?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?></template>
+   <?templateDesigner Zoom 131?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -144,14 +144,14 @@ if (this.rawValue == null)
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-16T10:42:23Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-18T12:12:35Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:24cb4d92-08e6-465f-8e48-0981632b679a</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:54d0451e-63b8-48cc-a89d-66ee31da01ee</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
