@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T09:30:43Z" uuid="288f59a5-3dd2-4e6f-bad9-79cd53892900">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-24T13:57:51Z" uuid="00025887-2bbf-4631-bb41-4ccb4c295f8a">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -9,7 +9,7 @@
       <pageSet>
          <pageArea name="mpgPage1" id="Page1">
             <subform w="203mm" minH="18mm" name="subDocumentHeader">
-               <bind match="dataRef" ref="$.Document.DocumentHeader"/>
+               <bind match="none"/>
                <field name="fldDocumentName" minW="66mm" access="readOnly" x="9mm" y="9mm" h="9mm">
                   <ui>
                      <textEdit>
@@ -25,15 +25,6 @@
                      <para vAlign="bottom"/>
                   </caption>
                   <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-                  </event>
                   <font typeface="Arial" size="9pt"/>
                   <para vAlign="middle"/>
                   <border>
@@ -59,63 +50,7 @@
                      </value>
                   </field>
                   <?templateDesigner expand 0?></subform>
-               <subform x="77mm" y="9mm" layout="tb" minH="22.225mm" name="sub_TestLabel" w="76.15mm">
-                  <bind match="none"/>
-                  <field presence="hidden" h="5.939mm" minW="32.514mm" name="fld_TestLabelData" access="readOnly">
-                     <font typeface="Arial" baselineShift="0pt" size="14pt" weight="bold"/>
-                     <margin bottomInset="0.5mm" leftInset="1.0008mm" rightInset="0.5mm" topInset="0.5mm"/>
-                     <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <bind ref="$.TestLabel" match="dataRef"/>
-                     <?templateDesigner expand 1?></field>
-                  <field access="readOnly" minH="12.7mm" name="fld_TestLabel" w="76mm">
-                     <font typeface="Arial" size="8pt"/>
-                     <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
-                     <ui>
-                        <textEdit multiLine="1">
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <bind match="none"/>
-                     <value>
-                        <exData contentType="text/html"/>
-                     </value>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var receivedText = fld_TestLabelData.rawValue;
-	//xfa.host.messageBox(receivedText);
-    
-	var cleanedValue = receivedText;
-//If form pre-population logic has converted &lt; and &gt; signs into &amp;lt; or &amp;gt; then un-comment below two lines. Those two lines will do the needed replacement (&amp;gt; to &gt;)
-	cleanedValue = receivedText.replace(/(\&amp;lt\;)/g,"&lt;");
-	cleanedValue = cleanedValue.replace(/(\&amp;gt\;)/g,"&gt;"); 
-
-//	xfa.host.messageBox("exdataTemplate.rawValue " + exdataTemplate.rawValue);
-
-	//How does rich text work in this sample?
-	//To set the data properly into a richtext supported TextField we have to little bit more than setting rawValue.
-	// The data needs to be stored in exData section of text field with a little formatting around. I call it 'exData envelope' where I inject the content at certain place. 
-	// The place in this envelope where the actual content needs to injected is represented with 'ccc'.
-	
-	//Get the envelope
-	var templateVal = sub_RichTextEnvelope.exdataTemplate.rawValue;
-	//replace 'ccc' with the data we received.
-	cleanedValue = templateVal.replace(/(ccc)/g,cleanedValue); 
-	
-	//show what's getting set into the textfield
-	//console.println(cleanedValue);
-	
-	//this is how we have to set the rich text data into the textfield's exData section.
-	this.value.exData.loadXML(cleanedValue,1,1);
-
-</script>
-                     </event>
-                     <?templateDesigner expand 1?></field>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="77mm" y="9mm">
                   <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
                   <bind/>
@@ -12001,7 +11936,7 @@ lNhQ2+BpEdB9SVDiJPqSSdZHiDy35la1m9TG/YVLNy0m222KAAetz6xcapwQiakSJqRI/9k=</image>
             <subform x="1mm" y="105mm" usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)">
                <bind/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></pageArea>
+            <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform w="202mm" minH="18mm" name="subDocumentHeader">
@@ -12084,7 +12019,7 @@ lNhQ2+BpEdB9SVDiJPqSSdZHiDy35la1m9TG/YVLNy0m222KAAetz6xcapwQiakSJqRI/9k=</image>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
 
-var receivedText = xfa.resolveNode("Data.#pageSet.mpgPage1.subDocumentHeader.subTestLabel.fldTestLabelData").rawValue;
+var receivedText = xfa.resolveNode("#pageSet.mpgPage1.subDocumentHeader.sub_TestLabel.fld_TestLabelData").rawValue;
 	//xfa.host.messageBox(receivedText);
     
 	var cleanedValue = receivedText;
@@ -12155,7 +12090,7 @@ var receivedText = xfa.resolveNode("Data.#pageSet.mpgPage1.subDocumentHeader.sub
                <bind match="none"/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
-this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel.verticalTextLabel").rawValue;
+this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLabel").rawValue;
 
 
 
@@ -12184,22 +12119,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
             <bind match="none"/>
             <subform w="192mm" name="DocumentHeaderBrandKeysImportedRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarBrand" w="26mm" h="6mm">
+               <field name="fldLabelCarBrand" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Merke</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Merke</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 5 Merke 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldCarBrand" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12225,22 +12175,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtKeys" w="31mm" h="6mm">
+               <field name="fldLabelKeys" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Antall nøkler</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Antall nøkler</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 14 Antall nøkler 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldKeys" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12266,23 +12231,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtImported" w="50.069mm" h="6mm">
+               <field name="fldLabelImported" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Bruktimportert</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Bruktimportert</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 14 Bruktimportert 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldImported" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldImported" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12310,22 +12290,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderModelRustRegisterChangedDateRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtModel" w="26mm" h="6mm">
+               <field name="fldLabelCarModel" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Modell</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Modell</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 6 Modell 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldCarModel" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12351,22 +12346,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtAntiRustWarranty" w="31mm" h="6mm">
+               <field name="fldLabelAntiRustWarranty" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Antirustgaranti</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Antirustgaranti</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 15 Antirustgaranti 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldAntiRustWarranty" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12392,23 +12402,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtTimingBeltDate" w="50.069mm" h="6mm">
+               <field name="fldLabelTimingBeltDate" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Registerreim skiftet, dato</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Registerreim skiftet, dato</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 26 Registerreim skiftet, dato 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldTimingBeltDate" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldTimingBeltDate" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12436,22 +12461,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderVariantRegisterChangedKmRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarModelDesc" w="26mm" h="6mm">
+               <field name="fldLabelCarModelDesc" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Variant</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Variant</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 7 Variant 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldCarModelDesc" access="readOnly" w="69mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12479,26 +12519,40 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                </field>
                <subform layout="lr-tb" name="subMargin">
                   <bind match="none"/>
-                  <draw name="txtTimingBeltMileage" w="50.069mm" h="6mm">
+                  <field name="fldLabelTimingBeltMileage" w="50mm" h="6mm" access="readOnly">
                      <ui>
-                        <textEdit/>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
                      </ui>
-                     <value>
-                        <text>Registerreim skiftet, km</text>
-                     </value>
-                     <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                     <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                     <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <caption reserve="0mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <value>
+                           <text>Registerreim skiftet, km</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <bind match="none"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
                      <border>
                         <edge thickness="0.1mm"/>
                         <corner thickness="0.1mm"/>
                      </border>
-                     <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                     <?renderCache.textRun 24 Registerreim skiftet, km 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+                  </field>
                   <margin leftInset="23mm"/>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 0?>
-               <field name="fldTimingBeltMileage" access="readOnly" w="23.861mm" h="6mm">
+               <field name="fldTimingBeltMileage" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12523,25 +12577,40 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-            </subform>
+               <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderWheelDriveWheelEngineLastServiceRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtDrivingWheel" w="26mm" h="6mm">
+               <field name="fldLabelDrivingWheel" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Drivhjul</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Drivhjul</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 8 Drivhjul 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldDrivingWheel" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12567,22 +12636,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtEngineVolume" w="31mm" h="6mm">
+               <field name="fldLabelEngineVolume" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Motor, syl.volum</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Motor, syl.volum</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 16 Motor, syl.volum 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldEngineVolume" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12608,23 +12692,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtDateOfLastService" w="50.069mm" h="6mm">
+               <field name="fldLabelDateOfLastService" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Siste service</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Siste service</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 13 Siste service 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldDateOfLastService" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldDateOfLastService" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12652,22 +12751,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderGearTypeEngineEffectPKKRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtGearType" w="26mm" h="6mm">
+               <field name="fldLabelGearType" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Girtype</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Girtype</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 7 Girtype 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldGearType" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12693,22 +12807,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtEngineEffect" w="31mm" h="6mm">
+               <field name="fldLabelEngineEffect" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Motor, effekt</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Motor, effekt</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 13 Motor, effekt 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldEngineEffect" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12734,23 +12863,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtDateOfLastControl" w="50.069mm" h="6mm">
+               <field name="fldLabelDateOfLastControl" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>PKK utført</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>PKK utført</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 11 PKK utført 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldDateOfLastControl" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldDateOfLastControl" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12778,22 +12922,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderCharacteristicsFuelServicesRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarRegNo" w="26mm" h="6mm">
+               <field name="fldLabelCarRegNo" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Kjennemerke</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Kjennemerke</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 11 Kjennemerke 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldCarRegNo" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12819,22 +12978,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtFuelTypeText" w="31mm" h="6mm">
+               <field name="fldLabelFuelTypeText" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Drivstoff</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Drivstoff</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 9 Drivstoff 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldFuelTypeText" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12860,23 +13034,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtServiceHandbook" w="50.069mm" h="6mm">
+               <field name="fldLabelServiceHandbook" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Servicehefte/servicer fulgt</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Servicehefte/servicer fulgt</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 27 Servicehefte/servicer fulgt 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldServiceHandbook" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldServiceHandbook" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -12904,22 +13093,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderFrameNumberChipTunedInstructionsRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarVIN" w="26mm" h="6mm">
+               <field name="fldLabelCarVIN" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Underst. nr.</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Underst. nr.</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 12 Underst. nr. 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldCarVIN" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12945,22 +13149,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtChipTuned" w="31mm" h="6mm">
+               <field name="fldLabelChipTuned" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Trimmet/chiptunet</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Trimmet/chiptunet</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 17 Trimmet/chiptunet 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldChipTuned" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -12986,23 +13205,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtInstructionManual" w="50.069mm" h="6mm">
+               <field name="fldLabelInstructionManual" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Vognmappe m/instruksjonsbok</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Vognmappe m/instruksjonsbok</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 27 Vognmappe m/instruksjonsbok 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldInstructionManual" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldInstructionManual" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13030,22 +13264,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderKmConfirmedKmDamagedEarlierRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarMileage" w="26mm" h="6mm">
+               <field name="fldLabelCarMileage" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Km</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Km</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 2 Km 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldCarMileage" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -13071,22 +13320,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtMileageConfirmed" w="31mm" h="6mm">
+               <field name="fldLabelMileageConfirmed" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Bekreftet km</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Bekreftet km</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 12 Bekreftet km 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldMileageConfirmed" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -13112,23 +13376,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtMajorDamage" w="50.069mm" h="6mm">
+               <field name="fldLabelMajorDamage" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Tidligere større skade</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Tidligere større skade</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 23 Tidligere større skade 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldMajorDamage" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldMajorDamage" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13156,22 +13435,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderYearModelAirBagsOutOfServiceEarlierUseRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarModelYear" w="26mm" h="6mm">
+               <field name="fldLabelCarModelYear" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Årsmodell</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Årsmodell</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 10 Årsmodell 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldCarModelYear" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -13197,22 +13491,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txAirbagDisabled" w="31mm" h="6mm">
+               <field name="fldLabelAirbagDisabled" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Koll.puter utkoblet</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Koll.puter utkoblet</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 85039 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 19 Koll.puter utkoblet 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldAirbagDisabled" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -13238,23 +13547,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtAbnormalUse" w="50.069mm" h="6mm">
+               <field name="fldLabelAbnormalUse" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Tidligere annen enn normal bruk</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Tidligere annen enn normal bruk</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 31 Tidligere annen enn normal bruk 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldAbnormalUse" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldAbnormalUse" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13282,22 +13606,37 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                <?templateDesigner expand 0?></subform>
             <subform w="192mm" name="DocumentHeaderFirstRegistrationLiabilityReportDateRow" layout="lr-tb">
                <bind match="none"/>
-               <draw name="txtCarRegDate" w="26mm" h="6mm">
+               <field name="fldLabelCarRegDate" w="26mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Reg.første gang</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Reg.første gang</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 70866 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 16 Reg.første gang 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldCarRegDate" access="readOnly" w="38mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -13323,16 +13662,32 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtEncumbrance" w="31.07mm" h="6mm">
+               <field name="fldLabelEncumbrance" w="31mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Heftelser</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Heftelser</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
@@ -13340,8 +13695,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                         <color value="217,217,0"/>
                      </fill>
                   </border>
-                  <?renderCache.bounds 85237 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 9 Heftelser 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
+               </field>
                <field name="fldEncumbrance" access="readOnly" w="23mm" h="6mm">
                   <ui>
                      <textEdit>
@@ -13370,23 +13724,38 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   <margin bottomInset="0.5mm" leftInset="1mm" rightInset="0mm" topInset="0mm"/>
                   <para vAlign="bottom"/>
                </field>
-               <draw name="txtDateOfReport" w="50.069mm" h="6mm">
+               <field name="fldLabelDateOfReport" w="50mm" h="6mm" access="readOnly">
                   <ui>
-                     <textEdit/>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
                   </ui>
-                  <value>
-                     <text>Rapport dato</text>
-                  </value>
-                  <font size="8.5pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                  <font size="9pt" typeface="Arial"/>
                   <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="bottom" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Rapport dato</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
                   <border>
                      <edge thickness="0.1mm"/>
                      <corner thickness="0.1mm"/>
                   </border>
-                  <?renderCache.bounds 139093 15591 0 0 2835 0 0 0?>
-                  <?renderCache.textRun 12 Rapport dato 0 2835 13802 0 0 0 "Arial" 1 0 8500 ISO-8859-1?></draw>
-               <field name="fldDateOfReport" access="readOnly" w="23.861mm" h="6mm">
+               </field>
+               <field name="fldDateOfReport" access="readOnly" w="24mm" h="6mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -13878,7 +14247,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                   </field>
                   <?templateDesigner expand 0?></subform>
                <?templateDesigner expand 0?></subform>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform y="177mm" w="192mm" name="subCommentsImageHolder">
             <bind match="none"/>
             <subform w="83mm" name="subComments" x="0.001mm" y="0mm">
@@ -14464,14 +14833,16 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 224 59 00030005000B000C000F0010001100120014001D002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A000A1 "(),-./1:ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvyåæø?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 184 48 0003000F001000110012001D0024002500270028002A002B002C002E00300031003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006300A1 ,-./:ABDEGHIKMNPRSTUVabcdefghijklmnoprstuvyÅø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 192 50 0003000F001000110012001D0024002500270028002A002B002C002E002F00300031003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005C006300A1 ,-./:ABDEGHIKLMNPRSTUVabcdefghijklmnoprstuvxyÅø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 116 30 0003000B000C0011001D002E003000440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E ().:KMabdefghijklmnoprstuvyå?>
-      <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 120 31 00030028002C002E002F0031003200330035003700380044004700480049004A004B004C004E004F00500051005200550056005700580059005C00A1 EIKLNOPRTUadefghiklmnorstuvyø?></subform>
+      <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 120 31 00030028002C002E002F0031003200330035003700380044004700480049004A004B004C004E004F00500051005200550056005700580059005C00A1 EIKLNOPRTUadefghiklmnorstuvyø?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 88 22 00240025002D002E002F003000330034003A004200440045004600470048004A004D00500053005400550057CDLMNORSYacdefgilorstv?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner Zoom 71?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -14485,10 +14856,9 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe B - Takst\Tilstandsrapport\Tilstandsrapport_ConditionReport_20130115.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\..\..\..\..\..\Users\Göran Persson\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe B - Takst\Tilstandsrapport\Tilstandsrapport_ConditionReport_20130115.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Zoom 150?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
@@ -14634,14 +15004,14 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-16T09:30:43Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-24T13:57:51Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:288f59a5-3dd2-4e6f-bad9-79cd53892900</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:00025887-2bbf-4631-bb41-4ccb4c295f8a</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
