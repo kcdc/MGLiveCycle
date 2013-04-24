@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-11T14:08:33Z" uuid="3dfe788b-1b46-405e-9bec-30b3243c0b73">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-24T20:17:18Z" uuid="1897600e-43d7-4a62-bfb9-28bb26d044b4">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -12,8 +12,7 @@
             <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="5mm" y="106mm">
                <bind/>
                <?templateDesigner expand 1?></subform>
-            <subform usehref=".\Fragments\frg_LogoHolder.xdp#som($template.form1.subLogoHolder)" x="110mm" y="21mm" presence="hidden">
-               <bind/>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="6mm">
                <?templateDesigner expand 1?></subform>
             <subform w="210mm" h="197.547mm" name="subHeader">
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
@@ -878,18 +877,6 @@ this.rawValue = output;
                   </draw>
                   <?templateDesigner expand 0?></subform>
                <?templateDesigner expand 0?></subform>
-            <subform x="164mm" y="6mm" usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)">
-               <bind/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-
-this.presence = "visible";
-this.access = "protected";
-</script>
-               </event>
-               <?templateDesigner expand 0?>
-            </subform>
             <contentArea x="15mm" y="69mm" w="190mm" h="200mm" name="areaPage1" id="areaPage1_ID"/>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
@@ -4165,7 +4152,7 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 150?>
+   <?templateDesigner Zoom 144?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -4567,14 +4554,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-11T14:08:33Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-24T20:17:18Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3dfe788b-1b46-405e-9bec-30b3243c0b73</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:1897600e-43d7-4a62-bfb9-28bb26d044b4</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">

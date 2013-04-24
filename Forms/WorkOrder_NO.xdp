@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-10T11:02:53Z" uuid="2b296f01-6305-48c1-90e6-105d7e723236">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-24T20:05:28Z" uuid="409e0765-1d08-48a8-80df-64e618fc49a5">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -13,8 +13,7 @@
                <bind match="none"/>
                <subform x="13.069mm" y="7mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <field name="L_DocTypeWorkOrder" y="18mm" x="13.069mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
@@ -50,12 +49,10 @@ this.rawValue = output;
                </field>
                <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="112.069mm" y="22mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <subform x="15mm" y="270mm" usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)">
                <?templateDesigner expand 0?>
@@ -81,8 +78,7 @@ this.access = "protected";
                   <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
                   <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
                </border>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <contentArea x="15mm" y="43mm" w="190mm" h="225mm" name="areaPage1" id="areaPage1_ID"/>
             <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="105mm">
                <event activity="initialize" ref="$" name="event__initialize">
@@ -91,38 +87,13 @@ xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verticalTextLabel")
 </script>
                </event>
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
-            <subform usehref=".\Fragments\frg_LogoHolder.xdp#som($template.form1.subLogoHolder)" x="124mm" y="25mm" presence="hidden">
-               <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
-            <?templateDesigner expand 0?></pageArea>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea y="39mm" w="190mm" h="222mm" name="areaPage1" id="areaPage1_ID_copy2" x="15mm"/>
-            <subform x="164mm" y="4mm" usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)">
-               <bind/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-
-this.presence = "visible";
-this.access = "protected";
-</script>
-               </event>
-               <border>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-               </border>
-               <?templateDesigner expand 0?>
-            </subform>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="4mm">
+               <?templateDesigner expand 1?></subform>
             <subform w="204.15mm" h="39mm" name="subHeader">
                <bind match="none"/>
                <field name="L_DocTypeWorkOrder" y="18mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
@@ -197,16 +168,13 @@ this.rawValue = output;
                   <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_DocInfo.xdp#som($template.form1.subDocInfo)" x="126mm" y="27mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="118mm" y="22mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="7mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <field name="verticalLabel" minH="6mm" access="readOnly" minW="43.35mm" x="4mm" y="155.35mm" rotate="90">
                <ui>
@@ -233,7 +201,7 @@ this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verti
                <?templateDesigner expand 0?>
                <bind/>
             </subform>
-            <?templateDesigner expand 0?></pageArea>
+            <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
       <subform layout="tb" w="179mm" name="pageContent">
          <bind match="none"/>
@@ -2904,7 +2872,7 @@ this.caption.value.text = output;
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 103?>
+   <?templateDesigner Zoom 144?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -3296,14 +3264,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-10T11:02:53Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-24T20:05:28Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:2b296f01-6305-48c1-90e6-105d7e723236</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:409e0765-1d08-48a8-80df-64e618fc49a5</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">

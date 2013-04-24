@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-18T12:33:52Z" uuid="3ddf5e88-552e-48c7-830c-4202750140cd">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-24T20:01:12Z" uuid="33cc0d42-0002-49cf-a7f2-35db42592ca0">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -64,110 +64,10 @@ this.rawValue = firstTitlePart+" "+secondTitlePart;
                <?templateDesigner expand 1?></subform>
             <subform x="15mm" y="270mm" usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)">
                <margin/>
+               <bind/>
                <?templateDesigner expand 0?>
-               <bind/>
             </subform>
-            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" hAlign="right" w="32.04mm" anchorType="topLeft" x="164mm" y="9mm">
-               <bind/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-
-this.presence = "visible";
-this.access = "protected";
-</script>
-               </event>
-               <border>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-               </border>
-               <field presence="hidden" h="17mm" hAlign="right" name="imgLogo" w="30mm" x="0in" y="0in">
-                  <bind/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-this.border.presence = "hidden";
-this.rawValue = xfa.resolveNode("mpgPage1.subLogoHolder.imgLogo").rawValue;
-xfa.resolveNode("mpgPage1.subLogoHolder.imgLogo").rawValue = "";
-var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
-//app.alert(DocHeaderBrand);
-
-if ( DocHeaderBrand == "S")
-{
-	skodaLogo.rawValue = this.rawValue;
-	this.rawValue = "";
-
-	skodaLogo.presence = "visible";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"
-	
-	
-}
-else if ( DocHeaderBrand == "V")
-{
-	vwLogo.rawValue = this.rawValue;
-	this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "visible";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"
-}
-else if ( DocHeaderBrand == "A" )
-{
-	audiLogo.rawValue = this.rawValue;
-	this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "visible";
-	audiServiceLogo.presence = "hidden"
-
-}
-else if (DocHeaderBrand == "U")
-{
-	audiServiceLogo.rawValue = this.rawValue;
-	this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "visible"
-}
-
-else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
-{
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"		
-}
-
-</script>
-                  </event>
-               </field>
-               <field h="20mm" hAlign="right" name="skodaLogo" w="18mm" x="14.04mm" y="2.081mm">
-                  <bind/>
-               </field>
-               <field h="15mm" hAlign="right" name="vwLogo" w="15mm" x="15.7mm" y="5.056mm">
-                  <bind/>
-               </field>
-               <field h="16mm" hAlign="right" name="audiLogo" w="29mm" x="1.561mm" y="3.16mm">
-                  <bind/>
-               </field>
-               <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="9.56mm" y="0.402mm">
-                  <bind/>
-               </field>
-               <?templateDesigner expand 1?></subform>
-            <subform usehref=".\Fragments\frg_LogoHolder.xdp#som($template.form1.subLogoHolder)" x="109mm" y="19mm" presence="hidden">
-               <bind/>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="162mm" y="10mm">
                <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="1mm" y="127mm">
                <field h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm">
@@ -183,41 +83,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="15mm" y="43mm" w="190mm" h="225mm" name="areaPage1"/>
-            <subform x="164mm" y="4mm" usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)">
-               <bind/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-
-this.presence = "visible";
-this.access = "protected";
-</script>
-               </event>
-               <border>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-               </border>
-               <field presence="hidden" h="17mm" hAlign="right" name="imgLogo" w="30mm" x="0in" y="0in">
-                  <bind/>
-               </field>
-               <field h="20mm" hAlign="right" name="skodaLogo" w="18mm" x="14.04mm" y="2.081mm">
-                  <bind/>
-               </field>
-               <field h="15mm" hAlign="right" name="vwLogo" w="15mm" x="15.7mm" y="5.056mm">
-                  <bind/>
-               </field>
-               <field h="16mm" hAlign="right" name="audiLogo" w="29mm" x="1.561mm" y="3.16mm">
-                  <bind/>
-               </field>
-               <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="9.56mm" y="0.402mm">
-                  <bind/>
-               </field>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="4mm">
                <?templateDesigner expand 1?></subform>
             <subform w="204.15mm" h="282.633mm" name="subHeader">
                <bind match="none"/>
@@ -879,7 +745,8 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <border>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
@@ -894,7 +761,8 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subTopTextMain" layout="tb">
             <bind match="none"/>
@@ -1919,10 +1787,10 @@ this.caption.value.text = output;
                      <para vAlign="bottom"/>
                   </caption>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">if(CarPriceEstimate.pageContent.SubPriceInformation.subResgistrationDesc
+                     <script contentType="application/x-javascript">/*if(CarPriceEstimate.pageContent.SubPriceInformation.subResgistrationDesc.numRegistrationStar.rawValue == "")
 {
 	this.presence = "hidden";
-}
+}*/
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
@@ -7110,8 +6978,8 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 244 64 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F003000310032003300350036003700390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTV_abcdefghijklmnoprstuvwxy{}Ååø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 184 47 0003000B000C000D000F0011001D002400250026002700280029002C002E002F0030003100320033003500360037003900440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E ()*,.:ABCDEFIKLMNOPRSTVabdefghijklmnoprstuvyå?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
@@ -7120,7 +6988,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 131?>
+   <?templateDesigner Zoom 144?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -7134,7 +7002,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe A - Mverk\5 -Prisoverslag bil\Prisoverslag - FinanceType - Loan.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe A - Mverk\5 -Prisoverslag bil\Prisoverslag_Forbruk_CarPriceEstimate_20130116.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
@@ -7286,14 +7154,14 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-18T12:33:52Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-24T20:01:12Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3ddf5e88-552e-48c7-830c-4202750140cd</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:33cc0d42-0002-49cf-a7f2-35db42592ca0</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
