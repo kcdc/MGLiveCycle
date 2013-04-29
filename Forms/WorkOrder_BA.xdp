@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-24T20:17:18Z" uuid="1897600e-43d7-4a62-bfb9-28bb26d044b4">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-29T14:01:33Z" uuid="3ad86382-3e12-4429-b642-41c96ceb68d0">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -57,42 +57,6 @@ else
                   </field>
                   <?templateDesigner expand 0?></subform>
                <bind match="none"/>
-               <field name="DealerNameMarketing" minW="155mm" y="8mm" x="15mm" minH="11mm" access="readOnly">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Comic Sans MS" size="24pt" weight="bold"/>
-                  <margin topInset="1mm" bottomInset="1mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <bind match="dataRef" ref="$.Document.DocumentHeader.DealerNameMarketing"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var DocHeaderBrand = WorkOrder.pageContent.subMetadata.DocHeaderBrand.rawValue;
-//app.alert(DocHeaderBrand);
-
-if ( DocHeaderBrand == "S")
-{
-	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subHeader.DealerNameMarketing").font.typeface = "Skoda Pro";	
-}
-else if ( DocHeaderBrand == "V")
-{
-	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subHeader.DealerNameMarketing").font.typeface = "VolkswagenHeadline";	
-}
-else if ( DocHeaderBrand == "A" || DocHeaderBrand == "U")
-{
-	xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.subHeader.DealerNameMarketing").font.typeface = "Audi Type Extended";
-
-}
-else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
-{
-		
-}
-</script>
-                  </event>
-                  <?templateDesigner expand 1?></field>
                <field name="L_DocTypeWorkOrder" y="24.07mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
@@ -482,6 +446,8 @@ var receivedText = fld_TestLabelData.rawValue;
                         </exData>
                      </value>
                   </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="8mm">
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <subform w="67mm" minH="4.318mm" name="subCompanyRegNo" layout="lr-tb" x="98mm" y="22.7mm">
@@ -992,42 +958,6 @@ this.rawValue = output;
                      <bind match="none"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <field name="DealerNameMarketing" minW="155mm" y="7mm" x="15mm" minH="11mm" access="readOnly">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Comic Sans MS" size="24pt" weight="bold"/>
-                  <margin topInset="1mm" bottomInset="1mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <bind match="dataRef" ref="$.Document.DocumentHeader.DealerNameMarketing"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var DocHeaderBrand = WorkOrder.pageContent.subMetadata.DocHeaderBrand.rawValue;
-//app.alert(DocHeaderBrand);
-
-if ( DocHeaderBrand == "S")
-{
-	xfa.resolveNode("WorkOrder.#pageSet.mpgPage2.subHeader.DealerNameMarketing").font.typeface = "Skoda Pro";	
-}
-else if ( DocHeaderBrand == "V")
-{
-	xfa.resolveNode("WorkOrder.#pageSet.mpgPage2.subHeader.DealerNameMarketing").font.typeface = "VolkswagenHeadline";	
-}
-else if ( DocHeaderBrand == "A" || DocHeaderBrand == "U")
-{
-	xfa.resolveNode("WorkOrder.#pageSet.mpgPage2.subHeader.DealerNameMarketing").font.typeface = "Audi Type Extended";
-	//console.println("Got here");
-}
-else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
-{
-		
-}
-</script>
-                  </event>
-               </field>
                <subform x="15mm" y="31mm" w="179mm" h="6mm" name="subHeaderpart">
                   <bind match="none"/>
                   <field name="L_ThroughputNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" access="readOnly" h="4mm" x="0in" y="1mm">
@@ -1147,7 +1077,10 @@ var receivedText = fld_TestLabelData.rawValue;
                      <bind match="dataRef" ref="$.Document.DocumentHeader.TestLabel"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="7mm">
+                  <?templateDesigner expand 1?></subform>
+            </subform>
             <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="179mm">
                <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
                <subform name="sub_FooterA" layout="tb" w="45mm">
@@ -4139,8 +4072,8 @@ this.caption.value.text = output;
             </field>
          </subform>
       </proto>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 128 32 00030006001200250027002F003100320033003500360037004200440045004600480049004A004C004E004F0050005200530055005600570059005C005E0060 #/BDLNOPRST_abcefgiklmoprstvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 196 51 0003000A00110012001D002400250026002700280029002A002C002D002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 './:ABCDEFGIJKLMNOPRSTUVabcdefghijklmnoprstuvyåø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
@@ -4152,8 +4085,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 144?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -4169,6 +4100,8 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2012\WorkOrderBA\862_WorkOrder_Litauen .xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 147?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -4554,14 +4487,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-24T20:17:18Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-29T14:01:33Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:1897600e-43d7-4a62-bfb9-28bb26d044b4</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:3ad86382-3e12-4429-b642-41c96ceb68d0</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
