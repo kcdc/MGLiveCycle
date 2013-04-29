@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-18T12:34:32Z" uuid="782739e4-3846-44c0-911b-3ca1167e690a">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-25T11:02:33Z" uuid="5bcd2345-6d27-490d-b967-4a2968a25866">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -10,18 +10,17 @@
             <medium stock="a4" short="210mm" long="297mm"/>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
-      <subform w="179mm" name="subEierBruker" h="8.5mm">
+      <subform w="179.388mm" name="subEierBruker">
          <bind match="none"/>
-         <keep intact="none"/>
-         <field name="L_OwnerName" w="40mm" h="8mm" access="readOnly" y="0.5mm" x="0.001mm">
+         <field name="L_OwnerName" w="67mm" access="readOnly" minH="8mm">
             <ui>
-               <textEdit>
+               <textEdit multiLine="1">
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
             </ui>
             <font size="9pt" typeface="Arial"/>
-            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
             <para vAlign="middle"/>
             <caption reserve="3.6mm" placement="top">
                <font size="8.5pt" typeface="Arial" weight="bold"/>
@@ -45,15 +44,15 @@ this.caption.value.text = output;
 </script>
             </event>
          </field>
-         <field name="L_LeaserName" w="40mm" h="8mm" access="readOnly" y="0.5mm" x="67mm">
+         <field name="L_LeaserName" w="45mm" access="readOnly" minH="8mm" x="67mm">
             <ui>
-               <textEdit>
+               <textEdit multiLine="1">
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
             </ui>
             <font size="9pt" typeface="Arial"/>
-            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
             <para vAlign="middle"/>
             <caption reserve="3.6mm" placement="top">
                <font size="8.5pt" typeface="Arial" weight="bold"/>
@@ -77,15 +76,15 @@ this.caption.value.text = output;
 </script>
             </event>
          </field>
-         <field name="L_UserName" w="40mm" h="8mm" access="readOnly" y="0.5mm" x="107.2mm">
+         <field name="L_UserName" w="67mm" access="readOnly" minH="8mm" x="111.912mm">
             <ui>
-               <textEdit>
+               <textEdit multiLine="1">
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
             </ui>
             <font size="9pt" typeface="Arial"/>
-            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
             <para vAlign="middle"/>
             <caption reserve="3.6mm" placement="top">
                <font size="8.5pt" typeface="Arial" weight="bold"/>
@@ -107,7 +106,7 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 this.caption.value.text = output;
 </script>
             </event>
-         </field>
+            <?templateDesigner expand 1?></field>
          <border>
             <edge presence="hidden"/>
             <corner thickness="0.176mm" presence="hidden"/>
@@ -127,8 +126,8 @@ this.caption.value.text = output;
    </subform>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 131?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 54?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -155,14 +154,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-18T12:34:32Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-25T11:02:33Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:782739e4-3846-44c0-911b-3ca1167e690a</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:5bcd2345-6d27-490d-b967-4a2968a25866</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
