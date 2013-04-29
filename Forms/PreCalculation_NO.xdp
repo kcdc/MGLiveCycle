@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T13:42:41Z" uuid="7a4d626b-3bc2-451d-899b-78651d6a279d">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-25T12:41:23Z" uuid="08562326-4a8d-4146-9904-35fe2aa2116c">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -29,7 +29,7 @@
                      <value>
                         <text>Forkalkyle</text>
                      </value>
-                     <font typeface="Arial" size="22pt" weight="bold"/>
+                     <font typeface="Arial" size="22pt"/>
                      <para vAlign="bottom"/>
                   </caption>
                   <bind match="none"/>
@@ -42,7 +42,7 @@
 
 </script>
                   </event>
-                  <font typeface="Arial" size="9pt" weight="bold"/>
+                  <font typeface="Arial" size="9pt"/>
                   <para vAlign="middle"/>
                   <border>
                      <edge presence="hidden"/>
@@ -127,11 +127,10 @@ var receivedText = fld_TestLabelData.rawValue;
                   <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform x="9mm" y="13mm" name="DealerNameMarketing">
                   <bind match="none"/>
-                  <field access="readOnly" minH="11mm" minW="155mm" name="fldDealerNameMarketing" y="0mm">
+                  <field access="readOnly" minH="11mm" minW="155mm" name="fldDealerNameMarketing">
                      <font typeface="Arial" size="24pt"/>
                      <margin bottomInset="1mm" leftInset="0mm" rightInset="0mm" topInset="1mm"/>
                      <para vAlign="middle"/>
@@ -170,8 +169,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                   <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_IdDonebyDateSalemanInformation.xdp#som($template.form1.subIdDonebyDateSalemanInformation)" x="10mm" y="23mm">
                   <bind match="dataRef" ref="$record.Document.DocumentHeader"/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <contentArea x="8mm" y="31mm" w="112mm" h="193mm" name="Left" id="areaPage1_ID_copy1"/>
             <contentArea x="133mm" y="73mm" w="69mm" h="151mm" name="Right" id="areaPage1_ID"/>
@@ -180,7 +178,7 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
             <subform x="8mm" y="223mm" w="193.998mm" h="51mm" name="subFoot">
                <subform x="0in" y="0in" usehref=".\Fragments\frg_FooterLeft.xdp#som($template.form1.subFooterLeft)">
                   <bind/>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <bind match="none"/>
                <subform x="130.998mm" y="13mm" w="63.002mm" h="38mm" name="subFooterRight">
                   <bind match="none"/>
@@ -406,12 +404,11 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
                      <caption reserve="0mm" placement="top"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform x="1mm" y="105mm" usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)">
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
-            <?templateDesigner expand 1?></pageArea>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform w="202mm" minH="18mm" name="subDocumentHeader">
@@ -875,7 +872,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                      <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
                      <para vAlign="middle"/>
                      <value>
-                        <text>(A= Nytt/byttet B= Normal C=Noe svak D= Defekt/Mangel)</text>
+                        <text>(A= Nytt/byttet    B= Normal    C=Noe svak    D= Defekt/Mangel)</text>
                      </value>
                   </field>
                   <field name="EquipmentText" access="readOnly" h="4mm" w="59.45mm">
@@ -1190,7 +1187,7 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                </border>
                <margin topInset="0mm"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform layout="tb" name="subOptionsFrame">
             <bind match="none"/>
             <breakBefore target="mpgPage1.Right" targetType="contentArea"/>
@@ -1283,10 +1280,10 @@ else
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe B - Takst\Forkalkyle\Forkalkyle_PreCalculation_20130115.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 43?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 131?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
@@ -1299,7 +1296,6 @@ else
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -1431,14 +1427,14 @@ else
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-16T13:42:41Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-25T12:41:23Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7a4d626b-3bc2-451d-899b-78651d6a279d</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:08562326-4a8d-4146-9904-35fe2aa2116c</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">

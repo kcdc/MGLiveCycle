@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-24T20:05:28Z" uuid="409e0765-1d08-48a8-80df-64e618fc49a5">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-25T14:54:06Z" uuid="36905719-398a-4f85-b95d-4d6d5da96420">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -213,175 +213,16 @@ this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verti
             <subform w="179mm" minH="33.001mm" name="subOuterHolder">
                <bind match="none"/>
                <keep intact="none"/>
-               <subform w="70mm" layout="tb" name="subCustomerAddress">
-                  <bind match="none"/>
-                  <field name="CustomerName" minH="4.079mm" access="readOnly" w="70mm">
-                     <ui>
-                        <textEdit multiLine="1" hScrollPolicy="off" vScrollPolicy="off">
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerName"/>
-                     <para lineHeight="8pt"/>
-                  </field>
-                  <subform y="4.079mm" w="70mm" minH="4mm" layout="tb" name="subUN">
-                     <bind match="none"/>
-                     <field name="L_Attention" minH="4mm" w="70mm" access="readOnly">
-                        <ui>
-                           <textEdit multiLine="1">
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font typeface="Arial" size="9pt"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
-                        <para lineHeight="8pt"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-if(output != "")
-{
-	this.caption.value.text = output;
-}
-
-else
-{
-		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
-}
-
-
-if(this.rawValue != "" || null)
-{
-	WorkOrder.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue = this.rawValue;
-}
-if (this.rawValue == null)
-{
-	this.parent.presence = "hidden";
-}
-</script>
-                        </event>
-                        <caption reserve="9.3447mm">
-                           <font typeface="Arial" size="9pt" weight="bold"/>
-                        </caption>
-                     </field>
-                     <occur min="0" max="-1"/>
-                     <?templateDesigner expand 1?></subform>
-                  <field name="CustomerPostalAddress" minH="4mm" minW="70mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPostalAddress"/>
-                  </field>
-                  <field name="CustomerPostalCityZip" minH="4mm" minW="70mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPostalCityZip"/>
-                     <caption reserve="0in">
-                        <font typeface="Arial" size="9pt" weight="bold"/>
-                     </caption>
-                  </field>
-                  <?templateDesigner expand 0?></subform>
+               <subform usehref=".\Fragments\frg_CustomerAddressRow.xdp#som($template.form1.subCustomerAddress)" x="0.001mm" y="0.001mm">
+                  <?templateDesigner expand 1?></subform>
                <subform x="112mm" y="21mm" usehref=".\Fragments\frg_DocInfo.xdp#som($template.form1.subDocInfo)">
                   <bind/>
                   <?templateDesigner expand 1?></subform>
                <subform x="112mm" y="1mm" w="67mm" minH="13mm" name="subDealerInfo">
                   <bind match="none"/>
-                  <subform w="65mm" layout="tb" name="subDealerAddress" y="0mm">
-                     <bind match="none"/>
-                     <field name="DealerNameLegal" minH="3mm" minW="62mm" access="readOnly">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font typeface="Arial" size="8pt"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.DealerNameLegal"/>
-                     </field>
-                     <field name="DealerLegalAddressTotal" minH="3mm" minW="62mm" access="readOnly">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font typeface="Arial" size="8pt"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.DealerLegalAddressTotal"/>
-                     </field>
-                     <field name="DealerIssueAddressTotal" minH="3mm" minW="62mm" access="readOnly">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font typeface="Arial" size="8pt"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.DealerIssueAddressTotal"/>
-                     </field>
+                  <subform usehref=".\Fragments\frg_DealerAddress.xdp#som($template.form1.subDealerAddress)" x="0in" y="0mm">
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <subform x="112mm" y="14mm" w="67mm" minH="4.318mm" name="subCompanyRegNo" layout="lr-tb">
-                  <bind match="none"/>
-                  <field name="L_DealerCompanyRegno" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="58mm" h="4mm" access="readOnly">
-                     <ui>
-                        <textEdit/>
-                     </ui>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.DealerCompanyRegNo"/>
-                     <caption reserve="35mm">
-                        <value>
-                           <text>Foretaksregisteret NO:</text>
-                        </value>
-                     </caption>
-                     <event activity="initialize" ref="$" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="TextMVA" minH="4mm" minW="8.001mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <bind match="none"/>
-                     <caption reserve="0in">
-                        <font typeface="Arial" size="9pt" weight="bold"/>
-                     </caption>
-                     <value>
-                        <text>MVA</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </field>
-                  <?templateDesigner expand 0?></subform>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subInformation" layout="tb">
@@ -2872,7 +2713,7 @@ this.caption.value.text = output;
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 144?>
+   <?templateDesigner Zoom 147?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -3264,14 +3105,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-24T20:05:28Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-25T14:54:06Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:409e0765-1d08-48a8-80df-64e618fc49a5</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:36905719-398a-4f85-b95d-4d6d5da96420</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
