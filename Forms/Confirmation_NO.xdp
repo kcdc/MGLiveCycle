@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-29T13:40:57Z" uuid="1c3600ca-6b56-4148-a361-03387b803cae">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-29T14:24:38Z" uuid="67ac3e91-54cb-42cf-a259-53e727e84658">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -565,63 +565,72 @@ this.caption.value.text = output;
             <bind match="none"/>
             <subform w="80.999mm" name="subVisitInfo" layout="tb">
                <bind match="none"/>
-               <field name="L_ServiceAdvisorColon" w="80.999mm" h="4mm" access="readOnly">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font size="9pt" typeface="Arial"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <caption reserve="27mm">
-                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+               <subform w="80.999mm" minH="4mm" layout="tb" name="subServiceAdvisor">
+                  <bind match="none"/>
+                  <field name="L_ServiceAdvisorColon" w="80.999mm" h="4mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <value>
-                        <text>Serviceleder:</text>
-                     </value>
-                  </caption>
-                  <bind match="dataRef" ref="$.Document.VisitInfo.ServiceAdvisor"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
+                     <caption reserve="27mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Serviceleder:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.VisitInfo.ServiceAdvisor"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                  </event>
-               </field>
-               <field name="L_VisitAddress" w="80.999mm" h="4mm" access="readOnly">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font size="9pt" typeface="Arial"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <caption reserve="27mm">
-                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     </event>
+                  </field>
+                  <occur min="0" max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform y="4mm" w="80.999mm" minH="4mm" layout="tb" name="subVisitAddress">
+                  <bind match="none"/>
+                  <field name="L_VisitAddress" w="80.999mm" h="4mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <value>
-                        <text>Besøksadresse:</text>
-                     </value>
-                  </caption>
-                  <bind match="dataRef" ref="$.Document.VisitInfo.DealerVisitAddressTotal"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
+                     <caption reserve="27mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Besøksadresse:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.VisitInfo.DealerVisitAddressTotal"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                  </event>
-               </field>
-               <?templateDesigner expand 0?></subform>
+                     </event>
+                  </field>
+                  <occur min="0" max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <occur min="0" max="-1"/>
+               <?templateDesigner expand 1?></subform>
             <subform y="8mm" w="80.999mm" minH="12mm" layout="tb" name="subCarHolder">
                <bind match="none"/>
                <subform w="80.999mm" name="subCarDelivery" layout="tb">
@@ -654,7 +663,9 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 0?>
+                  <occur min="0" max="-1"/>
+               </subform>
                <subform w="80.999mm" name="subPlannedVisit" layout="tb">
                   <bind match="none"/>
                   <field name="L_PlannedVisit" w="80.999mm" h="4mm" access="readOnly">
@@ -685,7 +696,9 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 0?>
+                  <occur min="0" max="-1"/>
+               </subform>
                <subform w="80.999mm" name="subCarPickUp" layout="tb">
                   <bind match="dataRef" ref="$.Document.CarPickup"/>
                   <field name="L_CarPickUp" w="80.999mm" h="4mm" access="readOnly">
@@ -716,9 +729,11 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 0?>
+                  <occur min="0" max="-1"/>
+               </subform>
                <margin topInset="1mm"/>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform y="21.001mm" w="80.999mm" minH="8mm" layout="tb" name="subValutionHolder">
                <bind match="none"/>
                <subform w="80.999mm" name="subValuationInfo" layout="tb">
@@ -786,10 +801,10 @@ this.caption.value.text = output;
                   <occur min="0" max="-1"/>
                   <?templateDesigner expand 0?></subform>
                <margin topInset="1mm"/>
-               <?templateDesigner expand 0?></subform>
-            <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subReminderList" layout="tb">
-            <bind match="dataRef" ref="$.Document.ReminderList"/>
+            <bind match="none"/>
             <field name="L_Remember" w="31.999mm" h="3.5mm" access="readOnly">
                <ui>
                   <textEdit>
@@ -819,7 +834,7 @@ this.caption.value.text = output;
                </event>
             </field>
             <subform x="2.999mm" w="176mm" name="subReminder" layout="lr-tb">
-               <bind match="dataRef" ref="$.Reminder[*]"/>
+               <bind match="dataRef" ref="$.Document.ReminderList.Reminder[*]"/>
                <field name="fldReminderDescription" access="readOnly" w="77mm" h="3.5mm">
                   <ui>
                      <textEdit>
@@ -852,9 +867,9 @@ this.caption.value.text = output;
                </field>
                <occur min="0" max="30"/>
                <margin leftInset="3mm"/>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <occur min="0"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" minH="7.2mm" layout="tb" name="Tasks" y="8.713mm">
             <bind match="dataRef" ref="$.Document.Tasks"/>
             <subform w="179mm" minH="4mm" layout="tb" name="subPlannedWorkHeader" id="subPlannedWorkHeader_ID">
@@ -1460,6 +1475,8 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 147?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -1472,11 +1489,9 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Defecter\8109\030_Confirmation_S001IT01_20130410_140321_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Defecter\8311\030_Confirmation_S001IT01_20130429_095103_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 147?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -1623,14 +1638,14 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-29T13:40:57Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-29T14:24:38Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:1c3600ca-6b56-4148-a361-03387b803cae</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:67ac3e91-54cb-42cf-a259-53e727e84658</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
