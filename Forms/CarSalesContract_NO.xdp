@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-02T15:49:14Z" uuid="3dc95a41-5f22-4511-ab3e-0fb7407f69fe">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-03T09:36:54Z" uuid="1aac4d85-6389-4943-8675-52b235b11c00">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -55,7 +55,7 @@ else
                   <bind/>
                   <?templateDesigner expand 0?>
                </subform>
-               <field name="L_DocTypeCarSalesContract" y="26mm" x="0mm" h="7mm" minW="91mm" access="readOnly">
+               <field name="L_CarSalesContract" y="26mm" x="0mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -63,13 +63,13 @@ else
                   <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
                   <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">//var LangCode = getLanguages.getLanguageSetting();
+                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
 
-//var output = getLanguages.getLanguageText(LangCode, this.name);
+var output = getLanguages.getLanguageText(LangCode, this.name);
 
-//this.rawValue = output;
+this.rawValue = output;
 
-//this.presence = "hidden";
+this.presence = "hidden";
 </script>
                   </event>
                   <bind match="none"/>
@@ -80,8 +80,7 @@ else
                </subform>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <field name="fldTypeText" y="18mm" h="8mm" minW="91mm" x="0mm" access="readOnly">
                   <ui>
                      <textEdit>
@@ -95,123 +94,35 @@ else
                   <bind match="dataRef" ref="$.Document.DocumentHeader.TypeText"/>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
-var firstTitlePart = xfa.resolveNode("#pageSet.mpgPage1.subHeader.L_DocTypeCarSalesContract").rawValue;
+var typeText = this.rawValue;
+
+if(typeText.indexOf('Næringskjøp') != -1)
+{
+	CarSalesContract.pageContent._pageSVI2.setInstances(0);
+	CarSalesContract.pageContent._pageSVI1.setInstances(1);
+	
+}
+if(typeText.indexOf('Forbrukerkjøp') != -1)
+{
+	CarSalesContract.pageContent._pageSVI1.setInstances(0);	
+	CarSalesContract.pageContent._pageSVI2.setInstances(1);
+}
+var firstTitlePart = xfa.resolveNode("#pageSet.mpgPage1.subHeader.L_CarSalesContract").rawValue;
+//app.alert(this.parent.parent.name);
 var secondTitlePart = this.rawValue;
 
-this.rawValue = firstTitlePart+" "+secondTitlePart;
+if(this.rawValue.indexOf(firstTitlePart) == -1)
+{
+	this.rawValue = firstTitlePart+" "+secondTitlePart;
+}
 </script>
                   </event>
                </field>
                <?templateDesigner expand 1?></subform>
-            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" hAlign="right" w="32.04mm" anchorType="topLeft" x="164mm" y="9mm">
-               <bind/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-
-
-this.presence = "visible";
-this.access = "protected";
-</script>
-               </event>
-               <border>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
-               </border>
-               <field presence="hidden" h="17mm" hAlign="right" name="imgLogo" w="30mm" x="0in" y="0in">
-                  <bind/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-this.border.presence = "hidden";
-this.rawValue = xfa.resolveNode("mpgPage1.subLogoHolder.imgLogo").rawValue;
-xfa.resolveNode("mpgPage1.subLogoHolder.imgLogo").rawValue = "";
-var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
-//app.alert(DocHeaderBrand);
-
-if ( DocHeaderBrand == "S")
-{
-	skodaLogo.rawValue = this.rawValue;
-	this.rawValue = "";
-
-	skodaLogo.presence = "visible";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"
-	
-	
-}
-else if ( DocHeaderBrand == "V")
-{
-	vwLogo.rawValue = this.rawValue;
-	this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "visible";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"
-}
-else if ( DocHeaderBrand == "A" )
-{
-	audiLogo.rawValue = this.rawValue;
-	this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "visible";
-	audiServiceLogo.presence = "hidden"
-
-}
-else if (DocHeaderBrand == "U")
-{
-	audiServiceLogo.rawValue = this.rawValue;
-	this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "visible"
-}
-
-else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
-{
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"		
-}
-
-</script>
-                  </event>
-               </field>
-               <field h="20mm" hAlign="right" name="skodaLogo" w="18mm" x="14.04mm" y="2.081mm">
-                  <bind/>
-               </field>
-               <field h="15mm" hAlign="right" name="vwLogo" w="15mm" x="15.7mm" y="5.056mm">
-                  <bind/>
-               </field>
-               <field h="16mm" hAlign="right" name="audiLogo" w="29mm" x="1.561mm" y="3.16mm">
-                  <bind/>
-               </field>
-               <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="9.56mm" y="0.402mm">
-                  <bind/>
-               </field>
-               <?templateDesigner expand 0?>
-            </subform>
             <subform x="15mm" y="270mm" usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)">
                <margin/>
                <bind/>
-               <?templateDesigner expand 0?>
-            </subform>
-            <subform usehref=".\Fragments\frg_LogoHolder.xdp#som($template.form1.subLogoHolder)" x="109mm" y="19mm" presence="hidden">
-               <bind/>
-               <?templateDesigner expand 0?>
-            </subform>
+               <?templateDesigner expand 0?></subform>
             <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="105mm">
                <field h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm">
                   <para/>
@@ -223,6 +134,8 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
             </subform>
             <contentArea x="15mm" y="41mm" w="190mm" h="228mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="9mm">
+               <?templateDesigner expand 0?></subform>
             <?templateDesigner expand 0?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
@@ -345,13 +258,6 @@ else
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para vAlign="middle"/>
                   <bind match="dataRef" ref="$.Document.DocumentHeader.TypeText"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var firstTitlePart = xfa.resolveNode("#pageSet.mpgPage1.subHeader.L_DocTypeCarSalesContract").rawValue;
-var secondTitlePart = this.rawValue;
-
-this.rawValue = firstTitlePart+" "+secondTitlePart;
-</script>
-                  </event>
                </field>
                <subform x="115mm" y="27mm" w="58mm" name="subDocInfo" layout="tb">
                   <bind match="none"/>
@@ -509,14 +415,13 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
          <pageArea name="mpgPage3" id="341ea2b5-b329-11e2-9a4f-00216a1a4cd5">
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="12mm" y="19mm" w="190mm" h="264mm" name="areaPage1"/>
-            <?templateDesigner expand 0?></pageArea>
-         <?templateDesigner expand 0?></pageSet>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
       <subform w="190mm" name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 0?>
-         </subform>
-         <subform name="subFinancingMetadata" layout="tb" presence="hidden">
+            <?templateDesigner expand 0?></subform>
+         <subform name="subCarSalesContractMetadata" layout="tb" presence="hidden">
             <bind match="none"/>
             <field name="FinanceType" h="9mm" minW="6mm">
                <ui>
@@ -529,8 +434,41 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
                <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.Financing.FinanceType"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">try
+
+{
+if(this.rawValue == "Cash" || this.rawValue == "Leasing")
+{
+	subLoan.presence = "hidden";	
+}
+
+if(this.rawValue == "Cash" || this.rawValue == "VWMBFLoan")
+{
+	subLeasing.presence = "hidden";
+	subOnDelivery.presence = "hidden";
+}
+}
+catch(e)
+{
+	
+}
+</script>
+               </event>
             </field>
-            <?templateDesigner expand 1?></subform>
+            <field name="DocHeaderShowConsent" h="9mm" minW="6mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.DocHeaderShowConsent"/>
+            </field>
+            <?templateDesigner expand 0?></subform>
          <subform name="subHeaderInformation" w="189.909mm" h="36.976mm">
             <bind match="none"/>
             <subform w="189.908mm" name="subOuterHolder" x="0.001mm" h="36.976mm" y="0.024mm">
@@ -542,302 +480,302 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
                      <bind/>
                      <keep/>
                      <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 1?></subform>
-               <subform x="114.999mm" y="9mm" w="64mm" name="subCompanyRegNo">
-                  <bind match="none"/>
-                  <field name="L_BankName" h="3mm" minW="55mm" access="readOnly" y="3mm" x="0mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="8pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="17mm">
-                        <font size="8pt" typeface="Arial" weight="bold"/>
+                  <subform w="64mm" name="subCompanyRegNo" layout="tb">
+                     <bind match="none"/>
+                     <field name="L_BankName" h="3mm" minW="55mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="8pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                         <para vAlign="middle"/>
-                        <value>
-                           <text>Bankgiro:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.BankAccLocal"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                        <caption reserve="17mm">
+                           <font size="8pt" typeface="Arial" weight="bold"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Bankgiro:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.BankAccLocal"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                     </event>
-                  </field>
-                  <margin topInset="2mm"/>
+                        </event>
+                     </field>
+                     <margin topInset="0mm" bottomInset="2mm"/>
+                     <?templateDesigner expand 1?></subform>
+                  <subform w="58.092mm" name="subHolderOrderNo" layout="lr-tb">
+                     <bind match="none"/>
+                     <field name="L_ContractNo" h="3.5mm" minW="58mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="18.5mm">
+                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Kontraktnr.:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.ContractNo"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                     </field>
+                     <field name="L_OrderNo" h="3.5mm" minW="58mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="14.5711mm">
+                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Ordrenr.:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.OrderNo"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                     </field>
+                     <field name="L_Date" h="3.5mm" minW="58mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="8.8mm">
+                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Dato:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                     </field>
+                     <field name="L_OurRef" h="3.5mm" minW="58mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="16.7mm">
+                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Referanse:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.OurRef"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                     </field>
+                     <field name="CustomerIdLabel" h="3.5mm" minW="17mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerIdLabel"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                     </field>
+                     <field name="CustomerCompanyRegNo" access="readOnly" w="26mm" h="4mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerCompanyRegNo"/>
+                        <caption reserve="0in">
+                           <font typeface="Arial" size="9pt" weight="bold"/>
+                           <para vAlign="middle"/>
+                        </caption>
+                        <para vAlign="middle"/>
+                     </field>
+                     <keep intact="contentArea"/>
+                     <?templateDesigner expand 0?></subform>
                   <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_CustomerAddressRow.xdp#som($template.form1.subCustomerAddress)" x="0mm" y="0in">
                   <bind/>
                   <keep/>
                   <?templateDesigner expand 0?>
                </subform>
-               <subform x="114.999mm" y="19mm" w="58.092mm" name="subHolderOrderNo" layout="lr-tb">
-                  <bind match="none"/>
-                  <field name="L_ContractNo" h="3.5mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="18.5mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Kontraktnr.:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.ContractNo"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="L_OrderNo" h="3.5mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="14.5711mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Ordrenr.:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.OrderNo"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="L_Date" h="3.5mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="8.8mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Dato:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="L_OurRef" h="3.5mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="16.7mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Referanse:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.OurRef"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="CustomerIdLabel" h="3.5mm" minW="17mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="8.5pt" typeface="Arial" weight="bold"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerIdLabel"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="CustomerCompanyRegNo" access="readOnly" w="26mm" h="4mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerCompanyRegNo"/>
-                     <caption reserve="0in">
-                        <font typeface="Arial" size="9pt" weight="bold"/>
-                        <para vAlign="middle"/>
-                     </caption>
-                     <para vAlign="middle"/>
-                  </field>
-                  <keep intact="contentArea"/>
-                  <?templateDesigner expand 1?></subform>
-               <subform w="100mm" name="subInformation" layout="tb" y="32.976mm">
-                  <bind match="none"/>
-                  <subform w="100mm" minH="33mm" name="subCustomerInfo" layout="lr-tb">
-                     <bind match="none"/>
-                     <subform w="100mm" name="subCustomerPhone" layout="lr-tb">
-                        <bind match="none"/>
-                        <field name="L_CustomerPhonePrivat" w="28mm" h="4mm" access="readOnly">
-                           <ui>
-                              <textEdit>
-                                 <border presence="hidden"/>
-                                 <margin/>
-                              </textEdit>
-                           </ui>
-                           <font size="9pt" typeface="Arial"/>
-                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                           <para vAlign="middle"/>
-                           <caption reserve="11mm">
-                              <font size="8.5pt" typeface="Arial" weight="bold"/>
-                              <para vAlign="middle"/>
-                              <value>
-                                 <text>Privat:</text>
-                              </value>
-                           </caption>
-                           <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneFixed"/>
-                           <event activity="initialize" name="event__initialize">
-                              <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                           </event>
-                        </field>
-                        <field name="L_CustomerPhoneWork" w="29mm" h="4mm" access="readOnly">
-                           <ui>
-                              <textEdit>
-                                 <border presence="hidden"/>
-                                 <margin/>
-                              </textEdit>
-                           </ui>
-                           <font size="9pt" typeface="Arial"/>
-                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                           <para vAlign="middle"/>
-                           <caption reserve="12mm">
-                              <font size="8.5pt" typeface="Arial" weight="bold"/>
-                              <para vAlign="middle"/>
-                              <value>
-                                 <text>Arbeid:</text>
-                              </value>
-                           </caption>
-                           <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneWork"/>
-                           <event activity="initialize" name="event__initialize">
-                              <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                           </event>
-                        </field>
-                        <field name="L_CustomerPhoneMobile" w="28mm" h="4mm" access="readOnly">
-                           <ui>
-                              <textEdit>
-                                 <border presence="hidden"/>
-                                 <margin/>
-                              </textEdit>
-                           </ui>
-                           <font size="9pt" typeface="Arial"/>
-                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                           <para vAlign="middle"/>
-                           <caption reserve="11mm">
-                              <font size="8.5pt" typeface="Arial" weight="bold"/>
-                              <para vAlign="middle"/>
-                              <value>
-                                 <text>Mobil:</text>
-                              </value>
-                           </caption>
-                           <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneMobile"/>
-                           <event activity="initialize" name="event__initialize">
-                              <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                           </event>
-                        </field>
-                        <border>
-                           <edge presence="hidden"/>
-                           <edge presence="hidden"/>
-                           <edge thickness="0.2mm" presence="hidden"/>
-                           <edge presence="hidden"/>
-                           <corner/>
-                           <corner/>
-                           <corner thickness="0.2mm" presence="hidden"/>
-                           <corner/>
-                        </border>
-                        <?templateDesigner expand 1?></subform>
-                     <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 0?></subform>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
+         <subform w="100mm" name="subInformation" layout="tb">
+            <bind match="none"/>
+            <subform w="100mm" minH="33mm" name="subCustomerInfo" layout="lr-tb">
+               <bind match="none"/>
+               <subform w="100mm" name="subCustomerPhone" layout="lr-tb">
+                  <bind match="none"/>
+                  <field name="L_CustomerPhonePrivat" w="28mm" h="4mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="11mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Privat:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneFixed"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
+                  </field>
+                  <field name="L_CustomerPhoneWork" w="29mm" h="4mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="12mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Arbeid:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneWork"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
+                  </field>
+                  <field name="L_CustomerPhoneMobile" w="28mm" h="4mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="11mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Mobil:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneMobile"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.2mm" presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner/>
+                     <corner thickness="0.2mm" presence="hidden"/>
+                     <corner/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subCarInformation" layout="tb">
             <bind match="none"/>
             <subform w="179mm" name="subCarInfo" layout="lr-tb">
@@ -880,7 +818,7 @@ this.caption.value.text = output;
                </border>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <bind match="none"/>
          <event activity="initialize" name="event__initialize">
             <script contentType="application/x-javascript">/*
@@ -909,9 +847,9 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 </script>
          </event>
          <subform w="179mm" name="subTopTextMain" y="5.524mm" layout="tb">
-            <bind match="dataRef" ref="$.Document.TopTextMain"/>
+            <bind match="none"/>
             <subform w="179mm" h="4mm" name="TopTextLines">
-               <bind match="dataRef" ref="$.TopTextLines[*]"/>
+               <bind match="dataRef" ref="$.Document.TopTextMain.TopTextLines[*]"/>
                <field name="fldTopTextLine" access="readOnly" x="0.001mm" w="179mm" h="4mm">
                   <ui>
                      <textEdit>
@@ -929,7 +867,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                <keep intact="none"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="4mm"/>
-            <occur min="0"/>
+            <occur min="0" max="-1"/>
             <?templateDesigner expand 0?></subform>
          <subform w="179.083mm" name="SubPriceInformation" layout="tb" x="0.001mm" y="0mm">
             <bind match="none"/>
@@ -1151,7 +1089,7 @@ try
 if(this.rawValue != "" || this.rawValue != null)
 {
 	this.parent.numRegistrationStar.presence = "visible";
-	CarPriceEstimate.pageContent.SubPriceInformation.subMVAInfo.L_PriceInfoEnd2.presence = "visible";
+	xfa.resolveNode("pageContent.SubPriceInformation.subMVAInfo.L_PriceInfoEnd2").presence = "visible";
 }
 
 var str = this.rawValue;
@@ -1189,7 +1127,7 @@ catch(e)
                      <text>*</text>
                   </value>
                </field>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="162mm" h="4mm" name="subColorInfo">
                <bind match="none"/>
                <field name="L_ColorInfo" minH="4mm" minW="65mm" access="readOnly" x="0mm">
@@ -1728,11 +1666,11 @@ catch(e)
                      </caption>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
+//var LangCode = getLanguages.getLanguageSetting();
 
-var output = getLanguages.getLanguageText(LangCode, this.name);
+//var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+//this.caption.value.text = output;
 </script>
                      </event>
                   </field>
@@ -1978,7 +1916,7 @@ this.caption.value.text = output;
                      <para vAlign="bottom"/>
                   </caption>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">if(CarPriceEstimate.pageContent.SubPriceInformation.subResgistrationDesc
+                     <script contentType="application/x-javascript">if(xfa.resolveNode("pageContent.SubPriceInformation.subResgistrationDesc.numRegistrationStar").rawValue == "")
 {
 	this.presence = "hidden";
 }
@@ -2077,9 +2015,9 @@ catch(e)
 </script>
                   </event>
                </field>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <margin topInset="2mm"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform name="subImportCarSubject" w="179mm" layout="tb">
             <bind match="dataRef" ref="$.Document.ImportCarSubject"/>
             <occur min="0" max="-1"/>
@@ -2407,7 +2345,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 0?></subform>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
-if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValue != "Yes")
+if(xfa.resolveNode("pageContent.subCarSalesContractMetadata.DocHeaderShowConsent").rawValue != "Yes")
 {
 	this.presence = "hidden";
 }
@@ -2567,9 +2505,8 @@ this.caption.value.text = output;
                <occur min="0" max="-1"/>
                <overflow target="mpgPage2"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?>
             <occur min="0" max="-1"/>
-         </subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" layout="tb" name="subOptionsHolder" y="6.312mm">
             <bind match="dataRef" ref="$.Document.Options"/>
             <field name="L_Options" access="readOnly" w="179mm" h="4mm">
@@ -2974,7 +2911,7 @@ this.caption.value.text = output;
                <bind match="none"/>
                <subform w="161.958mm" h="4mm" name="subOptionDiscount">
                   <bind match="none"/>
-                  <field name="L_OptionDiscount" access="readOnly" w="100mm" h="4mm" y="0mm" x="0mm">
+                  <field name="L_OptionDiscount" access="readOnly" w="100mm" h="4mm" y="0mm" x="0.001mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -3000,7 +2937,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field name="numOptionDiscount" y="0mm" x="135.999mm" w="26mm" h="4mm" access="protected">
+                  <field name="numOptionDiscount" x="135mm" w="26mm" h="4mm" access="protected">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -3039,7 +2976,7 @@ catch(e)
                <bind match="none"/>
                <subform w="161.999mm" h="4mm" name="subVehicleDiscount">
                   <bind match="none"/>
-                  <field name="L_VehicleDiscount" access="readOnly" w="100mm" h="4mm" x="0mm" y="0mm">
+                  <field name="L_VehicleDiscount" access="readOnly" w="100mm" h="4mm" x="0.001mm" y="0mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -3065,7 +3002,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field name="numVehicleDiscount" y="0mm" x="135.999mm" w="26mm" h="4mm" access="protected">
+                  <field name="numVehicleDiscount" y="0mm" x="135mm" w="26mm" h="4mm" access="protected">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -3299,7 +3236,9 @@ this.caption.value.text = output;
                <?templateDesigner expand 1?></subform>
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <keep intact="contentArea"/>
+         </subform>
          <subform w="179mm" name="subContractTextLine" layout="tb">
             <bind match="dataRef" ref="$.Document.ContractTextLines[*]"/>
             <field name="fldContractTextLine" minH="4mm" access="readOnly" w="179mm">
@@ -3422,7 +3361,7 @@ this.caption.value.text = output;
                   <para vAlign="middle"/>
                </field>
                <keep intact="contentArea"/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <field name="L_RentalCalculation" access="readOnly" w="179mm" h="4mm" x="0.001mm" y="8mm">
                <ui>
                   <textEdit>
@@ -4036,7 +3975,7 @@ catch(e)
                   </event>
                   <bind match="dataRef" ref="$.Document.Financing.PriceMileageExeeded"/>
                   <format>
-                     <picture>num{zzzz9.zzz}</picture>
+                     <picture>num{zzzzz9.99z}</picture>
                   </format>
                </field>
                <subform x="77.995mm" y="0.003mm" w="9mm" h="4mm" name="subAsterisk">
@@ -5218,7 +5157,7 @@ catch(e)
                   <corner/>
                </border>
                <?templateDesigner expand 0?></subform>
-            <subform x="0.001mm" y="13.004mm" w="179mm" h="4mm" name="subCasch">
+            <subform x="0.001mm" y="13.004mm" w="179mm" h="4mm" name="subCash">
                <bind match="none"/>
                <field name="L_OnDeliveryCash" access="readOnly" w="134.999mm" h="3.999mm" x="0mm" y="0mm">
                   <ui>
@@ -5512,7 +5451,7 @@ this.caption.value.text = output;
             <keep intact="contentArea"/>
             <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subLoan" layout="tb" y="8mm">
-            <bind match="dataRef" ref="$.Document.Loan"/>
+            <bind match="none"/>
             <subform w="178.999mm" h="4mm" name="subFinancingHeader">
                <bind match="none"/>
                <field name="L_Loan" access="readOnly" w="178.999mm" h="4mm" x="0mm">
@@ -5546,7 +5485,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 0?></subform>
             <subform w="174.999mm" h="4mm" name="subCash">
                <bind match="none"/>
-               <field name="L_Cash" access="readOnly" h="4mm" x="0mm" y="0mm" w="132.999mm">
+               <field name="L_Cash" access="readOnly" h="4mm" x="0.001mm" y="0mm" w="132.999mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -5572,7 +5511,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="numCash" y="0mm" x="148.999mm" w="26mm" h="4mm" access="protected">
+               <field name="numCash" y="0mm" x="135mm" w="26mm" h="4mm" access="protected">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -5600,7 +5539,7 @@ catch(e)
 }
 </script>
                   </event>
-                  <bind match="dataRef" ref="$.Cash"/>
+                  <bind match="dataRef" ref="$.Document.Loan.Cash"/>
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 0?></subform>
@@ -5632,7 +5571,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="numPrePaymentAmount" y="0mm" x="148.999mm" w="26mm" h="4mm" access="protected">
+               <field name="numPrePaymentAmount" x="135mm" w="26mm" h="4mm" access="protected">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -5660,7 +5599,7 @@ catch(e)
 }
 </script>
                   </event>
-                  <bind match="dataRef" ref="$.PrePaymentAmount"/>
+                  <bind match="dataRef" ref="$.Document.Loan.PrePaymentAmount"/>
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 0?></subform>
@@ -5692,7 +5631,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="numLoanTradeinPrice" y="0mm" x="148.999mm" w="26mm" h="4mm" access="protected">
+               <field name="numLoanTradeinPrice" x="135mm" w="26mm" h="4mm" access="protected">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -5720,7 +5659,7 @@ catch(e)
 }
 </script>
                   </event>
-                  <bind match="dataRef" ref="$.LoanTradeinPrice"/>
+                  <bind match="dataRef" ref="$.Document.Loan.LoanTradeinPrice"/>
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 0?></subform>
@@ -5752,7 +5691,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="numLoanTradeinEncumbrance" y="0mm" x="148.999mm" w="26mm" h="4mm" access="protected">
+               <field name="numLoanTradeinEncumbrance" x="135mm" w="26mm" h="4mm" access="protected">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -5780,7 +5719,7 @@ catch(e)
 }
 </script>
                   </event>
-                  <bind match="dataRef" ref="$.LoanTradeinEncumbrance"/>
+                  <bind match="dataRef" ref="$.Document.Loan.LoanTradeinEncumbrance"/>
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 0?></subform>
@@ -5812,7 +5751,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="numVWMBFLoan" y="0mm" x="148.999mm" w="26mm" h="4mm" access="protected">
+               <field name="numVWMBFLoan" x="135mm" w="26mm" h="4mm" access="protected">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -5840,15 +5779,15 @@ catch(e)
 }
 </script>
                   </event>
-                  <bind match="dataRef" ref="$.VWMBFLoan"/>
+                  <bind match="dataRef" ref="$.Document.Loan.VWMBFLoan"/>
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 0?></subform>
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
-            <subform w="174.999mm" h="4mm" name="subVehiclePrice">
+            <subform w="179mm" h="4mm" name="subVehiclePrice">
                <bind match="none"/>
-               <field name="L_LoanVehiclePrice" access="readOnly" w="132.999mm" h="3.999mm" x="0mm" y="0mm">
+               <field name="L_LoanVehiclePrice" access="readOnly" w="132.999mm" h="3.999mm" x="0.001mm" y="0mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -5875,7 +5814,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="LoanVehiclePrice" y="0mm" x="148.999mm" w="26mm" h="4mm" access="protected">
+               <field name="LoanVehiclePrice" x="135mm" w="26mm" h="4mm" access="protected">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -5903,7 +5842,7 @@ catch(e)
 }
 </script>
                   </event>
-                  <bind match="dataRef" ref="$.LoanVehiclePrice"/>
+                  <bind match="dataRef" ref="$.Document.Loan.LoanVehiclePrice"/>
                </field>
                <border>
                   <edge thickness="0.1mm"/>
@@ -6183,7 +6122,7 @@ this.caption.value.text = output;
                   <para vAlign="middle"/>
                </field>
                <keep intact="contentArea"/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform x="0.001mm" y="24mm" name="subEncumbrance" layout="lr-tb">
                <bind match="none"/>
                <field name="L_TradeInEncumbrance" access="readOnly" h="4mm" minW="29.999mm">
@@ -6230,7 +6169,7 @@ this.caption.value.text = output;
                   <para vAlign="middle"/>
                </field>
                <keep intact="contentArea"/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform x="0.001mm" y="28mm" name="subInPrice" layout="lr-tb">
                <bind match="none"/>
                <field name="L_TradeInPrice" access="readOnly" h="4mm" minW="24.999mm">
@@ -6488,7 +6427,7 @@ this.caption.value.text = output;
                </event>
             </field>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="178.945mm" name="subInsurance" layout="tb" x="0.001mm">
             <bind match="dataRef" ref="$.Document.Insurance"/>
             <margin topInset="4mm" bottomInset="4mm"/>
@@ -6529,7 +6468,7 @@ this.caption.value.text = output;
                         <margin/>
                      </textEdit>
                   </ui>
-                  <font typeface="Arial" size="9pt"/>
+                  <font typeface="Arial" size="9pt" weight="bold"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
                   <bind match="dataRef" ref="$.InsuranceText"/>
                   <event activity="initialize" name="event__initialize">
@@ -6589,54 +6528,105 @@ this.caption.value.text = output;
                <?templateDesigner expand 0?>
                <occur min="0" max="-1"/>
             </subform>
-            <subform w="175.003mm" minH="4mm" name="subOwnRiskMileageRow" layout="lr-tb">
+            <subform name="subTransferRegNo" layout="lr-tb" w="175.003mm">
                <bind match="none"/>
-               <subform name="subOwnRisk" layout="lr-tb" w="84.004mm">
+               <field name="L_TransferRegNo" access="readOnly" h="4mm" minW="42mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Overføres fra</text>
+                     </value>
+                  </caption>
                   <bind match="none"/>
-                  <field name="L_OwnRisk" access="readOnly" h="4mm" w="42.004mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <caption reserve="0in">
-                        <value>
-                           <text>Egenandel, Kr:</text>
-                        </value>
-                     </caption>
-                     <bind match="none"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                     </event>
-                  </field>
-                  <field name="fldOwnRisk" access="readOnly" w="42mm" minH="4mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                     <bind match="dataRef" ref="$.OwnRisk"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  </event>
+               </field>
+               <field name="fldTransferRegNo" access="readOnly" minW="42mm" h="4mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.TransferRegNo"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 //app.alert(this.rawValue);
 </script>
-                     </event>
-                  </field>
-                  <occur min="0" max="-1"/>
+                  </event>
+               </field>
+               <keep intact="contentArea"/>
+               <occur min="0" max="-1"/>
+               <?templateDesigner expand 1?></subform>
+            <subform w="175.003mm" name="subOwnRiskMileageRow">
+               <bind match="none"/>
+               <subform w="84.004mm" minH="4mm" name="subOwnRiskHolder" layout="tb">
+                  <bind match="none"/>
+                  <subform name="subOwnRisk" layout="lr-tb" w="84.004mm">
+                     <bind match="none"/>
+                     <field name="L_OwnRisk" access="readOnly" h="4mm" w="42.004mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <caption reserve="0in">
+                           <value>
+                              <text>Egenandel, Kr:</text>
+                           </value>
+                        </caption>
+                        <bind match="none"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                     </field>
+                     <field name="fldOwnRisk" access="readOnly" w="42mm" minH="4mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                        <bind match="dataRef" ref="$.OwnRisk"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                        </event>
+                     </field>
+                     <occur min="0" max="-1"/>
+                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <subform name="subInsuranceMileage" layout="lr-tb" w="84.004mm">
+               <subform name="subInsuranceMileage" layout="lr-tb" w="84.004mm" x="84mm">
                   <bind match="none"/>
                   <field name="L_InsuranceMileage" access="readOnly" h="4mm" w="42.004mm">
                      <ui>
@@ -6662,7 +6652,7 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 this.caption.value.text = output;
 </script>
                      </event>
-                  </field>
+                     <?templateDesigner expand 1?></field>
                   <field name="fldInsuranceMileage" access="readOnly" w="42mm" minH="4mm">
                      <ui>
                         <textEdit>
@@ -6679,7 +6669,6 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <occur min="0" max="-1"/>
                   <?templateDesigner expand 1?></subform>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
@@ -6783,122 +6772,129 @@ this.caption.value.text = output;
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <keep intact="contentArea"/>
+         </subform>
+         <subform w="7.480319in" h="10.393708in" name="pageSVI1">
+            <breakBefore targetType="pageArea" target="mpgPage3"/>
+            <bind match="none"/>
+            <subform w="192mm" layout="lr-tb" name="subConditionsCorporation">
+               <subform w="186mm" h="6mm" name="subTitle">
+                  <draw name="txtTitle" w="186mm" h="6mm" x="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>SALGS- OG LEVERINGSVILKÅR I NÆRINGSKJØP</text>
+                     </value>
+                     <font size="12pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <?renderCache.bounds 527244 17008 0 0 0 0 0 0?>
+                     <?renderCache.textRun 42 SALGS- OG LEVERINGSVILKÅR I NÆRINGSKJØP 0 119596 12279 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?></draw>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subLeftColumn">
+                  <draw name="txtConditions" w="87mm" h="250mm" y="-0.001mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">1. Avtalen.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Kjøperen bekrefter ved sin underskrift på forsiden å ha gjort seg kjent med og godtar nedenstående vilkår og det som følger av selve kjøpekontrakten. Ut fra det som er opplyst av kjøperen om den senere bruk av bilen, legger partene til grunn at bilen ikke hovedsakelig skal være til personlig bruk for kjøperen, hans familie, husstand eller omgangskrets.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Den av partene som påberoper seg avtaler utenom den skriftlige kontrakt har bevisbyrden for dette.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Benytter bilens produsent/importør spesielle garanti- og leveringsvilkår gjelder disse.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">For påbygg gjelder påbyggleverandørens garanti- og leveringsvilkår. Kjøperen bekrefter i tilfelle ved sin omstående underskrift å ha mottatt, gjort seg kjent med og godtar disse vilkår.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">2. Pris<span style="font-size:7pt;font-weight:normal">.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Endres prisen for den solgte bilen fra fabrikken eller leverandøren før levering, eller før utløpet av avtalt leveringstid, eller valutakurs, eventuell toll eller avgifter endres, og disse forhold får innflytelse på selgerens innkjøpspris, blir kjøpesummen å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Dersom den avtalte prisen omfatter offentlige avgifter som påløper ved registrering av bilen (bl.a. engangsavgift eller omregistreringsavgift), og slike avgifter endres mellom kontraktsinngåelsen og registreringstidspunktet, blir kjøpesummen å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Unntatt er eventuell øking av slike avgifter som finner sted etter utløpet av avtalt leveringstid. Merverdiavgift påløper med den avgiftssatsen som gjelder til enhver tid.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">3. Registrering og årsavgift.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren gis fullmakt til å registrere bilen. Ved salg av nybil tilkommer årsavgift. Ved salg av bruktbil betaler kjøperen eventuell årsavgift som er forhåndsbetalt av selgeren.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">4.Kredittsalg med salgspant.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Gis kjøperen kreditt for kjøpesummen eller noen del av denne, har selgeren salgspant i bilen med utstyr og tilbehør som nevnt i denne kontrakt inntil hele<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">kjøpesummen/kredittkjøpsprisen er betalt. Kjøperen plikter å medvirke til eventuell tinglysing av salgspantet, og betaler kostnadene ved dette.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Før bilens levering undertegner kjøperen kredittkjøpskontrakt for motorkjøretøyer og betalingsdokumenter. Kjøperen betaler kredittkostnader, herunder for kredittrisiko eventuelt dekket ved forsikring, forsikring av tredjemanns interesse, fullstendig vognskadeforsikring samt trafikkforsikring. Reguleres den alminnelige lånerente (markedsrenten) opp eller ned i perioden mellom denne kontrakts underskrift og utstedelse av kredittkjøpskontrakt og dette forholdet får virkning på kredittkostnadene som skal betales av kjøperen, blir disse å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Endres lov eller forskrift som regulerer kredittkjøp og dette får virkning for det som er avtalt i denne kontrakt m.h.t. kreditt-tid, kontantbeløp, kredittbeløp eller kredittkostnader, blir kontraktsvilkårene å endre tilsvarende.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">5. Innbyttebil.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Brukes innbyttebil etter avtale mellom partene av kjøperen i tiden mellom kontraktsinngåelsen og levering av ny bil, skal innbyttebilen ved innlevering være i samme stand som ved kontraktsinngåelsen (taksttidspunktet). Det ses bort fra normal bruksslitasje. Kjøperen plikter dog i dette tidsrom å la bilen gjennomgå periodisk ettersyn i henhold til serviceheftet, utelukkende anvende originale reservedeler under reparasjoner m.v., ikke ombygge eller la bilen undergå vesentlig konstruktiv forandring, ikke overbelaste eller kollisjonsskade bilen og ikke la den anvende under hastighetsløp e.l. Bilen leveres rengjort og med utstyr og tilbehør som ble tatt hensyn til ved taksten. Overholder ikke kjøperen ovennevnte vilkår, står selgeren fritt med hensyn til om han vil gjennomføre salget på de avtalte betingelser. Gjennomføres ikke salget, er kjøperen forpliktet til å erstatte utgifter selgeren har hatt.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">6. Forsinkelse<span style="font-size:7pt;font-weight:normal">.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren har ikke ansvar for forsinket levering av bilen eller dens enkelte deler når dette skyldes forhold selgeren ikke er herre over (såkalt force majeure, eksempelvis streik,<span style="xfa-spacerun:yes">  </span>offentlige reguleringer eller forsinkelser fra fabrikkens, importørens, karosseribedrifters, verksteders eller vedkommende transportselskapers side).<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Ved slike forsinkelser kan kjøperen ikke gjøre krav på erstatning. Uansett årsak til forsinkelsen er selgeren ikke ansvarlig for kjøpers indirekte tap, herunder avsavnstap, eller for utgifter til leie av erstatningsbil.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Er bestemt leveringstid avtalt og levering tilbys eller skjer innen 1 måned etter avtalt tid, har kjøperen ikke rett til å heve kjøpet. Er bestemt leveringstid eller tidsrom for levering ikke avtalt,<span style="xfa-spacerun:yes">  </span>vil kjøperen kunne heve når leveringstiden etter forholdene blir urimelig lang og selgeren ikke kan tilby bilen levert innen 1 måned etter at kjøper har fremsatt hevingskrav. For biler som skal på- eller ombygges eller som er bestilt med særlige spesifikasjoner fra fabrikk, karosseribedrift eller verksted kan kjøperen likevel bare heve dersom<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">- han godtgjør at hans formål med kjøpet blir vesentlig forfeilet på grunn av<span style="xfa-spacerun:yes"> </span></p><p style="margin-left:3.969pt;text-decoration:none;letter-spacing:0in">forsinkelsen og<span style="xfa-tab-count:2">                  </span></p><p style="text-decoration:none;letter-spacing:0in">- selgeren har mulighet for å selge bilen til andre uten vesentlig tap.<span style="xfa-spacerun:yes"> </span></p></body>
+                        </exData>
+                     </value>
+                     <font size="7pt" typeface="Times New Roman"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para lineHeight="8pt"/>
+                  </draw>
+                  <margin topInset="8mm"/>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRightColumn">
+                  <draw name="txtConditions" w="90mm" h="245mm" x="0mm" y="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">7. Mangler.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Hvis vilkår som nevnt i pkt. 1 fjerde ledd ovenfor (særskilte garantier eller leveringsvilkår fastsatt av produsent/importør/påbyggleverandør) ikke får anvendelse, gjelder følgende: Selgerens ansvar er begrenset til mangler som forelå på leveringstidspunktet. Dersom feil ved den leverte bil kan tilbakeføres til et av de følgende forhold, anses mangel ikke å foreligge:<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen ikke har gjennomgått periodisk ettersyn i henhold til serviceheftet.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen er ombygget eller har vært gjenstand for konstruktiv forandring.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen har vært overbelastet eller har vært anvendt under hastighetsløp e.l.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bruk av reservedeler av dårligere kvalitet enn originaldeler.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in">- Kollisjonsskader.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Normal slitasje og korrosjon.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Eventuelle mangler forplikter ikke selgeren ut over følgende:<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">a) Mangler må reklameres uten ugrunnet opphold og senest innen avtalt eller lovbestemt frist. Selgeren foretar vederlagsfri utskifting eller reparasjon av deler som hadde mangler ved levering. Slik utskifting eller reparasjon foretas ved selgerens verksted eller ved annet verksted anvist eller på forhånd godkjent av selgeren.<span style="xfa-spacerun:yes">    </span></p><p style="letter-spacing:0in">b) Kjøperen kan ikke som følge av mangel kreve erstatning for verdiforringelse, avsavn eller annet tap, herunder for skade på person eller eiendom eller indirekte på bilen.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">c) Har defekt del voldt direkte skade på bilen uten at dette kan skyldes manglende aktsomhet fra kjøperens eller førerens side, foretar selgeren vederlagsfri utskifting eller reparasjon av den eller de skadede deler på samme vilkår som nevnt i punkt a) overfor.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in">d) Hvis selgeren ikke innen rimelig tid reparerer en bevislig mangel eller skifter ut deler som bevislig var beheftet med mangler ved levering, får kjøpslovens regler om mangler anvendelse. Kjøperen kan likevel ikke i slike tilfeller kreve erstatning for indirekte tap<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">som følge av mangel, herunder avsavnstap, eller for utgifter til erstatningsbil.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">8. Kjøpers kontraksmislighold - erstatning.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Oppfyller ikke kjøperen kontrakten kan selgeren enten fastholde kjøpet eller, hvor kjøperens kontraktsbrudd er vesentlig, heve kjøpet.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Selgeren kan i tillegg kreve erstatning for økonomisk tap. Hever selgeren kjøpet eller går kjøperen uberettiget fra kontrakten, fastsettes selgerens erstatning til 10% av avtalt pris<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">for bilen med utstyr, medmindre dette etter forholdene må anses som åpenbart urimelig for kjøperen. Kan selgeren godtgjøre at større tap er lidt, skal dette tap erstattes.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">9. Hevingsoppgjør</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Ved eventuell heving av kjøpet skal oppgjøret mellom partene skje i henhold til kjøpslovens §§ 64-66. Dog plikter selgeren å betale renter av mottatt kjøpesum først fra den dag hevingskravet fremsettes skriftlig og bare når det er kjøperen som hever kjøpet.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">10. Betaling.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Ubetalte avdrag på kjøpesummen betales ved forfall uten hensyn til om kjøperen mener å ha motkrav på selgeren for misligholdt leveranse e.l.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">11. Avtaleinngåelse utenom selgerens forretningssted.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Inngås kontrakt om kjøp av bil av selgerens representant på annet sted enn i selgerens forretning/hos selgerens underforhandler, er selgeren ubundet av kontrakten dersom skriftlig meddelelse om dette er kommet frem til kjøperen innen 6 virkedager etter kontraktsinngåelsen.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">12. Tvister.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Er selgeren medlem i Norges Bilbransjeforbund (N.B.F.) og kjøperen medlem i Kongelig Norsk Automobilklubb, Motorførernes Avholdsforbund eller Norges Automobil-Forbund, kan tvister vedrørende bilkjøpet bringes inn Klagenevnden for bilsaker. Klagen sendes til klagerens organisasjon.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">I tvister vedrørende bruktbilkjøp hvor kjøper er klager, kan nevndsbehandling skje selv om kjøperen ikke er medlem i en av bileierorganisasjonene. Klagen sendes til N.B.F.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Er selgeren medlem i N.B.F. og kjøperen medlem i Norges Lastebileierforbund, kan tvister vedrørende kjøp av tilhenger eller bil med totalvekt 3500 kg eller mer, bringes inn for Klagenevden for tyngre kjøretøy. Klagen sendes til klagerens organisasjon. Behandling av tvister i klagenevndene avskjærer ikke senere domstolsbehandling av samme tvist.<span style="xfa-spacerun:yes"> </span></p></body>
+                        </exData>
+                     </value>
+                     <font size="7pt" typeface="Times New Roman"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0.5mm"/>
+                     <para lineHeight="8pt"/>
+                  </draw>
+                  <margin leftInset="10mm" topInset="8mm"/>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <keep intact="contentArea"/>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
+         <subform w="190mm" h="263.999mm" name="pageSVI2">
+            <breakBefore targetType="pageArea" target="mpgPage3"/>
+            <bind match="none"/>
+            <subform w="192mm" layout="lr-tb" name="subConditionsCorporation">
+               <subform w="186mm" h="6mm" name="subTitle">
+                  <draw name="txtTitle" w="186mm" h="6mm" x="0mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <text>SALGS- OG LEVERINGSVILKÅR I FORBRUKERKJØP</text>
+                     </value>
+                     <font size="12pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <?renderCache.bounds 527244 17008 0 0 0 0 0 0?>
+                     <?renderCache.textRun 43 SALGS- OG LEVERINGSVILKÅR I FORBRUKERKJØP 0 110599 12279 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?></draw>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subLeftColumn" w="86mm">
+                  <draw name="txtConditions" w="3.385833in" h="242mm" y="0mm" x="0.001mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">1. Forbrukerkjøpsloven - avtalen - garanti.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Kjøperen bekrefter ved sin omstående underskrift å ha gjort seg kjent med og godtar nedenstående vilkår og det som følger av selve kjøpskontrakten.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Bilen selges fri for heftelser. Den av partene som påberoper seg avtaler utenom den skriftlige kontrakten har bevisbyrden for dette.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Salgs- og leveringsvilkårene gjør ingen begrensninger i rettigheter som kjøperen har etter lov av 21. juni 2002 nr. 34 om forbrukerkjøp (f.kj.l)<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom bilen er solgt med garanti, gjør garantien ingen innskrenkinger i de rettigheter kjøperen ellers har etter forbrukerkjøpsloven.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">2. Forbrukerkjøp - næringskjøp.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Disse salgs- og leveringsvilkår forutsetter at kjøperen ikke hovedsaklig handler som ledd i næringsvirksomhet. Dersom bilen hovedsaklig skal brukes, eller hovedsaklig blir brukt i kjøperens næringsvirksomhet, er kjøpet ikke et forbrukerkjøp, og i mangel av annen avtale kommer NBF's standardkontrakt for næringskjøp automatisk til anvendelse.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">3. Pris.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom det før levering eller før utløpet av avtalt leveringstid finner sted endringer i toll- og avgiftssatser, eller prisen for den solgte bilen i samme tidsrom endres fra fabrikken/importøren, eller det finner sted endring i valutakurs, og disse forhold får innflytelse på selgerens innkjøpspris, blir kjøpesummen å endre tilsvarende - dog med følgende unntak: Dersom bilen på avtaletidspunktet var tatt inn i landet, og det er avtalt leveringstid innen 3 måneder, vil selgeren ved prisendring fra fabrikken eller importøren bare kunne forhøye den avtalte kjøpesummen med den delen av prisendringen som skyldes endret valutakurs.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom den avtalte prisen omfatter offentlige avgifter som påløper ved registrering av bilen (bl.a. engangsavgift eller omregistreringsavgift), og slike avgifter endres mellom kontraktsinngåelsen og registreringstidspunktet, blir kjøpesummen å endre tilsvarende. Unntatt er eventuell økning av slike avgifter som finner sted etter utløpet av avtalt leveringstid. Merverdiavgift påløper med den avgiftssatsen som gjelder til enhver tid. Ved prisøkninger som nevnt ovenfor og som overstiger 6% av avtalt kjøpesum, har kjøperen likevel rett til å heve kjøpet, uansett årsaken til prisøkningen. De begrensninger i selgerens adgang til å endre kjøpesummen som er nevnt ovenfor, gjelder ikke hvor:<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Avtalt eller forutsatt leveringstid er lengre enn 6 måneder etter kontraktsdato.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen er bestilt med særskilte spesifikasjoner fra fabrikk, karosseribedrift eller</p><p style="margin-left:3.969pt;letter-spacing:0in">verksted. I disse tilfeller gjelder heller ikke kjøperens rett til å heve kjøpet dersom<span style="xfa-spacerun:yes"> </span></p><p style="margin-left:3.969pt;letter-spacing:0in">prisøkningen overstiger 6% av avtalt kjøpesum.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">4. Registrering og årsavgift.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Selgeren gis fullmakt til å registrere bilen. Ved salg av nybil tilkommer årsavgift. Ved salg av bruktbil betaler kjøperen eventuell årsavgift som er forhåndsbetalt av selgeren.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">5. Kredittkjøp med salgspant.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom kjøperen gis kreditt for kjøpesummen eller noen del av denne, har selgeren salgspant i bilen med utstyr og tilbehør som nevn i denne kontrakt inntil hele kjøpesummen/ kredittkjøpsprisen er betalt. Kjøperen plikter å medvirke til eventuell tinglysning av salgspantet, og betaler kostnadene ved dette.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Ved kredittkjøp undertegner kjøperen senest ved bilens levering kredittkjøpskontrakt for motorkjøretøyer og betalingsdokumenter. Kjøperen betaler kredittkostnader, herunder for kredittrisiko eventuelt dekket ved forsikring av tredjemanns interesse, fullstendig vognskadeforsikring samt trafikkforsikring.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom den alminnelige lånerente (markedsrenten) reguleres opp eller ned i perioden mellom denne kontrakts underskrift og utstedelse av kredittkjøpskontrakt og dette forhold får innvirkning på kredittkostnadene som skal betales av kjøperen, blir disse å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Foretar myndighetene endringer i lov eller forskrift som regulerer kredittkjøp og dette får virkning for det som er avtalt i denne kontrakt m.h.t. kreditt-tid, kontantbeløp, kredittbeløp eller kredittkostnader, blir kontrakten å endre tilsvarende.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">6. Innbyttebil.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom innbyttebil etter avtale mellom partene brukes av kjøperen i tiden mellom kontraktsinngåelsen og levering av ny bil, skal innbyttebilen ved levering være i samme stand som ved kontraktsinngåelsen (taksttidspunktet), bortsett fra normal bruksslitasje. I dette tidsrom plikter kjøperen å holde bilen forsvarlig vedlike i henhold til produsentens/importørens anvisninger og eventuelle reparasjoner skal utføres på fagmessig måte, både med hensyn til deler og arbeid. Kjøperen har heller ikke anledning til å ombygge innbyttebilen, la den undergå vesentlig konstruksjonsmessig forandring eller bruke den i hastighetsløp e.l.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Bilen leveres rengjort og med utstyr og tilbehør som ble tatt hensyn til ved taksten.<span style="xfa-spacerun:yes"> </span></p></body>
+                        </exData>
+                     </value>
+                     <font size="7pt" typeface="Times New Roman"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para lineHeight="8pt"/>
+                  </draw>
+                  <margin topInset="8mm"/>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRightColumn">
+                  <draw name="txtConditions" w="89mm" h="9.800069in" x="1mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <font size="7pt" typeface="Times New Roman"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0.5mm"/>
+                     <para lineHeight="8pt"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Er innbyttebilen forringet utover normal bruksslitasje i tiden mellom taksering og innlevering, har selgeren anledning til å avholde ny takst på innbyttebilen. Så fremt innbyttebilen er i vesentlig dårligere stand på leveringstidspunktet, står selger fritt m.h.t. om han vil kjøpe innbyttebilen på de avtalte vilkår.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren plikter likevel å levere nybilen/bruktbilen til avtalt pris.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selger plikter å sannsynliggjøre (bevise) at eventuelt manglende vedlikehold eller kollisjonsskade i den aktuelle tidsperioden har medført at innbyttebilen er i dårligere stand enn normal slitasje skulle tilsi. Selgeren står fritt m.h.t. å kjøpe innbyttebilen, dersom det ved innlevering av bilen oppdages vesentlige mangler som det ikke med rimelighet kunne ventes at han skulle ha oppdaget ved den tidligere takst. I slike tilfeller har kjøperen rett til å avstå fra salg av innbyttebil og kjøp av nybilen/bruktbilen, dersom hans muligheter for å finansiere kjøpet påvirkes i vesentlig grad.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Gjennomføres ikke salget av årsaker kjøperen er ansvarlig for, kan kjøperen bli forpliktet til å erstatte<span style="xfa-spacerun:yes">  </span>det påregnelige og påviselige økonomiske tap som dette har påført selger.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">7. Forsinket levering.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Blir bilen ikke levert til avtalt tid, og dette ikke skyldes kjøperen, kan kjøperen heve kjøpet dersom forsinkelsen er vesentlig. Er bilen levert, må hevingskravet framsettes innen rimelig tid etter at kjøperen fikk vite om leveringen (f.kj.l.§19 og §23).<span style="xfa-spacerun:yes">   </span>Ved forsinkelse kan kjøperen kreve erstatning for påregnelig økonomisk<span style="xfa-spacerun:yes">  </span>som er en følge av forsinkelsen (f.kj.l.§24, jfr §52).<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">8. Mangler og reklamasjoner.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Ved mangler som forelå på leveringstidspunktet, og som kjøperen ikke kjente eller måtte kjenne til ved kjøpet, har kjøperen reklamasjonsretti inntil 5 år fra leveringstidspunktet. Kjøperen plikter likevel å reklamere innen rimelig tid etter at han oppdaget eller burde ha oppdaget mangelen. Denne fristen kan aldri være kortere enn to måneder fra det tidspunktet da kjøperen oppdaget mangelen (f.kj.l. §27).<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Dersom det oppstår feil<span style="xfa-spacerun:yes">  </span>ved den leverte bilen som ikke kan tilbakeføres til leveringstidspunktet, anses ikke mangel å foreligge i forbrukerkjøpslovens forstand. Eksempler på dette kan<span style="xfa-spacerun:yes">  </span>være feil som oppstår etter leveringstidspunktet og som skyldes: -<span style="xfa-spacerun:yes">   </span>at bilen ikke har gjennomgått periodisk ettersyn i henhold til serviceheftet,<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>at bilen er ombygget eller har vært gjenstand for konstruksjonsmessig forandring.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>at bilen har vært overbelastet eller vært anvendt under hastighetsløp<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>bruk av reservedeler av lavere kvalitet enn originaldeler.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>kollisjonsskader.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>normal slitasje og normal korrosjon.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Kjøperen kan kreve at selgeren avhjelper en mangel ved bilen, enten ved reparasjon eller omlevering. Dette gjelder ikke hvis gjennomføring av kravet er umulig eller volder selgeren urimelige kostnader i forhold til andre beføyelser (f.kj.l §28). Avhjelp skal skje uten kostnad eller vesentlig ulempe for kjøperen innen rimelig tid, og uten risiko for at kjøperen ikke får dekket sine utlegg av selgeren (f.kj.l. §30). Eventuell reparasjon av mangel foretas av selgeren, eller ved verksted anvist av eller på forhånd godkjent av selgeren.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren er ansvarlig for kjøperens påregnelige og påviselige økonomiske tap som følge av mangel ved bilen. Kjøperen plikter å begrense sitt tap. Erstatning omfatter ikke tap som følge av personskade eller tap i kjøperens næringsvirksomhet (f.kj.l. §33 og §52).</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:10pt;font-weight:bold">9. Kjøperens avbestilling.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Før levering har skjedd, kan kjøperen avbestille bilen (f.kj.l. §41). Selgeren kan kreve erstatning for sitt påregnelige og påviselige økonomiske tap som følge av avbestillingen. Selgeren plikter ved rimelige tiltak å begrense sitt tap. Forsømmes dette, må selgeren selv bære den tilsvarende delen av tapet.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">10. Tvister.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Hvor selgeren er medlem i Norges Bilbransjeforbund og kjøperen medlem i Kongelig Norsk Automobilklubb, Motorførerernes Avholdsforbund eller Norges<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Automobil-Forbund, kan tvister vedrørende bilkjøpet bringes inn for Klagenevnden for bilsaker. Den av partene som er klager i saken henvender seg først til sin organisasjon, som eventuelt vil ta saken opp med klagenevnden. I tvister vedrørende bruktbilkjøp, hvor kjøper er klager, kan nevndsbehandlingen skje selv om kjøperen ikke er medlem i en av bileierorganisasjonene. Nevndsbehandling av tvisten avskjærer ikke senere domstolsbehandling av samme tvist.<span style="xfa-spacerun:yes">    </span></p></body>
+                        </exData>
+                     </value>
+                     <?templateDesigner expand 1?></draw>
+                  <margin leftInset="10mm" topInset="8mm"/>
+                  <bind match="none"/>
+                  <?templateDesigner expand 1?></subform>
+               <keep intact="contentArea"/>
+               <bind match="none"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
+         <overflow target="mpgPage2"/>
          <?templateDesigner expand 1?></subform>
-      <subform w="7.480319in" h="10.393708in" name="pageSVI1">
-         <breakBefore targetType="pageArea" target="mpgPage3"/>
-         <bind match="none"/>
-         <subform w="192mm" layout="lr-tb" name="subConditionsCorporation">
-            <subform w="186mm" h="6mm" name="subTitle">
-               <draw name="txtTitle" w="186mm" h="6mm" x="0mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <value>
-                     <text>SALGS- OG LEVERINGSVILKÅR I NÆRINGSKJØP</text>
-                  </value>
-                  <font size="12pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
-                  <?renderCache.bounds 527244 17008 0 0 0 0 0 0?>
-                  <?renderCache.textRun 42 SALGS- OG LEVERINGSVILKÅR I NÆRINGSKJØP 0 119596 12279 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?></draw>
-               <bind match="none"/>
-               <?templateDesigner expand 1?></subform>
-            <subform name="subLeftColumn">
-               <draw name="txtConditions" w="87mm" h="250mm" y="-0.001mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <value>
-                     <exData contentType="text/html">
-                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">1. Avtalen.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Kjøperen bekrefter ved sin underskrift på forsiden å ha gjort seg kjent med og godtar nedenstående vilkår og det som følger av selve kjøpekontrakten. Ut fra det som er opplyst av kjøperen om den senere bruk av bilen, legger partene til grunn at bilen ikke hovedsakelig skal være til personlig bruk for kjøperen, hans familie, husstand eller omgangskrets.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Den av partene som påberoper seg avtaler utenom den skriftlige kontrakt har bevisbyrden for dette.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Benytter bilens produsent/importør spesielle garanti- og leveringsvilkår gjelder disse.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">For påbygg gjelder påbyggleverandørens garanti- og leveringsvilkår. Kjøperen bekrefter i tilfelle ved sin omstående underskrift å ha mottatt, gjort seg kjent med og godtar disse vilkår.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">2. Pris<span style="font-size:7pt;font-weight:normal">.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Endres prisen for den solgte bilen fra fabrikken eller leverandøren før levering, eller før utløpet av avtalt leveringstid, eller valutakurs, eventuell toll eller avgifter endres, og disse forhold får innflytelse på selgerens innkjøpspris, blir kjøpesummen å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Dersom den avtalte prisen omfatter offentlige avgifter som påløper ved registrering av bilen (bl.a. engangsavgift eller omregistreringsavgift), og slike avgifter endres mellom kontraktsinngåelsen og registreringstidspunktet, blir kjøpesummen å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Unntatt er eventuell øking av slike avgifter som finner sted etter utløpet av avtalt leveringstid. Merverdiavgift påløper med den avgiftssatsen som gjelder til enhver tid.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">3. Registrering og årsavgift.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren gis fullmakt til å registrere bilen. Ved salg av nybil tilkommer årsavgift. Ved salg av bruktbil betaler kjøperen eventuell årsavgift som er forhåndsbetalt av selgeren.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">4.Kredittsalg med salgspant.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Gis kjøperen kreditt for kjøpesummen eller noen del av denne, har selgeren salgspant i bilen med utstyr og tilbehør som nevnt i denne kontrakt inntil hele<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">kjøpesummen/kredittkjøpsprisen er betalt. Kjøperen plikter å medvirke til eventuell tinglysing av salgspantet, og betaler kostnadene ved dette.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Før bilens levering undertegner kjøperen kredittkjøpskontrakt for motorkjøretøyer og betalingsdokumenter. Kjøperen betaler kredittkostnader, herunder for kredittrisiko eventuelt dekket ved forsikring, forsikring av tredjemanns interesse, fullstendig vognskadeforsikring samt trafikkforsikring. Reguleres den alminnelige lånerente (markedsrenten) opp eller ned i perioden mellom denne kontrakts underskrift og utstedelse av kredittkjøpskontrakt og dette forholdet får virkning på kredittkostnadene som skal betales av kjøperen, blir disse å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Endres lov eller forskrift som regulerer kredittkjøp og dette får virkning for det som er avtalt i denne kontrakt m.h.t. kreditt-tid, kontantbeløp, kredittbeløp eller kredittkostnader, blir kontraktsvilkårene å endre tilsvarende.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">5. Innbyttebil.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Brukes innbyttebil etter avtale mellom partene av kjøperen i tiden mellom kontraktsinngåelsen og levering av ny bil, skal innbyttebilen ved innlevering være i samme stand som ved kontraktsinngåelsen (taksttidspunktet). Det ses bort fra normal bruksslitasje. Kjøperen plikter dog i dette tidsrom å la bilen gjennomgå periodisk ettersyn i henhold til serviceheftet, utelukkende anvende originale reservedeler under reparasjoner m.v., ikke ombygge eller la bilen undergå vesentlig konstruktiv forandring, ikke overbelaste eller kollisjonsskade bilen og ikke la den anvende under hastighetsløp e.l. Bilen leveres rengjort og med utstyr og tilbehør som ble tatt hensyn til ved taksten. Overholder ikke kjøperen ovennevnte vilkår, står selgeren fritt med hensyn til om han vil gjennomføre salget på de avtalte betingelser. Gjennomføres ikke salget, er kjøperen forpliktet til å erstatte utgifter selgeren har hatt.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">6. Forsinkelse<span style="font-size:7pt;font-weight:normal">.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren har ikke ansvar for forsinket levering av bilen eller dens enkelte deler når dette skyldes forhold selgeren ikke er herre over (såkalt force majeure, eksempelvis streik,<span style="xfa-spacerun:yes">  </span>offentlige reguleringer eller forsinkelser fra fabrikkens, importørens, karosseribedrifters, verksteders eller vedkommende transportselskapers side).<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Ved slike forsinkelser kan kjøperen ikke gjøre krav på erstatning. Uansett årsak til forsinkelsen er selgeren ikke ansvarlig for kjøpers indirekte tap, herunder avsavnstap, eller for utgifter til leie av erstatningsbil.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Er bestemt leveringstid avtalt og levering tilbys eller skjer innen 1 måned etter avtalt tid, har kjøperen ikke rett til å heve kjøpet. Er bestemt leveringstid eller tidsrom for levering ikke avtalt,<span style="xfa-spacerun:yes">  </span>vil kjøperen kunne heve når leveringstiden etter forholdene blir urimelig lang og selgeren ikke kan tilby bilen levert innen 1 måned etter at kjøper har fremsatt hevingskrav. For biler som skal på- eller ombygges eller som er bestilt med særlige spesifikasjoner fra fabrikk, karosseribedrift eller verksted kan kjøperen likevel bare heve dersom<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">- han godtgjør at hans formål med kjøpet blir vesentlig forfeilet på grunn av<span style="xfa-spacerun:yes"> </span></p><p style="margin-left:3.969pt;text-decoration:none;letter-spacing:0in">forsinkelsen og<span style="xfa-tab-count:2">                  </span></p><p style="text-decoration:none;letter-spacing:0in">- selgeren har mulighet for å selge bilen til andre uten vesentlig tap.<span style="xfa-spacerun:yes"> </span></p></body>
-                     </exData>
-                  </value>
-                  <font size="7pt" typeface="Times New Roman"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para lineHeight="8pt"/>
-               </draw>
-               <margin topInset="8mm"/>
-               <bind match="none"/>
-               <?templateDesigner expand 1?></subform>
-            <subform name="subRightColumn">
-               <draw name="txtConditions" w="90mm" h="245mm" x="0mm" y="0mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <value>
-                     <exData contentType="text/html">
-                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">7. Mangler.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Hvis vilkår som nevnt i pkt. 1 fjerde ledd ovenfor (særskilte garantier eller leveringsvilkår fastsatt av produsent/importør/påbyggleverandør) ikke får anvendelse, gjelder følgende: Selgerens ansvar er begrenset til mangler som forelå på leveringstidspunktet. Dersom feil ved den leverte bil kan tilbakeføres til et av de følgende forhold, anses mangel ikke å foreligge:<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen ikke har gjennomgått periodisk ettersyn i henhold til serviceheftet.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen er ombygget eller har vært gjenstand for konstruktiv forandring.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen har vært overbelastet eller har vært anvendt under hastighetsløp e.l.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bruk av reservedeler av dårligere kvalitet enn originaldeler.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in">- Kollisjonsskader.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Normal slitasje og korrosjon.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Eventuelle mangler forplikter ikke selgeren ut over følgende:<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">a) Mangler må reklameres uten ugrunnet opphold og senest innen avtalt eller lovbestemt frist. Selgeren foretar vederlagsfri utskifting eller reparasjon av deler som hadde mangler ved levering. Slik utskifting eller reparasjon foretas ved selgerens verksted eller ved annet verksted anvist eller på forhånd godkjent av selgeren.<span style="xfa-spacerun:yes">    </span></p><p style="letter-spacing:0in">b) Kjøperen kan ikke som følge av mangel kreve erstatning for verdiforringelse, avsavn eller annet tap, herunder for skade på person eller eiendom eller indirekte på bilen.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">c) Har defekt del voldt direkte skade på bilen uten at dette kan skyldes manglende aktsomhet fra kjøperens eller førerens side, foretar selgeren vederlagsfri utskifting eller reparasjon av den eller de skadede deler på samme vilkår som nevnt i punkt a) overfor.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in">d) Hvis selgeren ikke innen rimelig tid reparerer en bevislig mangel eller skifter ut deler som bevislig var beheftet med mangler ved levering, får kjøpslovens regler om mangler anvendelse. Kjøperen kan likevel ikke i slike tilfeller kreve erstatning for indirekte tap<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">som følge av mangel, herunder avsavnstap, eller for utgifter til erstatningsbil.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">8. Kjøpers kontraksmislighold - erstatning.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Oppfyller ikke kjøperen kontrakten kan selgeren enten fastholde kjøpet eller, hvor kjøperens kontraktsbrudd er vesentlig, heve kjøpet.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Selgeren kan i tillegg kreve erstatning for økonomisk tap. Hever selgeren kjøpet eller går kjøperen uberettiget fra kontrakten, fastsettes selgerens erstatning til 10% av avtalt pris<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">for bilen med utstyr, medmindre dette etter forholdene må anses som åpenbart urimelig for kjøperen. Kan selgeren godtgjøre at større tap er lidt, skal dette tap erstattes.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">9. Hevingsoppgjør</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Ved eventuell heving av kjøpet skal oppgjøret mellom partene skje i henhold til kjøpslovens §§ 64-66. Dog plikter selgeren å betale renter av mottatt kjøpesum først fra den dag hevingskravet fremsettes skriftlig og bare når det er kjøperen som hever kjøpet.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">10. Betaling.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Ubetalte avdrag på kjøpesummen betales ved forfall uten hensyn til om kjøperen mener å ha motkrav på selgeren for misligholdt leveranse e.l.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">11. Avtaleinngåelse utenom selgerens forretningssted.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Inngås kontrakt om kjøp av bil av selgerens representant på annet sted enn i selgerens forretning/hos selgerens underforhandler, er selgeren ubundet av kontrakten dersom skriftlig meddelelse om dette er kommet frem til kjøperen innen 6 virkedager etter kontraktsinngåelsen.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">12. Tvister.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Er selgeren medlem i Norges Bilbransjeforbund (N.B.F.) og kjøperen medlem i Kongelig Norsk Automobilklubb, Motorførernes Avholdsforbund eller Norges Automobil-Forbund, kan tvister vedrørende bilkjøpet bringes inn Klagenevnden for bilsaker. Klagen sendes til klagerens organisasjon.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">I tvister vedrørende bruktbilkjøp hvor kjøper er klager, kan nevndsbehandling skje selv om kjøperen ikke er medlem i en av bileierorganisasjonene. Klagen sendes til N.B.F.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Er selgeren medlem i N.B.F. og kjøperen medlem i Norges Lastebileierforbund, kan tvister vedrørende kjøp av tilhenger eller bil med totalvekt 3500 kg eller mer, bringes inn for Klagenevden for tyngre kjøretøy. Klagen sendes til klagerens organisasjon. Behandling av tvister i klagenevndene avskjærer ikke senere domstolsbehandling av samme tvist.<span style="xfa-spacerun:yes"> </span></p></body>
-                     </exData>
-                  </value>
-                  <font size="7pt" typeface="Times New Roman"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0.5mm"/>
-                  <para lineHeight="8pt"/>
-               </draw>
-               <margin leftInset="10mm" topInset="8mm"/>
-               <bind match="none"/>
-               <?templateDesigner expand 1?></subform>
-            <keep intact="contentArea"/>
-            <bind match="none"/>
-            <?templateDesigner expand 1?></subform>
-         <?templateDesigner expand 0?></subform>
-      <subform w="190mm" h="263.999mm" name="pageSVI2">
-         <breakBefore targetType="pageArea" target="mpgPage3"/>
-         <bind match="none"/>
-         <subform w="192mm" layout="lr-tb" name="subConditionsCorporation">
-            <subform w="186mm" h="6mm" name="subTitle">
-               <draw name="txtTitle" w="186mm" h="6mm" x="0mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <value>
-                     <text>SALGS- OG LEVERINGSVILKÅR I FORBRUKERKJØP</text>
-                  </value>
-                  <font size="12pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
-                  <?renderCache.bounds 527244 17008 0 0 0 0 0 0?>
-                  <?renderCache.textRun 43 SALGS- OG LEVERINGSVILKÅR I FORBRUKERKJØP 0 110599 12279 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?></draw>
-               <bind match="none"/>
-               <?templateDesigner expand 1?></subform>
-            <subform name="subLeftColumn" w="86mm">
-               <draw name="txtConditions" w="3.385833in" h="242mm" y="0mm" x="0.001mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <value>
-                     <exData contentType="text/html">
-                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">1. Forbrukerkjøpsloven - avtalen - garanti.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Kjøperen bekrefter ved sin omstående underskrift å ha gjort seg kjent med og godtar nedenstående vilkår og det som følger av selve kjøpskontrakten.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Bilen selges fri for heftelser. Den av partene som påberoper seg avtaler utenom den skriftlige kontrakten har bevisbyrden for dette.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Salgs- og leveringsvilkårene gjør ingen begrensninger i rettigheter som kjøperen har etter lov av 21. juni 2002 nr. 34 om forbrukerkjøp (f.kj.l)<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom bilen er solgt med garanti, gjør garantien ingen innskrenkinger i de rettigheter kjøperen ellers har etter forbrukerkjøpsloven.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">2. Forbrukerkjøp - næringskjøp.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Disse salgs- og leveringsvilkår forutsetter at kjøperen ikke hovedsaklig handler som ledd i næringsvirksomhet. Dersom bilen hovedsaklig skal brukes, eller hovedsaklig blir brukt i kjøperens næringsvirksomhet, er kjøpet ikke et forbrukerkjøp, og i mangel av annen avtale kommer NBF's standardkontrakt for næringskjøp automatisk til anvendelse.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">3. Pris.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom det før levering eller før utløpet av avtalt leveringstid finner sted endringer i toll- og avgiftssatser, eller prisen for den solgte bilen i samme tidsrom endres fra fabrikken/importøren, eller det finner sted endring i valutakurs, og disse forhold får innflytelse på selgerens innkjøpspris, blir kjøpesummen å endre tilsvarende - dog med følgende unntak: Dersom bilen på avtaletidspunktet var tatt inn i landet, og det er avtalt leveringstid innen 3 måneder, vil selgeren ved prisendring fra fabrikken eller importøren bare kunne forhøye den avtalte kjøpesummen med den delen av prisendringen som skyldes endret valutakurs.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom den avtalte prisen omfatter offentlige avgifter som påløper ved registrering av bilen (bl.a. engangsavgift eller omregistreringsavgift), og slike avgifter endres mellom kontraktsinngåelsen og registreringstidspunktet, blir kjøpesummen å endre tilsvarende. Unntatt er eventuell økning av slike avgifter som finner sted etter utløpet av avtalt leveringstid. Merverdiavgift påløper med den avgiftssatsen som gjelder til enhver tid. Ved prisøkninger som nevnt ovenfor og som overstiger 6% av avtalt kjøpesum, har kjøperen likevel rett til å heve kjøpet, uansett årsaken til prisøkningen. De begrensninger i selgerens adgang til å endre kjøpesummen som er nevnt ovenfor, gjelder ikke hvor:<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Avtalt eller forutsatt leveringstid er lengre enn 6 måneder etter kontraktsdato.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen er bestilt med særskilte spesifikasjoner fra fabrikk, karosseribedrift eller</p><p style="margin-left:3.969pt;letter-spacing:0in">verksted. I disse tilfeller gjelder heller ikke kjøperens rett til å heve kjøpet dersom<span style="xfa-spacerun:yes"> </span></p><p style="margin-left:3.969pt;letter-spacing:0in">prisøkningen overstiger 6% av avtalt kjøpesum.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">4. Registrering og årsavgift.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Selgeren gis fullmakt til å registrere bilen. Ved salg av nybil tilkommer årsavgift. Ved salg av bruktbil betaler kjøperen eventuell årsavgift som er forhåndsbetalt av selgeren.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">5. Kredittkjøp med salgspant.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom kjøperen gis kreditt for kjøpesummen eller noen del av denne, har selgeren salgspant i bilen med utstyr og tilbehør som nevn i denne kontrakt inntil hele kjøpesummen/ kredittkjøpsprisen er betalt. Kjøperen plikter å medvirke til eventuell tinglysning av salgspantet, og betaler kostnadene ved dette.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Ved kredittkjøp undertegner kjøperen senest ved bilens levering kredittkjøpskontrakt for motorkjøretøyer og betalingsdokumenter. Kjøperen betaler kredittkostnader, herunder for kredittrisiko eventuelt dekket ved forsikring av tredjemanns interesse, fullstendig vognskadeforsikring samt trafikkforsikring.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom den alminnelige lånerente (markedsrenten) reguleres opp eller ned i perioden mellom denne kontrakts underskrift og utstedelse av kredittkjøpskontrakt og dette forhold får innvirkning på kredittkostnadene som skal betales av kjøperen, blir disse å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Foretar myndighetene endringer i lov eller forskrift som regulerer kredittkjøp og dette får virkning for det som er avtalt i denne kontrakt m.h.t. kreditt-tid, kontantbeløp, kredittbeløp eller kredittkostnader, blir kontrakten å endre tilsvarende.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">6. Innbyttebil.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom innbyttebil etter avtale mellom partene brukes av kjøperen i tiden mellom kontraktsinngåelsen og levering av ny bil, skal innbyttebilen ved levering være i samme stand som ved kontraktsinngåelsen (taksttidspunktet), bortsett fra normal bruksslitasje. I dette tidsrom plikter kjøperen å holde bilen forsvarlig vedlike i henhold til produsentens/importørens anvisninger og eventuelle reparasjoner skal utføres på fagmessig måte, både med hensyn til deler og arbeid. Kjøperen har heller ikke anledning til å ombygge innbyttebilen, la den undergå vesentlig konstruksjonsmessig forandring eller bruke den i hastighetsløp e.l.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Bilen leveres rengjort og med utstyr og tilbehør som ble tatt hensyn til ved taksten.<span style="xfa-spacerun:yes"> </span></p></body>
-                     </exData>
-                  </value>
-                  <font size="7pt" typeface="Times New Roman"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para lineHeight="8pt"/>
-               </draw>
-               <margin topInset="8mm"/>
-               <bind match="none"/>
-               <?templateDesigner expand 1?></subform>
-            <subform name="subRightColumn">
-               <draw name="txtConditions" w="89mm" h="9.800069in" x="1mm">
-                  <ui>
-                     <textEdit/>
-                  </ui>
-                  <font size="7pt" typeface="Times New Roman"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0.5mm"/>
-                  <para lineHeight="8pt"/>
-                  <value>
-                     <exData contentType="text/html">
-                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Er innbyttebilen forringet utover normal bruksslitasje i tiden mellom taksering og innlevering, har selgeren anledning til å avholde ny takst på innbyttebilen. Så fremt innbyttebilen er i vesentlig dårligere stand på leveringstidspunktet, står selger fritt m.h.t. om han vil kjøpe innbyttebilen på de avtalte vilkår.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren plikter likevel å levere nybilen/bruktbilen til avtalt pris.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selger plikter å sannsynliggjøre (bevise) at eventuelt manglende vedlikehold eller kollisjonsskade i den aktuelle tidsperioden har medført at innbyttebilen er i dårligere stand enn normal slitasje skulle tilsi. Selgeren står fritt m.h.t. å kjøpe innbyttebilen, dersom det ved innlevering av bilen oppdages vesentlige mangler som det ikke med rimelighet kunne ventes at han skulle ha oppdaget ved den tidligere takst. I slike tilfeller har kjøperen rett til å avstå fra salg av innbyttebil og kjøp av nybilen/bruktbilen, dersom hans muligheter for å finansiere kjøpet påvirkes i vesentlig grad.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Gjennomføres ikke salget av årsaker kjøperen er ansvarlig for, kan kjøperen bli forpliktet til å erstatte<span style="xfa-spacerun:yes">  </span>det påregnelige og påviselige økonomiske tap som dette har påført selger.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">7. Forsinket levering.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Blir bilen ikke levert til avtalt tid, og dette ikke skyldes kjøperen, kan kjøperen heve kjøpet dersom forsinkelsen er vesentlig. Er bilen levert, må hevingskravet framsettes innen rimelig tid etter at kjøperen fikk vite om leveringen (f.kj.l.§19 og §23).<span style="xfa-spacerun:yes">   </span>Ved forsinkelse kan kjøperen kreve erstatning for påregnelig økonomisk<span style="xfa-spacerun:yes">  </span>som er en følge av forsinkelsen (f.kj.l.§24, jfr §52).<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">8. Mangler og reklamasjoner.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Ved mangler som forelå på leveringstidspunktet, og som kjøperen ikke kjente eller måtte kjenne til ved kjøpet, har kjøperen reklamasjonsretti inntil 5 år fra leveringstidspunktet. Kjøperen plikter likevel å reklamere innen rimelig tid etter at han oppdaget eller burde ha oppdaget mangelen. Denne fristen kan aldri være kortere enn to måneder fra det tidspunktet da kjøperen oppdaget mangelen (f.kj.l. §27).<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Dersom det oppstår feil<span style="xfa-spacerun:yes">  </span>ved den leverte bilen som ikke kan tilbakeføres til leveringstidspunktet, anses ikke mangel å foreligge i forbrukerkjøpslovens forstand. Eksempler på dette kan<span style="xfa-spacerun:yes">  </span>være feil som oppstår etter leveringstidspunktet og som skyldes: -<span style="xfa-spacerun:yes">   </span>at bilen ikke har gjennomgått periodisk ettersyn i henhold til serviceheftet,<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>at bilen er ombygget eller har vært gjenstand for konstruksjonsmessig forandring.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>at bilen har vært overbelastet eller vært anvendt under hastighetsløp<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>bruk av reservedeler av lavere kvalitet enn originaldeler.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>kollisjonsskader.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>normal slitasje og normal korrosjon.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Kjøperen kan kreve at selgeren avhjelper en mangel ved bilen, enten ved reparasjon eller omlevering. Dette gjelder ikke hvis gjennomføring av kravet er umulig eller volder selgeren urimelige kostnader i forhold til andre beføyelser (f.kj.l §28). Avhjelp skal skje uten kostnad eller vesentlig ulempe for kjøperen innen rimelig tid, og uten risiko for at kjøperen ikke får dekket sine utlegg av selgeren (f.kj.l. §30). Eventuell reparasjon av mangel foretas av selgeren, eller ved verksted anvist av eller på forhånd godkjent av selgeren.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren er ansvarlig for kjøperens påregnelige og påviselige økonomiske tap som følge av mangel ved bilen. Kjøperen plikter å begrense sitt tap. Erstatning omfatter ikke tap som følge av personskade eller tap i kjøperens næringsvirksomhet (f.kj.l. §33 og §52).</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:10pt;font-weight:bold">9. Kjøperens avbestilling.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Før levering har skjedd, kan kjøperen avbestille bilen (f.kj.l. §41). Selgeren kan kreve erstatning for sitt påregnelige og påviselige økonomiske tap som følge av avbestillingen. Selgeren plikter ved rimelige tiltak å begrense sitt tap. Forsømmes dette, må selgeren selv bære den tilsvarende delen av tapet.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">10. Tvister.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Hvor selgeren er medlem i Norges Bilbransjeforbund og kjøperen medlem i Kongelig Norsk Automobilklubb, Motorførerernes Avholdsforbund eller Norges<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Automobil-Forbund, kan tvister vedrørende bilkjøpet bringes inn for Klagenevnden for bilsaker. Den av partene som er klager i saken henvender seg først til sin organisasjon, som eventuelt vil ta saken opp med klagenevnden. I tvister vedrørende bruktbilkjøp, hvor kjøper er klager, kan nevndsbehandlingen skje selv om kjøperen ikke er medlem i en av bileierorganisasjonene. Nevndsbehandling av tvisten avskjærer ikke senere domstolsbehandling av samme tvist.<span style="xfa-spacerun:yes">    </span></p></body>
-                     </exData>
-                  </value>
-                  <?templateDesigner expand 1?></draw>
-               <margin leftInset="10mm" topInset="8mm"/>
-               <bind match="none"/>
-               <?templateDesigner expand 1?></subform>
-            <keep intact="contentArea"/>
-            <bind match="none"/>
-            <?templateDesigner expand 1?></subform>
-         <?templateDesigner expand 0?></subform>
       <field name="exdataTemplate" w="7.480319in" h="1.64125in" presence="hidden">
          <ui>
             <textEdit multiLine="1">
@@ -6945,6 +6941,7 @@ this.caption.value.text = output;
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 244 64 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F003000310032003300350036003700390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTV_abcdefghijklmnoprstuvwxy{}Ååø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 196 51 0003000B000C000D001000110012001D002400250026002700280029002C002D002E002F0030003100320033003500360037003900440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 ()*-./:ABCDEFIJKLMNOPRSTVabdefghijklmnoprstuvyåø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
+      <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 48 12 0005000B000C0011001E00440048004F0053005500560057"().;aelprst?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?>
       <?renderCache.subset "Times New Roman" 0 0 ISO-8859-1 4 252 67 00030008000A000B000C000F0010001100120013001400150016001700180019001A001B001C001D00240025002700280029002A002B002C002E002F0030003100320035003600380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E008600A000A1 %'(),-./0123456789:ABDEFGHIKLMNORSUVabcdefghijklmnoprstuvyå§æø?>
       <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 236 65 0003001000110013001400150016001700180019001A001B001C0024002500280029002A002B002C002D002E002F00300031003200330035003600370038003900440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C0063006E0090009100A000A1 -.0123456789ABEFGHIJKLMNOPRSTUVabdefghijklmnoprstuvyÅåÆØæø?></subform>
@@ -6953,6 +6950,7 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -6965,15 +6963,14 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\CarSalesContract\Exempelfiler\Kontrakt Næring_CarSalesContract_20130116_YearFeeGP.dax?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\CSC\Sample data\8 - 952_CarSalesContract_S001IT01_20130426_142233_D_B001ALL.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 85?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:4850000?>
+   <?templateDesigner Zoom 100?>
    <?templateDesigner SaveTaggedPDF 0?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 0?></template>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines v:375000;v:4850000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -7119,14 +7116,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-05-02T15:49:14Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-03T09:36:54Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3dc95a41-5f22-4511-ab3e-0fb7407f69fe</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:1aac4d85-6389-4943-8675-52b235b11c00</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
