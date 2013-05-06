@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-06T06:29:33Z" uuid="50cf66fc-1ccd-40be-b96a-43d7216e4381">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-06T10:24:27Z" uuid="4fee71a1-45d1-47d9-86a7-797959817d62">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -8,7 +8,7 @@
    <subform name="Requisition" layout="tb" locale="sv_SE" restoreState="auto">
       <pageSet>
          <pageArea name="mpgPage1" id="Page1">
-            <subform x="9mm" w="197mm" h="179.339mm" name="subHeader">
+            <subform x="9mm" w="192mm" h="179.339mm" name="subHeader">
                <bind match="none"/>
                <subform x="1mm" y="8mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
                   <bind/>
@@ -74,6 +74,7 @@ else
                </subform>
                <subform usehref=".\Fragments\frg_IdDonebyDateSalemanInformation.xdp#som($template.form1.subIdDonebyDateSalemanInformation)" x="0in" y="31mm">
                   <?templateDesigner expand 0?>
+                  <bind match="dataRef" ref="$.Document.DocumentHeader"/>
                </subform>
                <draw name="Rectangle1" y="31mm" w="192mm" h="8mm">
                   <value>
@@ -87,16 +88,17 @@ else
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="160mm" y="5mm">
                <?templateDesigner expand 0?>
             </subform>
-            <contentArea x="9mm" y="40mm" w="197mm" h="228mm" name="areaPage1" id="areaPage1_ID"/>
+            <contentArea x="9mm" w="192mm" h="228mm" name="areaPage1" id="areaPage1_ID" y="40mm"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <occur min="1"/>
             <subform x="2mm" y="105mm" usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)">
                <bind/>
                <?templateDesigner expand 0?>
             </subform>
-            <subform usehref="..\..\..\..\GitForms\Fragments\frg_Footer.xdp#som($template.form1.subFooter)" x="12mm" y="270mm">
+            <subform usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)" x="9mm" y="270mm" w="192mm">
                <margin/>
                <?templateDesigner expand 0?>
+               <bind/>
             </subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
@@ -185,163 +187,162 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
          <subform usehref=".\Fragments\frg_CarInfo.xdp#som($template.form1.subHeaderInfo)">
             <?templateDesigner expand 0?>
          </subform>
-         <subform y="41mm" layout="tb" name="subDefectHolder">
+         <subform w="192mm" name="subDefectHeadingMargin" id="subDefectHeadingMargin_ID">
             <bind match="none"/>
-            <subform w="192mm" layout="tb" name="subDefectHeadingMargin">
+            <subform name="subDefectHeading" id="subDefectHeading_ID" h="4mm">
                <bind match="none"/>
-               <subform h="4mm" name="subDefectHeading">
+               <field name="fldLabelDefectId" w="8.999mm" h="4mm" access="readOnly" y="0mm" x="0.001mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Id</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
                   <bind match="none"/>
-                  <field name="fldLabelDefectId" w="8.999mm" h="4mm" access="readOnly" x="0.001mm" y="0mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <caption reserve="0mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <value>
-                           <text>Id</text>
-                        </value>
-                        <para vAlign="bottom"/>
-                     </caption>
-                     <bind match="none"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                     </event>
-                  </field>
-                  <field name="fldLabelDefectGrade" w="8mm" h="4mm" access="readOnly" x="10mm" y="0mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <caption reserve="0mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <value>
-                           <text>Bed.</text>
-                        </value>
-                        <para vAlign="bottom"/>
-                     </caption>
-                     <bind match="none"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  </event>
+               </field>
+               <field name="fldLabelDefectGrade" w="8mm" h="4mm" access="readOnly" y="0mm" x="10mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Bed.</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                     </event>
-                  </field>
-                  <field name="fldLabelDefectDescription" w="68mm" h="4mm" access="readOnly" x="18mm" y="0mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <caption reserve="0mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <value>
-                           <text>Beskrivelse takst</text>
-                        </value>
-                        <para vAlign="bottom"/>
-                     </caption>
-                     <bind match="none"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  </event>
+               </field>
+               <field name="fldLabelDefectDescription" w="68mm" h="4mm" access="readOnly" y="0mm" x="18mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Beskrivelse takst</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                     </event>
-                  </field>
-                  <field name="fldLabelDefectComment" w="28mm" h="4mm" access="readOnly" x="103mm" y="0mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <caption reserve="0mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <value>
-                           <text>Kommentar</text>
-                        </value>
-                        <para vAlign="bottom"/>
-                     </caption>
-                     <bind match="none"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  </event>
+               </field>
+               <field name="fldLabelDefectComment" w="28mm" h="4mm" access="readOnly" y="0mm" x="103mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Kommentar</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                     </event>
-                  </field>
-                  <field name="fldLabelDefectPrice" w="40mm" h="4mm" access="readOnly" x="152mm" y="0mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <caption reserve="0mm" placement="right">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <value>
-                           <text>Estimert rep. pris</text>
-                        </value>
-                        <para vAlign="bottom" hAlign="right"/>
-                     </caption>
-                     <bind match="none"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  </event>
+               </field>
+               <field name="fldLabelDefectPrice" w="40mm" h="4mm" access="readOnly" y="0mm" x="152mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm" placement="right">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Estimert rep. pris</text>
+                     </value>
+                     <para vAlign="bottom" hAlign="right"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                     </event>
-                     <para hAlign="right"/>
-                  </field>
-                  <border>
-                     <edge presence="hidden"/>
-                     <corner presence="hidden" thickness="0.176mm"/>
-                     <corner presence="hidden" thickness="0.176mm"/>
-                     <corner thickness="0.1mm"/>
-                     <corner presence="hidden" thickness="0.176mm"/>
-                     <edge presence="hidden"/>
-                     <edge thickness="0.1mm"/>
-                     <edge presence="hidden"/>
-                  </border>
-                  <margin bottomInset="0mm"/>
-                  <?templateDesigner expand 0?></subform>
-               <margin bottomInset="1.5mm"/>
+                  </event>
+                  <para hAlign="right"/>
+               </field>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner presence="hidden" thickness="0.176mm"/>
+                  <corner presence="hidden" thickness="0.176mm"/>
+                  <corner thickness="0.1mm"/>
+                  <corner presence="hidden" thickness="0.176mm"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+               </border>
+               <margin bottomInset="0mm"/>
                <?templateDesigner expand 0?></subform>
-            <occur min="0" max="-1"/>
+            <margin bottomInset="1.5mm" topInset="1.5mm"/>
+            <?templateDesigner expand 1?></subform>
+         <subform y="40mm" w="191.998mm" minH="3.6mm" layout="tb" name="subRepeatDefectRow">
+            <bind match="none"/>
             <subform name="subDefectRow" layout="lr-tb">
                <bind match="none"/>
                <occur min="0" max="-1"/>
@@ -360,6 +361,7 @@ this.caption.value.text = output;
                      <para vAlign="middle"/>
                   </caption>
                   <para vAlign="middle"/>
+                  <keep intact="contentArea"/>
                </field>
                <field name="fldDefectGrade" access="readOnly" w="8mm" h="3.6mm">
                   <ui>
@@ -376,7 +378,9 @@ this.caption.value.text = output;
                      <para vAlign="middle"/>
                   </caption>
                   <para vAlign="middle"/>
-                  <?templateDesigner expand 1?></field>
+                  <?templateDesigner expand 1?>
+                  <keep intact="contentArea"/>
+               </field>
                <field name="fldDefectDescription" access="readOnly" w="85mm" h="3.6mm">
                   <ui>
                      <textEdit>
@@ -392,7 +396,9 @@ this.caption.value.text = output;
                      <para vAlign="middle"/>
                   </caption>
                   <para vAlign="middle"/>
-                  <?templateDesigner expand 1?></field>
+                  <?templateDesigner expand 1?>
+                  <keep intact="contentArea"/>
+               </field>
                <field name="fldDefectComment" access="readOnly" w="70mm" h="3.6mm">
                   <ui>
                      <textEdit>
@@ -408,7 +414,9 @@ this.caption.value.text = output;
                      <para vAlign="middle"/>
                   </caption>
                   <para vAlign="middle"/>
-                  <?templateDesigner expand 1?></field>
+                  <?templateDesigner expand 1?>
+                  <keep intact="contentArea"/>
+               </field>
                <field name="fldDefectPrice" access="readOnly" w="18.999mm" h="3.6mm">
                   <ui>
                      <textEdit>
@@ -424,29 +432,41 @@ this.caption.value.text = output;
                      <para vAlign="middle" hAlign="right"/>
                   </caption>
                   <para hAlign="right" vAlign="middle"/>
-                  <?templateDesigner expand 1?></field>
-               <?templateDesigner expand 0?></subform>
-            <margin topInset="3mm"/>
+                  <?templateDesigner expand 1?>
+                  <keep intact="contentArea"/>
+               </field>
+               <overflow leader="subDefectHeading" target="mpgPage1"/>
+               <?templateDesigner expand 1?></subform>
+            <overflow target="mpgPage1" leader="subDefectHeadingMargin"/>
             <?templateDesigner expand 1?></subform>
-         <subform name="subImages" layout="tb">
+         <subform name="subImages">
             <bind match="none"/>
-            <field name="imgfCar" w="82.55mm" h="69.354mm">
-               <ui>
-                  <imageEdit data="embed"/>
-               </ui>
-               <bind match="dataRef" ref="$.Document.Images.Image"/>
-               <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
-               <value>
-                  <image contentType="application/octet-stream"/>
-               </value>
-               <desc>
-                  <text name="embeddedHref">Unknown Embedded URI</text>
-               </desc>
-            </field>
-            <?templateDesigner expand 0?>
-            <margin topInset="10mm" leftInset="18mm"/>
+            <subform w="82.55mm" minH="69.354mm" layout="tb" name="subImage" x="0.001mm">
+               <bind match="none"/>
+               <keep intact="contentArea"/>
+               <field name="imgfCar" w="82.55mm" h="69.354mm">
+                  <ui>
+                     <imageEdit data="embed"/>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.Images.Image"/>
+                  <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                  <value>
+                     <image contentType="application/octet-stream"/>
+                  </value>
+                  <desc>
+                     <text name="embeddedHref">Unknown Embedded URI</text>
+                  </desc>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.access = "protected";
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <margin topInset="10mm" leftInset="18mm" bottomInset="6mm"/>
             <occur min="0" max="-1"/>
-         </subform>
+            <overflow trailer="overflowTrailer"/>
+            <?templateDesigner expand 1?></subform>
          <subform w="192mm" name="subComments" layout="tb">
             <bind match="dataRef" ref="$.Document.Comments"/>
             <occur min="0" max="-1"/>
@@ -460,23 +480,19 @@ this.caption.value.text = output;
                <font typeface="Arial" size="9pt"/>
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <bind match="dataRef" ref="$.Comment"/>
-               <caption reserve="0in">
-                  <font typeface="Arial" size="9pt" weight="bold"/>
-               </caption>
                <para vAlign="middle"/>
             </field>
-            <?templateDesigner expand 0?>
-            <margin topInset="6mm"/>
-         </subform>
-         <subform w="192mm" name="subContPage" layout="tb">
-            <bind match="none"/>
-            <margin topInset="2mm"/>
-            <subform usehref="..\..\..\..\GitForms\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
-               <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></subform>
+            <margin topInset="0mm"/>
+            <overflow target="mpgPage1" trailer="overflowTrailer"/>
+            <?templateDesigner expand 1?></subform>
          <breakAfter/>
+         <overflow trailer="overflowTrailer" target="mpgPage1"/>
          <?templateDesigner expand 1?></subform>
-      <proto/>
+      <proto>
+         <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
+            <bind/>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
@@ -489,6 +505,7 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner Zoom 100?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -501,11 +518,10 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\Requisition\2_sider_030_Requisition_S001IT01_20130503_093524_D_B001ALL_GP1.dax?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe B - Takst\Rekvisisjon\Oppdatert\2_sider_030_Requisition_S001IT01_20130503_093524_D_B001ALL_image.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 85?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -652,14 +668,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-05-06T06:29:33Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-06T10:24:27Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:50cf66fc-1ccd-40be-b96a-43d7216e4381</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:4fee71a1-45d1-47d9-86a7-797959817d62</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
