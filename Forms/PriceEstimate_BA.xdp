@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-08T15:34:02Z" uuid="3a027632-1a79-428a-ad5a-5ed363db1add">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-14T06:27:31Z" uuid="7496212e-2598-4838-a56e-007511970900">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -8,14 +8,55 @@
    <subform name="PriceEstimate" layout="tb" locale="sv_SE" restoreState="auto">
       <pageSet>
          <pageArea name="mpgPage1" id="Page1">
-            <subform x="15mm" y="6mm" w="195mm" h="86.633mm" name="subHeader">
+            <subform x="14.991mm" y="5.908mm" w="184.863mm" h="170.431mm" name="subHeader">
                <bind match="none"/>
-               <field name="L_DocTypePriceEstimate" y="26mm" x="0mm" h="7mm" minW="91mm" access="readOnly">
+               <subform x="78.009mm" minH="22.225mm" name="subWatermark" layout="tb" y="78.092mm">
+                  <bind match="none"/>
+                  <field name="L_Preview" access="readOnly" minH="12.7mm" rotate="90" minW="76mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="72pt" posture="italic">
+                        <fill>
+                           <color value="192,192,192"/>
+                        </fill>
+                     </font>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <?templateDesigner expand 1?>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">if(xfa.resolveNode("pageContent.subMetadata.PreviewCode").rawValue == "V")
+{
+ this.presence = "visible";
+
+var LangCode = xfa.resolveNode("pageContent.subMetadata.LangCode").rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.rawValue = output;
+}
+else
+{
+ this.presence = "hidden";	
+}
+</script>
+                     </event>
+                     <bind match="none"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>Preview</p></body>
+                        </exData>
+                     </value>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <field name="L_DocTypePriceEstimate" y="20mm" x="0.054mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
-                  <font typeface="Arial" weight="bold" baselineShift="0pt" size="14pt"/>
-                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                  <font typeface="Arial" baselineShift="0pt" size="14pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="2mm" rightInset="0mm"/>
                   <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
@@ -28,36 +69,74 @@ this.presence = "hidden";
 </script>
                   </event>
                   <bind match="none"/>
+                  <caption reserve="89mm">
+                     <value>
+                        <text>Prisoverslag</text>
+                     </value>
+                     <font typeface="Arial" baselineShift="0pt" size="14pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
                </field>
-               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="103mm" y="22mm">
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="103.054mm" y="13mm">
                   <?templateDesigner expand 0?>
                   <bind/>
                </subform>
-               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.123mm" y="3mm">
                   <?templateDesigner expand 0?>
                   <bind/>
                </subform>
-               <field name="fldTypeText" y="18mm" h="8mm" minW="91mm" x="0mm" access="readOnly">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="14pt" weight="bold"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <bind match="dataRef" ref="$.Document.DocumentHeader.TypeText"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.subHeader.L_DocTypePriceEstimate").rawValue;
+               <subform x="2.054mm" y="7mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
+                  <?templateDesigner expand 0?>
+                  <bind/>
+               </subform>
+               <subform y="28.032mm" w="179.055mm" name="subHeaderPart" h="6.06mm" x="0mm">
+                  <bind match="none"/>
+                  <field name="DateCreated" access="readOnly" w="30mm" h="4mm" x="149.031mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
+                     <para lineHeight="8pt" vAlign="middle" hAlign="right"/>
+                  </field>
+                  <margin topInset="1mm"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <field name="L_PriceEstimateNo" h="4mm" minW="58mm" access="readOnly" x="0.031mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="2mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Prisoverslagnr.:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
 </script>
-                  </event>
-               </field>
-               <subform x="0mm" y="7mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
-                  <?templateDesigner expand 0?>
-                  <bind/>
-               </subform>
+                     </event>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <subform x="15mm" y="270mm" usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)">
                <margin/>
@@ -71,28 +150,65 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.subHeader.L_DocTypePriceEstim
                   <bind/>
                </field>
                <bind/>
-               <?templateDesigner expand 1?></subform>
-            <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
+               <?templateDesigner expand 0?>
+            </subform>
+            <contentArea x="15mm" y="40mm" w="190mm" h="228mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="9mm">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?>
+            </subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
-            <contentArea x="15mm" y="43mm" w="190mm" h="225mm" name="areaPage1"/>
-            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="4mm">
-               <?templateDesigner expand 1?></subform>
-            <subform w="204.15mm" h="282.633mm" name="subHeader">
-               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="118mm" y="22mm">
-                  <bind/>
-                  <?templateDesigner expand 1?></subform>
+            <subform x="15mm" w="184.863mm" h="170.431mm" name="subHeader" y="5.908mm">
                <bind match="none"/>
-               <field name="fldTitleType" y="26mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
+               <subform x="78mm" minH="22.225mm" name="subWatermark" layout="tb" y="78.092mm">
+                  <bind match="none"/>
+                  <field name="L_Preview" access="readOnly" minH="12.7mm" rotate="90" minW="76mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="72pt" posture="italic">
+                        <fill>
+                           <color value="192,192,192"/>
+                        </fill>
+                     </font>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <?templateDesigner expand 1?>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">if(xfa.resolveNode("pageContent.subMetadata.PreviewCode").rawValue == "V")
+{
+ this.presence = "visible";
+
+var LangCode = xfa.resolveNode("pageContent.subMetadata.LangCode").rawValue;
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.rawValue = output;
+}
+else
+{
+ this.presence = "hidden";	
+}
+</script>
+                     </event>
+                     <bind match="none"/>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p>Preview</p></body>
+                        </exData>
+                     </value>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <field name="L_DocTypePriceEstimate" y="20mm" x="0.031mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
                   </ui>
-                  <font typeface="Arial" weight="bold" baselineShift="0pt" size="14pt"/>
-                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                  <font typeface="Arial" baselineShift="0pt" size="14pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="2mm" rightInset="0mm"/>
                   <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
@@ -105,79 +221,63 @@ this.presence = "hidden";
 </script>
                   </event>
                   <bind match="none"/>
+                  <caption reserve="89mm">
+                     <value>
+                        <text>Prisoverslag</text>
+                     </value>
+                     <font typeface="Arial" baselineShift="0pt" size="14pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
                </field>
-               <field name="fldTypeText" y="18mm" h="8mm" minW="91mm" x="15mm" access="readOnly">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="14pt" weight="bold"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <bind match="dataRef" ref="$.Document.DocumentHeader.TypeText"/>
-               </field>
-               <subform w="200.025mm" h="50mm" name="sub_RichTextEnvelope" x="4mm" y="5mm" presence="hidden">
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="103.031mm" y="13mm">
+                  <?templateDesigner expand 0?>
+                  <bind/>
+               </subform>
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.1mm" y="3mm">
+                  <?templateDesigner expand 0?>
+                  <bind/>
+               </subform>
+               <subform x="2.031mm" y="7mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
+                  <?templateDesigner expand 0?>
+                  <bind/>
+               </subform>
+               <subform y="28mm" w="179.031mm" name="subHeaderPart" h="6mm">
                   <bind match="none"/>
-                  <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
+                  <field name="DateCreated" access="readOnly" x="149.031mm" w="30mm" h="4mm">
                      <ui>
-                        <textEdit multiLine="1">
-                           <border>
-                              <?templateDesigner StyleID aped3?>
-                              <edge stroke="lowered"/>
-                           </border>
+                        <textEdit>
+                           <border presence="hidden"/>
                            <margin/>
                         </textEdit>
                      </ui>
-                     <font typeface="Myriad Pro"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
+                     <para lineHeight="8pt" vAlign="middle" hAlign="right"/>
+                  </field>
+                  <margin topInset="1mm"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <field name="L_PriceEstimateNo" h="4mm" minW="58mm" access="readOnly" x="0.031mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="2mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
                      <caption reserve="25mm">
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Envelope</text>
-                        </value>
-                     </caption>
-                     <value>
-                        <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
-&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
-&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
-&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
-&gt;ccc&lt;/p&#xD;
-&gt;&lt;/body&#xD;
-&gt;&lt;/exData&#xD;
-&gt;</text>
-                     </value>
-                     <traversal>
-                        <traverse ref="txtTextArea2[0]"/>
-                     </traversal>
-                     <bind match="none"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <subform x="126mm" y="27mm" layout="lr-tb" name="subDocInfo" w="62mm">
-                  <bind match="none"/>
-                  <field access="readOnly" h="4mm" minW="62mm" name="L_PriceEstimateNo">
-                     <border>
-                        <edge presence="hidden"/>
-                     </border>
-                     <caption reserve="23.9042mm">
-                        <font typeface="Arial" size="8.5pt" weight="bold"/>
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
                         <para vAlign="middle"/>
                         <value>
                            <text>Prisoverslagnr.:</text>
                         </value>
                      </caption>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <bind ref="$.Document.DocumentHeader.ThroughputNo" match="dataRef"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
@@ -188,88 +288,13 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field access="readOnly" h="4mm" minW="62mm" name="L_Date">
-                     <border>
-                        <edge presence="hidden"/>
-                     </border>
-                     <caption reserve="9.3182mm">
-                        <font typeface="Arial" size="8.5pt" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Dato:</text>
-                        </value>
-                     </caption>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <bind ref="$.Document.DocumentHeader.DateCreated" match="dataRef"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <subform y="8mm" w="62mm" minH="4mm" layout="lr-tb" name="subOurRef">
-                     <bind match="none"/>
-                     <field access="readOnly" h="4mm" minW="62mm" name="L_OurRef">
-                        <border>
-                           <edge presence="hidden"/>
-                        </border>
-                        <caption reserve="16.8141mm">
-                           <font typeface="Arial" size="8.5pt" weight="bold"/>
-                           <para vAlign="middle"/>
-                           <value>
-                              <text>Referanse:</text>
-                           </value>
-                        </caption>
-                        <font typeface="Arial" size="9pt"/>
-                        <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-                        <para vAlign="middle"/>
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <bind ref="$.Document.HeaderInfo.OurRef" match="dataRef"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-if(this.rawValue == null)
-{
-	this.parent.presence = "hidden";
-}
-</script>
-                        </event>
-                     </field>
-                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="7mm">
-                  <?templateDesigner expand 0?>
-                  <bind/>
-               </subform>
                <?templateDesigner expand 1?></subform>
-            <subform usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)" x="15mm" y="261mm">
-               <?templateDesigner expand 0?>
+            <subform usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)" x="15mm" y="270mm">
                <margin/>
                <bind/>
-            </subform>
+               <?templateDesigner expand 1?></subform>
+            <contentArea x="15mm" y="40mm" w="190mm" h="228mm" name="areaPage1"/>
             <field name="fldVerticalLabel" minH="6mm" access="readOnly" minW="43.35mm" x="4mm" y="112mm" rotate="90">
                <ui>
                   <textEdit>
@@ -291,27 +316,16 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
                   <text>NameOfDocType_ServerDate</text>
                </value>
             </field>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="4mm">
+               <?templateDesigner expand 0?>
+            </subform>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
       <subform w="190mm" name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 1?></subform>
-         <subform name="subPriceEstimateMetadata" layout="lr-tb" presence="hidden">
-            <bind match="none"/>
-            <field name="PriceType" w="6mm" h="9mm" access="readOnly">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <para vAlign="middle"/>
-               <bind match="dataRef" ref="$.Document.DocumentHeader.PriceType"/>
-            </field>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?>
+         </subform>
          <bind match="none"/>
          <event activity="initialize" name="event__initialize">
             <script contentType="application/x-javascript">/*
@@ -339,162 +353,539 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 */
 </script>
          </event>
-         <subform name="subHeaderInformation" w="179.064mm" h="31.5mm" y="6mm">
+         <subform name="subHeaderInformation" w="180mm" y="6mm">
             <bind match="none"/>
-            <subform w="179mm" minH="33.001mm" name="subOuterHolder" x="0.001mm" y="0mm">
+            <subform w="179mm" name="subOuterHolder" x="0.001mm" y="0.001mm">
                <bind match="none"/>
-               <subform x="0in" y="0in" usehref=".\Fragments\frg_CustomerAddressRow.xdp#som($template.form1.subCustomerAddress)">
-                  <bind/>
-                  <keep/>
-                  <?templateDesigner expand 1?></subform>
-               <subform x="117.999mm" y="0.002mm" w="61mm" minH="13mm" name="subDealerInfo">
+               <subform w="88mm" name="subCustomerBorder" y="0mm" layout="tb">
                   <bind match="none"/>
-                  <subform x="0in" y="0in" usehref=".\Fragments\frg_DealerAddress.xdp#som($template.form1.subDealerAddress)">
+                  <subform usehref=".\Fragments\frg_CustomerAddressRow.xdp#som($template.form1.subCustomerAddress)">
                      <bind/>
                      <keep/>
-                     <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 1?></subform>
-               <subform x="0in" y="26mm" usehref=".\Fragments\frg_TelephoneRow.xdp#som($template.form1.subInformation)">
-                  <bind/>
-                  <keep/>
-                  <?templateDesigner expand 1?></subform>
-               <subform x="117.999mm" y="20mm" w="58mm" minH="11.5mm" name="subHolderOrderNo" layout="tb">
+                     <margin topInset="2mm" leftInset="2mm"/>
+                     <?templateDesigner expand 1?>
+                  </subform>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                  </border>
+                  <?templateDesigner expand 0?></subform>
+               <subform x="87.999mm" w="91mm" name="subDealerBorder" y="0mm" layout="tb">
                   <bind match="none"/>
-                  <field name="L_PriceEstimateNo" h="3.5mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="23mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Prisoverslagnr.:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="L_Date" h="3.5mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="8.8074mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Dato:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <subform y="7mm" w="58mm" layout="tb" name="subOurRef">
+                  <subform name="subDealerInfo" w="90mm" layout="tb">
                      <bind match="none"/>
-                     <field name="L_OurRef" h="3.5mm" minW="58mm" access="readOnly">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font size="9pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <para vAlign="middle"/>
-                        <caption reserve="16.7309mm">
-                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <subform layout="tb" name="subDealerAddress" w="89mm">
+                        <bind match="none"/>
+                        <keep intact="contentArea"/>
+                        <field access="readOnly" name="L_dealerNameLegal" w="90mm" h="4mm">
+                           <font typeface="Arial" size="9pt"/>
+                           <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <bind ref="$.Document.HeaderInfo.DealerNameLegal" match="dataRef"/>
+                           <caption reserve="29mm">
+                              <value>
+                                 <text>Selger</text>
+                              </value>
+                              <font typeface="Arial" size="8.5pt" weight="bold"/>
+                              <para vAlign="middle"/>
+                           </caption>
                            <para vAlign="middle"/>
-                           <value>
-                              <text>Referanse:</text>
-                           </value>
-                        </caption>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.OurRef"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
+                        </field>
+                        <field access="readOnly" name="L_DealerLegalAddressTotal" w="90mm" h="4mm">
+                           <font typeface="Arial" size="9pt"/>
+                           <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <bind ref="$.Document.HeaderInfo.DealerLegalAddressTotal" match="dataRef"/>
+                           <caption reserve="29mm">
+                              <value>
+                                 <text>Juridisk adresse:</text>
+                              </value>
+                              <font typeface="Arial" size="8.5pt" weight="bold"/>
+                              <para vAlign="middle"/>
+                           </caption>
+                           <para vAlign="middle"/>
+                        </field>
+                        <field access="readOnly" name="L_DealerIssueAddressTotal" w="90mm" h="4mm">
+                           <font typeface="Arial" size="9pt"/>
+                           <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <bind ref="$.Document.HeaderInfo.DealerIssueAddressTotal" match="dataRef"/>
+                           <caption reserve="29mm">
+                              <value>
+                                 <text>Leveringsadresse:</text>
+                              </value>
+                              <font typeface="Arial" size="8.5pt" weight="bold"/>
+                              <para vAlign="middle"/>
+                           </caption>
+                           <para vAlign="middle"/>
+                        </field>
+                        <subform layout="tb" name="subCompanyRegNo" y="9mm" w="89mm">
+                           <field access="readOnly" name="L_DealerCompanyRegno" w="90mm" h="4mm">
+                              <caption reserve="29mm">
+                                 <font typeface="Arial" size="8.5pt" weight="bold"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>Foretaksregisteret NO:</text>
+                                 </value>
+                              </caption>
+                              <font typeface="Arial" size="9pt"/>
+                              <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                              <para vAlign="middle"/>
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <bind ref="Document.HeaderInfo.DealerCompanyRegNo" match="dataRef"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                        </event>
-                     </field>
-                     <occur min="0" max="-1"/>
+                              </event>
+                           </field>
+                           <field access="readOnly" name="L_VatPayerNo" h="4mm" w="90mm">
+                              <caption reserve="28.9428mm">
+                                 <font typeface="Arial" size="8.5pt" weight="bold"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>Saknas</text>
+                                 </value>
+                              </caption>
+                              <font typeface="Arial" size="9pt"/>
+                              <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                              <para vAlign="middle"/>
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <bind ref="$record.Document.HeaderInfo.VatPayerNo" match="dataRef"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                              </event>
+                           </field>
+                           <keep intact="contentArea"/>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 1?></subform>
+                     <margin topInset="1mm"/>
                      <?templateDesigner expand 1?></subform>
-                  <keep intact="contentArea"/>
+                  <subform minH="11.5mm" name="subHolderOrderNo" layout="tb" w="90mm">
+                     <bind match="none"/>
+                     <subform y="7mm" name="subBank" layout="tb">
+                        <bind match="none"/>
+                        <field name="L_BankName" h="4mm" minW="90mm" access="readOnly">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font size="9pt" typeface="Arial"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="29mm">
+                              <font size="8.5pt" typeface="Arial" weight="bold"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>Bankgiro:</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="$.Document.HeaderInfo.BankName"/>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                           </event>
+                        </field>
+                        <subform w="90mm" name="subBankAccLVL" layout="lr-tb">
+                           <bind match="none"/>
+                           <field name="L_BankAccLVL" h="4mm" minW="80mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <para vAlign="middle"/>
+                              <caption reserve="29mm">
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>Saknas</text>
+                                 </value>
+                              </caption>
+                              <bind match="dataRef" ref="$.Document.HeaderInfo.BankAccLocal"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "MISSING";	
+}
+</script>
+                              </event>
+                           </field>
+                           <field name="L_BankaccCurrLocal" h="4mm" minW="10mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <para vAlign="middle"/>
+                              <caption reserve="10mm">
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>Saknas</text>
+                                 </value>
+                              </caption>
+                              <bind match="none"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
+}
+</script>
+                              </event>
+                           </field>
+                           <?templateDesigner expand 1?></subform>
+                        <subform w="90mm" name="subBankAccEUR" layout="lr-tb">
+                           <bind match="none"/>
+                           <field name="L_BankAccEUR" h="4mm" minW="80mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <para vAlign="middle"/>
+                              <caption reserve="29mm">
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>Saknas</text>
+                                 </value>
+                              </caption>
+                              <bind match="dataRef" ref="$.Document.HeaderInfo.BankAccEuro"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
+}
+</script>
+                              </event>
+                           </field>
+                           <field name="L_BankaccCurrEUR" h="4mm" minW="10mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <para vAlign="middle"/>
+                              <caption reserve="10mm">
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>Saknas</text>
+                                 </value>
+                              </caption>
+                              <bind match="none"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
+}
+</script>
+                              </event>
+                           </field>
+                           <?templateDesigner expand 1?></subform>
+                        <field name="L_SwiftCode" h="4mm" minW="90mm" access="readOnly">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font size="9pt" typeface="Arial"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="29mm">
+                              <font size="8.5pt" typeface="Arial" weight="bold"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>Saknas:</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="$.Document.HeaderInfo.SwiftCode"/>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
+}
+</script>
+                           </event>
+                        </field>
+                        <occur min="0" max="-1"/>
+                        <?templateDesigner expand 1?></subform>
+                     <keep intact="contentArea"/>
+                     <margin topInset="3mm" bottomInset="2mm"/>
+                     <?templateDesigner expand 1?></subform>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin leftInset="1mm"/>
                   <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
                <?templateDesigner expand 1?></subform>
+            <margin topInset="1mm"/>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subCarInformation" layout="tb" x="0.001mm" y="0mm">
             <bind match="none"/>
             <border>
                <edge thickness="0.1mm"/>
-               <edge presence="hidden"/>
-               <edge thickness="0.1mm"/>
-               <edge presence="hidden"/>
                <corner thickness="0.1mm"/>
-               <corner presence="hidden"/>
-               <corner thickness="0.1mm"/>
-               <corner presence="hidden"/>
             </border>
-            <margin topInset="1mm"/>
+            <margin topInset="1mm" leftInset="2mm"/>
             <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
+               <margin/>
                <?templateDesigner expand 1?>
             </subform>
-            <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)">
+            <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)" x="0.001mm" y="0.001mm">
                <bind/>
-               <keep/>
                <?templateDesigner expand 1?>
             </subform>
-            <?templateDesigner expand 1?></subform>
-         <subform w="179mm" name="subTopTextMain" layout="tb" x="0.001mm" y="18.501mm">
-            <bind match="dataRef" ref="$.Document.TopTextMain"/>
-            <subform w="179mm" name="TopTextLines" layout="tb">
-               <bind match="dataRef" ref="$.TopText[*]"/>
-               <field name="fldTopTextLine" minH="4mm" access="readOnly" w="179mm">
+            <?templateDesigner expand 0?></subform>
+         <subform w="179mm" name="subThanksText" layout="tb">
+            <bind match="none"/>
+            <subform w="130mm" minH="4mm" layout="tb" name="subThankYouText">
+               <bind match="none"/>
+               <field name="L_ThankYouTextPriceestimate" access="readOnly" w="130mm" h="4mm">
                   <ui>
-                     <textEdit multiLine="1">
+                     <textEdit>
                         <border presence="hidden"/>
                         <margin/>
                      </textEdit>
                   </ui>
-                  <font typeface="Arial" size="8.5pt" weight="bold"/>
+                  <font typeface="Arial" size="9pt"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.TopTextLine"/>
-                  <caption reserve="0in"/>
+                  <bind match="none"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <value>
+                        <text>Vi takker for din henvendelse.</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+                  <para vAlign="middle"/>
                </field>
-               <occur min="0" max="10"/>
                <?templateDesigner expand 1?></subform>
-            <margin topInset="6mm"/>
-            <occur min="0"/>
-            <?templateDesigner expand 1?></subform>
+            <subform y="4mm" w="130mm" minH="4mm" layout="tb" name="subOfferText">
+               <bind match="none"/>
+               <field name="L_OfferText" access="readOnly" w="130mm" h="4mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="none"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <value>
+                        <text>Saknas</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <margin topInset="2mm"/>
+               <?templateDesigner expand 1?></subform>
+            <margin topInset="2mm"/>
+            <?templateDesigner expand 1?>
+            <border>
+               <edge presence="hidden"/>
+               <edge thickness="0.1mm" presence="hidden"/>
+               <edge presence="hidden"/>
+               <edge thickness="0.1mm" presence="hidden"/>
+               <corner presence="hidden"/>
+               <corner thickness="0.1mm" presence="hidden"/>
+               <corner presence="hidden"/>
+               <corner thickness="0.1mm" presence="hidden"/>
+            </border>
+         </subform>
+         <subform w="179mm" minH="8mm" layout="tb" name="subCommentsArea">
+            <bind match="none"/>
+            <subform w="179mm" layout="tb" name="subComments">
+               <bind match="dataRef" ref="$.Document.Comments[*]"/>
+               <subform name="subCustomerComment" layout="tb">
+                  <bind match="none"/>
+                  <field name="CustomerComment" minH="4mm" access="readOnly" w="179mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="dataRef" ref="$.CustomerComment[*]"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                     </caption>
+                  </field>
+                  <occur max="10" min="0"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subInternalComment" layout="tb">
+                  <bind match="none"/>
+                  <field name="InternalComment" minH="5mm" access="readOnly" w="179mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="5mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="dataRef" ref="$.InternalComment[*]"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                     </caption>
+                  </field>
+                  <occur max="10" min="0"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <margin topInset="5mm"/>
+            <occur max="-1" min="0"/>
+            <?templateDesigner expand 0?>
+            <border>
+               <edge presence="hidden"/>
+               <edge thickness="0.1mm" presence="hidden"/>
+               <edge thickness="0.1mm" presence="hidden"/>
+               <edge thickness="0.1mm" presence="hidden"/>
+               <corner presence="hidden"/>
+               <corner thickness="0.1mm" presence="hidden"/>
+               <corner thickness="0.1mm" presence="hidden"/>
+               <corner thickness="0.1mm" presence="hidden"/>
+            </border>
+         </subform>
          <subform w="6mm" minH="3.6mm" layout="tb" name="subHeaderControllers" presence="hidden">
             <bind match="none"/>
             <field name="fldQuantityController" w="6mm" h="3.6mm" access="readOnly">
@@ -685,7 +1076,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldUnitPriceController.rawValu
 </script>
                   </event>
                </field>
-               <field name="L_PriceType" w="24mm" h="4mm" access="readOnly" x="155mm" y="0.214mm">
+               <field name="L_Price" w="24mm" h="4mm" access="readOnly" x="155mm" y="0.214mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -706,7 +1097,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldUnitPriceController.rawValu
                      <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
-var output = getLanguages.getLanguageText(LangCode, this.name+"_"+xfa.resolveNode("pageContent.subPriceEstimateMetadata.PriceType").rawValue);
+var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
@@ -753,7 +1144,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
 </script>
                   </event>
                </field>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform y="8.214mm" w="179mm" minH="3.6mm" layout="tb" name="subTask">
                <bind match="dataRef" ref="$.Task[*]"/>
                <subform name="subTaskHeader" layout="lr-tb" w="179mm">
@@ -839,7 +1230,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                         </ui>
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="6mm" rightInset="0mm"/>
-                        <bind match="dataRef" ref="$.TaskTexts[*].TaskText[*]"/>
+                        <bind match="none"/>
                         <caption reserve="0in">
                            <font typeface="Arial" size="9pt" weight="bold"/>
                            <para lineHeight="9pt" vAlign="middle"/>
@@ -850,9 +1241,8 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                      <overflow trailer="overflowTrailer"/>
                      <?templateDesigner expand 1?></subform>
                   <overflow trailer="overflowTrailer"/>
-                  <?templateDesigner expand 1?>
                   <keep intact="contentArea"/>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform name="subSpareparts" w="179mm" layout="tb">
                   <subform w="179mm" name="subSparepartsHolder">
                      <bind match="none"/>
@@ -865,7 +1255,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="6mm" rightInset="1mm"/>
                         <para vAlign="middle"/>
-                        <bind match="dataRef" ref="$.SparePartText"/>
+                        <bind match="none"/>
                         <border>
                            <edge presence="hidden"/>
                            <corner presence="hidden"/>
@@ -880,7 +1270,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                         <para vAlign="middle" hAlign="right"/>
-                        <bind match="dataRef" ref="$.SparePartOrderType"/>
+                        <bind match="none"/>
                         <border>
                            <edge presence="hidden"/>
                            <corner presence="hidden"/>
@@ -895,7 +1285,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                         <para vAlign="middle"/>
-                        <bind match="dataRef" ref="$.SparePartQuantity"/>
+                        <bind match="none"/>
                         <border>
                            <edge presence="hidden"/>
                            <corner presence="hidden"/>
@@ -932,7 +1322,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
 }
 </script>
                         </event>
-                        <bind match="dataRef" ref="$.SparePartPrice">
+                        <bind match="none">
                            <picture>num{z,zz9.99}</picture>
                         </bind>
                         <format>
@@ -948,7 +1338,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                         <para vAlign="middle" hAlign="right"/>
-                        <bind match="dataRef" ref="$.SparePartDiscount"/>
+                        <bind match="none"/>
                         <border>
                            <edge presence="hidden"/>
                            <corner presence="hidden"/>
@@ -972,7 +1362,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                         <para vAlign="middle" hAlign="right"/>
-                        <bind match="dataRef" ref="$.PriceInfo"/>
+                        <bind match="none"/>
                         <border>
                            <edge presence="hidden"/>
                            <corner presence="hidden"/>
@@ -992,7 +1382,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                            <edge presence="hidden"/>
                            <corner presence="hidden"/>
                         </border>
-                        <bind match="dataRef" ref="$.SparePartAmount">
+                        <bind match="none">
                            <picture>num{zzz,zz9.99}</picture>
                         </bind>
                         <format>
@@ -1002,7 +1392,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                      <overflow trailer="overflowTrailer"/>
                      <?templateDesigner expand 1?></subform>
                   <assist role="TR"/>
-                  <bind match="dataRef" ref="$.Spareparts[*]"/>
+                  <bind match="none"/>
                   <border>
                      <edge presence="hidden"/>
                   </border>
@@ -1019,74 +1409,19 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                   <corner/>
                   <corner presence="hidden"/>
                </border>
-               <?templateDesigner expand 0?>
                <keep next="contentArea"/>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <margin topInset="2mm"/>
             <occur min="0" max="-1"/>
             <overflow trailer="overflowTrailer" target="mpgPage2"/>
             <breakAfter/>
             <subform w="179mm" name="subTotal" layout="tb">
                <bind match="none"/>
-               <subform layout="lr-tb" hAlign="right" name="subPriceTotals">
+               <subform layout="lr-tb" hAlign="right" name="subPriceTotals" w="90mm">
                   <bind match="none"/>
-                  <subform layout="tb" name="subPriceCaptions">
+                  <subform name="subPriceCaptions">
                      <bind match="none"/>
-                     <field name="L_PriceTotalSum" w="36mm" h="4mm" access="readOnly" hAlign="right">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font size="9pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                        <caption reserve="0mm" placement="right">
-                           <font size="8.5pt" typeface="Arial" weight="bold"/>
-                           <value>
-                              <text>Nettobeløp:</text>
-                           </value>
-                           <para vAlign="middle" hAlign="right"/>
-                        </caption>
-                        <bind match="none"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                        </event>
-                     </field>
-                     <field name="L_VatAmount" w="36mm" h="4mm" access="readOnly">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font size="9pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                        <caption reserve="0mm" placement="right">
-                           <font size="8.5pt" typeface="Arial" weight="bold"/>
-                           <value>
-                              <text>MVA:</text>
-                           </value>
-                           <para hAlign="right" vAlign="middle"/>
-                        </caption>
-                        <bind match="none"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                        </event>
-                     </field>
-                     <field name="L_PriceVatTotalSum" w="36mm" h="4mm" access="readOnly" hAlign="right">
+                     <field name="L_PriceVatTotalSum" w="36mm" h="4mm" access="readOnly" hAlign="right" x="13mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -1112,12 +1447,56 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 this.caption.value.text = output;
 </script>
                         </event>
+                        <para vAlign="middle"/>
                      </field>
-                     <?templateDesigner expand 0?></subform>
-                  <subform name="subVatPercent" h="8mm">
+                     <field name="L_VatIncluded" w="49mm" h="4mm" access="readOnly" hAlign="right" x="0mm" y="4mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                        <caption reserve="0mm" placement="right">
+                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           <value>
+                              <text>Nettobeløp:</text>
+                           </value>
+                           <para vAlign="middle" hAlign="right"/>
+                        </caption>
+                        <bind match="none"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                        <para vAlign="middle"/>
+                     </field>
+                     <?templateDesigner expand 1?></subform>
+                  <subform name="subVatPercent" h="8.072mm" w="24mm">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldVatPercent" w="12mm" h="4mm" access="readOnly" hAlign="right" y="4mm">
+                     <field name="PriceVatTotalInfo" w="24mm" h="4mm" access="readOnly" hAlign="right" y="0.021mm" x="0mm">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle" hAlign="right"/>
+                        <bind match="dataRef" ref="$record.Document.Total.PriceVatTotalInfo"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <?templateDesigner expand 1?></field>
+                     <field name="fldVatPercent" w="12mm" h="4mm" access="readOnly" hAlign="right" y="4.021mm" x="7mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -1135,48 +1514,6 @@ this.caption.value.text = output;
                      <?templateDesigner expand 0?></subform>
                   <subform w="17mm" minH="10.8mm" layout="tb" name="subPriceValues">
                      <bind match="none"/>
-                     <field name="fldPriceTotalSum" w="17mm" h="4mm" access="readOnly" hAlign="right">
-                        <ui>
-                           <numericEdit>
-                              <margin/>
-                           </numericEdit>
-                        </ui>
-                        <font typeface="Arial" size="9pt"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                        <para vAlign="middle" hAlign="right"/>
-                        <?templateDesigner expand 1?>
-                        <border>
-                           <edge presence="hidden"/>
-                           <corner presence="hidden"/>
-                        </border>
-                        <bind match="dataRef" ref="$record.Document.Total.PriceTotalSum">
-                           <picture>num{zzz,zz9.99}</picture>
-                        </bind>
-                        <format>
-                           <picture>num{zzz,zz9.99}</picture>
-                        </format>
-                     </field>
-                     <field name="fldVatAmount" w="17mm" h="4mm" access="readOnly" hAlign="right">
-                        <ui>
-                           <numericEdit>
-                              <margin/>
-                           </numericEdit>
-                        </ui>
-                        <font typeface="Arial" size="9pt"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                        <para vAlign="middle" hAlign="right"/>
-                        <?templateDesigner expand 1?>
-                        <border>
-                           <edge presence="hidden"/>
-                           <corner presence="hidden"/>
-                        </border>
-                        <bind match="dataRef" ref="$record.Document.Total.VatAmount">
-                           <picture>num{zzz,zz9.99}</picture>
-                        </bind>
-                        <format>
-                           <picture>num{zzz,zz9.99}</picture>
-                        </format>
-                     </field>
                      <field name="fldPriceVatTotalSum" w="17mm" h="4mm" access="readOnly" hAlign="right">
                         <ui>
                            <numericEdit>
@@ -1198,7 +1535,7 @@ this.caption.value.text = output;
                            <picture>num{zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <?templateDesigner expand 0?></subform>
+                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
                <margin topInset="1mm"/>
                <border>
@@ -1213,38 +1550,9 @@ this.caption.value.text = output;
                </border>
                <keep intact="contentArea"/>
                <overflow trailer="overflowTrailer"/>
-               <?templateDesigner expand 0?></subform>
-            <?templateDesigner expand 1?></subform>
-         <subform w="179mm" name="subBottomTextMain" layout="tb" x="0.001mm" y="19.194mm">
-            <bind match="none"/>
-            <subform w="179mm" name="BottomTextLines" layout="tb" hAlign="right">
-               <bind match="none"/>
-               <field name="fldBottomTextLine" minH="4mm" access="readOnly" w="179mm">
-                  <ui>
-                     <textEdit multiLine="1">
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.Document.BottomTextMain.BottomTextLines[*].BottomTextLine"/>
-                  <caption reserve="0in">
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                  </caption>
-                  <para vAlign="middle"/>
-               </field>
-               <occur min="0" max="-1"/>
-               <margin topInset="5mm"/>
-               <overflow target="mpgPage2" trailer="overflowTrailer"/>
-               <keep intact="contentArea"/>
                <?templateDesigner expand 1?></subform>
-            <margin topInset="0mm"/>
-            <occur min="0"/>
-            <overflow target="mpgPage2" trailer="overflowTrailer"/>
-            <keep intact="contentArea"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="179mm" name="subLastPageInfo" x="0.001mm" y="0mm" h="34.194mm">
+         <subform w="179mm" name="subLastPageInfo" x="0.001mm" y="0mm" h="37.949mm">
             <bind match="none"/>
             <field name="L_GreetingsText" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="0mm">
                <ui>
@@ -1284,7 +1592,7 @@ this.caption.value.text = output;
                <bind match="dataRef" ref="$.Document.HeaderInfo.DealerNameLegal"/>
                <caption reserve="0in"/>
             </field>
-            <field name="ServiceAdvisor" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="14.194mm">
+            <field name="ServiceAdvisor" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="17.949mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1298,7 +1606,24 @@ this.caption.value.text = output;
                   <font typeface="Arial" size="9pt" weight="bold"/>
                </caption>
             </field>
-            <field name="ServiceAdvisorMail" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="18.194mm">
+            <field name="L_ServiceAdvisor" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="13.949mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <bind match="none"/>
+               <caption reserve="0in">
+                  <font typeface="Arial" size="9pt" weight="bold"/>
+                  <value>
+                     <text>Serviceleder,</text>
+                  </value>
+               </caption>
+            </field>
+            <field name="ServiceAdvisorMail" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="21.949mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1312,7 +1637,7 @@ this.caption.value.text = output;
                   <font typeface="Arial" size="9pt" weight="bold"/>
                </caption>
             </field>
-            <field name="WorkshopPhone" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="22.194mm">
+            <field name="WorkshopPhone" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="25.949mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1330,61 +1655,7 @@ this.caption.value.text = output;
             <overflow target="mpgPage2"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="179mm" name="subFooterLinesMain" layout="tb" x="0.001mm" y="0mm">
-            <bind match="none"/>
-            <subform w="179mm" name="subFooterLines" layout="tb">
-               <bind match="none"/>
-               <field name="fldFooterLine" minH="4mm" minW="179mm" access="readOnly">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.Document.FooterLinesMain.FooterLines[*].FooterLine"/>
-                  <caption reserve="0in">
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                  </caption>
-                  <para vAlign="middle"/>
-               </field>
-               <occur max="10" min="0"/>
-               <margin topInset="4mm"/>
-               <overflow target="mpgPage2"/>
-               <?templateDesigner expand 1?></subform>
-            <margin topInset="4mm"/>
-            <occur min="0" max="-1"/>
-            <overflow target="mpgPage2"/>
-            <?templateDesigner expand 1?></subform>
-         <subform w="179mm" name="subFooterLimitedMain" layout="tb" x="0.001mm" y="0mm">
-            <bind match="none"/>
-            <subform w="179mm" name="subFooterLimitedLines" layout="tb">
-               <bind match="none"/>
-               <field name="fldFooterLimitedLine" minH="4mm" minW="179mm" access="readOnly">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.Document.FooterLimitedMain.FooterLimitedLines[*].FooterLimitedLine"/>
-                  <caption reserve="0in">
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                  </caption>
-                  <para vAlign="middle"/>
-               </field>
-               <occur min="0" max="10"/>
-               <margin topInset="4mm"/>
-               <overflow target="mpgPage2"/>
-               <?templateDesigner expand 1?></subform>
-            <margin topInset="4mm"/>
-            <occur min="0" max="-1"/>
-            <overflow target="mpgPage2"/>
-            <?templateDesigner expand 1?></subform>
-         <overflow target="mpgPage2" trailer="overflowTrailer"/>
+         <overflow target="mpgPage2"/>
          <?templateDesigner expand 1?></subform>
       <field name="exdataTemplate" w="7.480319in" h="1.64125in" presence="hidden">
          <ui>
@@ -1421,20 +1692,23 @@ this.caption.value.text = output;
          <script usehref=".\Fragments\frg_ScriptGetLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
          <script usehref=".\Fragments\frg_LangNO.xdp#som($template.form1.#subform.#variables.NO)"/>
          <script usehref=".\Fragments\frg_LangEN.xdp#som($template.form1.#subform.#variables.EN)"/>
+         <script usehref=".\Fragments\frg_LangEE.xdp#som($template.form1.#subform.#variables.EE)"/>
+         <script usehref=".\Fragments\frg_LangLT.xdp#som($template.form1.#subform.#variables.LT)"/>
+         <script usehref=".\Fragments\frg_LangLV.xdp#som($template.form1.#subform.#variables.LV)"/>
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
             <bind/>
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 132 33 00030012002400260027002F00300031003200330035003600370039004200440045004600480049004A005000510052005300550056005700580059005C005E0060 /ACDLMNOPRSTV_abcefgmnoprstuvy{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 164 43 00030008000F0011001D002400250026002700280029002E002F003000310032003300350037003900440045004700480049004A004B004C004E004F005000510052005300550056005700580059006E00A1 %,.:ABCDEFKLMNOPRTVabdefghiklmnoprstuvåø?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 120 30 0003001200260027002F003100320033003500360037004200440045004600480049004A005000510052005300550056005700580059005C005E0060 /CDLNOPRST_abcefgmnoprstuvy{}?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 172 45 00030008000F0011001D00240025002600280029002D002E002F00300031003200330035003600370039004400450046004700480049004A004B004C004E004F005000510052005300550056005700580059006E00A1 %,.:ABCEFJKLMNOPRSTVabcdefghiklmnoprstuvåø?>
+      <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
@@ -1455,7 +1729,7 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8423\018_PriceEstimate_S001IT01_20130506_134836_D_B001OLS_priceType.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe A - Mverk\Baltikum\2 - Prisoverslag SM\2 - PriceEstimate_S001IT01_20130121_093750_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
@@ -1604,14 +1878,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-05-08T15:34:02Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-14T06:27:31Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3a027632-1a79-428a-ad5a-5ed363db1add</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:7496212e-2598-4838-a56e-007511970900</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -1623,9 +1897,9 @@ this.caption.value.text = output;
 </x:xmpmeta>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="PriceEstimate">
-      <uri>..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8423\PriceEstimate_KC.xsd</uri>
+      <uri>..\..\..\Dropbox\MG_LiveCycle\4-Testing Fase 1\Vedlegg til tasks\7767\PriceEstimate.xsd</uri>
       <rootElement>PriceEstimate</rootElement>
-      <?templateDesigner fileDigest shaHash="orE0xA9CFfe/pY6AHqMBTHTVEDQ="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="cLJE0+IhMA9OC9hH6HAng3+jOzA="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -1696,7 +1970,6 @@ this.caption.value.text = output;
                <PriceVatUnit/>
                <DateCreated/>
                <DealerNameMarketing/>
-               <PriceType/>
                <TypeText/>
                <TestLabel/>
             </DocumentHeader>
@@ -1743,13 +2016,11 @@ this.caption.value.text = output;
             <Tasks>
                <Task dd:maxOccur="30">
                   <TaskHeader>
-                     <TaskTexts dd:maxOccur="30">
-                        <TaskText dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
-                     </TaskTexts>
                      <TaskId/>
                      <TaskName/>
                      <PriceInfo/>
                      <PriceVatTotalTask/>
+                     <TaskText dd:maxOccur="10"/>
                   </TaskHeader>
                   <Spareparts dd:maxOccur="200">
                      <SparePartNo/>
@@ -1899,7 +2170,6 @@ this.caption.value.text = output;
                               <xs:element name="PriceVatUnit" type="xs:string"/>
                               <xs:element name="DateCreated" type="xs:string"/>
                               <xs:element name="DealerNameMarketing" type="xs:string"/>
-                              <xs:element name="PriceType" type="xs:string"/>
                               <xs:element name="TypeText" type="xs:string"/>
                               <xs:element name="TestLabel" type="xs:string"/>
                            </xs:sequence>
@@ -1944,7 +2214,7 @@ this.caption.value.text = output;
                      <xs:element name="TopTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="TopText" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="TopText">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TopTextLine" type="xs:string"/>
@@ -1957,34 +2227,28 @@ this.caption.value.text = output;
                      <xs:element name="Comments">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CustomerComment" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="CustomerComment" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Task" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Task">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskHeader">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="TaskTexts" maxOccurs="30">
-                                                   <xs:complexType>
-                                                      <xs:sequence>
-                                                         <xs:element name="TaskText" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                                                      </xs:sequence>
-                                                   </xs:complexType>
-                                                </xs:element>
                                                 <xs:element name="TaskId" type="xs:string"/>
                                                 <xs:element name="TaskName" type="xs:string"/>
                                                 <xs:element name="PriceInfo" type="xs:string"/>
                                                 <xs:element name="PriceVatTotalTask" type="xs:string"/>
+                                                <xs:element maxOccurs="10" name="TaskText" type="xs:string"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Spareparts" maxOccurs="200">
+                                       <xs:element maxOccurs="200" name="Spareparts">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="SparePartNo" type="xs:string"/>
@@ -2018,7 +2282,7 @@ this.caption.value.text = output;
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="BottomTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="BottomTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -2033,14 +2297,14 @@ this.caption.value.text = output;
                            <xs:sequence>
                               <xs:element name="ServiceAdvisor" type="xs:string"/>
                               <xs:element name="ServiceAdvisorMail" type="xs:string"/>
-                              <xs:element name="AdvertText" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="AdvertText" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="FooterLinesMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="FooterLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="FooterLine" type="xs:string"/>
@@ -2053,7 +2317,7 @@ this.caption.value.text = output;
                      <xs:element name="FooterLimitedMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLimitedLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="FooterLimitedLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="FooterLimitedLine" type="xs:string"/>
