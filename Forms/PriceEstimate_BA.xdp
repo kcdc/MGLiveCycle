@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-14T06:27:31Z" uuid="7496212e-2598-4838-a56e-007511970900">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-15T09:07:44Z" uuid="405c7a5f-7c3b-4669-9a4e-42436ea27f3b">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -383,7 +383,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                      <subform layout="tb" name="subDealerAddress" w="89mm">
                         <bind match="none"/>
                         <keep intact="contentArea"/>
-                        <field access="readOnly" name="L_dealerNameLegal" w="90mm" h="4mm">
+                        <field access="readOnly" name="L_DealerNameLegal" w="90mm" h="4mm">
                            <font typeface="Arial" size="9pt"/>
                            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                            <ui>
@@ -401,6 +401,25 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                               <para vAlign="middle"/>
                            </caption>
                            <para vAlign="middle"/>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "MISSING";	
+}
+
+</script>
+                           </event>
                         </field>
                         <field access="readOnly" name="L_DealerLegalAddressTotal" w="90mm" h="4mm">
                            <font typeface="Arial" size="9pt"/>
@@ -420,6 +439,24 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                               <para vAlign="middle"/>
                            </caption>
                            <para vAlign="middle"/>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "MISSING";	
+}
+</script>
+                           </event>
                         </field>
                         <field access="readOnly" name="L_DealerIssueAddressTotal" w="90mm" h="4mm">
                            <font typeface="Arial" size="9pt"/>
@@ -439,6 +476,24 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                               <para vAlign="middle"/>
                            </caption>
                            <para vAlign="middle"/>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "MISSING";	
+}
+
+</script>
+                           </event>
                         </field>
                         <subform layout="tb" name="subCompanyRegNo" y="9mm" w="89mm">
                            <field access="readOnly" name="L_DealerCompanyRegno" w="90mm" h="4mm">
@@ -819,7 +874,6 @@ this.caption.value.text = output;
                <margin topInset="2mm"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="2mm"/>
-            <?templateDesigner expand 1?>
             <border>
                <edge presence="hidden"/>
                <edge thickness="0.1mm" presence="hidden"/>
@@ -830,7 +884,7 @@ this.caption.value.text = output;
                <corner presence="hidden"/>
                <corner thickness="0.1mm" presence="hidden"/>
             </border>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" minH="8mm" layout="tb" name="subCommentsArea">
             <bind match="none"/>
             <subform w="179mm" layout="tb" name="subComments">
@@ -1144,7 +1198,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
 </script>
                   </event>
                </field>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform y="8.214mm" w="179mm" minH="3.6mm" layout="tb" name="subTask">
                <bind match="dataRef" ref="$.Task[*]"/>
                <subform name="subTaskHeader" layout="lr-tb" w="179mm">
@@ -1219,7 +1273,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                      <edge presence="hidden"/>
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-                  <subform y="3.6mm" w="179mm" minH="3.6mm" layout="lr-tb" name="subTaskText">
+                  <subform w="179mm" minH="3.6mm" layout="lr-tb" name="subTaskText" y="3.6mm">
                      <bind match="none"/>
                      <field name="fldTaskText" minH="3.6mm" access="readOnly" w="162mm">
                         <ui>
@@ -1230,7 +1284,7 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                         </ui>
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="6mm" rightInset="0mm"/>
-                        <bind match="none"/>
+                        <bind match="dataRef" ref="$.TaskTexts[*].TaskText[*]"/>
                         <caption reserve="0in">
                            <font typeface="Arial" size="9pt" weight="bold"/>
                            <para lineHeight="9pt" vAlign="middle"/>
@@ -1401,7 +1455,6 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                   <breakAfter/>
                   <?templateDesigner expand 1?></subform>
                <margin topInset="1mm" bottomInset="0mm"/>
-               <occur min="0" max="30"/>
                <overflow leader="subMaterialsAndSparepartsHeader" target="mpgPage2"/>
                <breakAfter/>
                <border>
@@ -1410,9 +1463,9 @@ if(PriceEstimate.pageContent.subHeaderControllers.fldDiscountController.rawValue
                   <corner presence="hidden"/>
                </border>
                <keep next="contentArea"/>
+               <occur min="0" max="30"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="2mm"/>
-            <occur min="0" max="-1"/>
             <overflow trailer="overflowTrailer" target="mpgPage2"/>
             <breakAfter/>
             <subform w="179mm" name="subTotal" layout="tb">
@@ -1536,7 +1589,7 @@ this.caption.value.text = output;
                         </format>
                      </field>
                      <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 0?></subform>
                <margin topInset="1mm"/>
                <border>
                   <edge thickness="0.1mm"/>
@@ -1550,11 +1603,12 @@ this.caption.value.text = output;
                </border>
                <keep intact="contentArea"/>
                <overflow trailer="overflowTrailer"/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
+            <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="179mm" name="subLastPageInfo" x="0.001mm" y="0mm" h="37.949mm">
+         <subform w="179mm" name="subLastPageInfo" x="0.001mm" y="0mm" h="39.115mm">
             <bind match="none"/>
-            <field name="L_GreetingsText" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="0mm">
+            <field name="L_GreetingsText" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="0.365mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1580,7 +1634,7 @@ this.caption.value.text = output;
 </script>
                </event>
             </field>
-            <field name="fldDealerNameLegal" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="4mm">
+            <field name="fldDealerNameLegal" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="4.365mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1592,7 +1646,7 @@ this.caption.value.text = output;
                <bind match="dataRef" ref="$.Document.HeaderInfo.DealerNameLegal"/>
                <caption reserve="0in"/>
             </field>
-            <field name="ServiceAdvisor" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="17.949mm">
+            <field name="ServiceAdvisor" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="18.314mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1606,7 +1660,7 @@ this.caption.value.text = output;
                   <font typeface="Arial" size="9pt" weight="bold"/>
                </caption>
             </field>
-            <field name="L_ServiceAdvisor" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="13.949mm">
+            <field name="L_ServiceAdvisor" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="14.314mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1623,7 +1677,7 @@ this.caption.value.text = output;
                   </value>
                </caption>
             </field>
-            <field name="ServiceAdvisorMail" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="21.949mm">
+            <field name="ServiceAdvisorMail" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="22.314mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1637,7 +1691,7 @@ this.caption.value.text = output;
                   <font typeface="Arial" size="9pt" weight="bold"/>
                </caption>
             </field>
-            <field name="WorkshopPhone" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="25.949mm">
+            <field name="WorkshopPhone" access="readOnly" w="70mm" h="4mm" x="0.001mm" y="26.314mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -1655,7 +1709,7 @@ this.caption.value.text = output;
             <overflow target="mpgPage2"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <overflow target="mpgPage2"/>
+         <overflow target="mpgPage2" trailer="overflowTrailer"/>
          <?templateDesigner expand 1?></subform>
       <field name="exdataTemplate" w="7.480319in" h="1.64125in" presence="hidden">
          <ui>
@@ -1715,7 +1769,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 127?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -1729,9 +1782,10 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe A - Mverk\Baltikum\2 - Prisoverslag SM\2 - PriceEstimate_S001IT01_20130121_093750_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8423\018_PriceEstimate_S001IT01_20130506_134836_D_B001OLS_priceType_LT.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner Zoom 127?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -1878,14 +1932,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-05-14T06:27:31Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-15T09:07:44Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7496212e-2598-4838-a56e-007511970900</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:405c7a5f-7c3b-4669-9a4e-42436ea27f3b</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -1897,9 +1951,9 @@ this.caption.value.text = output;
 </x:xmpmeta>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="PriceEstimate">
-      <uri>..\..\..\Dropbox\MG_LiveCycle\4-Testing Fase 1\Vedlegg til tasks\7767\PriceEstimate.xsd</uri>
+      <uri>..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe A - Mverk\2- Prisoverslag SM\Oppdatert\PriceEstimate_ny.xsd</uri>
       <rootElement>PriceEstimate</rootElement>
-      <?templateDesigner fileDigest shaHash="cLJE0+IhMA9OC9hH6HAng3+jOzA="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="KnJpU224POP77rGJ3EHkdWNMEfA="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -1972,6 +2026,7 @@ this.caption.value.text = output;
                <DealerNameMarketing/>
                <TypeText/>
                <TestLabel/>
+               <PriceType/>
             </DocumentHeader>
             <HeaderInfo>
                <DealerNameLegal/>
@@ -2016,11 +2071,13 @@ this.caption.value.text = output;
             <Tasks>
                <Task dd:maxOccur="30">
                   <TaskHeader>
+                     <Tasktexts dd:maxOccur="30">
+                        <TaskText dd:maxOccur="-1"/>
+                     </Tasktexts>
                      <TaskId/>
                      <TaskName/>
                      <PriceInfo/>
                      <PriceVatTotalTask/>
-                     <TaskText dd:maxOccur="10"/>
                   </TaskHeader>
                   <Spareparts dd:maxOccur="200">
                      <SparePartNo/>
@@ -2172,6 +2229,7 @@ this.caption.value.text = output;
                               <xs:element name="DealerNameMarketing" type="xs:string"/>
                               <xs:element name="TypeText" type="xs:string"/>
                               <xs:element name="TestLabel" type="xs:string"/>
+                              <xs:element name="PriceType" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -2240,11 +2298,17 @@ this.caption.value.text = output;
                                        <xs:element name="TaskHeader">
                                           <xs:complexType>
                                              <xs:sequence>
+                                                <xs:element maxOccurs="30" name="Tasktexts">
+                                                   <xs:complexType>
+                                                      <xs:sequence>
+                                                         <xs:element maxOccurs="unbounded" name="TaskText" type="xs:string"/>
+                                                      </xs:sequence>
+                                                   </xs:complexType>
+                                                </xs:element>
                                                 <xs:element name="TaskId" type="xs:string"/>
                                                 <xs:element name="TaskName" type="xs:string"/>
                                                 <xs:element name="PriceInfo" type="xs:string"/>
                                                 <xs:element name="PriceVatTotalTask" type="xs:string"/>
-                                                <xs:element maxOccurs="10" name="TaskText" type="xs:string"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
