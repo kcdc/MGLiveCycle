@@ -133,7 +133,7 @@
 		<xsl:param name="element"/>
 		<xsl:param name="line"/>
 		<xsl:param name="rightSide"/>
-		<xsl:if test="$line != 24">
+		<xsl:if test="$line != 25">
 		  <Defect>
 			  <DefectPrice>
 			  </DefectPrice>
