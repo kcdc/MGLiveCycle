@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T11:38:50Z" uuid="37767230-36b1-458f-9484-22e87c2370b4">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-17T04:02:17Z" uuid="28c17209-2e78-40c9-81a7-4b8d2c8c30e9">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -8,8 +8,8 @@
          <pageArea>
             <contentArea x="9mm" y="31mm" w="193mm" h="200mm" name="areaPage1" id="areaPage1_ID"/>
             <medium stock="a4" short="210mm" long="297mm"/>
-         </pageArea>
-      </pageSet>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
       <subform w="131mm" h="51mm" name="subFooterLeft">
          <bind match="none"/>
          <field name="Encumbrance" access="readOnly" w="54.997mm" h="5mm" y="23mm">
@@ -53,342 +53,548 @@
                <para vAlign="middle"/>
             </caption>
          </field>
-         <field name="TyresSummerVF" access="readOnly" w="11mm" h="5mm" y="32.942mm" x="86.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerVF"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+         <subform y="28mm" w="130.998mm" minH="15mm" name="subContent" layout="tb">
+            <subform w="130.997mm" name="subEarlierBigDamageTyres" layout="lr-tb">
+               <field name="MajorDamage" access="readOnly" w="54.997mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.MajorDamage"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle" hAlign="center"/>
-         </field>
-         <field name="TyresSummerHF" access="readOnly" w="11mm" h="5mm" y="32.942mm" x="97.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerHF"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="39mm">
+                     <value>
+                        <text>Tidligere større skade</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="Tyres" access="readOnly" w="32mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle" hAlign="center"/>
-         </field>
-         <field name="TyresSummerVB" access="readOnly" w="11mm" h="5mm" y="32.942mm" x="108.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerVB"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="29mm">
+                     <value>
+                        <text>Dekk mm</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="VF" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle" hAlign="center"/>
-         </field>
-         <field name="TyresSummerHB" access="readOnly" w="11mm" h="5mm" y="32.942mm" x="119.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerHB"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <value>
+                        <text>VF</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle" hAlign="center"/>
+                  </caption>
+               </field>
+               <field name="HF" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle" hAlign="center"/>
-         </field>
-         <field name="TyresWinterVF" access="readOnly" w="11mm" h="5mm" y="37.942mm" x="86.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterVF"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <value>
+                        <text>HF</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle" hAlign="center"/>
+                  </caption>
+               </field>
+               <field name="VB" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle" hAlign="center"/>
-         </field>
-         <field name="TyresWinterHF" access="readOnly" w="11mm" h="5mm" y="37.942mm" x="97.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterHF"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <value>
+                        <text>VB</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle" hAlign="center"/>
+                  </caption>
+               </field>
+               <field name="HB" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle" hAlign="center"/>
-         </field>
-         <field name="TyresWinterVB" access="readOnly" w="11mm" h="5mm" y="37.942mm" x="108.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterVB"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="11mm">
+                     <value>
+                        <text>HB</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle" hAlign="center"/>
+                  </caption>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform w="130.997mm" name="subMileageConfirmedSummerTyres" layout="lr-tb">
+               <field name="MileageConfirmed" access="readOnly" w="54.997mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.MileageConfirmed"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle" hAlign="center"/>
-         </field>
-         <field name="TyresWinterHB" access="readOnly" w="11mm" h="5mm" y="37.942mm" x="119.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterHB"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="39mm">
+                     <value>
+                        <text>Km.stand bekreftes</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="SummerTyres" access="readOnly" w="32mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle" hAlign="center"/>
-         </field>
-         <field name="Comment" access="readOnly" w="32mm" h="5mm" y="28mm" x="54.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="29mm">
+                     <value>
+                        <text>Sommerdekk</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="TyresSummerVF" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerVF"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="29mm">
-               <value>
-                  <text>Dekk mm</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle"/>
-            </caption>
-         </field>
-         <field name="Comment" access="readOnly" w="32mm" h="5mm" y="33mm" x="54.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresSummerHF" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerHF"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="29mm">
-               <value>
-                  <text>Sommerdekk</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle"/>
-            </caption>
-         </field>
-         <field name="Comment" access="readOnly" w="32mm" h="5mm" y="38mm" x="54.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresSummerVB" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerVB"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="29mm">
-               <value>
-                  <text>Vinterdekk</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle"/>
-            </caption>
-         </field>
-         <field name="Comment" access="readOnly" w="11mm" h="5mm" y="28mm" x="86.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresSummerHB" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresSummerHB"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="11mm">
-               <value>
-                  <text>VF</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle" hAlign="center"/>
-            </caption>
-         </field>
-         <field name="Comment" access="readOnly" w="121.001mm" h="21.644mm" x="0mm">
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform w="130.998mm" name="subChipTunesWinterTyres" layout="lr-tb">
+               <field name="ChipTuned" access="readOnly" w="54.997mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.ChipTuned"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                     <edge thickness="0.1mm"/>
+                     <edge thickness="0.1mm" presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                     <corner thickness="0.1mm" presence="hidden"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="39mm">
+                     <value>
+                        <text>Chiptunet</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="WinterTyres" access="readOnly" w="32mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="29mm">
+                     <value>
+                        <text>Vinterdekk</text>
+                     </value>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <field name="TyresWinterVF" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterVF"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresWinterHF" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterHF"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresWinterVB" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterVB"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <field name="TyresWinterHB" access="readOnly" w="11mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.HeaderInfo.TyresWinterHB"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="8pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para vAlign="middle" hAlign="center"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
+         <field name="Comment" access="readOnly" w="121.001mm" h="21.644mm" x="0.379mm" y="0.273mm">
             <ui>
                <textEdit multiLine="1">
                   <border presence="hidden"/>
                   <margin/>
                </textEdit>
             </ui>
-            <bind match="none"/>
+            <bind match="dataRef" ref="$.Document.HeaderInfo.Comment"/>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
 
@@ -404,7 +610,6 @@
                <corner thickness="0.1mm" presence="hidden"/>
             </border>
             <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
-            <para vAlign="middle"/>
             <caption placement="top" reserve="5.6444mm">
                <value>
                   <text>Kommentar:</text>
@@ -413,230 +618,60 @@
                <para vAlign="middle"/>
             </caption>
          </field>
-         <field name="Comment" access="readOnly" w="11mm" h="5mm" y="28mm" x="97.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+         <subform x="0.001mm" y="43mm" w="130.999mm" name="subSignature" layout="lr-tb">
+            <field name="Signatur" access="readOnly" w="54.997mm" h="8mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="none"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="11mm">
-               <value>
-                  <text>HF</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle" hAlign="center"/>
-            </caption>
-         </field>
-         <field name="Comment" access="readOnly" w="11mm" h="5mm" y="28mm" x="108.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
+               </event>
+               <font typeface="Arial" size="8.5pt"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle" hAlign="right"/>
+               <caption reserve="0mm" placement="top"/>
+            </field>
+            <field name="SalesSignature" access="readOnly" w="76mm" h="8mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="none"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
 
 
 
 
 
 </script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="11mm">
-               <value>
-                  <text>VB</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle" hAlign="center"/>
-            </caption>
-         </field>
-         <field name="Comment" access="readOnly" w="11mm" h="5mm" y="28mm" x="119.998mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="11mm">
-               <value>
-                  <text>HB</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle" hAlign="center"/>
-            </caption>
-         </field>
-         <field name="SalesSignature" access="readOnly" w="76mm" h="8mm" y="43mm" x="55mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-            </event>
-            <font typeface="Arial" size="8.5pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="1mm"/>
-            <para vAlign="middle" hAlign="right"/>
-            <caption reserve="0mm" placement="top"/>
-         </field>
-         <field name="MileageConfirmed" access="readOnly" w="54.997mm" h="5mm" y="33.058mm" x="0mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.MileageConfirmed"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="39mm">
-               <value>
-                  <text>Km.stand bekreftes</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle"/>
-            </caption>
-         </field>
-         <field name="ChipTuned" access="readOnly" w="54.997mm" h="5mm" y="38.058mm" x="0mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.ChipTuned"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-               <edge thickness="0.1mm"/>
-               <edge thickness="0.1mm" presence="hidden"/>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-               <corner thickness="0.1mm" presence="hidden"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="39mm">
-               <value>
-                  <text>Chiptunet</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle"/>
-            </caption>
-         </field>
-         <field name="MajorDamage" access="readOnly" w="54.997mm" h="5mm" y="28.058mm" x="0mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Document.HeaderInfo.MajorDamage"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-            </event>
-            <font typeface="Arial" size="8pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="0mm"/>
-            <para vAlign="middle"/>
-            <caption reserve="39mm">
-               <value>
-                  <text>Tidligere større skade</text>
-               </value>
-               <font typeface="Arial" size="9pt"/>
-               <para vAlign="middle"/>
-            </caption>
-         </field>
+               </event>
+               <font typeface="Arial" size="8.5pt"/>
+               <border>
+                  <edge thickness="0.1mm"/>
+                  <corner thickness="0.1mm"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="1mm"/>
+               <para vAlign="middle" hAlign="right"/>
+               <caption reserve="0mm" placement="top"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
          <draw name="Line1" y="23mm" x="39mm" w="0in" h="20mm">
             <value>
                <line slope="/">
@@ -644,45 +679,20 @@
                </line>
             </value>
          </draw>
-         <field name="Signatur" access="readOnly" w="54.997mm" h="8mm" y="43mm" x="0.001mm">
-            <ui>
-               <textEdit>
-                  <border presence="hidden"/>
-                  <margin/>
-               </textEdit>
-            </ui>
-            <bind match="none"/>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-            </event>
-            <font typeface="Arial" size="8.5pt"/>
-            <border>
-               <edge thickness="0.1mm"/>
-               <corner thickness="0.1mm"/>
-            </border>
-            <margin bottomInset="0mm" leftInset="2mm" rightInset="1mm" topInset="1mm"/>
-            <para vAlign="middle" hAlign="right"/>
-            <caption reserve="0mm" placement="top"/>
-         </field>
          <?templateDesigner isFragment yes?>
          <?templateDesigner fragmentTitle frg_FooterLeft?>
          <?templateDesigner fragmentDescription NO_B?>
          <?templateDesigner expand 1?></subform>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 124 33 000300110025002600270029002B002E00360037003900440045004700480049004A004B004C004E004F00500051005200530055005600570058009100A1 .BCDFHKSTVabdefghiklmnoprstuØø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 36 9 001D002E0044004800500051005200550057:Kaemnort?>
    </subform>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 200?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 97?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?></template>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -694,7 +704,6 @@
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -709,14 +718,14 @@
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-16T11:38:50Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-17T04:02:17Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:37767230-36b1-458f-9484-22e87c2370b4</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:28c17209-2e78-40c9-81a7-4b8d2c8c30e9</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

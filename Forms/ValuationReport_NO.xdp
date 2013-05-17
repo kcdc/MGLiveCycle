@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-29T14:09:08Z" uuid="19d53dfa-279d-4eec-b90a-148346cf7b34">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-17T04:02:49Z" uuid="4c2f0489-235a-44bb-a6cc-6eed48ba4d34">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -8,11 +8,6 @@
    <subform name="ValuationReport" layout="tb" locale="sv_SE" restoreState="auto">
       <pageSet>
          <pageArea name="mpgPage1" id="Page1">
-            <subform x="9mm" y="13mm" w="155mm" h="13mm" name="subHeader">
-               <bind match="none"/>
-               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="0mm" y="0mm">
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
             <subform w="202mm" minH="18mm" name="subDocumentHeader">
                <draw name="LinBorderMpg1" y="10mm" x="8mm" w="194mm" h="270mm">
                   <value>
@@ -72,78 +67,19 @@
                      </value>
                   </field>
                   <?templateDesigner expand 0?></subform>
-               <subform x="87mm" y="18mm" layout="tb" minH="22.225mm" name="sub_TestLabel" w="76.15mm">
-                  <bind match="none"/>
-                  <field presence="hidden" h="5.939mm" minW="32.514mm" name="fld_TestLabelData" access="readOnly">
-                     <font typeface="Arial" baselineShift="0pt" size="14pt" weight="bold"/>
-                     <margin bottomInset="0.5mm" leftInset="1.0008mm" rightInset="0.5mm" topInset="0.5mm"/>
-                     <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt"/>
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <bind ref="$.TestLabel" match="dataRef"/>
-                     <?templateDesigner expand 1?></field>
-                  <field access="readOnly" minH="12.7mm" name="fld_TestLabel" w="76mm">
-                     <font typeface="Arial" size="8pt"/>
-                     <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
-                     <ui>
-                        <textEdit multiLine="1">
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <bind match="none"/>
-                     <value>
-                        <exData contentType="text/html"/>
-                     </value>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var receivedText = fld_TestLabelData.rawValue;
-	//xfa.host.messageBox(receivedText);
-    
-	var cleanedValue = receivedText;
-//If form pre-population logic has converted &lt; and &gt; signs into &amp;lt; or &amp;gt; then un-comment below two lines. Those two lines will do the needed replacement (&amp;gt; to &gt;)
-	cleanedValue = receivedText.replace(/(\&amp;lt\;)/g,"&lt;");
-	cleanedValue = cleanedValue.replace(/(\&amp;gt\;)/g,"&gt;"); 
-
-//	xfa.host.messageBox("exdataTemplate.rawValue " + exdataTemplate.rawValue);
-
-	//How does rich text work in this sample?
-	//To set the data properly into a richtext supported TextField we have to little bit more than setting rawValue.
-	// The data needs to be stored in exData section of text field with a little formatting around. I call it 'exData envelope' where I inject the content at certain place. 
-	// The place in this envelope where the actual content needs to injected is represented with 'ccc'.
-	
-	//Get the envelope
-	var templateVal = sub_RichTextEnvelope.exdataTemplate.rawValue;
-	//replace 'ccc' with the data we received.
-	cleanedValue = templateVal.replace(/(ccc)/g,cleanedValue); 
-	
-	//show what's getting set into the textfield
-	//console.println(cleanedValue);
-	
-	//this is how we have to set the rich text data into the textfield's exData section.
-	this.value.exData.loadXML(cleanedValue,1,1);
-
-</script>
-                     </event>
-                     <?templateDesigner expand 1?></field>
-                  <?templateDesigner expand 1?></subform>
-               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
-                  <bind/>
-                  <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_IdDonebyDateSalemanInformation.xdp#som($template.form1.subIdDonebyDateSalemanInformation)" x="10mm" y="23mm" presence="visible">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <?templateDesigner expand 1?></subform>
-            <contentArea x="9mm" y="31mm" w="193mm" h="200mm" name="areaPage1" id="areaPage1_ID"/>
+            <contentArea x="9mm" y="31mm" w="193mm" h="208mm" name="areaPage1" id="areaPage1_ID"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <occur min="1" max="1"/>
             <subform x="8mm" y="237mm" w="193.998mm" h="51mm" name="subFoot">
                <bind match="none"/>
                <subform usehref=".\Fragments\frg_FooterLeft.xdp#som($template.form1.subFooterLeft)" x="0mm" y="0mm">
                   <bind/>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <subform x="130.998mm" y="4.04mm" w="63.002mm" h="47mm" name="subFooterRight">
                   <bind match="none"/>
                   <field name="ValidThrough" access="readOnly" w="63mm" h="7mm" x="0mm">
@@ -403,21 +339,70 @@ var receivedText = fld_TestLabelData.rawValue;
                      </caption>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform x="1mm" y="105mm" usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)">
                <bind/>
+               <?templateDesigner expand 1?>
+            </subform>
+            <subform x="9mm" y="13mm" w="155mm" h="17.7mm" name="subHeader">
+               <bind match="none"/>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="78mm" y="5mm">
+                  <?templateDesigner expand 1?>
+               </subform>
+               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="0mm" y="0in">
+                  <?templateDesigner expand 1?>
+               </subform>
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
+                  <bind/>
+                  <?templateDesigner expand 1?>
+               </subform>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
-            <subform x="9mm" y="9mm" w="155mm" h="13mm" name="subHeader">
+            <subform x="9mm" y="9mm" w="156.15mm" h="20.7mm" name="subHeader">
                <bind match="none"/>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="0mm" y="0mm">
+                  <?templateDesigner expand 1?>
+               </subform>
+               <subform w="200.025mm" h="50mm" name="subRichTextEnvelope" presence="hidden">
+                  <bind match="none"/>
+                  <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border>
+                              <?templateDesigner StyleID aped3?>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Envelope</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
+&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
+&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
+&gt;ccc&lt;/p&#xD;
+&gt;&lt;/body&#xD;
+&gt;&lt;/exData&#xD;
+&gt;</text>
+                     </value>
+                     <traversal>
+                        <traverse ref="txtTextArea2[0]"/>
+                     </traversal>
+                     <bind match="none"/>
+                  </field>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <subform w="202mm" minH="18mm" name="subDocumentHeader">
-               <bind match="dataRef" ref="$.Document.DocumentHeader"/>
-               <subform x="87mm" minH="22.225mm" name="subTestLabel" layout="tb" y="17mm" w="76.15mm">
+               <subform x="80mm" minH="22.225mm" name="subTestLabel" layout="tb" y="7mm" w="76.15mm">
                   <bind match="none"/>
                   <field name="fldTestLabel" access="readOnly" minH="4mm" w="76mm">
                      <ui>
@@ -437,8 +422,8 @@ var receivedText = fld_TestLabelData.rawValue;
                      </value>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
-
-var receivedText = xfa.resolveNode("Data.#pageSet.mpgPage1.subDocumentHeader.subTestLabel.fldTestLabelData").rawValue;
+try{
+var receivedText = xfa.resolveNode("#pageSet.mpgPage1.subHeader.sub_TestLabel.fld_TestLabelData").rawValue;
 	//xfa.host.messageBox(receivedText);
     
 	var cleanedValue = receivedText;
@@ -463,10 +448,124 @@ var receivedText = xfa.resolveNode("Data.#pageSet.mpgPage1.subDocumentHeader.sub
 	
 	//this is how we have to set the rich text data into the textfield's exData section.
 	this.value.exData.loadXML(cleanedValue,1,1);
+}
+catch(e)
+{
+app.alert(e);
+}
 </script>
                      </event>
                   </field>
                   <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <subform w="193.999mm" h="5mm" name="subHeaderText" x="8mm" y="27mm">
+               <bind match="none"/>
+               <field name="ErrorText2" access="readOnly" h="4mm" w="124mm" x="1mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption reserve="60mm">
+                     <value>
+                        <text>Skader fortsettelse:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="EquipmentText2" access="readOnly" h="4mm" w="67.999mm" x="125mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <caption reserve="40mm">
+                     <value>
+                        <text>Utstyr fortsettelse:</text>
+                     </value>
+                     <font typeface="Arial" size="8.5pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+
+
+
+
+</script>
+                  </event>
+                  <font typeface="Arial" size="9pt"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                  </border>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <para vAlign="middle"/>
+               </field>
+               <?templateDesigner expand 0?>
+               <margin topInset="1mm"/>
+            </subform>
+            <contentArea x="9mm" y="32mm" w="193mm" h="249mm" name="areaPage2" id="areaPage2_ID"/>
+            <draw name="LinBorderMpg1" y="8mm" x="8mm" w="194mm" h="277mm">
+               <value>
+                  <rectangle>
+                     <edge thickness="0.1mm"/>
+                     <corner radius="5.08mm" thickness="0.1mm"/>
+                  </rectangle>
+               </value>
+            </draw>
+            <field name="verticalLabel" access="readOnly" h="4mm" w="49mm" x="2mm" y="155mm" rotate="90">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="none"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel.verticalTextLabel").rawValue;
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="8pt"/>
+               <border>
+                  <edge thickness="0.1mm" presence="hidden"/>
+                  <corner thickness="0.1mm" presence="hidden"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>NameOfDocType_ServerDate</text>
+               </value>
+            </field>
+            <subform w="202mm" minH="18mm" name="subDocumentHeader">
+               <bind match="dataRef" ref="$.Document.DocumentHeader"/>
                <field name="fldDocumentName" minW="48mm" access="readOnly" x="153mm" y="9mm" h="9mm">
                   <ui>
                      <textEdit>
@@ -622,160 +721,19 @@ var receivedText = xfa.resolveNode("Data.#pageSet.mpgPage1.subDocumentHeader.sub
                   </border>
                   <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                </field>
-               <subform w="200.025mm" h="50mm" name="subRichTextEnvelope" presence="hidden">
-                  <bind match="none"/>
-                  <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
-                     <ui>
-                        <textEdit multiLine="1">
-                           <border>
-                              <?templateDesigner StyleID aped3?>
-                              <edge stroke="lowered"/>
-                           </border>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Myriad Pro"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="25mm">
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Envelope</text>
-                        </value>
-                     </caption>
-                     <value>
-                        <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
-&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
-&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
-&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
-&gt;ccc&lt;/p&#xD;
-&gt;&lt;/body&#xD;
-&gt;&lt;/exData&#xD;
-&gt;</text>
-                     </value>
-                     <traversal>
-                        <traverse ref="txtTextArea2[0]"/>
-                     </traversal>
-                     <bind match="none"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
-            <subform w="193.999mm" h="5mm" name="subHeaderText" x="8mm" y="27mm">
-               <bind match="none"/>
-               <field name="ErrorText2" access="readOnly" h="4mm" w="124mm" x="1mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <caption reserve="60mm">
-                     <value>
-                        <text>Skader fortsettelse:</text>
-                     </value>
-                     <font typeface="Arial" size="8.5pt" weight="bold"/>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-                  </event>
-                  <font typeface="Arial" size="9pt"/>
-                  <border>
-                     <edge thickness="0.1mm"/>
-                     <corner thickness="0.1mm"/>
-                  </border>
-                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
-                  <para vAlign="middle"/>
-               </field>
-               <field name="EquipmentText2" access="readOnly" h="4mm" w="67.999mm" x="125mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <caption reserve="40mm">
-                     <value>
-                        <text>Utstyr fortsettelse:</text>
-                     </value>
-                     <font typeface="Arial" size="8.5pt" weight="bold"/>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-
-
-
-
-
-</script>
-                  </event>
-                  <font typeface="Arial" size="9pt"/>
-                  <border>
-                     <edge thickness="0.1mm"/>
-                     <corner thickness="0.1mm"/>
-                  </border>
-                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
-                  <para vAlign="middle"/>
-               </field>
-               <?templateDesigner expand 0?>
-               <margin topInset="1mm"/>
-            </subform>
-            <contentArea x="9mm" y="32mm" w="193mm" h="249mm" name="areaPage2" id="areaPage2_ID"/>
-            <draw name="LinBorderMpg1" y="8mm" x="8mm" w="194mm" h="277mm">
-               <value>
-                  <rectangle>
-                     <edge thickness="0.1mm"/>
-                     <corner radius="5.08mm" thickness="0.1mm"/>
-                  </rectangle>
-               </value>
-            </draw>
-            <field name="verticalLabel" access="readOnly" h="4mm" w="49mm" x="2mm" y="155mm" rotate="90">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <bind match="none"/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel.verticalTextLabel").rawValue;
-
-
-
-
-</script>
-               </event>
-               <font typeface="Arial" size="8pt"/>
-               <border>
-                  <edge thickness="0.1mm" presence="hidden"/>
-                  <corner thickness="0.1mm" presence="hidden"/>
-               </border>
-               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
-               <para vAlign="middle"/>
-               <value>
-                  <text>NameOfDocType_ServerDate</text>
-               </value>
-            </field>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
       <subform w="193mm" name="pageContent" layout="tb">
          <bind match="none"/>
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <subform usehref=".\Fragments\frg_CarInfo.xdp#som($template.form1.subHeaderInfo)">
             <bind/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <subform w="192.999mm" name="subDefectsOptionsArea" layout="tb">
             <bind match="none"/>
             <margin topInset="0mm"/>
@@ -906,7 +864,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
 </script>
                                           </event>
                                        </field>
-                                       <occur min="21" max="-1"/>
+                                       <occur min="25" max="-1"/>
                                        <?templateDesigner expand 1?></subform>
                                     <border>
                                        <edge presence="hidden"/>
@@ -945,7 +903,7 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                                           <margin bottomInset="0mm" leftInset="1mm" rightInset="1.5mm" topInset="0mm"/>
                                           <para vAlign="middle" hAlign="right"/>
                                        </field>
-                                       <occur min="21" max="-1"/>
+                                       <occur min="25" max="-1"/>
                                        <?templateDesigner expand 1?></subform>
                                     <?templateDesigner expand 1?></subform>
                                  <border>
@@ -1044,6 +1002,11 @@ this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel
                                  <desc>
                                     <text name="embeddedHref">Unknown Embedded URI</text>
                                  </desc>
+                                 <event activity="initialize" name="event__initialize">
+                                    <script contentType="application/x-javascript">
+this.access = "protected";
+</script>
+                                 </event>
                               </field>
                               <draw name="Image1" y="13.354mm" x="1mm" w="25.4mm" h="54mm">
                                  <value>
@@ -1105,7 +1068,7 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                      <bind match="none"/>
                      <subform w="68mm" minH="3.646mm" layout="lr-tb" name="subOptionsRight">
                         <bind match="none"/>
-                        <field name="OptionDesc" minW="68mm" minH="3.646mm">
+                        <field name="OptionDesc" minW="68mm" minH="3.646mm" access="readOnly">
                            <ui>
                               <textEdit multiLine="1"/>
                            </ui>
@@ -1157,7 +1120,7 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                <margin topInset="5mm"/>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
-         <subform minH="7.292mm" layout="lr-tb" name="subDefectsOptionsWestern">
+         <subform name="subDefectsOptionsWestern">
             <bind match="none"/>
             <subform w="124mm" minH="3.646mm" layout="tb" name="subDefectsTopBottom">
                <bind match="none"/>
@@ -1209,8 +1172,9 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
 </script>
                                     </event>
                                  </field>
+                                 <?templateDesigner expand 1?>
                                  <occur min="0" max="-1"/>
-                                 <?templateDesigner expand 1?></subform>
+                              </subform>
                               <border>
                                  <edge presence="hidden"/>
                                  <corner/>
@@ -1218,7 +1182,9 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                                  <corner/>
                                  <corner/>
                               </border>
-                              <?templateDesigner expand 1?></subform>
+                              <?templateDesigner expand 1?>
+                              <occur min="0" max="-1"/>
+                           </subform>
                            <subform w="17mm" minH="3.646mm" layout="tb" name="subDefectPrice">
                               <bind match="none"/>
                               <subform w="17mm" minH="3.646mm" layout="tb" name="subTopToBottomWrapper">
@@ -1250,7 +1216,9 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                                     <para vAlign="middle" hAlign="right"/>
                                  </field>
                                  <?templateDesigner expand 1?></subform>
-                              <?templateDesigner expand 1?></subform>
+                              <?templateDesigner expand 1?>
+                              <occur min="0" max="-1"/>
+                           </subform>
                            <border>
                               <edge presence="hidden"/>
                               <edge thickness="0.1mm" presence="hidden"/>
@@ -1261,8 +1229,12 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                               <corner/>
                               <corner/>
                            </border>
-                           <?templateDesigner expand 0?></subform>
-                        <?templateDesigner expand 1?></subform>
+                           <?templateDesigner expand 0?>
+                           <occur min="0" max="-1"/>
+                        </subform>
+                        <?templateDesigner expand 1?>
+                        <occur min="0" max="-1"/>
+                     </subform>
                      <border>
                         <edge presence="hidden"/>
                         <edge thickness="0.1mm"/>
@@ -1273,12 +1245,16 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                         <corner/>
                         <corner thickness="0.1mm"/>
                      </border>
-                     <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?>
+                     <occur min="0" max="-1"/>
+                  </subform>
                   <border>
                      <edge presence="hidden"/>
                      <corner presence="hidden"/>
                   </border>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 0?>
+                  <occur min="0" max="-1"/>
+               </subform>
                <?templateDesigner expand 0?>
                <border>
                   <edge presence="hidden"/>
@@ -1291,7 +1267,7 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                   <corner/>
                </border>
             </subform>
-            <subform x="123mm" w="68mm" minH="3.646mm" layout="tb" name="subOptionsTopBottom">
+            <subform x="124mm" w="68mm" minH="3.646mm" layout="tb" name="subOptionsTopBottom">
                <bind match="none"/>
                <subform w="68mm" minH="3.646mm" layout="lr-tb" name="subOptionsRight">
                   <bind match="none"/>
@@ -1335,7 +1311,7 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
                <corner thickness="0.1mm"/>
                <corner thickness="0.1mm"/>
             </border>
-            <keep intact="contentArea"/>
+            <breakBefore target="mpgPage2" targetType="pageArea"/>
             <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></subform>
       <proto/>
@@ -1364,11 +1340,11 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\998_ValuationReport_S001EVP01_20130215_101752_D_B001ALL.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\VR\030_ValuationReport_S001IT07_20130415_115310_D_B001KB7_step2_transformed.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner Zoom 200?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 147?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
@@ -1514,14 +1490,14 @@ wWIFAGgBw4D1AgCkYKfBKgEJWDHP4u4uIAA7</image>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-29T14:09:08Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-17T04:02:49Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:19d53dfa-279d-4eec-b90a-148346cf7b34</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:4c2f0489-235a-44bb-a6cc-6eed48ba4d34</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
