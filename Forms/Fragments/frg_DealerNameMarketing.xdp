@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T11:28:08Z" uuid="2005758a-3f4e-467c-b933-27372de61e17">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-29T14:38:00Z" uuid="0c7c07f4-7762-4c02-8c15-5df70e343742">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -8,11 +8,11 @@
          <pageArea>
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
-         </pageArea>
-      </pageSet>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
       <subform name="DealerNameMarketing">
          <bind match="none"/>
-         <field name="DealerNameMarketing" minW="155mm" y="0mm" minH="11mm" access="readOnly">
+         <field name="DealerNameMarketing" minW="155mm" y="0mm" access="readOnly" h="13mm">
             <ui>
                <textEdit>
                   <border presence="hidden"/>
@@ -22,7 +22,7 @@
             <font typeface="Arial" size="24pt" weight="bold"/>
             <margin topInset="1mm" bottomInset="1mm" leftInset="0mm" rightInset="0mm"/>
             <para vAlign="middle"/>
-            <bind match="dataRef" ref="$.Document.DocumentHeader.DealerNameMarketing"/>
+            <bind match="none"/>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
 var DocHeaderBrand = this.parent.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
@@ -38,7 +38,9 @@ else if ( DocHeaderBrand == "V")
 }
 else if ( DocHeaderBrand == "A" || DocHeaderBrand == "U")
 {
+	this.font.size = "22pt"
 	this.font.typeface = "Audi Type Extended";
+	//console.println(this.font.typeface);
 
 }
 else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
@@ -50,12 +52,56 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
          </field>
          <?templateDesigner isFragment yes?>
          <?templateDesigner fragmentTitle frg_DealerNameMarketing?>
-         <?templateDesigner fragmentDescription GEN_X?></subform>
+         <?templateDesigner fragmentDescription GEN_X?>
+         <subform y="13mm" w="62mm" name="subDNMHolder" layout="tb" presence="hidden">
+            <field name="fldDealerNameMarketing" w="37mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.DealerNameMarketing"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">//console.println(this.rawValue+" dnm");
+if(this.rawValue != "" &amp;&amp; this.rawValue != null)
+{
+DealerNameMarketing.rawValue = this.rawValue;
+}
+</script>
+               </event>
+            </field>
+            <field name="fldDealerName" w="37mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.DealerName"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">//console.println(this.rawValue+"dn");
+if(this.rawValue != "" &amp;&amp; this.rawValue != null)
+{
+DealerNameMarketing.rawValue = this.rawValue;
+}
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <?templateDesigner expand 1?>
    </subform>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 97?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?></template>
+   <?templateDesigner Zoom 147?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -82,14 +128,14 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-16T11:28:08Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-04-29T14:38Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:2005758a-3f4e-467c-b933-27372de61e17</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:0c7c07f4-7762-4c02-8c15-5df70e343742</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
