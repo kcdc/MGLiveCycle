@@ -3,7 +3,7 @@
 	<!-- Define how the output file should look like -->
 	<xsl:output encoding="UTF-8" version="1.0" method="xml" indent="yes"/>
 	<xsl:template match="/">
-		<xsl:variable name="DefectsLimit" select="21"/>
+		<xsl:variable name="DefectsLimit" select="25"/>
 		<ValuationReport>
 			<xsl:copy>
 				<xsl:copy-of select="descendant-or-self::Header"/>

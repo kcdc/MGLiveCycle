@@ -35,7 +35,7 @@
           <xsl:apply-templates select="/ValuationReport/Document/Defects/Defect" />
         </RemainingDefects>
         <xsl:apply-templates select="/ValuationReport/Document/Options"/>
-		<xsl:variable name="OptionsLimit" select="42"/>
+		<xsl:variable name="OptionsLimit" select="45"/>
 		<RemainingOptions>
 		<xsl:for-each select="/*/Document/Options/Option">
 			<xsl:if test="position() &gt; $OptionsLimit">
@@ -47,7 +47,7 @@
 		</ValuationReport>
 	</xsl:template>
 
-	<xsl:variable name="OptionsLimit" select="42"/> 
+	<xsl:variable name="OptionsLimit" select="45"/> 
 	
 	<xsl:template match="/ValuationReport/Document/Options">
 		<xsl:element name="{name()}">
@@ -133,7 +133,7 @@
 		<xsl:param name="element"/>
 		<xsl:param name="line"/>
 		<xsl:param name="rightSide"/>
-		<xsl:if test="$line != 21">
+		<xsl:if test="$line != 25">
 		  <Defect>
 			  <DefectPrice>
 			  </DefectPrice>
