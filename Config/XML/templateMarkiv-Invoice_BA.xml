@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-13"?>
+<adiarchive>
+	<invoice 
+		countrycode=""
+		archiveid=""
+		archivedyear=""
+		doctype=""
+		invoiceno=""
+		custno=""
+		custname=""
+		invoicedate=""
+		ordernumber=""
+		backuppath=""
+		pdfpath=""
+		pdfname=""
+		depno=""
+		depnojur=""
+		depname=""
+		amount=""
+		vehicleregno=""
+		accountno=""
+	/>
+</adiarchive>
