@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-22T08:32:11Z" uuid="3e444979-7c78-4515-a822-0339746a3be6">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-22T08:59:00Z" uuid="60c23766-0142-4ec0-a7c5-502e14b90531">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -68,8 +68,7 @@ this.rawValue = firstTitlePart+" "+secondTitlePart;
                <?templateDesigner expand 0?>
             </subform>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="162mm" y="10mm">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="1mm" y="127mm">
                <field h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm">
                   <para vAlign="top"/>
@@ -77,8 +76,7 @@ this.rawValue = firstTitlePart+" "+secondTitlePart;
                   <bind/>
                </field>
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <?templateDesigner expand 1?></pageArea>
@@ -86,8 +84,7 @@ this.rawValue = firstTitlePart+" "+secondTitlePart;
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="15mm" y="43mm" w="190mm" h="216mm" name="areaPage1"/>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="4mm">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="204.15mm" h="282.633mm" name="subHeader">
                <bind match="none"/>
                <field name="fldTitleType" y="26mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
@@ -225,8 +222,7 @@ this.caption.value.text = output;
                   <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="118mm" y="22mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="7mm">
                   <?templateDesigner expand 0?>
                   <bind/>
@@ -1759,682 +1755,6 @@ this.caption.value.text = output;
                <keep intact="none"/>
                <occur min="0" max="10"/>
                <?templateDesigner expand 1?></subform>
-            <margin topInset="4mm"/>
-            <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
-         <subform y="300.127mm" w="179.108mm" layout="tb" name="subVWMBFLoanHolder">
-            <bind match="none"/>
-            <subform w="179.108mm" h="8mm" name="subVWMBFLoanLabel">
-               <bind match="none"/>
-               <field name="L_Loan" access="readOnly" w="179mm" h="4mm" x="0.001mm" y="0mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                     <value>
-                        <text>Finansiering</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <field name="L_LoanCondition" access="readOnly" w="179mm" h="4mm" x="0.001mm" y="4mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Lånetilbud gitt med forbehold om endelig kredittgodkjennelse.</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <margin topInset="0mm"/>
-               <?templateDesigner expand 0?></subform>
-            <subform name="subVWMBFLoanType" w="179mm" h="6.004mm">
-               <bind match="none"/>
-               <field name="L_VWMBFLoanType" access="readOnly" h="4mm" minW="18mm" x="0.001mm" y="0.017mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                     <value>
-                        <text>Lånetype:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="L_VWMBFLoanTypeInput" access="readOnly" h="4mm" minW="15mm" x="18mm" y="0.017mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Lån</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="L_VWMBFLoanAnnualRate" access="readOnly" h="4mm" x="96mm" y="0.015mm" w="18mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Nom.rente:</text>
-                     </value>
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <margin topInset="2mm"/>
-               <field name="numVWMBFLoanAnnualRate" w="26mm" h="4mm" access="protected" x="114mm" y="0mm">
-                  <ui>
-                     <numericEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </numericEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanAnnualRate"/>
-                  <format>
-                     <picture>num{zzzz9.zzz}</picture>
-                  </format>
-               </field>
-               <?templateDesigner expand 0?></subform>
-            <subform name="subVWMBFLoanPayPlan" w="178.958mm" h="4mm">
-               <bind match="none"/>
-               <field name="L_VWMBFLoanPayPlan" access="readOnly" h="4mm" minW="18mm" x="0.001mm" y="0mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                     <value>
-                        <text>Betaling:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="fldVWMBFLoanPayPlan" access="readOnly" w="42mm" minH="4mm" x="18mm" y="0mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanPayPlan"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <field name="L_VWMBFLoanEffectiveRate" access="readOnly" h="4mm" x="96mm" w="18mm" y="0mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Eff.Rente:</text>
-                     </value>
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFLoanEffectiveRate" w="26mm" h="4mm" access="protected" x="114mm" y="0mm">
-                  <ui>
-                     <numericEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </numericEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanEffectiveRate"/>
-                  <format>
-                     <picture>num{zzzz9.zzz}</picture>
-                  </format>
-               </field>
-               <?templateDesigner expand 0?></subform>
-            <subform w="178.847mm" h="19.996mm" name="subVWMBFLoanDetails">
-               <bind match="none"/>
-               <field name="L_VWMBFLoanPeriods" access="readOnly" h="4mm" x="-0.004mm" y="0mm" w="36.006mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Antall terminer</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFLoanPeriods" y="0.004mm" x="36mm" w="22mm" h="4mm" access="protected">
-                  <ui>
-                     <numericEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </numericEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para hAlign="right" vAlign="middle"/>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanPeriods"/>
-                  <format>
-                     <picture>num{z,zzz,zz9}</picture>
-                  </format>
-               </field>
-               <field name="L_Cash" access="readOnly" h="4mm" x="-0.004mm" y="3.996mm" w="36.006mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Kontantpris:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFLoanCash" y="3.994mm" x="36mm" w="22mm" h="4.002mm" access="protected">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para hAlign="right" vAlign="middle"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-</script>
-                  </event>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanCash"/>
-               </field>
-               <field name="L_VWMBFLoanEquity" access="readOnly" h="4mm" x="-0.004mm" y="7.996mm" w="36.006mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Kontantbeløp</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFLoanEquity" y="7.996mm" x="36mm" w="22mm" h="4mm" access="protected">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para hAlign="right" vAlign="middle"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-</script>
-                  </event>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanEquity"/>
-               </field>
-               <field name="L_VWMBFPeriodAmount" access="readOnly" h="4mm" x="-0.004mm" y="11.996mm" w="36.001mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Terminbeløp inkl. gebyr</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFPeriodAmount" y="11.996mm" x="36mm" w="22mm" h="4mm" access="protected">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para hAlign="right" vAlign="middle"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-</script>
-                  </event>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFPeriodAmount"/>
-               </field>
-               <field name="L_VWMBFLoanNetAmount" access="readOnly" h="4mm" minW="36mm" x="96mm" y="0.062mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Nettobeløp</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFLoanNetAmount" y="0.008mm" x="132mm" w="22mm" h="4mm" access="protected">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para hAlign="right" vAlign="middle"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-</script>
-                  </event>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanNetAmount"/>
-               </field>
-               <field name="L_VWMBFLoanEstablishFee" access="readOnly" h="4mm" minW="36mm" x="96mm" y="4.062mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Etableringsgebyr</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFLoanEstablishFee" y="4.008mm" x="132mm" w="22mm" h="4mm" access="protected">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para hAlign="right" vAlign="middle"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-</script>
-                  </event>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanEstablishFee"/>
-               </field>
-               <field name="L_VWMBFLoanTotalAmount" access="readOnly" h="4mm" minW="36mm" x="96mm" y="8.062mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Lånesum inkl. gebyr</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFLoanTotalAmount" y="8.008mm" x="132mm" w="22mm" h="4mm" access="protected">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para hAlign="right" vAlign="middle"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-</script>
-                  </event>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFLoanTotalAmount"/>
-               </field>
-               <field name="L_ServiceCharge" access="readOnly" h="4mm" minW="36mm" x="96mm" y="12.062mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Termingebyr</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="numVWMBFPeriodLoanFee" y="12.008mm" x="132mm" w="22mm" h="4mm" access="protected">
-                  <ui>
-                     <numericEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </numericEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para hAlign="right" vAlign="middle"/>
-                  <bind match="dataRef" ref="$.Document.VWMBFLoan.VWMBFPeriodLoanFee"/>
-                  <format>
-                     <picture>num{z,zzz,zz9}</picture>
-                  </format>
-               </field>
-               <margin topInset="2mm"/>
-               <?templateDesigner expand 0?></subform>
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 0?></subform>
@@ -5924,8 +5244,8 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 244 64 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F003000310032003300350036003700390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTV_abcdefghijklmnoprstuvwxy{}Ååø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 184 47 0003000B000C000D000F0011001D002400250026002700280029002C002E002F0030003100320033003500360037003900440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E ()*,.:ABCDEFIKLMNOPRSTVabdefghijklmnoprstuvyå?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
@@ -5934,8 +5254,6 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 101?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -5953,6 +5271,8 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 101?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:4850000;h:2725000;h:2750000;h:5925000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -5966,6 +5286,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -6100,14 +5421,14 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-05-22T08:32:11Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-22T08:59Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3e444979-7c78-4515-a822-0339746a3be6</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:60c23766-0142-4ec0-a7c5-502e14b90531</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
