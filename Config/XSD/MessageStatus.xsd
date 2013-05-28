@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by Kim Christensen (Dafolo A/S) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="MessageStatus">
+		<xs:annotation>
+			<xs:documentation>First draft version, 2013-05-10</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Status">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="StatusCode"/>
+							<xs:element name="ErrorLevel">
+								<xs:annotation>
+									<xs:documentation>ERROR | WARNING | INFO | DEBUG</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Message">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UserMessage"/>
+							<xs:element name="DetailedMessage"/>
+							<xs:element name="JavaErrorMessage"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DocumentInfo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Filename"/>
+							<xs:element name="FileTimestamp"/>
+							<xs:element name="ErrorTimestamp" minOccurs="0"/>
+							<xs:element name="FinishedTimestamp" minOccurs="0"/>
+							<xs:element name="LangCode"/>
+							<xs:element name="OutputTarget"/>
+							<xs:element name="DealerNo"/>
+							<xs:element name="UserId"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
