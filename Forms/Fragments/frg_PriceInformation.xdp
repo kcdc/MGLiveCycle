@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-07T06:18:27Z" uuid="617b021b-427f-4efd-a338-51573eb866c7">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-17T07:33:19Z" uuid="28545493-1cd0-46a2-853f-2a1c1a9d783f">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -120,7 +120,9 @@ catch(e)
                </event>
                <bind match="dataRef" ref="$.Document.PriceInformation.ModelPriceWithoutFee"/>
             </field>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="127.999mm" h="4mm" name="subCarModelYear">
             <bind match="none"/>
             <field name="L_CarModelYear" minH="4mm" minW="65mm" access="readOnly" x="0mm" y="0mm">
@@ -164,7 +166,9 @@ this.caption.value.text = output;
                   <para vAlign="middle"/>
                </caption>
             </field>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="178.097mm" h="4mm" name="subRegistrationDesc">
             <bind match="none"/>
             <field name="L_RegistrationDesc" minH="4mm" minW="65mm" access="readOnly" x="0mm" y="0mm">
@@ -268,7 +272,9 @@ catch(e)
                   <text>*</text>
                </value>
             </field>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="162mm" h="4mm" name="subColorInfo">
             <bind match="none"/>
             <field name="L_ColorInfo" minH="4mm" minW="65mm" access="readOnly" x="0mm">
@@ -365,7 +371,9 @@ catch(e)
                </field>
                <keep intact="contentArea"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="137mm" h="4.18mm" name="subInteriorInfo">
             <bind match="none"/>
             <field name="L_Interior" minH="4mm" minW="65mm" access="readOnly" x="0.001mm" y="0mm">
@@ -428,7 +436,9 @@ this.caption.value.text = output;
                   </caption>
                </field>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="162mm" h="4mm" name="subOptionPriceTotal">
             <bind match="none"/>
             <field name="L_OptionPriceTotal" minH="4mm" minW="65mm" access="readOnly" x="0.001mm" y="0mm">
@@ -476,7 +486,9 @@ this.caption.value.text = output;
                   <picture>num{z,zzz,zz9}</picture>
                </format>
             </field>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="162mm" h="4.206mm" name="subNationalOptionPriceTotal">
             <bind match="none"/>
             <field name="L_NationalOptionpriceTotal" minH="4mm" minW="65mm" access="readOnly" x="0.001mm" y="0.033mm">
@@ -524,7 +536,9 @@ this.caption.value.text = output;
                   <picture>num{z,zzz,zz9}</picture>
                </format>
             </field>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="178.097mm" h="4.206mm" name="subRebuildPriceTotal">
             <bind match="none"/>
             <field name="L_RebuildPriceTotal" minH="4mm" minW="65mm" access="readOnly" x="0.001mm" y="0.001mm">
@@ -591,7 +605,9 @@ catch(e)
                   <picture>num{z,zzz,zz9}</picture>
                </format>
             </field>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="162mm" h="4mm" name="subSVAPriceTotal">
             <bind match="none"/>
             <field name="L_SVAPriceTotal" minH="4mm" minW="65mm" access="readOnly" x="0mm" y="0mm">
@@ -654,7 +670,9 @@ catch(e)
 </script>
                </event>
             </field>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="178.097mm" h="4mm" name="subFreightPriceTotal">
             <bind match="none"/>
             <field name="L_FreightPriceTotal" minH="4mm" minW="65mm" access="readOnly" x="0mm" y="0mm">
@@ -717,7 +735,9 @@ catch(e)
 </script>
                </event>
             </field>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 0?>
+            <occur min="0" max="-1"/>
+         </subform>
          <subform w="179.096mm" name="subTotalDiscount" layout="tb">
             <bind match="none"/>
             <subform w="162mm" h="4mm" name="subFlowedTotalDiscount">
@@ -1166,10 +1186,10 @@ catch(e)
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 164 43 0003000D00100011001D0020002400280029002A002C003000310032003500360037004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006300A1 *-.:=AEFGIMNORSTabcdefghijklmnoprstuvyÅø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 40 10 003300440049004C004D00500051005200550056Pafijmnors?>
    </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 113?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 155?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
@@ -1182,7 +1202,6 @@ catch(e)
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -1197,14 +1216,14 @@ catch(e)
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-05-07T06:18:27Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-17T07:33:19Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:617b021b-427f-4efd-a338-51573eb866c7</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:28545493-1cd0-46a2-853f-2a1c1a9d783f</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
