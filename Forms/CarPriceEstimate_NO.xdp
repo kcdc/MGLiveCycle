@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-08T15:04:48Z" uuid="7d9f011e-2a69-4aa3-af56-240c44ab70fe">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-04T12:31:50Z" uuid="3a295c58-3676-4c8c-a9aa-2e1b1f984822">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -708,8 +708,7 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <border>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
@@ -724,8 +723,7 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTopTextMain" layout="tb">
             <bind match="none"/>
@@ -752,8 +750,7 @@ this.caption.value.text = output;
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
          <subform usehref=".\Fragments\frg_PriceInformation.xdp#som($template.form1.subPriceInformation)">
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <bind match="none"/>
          <subform w="179mm" name="subTermsOfDelivery" layout="tb">
             <bind match="none"/>
@@ -5427,13 +5424,32 @@ this.caption.value.text = output;
 </script>
                         </event>
                      </field>
-                     <?templateDesigner expand 1?>
                      <occur min="0" max="-1"/>
-                  </subform>
+                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <subform layout="tb" name="subCoverageLong">
+               <bind match="none"/>
+               <field name="fldCoverageLong" access="readOnly" w="179mm" minH="4mm">
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.CoverageLong"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+               </field>
+               <margin topInset="1mm"/>
+               <overflow trailer="overflowTrailer"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subLoan" layout="tb">
             <bind match="dataRef" ref="$.Document.Loan"/>
             <subform w="178.999mm" h="4mm" name="subFinancingHeader">
@@ -5919,7 +5935,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 127?>
+   <?templateDesigner Zoom 113?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -5933,7 +5949,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe A - Mverk\5 -Prisoverslag bil\Oppdatert\prisoverslag med innbytte og leasing_no_remainingValue.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8527\010_CarPriceEstimate_S010SA03_20130516_064609_D_B001DEG_Forsikring.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
@@ -6085,14 +6101,14 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-05-08T15:04:48Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-06-04T12:31:50Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7d9f011e-2a69-4aa3-af56-240c44ab70fe</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:3a295c58-3676-4c8c-a9aa-2e1b1f984822</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -6104,10 +6120,286 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 </x:xmpmeta>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="CarPriceEstimate">
-      <uri>.\XMLschema\CarPriceEstimate.xsd</uri>
+      <uri>..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8527\CarPriceEstimate_Forsikring.xsd</uri>
       <rootElement>CarPriceEstimate</rootElement>
-      <?templateDesigner fileDigest shaHash="A+kbixOzT4yJItlMdEgAwrOBXjk="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="JeN7J8jiOCjqnzyzyWw2vXoHF7M="?></xsdConnection>
 </connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="CarPriceEstimate">
+      <CarPriceEstimate>
+         <Header>
+            <MediaControl>
+               <OutputTargets>
+                  <Print>
+                     <PrinterName/>
+                     <PrinterNamePDF/>
+                  </Print>
+                  <File>
+                     <FileName/>
+                  </File>
+                  <Preview>
+                     <ClientAddress/>
+                     <PrintId/>
+                  </Preview>
+                  <Archive dd:dataNode="dataGroup"/>
+               </OutputTargets>
+            </MediaControl>
+            <DocType/>
+            <Country/>
+            <LangCode/>
+            <DocHeaderImpcode/>
+            <DocHeaderProdType/>
+            <DocHeaderBrand/>
+            <PreviewCode/>
+            <Copies/>
+            <TwoSided/>
+            <LogoImage/>
+         </Header>
+         <Document>
+            <DocumentHeader>
+               <FooterA1/>
+               <FooterA2/>
+               <FooterA3/>
+               <FooterA4/>
+               <FooterA5/>
+               <FooterA6/>
+               <FooterB1/>
+               <FooterB2/>
+               <FooterB3/>
+               <FooterB4/>
+               <FooterB5/>
+               <FooterB6/>
+               <FooterC1/>
+               <FooterC2/>
+               <FooterC3/>
+               <FooterC4/>
+               <FooterC5/>
+               <FooterC6/>
+               <FooterD1/>
+               <FooterD2/>
+               <FooterD3/>
+               <FooterD4/>
+               <FooterD5/>
+               <FooterD6/>
+               <DealerNameMarketing/>
+               <DateCreated/>
+               <TypeText/>
+               <TestLabel/>
+            </DocumentHeader>
+            <HeaderInfo>
+               <CustomerName/>
+               <CustomerPostalAddress/>
+               <CustomerPostalCityZip/>
+               <CustomerCountry/>
+               <DealerNameLegal/>
+               <DealerLegalAddressTotal/>
+               <DealerIssueAddressTotal/>
+               <DealerCompanyRegNo/>
+               <BankAccLocal/>
+               <OurRef/>
+               <UserName/>
+               <OwnerName/>
+               <LeaserName/>
+               <CarRegNo/>
+               <CarRegDate/>
+               <CarMileage/>
+               <CarModelDesc/>
+               <CarType/>
+               <OrderNo/>
+               <GearCode/>
+               <EngineCode/>
+               <CarLocation/>
+               <CarVIN/>
+               <CustomerLegalAddress/>
+               <CustomerPhoneFixed/>
+               <CustomerPhoneMobile/>
+               <CustomerPhoneOrder/>
+               <CustomerPhoneWork/>
+               <PriceestimateNo/>
+               <DateCreated/>
+               <CustomerCompanyRegNo/>
+               <CustomerIdLabel/>
+            </HeaderInfo>
+            <TopTextMain>
+               <TopTextLines dd:maxOccur="10">
+                  <TopTextLine dd:maxOccur="10"/>
+               </TopTextLines>
+            </TopTextMain>
+            <PriceInformation>
+               <CarModelYear/>
+               <ModelPriceWithoutFee/>
+               <RegistrationDesc/>
+               <RegistrationFee/>
+               <Color/>
+               <ColorCode/>
+               <ColorPrice/>
+               <Interior/>
+               <InteriorCode/>
+               <OptionPriceTotal/>
+               <NationalOptionPriceTotal/>
+               <RebuildPriceTotal/>
+               <FreightDesc/>
+               <SVAPriceTotal/>
+               <FreightPriceTotal/>
+               <TotalDiscount/>
+               <PriceVatTotalSum/>
+               <Currency/>
+               <PriceTotalSum/>
+               <DifferenceAmount/>
+               <TradeinPrice/>
+               <PriceInfoAttachment/>
+               <YearFee/>
+            </PriceInformation>
+            <TermsOfDelivery>
+               <TermsOfDeliveryText/>
+               <DeliveryTermsDate/>
+               <WarrantyTerms/>
+               <DeliveryPoint/>
+               <DeliveryStatus/>
+               <AssumedDelivery/>
+            </TermsOfDelivery>
+            <Options>
+               <Option dd:maxOccur="200">
+                  <OptionDesc/>
+                  <OptionPrice/>
+               </Option>
+            </Options>
+            <NationalOptions>
+               <NationalOption dd:maxOccur="200">
+                  <NationalOptionDesc/>
+                  <NationalOptionPrice/>
+               </NationalOption>
+            </NationalOptions>
+            <ReBuilds>
+               <ReBuild dd:maxOccur="200">
+                  <ReBuildDesc/>
+                  <ReBuildPrice/>
+               </ReBuild>
+            </ReBuilds>
+            <SumExtraOptions>
+               <SumExtraOptions/>
+            </SumExtraOptions>
+            <AdditionalInfo>
+               <OptionDiscount/>
+               <OptionTotalVat/>
+               <VehicleDiscount/>
+               <Co2/>
+               <EnvironmentalClass/>
+               <Nox/>
+               <BBAgreementNo/>
+            </AdditionalInfo>
+            <BottomTextMain>
+               <BottomTextLines dd:maxOccur="10">
+                  <BottomTextLine/>
+               </BottomTextLines>
+            </BottomTextMain>
+            <FooterLinesMain>
+               <FooterLines dd:maxOccur="10">
+                  <FooterLine dd:maxOccur="10"/>
+               </FooterLines>
+            </FooterLinesMain>
+            <FooterLimitedMain>
+               <FooterLimitedLines dd:maxOccur="10">
+                  <FooterLimitedLine dd:maxOccur="10"/>
+               </FooterLimitedLines>
+            </FooterLimitedMain>
+            <Signature>
+               <SalesPerson/>
+               <SalesPersonMail/>
+            </Signature>
+            <VWMBFLoan>
+               <VWMBFPeriodAmount/>
+               <VWMBFLoanTotalAmount/>
+               <VWMBFLoanEquity/>
+               <VWMBFLoanEstablishFee/>
+               <VWMBFLoanNetAmount/>
+               <VWMBFLoanPeriods/>
+               <VWMBFLoanCash/>
+               <VWMBFLoanPayPlan/>
+               <VWMBFLoanAnnualRate/>
+               <VWMBFLoanEffectiveRate/>
+               <VWMBFLoanType/>
+               <VWMBFPeriodLoanFee/>
+            </VWMBFLoan>
+            <Financing>
+               <AdditionalProduct dd:maxOccur="100">
+                  <ProductDesc/>
+               </AdditionalProduct>
+               <FinanceType/>
+               <NumberOfPeriods/>
+               <VehiclePrice/>
+               <RemainingValue/>
+               <LeaseMonth/>
+               <LeaseMonthVat/>
+               <AdditionalLease/>
+               <AdditionalLeaseVat/>
+               <LeaseTotal/>
+               <LeaseTotalVat/>
+               <ServiceCharge/>
+               <ServiceChargeVat/>
+               <ArrangementFee/>
+               <ArrangementFeeVat/>
+               <TotalMileage/>
+               <TotalMileagePerYear/>
+               <PriceMileageExeeded/>
+               <PriceMileageExeededVat/>
+               <TotalCostPerYear/>
+            </Financing>
+            <OnDelivery>
+               <RentalAmount/>
+               <RentalAmountVat/>
+               <VatAmount/>
+               <Cash/>
+            </OnDelivery>
+            <Leasing>
+               <LeaserAddress/>
+               <LeaserPostalCityZip/>
+               <PersonalId/>
+               <FinancingCompany/>
+               <FinanceSubject/>
+            </Leasing>
+            <TradeInCar>
+               <CarBrand/>
+               <RegisteredYear/>
+               <TradeinRegNo/>
+               <TradeinColor/>
+               <TradeinMileage/>
+               <TradeinModelDesc/>
+               <TradeinVIN/>
+               <RegistrationFeePaid/>
+               <TradeinRegDate/>
+               <TradeinEncumbrance/>
+               <TradeinEncumbranceDate/>
+               <TradeinPrice/>
+            </TradeInCar>
+            <Insurance>
+               <InsuranceText/>
+               <InsuranceCompany/>
+               <TransferRegNo/>
+               <InsuranceMileage/>
+               <OwnRisk/>
+               <Coverage/>
+               <CoverageLong/>
+            </Insurance>
+            <FirstPageInfoLines dd:maxOccur="10">
+               <FirstPageInfoLine dd:maxOccur="10"/>
+            </FirstPageInfoLines>
+            <Loan>
+               <PrePaymentAmount/>
+               <LoanTradeinEncumbrance/>
+               <LoanTradeinPrice/>
+               <LoanVehiclePrice/>
+               <Cash/>
+               <VWMBFLoan/>
+            </Loan>
+         </Document>
+         <Attachment>
+            <AttachmentId/>
+         </Attachment>
+      </CarPriceEstimate>
+   </dd:dataDescription>
+</xfa:datasets>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="XFASchemaXSD">
    <xs:element name="CarPriceEstimate">
       <xs:complexType>
@@ -6281,6 +6573,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                               <xs:element name="DifferenceAmount" type="xs:string"/>
                               <xs:element name="TradeinPrice" type="xs:string"/>
                               <xs:element name="PriceInfoAttachment" type="xs:string"/>
+                              <xs:element name="YearFee" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -6503,6 +6796,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                               <xs:element name="InsuranceMileage" type="xs:string"/>
                               <xs:element name="OwnRisk" type="xs:string"/>
                               <xs:element name="Coverage" type="xs:string"/>
+                              <xs:element name="CoverageLong" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -6538,278 +6832,4 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
          </xs:sequence>
       </xs:complexType>
    </xs:element>
-</xs:schema>
-<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
-   <xfa:data xfa:dataNode="dataGroup"/>
-   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="CarPriceEstimate">
-      <CarPriceEstimate>
-         <Header>
-            <MediaControl>
-               <OutputTargets>
-                  <Print>
-                     <PrinterName/>
-                     <PrinterNamePDF/>
-                  </Print>
-                  <File>
-                     <FileName/>
-                  </File>
-                  <Preview>
-                     <ClientAddress/>
-                     <PrintId/>
-                  </Preview>
-                  <Archive dd:dataNode="dataGroup"/>
-               </OutputTargets>
-            </MediaControl>
-            <DocType/>
-            <Country/>
-            <LangCode/>
-            <DocHeaderImpcode/>
-            <DocHeaderProdType/>
-            <DocHeaderBrand/>
-            <PreviewCode/>
-            <Copies/>
-            <TwoSided/>
-            <LogoImage/>
-         </Header>
-         <Document>
-            <DocumentHeader>
-               <FooterA1/>
-               <FooterA2/>
-               <FooterA3/>
-               <FooterA4/>
-               <FooterA5/>
-               <FooterA6/>
-               <FooterB1/>
-               <FooterB2/>
-               <FooterB3/>
-               <FooterB4/>
-               <FooterB5/>
-               <FooterB6/>
-               <FooterC1/>
-               <FooterC2/>
-               <FooterC3/>
-               <FooterC4/>
-               <FooterC5/>
-               <FooterC6/>
-               <FooterD1/>
-               <FooterD2/>
-               <FooterD3/>
-               <FooterD4/>
-               <FooterD5/>
-               <FooterD6/>
-               <DealerNameMarketing/>
-               <DateCreated/>
-               <TypeText/>
-               <TestLabel/>
-            </DocumentHeader>
-            <HeaderInfo>
-               <CustomerName/>
-               <CustomerPostalAddress/>
-               <CustomerPostalCityZip/>
-               <CustomerCountry/>
-               <DealerNameLegal/>
-               <DealerLegalAddressTotal/>
-               <DealerIssueAddressTotal/>
-               <DealerCompanyRegNo/>
-               <BankAccLocal/>
-               <OurRef/>
-               <UserName/>
-               <OwnerName/>
-               <LeaserName/>
-               <CarRegNo/>
-               <CarRegDate/>
-               <CarMileage/>
-               <CarModelDesc/>
-               <CarType/>
-               <OrderNo/>
-               <GearCode/>
-               <EngineCode/>
-               <CarLocation/>
-               <CarVIN/>
-               <CustomerLegalAddress/>
-               <CustomerPhoneFixed/>
-               <CustomerPhoneMobile/>
-               <CustomerPhoneOrder/>
-               <CustomerPhoneWork/>
-               <PriceestimateNo/>
-               <DateCreated/>
-               <CustomerCompanyRegNo/>
-               <CustomerIdLabel/>
-            </HeaderInfo>
-            <TopTextMain>
-               <TopTextLines dd:maxOccur="10">
-                  <TopTextLine dd:maxOccur="10"/>
-               </TopTextLines>
-            </TopTextMain>
-            <PriceInformation>
-               <CarModelYear/>
-               <ModelPriceWithoutFee/>
-               <RegistrationDesc/>
-               <RegistrationFee/>
-               <Color/>
-               <ColorCode/>
-               <ColorPrice/>
-               <Interior/>
-               <InteriorCode/>
-               <OptionPriceTotal/>
-               <NationalOptionPriceTotal/>
-               <RebuildPriceTotal/>
-               <FreightDesc/>
-               <SVAPriceTotal/>
-               <FreightPriceTotal/>
-               <TotalDiscount/>
-               <PriceVatTotalSum/>
-               <Currency/>
-               <PriceTotalSum/>
-               <DifferenceAmount/>
-               <TradeinPrice/>
-               <PriceInfoAttachment/>
-            </PriceInformation>
-            <TermsOfDelivery>
-               <TermsOfDeliveryText/>
-               <DeliveryTermsDate/>
-               <WarrantyTerms/>
-               <DeliveryPoint/>
-               <DeliveryStatus/>
-               <AssumedDelivery/>
-            </TermsOfDelivery>
-            <Options>
-               <Option dd:maxOccur="200">
-                  <OptionDesc/>
-                  <OptionPrice/>
-               </Option>
-            </Options>
-            <NationalOptions>
-               <NationalOption dd:maxOccur="200">
-                  <NationalOptionDesc/>
-                  <NationalOptionPrice/>
-               </NationalOption>
-            </NationalOptions>
-            <ReBuilds>
-               <ReBuild dd:maxOccur="200">
-                  <ReBuildDesc/>
-                  <ReBuildPrice/>
-               </ReBuild>
-            </ReBuilds>
-            <SumExtraOptions>
-               <SumExtraOptions/>
-            </SumExtraOptions>
-            <AdditionalInfo>
-               <OptionDiscount/>
-               <OptionTotalVat/>
-               <VehicleDiscount/>
-               <Co2/>
-               <EnvironmentalClass/>
-               <Nox/>
-               <BBAgreementNo/>
-            </AdditionalInfo>
-            <BottomTextMain>
-               <BottomTextLines dd:maxOccur="10">
-                  <BottomTextLine/>
-               </BottomTextLines>
-            </BottomTextMain>
-            <FooterLinesMain>
-               <FooterLines dd:maxOccur="10">
-                  <FooterLine dd:maxOccur="10"/>
-               </FooterLines>
-            </FooterLinesMain>
-            <FooterLimitedMain>
-               <FooterLimitedLines dd:maxOccur="10">
-                  <FooterLimitedLine dd:maxOccur="10"/>
-               </FooterLimitedLines>
-            </FooterLimitedMain>
-            <Signature>
-               <SalesPerson/>
-               <SalesPersonMail/>
-            </Signature>
-            <VWMBFLoan>
-               <VWMBFPeriodAmount/>
-               <VWMBFLoanTotalAmount/>
-               <VWMBFLoanEquity/>
-               <VWMBFLoanEstablishFee/>
-               <VWMBFLoanNetAmount/>
-               <VWMBFLoanPeriods/>
-               <VWMBFLoanCash/>
-               <VWMBFLoanPayPlan/>
-               <VWMBFLoanAnnualRate/>
-               <VWMBFLoanEffectiveRate/>
-               <VWMBFLoanType/>
-               <VWMBFPeriodLoanFee/>
-            </VWMBFLoan>
-            <Financing>
-               <AdditionalProduct dd:maxOccur="100">
-                  <ProductDesc/>
-               </AdditionalProduct>
-               <FinanceType/>
-               <NumberOfPeriods/>
-               <VehiclePrice/>
-               <RemainingValue/>
-               <LeaseMonth/>
-               <LeaseMonthVat/>
-               <AdditionalLease/>
-               <AdditionalLeaseVat/>
-               <LeaseTotal/>
-               <LeaseTotalVat/>
-               <ServiceCharge/>
-               <ServiceChargeVat/>
-               <ArrangementFee/>
-               <ArrangementFeeVat/>
-               <TotalMileage/>
-               <TotalMileagePerYear/>
-               <PriceMileageExeeded/>
-               <PriceMileageExeededVat/>
-               <TotalCostPerYear/>
-            </Financing>
-            <OnDelivery>
-               <RentalAmount/>
-               <RentalAmountVat/>
-               <VatAmount/>
-               <Cash/>
-            </OnDelivery>
-            <Leasing>
-               <LeaserAddress/>
-               <LeaserPostalCityZip/>
-               <PersonalId/>
-               <FinancingCompany/>
-               <FinanceSubject/>
-            </Leasing>
-            <TradeInCar>
-               <CarBrand/>
-               <RegisteredYear/>
-               <TradeinRegNo/>
-               <TradeinColor/>
-               <TradeinMileage/>
-               <TradeinModelDesc/>
-               <TradeinVIN/>
-               <RegistrationFeePaid/>
-               <TradeinRegDate/>
-               <TradeinEncumbrance/>
-               <TradeinEncumbranceDate/>
-               <TradeinPrice/>
-            </TradeInCar>
-            <Insurance>
-               <InsuranceText/>
-               <InsuranceCompany/>
-               <TransferRegNo/>
-               <InsuranceMileage/>
-               <OwnRisk/>
-               <Coverage/>
-            </Insurance>
-            <FirstPageInfoLines dd:maxOccur="10">
-               <FirstPageInfoLine dd:maxOccur="10"/>
-            </FirstPageInfoLines>
-            <Loan>
-               <PrePaymentAmount/>
-               <LoanTradeinEncumbrance/>
-               <LoanTradeinPrice/>
-               <LoanVehiclePrice/>
-               <Cash/>
-               <VWMBFLoan/>
-            </Loan>
-         </Document>
-         <Attachment>
-            <AttachmentId/>
-         </Attachment>
-      </CarPriceEstimate>
-   </dd:dataDescription>
-</xfa:datasets></xdp:xdp>
+</xs:schema></xdp:xdp>
