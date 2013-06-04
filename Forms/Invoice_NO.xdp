@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-28T13:21:46Z" uuid="6397288c-0a9b-4f1a-894e-4c8c52713258">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-04T11:22:27Z" uuid="31be17e0-5990-4cac-8d82-14731b735a6b">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -111,8 +111,7 @@ else
                </field>
                <subform x="0mm" y="7mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <subform x="15mm" y="270mm" usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)">
                <margin/>
@@ -120,8 +119,7 @@ else
                <bind/>
             </subform>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="9mm">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="105mm">
                <field h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm">
                   <para/>
@@ -129,8 +127,7 @@ else
                   <bind/>
                </field>
                <bind/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <contentArea x="15mm" y="41mm" w="190mm" h="229mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <?templateDesigner expand 1?></pageArea>
@@ -138,8 +135,7 @@ else
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="15mm" y="47mm" w="190mm" h="220mm" name="areaPage1"/>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="4mm">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="204.15mm" h="282.633mm" name="subHeader">
                <bind match="none"/>
                <subform x="90mm" minH="22.225mm" name="subWatermark" layout="tb" y="76mm">
@@ -222,12 +218,10 @@ else
                   <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="118mm" y="22mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="7mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <field name="fldInvoiceTypeText" y="26mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
@@ -437,8 +431,7 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
       <subform w="190mm" name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <subform name="subInvoiceMetadata" layout="lr-tb" presence="hidden">
             <bind match="none"/>
             <field name="InvoiceCode" h="9mm" minW="6mm">
@@ -524,6 +517,18 @@ this.rawValue = PaymentTermsCode.rawValue[0].toUpperCase()+stringTail;
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.DocumentHeader.DiscountVisible"/>
             </field>
+            <field name="ThroughputType" w="6mm" h="9mm" access="readOnly">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputType"/>
+            </field>
             <?templateDesigner expand 1?></subform>
          <subform name="subHeaderInformation" w="181mm" h="48mm">
             <bind match="none"/>
@@ -535,8 +540,7 @@ this.rawValue = PaymentTermsCode.rawValue[0].toUpperCase()+stringTail;
                   <subform usehref=".\Fragments\frg_DealerAddress.xdp#som($template.form1.subDealerAddress)">
                      <bind/>
                      <keep/>
-                     <?templateDesigner expand 1?>
-                  </subform>
+                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
                <subform x="114.999mm" y="12mm" w="64mm" name="subBankGiro" layout="tb">
                   <bind match="none"/>
@@ -977,24 +981,118 @@ this.caption.value.text = output;
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 0?></subform>
-               <subform usehref=".\Fragments\frg_CustomerAddressRow.xdp#som($template.form1.subCustomerAddress)" x="0mm" y="0in">
-                  <bind/>
-                  <keep/>
-                  <?templateDesigner expand 1?>
-               </subform>
+               <subform x="0mm" layout="tb" name="subCustomerAddress" w="70mm">
+                  <bind match="none"/>
+                  <keep intact="contentArea"/>
+                  <field access="readOnly" minH="4mm" name="fldCustomerName_new" w="70mm">
+                     <font typeface="Arial" size="9pt"/>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                     <para lineHeight="8pt"/>
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+if(this.rawValue != null &amp;&amp; this.rawValue != "")
+{	
+	xfa.resolveNode("pageContent.subCarInformation.subEierBruker.L_UserName").rawValue = this.rawValue;
+}
+</script>
+                     </event>
+                  </field>
+                  <subform layout="tb" minH="4mm" name="subUN" w="70mm" y="4.079mm">
+                     <keep intact="contentArea"/>
+                     <occur max="-1" min="0"/>
+                     <bind match="none"/>
+                     <field access="readOnly" minH="4mm" name="L_CO" w="70mm">
+                        <caption reserve="4.878mm">
+                           <value>
+                              <text>c/o</text>
+                           </value>
+                           <font typeface="Arial" size="8pt" weight="bold"/>
+                           <para vAlign="middle"/>
+                        </caption>
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <margin bottomInset="1mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                        <ui>
+                           <textEdit multiLine="1">
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <bind ref="$.Document.HeaderInfo.CustomerName" match="dataRef"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">/*
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.caption.value.text = output;
+}
+
+else
+{
+		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
+}*/
+
+//app.alert(this.rawValue);
+if (this.rawValue == null)
+{
+	this.parent.presence = "hidden";
+}
+</script>
+                        </event>
+                     </field>
+                     <?templateDesigner expand 1?></subform>
+                  <field access="readOnly" minH="4mm" name="fldCustomerPostalAddress" w="70mm">
+                     <font typeface="Arial" size="9pt"/>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <bind ref="$.Document.HeaderInfo.CustomerPostalAddress" match="dataRef"/>
+                  </field>
+                  <field access="readOnly" minH="4mm" name="fldCustomerPostalCityZip" w="70mm">
+                     <font typeface="Arial" size="9pt"/>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <bind ref="$.Document.HeaderInfo.CustomerPostalCityZip" match="dataRef"/>
+                  </field>
+                  <field access="readOnly" minH="4mm" name="fldCustomerCountry" w="70mm">
+                     <font typeface="Arial" size="9pt"/>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <bind ref="$.Document.HeaderInfo.CustomerCountry" match="dataRef"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subCarInformation" layout="tb">
             <bind match="none"/>
-            <subform w="179mm" name="subCarInfo" layout="lr-tb">
-               <bind match="none"/>
-               <keep intact="contentArea"/>
-               <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
-                  <bind/>
-                  <keep/>
-                  <?templateDesigner expand 1?>
-               </subform>
-               <?templateDesigner expand 1?></subform>
+            <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
+               <bind/>
+               <keep/>
+               <?templateDesigner expand 1?>
+            </subform>
             <border>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
@@ -1006,60 +1104,13 @@ this.caption.value.text = output;
                <corner presence="hidden"/>
             </border>
             <margin topInset="1mm"/>
-            <subform w="179.054mm" name="subEierBruker" layout="tb">
-               <bind match="none"/>
-               <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)">
-                  <occur min="0" max="-1"/>
-                  <bind/>
-                  <keep/>
-                  <?templateDesigner expand 1?>
-               </subform>
-               <subform w="179mm" minH="8mm" name="subCarPlacement" layout="tb">
-                  <bind match="none"/>
-                  <field name="L_CarLocation" w="114.999mm" h="8mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="4.1766mm" placement="top">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Bilplass:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CarLocation"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <occur min="0" max="-1"/>
-                  <?templateDesigner expand 1?></subform>
-               <border>
-                  <edge presence="hidden"/>
-                  <corner thickness="0.176mm" presence="hidden"/>
-                  <corner thickness="0.176mm" presence="hidden"/>
-                  <corner thickness="0.2mm" presence="hidden"/>
-                  <corner thickness="0.176mm" presence="hidden"/>
-                  <edge presence="hidden"/>
-                  <edge thickness="0.2mm" presence="hidden"/>
-                  <edge presence="hidden"/>
-               </border>
+            <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)">
                <occur min="0" max="-1"/>
-               <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></subform>
+               <bind/>
+               <keep/>
+               <?templateDesigner expand 1?>
+            </subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subReasonForCreditLine" layout="tb">
             <bind match="none"/>
             <field name="fldReasonForCreditLine" minH="4mm" access="readOnly" w="179mm">
@@ -3671,8 +3722,7 @@ this.caption.value.text = output;
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)" x="-0.0001mm" y="10mm">
             <bind/>
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -3680,7 +3730,7 @@ this.caption.value.text = output;
       <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 148 37 000300120024002500260027002F00300031003200330035003600370039004200440045004600480049004A004C004E004F005000510052005300550056005700580059005C005E0060 /ABCDLMNOPRSTV_abcefgiklmnoprstuvy{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 192 51 00030008000F0011001D002400250026002700280029002A002B002C002E002F0030003100320033003500360037003900440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B006E009100A1 %,.:ABCDEFGHIKLMNOPRSTVabdefghijklmnoprstuvxåØø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 200 53 00030008000F00110012001D002400250026002700280029002A002B002C002E002F00300031003200330035003600370039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B006E009100A1 %,./:ABCDEFGHIKLMNOPRSTVabcdefghijklmnoprstuvxåØø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 60 15 0001001000250042004500460048004A004C004F00500053005400550056 /Dadegiknorstu?>
@@ -3704,7 +3754,7 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Defecter\8602\030_Invoice_S001IT01_20130523_103755_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8499\030_Invoice_S001IT01_20130513_144322_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
@@ -3858,14 +3908,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-05-28T13:21:46Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-06-04T11:22:27Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:6397288c-0a9b-4f1a-894e-4c8c52713258</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:31be17e0-5990-4cac-8d82-14731b735a6b</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
