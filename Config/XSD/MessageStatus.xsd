@@ -16,6 +16,11 @@
 									<xs:documentation>ERROR | WARNING | INFO | DEBUG</xs:documentation>
 								</xs:annotation>
 							</xs:element>
+							<xs:element name="LogStatus">
+								<xs:annotation>
+									<xs:documentation>Integer that indicates whether should the result be logged? 1 | 0</xs:documentation>
+								</xs:annotation>
+							</xs:element>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -31,14 +36,90 @@
 				<xs:element name="DocumentInfo">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="Filename"/>
-							<xs:element name="FileTimestamp"/>
-							<xs:element name="ErrorTimestamp" minOccurs="0"/>
-							<xs:element name="FinishedTimestamp" minOccurs="0"/>
-							<xs:element name="LangCode"/>
-							<xs:element name="OutputTarget"/>
-							<xs:element name="DealerNo"/>
-							<xs:element name="UserId"/>
+							<xs:element name="StandardInfo">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="UserId"/>
+										<xs:element name="DealerNo"/>
+										<xs:element name="FinishedTimestamp" minOccurs="0"/>
+										<xs:element name="ErrorTimestamp" minOccurs="0"/>
+										<xs:element name="FileTimestamp"/>
+										<xs:element name="Filename"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DetailedInfo">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="MediaControl">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="OutputTargets">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Print">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="PrinterName" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="File">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="FileName" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Preview">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="ClientAddress" type="xs:string"/>
+																			<xs:element name="PrintId" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Archive">
+																	<xs:complexType>
+																		<xs:sequence/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Mail">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="MailTo" type="xs:string"/>
+																			<xs:element name="MailFrom" type="xs:string"/>
+																			<xs:element name="MailCC" type="xs:string"/>
+																			<xs:element name="MailSubject" type="xs:string"/>
+																			<xs:element name="MailBody" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DocType" type="xs:string"/>
+										<xs:element name="Country" type="xs:string"/>
+										<xs:element name="LangCode" type="xs:string"/>
+										<xs:element name="DocHeaderImpcode" type="xs:string"/>
+										<xs:element name="DocHeaderProdType" type="xs:string"/>
+										<xs:element name="DocHeaderBrand" type="xs:string"/>
+										<xs:element name="PreviewCode" type="xs:string"/>
+										<xs:element name="Copies" type="xs:string"/>
+										<xs:element name="TwoSided" type="xs:string"/>
+										<xs:element name="LogoImage" type="xs:string"/>
+										<xs:element name="XDPName" type="xs:string"/>
+										<xs:element name="ImageFileName" type="xs:string"/>
+										<xs:element name="AttachmentFile"/>
+										<xs:element name="OutputFileName"/>
+										<xs:element name="OutputTarget" type="xs:string"/>
+										<xs:element name="FileNotFound" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

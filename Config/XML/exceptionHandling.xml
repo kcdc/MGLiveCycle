@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExceptionHandling>
-<Exception>
+	<Exception>
 		<ExceptionCode>1</ExceptionCode>
 		<ExceptionLevel>Info</ExceptionLevel>
+		<VariableInformation>
+			<Data>Filename</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>Following file processed successfully: </ExceptionDescription>
+			<ExceptionDescription>Following file processed successfully: $</ExceptionDescription>
 			<ExceptionUserMessage>File processed successfully</ExceptionUserMessage>
-			<VariableInformation>
-				<Data>Filename</Data>
-			</VariableInformation>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -38,7 +38,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>The XML file placed in the input catalog was empty</ExceptionDescription>
-			<ExceptionUserMessage>XML file was empty</ExceptionUserMessage>
+			<ExceptionUserMessage><ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage></ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -67,7 +67,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Environment not found</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -93,10 +93,13 @@
 	<Exception>
 		<ExceptionCode>13</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
+				<VariableInformation>
+			<Data>LangCode</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>Unknown LangCode</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionDescription>Unknown LangCode: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -125,8 +128,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>EnvironmentXDPLocation not set</ExceptionDescription>
-			<ExceptionUserMessage/>
-		</Target>
+<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>		</Target>
 		<Target>
 			<Lang>NO</Lang>
 			<ExceptionDescription/>
@@ -151,10 +153,13 @@
 	<Exception>
 		<ExceptionCode>24</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
+		<VariableInformation>
+			<Data>FileNotFound</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>File not found: </ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionDescription>File not found: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -180,10 +185,14 @@
 	<Exception>
 		<ExceptionCode>32</ExceptionCode>
 		<ExceptionLevel>Warning</ExceptionLevel>
+		<VariableInformation>
+			<Data>Filename</Data>
+			<Data>FileName</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>No OutputTarget found, Reverting to default setting (File)</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionDescription>No OutputTarget found in $, Reverting to default setting (File). File saved as: $ </ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -209,10 +218,13 @@
 	<Exception>
 		<ExceptionCode>41</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
+		<VariableInformation>
+			<Data>FileNotFound</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>createNodeInXML.java not found</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionDescription>$ not found</ExceptionDescription>
+<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -237,14 +249,14 @@
 	</Exception>
 	<Exception>
 		<ExceptionCode>51</ExceptionCode>
-		<ExceptionLevel>Error</ExceptionLevel>
+		<ExceptionLevel>Warning</ExceptionLevel>
+		<VariableInformation>
+			<Data>LogoImage</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>Logo not found for DocHeaderBrand: </ExceptionDescription>
-			<ExceptionUserMessage/>
-			<VariableInformation>
-				<Data>DocHeaderBrand</Data>
-			</VariableInformation>
+			<ExceptionDescription>Logo not found for DocHeaderBrand: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -270,13 +282,13 @@
 	<Exception>
 		<ExceptionCode>52</ExceptionCode>
 		<ExceptionLevel>Warning</ExceptionLevel>
+		<VariableInformation>
+			<Data>ImageFileName</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>Image not found (replaced with default image), image reference was: </ExceptionDescription>
-			<ExceptionUserMessage/>
-			<VariableInformation>
-				<Data>ImageFileName</Data>
-			</VariableInformation>
+			<ExceptionDescription>Image not found (replaced with default image), image reference was: $ </ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -305,7 +317,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Failed to Generate PDF</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -334,7 +346,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Failed to Generate PCL</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -360,13 +372,13 @@
 	<Exception>
 		<ExceptionCode>61</ExceptionCode>
 		<ExceptionLevel>Warning</ExceptionLevel>
+		<VariableInformation>
+			<Data>XDPName</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>Using default output target (Filename) as no entry could be found in fileNameConfiguration.xml for document type: </ExceptionDescription>
-			<ExceptionUserMessage/>
-			<VariableInformation>
-				<Data>XDPName</Data>
-			</VariableInformation>
+			<ExceptionDescription>Using default output target (Filename) as no entry could be found in fileNameConfiguration.xml for document type: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 			<Separators>
 				<Separator>_</Separator>
 			</Separators>
@@ -397,8 +409,8 @@
 		<ExceptionLevel>Error</ExceptionLevel>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>No Default FileName found in XML</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionDescription>No Default FileName (OutputTarget) found in XML</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -427,7 +439,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>File could not be written to disk</ExceptionDescription>
-			<ExceptionUserMessage/>
+<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -456,7 +468,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Connection to email server failed</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -485,7 +497,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Sending of email failed</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -511,10 +523,13 @@
 	<Exception>
 		<ExceptionCode>74</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
+		<VariableInformation>
+			<Data>FileNotFound</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>templateMarkiv-Invoice.xml could not be found</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionDescription>templateMarkiv-Invoice.xml $ could not be found</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -540,10 +555,13 @@
 	<Exception>
 		<ExceptionCode>75</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
+		<VariableInformation>
+			<Data>FileName</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>File could not be written to disk default Filename: </ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionDescription>File could not be written to disk default Filename: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -572,7 +590,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Script file for createXML code not found</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -598,10 +616,13 @@
 	<Exception>
 		<ExceptionCode>77</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
+		<VariableInformation>
+			<Data>OutputFileName</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>Temporary file could not be written to disk default Filename: </ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionDescription>Temporary file could not be written to disk default Filename: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -627,13 +648,13 @@
 	<Exception>
 		<ExceptionCode>78</ExceptionCode>
 		<ExceptionLevel>Warning</ExceptionLevel>
+		<VariableInformation>
+			<Data>OutputFileName</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>File was overwritten in Preview folder: </ExceptionDescription>
-			<ExceptionUserMessage/>
-			<VariableInformation>
-				<Data>OutputFileName</Data>
-			</VariableInformation>
+			<ExceptionDescription>File was overwritten in Preview folder: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -662,7 +683,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Print of file failed</ExceptionDescription>
-			<ExceptionUserMessage/>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -688,13 +709,13 @@
 	<Exception>
 		<ExceptionCode>80</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
+		<VariableInformation>
+			<Data>AttachmentFile</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>PostScript Conversion of attachment file failed: </ExceptionDescription>
-			<ExceptionUserMessage/>
-			<VariableInformation>
-				<Data>AttachmentFile</Data>
-			</VariableInformation>
+			<ExceptionDescription>PostScript Conversion of attachment file failed: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -720,13 +741,13 @@
 	<Exception>
 		<ExceptionCode>81</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
+		<VariableInformation>
+			<Data>AttachmentFile</Data>
+		</VariableInformation>
 		<Target>
 			<Lang>EN</Lang>
-			<ExceptionDescription>Printing of attachment file failed: </ExceptionDescription>
-			<ExceptionUserMessage/>
-			<VariableInformation>
-				<Data>AttachmentFile</Data>
-			</VariableInformation>
+			<ExceptionDescription>Printing of attachment file failed: $</ExceptionDescription>
+			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
