@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-04T12:31:50Z" uuid="3a295c58-3676-4c8c-a9aa-2e1b1f984822">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-11T12:44:18Z" uuid="2f8b457f-159f-4bba-a0a6-3c165b5f6828">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -708,7 +708,8 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <border>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
@@ -723,7 +724,8 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTopTextMain" layout="tb">
             <bind match="none"/>
@@ -750,7 +752,8 @@ this.caption.value.text = output;
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
          <subform usehref=".\Fragments\frg_PriceInformation.xdp#som($template.form1.subPriceInformation)">
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <bind match="none"/>
          <subform w="179mm" name="subTermsOfDelivery" layout="tb">
             <bind match="none"/>
@@ -2694,13 +2697,15 @@ if(this.rawValue == "" || this.rawValue == null)
 var str = this.rawValue;
 
 var wordArray = str.split(".");
-this.rawValue = wordArray[0] + wordArray[1];
+if(wordArray.length &gt; 1)
+{
+	this.rawValue = wordArray[0] +" "+ wordArray[1];
 }
+
 catch(e)
 {
 
 }
-//app.alert(str);
 
 
 </script>
@@ -3008,7 +3013,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="numServiceCharge" w="24mm" h="4mm" access="protected" x="53.999mm">
+               <field name="numServiceCharge" w="24mm" h="4mm" access="protected" x="53.999mm" y="0mm">
                   <ui>
                      <numericEdit>
                         <border presence="hidden"/>
@@ -3097,7 +3102,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="numArrangementFee" x="53.999mm" w="24mm" h="4mm" access="protected">
+               <field name="numArrangementFee" x="53.999mm" w="24mm" h="4mm" access="protected" y="0mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -3341,20 +3346,21 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">try
+                  <script contentType="application/x-javascript">
+try
 {
 var str = this.rawValue;
 
 var wordArray = str.split(".");
-this.rawValue = wordArray[0] + wordArray[1];
+if(wordArray.length &gt; 1)
+{
+	this.rawValue = wordArray[0] +" "+ wordArray[1];
+}
 }
 catch(e)
 {
 
 }
-//app.alert(str);
-
-
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.AdditionalLeaseVat"/>
@@ -3416,20 +3422,21 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">try
+                  <script contentType="application/x-javascript">
+try
 {
 var str = this.rawValue;
 
 var wordArray = str.split(".");
-this.rawValue = wordArray[0] + wordArray[1];
+if(wordArray.length &gt; 1)
+{
+	this.rawValue = wordArray[0] +" "+ wordArray[1];
+}
 }
 catch(e)
 {
 
 }
-//app.alert(str);
-
-
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.LeaseTotalVat"/>
@@ -3530,18 +3537,21 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">try
+                  <script contentType="application/x-javascript">
+try
 {
 var str = this.rawValue;
 
 var wordArray = str.split(".");
-this.rawValue = wordArray[0] + wordArray[1];
+if(wordArray.length &gt; 1)
+{
+	this.rawValue = wordArray[0] +" "+ wordArray[1];
+}
 }
 catch(e)
 {
 
 }
-//app.alert(str);
 
 
 </script>
@@ -3588,20 +3598,21 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">try
+                  <script contentType="application/x-javascript">
+try
 {
 var str = this.rawValue;
 
 var wordArray = str.split(".");
-this.rawValue = wordArray[0] + wordArray[1];
+if(wordArray.length &gt; 1)
+{
+	this.rawValue = wordArray[0] +" "+ wordArray[1];
+}
 }
 catch(e)
 {
 
 }
-//app.alert(str);
-
-
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.TotalMileagePerYear"/>
@@ -5949,7 +5960,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8527\010_CarPriceEstimate_S010SA03_20130516_064609_D_B001DEG_Forsikring.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Defecter\8839\998_CarPriceEstimate_S001IT05_20130606_170106_D_B001HCR.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
@@ -6101,14 +6112,14 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-06-04T12:31:50Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-06-11T12:44:18Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3a295c58-3676-4c8c-a9aa-2e1b1f984822</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:2f8b457f-159f-4bba-a0a6-3c165b5f6828</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
