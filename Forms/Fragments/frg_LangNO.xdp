@@ -1,104 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-13T06:43:12Z" uuid="263434f7-7858-4dab-a400-4001692c2792">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
-   <subform name="form1" locale="da_DK" layout="tb">
+   <?formServer defaultPDFRenderFormat acrobat9.1static?>
+   <subform name="form1" locale="no_NO" layout="tb">
       <pageSet>
          <pageArea>
-            <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
-            <medium stock="a4" short="210mm" long="297mm"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+            <contentArea x="6.35mm" y="31.75mm" w="203.2mm" h="219.075mm" name="sub_Content"/>
          </pageArea>
       </pageSet>
       <subform>
          <variables>
             <script contentType="application/x-javascript" name="NO">
-				var L_VatIncluded = "Alle priser inkl. MVA";
-var L_BBAgreementNo = "BB avtalenummer:";
-var L_CarColor = "Farge:";
-var L_CarDelivery = "Bil leveres:";
-var L_CarEngine = "Motor:";
-var L_CarFinishedDate = "Avtalt ferdig:";
-var L_CarGearBox = "Girkasse:";
-var L_CarLocation = "Bilplass:";
-var L_CarMileage = "KM stand:";
-var L_CarMileageCur = "KM stand inn:";
-var L_CarMileageCurOut = "KM stand ut:";
-var L_CarPriceestimateTerms = "Dette er å betrakte som et uforbindtlig prisoverslag. Vi tar derfor forbehold om prisenderinger, avgiftsendringer og leveringstid.";
-var L_CarRegDate = "Reg.dato:";
-var L_CarRegNo = "Reg.nr.:";
-var L_CarRemarks = "Anmerkninger:";
-var L_CarSalesContract = "Kontrakt";
-var L_CarSalesPriceestimate = "Prisoverslag";
-var L_CarType = "Biltype:";
-var L_CarVIN = "Chassinr.:";
-var L_Cash = "Kontantpris";
-var L_CarModelDesc = "Modell:";
-var L_CarModelInfo = "Grunnpris:";
-var L_CarModelYear = "Årsmodell:";
-var L_CarPickUp = "Bil hentes:";
-var L_CompanyRegno = "Organisasjonsnr.:";
-var L_Confirmation = "Bekreftelse";
-var L_ContactTxt = "Jeg godtar at forhandler/importør kan sende meg informasjon og gode tilbud via post/e-post/SMS basert på opplysninger om meg og bilen min. Opplysningene vil ikke bli utlevert til andre.              ";
-var L_ContNextPage = "Forts. neste side";
-var L_ContractNo = "Kontraktnr.: ";
-var L_ControlSignature = "Kontrollsignatur:";
-var L_Coverage = "Dekning:";
-var L_CheckList = "Sjekkliste:";
-var L_Co2 = "Co2 utslipp i gr/km:";
-var L_Code = "Kode";
-var L_ColorInfo = "Farge:";
-var L_CustomerCompanyRegNo = "Org.nr.:";
-var L_CustomerLedgerNo = "Reskontronr.:";
-var L_CustomerLegalAddressTotal = "Juridiskadresse:";
-var L_CustomerName = "Kjøper:";
-var L_CustomerPhoneMobile = "Mobil:";
-var L_CustomerPhoneNo = "Telefon";
-var L_CustomerPhoneOrder = "Tlf. dag:";
-var L_CustomerPhonePrivat = "Privat:";
-var L_CreditInvoice = "Kreditnota";
-var L_CreditNoRefInvoice = "Ref. fakturanr.:";
-var L_CreditReason = "Rabatt årsak";
-var L_CustomerAddress = "Leveringsadresse:";
-var L_CustomerPhoneWork = "Arbeid:";
-var L_Date = "Dato:";
-var L_DateOfInvoice = "Fakturadato:";
-var L_DateReviewed = "Dato/signatur kunde";
-var L_DealerCompanyRegno = "Foretaksregisteret NO:";
-var L_DealerIssueAddressTotal = "Leveringsadresse:";
-var L_DealerLegalAddressTotal = "Juridisk adresse: ";
-var L_DealerNameLegal = "Selger";
-var L_DealerNameMarketing = "Selger";
-var L_DeltermsText1 = "\b.LEVERINGSVILKÅR\b0.~Det er på alle biler som er importert av Harald a. Møller AS, registrert fra og med";
-var L_DeltermsText2 = "Norgesgaranti";
-var L_DeltermsText3 = "avhengig av hva som først inntreffer.";
-var L_DeltermsText4 = "Kjøpet skjer forøvrig i henhold til betingelser beskrevet i leverings- vilkår (vedlegg 1) som er mottatt, lest og akseptert av kjøper.~~";
-var L_DeltermsText5 = "Leveringssted:";
-var L_DeltermsText6 = "Bilen er ordrebekreftet";
-var L_DeltermsText7 = "Antatt leveringsuke/år:";
-var L_DifferenceAmount = "Mellomlegg";
-var L_Discount = "Rabatt %";
-var L_DiscountPE = "Rabatt %";
-var L_DocTypeCreditInvoice = "Kredittfaktura";
-var L_DocTypeInvoice = "Faktura";
-var L_DocTypePrepayment = "Forskuddsordre ";
-var L_DocTypePriceEstimate = "Prisoverslag";
-var L_DocTypeWorkOrder = "Arbeidsordre";
-var L_DueDate = "Betalingsfrist:";
-var L_DueDate_KON = "Betalt:";
-var L_DueDate_KRE = "Forfallsdato:";
-var L_EnvironmentalClass = "miljøklasse:";
-var L_Financing = "Finansiering";
-var L_ForeignSalesVat = "mva 0%";
-var L_FreightPriceTotal = "Frakt- og leveringsomkostninger";
-var L_GreetingsText = "Vennlig hilsen,";
-var L_Hour = "Timer:";
-var L_Insurance = "Forsikring";
-var L_InsuranceCompany = "Forhandler forikrer bilen i";
-var L_InsuranceMileage = "Kjørelengde pr. år, km:";
-var L_InsuranceNameRef = "Forsikringsref.:";
-var L_InsuranceVat = "Mva dekkes av forsikringstaker kr.:";
-var L_Interior = "Interiør:";
-var L_InvoiceNo = "Fakturanr.:";
+		
+				var L_InvoiceNo = "Fakturanr.:";
+var L_InvoiceNo_K = "Kreditnota:";
 var L_InvoiceNo_N = "Kreditnota.:";
 var L_InvoiceSeries = "Fakturaserie:";
 var L_InvoiceTitle_F = "Faktura";
@@ -107,13 +24,9 @@ var L_InvoiceTitle_K = "Kreditnota";
 var L_InvoiceTitle_N = "Intern Kreditnota";
 var L_InvoiceTitle_P = "Forskuddsfaktura";
 var L_InvoiceTitle_Q = "Prepayment Kreditnoa";
-var L_InvoiceTitle_S = "Samlefaktura";
-var L_InvoiceType = "Fakt.type";
-var L_KidLine = "KIDnr.:";
-var L_LeaseMonth = "Leie/Mnd";
 var L_LeaseMonthVat = "Leie/Mnd";
 var L_LeaserFinancingCompany = "Selger tar forbehold om godkjennelse fra finansselskapet:";
-var L_InvoiceNo_K = "Kreditnota:";
+var L_LeaserFinancingCompany2 = "Eventuelt forbeh.fra kjøper om finansiering av kjøpet må uttrykkelig fremgå av kontrakten, jfr.pkt. 1, første ledd i vedlegg nr. 1";
 var L_LeaserName = "Leier:";
 var L_LeaserPersonalId = "Personnr.:";
 var L_LeaseTotal = "Sum leie/mnd";
@@ -121,22 +34,25 @@ var L_LeaseTotalVat = "Sum leie/mnd";
 var L_Leasing = "Leier(kunde):";
 var L_Loan = "Finansiering";
 var L_LoanCondition = "Lånetilbud gitt med forbehold om endelig kredittgodkjennelse.";
-var L_LoanPrePaymentAmount = "Kontantinnsats ved lån";
+var L_LoanPrePaymentAmount = "Kontantinnsats";
 var L_LoanTradeInEncumbrance = "Heftelser på innbyttebil";
-var L_LoanTradeInPrice = "Innbyttebil";
-var L_LoanVehiclePrice = "Sum";
-var L_LocationSparepart = "Lokasjon";
-var L_LocationSparepartPrepicked = "Deleplass:";
+var L_InvoiceTitle_S = "Samlefaktura";
+var L_InvoiceType = "Fakt.type";
+var L_KidLine = "KIDnr.:";
+var L_LeaseMonth = "Leie/Mnd";
 var L_MaterialTotAmount = "Sum materiell:";
 var L_MechanicNo = "Mekaniker id:";
 var L_MechanicSignature = "Signatur mekaniker:";
 var L_MvaOrg = "MVA";
-var L_LeaserFinancingCompany2 = "Eventuelt forbeh.fra kjøper om finansiering av kjøpet må uttrykkelig fremgå av kontrakten, jfr.pkt. 1, første ledd i vedlegg nr. 1";
+var L_Name = "Navn";
 var L_NationalOptionpriceTotal = "Norsk montert utstyr i følge spesifikasjon";
 var L_NationalOptions = "Norskmontert utstyr";
 var L_No = "Nr.";
+var L_LoanTradeInPrice = "Innbyttebil";
+var L_LoanVehiclePrice = "Sum";
+var L_LocationSparepart = "Lokasjon";
+var L_LocationSparepartPrepicked = "Deleplass:";
 var L_Nox = "Nox utslipp i mg/km:";
-var L_NumberOfPeriods = "Første leiefaktura inneholder etab.gebyr. Antall Terminer:";
 var L_Of = "av";
 var L_OnDelivery = "Ved levering";
 var L_OnDeliveryCash = "Kontant ved levering";
@@ -145,9 +61,10 @@ var L_OnDeliveryRentalAmount = "eks. mva";
 var L_OnDeliveryRentalAmountVat = "inkl. mva";
 var L_OnDeliveryVatAmount = "mva";
 var L_OptionDiscount = "Rabatt på tilleggsutstyr";
-var L_Name = "Navn";
+var L_OptionPriceTotal = "Ekstrautstyr i følge spesifikasjon";
 var L_Options = "Ekstrautstyr";
 var L_OptionTotalVat = "Mva andel på tilleggsutstyr";
+var L_NumberOfPeriods = "Første leiefaktura inneholder etab.gebyr. Antall Terminer:";
 var L_OrderNo = "Ordrenr.:";
 var L_OurRef = "Referanse:";
 var L_OwnerName = "Eier:";
@@ -159,7 +76,7 @@ var L_PaymentTerms_Kre = "Kreditt";
 var L_PaymentType = "Betalingsmåte:";
 var L_PlannedValuation = "Takstavtale:";
 var L_PlannedVisit = "Bilen påbegynnes:";
-var L_OptionPriceTotal = "Ekstrautstyr i følge spesifikasjon";
+var L_PlannedWorks = "Planlagt arbeid:";
 var L_PreControl = "Behov for forkontroll/prøvekjøring:";
 var L_PrepaymentCar = "Forhåndsbetaling:";
 var L_PrepaymentAmount = "Forhåndsbetaling:";
@@ -172,7 +89,7 @@ var L_PriceInfoEnd2 = "* = eks.mva";
 var L_PriceInformation = "Prisinformasjon";
 var L_PriceMileageExeeded = "Overkjørte km.";
 var L_PriceMileageExeededVat = "Overkjørte km.";
-var L_PlannedWorks = "Planlagt arbeid:";
+var L_PriceTotal = "Total";
 var L_PriceTotalColumn = "Total";
 var L_PriceTotalSum = "Nettobeløp:";
 var L_PriceTotalSum2 = "Beløp u/mva";
@@ -181,31 +98,28 @@ var L_PriceTotalSumPrepay = "Beløp m/mva";
 var L_PriceType_B = "Beløp med MVA";
 var L_PriceType_N = "Beløp uten MVA";
 var L_PriceVatTotalPrepayment = "Herav mva";
-var L_PriceVatTotalSum = "Totalt å betale:";
 var L_Product = "Produkt";
-var L_PriceTotal = "Total";
 var L_Quantity = "Antall";
 var L_RebuildPriceTotal = "Ombygg i følge spesifikasjon";
 var L_ReBuilds = "Ombygging montert utstyr";
-var L_ReceivedText_D = "Jeg har mottatt alle deler .. Delesalg";
-var L_ReceivedText_V = "Jeg har mottatt alle deler ..service";
 var L_ReferenceNo = "Forskudd på gjennomgang";
 var L_RegistrationDesc = "Registrering pr.";
-var L_RemainingValue = "Restverdi";
+var L_PriceVatTotalSum = "Totalt å betale:";
 var L_RemarkDate = "Dato opprettet";
 var L_RemarkPriority = "Prioritet";
+var L_RemarkText = "Beskrivelse";
 var L_Remember = "Avtalt:";
 var L_RentalCalculation = "Leieberegning (* = Eks.mva)";
 var L_RepeatedRepair = "Gjentatt reperasjon:";
 var L_RestPayTotal = "Totalt å betale:";
 var L_Reviewed = "Gjennomgått med kunde:";
 var L_Rounding = "Øreavrunding:";
+var L_RemainingValue = "Restverdi";
 var L_SalesRep = "Salgsrepresentant";
 var L_ServiceAdvisor = "Serviceleder,";
 var L_ServiceAdvisorColon = "Serviceleder:";
 var L_ServiceCharge = "Termingebyr";
 var L_ServiceChargeVat = "Termingebyr";
-var L_RemarkText = "Beskrivelse";
 var L_Signature = "Signatur:";
 var L_SignatureColon = "Signatur:";
 var L_SignatureDate = "Dato";
@@ -219,7 +133,6 @@ var L_SwiftCode = "Swift kode";
 var L_Task = "Oppdrag";
 var L_TaskLetter = "Oppdr.";
 var L_ThankYouTextPriceestimate = "Vi takker for din henvendelse.";
-var L_ThroughputNo = "Gj.gangsnr.:";
 var L_TimeTotal = "Totalt:";
 var L_TotalCostPerYear = "Totalkostnad pr.år (inkl. engangsleie)";
 var L_TotalDiscount = "Totalt prisavslag";
@@ -231,6 +144,8 @@ var L_TradeInCarBrand = "Merke:";
 var L_TradeInColor = "Farge:";
 var L_TradeInEncumbrance = "Heftelser i løsøreregisteret:";
 var L_TradeInMileage = "KM stand:";
+var L_ThroughputNo = "Gj.gangsnr.:";
+var L_TradeInModelDesc = "Modell:";
 var L_TradeInPrice = "Avtalt innbyttepris:";
 var L_TradeInRegDate = "Første gang registrert:";
 var L_TradeInRegisteredYear = "Årsmodell:";
@@ -241,19 +156,16 @@ var L_TradeInVIN = "Chassinr.:";
 var L_TransferRegNo = "Overføres fra:";
 var L_Unit = "Enhet";
 var L_UnitPrice = "Enhetspris";
-var L_Upgrade = "Oppgraderings behov:";
-var L_TradeInModelDesc = "Modell:";
-var L_VatAmount = "Herav MVA:";
 var L_VatAmountCash = "Mva beløp:";
 var L_VatAmountColon = "MVA:";
 var L_VatBasis = "Mva grunnlag:";
 var L_VatContract = "Mva-grunnlag";
+var L_VatIncluded = "Alle priser inkl. MVA";
 var L_VatRateCash = "Mva %";
 var L_VatText = "Uten mva";
+var L_Upgrade = "Oppgraderings behov:";
 var L_UserName = "Bruker:";
-var L_VehicleDiscount = "Rabatt på bil";
-var L_VehiclePrice = "Bilens pris";
-var L_VisitAddress = "Besøksadresse:";
+var L_VatAmount = "Herav MVA:";
 var L_VWMBFLoan = "Lån i Volkswagen Møller Bilfinans (se eget vedlegg)";
 var L_VWMBFLoanAnnualRate = "Nom.rente:";
 var L_VWMBFLoanEffectiveRate = "Eff. Rente:";
@@ -272,42 +184,165 @@ var L_WorkOrder = "Arbeidsordre";
 var L_WorkPosTot = "Sum arbeid:";
 var L_YesNo = "Ja       / Nei";
 var L_YourRef = "Deres ref.:";
+var L_VehicleDiscount = "Rabatt på bil";
+var L_VehiclePrice = "Bilens pris";
+var L_VisitAddress = "Besøksadresse:";
 var L_YourServiceAdvisor = "Din serviceleder,";
 var L_AdditionalInfo = "Tilleggsinformasjon";
 var L_AdditionalLease = "Tilleggsleie/mnd**";
 var L_AdditionalLeaseVat = "Tilleggsleie/mnd**";
 var L_AdditionalWorkText = "Tilleggsarbeid";
-var L_AdditionalProduct = "**Tilleggsleie inkluderer:";
+var L_AdditonalProduct = "**Tilleggsleie inkluderer:";
 var L_AmountToPay = "Å betale:";
 var L_ApprovedBy = "Godkjent av:";
 var L_ArrangementFee = "Etableringsgebyr";
 var L_ArrangementFeeVat = "Etableringsgebyr";
 var L_AssumedTradeInPrice = "Antatt innbyttepris:";
+var L_YearFee = "Årsavgift";
 var L_Attention = "Att:";
 var L_BankName = "Bankgiro:";
+var L_BBAgreementNo = "BB avtalenummer:";
+var L_CarColor = "Farge:";
+var L_CarDelivery = "Bil leveres:";
+var L_CarEngine = "Motor:";
+var L_CarFinishedDate = "Avtalt ferdig:";
+var L_CarGearBox = "Girkasse:";
+var L_CarLocation = "Bilplass:";
+var L_CarMileage = "KM stand:";
+var L_CarMileageCur = "KM stand inn:";
+var L_CarMileageCurOut = "KM stand ut:";
+var L_CarModelDesc = "Modell:";
+var L_CarModelInfo = "Grunnpris:";
+var L_CarModelYear = "Årsmodell:";
+var L_CarPickUp = "Bil hentes:";
+var L_CarPriceestimateTerms = "Dette er å betrakte som et uforbindtlig prisoverslag. Vi tar derfor forbehold om prisendringer, avgiftsendringer og leveringstid.";
+var L_CarRegDate = "Reg.dato:";
+var L_CarRegNo = "Reg.nr.:";
+var L_CarRemarks = "Anmerkninger:";
+var L_CarSalesContract = "Kontrakt";
+var L_CarSalesPriceestimate = "Prisoverslag";
+var L_CarType = "Biltype:";
+var L_CarVIN = "Chassinr.:";
+var L_Cash = "Kontantpris";
+var L_CheckList = "Sjekkliste:";
+var L_Co2 = "Co2 utslipp i gr/km:";
+var L_Code = "Kode";
+var L_ColorInfo = "Farge:";
+var L_CompanyRegno = "Organisasjonsnr.:";
+var L_Confirmation = "Bekreftelse";
+var L_ContactTxt = "Jeg godtar at forhandler/importør kan sende meg informasjon og gode tilbud via post/e-post/SMS basert på opplysninger om meg og bilen min. Opplysningene vil ikke bli utlevert til andre.";
+var L_ContNextPage = "Forts. neste side";
+var L_ContractNo = "Kontraktnr.:";
+var L_ControlSignature = "Kontrollsignatur:";
+var L_Coverage = "Dekning:";
+var L_CreditInvoice = "Kreditnota";
+var L_CreditNoRefInvoice = "Ref. fakturanr.:";
+var L_CreditReason = "Rabatt årsak";
+var L_CustomerAddress = "Leveringsadresse:";
+var L_CustomerCompanyRegNo = "Org.nr.:";
+var L_CustomerLedgerNo = "Reskontronr.:";
+var L_CustomerLegalAddressTotal = "Juridiskadresse:";
+var L_CustomerName = "Kjøper:";
+var L_CustomerPhoneMobile = "Mobil:";
+var L_CustomerPhoneNo = "Telefon";
+var L_CustomerPhoneOrder = "Tlf. dag:";
+var L_CustomerPhonePrivat = "Privat:";
+var L_CustomerPhoneWork = "Arbeid:";
+var L_Date = "Dato:";
+var L_DateOfInvoice = "Fakturadato:";
+var L_DateReviewed = "Dato/signatur kunde";
+var L_DealerCompanyRegno = "Foretaksregisteret NO:";
+var L_DealerIssueAddressTotal = "Leveringsadresse:";
+var L_DealerLegalAddressTotal = "Juridisk adresse:";
+var L_DealerNameLegal = "Selger";
+var L_DealerNameMarketing = "Selger";
+var L_DeltermsText1 = "LEVERINGSVILKÅR Det er på alle biler som er importert av Harald a. Møller AS, registrert fra og med";
+var L_DeltermsText2 = "Norgesgaranti";
+var L_DeltermsText3 = "avhengig av hva som først inntreffer.";
+var L_DeltermsText4 = "Kjøpet skjer forøvrig i henhold til betingelser beskrevet i leverings- vilkår (vedlegg 1) som er mottatt, lest og akseptert av kjøper.";
+var L_DeltermsText5 = "Leveringssted:";
+var L_DeltermsText6 = "Bilen er ordrebekreftet";
+var L_DeltermsText7 = "Antatt leveringsuke/år:";
+var L_DifferenceAmount = "Mellomlegg";
+var L_Discount = "Rabatt %";
+var L_DiscountPE = "Rabatt %";
+var L_DocTypeCreditInvoice = "Kredittfaktura";
+var L_DocTypeInvoice = "Faktura";
+var L_DocTypePrepayment = "Forskuddsordre";
+var L_DocTypePriceEstimate = "Prisoverslag";
+var L_DocTypeWorkOrder = "Arbeidsordre";
+var L_DueDate = "Betalingsfrist:";
+var L_DueDate_KON = "Betalt:";
+var L_DueDate_KRE = "Forfallsdato:";
+var L_EnvironmentalClass = "miljøklasse:";
+var L_Financing = "Finansiering";
+var L_ForeignSalesVat = "mva 0%";
+var L_FreightPriceTotal = "Frakt- og leveringsomkostninger";
+var L_GreetingsText = "Vennlig hilsen,";
+var L_Hour = "Timer:";
+var L_Insurance = "Forsikring";
+var L_InsuranceCompany = "Forhandler forikrer bilen i";
+var L_InsuranceMileage = "Kjørelengde pr. år, km:";
+var L_InsuranceNameRef = "Forsikringsref.:";
+var L_InsuranceVat = "Mva dekkes av forsikringstaker kr.:";
+var L_Interior = "Interiør:";
 
 		
                
                
-
-               
-               
-               
-               
-               
-               
-               
-               
-               
+			   
+			   
 
                <?templateDesigner isFragment yes?>
-               <?templateDesigner fragmentTitle frg_LangNO?></script>
+               <?templateDesigner fragmentTitle frg_LangNO?>
+               <?templateDesigner fragmentDescription NO_X?></script>
          </variables>
       </subform>
    </subform>
-</template>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 110?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+         <tagged>0</tagged>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-06-13T06:43:12Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:263434f7-7858-4dab-a400-4001692c2792</xmpMM:DocumentID>
+      </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
             <rdf:Seq>
@@ -319,7 +354,7 @@ var L_BankName = "Bankgiro:";
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default"/>
+                        <rdf:li xml:lang="x-default">NO_X</rdf:li>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.#subform.#variables.NO</dc:identifier>
@@ -329,4 +364,108 @@ var L_BankName = "Bankgiro:";
          </lcd:fragmentCatalog>
       </rdf:Description>
    </rdf:RDF>
-</x:xmpmeta></xdp:xdp>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="no_NO" desc="Norsk (Norge)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>mars</month>
+            <month>april</month>
+            <month>mai</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>desember</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>mai</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>des</month>
+         </monthNames>
+         <dayNames>
+            <day>sÃ¸ndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lÃ¸rdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sÃ¸</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lÃ¸</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">NOK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet></xdp:xdp>

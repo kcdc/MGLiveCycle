@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T11:50:51Z" uuid="715c26db-0116-4ead-abc3-72de32a32385">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-28T12:03:51Z" uuid="0fee2e14-14de-4042-b480-337526ba12f2">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/2.5/">
    <?formServer defaultPDFRenderFormat acrobat8.0static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -10,9 +10,9 @@
             <contentArea h="283.663mm" id="contentArea_ID" w="136.297mm" y="6.32mm" name="ContentArea_1"/>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
-      <subform name="overflowTrailer" id="overflowTrailer_ID" layout="tb">
+      <subform name="overflowTrailer" id="overflowTrailer_ID" w="66mm" h="8.398mm">
          <bind match="none"/>
-         <margin leftInset="0mm" bottomInset="0mm" topInset="0mm"/>
+         <margin leftInset="0mm" bottomInset="0mm" topInset="3mm"/>
          <border>
             <edge presence="hidden">
                <color value="7,157,196"/>
@@ -27,14 +27,14 @@
             <corner/>
             <corner/>
          </border>
-         <field name="L_ContNextPage" minH="6.069mm" minW="66.976mm">
+         <field name="L_ContNextPage" minW="66mm" minH="3.928mm" y="0.001mm">
             <ui>
                <textEdit>
                   <margin/>
                </textEdit>
             </ui>
             <font baselineShift="0pt" typeface="Arial" size="8pt" weight="bold"/>
-            <margin bottomInset="0mm" leftInset="0mm" rightInset="1.0583mm" topInset="0mm"/>
+            <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
             <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="bottom"/>
             <border>
                <edge presence="hidden">
@@ -44,7 +44,7 @@
                   <color value="7,157,196"/>
                </corner>
             </border>
-            <caption reserve="65.9177mm">
+            <caption reserve="66mm">
                <value>
                   <text xliff:rid="8F6FCEA2-CB76-4350-AF8E-CC318E77FBA0">Forts. neste side</text>
                </value>
@@ -70,10 +70,10 @@ this.caption.value.text = output;
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/2.5/?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 25?>
-   <?templateDesigner Zoom 97?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?></template>
+   <?templateDesigner Zoom 113?></template>
 <config xmlns="http://www.xfa.org/schema/xci/1.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -99,14 +99,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 4.2.1-c043 52.437709, 2010/08/04-17:30:07        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-16T11:50:51Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-05-28T12:03:51Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:715c26db-0116-4ead-abc3-72de32a32385</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:0fee2e14-14de-4042-b480-337526ba12f2</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

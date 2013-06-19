@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-01T17:29:54Z" uuid="78af7b20-2b4b-49bf-a138-434160f724d8">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-13T06:46:31Z" uuid="714f25e8-50c4-4cab-a034-39cf32896129">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -14,223 +14,215 @@
          <variables>
             <script contentType="application/x-javascript" name="EN">
 		
+				var L_InvoiceSeries = "Invoice Series";
+var L_InvoiceTitle_F = "Faktura";
+var L_InvoiceTitle_I = "Internal";
+var L_InvoiceTitle_K = "Kreditnota";
+var L_InvoiceTitle_P = "Prepayment";
+var L_LeaserName = "Leaser:";
+var L_LeaserPersonalId = "Soc.no :";
+var L_InvoiceType = "Order type";
+var L_MechanicNo = "Mechanic number";
+var L_MechanicSignature = "Mechanic Signature";
+var L_Name = "Name";
+var L_NationalOptionpriceTotal = "National mounted equipment";
+var L_NationalOptions = "National equipment specification";
+var L_No = "Nr.";
+var L_LoanTradeInPrice = "Tradein car";
+var L_LocationSparepart = "Location";
+var L_LocationSparepartPrepicked = "Location of pre picked spare parts";
+var L_Nox = "Nox mg/km";
+var L_Of = "1 of 1";
+var L_OfferText = "Our offer for you is as follows:";
+var L_OnDeliveryRentalAmount = "ex.VAT";
+var L_OnDeliveryRentalAmountVat = "incl.VAT";
+var L_OnDeliveryVatAmount = "VAT";
+var L_OptionDiscount = "Discount fact. Equipment";
+var L_OptionPriceTotal = "Factory equipment";
+var L_Options = "Factory equipment specification";
+var L_OrderNo = "Orderno:";
+var L_OurRef = "Reference:";
+var L_OwnerName = "Owner:";
+var L_Page = "Page";
+var L_PaymentTerms = "Payment condition";
+var L_PaymentTerms_Kon = "Cash register NR.";
+var L_PaymentTerms_Kre = "Bank transfer";
+var L_PlannedVisit = "Planned visit";
+var L_PlannedWorks = "Planned works:";
+var L_PrepaymentCar = "Prepayment";
+var L_PrepaymentAmount = "Prepayment:";
+var L_PrePaymentCash = "Prepayment:";
+var L_Preview = "Preview";
+var L_Price = "Price";
+var L_PriceEstimateNo = "Priceestimate No:";
+var L_PriceInfoEnd1 = "VAT-basis";
+var L_PriceInfoEnd2 = "* = ex.VAT";
+var L_PriceInformation = "Price information";
+var L_PriceTotal = "Total price";
+var L_PriceTotalColumn = "Total price";
+var L_PriceTotalSum = "Order sum without VAT (LVL):";
+var L_PriceTotalSum2 = "Order sum without VAT LVL:";
+var L_PriceTotalSumCarSales = "Total purchase price:";
+var L_PriceTotalSumPrepay = "Total sum LVL:";
+var L_PriceType_B = "Amount with VAT";
+var L_PriceType_N = "Amount without VAT";
+var L_PriceVatTotalSum = "Total Order sum LVL:";
+var L_PriceVatTotalSumLocal = "Total Order sum LVL:";
+var L_PriceVatTotalToPay = "Total to pay LVL:";
+var L_Product = "Product";
+var L_Quantity = "Quantity";
+var L_RebuildPriceTotal = "Rebuild";
+var L_ReBuilds = "Rebuild specification";
+var L_ReceiptNo = "Receipt NR. .";
+var L_ReceivedText_D = "I have received all goods ... Spare part invoice";
+var L_ReceivedText_V = "I have received all goods ... Service invoice";
+var L_ReferenceNo = "Reffrence to order Nr.";
+var L_RegistrationDesc = "Registration pr..";
+var L_RemarkDate = "Date created";
+var L_RemarkPriority = "Priority";
+var L_RemarksText = "I have red remarks and confirm that I understand the consequences it may cause.";
+var L_RemarkText = "Description";
+var L_RestPayTotal = "Total to pay LVL:";
+var L_Reviewed = "Reviewed:";
+var L_RemainingValue = "Restvalue:";
+var L_SalesRep = "Sales Representative";
+var L_ServiceAdvisor = "Service advisor,";
+var L_ServiceAdvisorColon = "Service advisor:";
+var L_ServiceEUText = "Paslaugos nėra ...  The transaction is subject ...";
+var L_Signature = "Signature";
+var L_SignatureColon = "Signature:";
+var L_SignatureDate = "Date";
+var L_SignHere = "Sign here";
+var L_SoldBy = "Sold by :";
+var L_SpProducer = "SP producer code";
+var L_SumExtraOptions = "Total equipment";
+var L_SVAPriceTotal = "Service and maintenance";
+var L_SwiftCode = "SWIFT";
+var L_Task = "Task";
+var L_TaskId = "Task 1.";
+var L_TaskLetter = "T";
+var L_ThankYouTextConfirmation = "Dear customer, We are happy that you choosed...";
+var L_ThankYouTextPriceestimate = "Thank you for your interest in our services.";
+var L_TimeTotal = "Total time";
+var L_TotalDiscount = "Total discount";
+var L_TradeIn = "Trade-in car";
+var L_TradeInCarBrand = "Brand:";
+var L_TradeInColor = "Color:";
+var L_TradeInEncumbrance = "Mortgaged";
+var L_TradeInMileage = "Mileage:";
+var L_TradeInModelDesc = "Model:";
+var L_ThroughputNo = "Throughput Nr.:";
+var L_TradeInPrice = "Agreed price";
+var L_TradeInRegDate = "Registered first time:";
+var L_TradeInRegisteredYear = "Modelyear";
+var L_TradeInRegistrationFeePaid = "Ann.fee paid:";
+var L_TradeInRegno = "Reg.no:";
 var L_TradeInText = "Trade-in price is given according that the car is in same condition as the price avaluation took place. The buyer ensures that the trade-in car is own property, and that the car is not mortgaged beyond the information given. The buyer also ensures that all taxes are paid, and the milage is correct";
 var L_TradeInVIN = "Vin.no:";
 var L_TransferRegNo = "Transferred from:";
 var L_Unit = "Unit";
-var L_UserName = "User:";
-var L_VatAmount = "VAT (LVL)";
 var L_VatAmountCash = "VAT amount";
 var L_VatAmountColon = "VAT (LVL):";
 var L_VatContract = "VAT-basis";
 var L_VatIncluded = "All prices including VAT";
-var L_VatRateCash = "VAT Tariff ";
+var L_VatRateCash = "VAT Tariff";
+var L_VatText = "VAT is not calculated ? invoice is not VAT object";
 var L_VatZeroText = "VAT (0%) LTL/LVL";
-var L_VehicleDiscount = "Car discount";
-var L_VisitAddress = "Address";
+var L_UserName = "User:";
+var L_VatAmount = "VAT (LVL)";
 var L_Work = "Work";
 var L_WorkOrder = "Work Order";
-var L_YesNo = "Yes        / No ";
+var L_YesNo = "Yes        / No";
 var L_YourRef = "Note 1";
+var L_VehicleDiscount = "Car discount";
+var L_VisitAddress = "Address";
 var L_YourServiceAdvisor = "Your service advisor,";
-var L_SalesRep = "Sales Representative";
+var L_AdditionalWorkText = "Additional work that is confirmed with customer ? table from current document";
+var L_AmountToPay = "To pay:";
+var L_AssumedTradeInPrice = "estimated trade-in price:";
+var L_Attention = "Attn:";
+var L_BankaccCurrEUR = "Bank acc. currency EUR";
+var L_BankaccCurrLocal = "Bank acc. currency Local";
+var L_BankAccEUR = "Bank Acc. EUR";
+var L_BankAccLVL = "Bank Acc. LVL";
+var L_BankName = "Bank";
+var L_CarColor = "Color:.";
+var L_CarEngine = "Engine:";
+var L_CarGearBox = "Gearbox:";
+var L_CarLocation = "Location of car in parking lot...";
+var L_CarMileage = "Mileage";
+var L_CarMileageCur = "KM stand of car";
+var L_CarModelDesc = "Model description";
+var L_CarModelInfo = "Base price:.";
+var L_CarModelYear = "Model year:.";
 var L_CarPriceestimateTerms = "This is considered a non-binding estimate. We therefore reserve the prince ends reductions, tax changes and delivery.";
-var L_Attention = "Attn: ";
-var L_VatText = "VAT is not calculated ? invoice is not VAT object";
-var L_BankaccCurrEUR = "Bank acc. currency EUR"
-var L_BankaccCurrLocal = "Bank acc. currency Local"
-var L_BankAccEUR = "Bank Acc. EUR"
-var L_BankAccLVL = "Bank Acc. LVL"
-var L_BankName = "Bank"
-var L_CarColor = "Color:\t\t\t\t\t."
-var L_CarEngine = "Engine:"
-var L_AdditionalWorkText = "Additional work that is confirmed with customer ? table from current document"
-var L_AmountToPay = "To pay:"
-var L_CarMileageCur = "KM stand of car"
-var L_CarModelDesc = "Model description"
-var L_CarModelYear = "Model year:\t\t\t\t."
-var L_CarModelInfo = "Base price:\t\t\t\t."
-var L_CarRegDate = "Reg. date"
-var L_CarRegNo = "Reg. No."
-var L_CarRemarks = "Car remarks:"
-var L_CarSalesContract = "Contract"
-var L_CarSalesPriceestimate = "Priceestimate"
-var L_CarType = "Car type:"
-var L_CarGearBox = "Gearbox:"
-var L_CarLocation = "Location of car in parking lot..."
-var L_CarMileage = "Mileage"
-var L_ColorInfo = "Color:\t\t\t\t\t."
-var L_CompanyRegno = "Company reg. No."
-var L_Confirmation = "Confirmation"
-var L_ContactTxt = "Do you allow us to contact you with phone, sms, email........."
-var L_ContNextPage = "Continue next page"
-var L_ContractNo = "Contract no:"
-var L_ControlSignature = "Control signature"
-var L_CarVIN = "Chassis No."
-var L_CashRegNo = "Cash register NR."
-var L_Co2 = "Co2 emmission gr/km"
-var L_Code = "Code"
-var L_CustomerLegalAddressTotal = "Legal address:"
-var L_CustomerName = "Buyer:"
-var L_CustomerPhoneMobile = "Mobile:"
-var L_CustomerPhoneNo = "Phone "
-var L_CustomerPhonePrivat = "Privat:"
-var L_CustomerPhoneWork = "Work:"
-var L_CustomerVatPayerNo = "VAT payer Nr."
-var L_Date = "Date"
-var L_DateOfInvoice = "Invoicedate:"
-var L_CreditInvoice = "Credit invoice"
-var L_CreditNoRefInvoice = "Ref. Invoice Nr.:"
-var L_CreditReason = "Reason for credit"
-var L_CustomerAddress = "Delivery address:"
-var L_CustomerCompanyRegNo = "Comp.no:"
-var L_CustomerLedgerNo = "Customer No.:"
-var L_DealerVatPayerNo = "VAT payer Nr."
-var L_DeltermsText1 = "Leveringsvilkår fra Rumba? Linje 1"
-var L_DeltermsText2 = "Linje 2"
-var L_DeltermsText3 = "Linje 3"
-var L_DeltermsText4 = "This purchase is contucted as the conditions described in the enclosed appendix, which the buyer have read and understood."
-var L_DeltermsText5 = "Deliveryplace:"
-var L_DeltermsText6 = "The car is order confirmed"
-var L_DeltermsText7 = "Expected deliveryweek/year"
-var L_DateReviewed = "Date"
-var L_DealerCompanyRegno = "Company reg. Nr."
-var L_DealerIssueAddressTotal = "Issue address"
-var L_DealerLegalAddressTotal = "Legal address"
-var L_DealerNameLegal = "Seller"
-var L_DealerNameMarketing = "Seller"
-var L_DueDate = "Must be paid till "
-var L_DueDate_KON = '"Betalt:"';
-var L_DueDate_KRE = "Forfallsdato:"
-var L_EconomicalTransType = "Economical transaction type : "
-var L_ExtensionsText = "We will inform you if any additional problems will be discovered, so we could agree on the next steps?"
-var L_DiscountPE = "Disc.%"
-var L_Discount = "Disc.%"
-var L_DocTypeCreditInvoice = "Credit invoice"
-var L_DocTypeInvoice = "Invoice"
-var L_DocTypePrepayment = "Prepayment order"
-var L_DocTypePriceEstimate = "Price Estimate"
-var L_DocTypeWorkOrder = "Work Order"
-var L_InvoiceTitle_F = '"Faktura"'
-var L_InvoiceTitle_I = "Internal"
-var L_InvoiceTitle_K = "Kreditnota"
-var L_ForeignSalesVat = "VAT 0%"
-var L_GreetingsText = "Best regards,"
-var L_Hour = "Hour:"
-var L_Insurance = "Insurance"
-var L_InsuranceCompany = "Dealer insures the car in"
-var L_InsuranceMileage = "Mileage pr. year, km:"
-var L_Interior = "Interior:\t\t\t\t\t."
-var L_InvoiceNo = "Invoice Nr.: "
-var L_InvoiceSeries = "Invoice Series"
-var L_LocationSparepartPrepicked = "Location of pre picked spare parts"
-var L_MechanicNo = "Mechanic number"
-var L_InvoiceTitle_P = "Prepayment"
-var L_InvoiceType = "Order type"
-var L_LeaserName = "Leaser:"
-var L_LeaserPersonalId = "Soc.no :"
-var L_LoanTradeInPrice = "Tradein car"
-var L_LocationSparepart = "Location"
-var L_OptionPriceTotal = "Factory equipment"
-var L_Options = "Factory equipment specification"
-var L_OrderNo = "Orderno:"
-var L_MechanicSignature = "Mechanic Signature"
-var L_Name = "Name "
-var L_NationalOptionpriceTotal = "National mounted equipment "
-var L_NationalOptions = "National equipment specification "
-var L_No = "Nr. "
-var L_Nox = "Nox mg/km"
-var L_Of = "1 of 1"
-var L_OfferText = "Our offer for you is as follows:"
-var L_OnDeliveryRentalAmount = "ex.VAT"
-var L_OnDeliveryRentalAmountVat = "incl.VAT"
-var L_OnDeliveryVatAmount = "VAT"
-var L_OptionDiscount = "Discount fact. Equipment"
-var L_OwnerName = "Owner:"
-var L_Page = "Page"
-var L_PaymentTerms = "Payment condition"
-var L_PaymentTerms_Kon = "Cash register NR."
-var L_PaymentTerms_Kre = "Bank transfer"
-var L_PlannedVisit = "Planned visit"
-var L_PlannedWorks = "Planned works:"
-var L_PrepaymentAmount = "Prepayment:"
-var L_Preview = "Preview"
-var L_Price = "Price"
-var L_OurRef = "Reference:"
-var L_PriceEstimateNo = "Priceestimate No: "
-var L_PriceInfoEnd1 = "VAT-basis"
-var L_PriceInfoEnd2 = "* = ex.VAT"
-var L_PriceInformation = "Price information"
-var L_PriceTotal = "Total price"
-var L_PriceTotalColumn = "Total price"
-var L_PriceTotalSum = "Order sum without VAT (LVL):"
-var L_PriceTotalSum2 = "Order sum without VAT LVL:"
-var L_PriceTotalSumCarSales = "Total purchase price:"
-var L_PriceTotalSumPrepay = "Total sum LVL:"
-var L_PriceType_B = "Amount with VAT"
-var L_PriceType_N = "Amount without VAT"
-var L_PriceVatTotalSum = "Total Order sum LVL:"
-var L_PriceVatTotalSumLocal = "Total Order sum LVL:"
-var L_PriceVatTotalToPay = "Total to pay LVL:"
-var L_Product = "Product"
-var L_Quantity = "Quantity"
-var L_RebuildPriceTotal = "Rebuild"
-var L_ReBuilds = "Rebuild specification"
-var L_ReceiptNo = "Receipt NR. ."
-var L_ReceivedText_D = "I have received all goods ... Spare part invoice"
-var L_ReceivedText_V = "I have received all goods ... Service invoice"
-var L_ReferenceNo = "Reffrence to order Nr. "
-var L_RegistrationDesc = "Registration pr.\t\t\t\t."
-var L_RemainingValue = "Restvalue:"
-var L_RemarkDate = "Date created"
-var L_RestPayTotal = "Total to pay LVL:"
-var L_Reviewed = "Reviewed:"
-var L_ServiceAdvisor = "Service advisor,"
-var L_ServiceAdvisorColon = "Service advisor:"
-var L_ServiceEUText = "Paslaugos nėra ...  The transaction is subject ..."
-var L_Signature = "Signature"
-var L_SignatureColon = "Signature:"
-var L_RemarkPriority = "Priority"
-var L_RemarksText = "I have red remarks and confirm that I understand the consequences it may cause."
-var L_RemarkText = "Description"
-var L_Task = "Task"
-var L_TaskId = "Task 1."
-var L_TaskLetter = "T"
-var L_ThankYouTextConfirmation = "Dear customer, We are happy that you choosed..."
-var L_ThankYouTextPriceestimate = "Thank you for your interest in our services."
-var L_SignatureDate = "Date"
-var L_SignHere = "Sign here"
-var L_SoldBy = "Sold by :"
-var L_SpProducer = "SP producer code"
-var L_SumExtraOptions = "Total equipment"
-var L_SVAPriceTotal = "Service and maintenance"
-var L_SwiftCode = "SWIFT"
-var L_TradeInRegDate = "Registered first time:"
-var L_TradeInRegisteredYear = "Modelyear"
-var L_TradeInRegistrationFeePaid = "Ann.fee paid:"
-var L_TradeInRegno = "Reg.no:"
-var L_ThroughputNo = "Throughput Nr.:"
-var L_TimeTotal = "Total time"
-var L_TotalDiscount = "Total discount"
-var L_TradeIn = "Trade-in car"
-var L_TradeInCarBrand = "Brand:"
-var L_TradeInColor = "Color:"
-var L_TradeInEncumbrance = "Mortgaged"
-var L_TradeInMileage = "Mileage:"
-var L_TradeInModelDesc = "Model:"
-var L_TradeInPrice = "Agreed price"
-var L_AssumedTradeInPrice = "estimated trade-in price:"
+var L_CarRegDate = "Reg. date";
+var L_CarRegNo = "Reg. No.";
+var L_CarRemarks = "Car remarks:";
+var L_CarSalesContract = "Contract";
+var L_CarSalesPriceestimate = "Priceestimate";
+var L_CarType = "Car type:";
+var L_CarVIN = "Chassis No.";
+var L_CashRegNo = "Cash register NR.";
+var L_Co2 = "Co2 emmission gr/km";
+var L_Code = "Code";
+var L_ColorInfo = "Color:";
+var L_CompanyRegno = "Company reg. No.";
+var L_Confirmation = "Confirmation";
+var L_ContactTxt = "Do you allow us to contact you with phone, sms, email.........";
+var L_ContNextPage = "Continue next page";
+var L_ContractNo = "Contract no:";
+var L_ControlSignature = "Control signature";
+var L_CreditInvoice = "Credit invoice";
+var L_CreditNoRefInvoice = "Ref. Invoice Nr.:";
+var L_CreditReason = "Reason for credit";
+var L_CustomerAddress = "Delivery address:";
+var L_CustomerCompanyRegNo = "Comp.no:";
+var L_CustomerLedgerNo = "Customer No.:";
+var L_CustomerLegalAddressTotal = "Legal address:";
+var L_CustomerName = "Buyer:";
+var L_CustomerPhoneMobile = "Mobile:";
+var L_CustomerPhoneNo = "Phone";
+var L_CustomerPhonePrivat = "Privat:";
+var L_CustomerPhoneWork = "Work:";
+var L_CustomerVatPayerNo = "VAT payer Nr.";
+var L_Date = "Date";
+var L_DateOfInvoice = "Invoicedate:";
+var L_DateReviewed = "Date";
+var L_DealerCompanyRegno = "Company reg. Nr.";
+var L_DealerIssueAddressTotal = "Issue address";
+var L_DealerLegalAddressTotal = "Legal address";
+var L_DealerNameLegal = "Seller";
+var L_DealerNameMarketing = "Seller";
+var L_DealerVatPayerNo = "VAT payer Nr.";
+var L_DeltermsText1 = "Leveringsvilkår fra Rumba? Linje 1";
+var L_DeltermsText2 = "Linje 2";
+var L_DeltermsText3 = "Linje 3";
+var L_DeltermsText4 = "This purchase is contucted as the conditions described in the enclosed appendix, which the buyer have read and understood.";
+var L_DeltermsText5 = "Deliveryplace:";
+var L_DeltermsText6 = "The car is order confirmed";
+var L_DeltermsText7 = "Expected deliveryweek/year";
+var L_Discount = "Disc.%";
+var L_DiscountPE = "Disc.%";
+var L_DocTypeCreditInvoice = "Credit invoice";
+var L_DocTypeInvoice = "Invoice";
+var L_DocTypePrepayment = "Prepayment order";
+var L_DocTypePriceEstimate = "Price Estimate";
+var L_DocTypeWorkOrder = "Work Order";
+var L_DueDate = "Must be paid till";
+var L_DueDate_KON = "Betalt:";
+var L_DueDate_KRE = "Forfallsdato:";
+var L_EconomicalTransType = "Economical transaction type :";
+var L_ExtensionsText = "We will inform you if any additional problems will be discovered, so we could agree on the next steps?";
+var L_ForeignSalesVat = "VAT 0%";
+var L_GreetingsText = "Best regards,";
+var L_Hour = "Hour:";
+var L_Insurance = "Insurance";
+var L_InsuranceCompany = "Dealer insures the car in";
+var L_InsuranceMileage = "Mileage pr. year, km:";
+var L_Interior = "Interior:";
+var L_InvoiceNo = "Invoice Nr.:";
 
-		
-               
-               
-
-               
-               
-               
-               
-               
-               
                <?templateDesigner isFragment yes?>
                <?templateDesigner fragmentTitle frg_LangEN?>
                <?templateDesigner fragmentDescription GEN_X?></script>
@@ -242,7 +234,7 @@ var L_AssumedTradeInPrice = "estimated trade-in price:"
    <?templateDesigner SavePDFWithLog 0?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 109?></template>
+   <?templateDesigner Zoom 110?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -272,14 +264,14 @@ var L_AssumedTradeInPrice = "estimated trade-in price:"
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-01T17:29:54Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-06-13T06:46:31Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:78af7b20-2b4b-49bf-a138-434160f724d8</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:714f25e8-50c4-4cab-a034-39cf32896129</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -304,19 +296,19 @@ var L_AssumedTradeInPrice = "estimated trade-in price:"
    </rdf:RDF>
 </x:xmpmeta>
 <localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
-   <locale name="no_NO" desc="Norsk (Norge)">
+   <locale name="en_EN" desc="English (UK)">
       <calendarSymbols name="gregorian">
          <monthNames>
-            <month>januar</month>
-            <month>februar</month>
-            <month>marts</month>
+            <month>january</month>
+            <month>februay</month>
+            <month>match</month>
             <month>april</month>
-            <month>mai</month>
-            <month>juni</month>
-            <month>juli</month>
+            <month>may</month>
+            <month>june</month>
+            <month>july</month>
             <month>august</month>
             <month>september</month>
-            <month>oktober</month>
+            <month>october</month>
             <month>november</month>
             <month>december</month>
          </monthNames>
@@ -335,22 +327,22 @@ var L_AssumedTradeInPrice = "estimated trade-in price:"
             <month>dec</month>
          </monthNames>
          <dayNames>
-            <day>søndag</day>
-            <day>mandag</day>
-            <day>tirsdag</day>
-            <day>onsdag</day>
-            <day>torsdag</day>
-            <day>fredag</day>
-            <day>lørdag</day>
+            <day>sunday</day>
+            <day>monday</day>
+            <day>tuesday</day>
+            <day>wednesday</day>
+            <day>thursday</day>
+            <day>friday</day>
+            <day>saturday</day>
          </dayNames>
          <dayNames abbr="1">
-            <day>sø</day>
-            <day>ma</day>
-            <day>ti</day>
-            <day>on</day>
-            <day>to</day>
+            <day>su</day>
+            <day>mo</day>
+            <day>tu</day>
+            <day>we</day>
+            <day>th</day>
             <day>fr</day>
-            <day>lø</day>
+            <day>sa</day>
          </dayNames>
          <meridiemNames>
             <meridiem>AM</meridiem>
@@ -387,8 +379,110 @@ var L_AssumedTradeInPrice = "estimated trade-in price:"
          <numberSymbol name="zero">0</numberSymbol>
       </numberSymbols>
       <currencySymbols>
+         <currencySymbol name="symbol">Â£</currencySymbol>
+         <currencySymbol name="isoname">GBP</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+   <locale name="no_NO" desc="Norsk, bokmål (Norge)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>mars</month>
+            <month>april</month>
+            <month>mai</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>desember</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan.</month>
+            <month>feb.</month>
+            <month>mars</month>
+            <month>apr.</month>
+            <month>mai.</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>aug.</month>
+            <month>sep.</month>
+            <month>okt.</month>
+            <month>nov.</month>
+            <month>des.</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>søn.</day>
+            <day>man.</day>
+            <day>tir.</day>
+            <day>ons.</day>
+            <day>tor.</day>
+            <day>fre.</day>
+            <day>lør.</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>f.Kr.</era>
+            <era>e.Kr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMMM YYYY</datePattern>
+         <datePattern name="med">D. MMM YYYY</datePattern>
+         <datePattern name="short">DD.MM.YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">'kl. 'HH.MM.SS Z</timePattern>
+         <timePattern name="long">HH.MM.SS Z</timePattern>
+         <timePattern name="med">HH.MM.SS</timePattern>
+         <timePattern name="short">HH.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9 %</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping"> </numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
          <currencySymbol name="symbol">kr</currencySymbol>
-         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="isoname">NOK</currencySymbol>
          <currencySymbol name="decimal">,</currencySymbol>
       </currencySymbols>
       <typefaces>

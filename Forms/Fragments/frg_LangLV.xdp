@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-01T10:44:19Z" uuid="064d0fd2-699c-4aa1-a818-4b0f39457dc5">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-13T06:52:52Z" uuid="30173981-75e5-4e3f-964f-7dba2fd45ae3">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -14,107 +14,12 @@
          <variables>
             <script contentType="application/x-javascript" name="LV">
 		
-				var L_AdditionalInfo = "Papildus informācija";
-var L_AdditionalLease = "Papilus maksājumi mēnesī **";
-var L_AdditionalLeaseVat = "Papilus maksājumi mēnesī **";
-var L_AdditionalWorkText = "Papildus darbi, kuri ir saskaņoti ar klientu";
-var L_AdditonalProduct = "** Papildus maksājumi:";
-var L_AmountToPay = "Jamaksā (LVL):";
-var L_ApprovedBy = "Apstiprinājis:";
-var L_ArrangementFee = "Līguma komisija";
-var L_ArrangementFeeVat = "Līguma komisija";
-var L_AssumedTradeInPrice = "Aptuvenā atpirkuma cena:";
-var L_Attention = "Kam:";
-var L_BankAccEUR = "Konts EUR:";
-var L_BankAccLVL = "Konts LVL:";
-var L_BankName = "Banka:";
-var L_CarColor = "Krāsa:";
-var L_CarDelivery = "Nodošanas laiks:";
-var L_CarEngine = "Dzinējs:";
-var L_CarFinishedDate = "Vienošanās:";
-var L_CarGearBox = "Ātrumkārba:";
-var L_CarLocation = "A/M atrašanās vieta stāvvietā:";
-var L_CarMileage = "Nobraukums:";
-var L_CarMileageCur = "Noskrējiens";
-var L_CarModelDesc = "Modeļa apraksts:";
-var L_CarModelInfo = "Bāzes cena:\t\t\t\t.";
-var L_CarModelYear = "Modeļa gads:\t\t\t\t.";
-var L_CarPickUp = "Atgriešanas laiks:";
-var L_CarPriceestimateTerms = "Piedāvājuma noteikumi .....";
-var L_CarRegDate = "Reģ. datums:";
-var L_CarRegNo = "Reģ. Nr.:";
-var L_CarRemarks = "Piezīmes";
-var L_CarSalesContract = "Līgums";
-var L_CarSalesPriceestimate = "Piedāvājums";
-var L_CarType = "a/m tips:";
-var L_CarVIN = "Šasijas Nr.:";
-var L_CheckList = "Pievērst uzmanību:";
-var L_Co2 = "Co2 izmeši gr/km:";
-var L_Code = "Kods";
-var L_ColorInfo = "Krāsa:\t\t\t\t\t.";
-var L_CompanyRegno = "Reģistrācijas Nr.:";
-var L_Confirmation = "Apstiprinājums";
-var L_ContactTxt = "Es piekrītu, ka mani personas dati (e-pasts, adrese, telefona Nr.) tiek izmantoti mērķiem, kas saistīti ar klientu ~apkalpošanu, aptauju veikšanai un man paredzētas informācijas nosūtīšanai.";
-var L_ContNextPage = "Turpinājums nākamajā lapā.";
-var L_ContractNo = "Līguma Nr.:";
-var L_ControlSignature = "Darbnīcas vadītāja paraksts";
-var L_Coverage = "Segums:";
-var L_CreditInvoice = "Kredītrēķins";
-var L_CreditNoRefInvoice = "Ref. Rēķina Nr.:";
-var L_CreditReason = "Kredītrēķina iemesls:";
-var L_CustomerAddress = "Saņemšanas adr.:";
-var L_CustomerCompanyRegNo = "Reģistrācijas Nr.:";
-var L_CustomerLedgerNo = "Klienta Nr.:";
-var L_CustomerLegalAddressTotal = "Juridiskā adr.: ";
-var L_CustomerName = "Klients:";
-var L_CustomerPhoneMobile = "Mob.:";
-var L_CustomerPhoneNo = "Telefons:";
-var L_CustomerPhonePrivat = "Privāts:";
-var L_CustomerPhoneWork = "Darba: ";
-var L_CustomerVatPayerNo = "PVN maksātāja Nr.:";
-var L_Date = "Datums";
-var L_DateReviewed = "Datums";
-var L_DealerCompanyRegno = "Reģistrācijas Nr.:";
-var L_DealerIssueAddressTotal = "Izsniegšanas adr.:";
-var L_DealerLegalAddressTotal = "Juridiskā adr.:";
-var L_DealerNameLegal = "Pārdevējs:";
-var L_DealerNameMarketing = "Pārdevējs:";
-var L_DealerVatPayerNo = "PVN maksātāja Nr.:";
-var L_DeltermsText1 = ".";
-var L_DeltermsText5 = "Piegādes vieta:";
-var L_DeltermsText7 = "Plānotā piegāde MM/GG:";
-var L_DifferenceAmount = "Atlikusī summa:";
-var L_Discount = "Atl.%";
-var L_DiscountPE = "Atl.%";
-var L_DocTypeCreditInvoice = "Kredītrēķins";
-var L_DocTypeInvoice = "Rēķins";
-var L_DocTypePrepayment = "Avansa pieprasījums";
-var L_DocTypePriceEstimate = "Piedāvājums";
-var L_DocTypeWorkOrder = "Darba uzdevums";
-var L_DueDate = "Samaksāt līdz:";
-var L_DueDate_KON = "Samaksātās:";
-var L_DueDate_KRE = "Samaksāt līdz:";
-var L_EconomicalTransType = "Saimnieciskā darījuma apraksts:";
-var L_EnvironmentalClass = "Vides klase:";
-var L_ExtensionsText = "Papildus izmaksas tiks iepriekš saskaņotas.";
-var L_Financing = "Finansējums";
-var L_ForeignSalesVat = "PVN 0% (LVL)";
-var L_FreightPriceTotal = "Piegādes izmaksas";
-var L_GreetingsText = "Ar cieņu,";
-var L_Hour = "h";
-var L_Insurance = "Apdrošināšāna";
-var L_InsuranceMileage = "Nobraukums gadā, km:";
-var L_Interior = "Interjērs:\t\t\t\t\t. ";
-var L_InvoiceNo = "Rēķina Nr.:";
-var L_InvoiceTitle_F = "Rēķins";
+				var L_InvoiceTitle_F = "Rēķins";
 var L_InvoiceTitle_I = "Iekšējais rēķins";
 var L_InvoiceTitle_K = "Kredītrēķins";
 var L_InvoiceTitle_N = "Iekšējais kredītrēķins";
 var L_InvoiceTitle_P = "Avansa rēķins";
 var L_InvoiceTitle_Q = "Avansa kredītrēķins";
-var L_InvoiceTitle_S = "Apvienotais rēķins";
-var L_InvoiceType = "Pas. tips";
-var L_LeaseMonth = "Maksājums mēnesī";
 var L_LeaseMonthVat = "Maksājums mēnesī";
 var L_LeaserFinancingCompany = "Finansējuma piedāvājums ir jaapstiprina finansētājam:";
 var L_LeaserFinancingCompany2 = "Jebkuri labojumi pirceja un finansētāja sakarā ir jaapraksta ....... Līguma punktā....";
@@ -124,8 +29,9 @@ var L_LeaseTotal = "Kopā mēnesī";
 var L_LeaseTotalVat = "Kopā mēnesī";
 var L_Leasing = "Nomnieks:";
 var L_LoanTradeInPrice = "Atpērkamā automašīna";
-var L_LocationSparepart = "Vieta";
-var L_LocationSparepartPrepicked = "Sagatavoto rezerves daļu atrašanās vieta";
+var L_InvoiceTitle_S = "Apvienotais rēķins";
+var L_InvoiceType = "Pas. tips";
+var L_LeaseMonth = "Maksājums mēnesī";
 var L_MechanicNo = "Mehāniķa Nr.";
 var L_MechanicSignature = "Mehāniķa paraksts";
 var L_Name = "Vārds";
@@ -133,7 +39,8 @@ var L_NationalOptionpriceTotal = "Vietējais papildaprīkojums";
 var L_NationalOptions = "Vietējais papildaprīkojums";
 var L_No = "Nr.";
 var L_Nox = "Nox izmeši mg/km:";
-var L_NumberOfPeriods = "Līzinga termiņš (Mēneši):";
+var L_LocationSparepart = "Vieta";
+var L_LocationSparepartPrepicked = "Sagatavoto rezerves daļu atrašanās vieta";
 var L_Of = "no";
 var L_OfferText = "Mūsu piedāvājums Jums:";
 var L_OnDelivery = "Pie nodošanas";
@@ -143,8 +50,9 @@ var L_OnDeliveryRentalAmount = "bez PVN";
 var L_OnDeliveryRentalAmountVat = "ar PVN";
 var L_OnDeliveryVatAmount = "PVN";
 var L_OptionDiscount = "Atlaide papildaprīkojumam";
-var L_OptionPriceTotal = "Ražotāja papildaprīkojums ";
+var L_OptionPriceTotal = "Ražotāja papildaprīkojums";
 var L_Options = "Papildaprīkojums";
+var L_NumberOfPeriods = "Līzinga termiņš (Mēneši):";
 var L_OrderNo = "Pas. Nr.:";
 var L_OurRef = "Piezīme:";
 var L_OwnerName = "Īpašnieks:";
@@ -186,10 +94,9 @@ var L_Quantity = "Skaits";
 var L_RebuildPriceTotal = "Pārbūves izmaksas";
 var L_ReBuilds = "Pārbūves specifikācija";
 var L_ReceivedText_D = "Esmu saņēmis visas rēķinā uzrādītās preces.";
-var L_ReceivedText_V = "Esmu saņēmis rēķinā uzrādītās preces un pakalpojumus, kā arī izmantotās rezerves daļas. ";
+var L_ReceivedText_V = "Esmu saņēmis rēķinā uzrādītās preces un pakalpojumus, kā arī izmantotās rezerves daļas.";
 var L_ReferenceNo = "Pasūtijums Nr.";
-var L_RegistrationDesc = "Reģistrācijas izdevumi.\t\t\t\t.";
-var L_RemainingValue = "Atlikusī vērtība:";
+var L_RegistrationDesc = "Reģistrācijas izdevumi.";
 var L_RemarkDate = "Datums";
 var L_RemarkPriority = "Prioaritāte";
 var L_RemarksText = "Esmu iepazīstināts ar piezīmēm.";
@@ -200,6 +107,7 @@ var L_RepeatedRepair = "Atkārtots remonts:";
 var L_RestPayTotal = "Jamaksā ar PVN (LVL)";
 var L_Reviewed = "Klients iepazīstināts:";
 var L_SalesRep = "Pārdevējs2";
+var L_RemainingValue = "Atlikusī vērtība:";
 var L_ServiceAdvisor = "Servisa konsultants,";
 var L_ServiceAdvisorColon = "Servisa konsultants:";
 var L_ServiceCharge = "Mēneša komisija";
@@ -216,7 +124,7 @@ var L_SumExtraOptions = "Papildaprīkojums kopā";
 var L_SVAPriceTotal = "Servisa līgums";
 var L_SwiftCode = "Kods:";
 var L_Task = "Uzdevums";
-var L_TaskId = "Uzdevums Nr. ";
+var L_TaskId = "Uzdevums Nr.";
 var L_TaskLetter = "U";
 var L_ThankYouTextConfirmation = "Cienijamais klient, Mēs esam gandarīti, ka izvēlējāties mūsu servisa pakalpojumus.";
 var L_ThankYouTextPriceestimate = "Pateicamies par izrādīto intresi par mūsu pakalpojumiem.";
@@ -244,9 +152,6 @@ var L_TransType_D = "Preču piegāde";
 var L_TransType_P = "Avanss";
 var L_TransType_V = "Pakalpojumu sniegšana";
 var L_Unit = "Merv";
-var L_Upgrade = "Akcija:";
-var L_UserName = "Lietotājs:";
-var L_VatAmount = "PVN (LVL)";
 var L_VatAmountColon = "PVN (LVL):";
 var L_VatBasis = "PVN bāze:";
 var L_VatContract = "PVN bāze";
@@ -254,30 +159,118 @@ var L_VatIncluded = "Visas cenas norādītas ar PVN";
 var L_VatPayerNo = "PVN maksātāja Nr.:";
 var L_VatText = "PVN Netiek aprēķināts";
 var L_VatZeroText = "PVN 0% (LVL)";
-var L_VehicleDiscount = "Atlaide automašīnai";
-var L_VehiclePrice = "Automašīnas cena";
-var L_VisitAddress = "Adrese:";
+var L_Upgrade = "Akcija:";
+var L_UserName = "Lietotājs:";
+var L_VatAmount = "PVN (LVL)";
 var L_VWMBFLoanEstablishFee = "Līguma komisija";
 var L_VWMBFPeriodLoanFee = "Mēneša komisija";
 var L_Work = "Darbs";
 var L_WorkOrder = "Darba uzdevums";
 var L_YesNo = "Jā        / Nē";
 var L_YourRef = "Piezīme:";
+var L_VehicleDiscount = "Atlaide automašīnai";
+var L_VehiclePrice = "Automašīnas cena";
+var L_VisitAddress = "Adrese:";
 var L_YourServiceAdvisor = "Jūsu servisa konsultants,";
+var L_AdditionalInfo = "Papildus informācija";
+var L_AdditionalLease = "Papilus maksājumi mēnesī **";
+var L_AdditionalLeaseVat = "Papilus maksājumi mēnesī **";
+var L_AdditionalWorkText = "Papildus darbi, kuri ir saskaņoti ar klientu";
+var L_AdditonalProduct = "** Papildus maksājumi:";
+var L_AmountToPay = "Jamaksā (LVL):";
+var L_ApprovedBy = "Apstiprinājis:";
+var L_ArrangementFee = "Līguma komisija";
+var L_ArrangementFeeVat = "Līguma komisija";
+var L_AssumedTradeInPrice = "Aptuvenā atpirkuma cena:";
+var L_Attention = "Kam:";
+var L_BankAccEUR = "Konts EUR:";
+var L_BankAccLVL = "Konts LVL:";
+var L_BankName = "Banka:";
+var L_CarColor = "Krāsa:";
+var L_CarDelivery = "Nodošanas laiks:";
+var L_CarEngine = "Dzinējs:";
+var L_CarFinishedDate = "Vienošanās:";
+var L_CarGearBox = "Ātrumkārba:";
+var L_CarLocation = "A/M atrašanās vieta stāvvietā:";
+var L_CarMileage = "Nobraukums:";
+var L_CarMileageCur = "Noskrējiens";
+var L_CarModelDesc = "Modeļa apraksts:";
+var L_CarModelInfo = "Bāzes cena:";
+var L_CarModelYear = "Modeļa gads:";
+var L_CarPickUp = "Atgriešanas laiks:";
+var L_CarPriceestimateTerms = "Piedāvājuma noteikumi .....";
+var L_CarRegDate = "Reģ. datums:";
+var L_CarRegNo = "Reģ. Nr.:";
+var L_CarRemarks = "Piezīmes";
+var L_CarSalesContract = "Līgums";
+var L_CarSalesPriceestimate = "Piedāvājums";
+var L_CarType = "a/m tips:";
+var L_CarVIN = "Šasijas Nr.:";
+var L_CheckList = "Pievērst uzmanību:";
+var L_Co2 = "Co2 izmeši gr/km:";
+var L_Code = "Kods";
+var L_ColorInfo = "Krāsa:";
+var L_CompanyRegno = "Reģistrācijas Nr.:";
+var L_Confirmation = "Apstiprinājums";
+var L_ContactTxt = "Es piekrītu, ka mani personas dati (e-pasts, adrese, telefona Nr.) tiek izmantoti mērķiem, kas saistīti ar klientu ~apkalpošanu, aptauju veikšanai un man paredzētas informācijas nosūtīšanai.";
+var L_ContNextPage = "Turpinājums nākamajā lapā.";
+var L_ContractNo = "Līguma Nr.:";
+var L_ControlSignature = "Darbnīcas vadītāja paraksts";
+var L_Coverage = "Segums:";
+var L_CreditInvoice = "Kredītrēķins";
+var L_CreditNoRefInvoice = "Ref. Rēķina Nr.:";
+var L_CreditReason = "Kredītrēķina iemesls:";
+var L_CustomerAddress = "Saņemšanas adr.:";
+var L_CustomerCompanyRegNo = "Reģistrācijas Nr.:";
+var L_CustomerLedgerNo = "Klienta Nr.:";
+var L_CustomerLegalAddressTotal = "Juridiskā adr.:";
+var L_CustomerName = "Klients:";
+var L_CustomerPhoneMobile = "Mob.:";
+var L_CustomerPhoneNo = "Telefons:";
+var L_CustomerPhonePrivat = "Privāts:";
+var L_CustomerPhoneWork = "Darba:";
+var L_CustomerVatPayerNo = "PVN maksātāja Nr.:";
+var L_Date = "Datums";
+var L_DateReviewed = "Datums";
+var L_DealerCompanyRegno = "Reģistrācijas Nr.:";
+var L_DealerIssueAddressTotal = "Izsniegšanas adr.:";
+var L_DealerLegalAddressTotal = "Juridiskā adr.:";
+var L_DealerNameLegal = "Pārdevējs:";
+var L_DealerNameMarketing = "Pārdevējs:";
+var L_DealerVatPayerNo = "PVN maksātāja Nr.:";
+var L_DeltermsText1 = ".";
+var L_DeltermsText5 = "Piegādes vieta:";
+var L_DeltermsText7 = "Plānotā piegāde MM/GG:";
+var L_DifferenceAmount = "Atlikusī summa:";
+var L_Discount = "Atl.%";
+var L_DiscountPE = "Atl.%";
+var L_DocTypeCreditInvoice = "Kredītrēķins";
+var L_DocTypeInvoice = "Rēķins";
+var L_DocTypePrepayment = "Avansa pieprasījums";
+var L_DocTypePriceEstimate = "Piedāvājums";
+var L_DocTypeWorkOrder = "Darba uzdevums";
+var L_DueDate = "Samaksāt līdz:";
+var L_DueDate_KON = "Samaksātās:";
+var L_DueDate_KRE = "Samaksāt līdz:";
+var L_EconomicalTransType = "Saimnieciskā darījuma apraksts:";
+var L_EnvironmentalClass = "Vides klase:";
+var L_ExtensionsText = "Papildus izmaksas tiks iepriekš saskaņotas.";
+var L_Financing = "Finansējums";
+var L_ForeignSalesVat = "PVN 0% (LVL)";
+var L_FreightPriceTotal = "Piegādes izmaksas";
+var L_GreetingsText = "Ar cieņu,";
+var L_Hour = "h";
+var L_Insurance = "Apdrošināšāna";
+var L_InsuranceMileage = "Nobraukums gadā, km:";
+var L_Interior = "Interjērs: ";
+var L_InvoiceNo = "Rēķina Nr.:";
 
 		
                
                
+			   
+			   
 
-               
-               
-               
-               
-
-               
-               
-               
-               
                <?templateDesigner isFragment yes?>
                <?templateDesigner fragmentTitle frg_LangLV?>
                <?templateDesigner fragmentDescription BA_X?></script>
@@ -289,7 +282,7 @@ var L_YourServiceAdvisor = "Jūsu servisa konsultants,";
    <?templateDesigner SavePDFWithLog 0?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 129?></template>
+   <?templateDesigner Zoom 110?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -319,14 +312,14 @@ var L_YourServiceAdvisor = "Jūsu servisa konsultants,";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-01T10:44:19Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-06-13T06:52:52Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:064d0fd2-699c-4aa1-a818-4b0f39457dc5</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:30173981-75e5-4e3f-964f-7dba2fd45ae3</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

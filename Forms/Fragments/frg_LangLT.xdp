@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-03-01T10:44:26Z" uuid="3aa85467-30ea-4792-82b7-68e270c11672">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-13T06:51:02Z" uuid="2c6d7f29-24ea-413d-8d30-29836b375c87">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -14,7 +14,95 @@
          <variables>
             <script contentType="application/x-javascript" name="LT">
 		
-				var L_AdditionalWorkText = "Papildomas darbas, kuris yra patvirtintas kliento ";
+				var L_InvoiceSeries = "Serija:";
+var L_InvoiceTitle_F = "PVM SĄSKAITA-FAKTŪRA";
+var L_InvoiceTitle_I = "Vidinė sąskaita-faktūra";
+var L_InvoiceTitle_K = "Kreditinė PVM sąskaita-faktūra";
+var L_InvoiceTitle_N = "Vidinė kreditinė sąskaita";
+var L_InvoiceTitle_P = "Išankstinio mokėjimo sąskaita";
+var L_InvoiceTitle_Q = "Išankstinio mokėjimo kreditinė sąskaita";
+var L_InvoiceType = "UT";
+var L_MechanicNo = "Mechaniko Nr.";
+var L_MechanicSignature = "Mechaniko parašas";
+var L_Name = "Pavardė";
+var L_No = "Nr.";
+var L_LocationSparepart = "Vieta";
+var L_LocationSparepartPrepicked = "Iš anksto pasirinktų atsarginių detalių vieta";
+var L_OfferText = "Mūsų pasiūlymas Jums yra:";
+var L_Of = "iš";
+var L_OurRef = "Pastaba:";
+var L_OwnerName = "Savininkas:";
+var L_Page = "Lapas";
+var L_PaymentTerms = "Mokėjimo sąlygos:";
+var L_PaymentTerms_Kon = "Grynieji pinigai";
+var L_PaymentTerms_Kre = "Pavedimu";
+var L_PlannedValuation = "Susitarta:";
+var L_PlannedVisit = "Apsilankymo data:";
+var L_PlannedWorks = "Planuojami darbai:";
+var L_PreControl = "Pirminę patikrą / bandomasis važiavimas:";
+var L_PrepaymentAmount = "Užsakovo avansas (LTL):";
+var L_Preview = "Peržiūra";
+var L_Price = "Kaina";
+var L_PriceEstimateNo = "Pasiūlymas Nr.:";
+var L_PriceTotal = "Iš viso suma";
+var L_PriceTotalColumn = "Suma be PVM";
+var L_PriceTotalSum = "Užsakymo suma be PVM (LTL):";
+var L_PriceTotalSum2 = "Kaina be PVM (LTL)";
+var L_PriceTotalSumPrepay = "Užsakovo avansas (LTL)";
+var L_PriceVatTotalSum = "Viso su PVM (LTL):";
+var L_PriceVatTotalToPay = "Mokėti su PVM (LTL)";
+var L_Product = "Gaminys";
+var L_Quantity = "Kiekis";
+var L_ReceiptNo = "Kvito Nr.";
+var L_ReceivedText_D = "Visas prekes ir paslaugas paminėtas s-f gavau.";
+var L_ReceivedText_V = "Visas prekes ir paslaugas paminėtas s-f gavau.";
+var L_ReferenceNo = "Praėjimo Nr.";
+var L_PriceVatTotalSumLocal = "Bendra užsakymo suma (LTL):";
+var L_RemarkPriority = "Pirmenybė";
+var L_RemarksText = "Patvirtinu, kad aš esu susipažinęs su komentarais.";
+var L_RemarkText = "Aprašymas";
+var L_Remember = "Papildomai:";
+var L_RepeatedRepair = "Pakartotinis remontas:";
+var L_RestPayTotal = "Mokėti su PVM (LTL)";
+var L_Reviewed = "Klientas informuotas:";
+var L_RemarkDate = "Data";
+var L_ServiceAdvisor = "Serviso konsultantas,";
+var L_ServiceAdvisorColon = "Serviso konsultantas:";
+var L_ServiceEUText = "Paslaugos nėra PVM objektas pagal LR PVM įst.13 str.";
+var L_Signature = "Parašas";
+var L_SignatureColon = "Parašas:";
+var L_SignHere = "Parašas";
+var L_SoldBy = "Pardavėjas:";
+var L_SparepartEU = "Prekių tiekimas į EU šalis PVM apmokestinamas 0% tarifu pagal LR PVM įst.49str.";
+var L_SpProducer = "SP gamintojo kodas";
+var L_SwiftCode = "SWIFT:";
+var L_Task = "Užduotis";
+var L_TaskId = "Užduotis Nr.";
+var L_TaskLetter = "U";
+var L_ThankYouTextConfirmation = "Brangus kliente, Dėkojame, kad kreipėtės į mūsų servisą dėl Jūsų automobilio aptarnavimo.";
+var L_ThankYouTextPriceestimate = "Dėkojame, kad kreipėtės į mūsų servisą dėl Jūsų automobilio aptarnavimo.";
+var L_ThroughputNo = "Praėjimo Nr.:";
+var L_TimeTotal = "Bendras laikas";
+var L_TPI = "Aktualus TPI:";
+var L_Unit = "Vnt";
+var L_VatAmountCash = "PVM Suma";
+var L_VatAmountColon = "PVM (LTL):";
+var L_VatIncluded = "Visos kainos su PVM";
+var L_VatPayerNo = "PVM mok. kodas:";
+var L_VatRateCash = "PVM Tarifas";
+var L_VatText = "PVM neįskaičiuotas - paslaugos nėra PVM objektas";
+var L_VatZeroText = "PVM 0% (LTL)";
+var L_Upgrade = "Akcija:";
+var L_UserName = "Vartotojas:";
+var L_VatAmount = "PVM (LTL)";
+var L_Work = "Darbai";
+var L_WorkOrder = "Darbo užsakymas";
+var L_YesNo = "Taip / Ne";
+var L_YourRef = "Pastaba:";
+var L_VisitAddress = "Adresas:";
+var L_YourServiceAdvisor = "Jūsų serviso konsultantas,";
+var L_ConfirmationLegalText = "Už paliktus automobilyje daiktus įmonė neatsako. Darbai atliekami tik pagal užsakovo užsakymą, remiantis įmonėje galiojančiomis taisyklėmis, koncerno - gamintojo patvirtintomis technologijomis bei standartu LST1438. Šalys susitarė, kad remonto imonė turi teisę užlaikyti a/m dirbtuvėse iki visiško apmokėjimo už atliktus darbus. Su numatoma darbų verte ir užsakymą reglamentuojančiomis sutarties sąlygomis susipažinau. Detalių ir darbų apmokėjimą garantuoju.";
+var L_AdditionalWorkText = "Papildomas darbas, kuris yra patvirtintas kliento";
 var L_AmountToPay = "Mokėti (LTL):";
 var L_Attention = "Kam:";
 var L_BankaccCurrEUR = "(EUR)";
@@ -22,7 +110,7 @@ var L_BankaccCurrLocal = "(LTL)";
 var L_BankAccEUR = "Banko sąskaita:";
 var L_BankAccLVL = "Banko sąskaita:";
 var L_BankName = "Bankas:";
-var L_CarColor = "Spalva:\t\t\t\t\t.";
+var L_CarColor = "Spalva:";
 var L_CarDelivery = "Atadvimo laikas:";
 var L_CarEngine = "Variklis:";
 var L_CarFinishedDate = "Susitarta:";
@@ -76,104 +164,13 @@ var L_ForeignSalesVat = "PVM 0% (LTL)";
 var L_GreetingsText = "Nuoširdžiausi linkėjimai,";
 var L_Hour = "h";
 var L_InvoiceNo = "Nr.:";
-var L_InvoiceSeries = "Serija:";
-var L_InvoiceTitle_F = "PVM SĄSKAITA-FAKTŪRA";
-var L_InvoiceTitle_I = "Vidinė sąskaita-faktūra";
-var L_InvoiceTitle_K = "Kreditinė PVM sąskaita-faktūra";
-var L_InvoiceTitle_N = "Vidinė kreditinė sąskaita";
-var L_InvoiceTitle_P = "Išankstinio mokėjimo sąskaita";
-var L_InvoiceTitle_Q = "Išankstinio mokėjimo kreditinė sąskaita";
-var L_InvoiceType = "UT ";
-var L_LocationSparepart = "Vieta  ";
-var L_LocationSparepartPrepicked = "Iš anksto pasirinktų atsarginių detalių vieta";
-var L_MechanicNo = "Mechaniko Nr.";
-var L_MechanicSignature = "Mechaniko parašas";
-var L_Name = "Pavardė";
-var L_No = "Nr.";
-var L_Of = "iš";
-var L_OfferText = "Mūsų pasiūlymas Jums yra:";
-var L_OurRef = "Pastaba:";
-var L_OwnerName = "Savininkas:";
-var L_Page = "Lapas";
-var L_PaymentTerms = "Mokėjimo sąlygos:";
-var L_PaymentTerms_Kon = "Grynieji pinigai";
-var L_PaymentTerms_Kre = "Pavedimu";
-var L_PlannedValuation = "Susitarta:";
-var L_PlannedVisit = "Apsilankymo data:";
-var L_PlannedWorks = "Planuojami darbai:";
-var L_PreControl = "Pirminę patikrą / bandomasis važiavimas:";
-var L_PrepaymentAmount = "Užsakovo avansas (LTL):";
-var L_Preview = "Peržiūra ";
-var L_Price = "Kaina";
-var L_PriceEstimateNo = "Pasiūlymas Nr.:";
-var L_PriceTotal = "Iš viso suma";
-var L_PriceTotalColumn = "Suma be PVM";
-var L_PriceTotalSum = "Užsakymo suma be PVM (LTL):";
-var L_PriceTotalSum2 = "Kaina be PVM (LTL)";
-var L_PriceTotalSumPrepay = "Užsakovo avansas (LTL)";
-var L_PriceVatTotalSum = "Viso su PVM (LTL):";
-var L_PriceVatTotalSumLocal = "Bendra užsakymo suma (LTL):";
-var L_PriceVatTotalToPay = "Mokėti su PVM (LTL)";
-var L_Product = "Gaminys";
-var L_Quantity = "Kiekis";
-var L_ReceiptNo = "Kvito Nr.";
-var L_ReceivedText_D = "Visas prekes ir paslaugas paminėtas s-f gavau.";
-var L_ReceivedText_V = "Visas prekes ir paslaugas paminėtas s-f gavau.";
-var L_ReferenceNo = "Praėjimo Nr.";
-var L_RemarkDate = "Data";
-var L_RemarkPriority = "Pirmenybė";
-var L_RemarksText = "Patvirtinu, kad aš esu susipažinęs su komentarais.";
-var L_RemarkText = "Aprašymas";
-var L_Remember = "Papildomai:";
-var L_RepeatedRepair = "Pakartotinis remontas:";
-var L_RestPayTotal = "Mokėti su PVM (LTL)";
-var L_Reviewed = "Klientas informuotas:";
-var L_ServiceAdvisor = "Serviso konsultantas,";
-var L_ServiceAdvisorColon = "Serviso konsultantas:";
-var L_ServiceEUText = "Paslaugos nėra PVM objektas pagal LR PVM įst.13 str.";
-var L_Signature = "Parašas";
-var L_SignatureColon = "Parašas:";
-var L_SignHere = "Parašas";
-var L_SoldBy = "Pardavėjas:";
-var L_SparepartEU = "Prekių tiekimas į EU šalis PVM apmokestinamas 0% tarifu pagal LR PVM įst.49str.";
-var L_SpProducer = "SP gamintojo kodas";
-var L_SwiftCode = "SWIFT:";
-var L_Task = "Užduotis";
-var L_TaskId = "Užduotis Nr. ";
-var L_TaskLetter = "U";
-var L_ThankYouTextConfirmation = "Brangus kliente, Dėkojame, kad kreipėtės į mūsų servisą dėl Jūsų automobilio aptarnavimo.";
-var L_ThankYouTextPriceestimate = "Dėkojame, kad kreipėtės į mūsų servisą dėl Jūsų automobilio aptarnavimo.";
-var L_ThroughputNo = "Praėjimo Nr.:";
-var L_TimeTotal = "Bendras laikas";
-var L_TPI = "Aktualus TPI:";
-var L_Unit = "Vnt";
-var L_Upgrade = "Akcija:";
-var L_UserName = "Vartotojas:";
-var L_VatAmount = "PVM (LTL)";
-var L_VatAmountCash = "PVM Suma";
-var L_VatAmountColon = "PVM (LTL):";
-var L_VatIncluded = "Visos kainos su PVM";
-var L_VatPayerNo = "PVM mok. kodas:";
-var L_VatRateCash = "PVM Tarifas";
-var L_VatText = "PVM neįskaičiuotas - paslaugos nėra PVM objektas ";
-var L_VatZeroText = "PVM 0% (LTL)";
-var L_VisitAddress = "Adresas:";
-var L_Work = "Darbai";
-var L_WorkOrder = "Darbo užsakymas";
-var L_YesNo = "Taip / Ne";
-var L_YourRef = "Pastaba:";
-var L_YourServiceAdvisor = "Jūsų serviso konsultantas,";
 
 		
                
                
-               
-               
+			   
+			   
 
-               
-               
-               
-               
                <?templateDesigner isFragment yes?>
                <?templateDesigner fragmentTitle frg_LangLT?>
                <?templateDesigner fragmentDescription BA_X?></script>
@@ -185,7 +182,7 @@ var L_YourServiceAdvisor = "Jūsų serviso konsultantas,";
    <?templateDesigner SavePDFWithLog 0?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 129?></template>
+   <?templateDesigner Zoom 110?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -215,14 +212,14 @@ var L_YourServiceAdvisor = "Jūsų serviso konsultantas,";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-03-01T10:44:26Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-06-13T06:51:02Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3aa85467-30ea-4792-82b7-68e270c11672</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:2c6d7f29-24ea-413d-8d30-29836b375c87</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -354,7 +351,7 @@ var L_YourServiceAdvisor = "Jūsų serviso konsultantas,";
          <monthNames>
             <month>januar</month>
             <month>februar</month>
-            <month>marts</month>
+            <month>mars</month>
             <month>april</month>
             <month>mai</month>
             <month>juni</month>
@@ -363,21 +360,21 @@ var L_YourServiceAdvisor = "Jūsų serviso konsultantas,";
             <month>september</month>
             <month>oktober</month>
             <month>november</month>
-            <month>december</month>
+            <month>desember</month>
          </monthNames>
          <monthNames abbr="1">
-            <month>jan</month>
-            <month>feb</month>
-            <month>mar</month>
-            <month>apr</month>
-            <month>mai</month>
-            <month>jun</month>
-            <month>jul</month>
-            <month>aug</month>
-            <month>sep</month>
-            <month>okt</month>
-            <month>nov</month>
-            <month>dec</month>
+            <month>jan.</month>
+            <month>feb.</month>
+            <month>mars</month>
+            <month>apr.</month>
+            <month>mai.</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>aug.</month>
+            <month>sep.</month>
+            <month>okt.</month>
+            <month>nov.</month>
+            <month>des.</month>
          </monthNames>
          <dayNames>
             <day>søndag</day>
@@ -389,51 +386,51 @@ var L_YourServiceAdvisor = "Jūsų serviso konsultantas,";
             <day>lørdag</day>
          </dayNames>
          <dayNames abbr="1">
-            <day>sø</day>
-            <day>ma</day>
-            <day>ti</day>
-            <day>on</day>
-            <day>to</day>
-            <day>fr</day>
-            <day>lø</day>
+            <day>søn.</day>
+            <day>man.</day>
+            <day>tir.</day>
+            <day>ons.</day>
+            <day>tor.</day>
+            <day>fre.</day>
+            <day>lør.</day>
          </dayNames>
          <meridiemNames>
             <meridiem>AM</meridiem>
             <meridiem>PM</meridiem>
          </meridiemNames>
          <eraNames>
-            <era>F.KR.</era>
-            <era>E.KR.</era>
+            <era>f.Kr.</era>
+            <era>e.Kr.</era>
          </eraNames>
       </calendarSymbols>
       <datePatterns>
-         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
-         <datePattern name="long">D. MMM YYYY</datePattern>
-         <datePattern name="med">DD/MM/YYYY</datePattern>
-         <datePattern name="short">DD/MM/YY</datePattern>
+         <datePattern name="full">EEEE D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMMM YYYY</datePattern>
+         <datePattern name="med">D. MMM YYYY</datePattern>
+         <datePattern name="short">DD.MM.YY</datePattern>
       </datePatterns>
       <timePatterns>
-         <timePattern name="full">H.MM.SS Z</timePattern>
-         <timePattern name="long">H.MM.SS Z</timePattern>
-         <timePattern name="med">H.MM.SS</timePattern>
-         <timePattern name="short">H.MM</timePattern>
+         <timePattern name="full">'kl. 'HH.MM.SS Z</timePattern>
+         <timePattern name="long">HH.MM.SS Z</timePattern>
+         <timePattern name="med">HH.MM.SS</timePattern>
+         <timePattern name="short">HH.MM</timePattern>
       </timePatterns>
-      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
       <numberPatterns>
          <numberPattern name="numeric">z,zz9.zzz</numberPattern>
          <numberPattern name="currency">$ z,zz9.99</numberPattern>
-         <numberPattern name="percent">z,zz9%</numberPattern>
+         <numberPattern name="percent">z,zz9 %</numberPattern>
       </numberPatterns>
       <numberSymbols>
          <numberSymbol name="decimal">,</numberSymbol>
-         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="grouping"> </numberSymbol>
          <numberSymbol name="percent">%</numberSymbol>
          <numberSymbol name="minus">-</numberSymbol>
          <numberSymbol name="zero">0</numberSymbol>
       </numberSymbols>
       <currencySymbols>
          <currencySymbol name="symbol">kr</currencySymbol>
-         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="isoname">NOK</currencySymbol>
          <currencySymbol name="decimal">,</currencySymbol>
       </currencySymbols>
       <typefaces>
