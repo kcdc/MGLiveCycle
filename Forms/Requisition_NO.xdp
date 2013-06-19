@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-05-23T06:44:31Z" uuid="4d8e329b-575a-4fd9-8ad2-227a1ffc7f77">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="Requisition" layout="tb" locale="sv_SE" restoreState="auto">
+      <pageSet>
+         <pageArea name="mpgPage1" id="Page1">
+            <subform x="9mm" w="192mm" h="179.339mm" name="subHeader">
+               <bind match="none"/>
+               <subform x="1mm" y="8mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
+                  <bind/>
+                  <?templateDesigner expand 0?>
+               </subform>
+               <field name="fldDocTitle" y="20mm" h="5mm" minW="91mm" access="readOnly" x="1mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="14pt" weight="bold"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.Document.DocumentHeader.DocTitle"/>
+               </field>
+               <field name="fldTypeText" y="25mm" h="5mm" minW="91mm" access="readOnly" x="1mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Arial" baselineShift="0pt" size="12pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt" vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">//var LangCode = getLanguages.getLanguageSetting();
+
+//var output = getLanguages.getLanguageText(LangCode, this.name);
+
+//this.rawValue = output;
+
+//this.presence = "hidden";
+</script>
+                  </event>
+                  <bind match="dataRef" ref="$.Document.DocumentHeader.TypeText"/>
+               </field>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="103mm" y="22mm">
+                  <?templateDesigner expand 0?>
+                  <bind/>
+               </subform>
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
+                  <?templateDesigner expand 0?>
+                  <bind/>
+               </subform>
+               <subform usehref=".\Fragments\frg_IdDonebyDateSalemanInformation.xdp#som($template.form1.subIdDonebyDateSalemanInformation)" x="0in" y="31mm">
+                  <?templateDesigner expand 0?>
+                  <bind match="dataRef" ref="$.Document.DocumentHeader"/>
+               </subform>
+               <draw name="Rectangle1" y="31mm" w="192mm" h="8mm">
+                  <value>
+                     <rectangle>
+                        <edge thickness="0.1mm"/>
+                        <corner radius="5.08mm" thickness="0.1mm"/>
+                     </rectangle>
+                  </value>
+               </draw>
+               <?templateDesigner expand 1?></subform>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="160mm" y="5mm">
+               <?templateDesigner expand 0?>
+            </subform>
+            <contentArea x="9mm" w="192mm" h="228mm" name="areaPage1" id="areaPage1_ID" y="40mm"/>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <occur min="1"/>
+            <subform x="2mm" y="105mm" usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)">
+               <bind/>
+               <?templateDesigner expand 0?>
+            </subform>
+            <subform usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)" x="9mm" y="270mm" w="192mm">
+               <margin/>
+               <?templateDesigner expand 0?>
+               <bind/>
+            </subform>
+            <?templateDesigner expand 1?></pageArea>
+         <pageArea name="mpgPage2" id="Page1_ID">
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <subform w="197mm" name="subDocumentHeader" x="9mm" h="17.7mm">
+               <subform w="200.025mm" h="50mm" name="subRichTextEnvelope" presence="hidden">
+                  <bind match="none"/>
+                  <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border>
+                              <?templateDesigner StyleID aped3?>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Envelope</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
+&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
+&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
+&gt;ccc&lt;/p&#xD;
+&gt;&lt;/body&#xD;
+&gt;&lt;/exData&#xD;
+&gt;</text>
+                     </value>
+                     <traversal>
+                        <traverse ref="txtTextArea2[0]"/>
+                     </traversal>
+                     <bind match="none"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="77mm" y="5mm">
+                  <?templateDesigner expand 1?>
+               </subform>
+               <bind match="none"/>
+            </subform>
+            <contentArea x="9mm" y="19mm" w="197mm" h="274mm" name="areaPage2" id="areaPage2_ID"/>
+            <field name="verticalLabel" access="readOnly" h="4mm" w="49mm" x="4mm" y="155mm" rotate="90">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="none"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel.verticalTextLabel").rawValue;
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="8pt"/>
+               <border>
+                  <edge thickness="0.1mm" presence="hidden"/>
+                  <corner thickness="0.1mm" presence="hidden"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>NameOfDocType_ServerDate</text>
+               </value>
+            </field>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="192mm" name="pageContent" layout="tb">
+         <bind match="none"/>
+         <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
+            <bind/>
+            <?templateDesigner expand 0?>
+         </subform>
+         <subform usehref=".\Fragments\frg_CarInfo.xdp#som($template.form1.subHeaderInfo)">
+            <?templateDesigner expand 0?>
+         </subform>
+         <subform w="192mm" name="subDefectHeadingMargin" id="subDefectHeadingMargin_ID">
+            <bind match="none"/>
+            <subform name="subDefectHeading" id="subDefectHeading_ID" h="4mm">
+               <bind match="none"/>
+               <field name="fldLabelDefectId" w="8.999mm" h="4mm" access="readOnly" y="0mm" x="0.001mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Id</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//var LangCode = getLanguages.getLanguageSetting();
+
+//var output = getLanguages.getLanguageText(LangCode, this.name);
+
+//this.caption.value.text = output;
+</script>
+                  </event>
+               </field>
+               <field name="fldLabelDefectGrade" w="8mm" h="4mm" access="readOnly" y="0mm" x="10mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Bed.</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//var LangCode = getLanguages.getLanguageSetting();
+
+//var output = getLanguages.getLanguageText(LangCode, this.name);
+
+//this.caption.value.text = output;
+</script>
+                  </event>
+               </field>
+               <field name="fldLabelDefectDescription" w="68mm" h="4mm" access="readOnly" y="0mm" x="18mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Beskrivelse takst</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+               </field>
+               <field name="fldLabelDefectComment" w="28mm" h="4mm" access="readOnly" y="0mm" x="103mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Kommentar</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//var LangCode = getLanguages.getLanguageSetting();
+
+//var output = getLanguages.getLanguageText(LangCode, this.name);
+
+//this.caption.value.text = output;
+</script>
+                  </event>
+               </field>
+               <field name="fldLabelDefectPrice" w="40mm" h="4mm" access="readOnly" y="0mm" x="152mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0mm" placement="right">
+                     <font size="8.5pt" typeface="Arial" weight="bold"/>
+                     <value>
+                        <text>Estimert rep. pris</text>
+                     </value>
+                     <para vAlign="bottom" hAlign="right"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//var LangCode = getLanguages.getLanguageSetting();
+
+//var output = getLanguages.getLanguageText(LangCode, this.name);
+
+//this.caption.value.text = output;
+</script>
+                  </event>
+                  <para hAlign="right"/>
+               </field>
+               <border>
+                  <edge presence="hidden"/>
+                  <corner presence="hidden" thickness="0.176mm"/>
+                  <corner presence="hidden" thickness="0.176mm"/>
+                  <corner thickness="0.1mm"/>
+                  <corner presence="hidden" thickness="0.176mm"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+               </border>
+               <margin bottomInset="0mm"/>
+               <?templateDesigner expand 0?></subform>
+            <margin bottomInset="1.5mm" topInset="1.5mm"/>
+            <?templateDesigner expand 1?></subform>
+         <subform y="40mm" w="191.998mm" minH="3.6mm" layout="tb" name="subRepeatDefectRow">
+            <bind match="none"/>
+            <subform name="subDefectRow" layout="lr-tb">
+               <bind match="none"/>
+               <occur min="0" max="-1"/>
+               <field name="fldDefectId" access="readOnly" w="9.999mm" h="3.6mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.Defects.Defect[*].DefectId"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <para vAlign="middle"/>
+                  <keep intact="contentArea"/>
+               </field>
+               <field name="fldDefectGrade" access="readOnly" w="8mm" h="3.6mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.Defects.Defect[*].DefectGrade"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <para vAlign="middle"/>
+                  <?templateDesigner expand 1?>
+                  <keep intact="contentArea"/>
+               </field>
+               <field name="fldDefectDescription" access="readOnly" w="85mm" h="3.6mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.Defects.Defect[*].DefectDescription"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <para vAlign="middle"/>
+                  <?templateDesigner expand 1?>
+                  <keep intact="contentArea"/>
+               </field>
+               <field name="fldDefectComment" access="readOnly" w="70mm" h="3.6mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.Defects.Defect[*].DefectComment"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <para vAlign="middle"/>
+                  <?templateDesigner expand 1?>
+                  <keep intact="contentArea"/>
+               </field>
+               <field name="fldDefectPrice" access="readOnly" w="18.999mm" h="3.6mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.Defects.Defect[*].DefectPrice"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle" hAlign="right"/>
+                  </caption>
+                  <para hAlign="right" vAlign="middle"/>
+                  <?templateDesigner expand 1?>
+                  <keep intact="contentArea"/>
+               </field>
+               <overflow leader="subDefectHeading" target="mpgPage1"/>
+               <?templateDesigner expand 1?></subform>
+            <overflow target="mpgPage1" leader="subDefectHeadingMargin"/>
+            <?templateDesigner expand 1?></subform>
+         <subform name="subImages">
+            <bind match="none"/>
+            <subform w="82.55mm" minH="69.354mm" layout="tb" name="subImage" x="0.001mm">
+               <bind match="none"/>
+               <keep intact="contentArea"/>
+               <field name="imgfCar" w="82.55mm" h="69.354mm">
+                  <ui>
+                     <imageEdit data="embed"/>
+                  </ui>
+                  <bind match="dataRef" ref="$.Document.Images.Image"/>
+                  <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                  <value>
+                     <image contentType="application/octet-stream"/>
+                  </value>
+                  <desc>
+                     <text name="embeddedHref">Unknown Embedded URI</text>
+                  </desc>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.access = "protected";
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <margin topInset="10mm" leftInset="18mm" bottomInset="6mm"/>
+            <occur min="0" max="-1"/>
+            <overflow trailer="overflowTrailer"/>
+            <?templateDesigner expand 1?></subform>
+         <subform w="192mm" name="subComments" layout="tb">
+            <bind match="dataRef" ref="$.Document.Comments"/>
+            <occur min="0" max="-1"/>
+            <field name="fldComment" access="readOnly" w="191.999mm" minH="3.901mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <bind match="dataRef" ref="$.Comment"/>
+               <para vAlign="middle"/>
+            </field>
+            <margin topInset="0mm"/>
+            <overflow target="mpgPage1" trailer="overflowTrailer"/>
+            <?templateDesigner expand 1?></subform>
+         <breakAfter/>
+         <overflow trailer="overflowTrailer" target="mpgPage1"/>
+         <?templateDesigner expand 1?></subform>
+      <variables>
+         <script usehref=".\Fragments\frg_LangNO.xdp#som($template.form1.#subform.#variables.NO)"/>
+         <script usehref=".\Fragments\frg_ScriptGetLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
+         <?templateDesigner expand 1?></variables>
+      <proto>
+         <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
+            <bind/>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></proto>
+      <desc>
+         <text name="version">10.0.2.20120224.1.869952.867557</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 120 30 0003001200260027002F003100320033003500360037004200440045004600480049004A005000510052005300550056005700580059005C005E0060 /CDLNOPRST_abcefgmnoprstuvy{}?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 168 44 0003001100120014001D00240025002700280029002A002C002E003000330035003600370038003900440046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ./1:ABDEFGIKMPRSTUVacdefgijklmnoprstuvyÅø?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe B - Takst\Rekvisisjon\Oppdatert\2_sider_030_Requisition_S001IT01_20130503_093524_D_B001ALL_image.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner Zoom 113?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines v:225000;v:5025000;h:25000?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="sv_SE" desc="Svenska (Sverige)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januari</month>
+            <month>februari</month>
+            <month>mars</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>augusti</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>söndag</day>
+            <day>måndag</day>
+            <day>tisdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lördag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sö</day>
+            <day>må</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lö</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>fm</meridiem>
+            <meridiem>em</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>f.Kr.</era>
+            <era>e.Kr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, YYYY MMMM DD</datePattern>
+         <datePattern name="long">YYYY MMMM D</datePattern>
+         <datePattern name="med">YYYY MMM D</datePattern>
+         <datePattern name="short">YYYY-MM-DD</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">'kl. 'HH.MM.SS Z</timePattern>
+         <timePattern name="long">HH.MM.SS Z</timePattern>
+         <timePattern name="med">HH.MM.SS</timePattern>
+         <timePattern name="short">HH.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $</numberPattern>
+         <numberPattern name="percent">z,zz9 %</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping"> </numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">SEK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-05-23T06:44:31Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:4d8e329b-575a-4fd9-8ad2-227a1ffc7f77</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>10.0.2.20120224.1.869952.867557</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="Requisition">
+      <uri>..\Requisition\Requisition.xsd</uri>
+      <rootElement>Requisition</rootElement>
+      <?templateDesigner fileDigest shaHash="MK/3SKuKsHsAChGuy/ZX1gz2IX4="?></xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="Requisition">
+      <Requisition>
+         <Header>
+            <MediaControl>
+               <OutputTargets>
+                  <Print>
+                     <PrinterName/>
+                  </Print>
+                  <File>
+                     <FileName/>
+                  </File>
+                  <Preview>
+                     <ClientAddress/>
+                     <PrintId/>
+                  </Preview>
+                  <Archive dd:dataNode="dataGroup"/>
+                  <Mail>
+                     <MailTo/>
+                     <MailFrom/>
+                     <MailCC/>
+                     <MailSubject/>
+                     <MailBody/>
+                  </Mail>
+               </OutputTargets>
+            </MediaControl>
+            <DocType/>
+            <Country/>
+            <LangCode/>
+            <DocHeaderImpcode/>
+            <DocHeaderProdType/>
+            <DocHeaderBrand/>
+            <PreviewCode/>
+            <Copies/>
+            <TwoSided/>
+            <LogoImage/>
+         </Header>
+         <Document>
+            <DocumentHeader>
+               <DealerNameMarketing/>
+               <DocTitle/>
+               <TypeText/>
+               <ValuationNo/>
+               <PerformedBy/>
+               <DateCreated/>
+               <SellerName/>
+               <FooterA1/>
+               <FooterA2/>
+               <FooterA3/>
+               <FooterA4/>
+               <FooterA5/>
+               <FooterA6/>
+               <FooterB1/>
+               <FooterB2/>
+               <FooterB3/>
+               <FooterB4/>
+               <FooterB5/>
+               <FooterB6/>
+               <FooterC1/>
+               <FooterC2/>
+               <FooterC3/>
+               <FooterC4/>
+               <FooterC5/>
+               <FooterC6/>
+               <FooterD1/>
+               <FooterD2/>
+               <FooterD3/>
+               <FooterD4/>
+               <FooterD5/>
+               <FooterD6/>
+               <TestLabel/>
+            </DocumentHeader>
+            <HeaderInfo>
+               <CarBrand/>
+               <CarModel/>
+               <CarModelYear/>
+               <CarMileage/>
+               <FuelTypeText/>
+               <Color/>
+               <CarRegNo/>
+               <EngineVolume/>
+               <EngineEffect/>
+               <CarVIN/>
+               <CarBody/>
+               <CarRegDate/>
+               <CarRegDateLast/>
+               <Seats/>
+               <CarGroupText/>
+               <CarWeight/>
+               <GearType/>
+               <CarMileageAtDelivery/>
+               <TimingBeltDate/>
+               <TimingBeltMileage/>
+               <DateOfLastService/>
+               <CustomerName/>
+               <Imported/>
+               <CarModelDesc/>
+               <DateOfLastControl/>
+               <DateOfNextControl/>
+               <NextServiceMileage/>
+            </HeaderInfo>
+            <Defects>
+               <Defect dd:maxOccur="30">
+                  <DefectId/>
+                  <DefectGrade/>
+                  <DefectDescription/>
+                  <DefectComment/>
+                  <DefectPrice/>
+               </Defect>
+            </Defects>
+            <Images>
+               <Image/>
+            </Images>
+            <Comments>
+               <Comment/>
+            </Comments>
+         </Document>
+      </Requisition>
+   </dd:dataDescription>
+</xfa:datasets>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="XFASchemaXSD">
+   <xs:element name="Requisition">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="Header">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="MediaControl">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="OutputTargets">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="Print">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="PrinterName" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="File">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="FileName" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Preview">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="ClientAddress" type="xs:string"/>
+                                                <xs:element name="PrintId" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Archive">
+                                          <xs:complexType>
+                                             <xs:sequence/>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Mail">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="MailTo" type="xs:string"/>
+                                                <xs:element name="MailFrom" type="xs:string"/>
+                                                <xs:element name="MailCC" type="xs:string"/>
+                                                <xs:element name="MailSubject" type="xs:string"/>
+                                                <xs:element name="MailBody" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="DocType" type="xs:string"/>
+                     <xs:element name="Country" type="xs:string"/>
+                     <xs:element name="LangCode" type="xs:string"/>
+                     <xs:element name="DocHeaderImpcode" type="xs:string"/>
+                     <xs:element name="DocHeaderProdType" type="xs:string"/>
+                     <xs:element name="DocHeaderBrand" type="xs:string"/>
+                     <xs:element name="PreviewCode" type="xs:string"/>
+                     <xs:element name="Copies" type="xs:string"/>
+                     <xs:element name="TwoSided" type="xs:string"/>
+                     <xs:element name="LogoImage" type="xs:string"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="Document">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="DocumentHeader">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="DealerNameMarketing" type="xs:string"/>
+                              <xs:element name="DocTitle" type="xs:string"/>
+                              <xs:element name="TypeText" type="xs:string"/>
+                              <xs:element name="ValuationNo" type="xs:string"/>
+                              <xs:element name="PerformedBy" type="xs:string"/>
+                              <xs:element name="DateCreated" type="xs:string"/>
+                              <xs:element name="SellerName" type="xs:string"/>
+                              <xs:element name="FooterA1" type="xs:string"/>
+                              <xs:element name="FooterA2" type="xs:string"/>
+                              <xs:element name="FooterA3" type="xs:string"/>
+                              <xs:element name="FooterA4" type="xs:string"/>
+                              <xs:element name="FooterA5" type="xs:string"/>
+                              <xs:element name="FooterA6" type="xs:string"/>
+                              <xs:element name="FooterB1" type="xs:string"/>
+                              <xs:element name="FooterB2" type="xs:string"/>
+                              <xs:element name="FooterB3" type="xs:string"/>
+                              <xs:element name="FooterB4" type="xs:string"/>
+                              <xs:element name="FooterB5" type="xs:string"/>
+                              <xs:element name="FooterB6" type="xs:string"/>
+                              <xs:element name="FooterC1" type="xs:string"/>
+                              <xs:element name="FooterC2" type="xs:string"/>
+                              <xs:element name="FooterC3" type="xs:string"/>
+                              <xs:element name="FooterC4" type="xs:string"/>
+                              <xs:element name="FooterC5" type="xs:string"/>
+                              <xs:element name="FooterC6" type="xs:string"/>
+                              <xs:element name="FooterD1" type="xs:string"/>
+                              <xs:element name="FooterD2" type="xs:string"/>
+                              <xs:element name="FooterD3" type="xs:string"/>
+                              <xs:element name="FooterD4" type="xs:string"/>
+                              <xs:element name="FooterD5" type="xs:string"/>
+                              <xs:element name="FooterD6" type="xs:string"/>
+                              <xs:element name="TestLabel" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="HeaderInfo">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="CarBrand" type="xs:string"/>
+                              <xs:element name="CarModel" type="xs:string"/>
+                              <xs:element name="CarModelYear" type="xs:string"/>
+                              <xs:element name="CarMileage" type="xs:string"/>
+                              <xs:element name="FuelTypeText" type="xs:string"/>
+                              <xs:element name="Color" type="xs:string"/>
+                              <xs:element name="CarRegNo" type="xs:string"/>
+                              <xs:element name="EngineVolume" type="xs:string"/>
+                              <xs:element name="EngineEffect" type="xs:string"/>
+                              <xs:element name="CarVIN" type="xs:string"/>
+                              <xs:element name="CarBody" type="xs:string"/>
+                              <xs:element name="CarRegDate" type="xs:string"/>
+                              <xs:element name="CarRegDateLast" type="xs:string"/>
+                              <xs:element name="Seats" type="xs:string"/>
+                              <xs:element name="CarGroupText" type="xs:string"/>
+                              <xs:element name="CarWeight" type="xs:string"/>
+                              <xs:element name="GearType" type="xs:string"/>
+                              <xs:element name="CarMileageAtDelivery" type="xs:string"/>
+                              <xs:element name="TimingBeltDate" type="xs:string"/>
+                              <xs:element name="TimingBeltMileage" type="xs:string"/>
+                              <xs:element name="DateOfLastService" type="xs:string"/>
+                              <xs:element name="CustomerName" type="xs:string"/>
+                              <xs:element name="Imported" type="xs:string"/>
+                              <xs:element name="CarModelDesc" type="xs:string"/>
+                              <xs:element name="DateOfLastControl" type="xs:string"/>
+                              <xs:element name="DateOfNextControl" type="xs:string"/>
+                              <xs:element name="NextServiceMileage" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="Defects">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element maxOccurs="30" name="Defect">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="DefectId" type="xs:string"/>
+                                       <xs:element name="DefectGrade" type="xs:string"/>
+                                       <xs:element name="DefectDescription" type="xs:string"/>
+                                       <xs:element name="DefectComment" type="xs:string"/>
+                                       <xs:element name="DefectPrice" type="xs:string"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="Images">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="Image" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="Comments">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="Comment" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema></xdp:xdp>

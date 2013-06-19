@@ -1,0 +1,2832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-29T13:59:43Z" uuid="7f291af8-4c78-44a3-a3cd-46391a6c09e4">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="AcceptanceCheck" layout="tb" locale="da_DK" restoreState="auto">
+      <pageSet>
+         <pageArea name="mpgPage1" id="Page1">
+            <subform name="subTitleHolder" h="19.152mm" x="13mm" y="12mm">
+               <bind match="none"/>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="79.375mm" y="6.35mm">
+                  <bind/>
+                  <?templateDesigner expand 1?></subform>
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
+                  <bind/>
+                  <?templateDesigner expand 1?></subform>
+               <field name="fldDocTitle" y="7mm" h="8mm" minW="91mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="14pt" weight="bold"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.Document.DocumentHeader.DocTitle"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform x="13mm" y="6mm" minH="36.575mm" name="subHeader" layout="tb">
+               <bind match="none"/>
+               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
+                  <bind/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <subform usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)" w="192mm" x="12.7mm" y="247.65mm">
+               <margin/>
+               <?templateDesigner expand 0?>
+               <bind/>
+            </subform>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="173mm" y="6mm">
+               <?templateDesigner expand 0?>
+            </subform>
+            <contentArea x="13mm" w="192mm" h="207.65mm" name="areaPage1" y="40mm">
+               <?templateDesigner expand 1?></contentArea>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <subform usehref=".\Fragments\frg_IdDonebyDateSalemanInformation.xdp#som($template.form1.subIdDonebyDateSalemanInformation)" x="13mm" y="31mm">
+               <bind match="dataRef" ref="$.Document.DocumentHeader"/>
+               <border>
+                  <corner presence="visible" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="visible" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="visible" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="visible" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="visible" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="visible" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="visible" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="visible" stroke="solid" thickness="0.1mm"/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="3mm" y="105mm">
+               <field access="protected" h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></pageArea>
+         <pageArea name="mpgPage2" id="Page1_ID">
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <subform w="196.96mm" name="subHeader" x="13mm" h="28mm">
+               <subform w="200.025mm" h="50mm" name="subRichTextEnvelope" presence="hidden" x="0.052mm">
+                  <bind match="none"/>
+                  <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border>
+                              <?templateDesigner StyleID aped3?>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Envelope</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
+&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
+&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
+&gt;ccc&lt;/p&#xD;
+&gt;&lt;/body&#xD;
+&gt;&lt;/exData&#xD;
+&gt;</text>
+                     </value>
+                     <traversal>
+                        <traverse ref="txtTextArea2[0]"/>
+                     </traversal>
+                     <bind match="none"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="77.052mm" y="5mm">
+                  <bind/>
+                  <?templateDesigner expand 1?></subform>
+               <bind match="none"/>
+               <field name="fldDocTitle" access="readOnly" h="6.35mm" w="75mm" x="1mm" y="16mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="14pt" weight="bold"/>
+                  <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.DocumentHeader.DocTitle"/>
+                  <caption reserve="0in">
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <para vAlign="bottom"/>
+               </field>
+               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="1mm" y="2mm">
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <contentArea x="13mm" y="24mm" w="192mm" h="229mm" name="areaPage2" id="areaPage2_ID"/>
+            <field name="verticalLabel" access="readOnly" h="4mm" w="49mm" y="154mm" rotate="90" x="3mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <bind match="none"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = xfa.resolveNode("ValuationReport.#pageSet.mpgPage1.verticalLabel.verticalTextLabel").rawValue;
+
+
+
+
+</script>
+               </event>
+               <font typeface="Arial" size="8pt"/>
+               <border>
+                  <edge thickness="0.1mm" presence="hidden"/>
+                  <corner thickness="0.1mm" presence="hidden"/>
+               </border>
+               <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+               <para vAlign="middle"/>
+               <value>
+                  <text>NameOfDocType_ServerDate</text>
+               </value>
+            </field>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="173mm" y="1mm">
+               <bind/>
+               <field h="20mm" hAlign="right" name="skodaLogo" w="18mm" x="14.04mm" y="2.081mm"/>
+               <field h="15mm" hAlign="right" name="vwLogo" w="15mm" x="15.7mm" y="5.056mm"/>
+               <field h="16mm" hAlign="right" name="audiLogo" w="29mm" x="1.561mm" y="3.16mm"/>
+               <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="9.56mm" y="0.402mm"/>
+               <field presence="hidden" h="17mm" hAlign="right" name="imgLogo" w="30mm" x="0in" y="0in"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform name="pageContent" layout="tb">
+         <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
+            <?templateDesigner expand 1?></subform>
+         <subform usehref=".\Fragments\frg_CarInfo.xdp#som($template.form1.subHeaderInfo)">
+            <bind ref="$record.Document.HeaderInfo" match="dataRef"/>
+            <margin bottomInset="3mm"/>
+            <?templateDesigner expand 0?>
+         </subform>
+         <subform name="subControlOuterBorder" w="192mm" layout="tb">
+            <bind match="none"/>
+            <margin topInset="0mm"/>
+            <border>
+               <edge thickness="0.1mm"/>
+               <corner thickness="0.1mm"/>
+            </border>
+            <subform name="subHeaderRow" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb" anchorType="middleCenter" x="1.476375in" y="0.125in">
+                  <bind match="none"/>
+                  <field name="fldKontrollPunkt" access="readOnly" h="6.35mm" hAlign="center" minW="18.533mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="18.3748mm">
+                        <value>
+                           <text>Kontrollpunkt</text>
+                        </value>
+                        <para vAlign="bottom" hAlign="center"/>
+                     </caption>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <keep intact="contentArea"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" w="106mm" layout="tb" anchorType="bottomLeft" x="2.95275in" y="0.25in">
+                  <bind match="none"/>
+                  <field name="fldMerknad" access="readOnly" h="6.35mm" anchorType="middleCenter" hAlign="center" w="20mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Merknad</text>
+                        </value>
+                        <para vAlign="bottom" hAlign="center"/>
+                     </caption>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <keep intact="contentArea"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" h="6.35mm">
+                  <bind match="none"/>
+                  <field name="fldOK" minW="5.8mm" access="readOnly" h="4mm" x="3mm" y="2.1mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>OK</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subExternalInternalRow" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollPunktExternalInternal" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Kontrollert mot takst (utvendig/innvendig)</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <keep intact="contentArea"/>
+                  <?templateDesigner expand 0?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldControlledExternalInternal" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.DamageAfterValuation"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkControlledExternalInternal" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.DamageAfterValuationCheck"/>
+                     <?templateDesigner expand 1?></field>
+                  <?templateDesigner expand 0?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subMileageReadingRow" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollPunktMileageReading" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Lest av km stand</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldControlledMileageReading" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.MileageComment"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkControlledMileageReading" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.MileageCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subTyresRow" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollPunktTyres" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Hjulsett kontrollert</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldTyres" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.Tyres"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkTyres" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.TyresCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subToolsTriangleRow" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollPunktToolsTriangle" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Verktøy, varseltrekant og tilhørende utstyr i bil</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldToolsTriangle" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.ToolsAndTriangle"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkToolsTriangle" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.ToolsAndTriangleCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subKeys" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollPunktKeys" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Alle nøkler til bil</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKeys" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.KeysComment"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkKeys" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.KeysCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subServiceHandbook" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollPunktServiceHandbook" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Vognmappe med servicehefte etc.</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldServiceHandbook" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.ServiceHandbookComment"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkServiceHandbook" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.ServiceHandbookCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subRegistrationBook" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollPunktRegistrationBook" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Vognkort del 1 og 2, underskrevet salgsmelding</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldRegistrationBook" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.RegistrationBook"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkRegistrationBook" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.RegistrationBookCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subPKK" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollPKK" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>PKK Skjema</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldPKK" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.VehicleControl"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkPKK" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.VehicleControlCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subEncumbrancePrint" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollEncumbrancePrint" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Utskrift av evt. heftelser fra Brønnøysund</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldEncumbrancePrint" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.EncumbrancePrint"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkEncumbrancePrint" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.EncumbrancePrintCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subStereoCodes" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollStereoCodes" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Kodekort radio og alarm</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldStereoCodes" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.StereoCodes"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkStereoCodes" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.StereoCodesCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subRemovableTowbar" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollRemovableTowbar" access="readOnly" w="75mm" minH="9.7mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Tilhengerfestekule med tilbehør hvis løs, Adapter til kontakt</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldRemovableTowbar" minW="106mm" access="readOnly" h="9.7mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.RemovableTowbar"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 0?>
+                  <keep intact="contentArea"/>
+               </subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkRemovableTowbar" w="4mm" h="9.7mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.RemovableTowbarCheck"/>
+                  </field>
+                  <?templateDesigner expand 0?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subTrunkCover" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollTrunkCover" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Bagasjeromstildekning</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldTrunkCover" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.TrunkCover"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkTrunkCover" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.TrunkCoverCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subSatelliteNavigation" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollSatelliteNavigation" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Navigasjon med kartverk</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldSatelliteNavigation" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.SatelliteNavigation"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkSatelliteNavigation" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.SatelliteNavigationCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subReflectiveVest" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollReflectiveVest" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Refleksvest</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldReflectiveVest" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.ReflectiveVest"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkReflectiveVest" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.ReflectiveVestCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subVideoSystem" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollVideoSystem" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>DVD system og hodetelefoner</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldVideoSystem" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.VideoSystem"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkVideoSystem" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.VideoSystemCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subBlockHeaterCord" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollBlockHeaterCord" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Motorvarmerkabel</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldBlockHeaterCord" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.BlockHeaterCord"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb">
+                  <bind match="none"/>
+                  <field name="chkBlockHeaterCord" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.BlockHeaterCordCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subAccidentClaim" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollAccidentClaim" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Skademelding glass/skade</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldAccidentClaim" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.AccidentClaim"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb" hAlign="center">
+                  <bind match="none"/>
+                  <field name="chkAccidentClaim" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.AccidentClaimCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subDeductablePayment" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollDeductablePayment" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Innbetalt egenandel ved skade</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldDeductablePayment" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.DeductiblePayment"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb" hAlign="center">
+                  <bind match="none"/>
+                  <field name="chkDeductablePayment" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.DeductiblePaymentCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subEtcTransponder" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollEtcTransponder" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Køfribrikke</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldEtcTransponder" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.EtcTransponder"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb" hAlign="center">
+                  <bind match="none"/>
+                  <field name="chkEtcTransponder" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.EtcTransponderCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subParkingHeaterRC" layout="lr-tb">
+               <bind match="none"/>
+               <subform name="subControlPoint" w="75mm" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldKontrollParkingHeaterRC" minW="75mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Fjernkontroll parkeringsvarmer</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subRemarkOnPoint" layout="tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldParkingHeaterRC" minW="106mm" access="readOnly" h="6.35mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.ParkingHeaterRC"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <para vAlign="middle"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subOKOnPoint" w="11mm" layout="tb" hAlign="center">
+                  <bind match="none"/>
+                  <field name="chkParkingHeaterRC" w="4mm" h="6.35mm" access="readOnly" hAlign="center">
+                     <ui>
+                        <checkButton mark="check">
+                           <border>
+                              <edge stroke="lowered"/>
+                              <fill/>
+                           </border>
+                        </checkButton>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <items>
+                        <text>X</text>
+                        <text/>
+                     </items>
+                     <bind match="dataRef" ref="$record.Document.ControlPoints.ParkingHeaterRCCheck"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.1mm"/>
+                  <edge presence="hidden"/>
+                  <corner/>
+                  <corner/>
+                  <corner thickness="0.1mm"/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
+         <subform name="subComments" w="192mm" layout="tb">
+            <bind match="none"/>
+            <occur min="0" max="-1"/>
+            <field name="fldComments" access="readOnly" minH="4mm" w="192mm">
+               <ui>
+                  <textEdit multiLine="1">
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <bind match="dataRef" ref="$record.Document.Comments.Comment"/>
+               <caption reserve="0in">
+                  <font typeface="Arial" size="9pt" weight="bold"/>
+                  <para vAlign="middle"/>
+               </caption>
+               <para vAlign="middle"/>
+            </field>
+            <margin topInset="3mm"/>
+            <?templateDesigner expand 1?></subform>
+         <subform name="subSignature" w="192mm" layout="lr-tb">
+            <bind match="none"/>
+            <subform name="subSignatureSalesman" w="96mm">
+               <bind match="none"/>
+               <subform name="subSignatureLineSalesman" y="0.007mm" w="80mm" layout="lr-tb">
+                  <bind match="none"/>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner thickness="0.1mm"/>
+                     <corner/>
+                     <corner/>
+                     <corner/>
+                  </border>
+                  <field name="fldDateSignatureSalesman" minW="20mm" access="readOnly" h="4mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Dato     Signatur selger</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?></field>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <margin topInset="12mm"/>
+            <subform name="subSignatureCustomer" w="96mm" layout="tb">
+               <bind match="none"/>
+               <subform w="80mm" minH="4mm" layout="tb" name="subSignatureLineCustomer">
+                  <bind match="none"/>
+                  <field name="fldDateSignatureCustomer" minW="20mm" access="readOnly" h="4mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Dato     Signatur kunde</text>
+                        </value>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <?templateDesigner expand 1?></field>
+                  <border>
+                     <edge thickness="0.1mm"/>
+                     <corner thickness="0.1mm"/>
+                     <corner presence="hidden" thickness="0.176mm"/>
+                     <corner presence="hidden" thickness="0.176mm"/>
+                     <corner presence="hidden" thickness="0.176mm"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <border>
+                  <edge thickness="0.1mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.1mm" presence="hidden"/>
+                  <corner presence="hidden"/>
+                  <corner presence="hidden"/>
+                  <corner presence="hidden"/>
+               </border>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
+         <overflow target="mpgPage2" trailer="overflowTrailer"/>
+         <?templateDesigner expand 1?></subform>
+      <variables>
+         <script usehref=".\Fragments\frg_LangNO.xdp#som($template.form1.#subform.#variables.NO)"/>
+         <script usehref=".\Fragments\frg_ScriptGetLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
+         <?templateDesigner expand 1?></variables>
+      <proto>
+         <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></proto>
+      <desc>
+         <text name="version">10.0.2.20120224.1.869952.867557</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Adobe Pi Std" 0 0 UTF-16 2 4 004F?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 208 53 0003000B000C000F001100120014001500240025002600270029002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E006000A1 (),./12ABCDFHIKLMNOPRSTUV_abcdefghijklmnoprstuvy{}ø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 164 43 0003001100120014001D00240025002700280029002A002E003000330035003600370038003900440046004700480049004A004C004D004E004F005000510052005300550056005700580059005C006300A1 ./1:ABDEFGKMPRSTUVacdefgijklmnoprstuvyÅø?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Undervisning\AcceptanceCheck\Mottakskontroll_AcceptanceCheck_20130115_Audi.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 100?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines h:79400?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-04-29T13:59:43Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:7f291af8-4c78-44a3-a3cd-46391a6c09e4</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>10.0.2.20120224.1.869952.867557</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="da_DK" desc="Dansk (Danmark)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>marts</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sø</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lø</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="AcceptanceCheck">
+      <uri>..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Gruppe B - Takst\Mottakskontroll\AcceptanceCheck.xsd</uri>
+      <rootElement>AcceptanceCheck</rootElement>
+      <?templateDesigner fileDigest shaHash="oTmPq2LAaOGaNdT7QH1gwy6WFz8="?></xsdConnection>
+</connectionSet>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="XFASchemaXSD">
+   <xs:element name="AcceptanceCheck">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="Header">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="MediaControl">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="OutputTargets">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="Print">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="PrinterName" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="File">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="FileName" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Preview">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="ClientAddress" type="xs:string"/>
+                                                <xs:element name="PrintId" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Archive">
+                                          <xs:complexType>
+                                             <xs:sequence/>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Mail">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="MailTo" type="xs:string"/>
+                                                <xs:element name="MailFrom" type="xs:string"/>
+                                                <xs:element name="MailCC" type="xs:string"/>
+                                                <xs:element name="MailSubject" type="xs:string"/>
+                                                <xs:element name="MailBody" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="DocType" type="xs:string"/>
+                     <xs:element name="Country" type="xs:string"/>
+                     <xs:element name="LangCode" type="xs:string"/>
+                     <xs:element name="DocHeaderImpcode" type="xs:string"/>
+                     <xs:element name="DocHeaderProdType" type="xs:string"/>
+                     <xs:element name="DocHeaderBrand" type="xs:string"/>
+                     <xs:element name="PreviewCode" type="xs:string"/>
+                     <xs:element name="Copies" type="xs:string"/>
+                     <xs:element name="TwoSided" type="xs:string"/>
+                     <xs:element name="LogoImage" type="xs:string"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="Document">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="DocumentHeader">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="DealerNameMarketing" type="xs:string"/>
+                              <xs:element name="DocTitle" type="xs:string"/>
+                              <xs:element name="ValuationNo" type="xs:string"/>
+                              <xs:element name="PerformedBy" type="xs:string"/>
+                              <xs:element name="DateCreated" type="xs:string"/>
+                              <xs:element name="SellerName" type="xs:string"/>
+                              <xs:element name="FooterA1" type="xs:string"/>
+                              <xs:element name="FooterA2" type="xs:string"/>
+                              <xs:element name="FooterA3" type="xs:string"/>
+                              <xs:element name="FooterA4" type="xs:string"/>
+                              <xs:element name="FooterA5" type="xs:string"/>
+                              <xs:element name="FooterA6" type="xs:string"/>
+                              <xs:element name="FooterB1" type="xs:string"/>
+                              <xs:element name="FooterB2" type="xs:string"/>
+                              <xs:element name="FooterB3" type="xs:string"/>
+                              <xs:element name="FooterB4" type="xs:string"/>
+                              <xs:element name="FooterB5" type="xs:string"/>
+                              <xs:element name="FooterB6" type="xs:string"/>
+                              <xs:element name="FooterC1" type="xs:string"/>
+                              <xs:element name="FooterC2" type="xs:string"/>
+                              <xs:element name="FooterC3" type="xs:string"/>
+                              <xs:element name="FooterC4" type="xs:string"/>
+                              <xs:element name="FooterC5" type="xs:string"/>
+                              <xs:element name="FooterC6" type="xs:string"/>
+                              <xs:element name="FooterD1" type="xs:string"/>
+                              <xs:element name="FooterD2" type="xs:string"/>
+                              <xs:element name="FooterD3" type="xs:string"/>
+                              <xs:element name="FooterD4" type="xs:string"/>
+                              <xs:element name="FooterD5" type="xs:string"/>
+                              <xs:element name="FooterD6" type="xs:string"/>
+                              <xs:element name="TestLabel" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="HeaderInfo">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="CarBrand" type="xs:string"/>
+                              <xs:element name="CarModel" type="xs:string"/>
+                              <xs:element name="CarModelYear" type="xs:string"/>
+                              <xs:element name="CarMileage" type="xs:string"/>
+                              <xs:element name="FuelTypeText" type="xs:string"/>
+                              <xs:element name="Color" type="xs:string"/>
+                              <xs:element name="CarRegNo" type="xs:string"/>
+                              <xs:element name="EngineVolume" type="xs:string"/>
+                              <xs:element name="EngineEffect" type="xs:string"/>
+                              <xs:element name="CarVIN" type="xs:string"/>
+                              <xs:element name="CarBody" type="xs:string"/>
+                              <xs:element name="CarRegDate" type="xs:string"/>
+                              <xs:element name="CarRegDateLast" type="xs:string"/>
+                              <xs:element name="Seats" type="xs:string"/>
+                              <xs:element name="CarGroupText" type="xs:string"/>
+                              <xs:element name="CarWeight" type="xs:string"/>
+                              <xs:element name="GearType" type="xs:string"/>
+                              <xs:element name="CarMileageAtDelivery" type="xs:string"/>
+                              <xs:element name="TimingBeltDate" type="xs:string"/>
+                              <xs:element name="TimingBeltMileage" type="xs:string"/>
+                              <xs:element name="DateOfLastService" type="xs:string"/>
+                              <xs:element name="CustomerName" type="xs:string"/>
+                              <xs:element name="Imported" type="xs:string"/>
+                              <xs:element name="CarModelDesc" type="xs:string"/>
+                              <xs:element name="DateOfLastControl" type="xs:string"/>
+                              <xs:element name="DateOfNextControl" type="xs:string"/>
+                              <xs:element name="ContractNo" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="ControlPoints">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="MileageComment" type="xs:string"/>
+                              <xs:element name="MileageCheck" type="xs:string"/>
+                              <xs:element name="DamageAfterValuation" type="xs:string"/>
+                              <xs:element name="DamageAfterValuationCheck" type="xs:string"/>
+                              <xs:element name="Tyres" type="xs:string"/>
+                              <xs:element name="TyresCheck" type="xs:string"/>
+                              <xs:element name="ToolsAndTriangle" type="xs:string"/>
+                              <xs:element name="ToolsAndTriangleCheck" type="xs:string"/>
+                              <xs:element name="KeysComment" type="xs:string"/>
+                              <xs:element name="KeysCheck" type="xs:string"/>
+                              <xs:element name="ServiceHandbookComment" type="xs:string"/>
+                              <xs:element name="ServiceHandbookCheck" type="xs:string"/>
+                              <xs:element name="RegistrationBook" type="xs:string"/>
+                              <xs:element name="RegistrationBookCheck" type="xs:string"/>
+                              <xs:element name="VehicleControl" type="xs:string"/>
+                              <xs:element name="VehicleControlCheck" type="xs:string"/>
+                              <xs:element name="EncumbrancePrint" type="xs:string"/>
+                              <xs:element name="EncumbrancePrintCheck" type="xs:string"/>
+                              <xs:element name="StereoCodes" type="xs:string"/>
+                              <xs:element name="StereoCodesCheck" type="xs:string"/>
+                              <xs:element name="RemovableTowbar" type="xs:string"/>
+                              <xs:element name="RemovableTowbarCheck" type="xs:string"/>
+                              <xs:element name="TrunkCover" type="xs:string"/>
+                              <xs:element name="TrunkCoverCheck" type="xs:string"/>
+                              <xs:element name="SatelliteNavigation" type="xs:string"/>
+                              <xs:element name="SatelliteNavigationCheck" type="xs:string"/>
+                              <xs:element name="ReflectiveVest" type="xs:string"/>
+                              <xs:element name="ReflectiveVestCheck" type="xs:string"/>
+                              <xs:element name="VideoSystem" type="xs:string"/>
+                              <xs:element name="VideoSystemCheck" type="xs:string"/>
+                              <xs:element name="BlockHeaterCord" type="xs:string"/>
+                              <xs:element name="BlockHeaterCordCheck" type="xs:string"/>
+                              <xs:element name="AccidentClaim" type="xs:string"/>
+                              <xs:element name="AccidentClaimCheck" type="xs:string"/>
+                              <xs:element name="DeductiblePayment" type="xs:string"/>
+                              <xs:element name="DeductiblePaymentCheck" type="xs:string"/>
+                              <xs:element name="EtcTransponder" type="xs:string"/>
+                              <xs:element name="EtcTransponderCheck" type="xs:string"/>
+                              <xs:element name="ParkingHeaterRC" type="xs:string"/>
+                              <xs:element name="ParkingHeaterRCCheck" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="Comments">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="Comment" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="AcceptanceCheck">
+      <AcceptanceCheck>
+         <Header>
+            <MediaControl>
+               <OutputTargets>
+                  <Print>
+                     <PrinterName/>
+                  </Print>
+                  <File>
+                     <FileName/>
+                  </File>
+                  <Preview>
+                     <ClientAddress/>
+                     <PrintId/>
+                  </Preview>
+                  <Archive dd:dataNode="dataGroup"/>
+                  <Mail>
+                     <MailTo/>
+                     <MailFrom/>
+                     <MailCC/>
+                     <MailSubject/>
+                     <MailBody/>
+                  </Mail>
+               </OutputTargets>
+            </MediaControl>
+            <DocType/>
+            <Country/>
+            <LangCode/>
+            <DocHeaderImpcode/>
+            <DocHeaderProdType/>
+            <DocHeaderBrand/>
+            <PreviewCode/>
+            <Copies/>
+            <TwoSided/>
+            <LogoImage/>
+         </Header>
+         <Document>
+            <DocumentHeader>
+               <DealerNameMarketing/>
+               <DocTitle/>
+               <ValuationNo/>
+               <PerformedBy/>
+               <DateCreated/>
+               <SellerName/>
+               <FooterA1/>
+               <FooterA2/>
+               <FooterA3/>
+               <FooterA4/>
+               <FooterA5/>
+               <FooterA6/>
+               <FooterB1/>
+               <FooterB2/>
+               <FooterB3/>
+               <FooterB4/>
+               <FooterB5/>
+               <FooterB6/>
+               <FooterC1/>
+               <FooterC2/>
+               <FooterC3/>
+               <FooterC4/>
+               <FooterC5/>
+               <FooterC6/>
+               <FooterD1/>
+               <FooterD2/>
+               <FooterD3/>
+               <FooterD4/>
+               <FooterD5/>
+               <FooterD6/>
+               <TestLabel/>
+            </DocumentHeader>
+            <HeaderInfo>
+               <CarBrand/>
+               <CarModel/>
+               <CarModelYear/>
+               <CarMileage/>
+               <FuelTypeText/>
+               <Color/>
+               <CarRegNo/>
+               <EngineVolume/>
+               <EngineEffect/>
+               <CarVIN/>
+               <CarBody/>
+               <CarRegDate/>
+               <CarRegDateLast/>
+               <Seats/>
+               <CarGroupText/>
+               <CarWeight/>
+               <GearType/>
+               <CarMileageAtDelivery/>
+               <TimingBeltDate/>
+               <TimingBeltMileage/>
+               <DateOfLastService/>
+               <CustomerName/>
+               <Imported/>
+               <CarModelDesc/>
+               <DateOfLastControl/>
+               <DateOfNextControl/>
+               <ContractNo/>
+            </HeaderInfo>
+            <ControlPoints>
+               <MileageComment/>
+               <MileageCheck/>
+               <DamageAfterValuation/>
+               <DamageAfterValuationCheck/>
+               <Tyres/>
+               <TyresCheck/>
+               <ToolsAndTriangle/>
+               <ToolsAndTriangleCheck/>
+               <KeysComment/>
+               <KeysCheck/>
+               <ServiceHandbookComment/>
+               <ServiceHandbookCheck/>
+               <RegistrationBook/>
+               <RegistrationBookCheck/>
+               <VehicleControl/>
+               <VehicleControlCheck/>
+               <EncumbrancePrint/>
+               <EncumbrancePrintCheck/>
+               <StereoCodes/>
+               <StereoCodesCheck/>
+               <RemovableTowbar/>
+               <RemovableTowbarCheck/>
+               <TrunkCover/>
+               <TrunkCoverCheck/>
+               <SatelliteNavigation/>
+               <SatelliteNavigationCheck/>
+               <ReflectiveVest/>
+               <ReflectiveVestCheck/>
+               <VideoSystem/>
+               <VideoSystemCheck/>
+               <BlockHeaterCord/>
+               <BlockHeaterCordCheck/>
+               <AccidentClaim/>
+               <AccidentClaimCheck/>
+               <DeductiblePayment/>
+               <DeductiblePaymentCheck/>
+               <EtcTransponder/>
+               <EtcTransponderCheck/>
+               <ParkingHeaterRC/>
+               <ParkingHeaterRCCheck/>
+            </ControlPoints>
+            <Comments>
+               <Comment/>
+            </Comments>
+         </Document>
+      </AcceptanceCheck>
+   </dd:dataDescription>
+</xfa:datasets></xdp:xdp>
