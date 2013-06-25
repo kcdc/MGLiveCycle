@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-20T09:30:19Z" uuid="33220c49-7f8f-49ff-9c93-131c18e67ec7">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-25T10:18:50Z" uuid="324e6e5a-7099-4f23-aa65-1ff325797dc8">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="nb_NO" layout="tb" hAlign="right">
@@ -25,251 +25,256 @@ this.access = "protected";
          <?templateDesigner isFragment yes?>
          <?templateDesigner fragmentTitle frg_Logo?>
          <?templateDesigner fragmentDescription GEN_X?>
-         <field h="20mm" hAlign="right" name="skodaLogo" w="18mm" x="12.479mm" y="1.679mm">
+         <?templateDesigner expand 1?>
+         <field h="20mm" hAlign="right" name="skodaLogo" w="18mm" x="12.479mm" y="1.679mm" presence="invisible">
             <border>
                <corner presence="hidden" thickness="0.1mm"/>
                <edge presence="hidden" thickness="0.1mm"/>
             </border>
             <ui>
-               <imageEdit data="embed">
+               <imageEdit>
                   <margin/>
                </imageEdit>
             </ui>
-            <bind match="none"/>
-            <desc>
-               <text name="embeddedHref">Unknown Embedded URI</text>
-            </desc>
+            <bind ref="$.Header.LogoImage.Skoda" match="dataRef"/>
             <value>
-               <image contentType="application/octet-stream"/>
+               <image contentType="image/gif" href="..\Logos\CFLogo.gif"/>
             </value>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
 this.access = "protected";
+
+//var DocHeaderBrand = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
+try
+{
+var dhb = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
+}
+catch(e)
+{
+	
+	dhb = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
+
+}
+
+if ( dhb == "S")
+{
+	
+	this.presence = "visible";
+	
+	
+}
+else if ( dhb == "V")
+{
+	this.presence = "hidden";
+}
+else if ( dhb == "A" )
+{
+
+	this.presence = "hidden";
+
+}
+else if (dhb == "U")
+{
+	this.presence = "hidden";
+}
+
+else if ( dhb == "I" || dhb == "")
+{
+	this.presence = "hidden";
+}
 </script>
             </event>
             <?templateDesigner expand 1?></field>
-         <field h="16mm" hAlign="right" name="audiLogo" w="29mm" y="2.758mm">
+         <field h="16mm" hAlign="right" name="audiLogo" w="29mm" y="2.758mm" x="0.001mm" presence="invisible">
             <border>
                <corner presence="hidden" thickness="0.1mm"/>
                <edge presence="hidden" thickness="0.1mm"/>
             </border>
             <ui>
-               <imageEdit data="embed">
+               <imageEdit>
                   <margin/>
                </imageEdit>
             </ui>
-            <bind match="dataRef" ref="$.Header.LogoImage.Audi"/>
-            <desc>
-               <text name="embeddedHref">Unknown Embedded URI</text>
-            </desc>
+            <bind ref="$.Header.LogoImage.Audi" match="dataRef"/>
             <value>
-               <image contentType="application/octet-stream"/>
+               <image contentType="image/tiff" href="..\Logos\audi.tif"/>
             </value>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">this.access = "protected";
-</script>
-            </event>
-            <event activity="docReady" ref="$host" name="event__docReady">
-               <script contentType="application/x-javascript">
-//app.alert("Audi: "+DocHeaderBrand);
-
-try
-{
-	var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
-}
-//app.alert("Audi: "+this.parent.parent.parent.parent.name);
-//app.alert(this.rawValue);
-//app.alert("Audi: "+DocHeaderBrand);
-catch(e)
-{	
-
-	DocHeaderBrand = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
-
-}
-
-
-if ( DocHeaderBrand == "S")
-{
-	skodaLogo.rawValue = this.rawValue;
-	//this.rawValue = "";
-
-	skodaLogo.presence = "visible";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"
-	
-	
-}
-else if ( DocHeaderBrand == "V")
-{
-	//vwLogo.rawValue = this.rawValue;
-	//this.rawValue = "";
-/*
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "visible";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"*/
-}
-else if ( DocHeaderBrand == "A" )
-{
-	audiLogo.rawValue = this.rawValue;
-	//this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "visible";
-	audiServiceLogo.presence = "hidden"
-
-}
-else if (DocHeaderBrand == "U")
-{
-	audiServiceLogo.rawValue = this.rawValue;
-	//this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "visible"
-}
-
-else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
-{
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"		
-}
-</script>
-            </event>
-         </field>
-         <field h="15mm" hAlign="right" name="vwLogo" w="15mm" x="14.139mm" y="4.654mm">
-            <border>
-               <corner presence="hidden" thickness="0.1mm"/>
-               <edge presence="hidden" thickness="0.1mm"/>
-            </border>
-            <ui>
-               <imageEdit data="embed">
-                  <margin/>
-               </imageEdit>
-            </ui>
-            <bind match="dataRef" ref="$.Header.LogoImage.VW"/>
-            <desc>
-               <text name="embeddedHref">Unknown Embedded URI</text>
-            </desc>
-            <value>
-               <image contentType="application/octet-stream"/>
-            </value>
-            <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">
-this.access = "protected";
-</script>
-            </event>
-            <event activity="docReady" ref="$host" name="event__docReady">
-               <script contentType="application/x-javascript">
 
 
 //var DocHeaderBrand = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
 try
 {
-var DocHeaderBrand = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
+var dhb = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
 }
-//app.alert("Audi: "+DocHeaderBrand);
-//app.alert(this.rawValue);
-//app.alert("VW: "+DocHeaderBrand);
 catch(e)
 {
 	
-	DocHeaderBrand = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
-}
-//app.alert("VW: "+DocHeaderBrand);
-if ( DocHeaderBrand == "S")
-{
-	//skodaLogo.rawValue = this.rawValue;
-	//this.rawValue = "";
+	dhb = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
 
-	skodaLogo.presence = "visible";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"
+}
+
+if ( dhb == "S")
+{
+	
+	this.presence = "hidden";
 	
 	
 }
-else if ( DocHeaderBrand == "V")
+else if ( dhb == "V")
 {
-	//vwLogo.rawValue = this.rawValue;
-	//this.rawValue = "";
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "visible";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"
+	this.presence = "hidden";
 }
-else if ( DocHeaderBrand == "A" )
+else if ( dhb == "A" )
 {
-	//audiLogo.rawValue = this.rawValue;
-	//this.rawValue = "";
-/*
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "visible";
-	audiServiceLogo.presence = "hidden"
-*/
-}
-else if (DocHeaderBrand == "U")
-{
-	//audiServiceLogo.rawValue = this.rawValue;
-	//this.rawValue = "";
 
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "visible"
+	this.presence = "visible";
+
+}
+else if (dhb == "U")
+{
+	this.presence = "hidden";
 }
 
-else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
+else if ( dhb == "I" || dhb == "")
 {
-
-	skodaLogo.presence = "hidden";
-	vwLogo.presence = "hidden";
-	audiLogo.presence = "hidden";
-	audiServiceLogo.presence = "hidden"		
+	this.presence = "hidden";
 }
 </script>
             </event>
          </field>
-         <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="7.999mm">
+         <field h="15mm" hAlign="right" name="vwLogo" w="15mm" x="14.139mm" y="4.654mm" presence="invisible">
             <border>
                <corner presence="hidden" thickness="0.1mm"/>
                <edge presence="hidden" thickness="0.1mm"/>
             </border>
             <ui>
-               <imageEdit data="embed">
+               <imageEdit>
                   <margin/>
                </imageEdit>
             </ui>
-            <bind match="none"/>
-            <desc>
-               <text name="embeddedHref">Unknown Embedded URI</text>
-            </desc>
+            <bind ref="$.Header.LogoImage.VW" match="dataRef"/>
             <value>
-               <image contentType="application/octet-stream"/>
+               <image contentType="image/tiff" href="..\Logos\VFLogo.tif"/>
             </value>
             <event activity="initialize" name="event__initialize">
-               <script contentType="application/x-javascript">this.access = "protected";
+               <script contentType="application/x-javascript">
+this.access = "protected";
+
+
+
+//var DocHeaderBrand = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
+try
+{
+var dhb = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
+}
+catch(e)
+{
+	
+	dhb = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
+
+}
+
+if ( dhb == "S")
+{
+	
+	this.presence = "hidden";
+	
+	
+}
+else if ( dhb == "V")
+{
+	this.presence = "visible";
+}
+else if ( dhb == "A" )
+{
+
+	this.presence = "hidden";
+
+}
+else if (dhb == "U")
+{
+	this.presence = "hidden";
+}
+
+else if ( dhb == "I" || dhb == "")
+{
+	this.presence = "hidden";
+}
 </script>
             </event>
          </field>
-         <?templateDesigner expand 1?></subform>
+         <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="7.999mm" y="0.001mm" presence="invisible">
+            <border>
+               <corner presence="hidden" thickness="0.1mm"/>
+               <edge presence="hidden" thickness="0.1mm"/>
+            </border>
+            <ui>
+               <imageEdit>
+                  <margin/>
+               </imageEdit>
+            </ui>
+            <bind ref="$.Header.LogoImage.AudiService" match="dataRef"/>
+            <value>
+               <image contentType="image/gif" href="..\Logos\UFLogo.gif"/>
+            </value>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">this.access = "protected";
+
+
+
+//var DocHeaderBrand = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
+try
+{
+var dhb = this.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
+}
+catch(e)
+{
+	
+	dhb = this.parent.parent.subMetadata.DocHeaderBrand.rawValue;
+
+}
+
+if ( dhb == "S")
+{
+	
+	this.presence = "hidden";
+	
+	
+}
+else if ( dhb == "V")
+{
+	this.presence = "hidden";
+}
+else if ( dhb == "A" )
+{
+
+	this.presence = "hidden";
+
+}
+else if (dhb == "U")
+{
+	this.presence = "visible";
+}
+
+else if ( dhb == "I" || dhb == "")
+{
+	this.presence = "hidden";
+}
+</script>
+            </event>
+         </field>
+      </subform>
       <?templateDesigner expand 1?>
    </subform>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner Grid show:0, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 130?></template>
+   <?templateDesigner Zoom 130?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -296,14 +301,14 @@ else if ( DocHeaderBrand == "I" || DocHeaderBrand == "")
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-06-20T09:30:19Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-06-25T10:18:50Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:33220c49-7f8f-49ff-9c93-131c18e67ec7</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:324e6e5a-7099-4f23-aa65-1ff325797dc8</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
