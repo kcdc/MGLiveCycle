@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-16T11:49:21Z" uuid="17150336-3578-4f2e-b345-0b456ea969c5">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-24T09:32:23Z" uuid="2f7469c8-2aee-4a86-a852-0825303617d3">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -10,7 +10,7 @@
             <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
-      <subform w="3.175mm" minH="8.703mm" layout="tb" name="subMetadata">
+      <subform minH="8.703mm" layout="tb" name="subMetadata">
          <bind match="none"/>
          <field name="DocHeaderBrand" w="3.175mm" h="3.175mm" presence="invisible">
             <ui>
@@ -30,7 +30,12 @@
                   <text>Doc Header Brand</text>
                </value>
             </caption>
-            <bind match="dataRef" ref="$.Header.DocHeaderBrand"/>
+            <bind match="none"/>
+            <event activity="docReady" ref="$host" name="event__docReady">
+               <script contentType="application/x-javascript">
+//app.alert("DocHeaderBrand: "+this.rawValue);
+</script>
+            </event>
          </field>
          <field name="LangCode" w="3.175mm" h="0.217639in">
             <ui>
@@ -43,38 +48,87 @@
             <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
             <para vAlign="middle"/>
             <bind match="dataRef" ref="$.Header.LangCode"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+//app.alert("LangCode: "+this.rawValue);
+</script>
+            </event>
+            <event activity="docReady" ref="$host" name="event__docReady">
+               <script contentType="application/x-javascript">
+//app.alert("LangCode: "+this.rawValue);
+</script>
+            </event>
          </field>
-         <field name="PreviewCode" w="62mm" h="9mm">
+         <field name="PreviewCode" w="3.175mm" h="5.528mm">
             <ui>
                <textEdit>
-                  <border>
-                     <edge stroke="lowered"/>
-                  </border>
+                  <border presence="hidden"/>
                   <margin/>
                </textEdit>
             </ui>
             <font typeface="Myriad Pro"/>
             <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
             <para vAlign="middle"/>
-            <caption reserve="25mm">
-               <para vAlign="middle"/>
-               <value>
-                  <text>Preview Code</text>
-               </value>
-            </caption>
             <bind match="dataRef" ref="$.Header.PreviewCode"/>
          </field>
-         <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
          <?templateDesigner fragmentTitle frg_Metadata?>
-         <?templateDesigner fragmentDescription GEN_X?></subform>
+         <?templateDesigner fragmentDescription GEN_X?>
+         <subform w="62mm" name="subDHBHolder" layout="tb" presence="hidden">
+            <field name="fldDocHeaderBrandBatch" w="37mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$record.Document.Pages[*].Page[*].PageHeader.DocHeaderBrand"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">//console.println(this.rawValue+" dnm");
+if(this.rawValue != "" &amp;&amp; this.rawValue != null)
+{
+DocHeaderBrand.rawValue = this.rawValue;
+}
+</script>
+               </event>
+               <event activity="docReady" ref="$host" name="event__docReady">
+                  <script contentType="application/x-javascript">
+//app.alert("DocHeaderBrandBatch: "+this.rawValue);
+</script>
+               </event>
+            </field>
+            <field name="fldDocHeaderBrandPlain" w="37mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$record.Header.DocHeaderBrand"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">//console.println(this.rawValue+"dn");
+if(this.rawValue != "" &amp;&amp; this.rawValue != null)
+{
+DocHeaderBrand.rawValue = this.rawValue;
+}
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 64 16 0001002300240025002900310042004400450046004A004F0050005300570058 BCDHPacdeinorvw?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 44 11 00010023002500290042004400450046004F00500053 BDHacdenor?>
    </subform>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 97?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?></template>
+   <?templateDesigner Zoom 143?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -101,14 +155,14 @@
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-16T11:49:21Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-06-24T09:32:23Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:17150336-3578-4f2e-b345-0b456ea969c5</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:2f7469c8-2aee-4a86-a852-0825303617d3</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
