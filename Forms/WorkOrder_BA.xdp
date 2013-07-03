@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-29T14:01:33Z" uuid="3ad86382-3e12-4429-b642-41c96ceb68d0">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-03T09:15:05Z" uuid="46ee144e-5783-4359-b924-7ece7fdc00ff">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -1077,10 +1077,9 @@ var receivedText = fld_TestLabelData.rawValue;
                      <bind match="dataRef" ref="$.Document.DocumentHeader.TestLabel"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="7mm">
                   <?templateDesigner expand 1?></subform>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="179mm">
                <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
                <subform name="sub_FooterA" layout="tb" w="45mm">
@@ -2464,7 +2463,7 @@ this.caption.value.text = output;
                      <para vAlign="middle"/>
                      <bind match="dataRef" ref="$.TaskId"/>
                   </field>
-                  <bind match="dataRef" ref="$.TaskHeader"/>
+                  <bind match="dataRef" ref="$.Document.Tasks.Task[*].TaskHeader"/>
                   <field name="TaskName" h="3.6mm" minW="37mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -2515,7 +2514,7 @@ this.caption.value.text = output;
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="23mm" rightInset="0mm"/>
                         <para vAlign="middle"/>
-                        <bind match="dataRef" ref="$.TaskText[*]"/>
+                        <bind match="dataRef" ref="$.TaskTexts[*].TaskText[*]"/>
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
 //app.alert(this.rawValue);
@@ -2525,11 +2524,11 @@ this.caption.value.text = output;
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <bind match="dataRef" ref="$.Task[*]"/>
+               <bind match="none"/>
                <subform y="8mm" w="179mm" layout="tb" name="subTaskDetailsArea">
                   <bind match="none"/>
                   <subform w="178.989mm" layout="tb" name="subTaskDetails">
-                     <bind match="dataRef" ref="$.TaskDetails[*]"/>
+                     <bind match="dataRef" ref="$.Document.Tasks.Task[*].TaskDetails[*]"/>
                      <subform w="178.989mm" h="4.021mm" name="subTaskDetail">
                         <bind match="none"/>
                         <field name="WorkPosNo" h="3.6mm" minW="14mm" y="0.094mm" x="22mm" access="readOnly">
@@ -2625,7 +2624,7 @@ this.caption.value.text = output;
                      </value>
                      <para hAlign="right" marginRight="2.835pt"/>
                   </caption>
-                  <bind match="dataRef" ref="$.TaskTotals.WorkPosTotHour"/>
+                  <bind match="dataRef" ref="$.Document.Tasks.TaskTotals.WorkPosTotHour"/>
                   <para hAlign="right"/>
                   <font weight="bold"/>
                   <event activity="initialize" ref="$" name="event__initialize">
@@ -2640,15 +2639,14 @@ this.caption.value.text = output;
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
-            <bind match="dataRef" ref="$.Document.Tasks"/>
-            <occur min="0" max="-1"/>
+            <bind match="none"/>
             <overflow leader="subTaskTitle"/>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" minH="7.2mm" layout="tb" name="subMaterialAndSpareparts">
             <bind match="none"/>
-            <subform w="179mm" name="subMaterialsAndSparepartsHeader" layout="lr-tb">
+            <subform w="179mm" name="subMaterialsAndSparepartsHeader">
                <bind match="dataRef" ref="$.Document.Spareparts"/>
-               <field name="L_LocationSparepart" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly">
+               <field name="L_LocationSparepart" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly" x="0.001mm" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2673,7 +2671,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_Code" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="32mm" h="4mm" access="readOnly">
+               <field name="L_Code" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="32mm" h="4mm" access="readOnly" x="24mm" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2701,7 +2699,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_Product" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="49mm" h="4mm" access="readOnly">
+               <field name="L_Product" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="49mm" h="4mm" access="readOnly" x="56mm" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2730,7 +2728,7 @@ this.caption.value.text = output;
                      <margin/>
                   </border>
                </field>
-               <field name="L_TaskLetter" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="10mm" h="4mm" access="readOnly" x="0in" y="3mm">
+               <field name="L_TaskLetter" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="10mm" h="4mm" access="readOnly" x="105mm" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2755,8 +2753,8 @@ this.caption.value.text = output;
 </script>
                   </event>
                   <margin leftInset="0mm"/>
-               </field>
-               <field name="L_InvoiceType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="17mm" h="4mm" access="readOnly" x="0in" y="6mm">
+                  <?templateDesigner expand 1?></field>
+               <field name="L_InvoiceType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="17mm" h="4mm" access="readOnly" x="115mm" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2784,7 +2782,7 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <field name="L_Unit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="14mm" h="4mm" access="readOnly">
+               <field name="L_Unit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="14mm" h="4mm" access="readOnly" x="132mm" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2809,8 +2807,8 @@ this.caption.value.text = output;
 </script>
                   </event>
                   <margin leftInset="0mm"/>
-               </field>
-               <field name="L_Quantity" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="12mm" h="4mm" access="readOnly" x="0in" y="9mm">
+                  <?templateDesigner expand 1?></field>
+               <field name="L_Quantity" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="12mm" h="4mm" access="readOnly" x="146mm" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2836,7 +2834,7 @@ this.caption.value.text = output;
                   </event>
                   <margin leftInset="1mm"/>
                </field>
-               <field name="L_Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="21mm" h="4mm" access="readOnly" x="0in" y="12mm">
+               <field name="L_Price" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="21mm" h="4mm" access="readOnly" x="158mm" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -4097,11 +4095,11 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2012\WorkOrderBA\862_WorkOrder_Litauen .xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\9050\755_WorkOrder_S001IT05_20130703_101109_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 147?>
+   <?templateDesigner Zoom 130?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -4254,9 +4252,9 @@ this.caption.value.text = output;
 </localeSet>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="WorkOrder">
-      <uri>..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2012\XSD\schema\WorkOrder.xsd</uri>
+      <uri>..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Workorder task text\WorkOrderTaskText.xsd</uri>
       <rootElement>WorkOrder</rootElement>
-      <?templateDesigner fileDigest shaHash="sdja9P5VyWBvPc+GOuOlcA+06CM="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="0KLHExOEHoA+PeBCvBntdMIsJqU="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -4327,7 +4325,6 @@ this.caption.value.text = output;
                <DateCreated/>
                <TypeText/>
                <TestLabel/>
-               <VerticalLabel/>
             </DocumentHeader>
             <HeaderInfo>
                <CustomerVatPayer/>
@@ -4370,13 +4367,18 @@ this.caption.value.text = output;
                <CustomerPhoneOrder/>
                <CustomerPhoneWork/>
                <LocationPartsPrepicked/>
-               <PlannedValuationDate/>
+               <OurRef/>
+               <WarrentyRefLabel/>
+               <CustomerRef/>
             </HeaderInfo>
             <TopTextMain>
                <TopTextLines dd:maxOccur="10">
                   <TopTextLine/>
                </TopTextLines>
             </TopTextMain>
+            <ValuationInfo>
+               <PlannedValuationDate/>
+            </ValuationInfo>
             <PlannedVisit>
                <PlannedVisitTime/>
                <PlannedVisitDate/>
@@ -4414,9 +4416,11 @@ this.caption.value.text = output;
             <Tasks>
                <Task dd:maxOccur="30">
                   <TaskHeader>
+                     <TaskTexts dd:maxOccur="30">
+                        <TaskText dd:maxOccur="-1"/>
+                     </TaskTexts>
                      <TaskId/>
                      <TaskName/>
-                     <TaskText dd:maxOccur="4"/>
                      <PriceVatTotalTask/>
                      <PriceInfo/>
                      <TreatmentCodeInfo/>
@@ -4487,14 +4491,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-29T14:01:33Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-03T09:15:05Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3ad86382-3e12-4429-b642-41c96ceb68d0</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:46ee144e-5783-4359-b924-7ece7fdc00ff</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -4616,7 +4620,6 @@ this.caption.value.text = output;
                               <xs:element name="DateCreated" type="xs:string"/>
                               <xs:element name="TypeText" type="xs:string"/>
                               <xs:element name="TestLabel" type="xs:string"/>
-                              <xs:element name="VerticalLabel"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -4663,20 +4666,29 @@ this.caption.value.text = output;
                               <xs:element name="CustomerPhoneOrder" type="xs:string"/>
                               <xs:element name="CustomerPhoneWork" type="xs:string"/>
                               <xs:element name="LocationPartsPrepicked" type="xs:string"/>
-                              <xs:element name="PlannedValuationDate" type="xs:string"/>
+                              <xs:element name="OurRef" type="xs:string"/>
+                              <xs:element name="WarrentyRefLabel" type="xs:string"/>
+                              <xs:element name="CustomerRef" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="TopTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="TopTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="TopTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TopTextLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="ValuationInfo">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="PlannedValuationDate" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -4731,7 +4743,7 @@ this.caption.value.text = output;
                      <xs:element name="ReminderList">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Reminder" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Reminder">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ReminderDescription" type="xs:string"/>
@@ -4742,33 +4754,39 @@ this.caption.value.text = output;
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element name="Comments" maxOccurs="30">
+                     <xs:element maxOccurs="30" name="Comments">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CustomerComment" type="xs:string" maxOccurs="10"/>
-                              <xs:element name="InternalComment" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="CustomerComment" type="xs:string"/>
+                              <xs:element maxOccurs="10" name="InternalComment" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Task" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Task">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskHeader">
                                           <xs:complexType>
                                              <xs:sequence>
+                                                <xs:element maxOccurs="30" name="TaskTexts">
+                                                   <xs:complexType>
+                                                      <xs:sequence>
+                                                         <xs:element maxOccurs="-1" name="TaskText" type="xs:string"/>
+                                                      </xs:sequence>
+                                                   </xs:complexType>
+                                                </xs:element>
                                                 <xs:element name="TaskId" type="xs:string"/>
                                                 <xs:element name="TaskName" type="xs:string"/>
-                                                <xs:element name="TaskText" type="xs:string" maxOccurs="4"/>
                                                 <xs:element name="PriceVatTotalTask" type="xs:string"/>
                                                 <xs:element name="PriceInfo" type="xs:string"/>
                                                 <xs:element name="TreatmentCodeInfo" type="xs:string"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="TaskDetails" maxOccurs="200">
+                                       <xs:element maxOccurs="200" name="TaskDetails">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="WorkPosNo" type="xs:string"/>
@@ -4797,7 +4815,7 @@ this.caption.value.text = output;
                      <xs:element name="Spareparts">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Material" maxOccurs="200">
+                              <xs:element maxOccurs="200" name="Material">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="MaterialLocation" type="xs:string"/>
@@ -4812,7 +4830,7 @@ this.caption.value.text = output;
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
-                              <xs:element name="Sparepart" maxOccurs="200">
+                              <xs:element maxOccurs="200" name="Sparepart">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="SparePartLocation" type="xs:string"/>
@@ -4863,7 +4881,7 @@ this.caption.value.text = output;
                      <xs:element name="CarRemarks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CarRemark" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="CarRemark">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="RemarkPriority" type="xs:string"/>
