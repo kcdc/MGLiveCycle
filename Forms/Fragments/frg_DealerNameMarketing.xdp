@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-24T10:02:44Z" uuid="07e26baf-2eaf-41e8-bd3d-6f2e64bd6c60">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-03T12:13:20Z" uuid="66ed669f-6a25-4d32-badd-6e5d5b881573">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -90,14 +90,15 @@ DealerNameMarketing.rawValue = this.rawValue;
             <margin topInset="1mm" bottomInset="1mm" leftInset="0mm" rightInset="0mm"/>
             <para vAlign="middle"/>
             <bind match="none"/>
-            <event activity="docReady" ref="$host" name="event__docReady">
+            <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">
 
 try
 {
+	//app.alert("DNM Try: "+this.parent.parent.parent.parent.parent.pageContent.name);
 	var dhb = this.parent.parent.parent.parent.parent.pageContent.subMetadata.DocHeaderBrand.rawValue;
 	//TextField1.rawValue = "Try "+DocHeaderBrand;
-	//app.alert("DNM: "+dhb);
+	//app.alert("DNM Try: "+dhb);
 }
 
 catch(e)
@@ -106,6 +107,7 @@ catch(e)
 	//app.alert("Try NOT OK");
 	dhb = this.parent.parent.parent.subMetadata.DocHeaderBrand.rawValue;
 	//TextField1.rawValue = "Catch "+DocHeaderBrand;
+	
 
 }
 if ( dhb == "S")
@@ -132,14 +134,13 @@ else if ( dhb == "I" || dhb == "")
          </field>
          <?templateDesigner expand 1?></subform>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 44 11 000100270029003500450046004A004D005400550059 FHTdeilstx?>
    </subform>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 143?></template>
+   <?templateDesigner Zoom 130?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -151,6 +152,7 @@ else if ( dhb == "I" || dhb == "")
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -165,14 +167,14 @@ else if ( dhb == "I" || dhb == "")
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-06-24T10:02:44Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-03T12:13:20Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:07e26baf-2eaf-41e8-bd3d-6f2e64bd6c60</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:66ed669f-6a25-4d32-badd-6e5d5b881573</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-25T11:06:52Z" uuid="4abf72b5-037e-4b96-86aa-53460c193d1a">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-03T10:19:11Z" uuid="39963f0b-77f1-45dd-b4f3-751404b50d37">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -8,8 +8,8 @@
          <pageArea>
             <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
-         </pageArea>
-      </pageSet>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
       <subform w="70mm" layout="tb" name="subCustomerAddress">
          <bind match="none"/>
          <field name="fldCustomerName" minH="4mm" access="readOnly" w="70mm">
@@ -24,33 +24,53 @@
             <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerName"/>
             <para lineHeight="8pt"/>
          </field>
-         <subform y="4.079mm" w="70mm" minH="4mm" layout="tb" name="subUN">
+         <subform layout="tb" minH="4mm" name="subUN" w="70mm">
+            <keep intact="contentArea"/>
             <bind match="none"/>
-            <field name="L_Attention" minH="4mm" w="70mm" access="readOnly">
+            <field name="L_Attention" y="0mm" x="0mm" w="62mm" id="floatingField002019" presence="hidden" access="readOnly" minH="9mm">
                <ui>
-                  <textEdit multiLine="1">
-                     <border presence="hidden"/>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
                      <margin/>
                   </textEdit>
                </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0mm" bottomInset="1mm" leftInset="0mm" rightInset="0mm"/>
-               <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
+               <font typeface="Arial" size="9pt" weight="bold"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
+
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 if(output != "")
 {
-	this.caption.value.text = output;
+	this.rawValue = output;
 }
 
 else
 {
-		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
+		this.rawValue = "VAR FOR: "+this.name+" NOT FOUND";	
 }
+</script>
+               </event>
+               <bind match="none"/>
+            </field>
+            <field name="floatUserName" y="0mm" x="0mm" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
 
 //app.alert(this.rawValue);
 if(this.rawValue != null &amp;&amp; this.rawValue != "")
@@ -63,15 +83,19 @@ if (this.rawValue == null)
 }
 </script>
                </event>
-               <caption reserve="6.2mm">
-                  <value>
-                     <text>Att:</text>
-                  </value>
-                  <font typeface="Arial" size="9pt" weight="bold"/>
-               </caption>
             </field>
-            <occur min="0" max="-1"/>
-            <keep intact="contentArea"/>
+            <draw name="txtAttention" w="70mm" h="4.168mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField002019"/><span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-weight:normal"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField008232"/></span></p></body>
+                  </exData>
+               </value>
+               <font size="9pt" typeface="Arial"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            </draw>
             <?templateDesigner expand 1?></subform>
          <field name="fldCustomerPostalAddress" minH="4mm" access="readOnly" w="70mm">
             <ui>
@@ -107,18 +131,20 @@ if (this.rawValue == null)
             <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerCountry"/>
          </field>
          <keep intact="contentArea"/>
-         <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
          <?templateDesigner fragmentTitle frg_CustomerAddress?>
-         <?templateDesigner fragmentDescription NO_A?></subform>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 12 3 001D00240057:At?>
+         <?templateDesigner fragmentDescription NO_A?>
+         <?templateDesigner expand 1?></subform>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 56 14 000300310038004400480049004F00500052005500560057005E0060 NUaeflmorst{}?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 40 10 0024002F00420048004C005100520057005E0060AL_einot{}?>
    </subform>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 54?></template>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 130?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -130,6 +156,7 @@ if (this.rawValue == null)
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -144,14 +171,14 @@ if (this.rawValue == null)
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-25T11:06:52Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-03T10:19:11Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:4abf72b5-037e-4b96-86aa-53460c193d1a</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:39963f0b-77f1-45dd-b4f3-751404b50d37</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
