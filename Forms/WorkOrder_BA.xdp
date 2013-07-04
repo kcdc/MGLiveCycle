@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-03T09:15:05Z" uuid="46ee144e-5783-4359-b924-7ece7fdc00ff">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-04T08:02:45Z" uuid="59c40cfe-48e2-4fea-9867-5d214f8f74e0">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -2405,9 +2405,9 @@ this.caption.value.text = output;
             <?templateDesigner expand 1?></subform>
          <subform name="SubTasks" layout="tb" w="179mm">
             <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
-            <subform w="179mm" name="subTaskTitle" layout="tb" id="subTaskTitle_ID">
+            <subform w="179mm" name="subTaskTitle" id="subTaskTitle_ID">
                <bind match="none"/>
-               <field name="L_Task" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly">
+               <field name="L_Task" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="0in" y="0in">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2753,7 +2753,8 @@ this.caption.value.text = output;
 </script>
                   </event>
                   <margin leftInset="0mm"/>
-                  <?templateDesigner expand 1?></field>
+                  <?templateDesigner expand 1?>
+               </field>
                <field name="L_InvoiceType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="17mm" h="4mm" access="readOnly" x="115mm" y="0in">
                   <ui>
                      <textEdit/>
@@ -2807,7 +2808,8 @@ this.caption.value.text = output;
 </script>
                   </event>
                   <margin leftInset="0mm"/>
-                  <?templateDesigner expand 1?></field>
+                  <?templateDesigner expand 1?>
+               </field>
                <field name="L_Quantity" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="12mm" h="4mm" access="readOnly" x="146mm" y="0in">
                   <ui>
                      <textEdit/>
@@ -4098,10 +4100,10 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\9050\755_WorkOrder_S001IT05_20130703_101109_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 130?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 130?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -4115,6 +4117,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4491,14 +4494,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-07-03T09:15:05Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-04T08:02:45Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:46ee144e-5783-4359-b924-7ece7fdc00ff</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:59c40cfe-48e2-4fea-9867-5d214f8f74e0</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
