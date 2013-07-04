@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-03T12:53:53Z" uuid="50ca05c7-033a-4813-8a9f-35a12ada1de3">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-04T08:02:11Z" uuid="026726ee-3743-48f9-9662-66774d7c020e">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -1624,7 +1624,7 @@ this.caption.value.text = output;
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" minH="7.2mm" layout="tb" name="Tasks" y="8.713mm">
             <bind match="dataRef" ref="$.Document.Tasks"/>
-            <subform w="179mm" minH="4mm" layout="tb" name="subPlannedWorkHeader" id="subPlannedWorkHeader_ID">
+            <subform w="179mm" name="subPlannedWorkHeader" id="subPlannedWorkHeader_ID">
                <bind match="none"/>
                <field name="L_PlannedWorks" w="179mm" h="4mm" access="readOnly">
                   <ui>
@@ -1663,7 +1663,7 @@ this.caption.value.text = output;
                      <corner/>
                   </border>
                </field>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform y="8.214mm" w="179mm" minH="3.6mm" layout="tb" name="subTask">
                <bind match="dataRef" ref="$.Task[*]"/>
                <subform name="subTaskHeader" layout="lr-tb" w="179mm">
@@ -2355,7 +2355,6 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -2371,9 +2370,10 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\9053\890_Confirmation_S001IT05_20130703_141046_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Zoom 200?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 130?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:4850000;v:2675000;h:50000;h:500000;h:625000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -2387,6 +2387,7 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -2518,14 +2519,14 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-07-03T12:53:53Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-04T08:02:11Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:50ca05c7-033a-4813-8a9f-35a12ada1de3</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:026726ee-3743-48f9-9662-66774d7c020e</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
