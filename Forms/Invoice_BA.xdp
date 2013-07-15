@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-17T14:30:02Z" uuid="7461627e-551b-4ed8-9390-1b8e7d544630">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-04T08:25:58Z" uuid="22d01325-0bc6-4b77-bc58-13c5218305ae">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -3116,11 +3116,11 @@ catch(e)
             <border>
                <edge presence="hidden"/>
                <edge presence="hidden"/>
-               <edge thickness="0.1mm"/>
+               <edge thickness="0.1mm" presence="hidden"/>
                <edge presence="hidden"/>
                <corner/>
                <corner/>
-               <corner thickness="0.1mm"/>
+               <corner thickness="0.1mm" presence="hidden"/>
                <corner/>
             </border>
          </subform>
@@ -3617,11 +3617,11 @@ catch(e)
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
             <border>
-               <edge presence="hidden"/>
+               <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
-               <corner/>
+               <corner thickness="0.1mm"/>
                <corner/>
                <corner thickness="0.1mm"/>
                <corner/>
@@ -4860,8 +4860,8 @@ this.caption.value.text = output;
       </desc>
       <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 140 35 000300110012002500260027002D002F00310032003300350036004200440045004700480049004A004B004C004E004F005000510052005300550056005700580059005E0060 ./BCDJLNOPRS_abdefghiklmnoprstuv{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 176 47 0003000800110012001D00240025002600280029002A002D002E002F00300032003300350036003900440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B0063006E00A1 %./:ABCEFGJKLMOPRSVabdefghijklmnoprstuvxÅåø?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 144 36 000300110012002500260027002D002F003100320033003500360038004200440045004700480049004A004B004C004E004F005000510052005300550056005700580059005E0060 ./BCDJLNOPRSU_abdefghiklmnoprstuv{}?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 188 50 0003000800110012001D00240025002600280029002A002D002E002F003000320033003500360039004200440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005E00600063006E00A1 %./:ABCEFGJKLMOPRSV_abdefghijklmnoprstuvx{}Ååø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 64 16 000100100025002C0042004500460048004A004C004F00500053005400550056 /DKadegiknorstu?>
@@ -4871,7 +4871,7 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 145?>
+   <?templateDesigner Zoom 130?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -4885,7 +4885,7 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Inv_BA\8 - Invoice_S001IT05_20130606_105243_D_B001OLS_GP.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\755_Invoice_S001IT05_20130704_095739_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
@@ -5039,14 +5039,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-06-17T14:30:02Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-04T08:25:58Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7461627e-551b-4ed8-9390-1b8e7d544630</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:22d01325-0bc6-4b77-bc58-13c5218305ae</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
