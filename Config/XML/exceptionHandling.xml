@@ -38,7 +38,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>The XML file placed in the input catalog was empty</ExceptionDescription>
-			<ExceptionUserMessage><ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage></ExceptionUserMessage>
+			<ExceptionUserMessage><ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage></ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -67,7 +67,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Environment not found</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -99,7 +99,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Unknown LangCode: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -128,7 +128,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>EnvironmentXDPLocation not set</ExceptionDescription>
-<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>		</Target>
+<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>		</Target>
 		<Target>
 			<Lang>NO</Lang>
 			<ExceptionDescription/>
@@ -159,7 +159,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>File not found: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -192,7 +192,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>No OutputTarget found in $, Reverting to default setting (File). File saved as: $ </ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -224,7 +224,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>$ not found</ExceptionDescription>
-<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -256,7 +256,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Logo not found for DocHeaderBrand: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -288,7 +288,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Image not found (replaced with default image), image reference was: $ </ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -317,7 +317,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Failed to Generate PDF</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -346,7 +346,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Failed to Generate PCL</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -378,7 +378,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Using default output target (Filename) as no entry could be found in fileNameConfiguration.xml for document type: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 			<Separators>
 				<Separator>_</Separator>
 			</Separators>
@@ -410,7 +410,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>No Default FileName (OutputTarget) found in XML</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -439,7 +439,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>File could not be written to disk</ExceptionDescription>
-<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -468,7 +468,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Connection to email server failed</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -497,7 +497,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Sending of email failed</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -529,7 +529,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>templateMarkiv-Invoice.xml $ could not be found</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -561,7 +561,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>File could not be written to disk default Filename: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -590,7 +590,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Script file for createXML code not found</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -622,7 +622,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Temporary file could not be written to disk default Filename: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -654,7 +654,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>File was overwritten in Preview folder: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -683,7 +683,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Print of file failed</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -715,7 +715,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>PostScript Conversion of attachment file failed: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -747,7 +747,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>Printing of attachment file failed: $</ExceptionDescription>
-			<ExceptionUserMessage>An Error Occured - please contact Help Desk if this issue occurs again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>

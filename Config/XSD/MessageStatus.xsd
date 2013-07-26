@@ -43,6 +43,7 @@
 										<xs:element name="DealerNo"/>
 										<xs:element name="FinishedTimestamp" minOccurs="0"/>
 										<xs:element name="ErrorTimestamp" minOccurs="0"/>
+										<xs:element name="ErrorDate" minOccurs="0"/>
 										<xs:element name="FileTimestamp"/>
 										<xs:element name="Filename"/>
 									</xs:sequence>
