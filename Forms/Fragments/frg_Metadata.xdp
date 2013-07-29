@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-03T12:01:05Z" uuid="67421742-5319-427f-b83a-0530660a15bb">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-29T05:57:45Z" uuid="39e47f1d-3882-4696-ad3f-078a4b0871df">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -85,7 +85,7 @@
                <font typeface="Myriad Pro"/>
                <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
-               <bind match="dataRef" ref="$record.Document.Pages[*].Page[*].PageHeader.DocHeaderBrand"/>
+               <bind match="dataRef" ref="$record.Document.DocumentHeader.DocHeaderBrand"/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">//console.println(this.rawValue+" dnm");
 if(this.rawValue != "" &amp;&amp; this.rawValue != null)
@@ -155,14 +155,14 @@ DocHeaderBrand.rawValue = this.rawValue;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-07-03T12:01:05Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-29T05:57:45Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:67421742-5319-427f-b83a-0530660a15bb</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:39e47f1d-3882-4696-ad3f-078a4b0871df</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
