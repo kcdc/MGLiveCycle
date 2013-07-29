@@ -315,6 +315,35 @@
 		</Target>
 	</Exception>
 	<Exception>
+		<ExceptionCode>42</ExceptionCode>
+		<ExceptionLevel>Error</ExceptionLevel>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>ExceptionHandling failed - probably missing error code in errorHandling.xml</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
 		<ExceptionCode>51</ExceptionCode>
 		<ExceptionLevel>Warning</ExceptionLevel>
 		<VariableInformation>
