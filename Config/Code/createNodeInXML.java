@@ -44,4 +44,4 @@ for (int i = 0; i < numChildren; i++)
 	
 }
 
-patExecContext.setProcessDataValue("/process_data/xmlVar", document);
+patExecContext.setProcessDataValue("/process_data/inXmlDoc", document);

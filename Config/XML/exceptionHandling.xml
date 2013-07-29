@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExceptionHandling>
 	<Exception>
+		<ExceptionCode>0</ExceptionCode>
+		<ExceptionLevel>Warning</ExceptionLevel>
+		<VariableInformation>
+			<Data>Filename</Data>
+		</VariableInformation>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>Unknown Error processing output file: $</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
 		<ExceptionCode>1</ExceptionCode>
 		<ExceptionLevel>Info</ExceptionLevel>
 		<VariableInformation>
@@ -38,7 +70,9 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>The XML file placed in the input catalog was empty</ExceptionDescription>
-			<ExceptionUserMessage><ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage></ExceptionUserMessage>
+			<ExceptionUserMessage>
+				<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+			</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -93,7 +127,7 @@
 	<Exception>
 		<ExceptionCode>13</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
-				<VariableInformation>
+		<VariableInformation>
 			<Data>LangCode</Data>
 		</VariableInformation>
 		<Target>
@@ -123,12 +157,45 @@
 		</Target>
 	</Exception>
 	<Exception>
+		<ExceptionCode>14</ExceptionCode>
+		<ExceptionLevel>Error</ExceptionLevel>
+		<VariableInformation>
+			<Data>JavaErrorMessage</Data>
+		</VariableInformation>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>XML not formatted correctly - $</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
 		<ExceptionCode>23</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>EnvironmentXDPLocation not set</ExceptionDescription>
-<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>		</Target>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
 		<Target>
 			<Lang>NO</Lang>
 			<ExceptionDescription/>
@@ -224,7 +291,7 @@
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>$ not found</ExceptionDescription>
-<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
@@ -370,6 +437,122 @@
 		</Target>
 	</Exception>
 	<Exception>
+		<ExceptionCode>55</ExceptionCode>
+		<ExceptionLevel>Error</ExceptionLevel>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>Failed to configure XSLT transformation of input XML to DDX</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
+		<ExceptionCode>56</ExceptionCode>
+		<ExceptionLevel>Error</ExceptionLevel>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>Failed to execute XSLT on input XML to DDX</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
+		<ExceptionCode>57</ExceptionCode>
+		<ExceptionLevel>Error</ExceptionLevel>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>Unexpected structure in XML for Attachments</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
+		<ExceptionCode>58</ExceptionCode>
+		<ExceptionLevel>Error</ExceptionLevel>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>DDX for merging PDFs failed</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
 		<ExceptionCode>61</ExceptionCode>
 		<ExceptionLevel>Warning</ExceptionLevel>
 		<VariableInformation>
@@ -434,12 +617,73 @@
 		</Target>
 	</Exception>
 	<Exception>
+		<ExceptionCode>63</ExceptionCode>
+		<ExceptionLevel>Error</ExceptionLevel>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>System Exception on Mail service</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
+		<ExceptionCode>64</ExceptionCode>
+		<ExceptionLevel>Warning</ExceptionLevel>
+		<VariableInformation>
+			<Data>MailTo</Data>
+		</VariableInformation>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>Mail receiver was changed from $ to anita.lillestrom@moller.no</ExceptionDescription>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
 		<ExceptionCode>71</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
 		<Target>
 			<Lang>EN</Lang>
 			<ExceptionDescription>File could not be written to disk</ExceptionDescription>
-<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
+			<ExceptionUserMessage>Unfortunately an error occurred while processing your print output - Please contact Help Desk if this issue happens again</ExceptionUserMessage>
 		</Target>
 		<Target>
 			<Lang>NO</Lang>
