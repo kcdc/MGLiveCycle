@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-26T10:39:47Z" uuid="14442e34-7cd9-4ff8-9c24-3ef478b94c40">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-29T06:03:01Z" uuid="784206ea-0fad-4fa0-97be-6371206144e9">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -381,9 +381,11 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
                <bind/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="172mm" y="7mm">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform x="1.931mm" y="3mm" w="203mm" h="53mm" name="subHeader">
                <bind match="none"/>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="14.069mm" y="7mm">
@@ -400,7 +402,8 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      </field>
                      <?templateDesigner expand 1?>
                   </subform>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 0?>
+               </subform>
                <?templateDesigner expand 1?></subform>
             <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="191mm">
                <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
@@ -416,7 +419,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterA1"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA1"/>
                   </field>
                   <field name="FooterA2" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -428,7 +431,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterA2"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA2"/>
                   </field>
                   <field name="FooterA3" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -440,7 +443,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterA3"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA3"/>
                   </field>
                   <field name="FooterA4" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -452,7 +455,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterA4"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA4"/>
                   </field>
                   <field name="FooterA5" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -464,7 +467,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterA5"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA5"/>
                   </field>
                   <field name="FooterA6" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -476,7 +479,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterA6"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA6"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
                <subform name="sub_FooterB" layout="tb" w="45mm">
@@ -491,7 +494,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterB1"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB1"/>
                   </field>
                   <field name="FooterB2" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -503,7 +506,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterB2"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB2"/>
                   </field>
                   <field name="FooterB3" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -515,7 +518,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterB3"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB3"/>
                   </field>
                   <field name="FooterB4" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -527,7 +530,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterB4"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB4"/>
                   </field>
                   <field name="FooterB5" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -539,7 +542,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterB5"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB5"/>
                   </field>
                   <field name="FooterB6" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -551,7 +554,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterB6"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB6"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
                <subform name="sub_FooterC" layout="tb" w="45mm">
@@ -566,7 +569,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterC1"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC1"/>
                   </field>
                   <field name="FooterC2" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -578,7 +581,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterC2"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC2"/>
                   </field>
                   <field name="FooterC3" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -590,7 +593,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterC3"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC3"/>
                   </field>
                   <field name="FooterC4" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -602,7 +605,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterC4"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC4"/>
                   </field>
                   <field name="FooterC5" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -614,7 +617,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterC5"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC5"/>
                   </field>
                   <field name="FooterC6" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -626,7 +629,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterC6"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC6"/>
                   </field>
                   <?templateDesigner expand 1?></subform>
                <bind match="none"/>
@@ -652,7 +655,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterD1"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD1"/>
                   </field>
                   <field name="FooterD2" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -664,7 +667,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterD2"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD2"/>
                   </field>
                   <field name="FooterD3" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -676,7 +679,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterD3"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD3"/>
                   </field>
                   <field name="FooterD4" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -688,7 +691,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterD4"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD4"/>
                   </field>
                   <field name="FooterD5" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -700,7 +703,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterD5"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD5"/>
                   </field>
                   <field name="FooterD6" w="40mm" minH="2.4mm" access="protected">
                      <ui>
@@ -712,7 +715,7 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                      <font typeface="Arial" size="6pt"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.Document.Pages[*].Page[*].PageHeader.FooterD6"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD6"/>
                   </field>
                   <?templateDesigner expand 0?></subform>
                <?templateDesigner expand 1?></subform>
@@ -1256,7 +1259,6 @@ this.caption.value.text = output;
       </proto>
       <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 40 10 00030033003600440048004A0052005300550057 PSaegoprt?>
       <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 48 12 00270033004400480049004A004C004F00520057005E0060DPaefgilot{}?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 212 53 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F0020002200230025002600270029002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ABDEFHIMPTUVabcdefghilmnoprstvwxyz'?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
@@ -1264,8 +1266,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 50?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -1278,9 +1278,11 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\inXmlDoc_xml_ausv.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\inXmlDoc_xml_ausv_DH.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner Zoom 130?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -1433,9 +1435,9 @@ this.caption.value.text = output;
 </localeSet>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="STD">
-      <uri>.\STD_experiment.xsd</uri>
+      <uri>..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\STD_DocumentHeader.xsd</uri>
       <rootElement>STD</rootElement>
-      <?templateDesigner fileDigest shaHash="KN4Vo5bgXyRqWIDVDpCjP1Hjw6o="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="Z2PLPrqkoTBCott+qNMWDK5RAys="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -1467,28 +1469,28 @@ this.caption.value.text = output;
             </MediaControl>
          </Header>
          <Document>
+            <DocumentHeader>
+               <FooterA1/>
+               <FooterA2/>
+               <FooterA3/>
+               <FooterA5/>
+               <FooterA6/>
+               <FooterB1/>
+               <FooterB4/>
+               <FooterB5/>
+               <FooterC1/>
+               <FooterC2/>
+               <FooterD1/>
+               <FooterD2/>
+               <DealerNameMarketing/>
+               <DocHeaderBrand/>
+            </DocumentHeader>
             <Pages dd:maxOccur="-1">
                <SeparatorPage dd:minOccur="0" dd:maxOccur="-1">
                   <FormName/>
                   <Number/>
                </SeparatorPage>
                <Page dd:maxOccur="-1">
-                  <PageHeader>
-                     <FooterA1/>
-                     <FooterA2/>
-                     <FooterA3/>
-                     <FooterA5/>
-                     <FooterA6/>
-                     <FooterB1/>
-                     <FooterB4/>
-                     <FooterB5/>
-                     <FooterC1/>
-                     <FooterC2/>
-                     <FooterD1/>
-                     <FooterD2/>
-                     <DealerNameMarketing/>
-                     <DocHeaderBrand/>
-                  </PageHeader>
                   <PageDetail dd:maxOccur="-1"/>
                </Page>
             </Pages>
@@ -1499,14 +1501,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-06-26T10:39:47Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-29T06:03:01Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:14442e34-7cd9-4ff8-9c24-3ef478b94c40</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:784206ea-0fad-4fa0-97be-6371206144e9</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -1577,6 +1579,7 @@ this.caption.value.text = output;
    <xs:element name="Document">
       <xs:complexType>
          <xs:sequence>
+            <xs:element ref="DocumentHeader"/>
             <xs:element ref="Pages" maxOccurs="unbounded"/>
          </xs:sequence>
       </xs:complexType>
@@ -1733,7 +1736,6 @@ this.caption.value.text = output;
    <xs:element name="Page">
       <xs:complexType>
          <xs:sequence>
-            <xs:element ref="PageHeader"/>
             <xs:element ref="PageDetail" maxOccurs="unbounded"/>
          </xs:sequence>
       </xs:complexType>
@@ -1800,7 +1802,7 @@ this.caption.value.text = output;
          </xs:restriction>
       </xs:simpleType>
    </xs:element>
-   <xs:element name="PageHeader">
+   <xs:element name="DocumentHeader">
       <xs:complexType>
          <xs:sequence>
             <xs:element ref="FooterA1"/>
