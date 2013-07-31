@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-29T14:22:36Z" uuid="7cb03e01-6e7d-432f-8859-2e0c608a04bb">
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-31T06:32:50Z" uuid="49d967a4-6d00-4929-96a4-344105710f38">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
    <?formServer formModel both?>
    <subform name="STD" layout="tb" locale="sv_SE" restoreState="auto">
       <pageSet>
+         <pageArea name="mpgSeparatorPage" id="1c2dc6f2-f85a-11e2-9454-00059a3c7a00">
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <subform name="Subform3" x="2mm" y="3mm" w="100mm" h="12mm">
+               <bind match="none"/>
+            </subform>
+            <contentArea x="16mm" y="47mm" w="190mm" h="222mm" name="areaPage1" id="areaPage1_ID_copy2_copy1"/>
+            <contentArea w="210mm" h="296mm" name="areaPage1" id="areaPage1_ID_copy1_copy1"/>
+            <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage1" id="facdd4fe-f859-11e2-9454-00059a3c7a00">
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="16mm" y="47mm" w="190mm" h="222mm" name="areaPage1" id="areaPage1_ID_copy2"/>
@@ -351,9 +359,11 @@
                   <?templateDesigner expand 0?></subform>
                <?templateDesigner expand 0?></subform>
             <?templateDesigner expand 1?></pageArea>
-         <pageArea name="mpgSeparatorPage" id="1c2dc6f2-f85a-11e2-9454-00059a3c7a00">
-            <medium stock="a4" short="210mm" long="297mm"/>
-            <contentArea x="16mm" y="47mm" w="190mm" h="222mm" name="areaPage1" id="areaPage1_ID_copy2_copy1"/>
+         <?templateDesigner expand 1?></pageSet>
+      <subform name="pageContent" w="190mm" layout="tb">
+         <bind match="dataRef" ref="$.Document.Pages[*]"/>
+         <subform w="7.480319in" h="10.590542in" name="pageSeparator">
+            <bind match="dataRef" ref="$.SeparatorPage[*]"/>
             <draw name="Image1" y="56mm" x="10mm" w="178mm" h="209mm">
                <value>
                   <image contentType="image/gif">R0lGODlh3ALdAvcAAAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4O
@@ -702,58 +712,41 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                   <text name="embeddedHref">..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\STD\SeparatorPage.gif</text>
                </desc>
             </draw>
-            <contentArea w="210mm" h="296mm" name="areaPage1" id="areaPage1_ID_copy1_copy1"/>
-            <subform name="SeparatorPage" x="16mm" y="7mm">
-               <assist role="TR"/>
-               <occur min="0" max="-1"/>
+            <subform name="Subform2" x="0mm" y="0mm" w="190mm" h="221.999mm">
                <bind match="none"/>
-               <border>
-                  <edge presence="hidden"/>
-               </border>
-               <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+               <field name="FormName" w="3.937014in" h="0.354333in" access="protected">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.FormName"/>
+                  <border>
+                     <edge/>
+                  </border>
+               </field>
+               <field name="Number" w="3.937014in" h="0.354333in" y="9mm" access="protected">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.Number"/>
+                  <border>
+                     <edge/>
+                  </border>
+               </field>
+               <margin topInset="5mm" leftInset="5mm"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></pageArea>
-         <?templateDesigner expand 1?></pageSet>
-      <subform w="7.480319in" h="10.590542in" name="pageSeparator">
-         <bind match="dataRef" ref="$.Document.Pages[*].SeparatorPage[*]"/>
-         <subform name="Subform2" x="0mm" y="0mm" w="116mm" h="78mm">
-            <bind match="none"/>
-            <field name="FormName" w="3.937014in" h="0.354333in">
-               <ui>
-                  <textEdit>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <para vAlign="middle"/>
-               <bind match="dataRef" ref="$.FormName"/>
-               <border>
-                  <edge/>
-               </border>
-            </field>
-            <field name="Number" w="3.937014in" h="0.354333in" y="9mm">
-               <ui>
-                  <textEdit>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <para vAlign="middle"/>
-               <bind match="dataRef" ref="$.Number"/>
-               <border>
-                  <edge/>
-               </border>
-            </field>
-            <margin topInset="5mm" leftInset="5mm"/>
+            <occur min="0" max="-1"/>
+            <breakBefore target="mpgSeparatorPage" targetType="pageArea"/>
             <?templateDesigner expand 1?></subform>
-         <occur min="0" max="-1"/>
-         <?templateDesigner expand 1?>
-         <breakBefore target="mpgSeparatorPage" targetType="pageArea"/>
-      </subform>
-      <subform name="pageContent" w="190mm" layout="tb">
-         <bind match="dataRef" ref="$.Document.Pages[*]"/>
          <subform name="subPageHolder" w="190mm" h="222mm">
             <bind match="dataRef" ref="$.Page[*]"/>
             <occur min="0" max="-1"/>
@@ -792,9 +785,28 @@ T53qVbf61bGeLHWtb53rXff618EedrGPnexlN/vZ0Z52ta+d7W13+9vhHne5z53udbe7KgMCADs=</im
                <?templateDesigner expand 1?></subform>
             <breakBefore target="mpgPage1" targetType="pageArea"/>
             <?templateDesigner expand 1?></subform>
-         <occur max="-1"/>
-         <breakBefore target="mpgPage1" targetType="pageArea"/>
-         <?templateDesigner expand 1?></subform>
+         <breakBefore target="mpgSeparatorPage" targetType="pageArea"/>
+         <occur min="0" max="-1"/>
+         <?templateDesigner expand 1?>
+         <event activity="initialize" name="event__initialize">
+            <script contentType="application/x-javascript">try
+{
+if(this.pageSeparator == null)
+{
+
+	this["#breakBefore"].target = "mpgPage1";
+
+}
+}
+catch(e)
+{
+	this["#breakBefore"].target = "mpgPage1";
+}
+
+
+</script>
+         </event>
+      </subform>
       <field name="exdataTemplate" w="7.480319in" h="1.64125in" presence="hidden">
          <ui>
             <textEdit multiLine="1">
@@ -1251,8 +1263,8 @@ this.caption.value.text = output;
             </field>
          </subform>
       </proto>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 48 12 00270033004400480049004A004C004F00520057005E0060DPaefgilot{}?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 212 53 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F0020002200230025002600270029002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ABDEFHIMPTUVabcdefghilmnoprstvwxyz'?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
@@ -1260,6 +1272,8 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 138?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -1272,11 +1286,9 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\inXmlDoc_xml_ausv_DH.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\010_STD_S001IT01_20130724_124542_D_B998FD.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 138?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -1495,14 +1507,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-07-29T14:22:36Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-07-31T06:32:50Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7cb03e01-6e7d-432f-8859-2e0c608a04bb</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:49d967a4-6d00-4929-96a4-344105710f38</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
