@@ -65,6 +65,38 @@
 		</Target>
 	</Exception>
 	<Exception>
+		<ExceptionCode>2</ExceptionCode>
+		<ExceptionLevel>Info</ExceptionLevel>
+		<VariableInformation>
+			<Data>Filename</Data>
+		</VariableInformation>
+		<Target>
+			<Lang>EN</Lang>
+			<ExceptionDescription>Following file has passed initialization: $</ExceptionDescription>
+			<ExceptionUserMessage>File initialized successfully</ExceptionUserMessage>
+		</Target>
+		<Target>
+			<Lang>NO</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<ExceptionDescription/>
+			<ExceptionUserMessage/>
+		</Target>
+	</Exception>
+	<Exception>
 		<ExceptionCode>11</ExceptionCode>
 		<ExceptionLevel>Error</ExceptionLevel>
 		<Target>

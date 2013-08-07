@@ -21,6 +21,8 @@
 									<xs:documentation>Integer that indicates whether should the result be logged? 1 | 0</xs:documentation>
 								</xs:annotation>
 							</xs:element>
+							<xs:element name="XmlLogging"/>
+							<xs:element name="ServerLogLogging"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
