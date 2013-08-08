@@ -38,8 +38,8 @@ String charSet = patExecContext.getProcessDataValue("/process_data/charSet");
 
 String archiveStorePath = patExecContext.getProcessDataValue("/process_data/archiveStorePath");
 
-//try
-//{
+/*try
+{*/
   String strXPathNode = "";
   DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
   DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
@@ -155,8 +155,20 @@ String value = xp.evaluate(document);
 strXPathNode = "//FAKTDATO";
 XPathExpression xp = XPathFactory.newInstance().newXPath().compile(strXPathNode);
 String invoiceDate = xp.evaluate(document);
-String formattedInvoiceDate = invoiceDate.substring(6,10)+"-"+invoiceDate.substring(3,5)+"-"+invoiceDate.substring(0,2);
-attr.setValue(formattedInvoiceDate);
+
+if(invoiceDate.length() != 10)
+{
+	System.out.println("Length of Invoice Date is supposed to be 10! Length found: "+invoiceDate.length() +" - value will be empty");
+	attr.setValue("");
+
+}
+else if(invoiceDate.length() == 10)
+{
+	String formattedInvoiceDate = invoiceDate.substring(6,10)+"-"+invoiceDate.substring(3,5)+"-"+invoiceDate.substring(0,2);
+	attr.setValue(formattedInvoiceDate);
+	
+}
+
 invoice.setAttributeNode(attr); 
 
 
@@ -227,10 +239,11 @@ transformer.setOutputProperty(OutputKeys.ENCODING,charSet);
   StreamResult result =  new StreamResult(new File(archiveStorePath+"\\"+fileName+".xml"));
   transformer.transform(source, result);
 
-  System.out.println("Done");
-
-/*}catch(ParserConfigurationException pce){
+  System.out.println("Archive file: "+archiveStorePath+"\\"+fileName+".xml"+" was written to disk!");
+/*}
+catch(ParserConfigurationException pce){
   pce.printStackTrace();
-}catch(TransformerException tfe){
+}
+catch(TransformerException tfe){
   tfe.printStackTrace();
 }*/
