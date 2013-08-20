@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreCalculation xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+	<Header>
+		<DocType>PreCalculation</DocType>
+		<Country>NO</Country>
+		<LangCode>NO</LangCode>
+		<DocHeaderBrand>I</DocHeaderBrand>
+		<PreviewCode>V</PreviewCode>
+		<Copies>1</Copies>
+		<TwoSided>no</TwoSided>
+		<LogoImage>Logo</LogoImage>
+		<MediaControl>
+			<OutputTargets>
+				<File>
+					<FileName>PreCalculation.pdf</FileName>
+				</File>
+				<Preview>
+					<ClientAddress>NO0000104460B5</ClientAddress>
+					<PrintId>Kim</PrintId>
+				</Preview>
+			</OutputTargets>
+		</MediaControl>
+	</Header>
+	<Document>
+		<DocumentHeader>
+			<DealerName>Møller Bil Ensjø nyprint</DealerName>
+			<ValuationNo>576</ValuationNo>
+			<PerformedBy>DAG EINAR GRAVDAL</PerformedBy>
+			<DateCreated>2013-01-15</DateCreated>
+			<SellerName>DAG EINAR GRAVDAL</SellerName>
+			<TestLabel>TEST</TestLabel>
+		</DocumentHeader>
+		<HeaderInfo>
+			<CarBrand>VOLKSWAGEN</CarBrand>
+			<CarModel>POLO</CarModel>
+			<CarModelYear>2011</CarModelYear>
+			<CarMileage>42 000</CarMileage>
+			<CarRegDate>2010-12-13</CarRegDate>
+			<CarRegDateLast>2010-12-13</CarRegDateLast>
+			<CarRegNo>LY69675</CarRegNo>
+			<EngineVolume>1 199</EngineVolume>
+			<EngineEffect>75</EngineEffect>
+			<CarVIN>WVWZZZ6RZBY006433</CarVIN>
+			<CarBody>Kombi</CarBody>
+			<FuelTypeText>Diesel</FuelTypeText>
+			<Color>CANDYHVIT</Color>
+			<TimingBeltDate/>
+			<CarGroupText>Personbil</CarGroupText>
+			<CarWeight>1 057</CarWeight>
+			<Imported>Nei</Imported>
+			<CarMileageAtDelivery>45 000</CarMileageAtDelivery>
+			<DateOfLastControl/>
+			<CarMileageLastService>84</CarMileageLastService>
+			<CustomerName>PETTER LUNDQUIST</CustomerName>
+			<GearType>Manuell</GearType>
+			<CarModelDesc>1,2  75 TDI HIGH.      5D</CarModelDesc>
+			<Seats>5</Seats>
+			<TimingBeltMileage/>
+			<Image>\\NO000010SALCT\LCInput\inputImages\\587_00030_MTAKST_20130403_B001DEG.png</Image>
+			<Comment/>
+			<Encumbrance>Nei</Encumbrance>
+			<MajorDamage>Nei</MajorDamage>
+			<MileageConfirmed>Ja</MileageConfirmed>
+			<ChipTuned>Nei</ChipTuned>
+			<ExpectedSalesPrice>136 000</ExpectedSalesPrice>
+			<RegistrationFee>6 059</RegistrationFee>
+			<SalesCost>16 994</SalesCost>
+			<TradeinPrice>107 447</TradeinPrice>
+			<DutyDeduction>1 000</DutyDeduction>
+			<ExpectedCost>4 500</ExpectedCost>
+		</HeaderInfo>
+		<Options>
+			<Option>
+				<OptionDesc>Tonede vinduer bak, fra b- søylen</OptionDesc>
+			</Option>
+			<Option>
+				<OptionDesc>Komfortpakke</OptionDesc>
+			</Option>
+			<Option>
+				<OptionDesc>Media-in m/ipod- adapterkabel</OptionDesc>
+			</Option>
+			<Option>
+				<OptionDesc>Rcd 510 mp3 6 høyttalere</OptionDesc>
+			</Option>
+			<Option>
+				<OptionDesc>Esp</OptionDesc>
+			</Option>
+			<Option>
+				<OptionDesc>Climatronic</OptionDesc>
+			</Option>
+			<Option>
+				<OptionDesc>Multifunksjonsratt skinn</OptionDesc>
+			</Option>
+			<Option>
+				<OptionDesc>Rcd 210</OptionDesc>
+			</Option>
+			<Option>
+				<OptionDesc>Winterpakke</OptionDesc>
+			</Option>
+		</Options>
+	</Document>
+</PreCalculation>
