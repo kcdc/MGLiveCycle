@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-04T08:25:58Z" uuid="22d01325-0bc6-4b77-bc58-13c5218305ae">
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-26T12:03:44Z" uuid="59386426-559b-4af3-8c73-67492cf21cea">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -60,7 +60,6 @@ else
                   <bind/>
                </subform>
                <subform x="17.054mm" y="7mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
-                  <?templateDesigner expand 0?>
                   <bind/>
                   <subform layout="tb" presence="hidden" name="subDNMHolder" w="62mm" y="13mm">
                      <field h="9mm" name="fldDealerNameMarketing" w="37mm">
@@ -69,7 +68,9 @@ else
                      <field h="9mm" name="fldDealerName" w="37mm">
                         <bind ref="Document.DocumentHeader.DealerName" match="dataRef"/>
                      </field>
+                     <?templateDesigner expand 1?>
                   </subform>
+                  <?templateDesigner expand 1?>
                </subform>
                <subform y="31mm" w="179mm" name="subHeaderPart" h="5mm" x="15mm">
                   <bind match="none"/>
@@ -204,31 +205,13 @@ this.caption.value.text = output;
                      </caption>
                      <bind match="dataRef" ref="$.Document.DocumentHeader.InvoiceNo"/>
                      <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">/*
-try
-//{
-//var invoiceCode = Invoice.pageContent.subInvoiceMetadata.InvoiceCode.rawValue;
-
-//if(invoiceCode == "K" || invoiceCode == "N")
-//{
-	//invoiceCode = "_"+invoiceCode;
-//}
-//else
-//{
-//	invoiceCode = "";	
-}
+                        <script contentType="application/x-javascript">
 
 var LangCode = getLanguages.getLanguageSetting();
 
-var output = getLanguages.getLanguageText(LangCode, this.name+invoiceCode);
+var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
-}
-catch(e)
-{
-	
-}
-*/
 </script>
                      </event>
                   </field>
@@ -308,7 +291,7 @@ else
       <subform w="190mm" name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 0?>
+            <?templateDesigner expand 1?>
          </subform>
          <subform name="subInvoiceMetadata" layout="lr-tb" presence="hidden">
             <bind match="none"/>
@@ -3152,8 +3135,7 @@ var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
-
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 
 try
 {
@@ -3242,7 +3224,7 @@ var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 
 
 try
@@ -3431,7 +3413,10 @@ var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+//app.alert("here");
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
+
+//this.caption.value.text = output+" ("+Invoice.pageContent.subInvoiceMetadata.CurrencyCode.rawValue+")";
 }
 else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
 {
@@ -3440,7 +3425,7 @@ else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
 
 	var output = getLanguages.getLanguageText(LangCode, "L_VatText");
 
-	this.caption.value.text = output;
+	this.caption.value.text = output+" ("+Invoice.pageContent.subInvoiceMetadata.CurrencyCode.rawValue+")";
 	
 
 }
@@ -3498,7 +3483,7 @@ var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 
 
 try
@@ -3565,7 +3550,7 @@ var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 
 
 try
@@ -3633,9 +3618,9 @@ catch(e)
                <bind match="none"/>
                <subform w="179.002mm" h="4mm" name="subRow1">
                   <bind match="none"/>
-                  <subform w="179.001mm" h="4mm" name="subAmountToPay" x="0.001mm" y="0mm">
+                  <subform w="179.001mm" h="4mm" name="subAmountToPay" x="0.001mm" y="0.001mm">
                      <bind match="none"/>
-                     <field name="L_PriceVatTotalSum" w="65mm" h="4mm" access="readOnly" x="111.999mm" y="0mm">
+                     <field name="L_PriceVatTotalSum" w="94mm" h="4mm" access="readOnly" x="82.999mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -3644,7 +3629,7 @@ catch(e)
                         </ui>
                         <font size="9pt" typeface="Arial"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <caption reserve="32.9819mm">
+                        <caption reserve="62.0496mm">
                            <font size="8.5pt" typeface="Arial" weight="bold"/>
                            <value>
                               <text>Å betale:</text>
@@ -3656,11 +3641,12 @@ catch(e)
                         </bind>
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
+
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 
 
 try
@@ -3685,7 +3671,7 @@ catch(e)
                            <picture>num{zz,zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0mm">
+                     <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0.001mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -3793,7 +3779,7 @@ var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 }
 else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
 {
@@ -3802,7 +3788,7 @@ else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
 
 	var output = getLanguages.getLanguageText(LangCode, "L_VatText");
 
-	this.caption.value.text = output;
+	this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 	
 
 }
@@ -3861,7 +3847,7 @@ var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 
 
 try
@@ -3925,7 +3911,7 @@ catch(e)
                <corner thickness="0.5mm"/>
                <corner/>
             </border>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform name="subAmountInWords" layout="tb">
             <bind match="none"/>
             <field name="AmountInWords" access="readOnly" w="179mm" minH="3.6mm">
@@ -3946,6 +3932,9 @@ catch(e)
             <occur min="0" max="-1"/>
             <margin topInset="2mm"/>
             <?templateDesigner expand 0?></subform>
+         <subform usehref=".\Fragments\frg_AmountInEuro.xdp#som($template.#subform.subAmountInEuro)">
+            <?templateDesigner expand 1?>
+         </subform>
          <subform w="179mm" name="subFooterLines" layout="tb" x="0.001mm" y="0mm">
             <bind match="none"/>
             <subform w="179mm" name="subFooterLine" layout="tb">
@@ -3970,7 +3959,7 @@ catch(e)
                <?templateDesigner expand 1?></subform>
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subFooterLimitedLines" layout="tb">
             <bind match="dataRef" ref="$.Document.FooterLimitedLines"/>
             <subform w="179mm" name="subFooterLimitedLine" layout="tb">
@@ -4848,6 +4837,7 @@ this.caption.value.text = output;
          <script usehref=".\Fragments\frg_LangLT.xdp#som($template.form1.#subform.#variables.LT)"/>
          <script usehref=".\Fragments\frg_LangEE.xdp#som($template.form1.#subform.#variables.EE)"/>
          <script usehref=".\Fragments\frg_LangLV.xdp#som($template.form1.#subform.#variables.LV)"/>
+         <script usehref=".\Fragments\frg_getVariableValues.xdp#som($template.#subform.#subform.#variables.getVariableValues)"/>
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)" x="-0.0001mm" y="10mm">
@@ -4858,10 +4848,10 @@ this.caption.value.text = output;
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 144 36 000300110012002500260027002D002F003100320033003500360038004200440045004700480049004A004B004C004E004F005000510052005300550056005700580059005E0060 ./BCDJLNOPRSU_abdefghiklmnoprstuv{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 188 50 0003000800110012001D00240025002600280029002A002D002E002F003000320033003500360039004200440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005E00600063006E00A1 %./:ABCEFGJKLMOPRSV_abdefghijklmnoprstuvx{}Ååø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 212 56 0003000800110012001D002400250026002700280029002A002C002D002E002F0030003200330035003600370039003A0042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005C005E00600063006E00A1 %./:ABCDEFGIJKLMOPRSTVW_abcdefghijklmnoprstuvxy{}Ååø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 64 16 000100100025002C0042004500460048004A004C004F00500053005400550056 /DKadegiknorstu?>
@@ -4871,8 +4861,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 130?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -4885,9 +4873,11 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\755_Invoice_S001IT05_20130704_095739_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Tasks\Fase3\Euro\755_Invoice_S001IT05_20130823_134303_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 135?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -5039,14 +5029,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-07-04T08:25:58Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-08-26T12:03:44Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:22d01325-0bc6-4b77-bc58-13c5218305ae</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:59386426-559b-4af3-8c73-67492cf21cea</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -5058,9 +5048,9 @@ this.caption.value.text = output;
 </x:xmpmeta>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="Invoice">
-      <uri>..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8424\Invoice_KC.xsd</uri>
+      <uri>.\XSD\Invoice.xsd</uri>
       <rootElement>Invoice</rootElement>
-      <?templateDesigner fileDigest shaHash="JY2e1FjwCNoP+SJLi/OTr+GKGUU="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="JMxhqZI+2XBPn6HeyJj6Ar7TLh8="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -5181,7 +5171,7 @@ this.caption.value.text = output;
                <GearCode/>
                <Color/>
                <CarType/>
-               <ReasonForCreditLine/>
+               <ReasonForCreditLine dd:maxOccur="2"/>
                <InsuranceNameRef/>
                <WarrentyRef/>
                <WarrentyRefLabel/>
@@ -5190,7 +5180,7 @@ this.caption.value.text = output;
                <Task dd:maxOccur="30">
                   <TaskDetail>
                      <TaskTexts dd:maxOccur="30">
-                        <TaskText dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
+                        <TaskText dd:maxOccur="-1"/>
                      </TaskTexts>
                      <TaskId/>
                      <TaskName/>
@@ -5264,6 +5254,7 @@ this.caption.value.text = output;
                </Task>
             </Tasks>
             <Total>
+               <Currency/>
                <VatPercent/>
                <PriceTotalSum/>
                <VatAmount/>
@@ -5277,6 +5268,10 @@ this.caption.value.text = output;
                <PriceVatTotalToPay/>
                <AmountInWords/>
             </Total>
+            <CurrencySwap>
+               <AmountCurrency2/>
+               <CurrencyRateTxt/>
+            </CurrencySwap>
             <Insurance>
                <InsuranceVat/>
                <VatBasis/>
@@ -5298,7 +5293,7 @@ this.caption.value.text = output;
             <FooterLines>
                <FooterLine dd:maxOccur="30">
                   <FotterLines dd:maxOccur="30">
-                     <FooterLine dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
+                     <FooterLine dd:maxOccur="-1"/>
                   </FotterLines>
                </FooterLine>
             </FooterLines>
@@ -5481,7 +5476,7 @@ this.caption.value.text = output;
                               <xs:element name="GearCode" type="xs:string"/>
                               <xs:element name="Color" type="xs:string"/>
                               <xs:element name="CarType" type="xs:string"/>
-                              <xs:element name="ReasonForCreditLine" type="xs:string"/>
+                              <xs:element maxOccurs="2" name="ReasonForCreditLine" type="xs:string"/>
                               <xs:element name="InsuranceNameRef" type="xs:string"/>
                               <xs:element name="WarrentyRef" type="xs:string"/>
                               <xs:element name="WarrentyRefLabel" type="xs:string"/>
@@ -5491,16 +5486,16 @@ this.caption.value.text = output;
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Task" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Task">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskDetail">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="TaskTexts" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="TaskTexts">
                                                    <xs:complexType>
                                                       <xs:sequence>
-                                                         <xs:element name="TaskText" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                         <xs:element maxOccurs="unbounded" name="TaskText" type="xs:string"/>
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
@@ -5512,7 +5507,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Work" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Work">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="WorkPosNo" type="xs:string"/>
@@ -5526,7 +5521,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="SparePart" maxOccurs="200">
+                                       <xs:element maxOccurs="200" name="SparePart">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="SparePartNo" type="xs:string"/>
@@ -5540,7 +5535,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Material" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Material">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="MaterialNo" type="xs:string"/>
@@ -5554,10 +5549,10 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Package" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Package">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="PkgWork" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="PkgWork">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="WorkPosNo" type="xs:string"/>
@@ -5571,7 +5566,7 @@ this.caption.value.text = output;
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
-                                                <xs:element name="PkgPart" maxOccurs="200">
+                                                <xs:element maxOccurs="200" name="PkgPart">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="SparePartNo" type="xs:string"/>
@@ -5585,7 +5580,7 @@ this.caption.value.text = output;
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
-                                                <xs:element name="PkgMatr" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="PkgMatr">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="MaterialNo" type="xs:string"/>
@@ -5612,6 +5607,7 @@ this.caption.value.text = output;
                      <xs:element name="Total">
                         <xs:complexType>
                            <xs:sequence>
+                              <xs:element name="Currency" type="xs:string"/>
                               <xs:element name="VatPercent" type="xs:string"/>
                               <xs:element name="PriceTotalSum" type="xs:string"/>
                               <xs:element name="VatAmount" type="xs:string"/>
@@ -5624,6 +5620,14 @@ this.caption.value.text = output;
                               <xs:element name="VatAmountToPay" type="xs:string"/>
                               <xs:element name="PriceVatTotalToPay" type="xs:string"/>
                               <xs:element name="AmountInWords" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="CurrencySwap">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="AmountCurrency2" type="xs:string"/>
+                              <xs:element name="CurrencyRateTxt" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -5659,7 +5663,7 @@ this.caption.value.text = output;
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="BottomTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="BottomTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -5672,13 +5676,13 @@ this.caption.value.text = output;
                      <xs:element name="FooterLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLine" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="FooterLine">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FotterLines" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="FotterLines">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="FooterLine" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                <xs:element maxOccurs="unbounded" name="FooterLine" type="xs:string"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
@@ -5691,10 +5695,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLimitedLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLimitedLine" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="FooterLimitedLine">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLimitedLine" type="xs:string" maxOccurs="10"/>
+                                       <xs:element maxOccurs="10" name="FooterLimitedLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -5704,7 +5708,7 @@ this.caption.value.text = output;
                      <xs:element name="CarRemarks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CarRemark" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="CarRemark">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="RemarkPriority" type="xs:string"/>
@@ -5720,7 +5724,7 @@ this.caption.value.text = output;
                         <xs:complexType>
                            <xs:sequence>
                               <xs:element name="ServiceAdvisor" type="xs:string"/>
-                              <xs:element name="AdvertText" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="AdvertText" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>

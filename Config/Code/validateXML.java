@@ -39,8 +39,8 @@ catch(e)
 {
 String[] lines = docString.split("\\n");
 int arrayLine = (e.getLineNumber())-1;
-System.out.println("Newest DocString: "+docString);
-System.out.println("Found exception in line: "+e.getLineNumber());
+//System.out.println("Newest DocString: "+docString);
+//System.out.println("Found exception in line: "+e.getLineNumber());
 String nodeLine = lines[arrayLine];
 String nodeName = nodeLine.substring(lines[arrayLine].indexOf('<')+1, lines[arrayLine].indexOf('>'));
 
@@ -51,16 +51,15 @@ if(exceptionFound == 1)
 
 exceptionFound = 1;
 
-String illegalValue = e.getMessage().substring(e.getMessage().indexOf('"')+1, e.getMessage().lastIndexOf('"'));
-System.out.println("Removing: "+illegalValue);
-String cleanedXML = docString.replaceFirst(illegalValue, "");
+
+System.out.println("Removing line: "+nodeLine);
+String cleanedXML = docString.replaceFirst(nodeLine, "");
 
 accExceptionDescription += e.getMessage()+" Error found in node "+nodeName+" at line "+e.getLineNumber()+", column "+e.getColumnNumber();
-System.out.println("Error: " +accExceptionDescription);
-System.out.println("Newest cleanedXML: "+cleanedXML);
+//System.out.println("Error: " +accExceptionDescription);
+//System.out.println("Newest cleanedXML: "+cleanedXML);
 
 accExceptionDescription = validateXML(cleanedXML, accExceptionDescription, exceptionFound);
-
 
 return accExceptionDescription;
 

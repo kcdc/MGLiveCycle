@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-04T08:02:45Z" uuid="59c40cfe-48e2-4fea-9867-5d214f8f74e0">
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-26T11:43:17Z" uuid="6d361145-29ee-45e1-a2f3-70f02f8b6171">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -1474,52 +1474,7 @@ this.rawValue = output;
          <?templateDesigner expand 1?></pageSet>
       <subform layout="tb" w="190mm" name="pageContent">
          <bind match="none"/>
-         <subform w="179mm" minH="8.703mm" layout="lr-tb" name="subMetadata" presence="hidden">
-            <bind match="none"/>
-            <field name="DocHeaderBrand" minW="3mm" minH="7.821mm">
-               <ui>
-                  <textEdit>
-                     <border>
-                        <edge stroke="lowered"/>
-                     </border>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <para vAlign="middle"/>
-               <caption>
-                  <para vAlign="middle"/>
-                  <value>
-                     <text xliff:rid="5C574856-3FE6-42D2-951C-7EB48D6120DB">Doc Header Brand</text>
-                  </value>
-               </caption>
-               <bind match="dataRef" ref="$.Header.DocHeaderBrand"/>
-            </field>
-            <field name="LangCode" h="5.528mm" minW="3.525mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <para vAlign="middle"/>
-               <bind match="dataRef" ref="$.Header.LangCode"/>
-            </field>
-            <field name="PreviewCode" h="0.217639in" minW="3.175mm" access="readOnly">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <para vAlign="middle"/>
-               <bind match="dataRef" ref="$.Header.PreviewCode"/>
-            </field>
+         <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <?templateDesigner expand 1?></subform>
          <subform w="178mm" name="subInformation" layout="tb">
             <bind match="none"/>
@@ -1931,7 +1886,7 @@ this.caption.value.text = output;
                </field>
                <margin leftInset="1mm"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subTopTextMain" layout="tb">
             <bind match="dataRef" ref="$.Document.TopTextMain"/>
             <subform w="179mm" h="4mm" name="TopTextLines">
@@ -1955,7 +1910,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 1?></subform>
             <margin topInset="1mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" layout="tb" name="subValuationInfo">
             <bind match="dataRef" ref="$.Document.ValuationInfo"/>
             <field name="L_PlannedValuation" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
@@ -1985,7 +1940,7 @@ this.caption.value.text = output;
             </field>
             <margin topInset="1mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subPlannedVisit" layout="tb">
             <bind match="dataRef" ref="$.Document.PlannedVisit"/>
             <field name="L_PlannedVisit" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
@@ -2015,7 +1970,7 @@ this.caption.value.text = output;
             </field>
             <margin topInset="1mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subVisitInfo" layout="tb">
             <bind match="dataRef" ref="$.Document.VisitInfo"/>
             <margin topInset="0mm"/>
@@ -2045,7 +2000,7 @@ this.caption.value.text = output;
                </event>
             </field>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" layout="tb" name="subCarDelivery">
             <bind match="dataRef" ref="$.Document.CarDelivery"/>
             <field name="L_CarDelivery" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
@@ -2074,7 +2029,7 @@ this.caption.value.text = output;
                </event>
             </field>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subCarPickUp" layout="tb">
             <bind match="dataRef" ref="$.Document.CarPickup"/>
             <field name="L_CarPickUp" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
@@ -2103,7 +2058,7 @@ this.caption.value.text = output;
                </event>
             </field>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subCarFinished" layout="tb">
             <bind match="dataRef" ref="$.Document.CarFinished"/>
             <field name="L_CarFinished" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="106.999mm" h="4mm" access="readOnly">
@@ -2132,7 +2087,7 @@ this.caption.value.text = output;
                </event>
             </field>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subCheckList">
             <bind match="dataRef" ref="$.Document.CheckList"/>
             <field name="L_CheckList" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="0.001mm" y="0mm">
@@ -2273,7 +2228,7 @@ this.caption.value.text = output;
                </event>
             </field>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" minH="4mm" layout="tb" name="subReminderList">
             <bind match="none"/>
             <subform w="24mm" minH="4mm" layout="lr-tb" name="subReminderTitle">
@@ -2358,7 +2313,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 1?></subform>
             <margin topInset="0mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform y="134.093mm" w="179mm" minH="8mm" layout="tb" name="subCommentsArea">
             <bind match="none"/>
             <subform w="179mm" layout="tb" name="subComments">
@@ -2402,7 +2357,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 1?></subform>
             <margin topInset="4mm"/>
             <occur max="-1" min="0"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform name="SubTasks" layout="tb" w="179mm">
             <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
             <subform w="179mm" name="subTaskTitle" id="subTaskTitle_ID">
@@ -2641,7 +2596,7 @@ this.caption.value.text = output;
                <?templateDesigner expand 1?></subform>
             <bind match="none"/>
             <overflow leader="subTaskTitle"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" minH="7.2mm" layout="tb" name="subMaterialAndSpareparts">
             <bind match="none"/>
             <subform w="179mm" name="subMaterialsAndSparepartsHeader">
@@ -3168,7 +3123,7 @@ if (numberOfSpareparts == null &amp;&amp; numberOfMaterials == null)
             <margin topInset="1mm"/>
             <overflow leader="subContPageMaterialsAndSparepartsHeader"/>
             <occur max="-1" min="0"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="190mm" name="subSparePartTotal" layout="tb">
             <bind match="none"/>
             <margin topInset="2mm"/>
@@ -3217,7 +3172,8 @@ var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+//this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 </script>
                      </event>
                   </field>
@@ -3246,7 +3202,7 @@ var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 </script>
                      </event>
                   </field>
@@ -3269,7 +3225,7 @@ var LangCode = WorkOrder.pageContent.subMetadata.LangCode.rawValue;
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
+this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 </script>
                      </event>
                      <border/>
@@ -3290,8 +3246,11 @@ this.caption.value.text = output;
                      </border>
                   </field>
                   <?templateDesigner expand 1?></subform>
+               <subform usehref=".\Fragments\frg_AmountInEuro.xdp#som($template.form1.subAmountInEuro)">
+                  <?templateDesigner expand 1?>
+               </subform>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform name="subCarRemarks" layout="tb">
             <bind match="none"/>
             <subform w="100mm" name="subTitle" layout="tb" id="subTitle_ID">
@@ -3558,7 +3517,7 @@ this.rawValue = output;
                <?templateDesigner expand 1?></subform>
             <margin bottomInset="0mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform name="subLastPageInfo" w="190mm" layout="tb">
             <bind match="none"/>
             <field name="L_AdditionalWorkText" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="179mm" h="14.2mm" access="readOnly">
@@ -3979,7 +3938,7 @@ this.caption.value.text = output;
                   </ui>
                </draw>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <overflow trailer="overflowTrailer" leader="" target="mpgPage2"/>
          <breakAfter/>
          <?templateDesigner expand 1?></subform>
@@ -4019,6 +3978,7 @@ this.caption.value.text = output;
          <script usehref=".\Fragments\frg_LangLT.xdp#som($template.form1.#subform.#variables.LT)"/>
          <script usehref=".\Fragments\frg_LangLV.xdp#som($template.form1.#subform.#variables.LV)"/>
          <script usehref=".\Fragments\frg_LangEE.xdp#som($template.form1.#subform.#variables.EE)"/>
+         <script usehref=".\Fragments\frg_getVariableValues.xdp#som($template.form1.#subform.#variables.getVariableValues)"/>
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
@@ -4075,7 +4035,7 @@ this.caption.value.text = output;
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 128 32 00030006001200250027002F003100320033003500360037004200440045004600480049004A004C004E004F0050005200530055005600570059005C005E0060 #/BDLNOPRST_abcefgiklmoprstvy{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 196 51 0003000A00110012001D002400250026002700280029002A002C002D002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006E00A1 './:ABCDEFGIJKLMNOPRSTUVabcdefghijklmnoprstuvyåø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 212 55 0003000A00110012001D002400250026002700280029002A002C002D002E002F003000310032003300350036003700380039003A0042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 './:ABCDEFGIJKLMNOPRSTUVW_abcdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier New" 0 1 ISO-8859-1 4 44 12 0003002700440048004A004D0050005100520057006E Daegjmnotå?>
@@ -4097,13 +4057,13 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\9050\755_WorkOrder_S001IT05_20130703_101109_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til task\9269\755_WorkOrder_S001IT05_20130823_134238_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 135?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 130?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -4117,7 +4077,6 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4255,9 +4214,9 @@ this.caption.value.text = output;
 </localeSet>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="WorkOrder">
-      <uri>..\..\..\Dropbox\MG_LiveCycle\6-Fase 2\Fase 2 - eksempler\Workorder task text\WorkOrderTaskText.xsd</uri>
+      <uri>.\XSD\WorkOrder.xsd</uri>
       <rootElement>WorkOrder</rootElement>
-      <?templateDesigner fileDigest shaHash="0KLHExOEHoA+PeBCvBntdMIsJqU="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="cmQewMx9hkAoKwNy3UZEzwYVkAw="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -4468,12 +4427,17 @@ this.caption.value.text = output;
             </Spareparts>
             <OtherFees dd:dataNode="dataGroup"/>
             <Total>
+               <Currency/>
                <VatPercent/>
                <PriceTotalSum/>
                <VatAmount/>
                <PriceVatTotalSum/>
                <PriceVatTotalInfo/>
             </Total>
+            <CurrencySwap>
+               <AmountCurrency2/>
+               <CurrencyRateTxt/>
+            </CurrencySwap>
             <SumSparePart>
                <SparePartTotAmount/>
             </SumSparePart>
@@ -4494,14 +4458,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-07-04T08:02:45Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-08-26T11:43:17Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:59c40cfe-48e2-4fea-9867-5d214f8f74e0</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:6d361145-29ee-45e1-a2f3-70f02f8b6171</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -4777,7 +4741,7 @@ this.caption.value.text = output;
                                                 <xs:element maxOccurs="30" name="TaskTexts">
                                                    <xs:complexType>
                                                       <xs:sequence>
-                                                         <xs:element maxOccurs="-1" name="TaskText" type="xs:string"/>
+                                                         <xs:element maxOccurs="unbounded" name="TaskText" type="xs:string"/>
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
@@ -4859,11 +4823,20 @@ this.caption.value.text = output;
                      <xs:element name="Total">
                         <xs:complexType>
                            <xs:sequence>
+                              <xs:element name="Currency" type="xs:string"/>
                               <xs:element name="VatPercent" type="xs:string"/>
                               <xs:element name="PriceTotalSum" type="xs:string"/>
                               <xs:element name="VatAmount" type="xs:string"/>
                               <xs:element name="PriceVatTotalSum" type="xs:string"/>
                               <xs:element name="PriceVatTotalInfo" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="CurrencySwap">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="AmountCurrency2" type="xs:string"/>
+                              <xs:element name="CurrencyRateTxt" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
