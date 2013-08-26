@@ -50,10 +50,9 @@ if(exceptionFound == 1)
 }
 
 exceptionFound = 1;
-//if(e.getMessage().contains("Character reference"))
-//{
-//String illegalValue = e.getMessage().substring(e.getMessage().indexOf('"')+1, e.getMessage().lastIndexOf('"'));
-//System.out.println("Removing: "+illegalValue);
+
+
+System.out.println("Removing line: "+nodeLine);
 String cleanedXML = docString.replaceFirst(nodeLine, "");
 
 accExceptionDescription += e.getMessage()+" Error found in node "+nodeName+" at line "+e.getLineNumber()+", column "+e.getColumnNumber();
@@ -61,11 +60,6 @@ accExceptionDescription += e.getMessage()+" Error found in node "+nodeName+" at 
 //System.out.println("Newest cleanedXML: "+cleanedXML);
 
 accExceptionDescription = validateXML(cleanedXML, accExceptionDescription, exceptionFound);
-//}
-//else
-//{
-//	accExceptionDescription = e.getMessage()+" Error found in node "+nodeName+" at line "+e.getLineNumber()+", column "+e.getColumnNumber();
-//}
 
 return accExceptionDescription;
 
