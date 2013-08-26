@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-08T13:07:07Z" uuid="663f1398-2772-49a3-b583-377a69fc2db3">
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-54-26 08:54:52" uuid="24764236-989c-4ed6-8b8e-e2d6efb7dd14">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -66,7 +66,7 @@ var L_PlannedVisit = "Darbu sākums:";
 var L_PlannedWorks = "Plānotie darbi:";
 var L_PreControl = "Veikt priekšpārbaudi / testa braucienu:";
 var L_PrepaymentCar = "Avanss";
-var L_PrepaymentAmount = "Avanss (LVL):";
+var L_PrepaymentAmount = "Avanss:";
 var L_PrePaymentCash = "Avanss nauda:";
 var L_PrePaymentComCar = "Avanss automašīna:";
 var L_PrePaymentTotal = "Avanss kopā:";
@@ -80,15 +80,16 @@ var L_PriceMileageExeeded = "Pārsniegtie km.";
 var L_PriceMileageExeededVat = "Pārsniegtie km.";
 var L_PriceTotal = "Cena kopā";
 var L_PriceTotalColumn = "Summa bez PVN";
-var L_PriceTotalSum = "Pasūtījuma summa bez PVN (LVL):";
-var L_PriceTotalSum2 = "Kopā bez PVN (LVL)";
+var L_PriceTotalSum = "Pasūtījuma summa bez PVN:";
+var L_PriceTotalSum2 = "Kopā bez PVN";
 var L_PriceTotalSumCarSales = "Kopējā summa:";
-var L_PriceTotalSumPrepay = "Avanss ar PVN (LVL)";
+var L_PriceTotalSumPrepay = "Avanss ar PVN";
 var L_PriceType_B = "Kopējā summa ar PVN";
 var L_PriceType_N = "Kopējā summa bez PVN";
-var L_PriceVatTotalSum = "Kopā ar PVN (LVL):";
-var L_PriceVatTotalSumLocal = "Kopējā pasūtījuma summa (LVL):";
-var L_PriceVatTotalToPay = "Jamaksā ar PVN (LVL)";
+var L_PriceVatTotalSum = "Kopā ar PVN:";
+var L_Sum = "Summa";
+var L_PriceVatTotalSumLocal = "Kopējā pasūtījuma summa:";
+var L_PriceVatTotalToPay = "Jamaksā ar PVN";
 var L_Product = "Produkts";
 var L_Quantity = "Skaits";
 var L_RebuildPriceTotal = "Pārbūves izmaksas";
@@ -98,13 +99,13 @@ var L_ReceivedText_V = "Esmu saņēmis rēķinā uzrādītās preces un pakalpoj
 var L_ReferenceNo = "Pasūtijums Nr.";
 var L_RegistrationDesc = "Reģistrācijas izdevumi.";
 var L_RemarkDate = "Datums";
-var L_RemarkPriority = "Prioaritāte";
+var L_RemarkPriority = "Prioritāte";
 var L_RemarksText = "Esmu iepazīstināts ar piezīmēm.";
 var L_RemarkText = "Apraksts";
 var L_Remember = "Papildus:";
 var L_RentalCalculation = "Līzinga aprēķins (* = bez PVN)";
 var L_RepeatedRepair = "Atkārtots remonts:";
-var L_RestPayTotal = "Jamaksā ar PVN (LVL)";
+var L_RestPayTotal = "Jamaksā ar PVN";
 var L_Reviewed = "Klients iepazīstināts:";
 var L_SalesRep = "Pārdevējs2";
 var L_RemainingValue = "Atlikusī vērtība:";
@@ -126,8 +127,8 @@ var L_SwiftCode = "Kods:";
 var L_Task = "Uzdevums";
 var L_TaskId = "Uzdevums Nr.";
 var L_TaskLetter = "U";
-var L_ThankYouTextConfirmation = "Cienijamais klient, Mēs esam gandarīti, ka izvēlējāties mūsu servisa pakalpojumus.";
-var L_ThankYouTextPriceestimate = "Pateicamies par izrādīto intresi par mūsu pakalpojumiem.";
+var L_ThankYouTextConfirmation = "Cienījamais klient, Mēs esam gandarīti, ka izvēlējāties mūsu servisa pakalpojumus.";
+var L_ThankYouTextPriceestimate = "Pateicamies par izrādīto interesi par mūsu pakalpojumiem.";
 var L_ThroughputNo = "Pasūtijums Nr.:";
 var L_TimeTotal = "Laiks kopā";
 var L_TotalCostPerYear = "Kopējās gada izmaksas (ar pirmo iemaksu)";
@@ -151,17 +152,17 @@ var L_TradeInVIN = "Šasijas Nr.:";
 var L_TransType_D = "Preču piegāde";
 var L_TransType_P = "Avanss";
 var L_TransType_V = "Pakalpojumu sniegšana";
-var L_Unit = "Merv";
-var L_VatAmountColon = "PVN (LVL):";
+var L_Unit = "Mērv.";
+var L_VatAmountColon = "PVN:";
 var L_VatBasis = "PVN bāze:";
 var L_VatContract = "PVN bāze";
 var L_VatIncluded = "Visas cenas norādītas ar PVN";
 var L_VatPayerNo = "PVN maksātāja Nr.:";
 var L_VatText = "PVN Netiek aprēķināts";
-var L_VatZeroText = "PVN 0% (LVL)";
+var L_VatZeroText = "PVN 0%";
 var L_Upgrade = "Akcija:";
 var L_UserName = "Lietotājs:";
-var L_VatAmount = "PVN (LVL)";
+var L_VatAmount = "PVN";
 var L_VWMBFLoanEstablishFee = "Līguma komisija";
 var L_VWMBFPeriodLoanFee = "Mēneša komisija";
 var L_Work = "Darbs";
@@ -172,12 +173,13 @@ var L_VehicleDiscount = "Atlaide automašīnai";
 var L_VehiclePrice = "Automašīnas cena";
 var L_VisitAddress = "Adrese:";
 var L_YourServiceAdvisor = "Jūsu servisa konsultants,";
+var L_DateOfInvoice = "Rēķina datums:";
 var L_AdditionalInfo = "Papildus informācija";
 var L_AdditionalLease = "Papilus maksājumi mēnesī **";
 var L_AdditionalLeaseVat = "Papilus maksājumi mēnesī **";
 var L_AdditionalWorkText = "Papildus darbi, kuri ir saskaņoti ar klientu";
 var L_AdditonalProduct = "** Papildus maksājumi:";
-var L_AmountToPay = "Jamaksā (LVL):";
+var L_AmountToPay = "Jamaksā:";
 var L_ApprovedBy = "Apstiprinājis:";
 var L_ArrangementFee = "Līguma komisija";
 var L_ArrangementFeeVat = "Līguma komisija";
@@ -193,7 +195,7 @@ var L_CarFinishedDate = "Vienošanās:";
 var L_CarGearBox = "Ātrumkārba:";
 var L_CarLocation = "A/M atrašanās vieta stāvvietā:";
 var L_CarMileage = "Nobraukums:";
-var L_CarMileageCur = "Noskrējiens";
+var L_CarMileageCur = "Nobraukums:";
 var L_CarModelDesc = "Modeļa apraksts:";
 var L_CarModelInfo = "Bāzes cena:";
 var L_CarModelYear = "Modeļa gads:";
@@ -256,33 +258,29 @@ var L_EconomicalTransType = "Saimnieciskā darījuma apraksts:";
 var L_EnvironmentalClass = "Vides klase:";
 var L_ExtensionsText = "Papildus izmaksas tiks iepriekš saskaņotas.";
 var L_Financing = "Finansējums";
-var L_ForeignSalesVat = "PVN 0% (LVL)";
+var L_ForeignSalesVat = "PVN 0%";
 var L_FreightPriceTotal = "Piegādes izmaksas";
 var L_GreetingsText = "Ar cieņu,";
 var L_Hour = "h";
 var L_Insurance = "Apdrošināšāna";
 var L_InsuranceMileage = "Nobraukums gadā, km:";
-var L_Interior = "Interjērs: ";
+var L_Interior = "Interjērs:";
 var L_InvoiceNo = "Rēķina Nr.:";
 
 		
-               
-               
-			   
-			   
-
                <?templateDesigner isFragment yes?>
                <?templateDesigner fragmentTitle frg_LangLV?>
-               <?templateDesigner fragmentDescription BA_X?></script>
+			   <?templateDesigner fragmentDescription BA_X?>
+			   </script>
          </variables>
       </subform>
    </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 125?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner SavePDFWithLog 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 133?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner SavePDFWithLog 0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -312,14 +310,14 @@ var L_InvoiceNo = "Rēķina Nr.:";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-08-08T13:07:07Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-01-30T09:43:33Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:663f1398-2772-49a3-b583-377a69fc2db3</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:24764236-989c-4ed6-8b8e-e2d6efb7dd14</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -332,7 +330,7 @@ var L_InvoiceNo = "Rēķina Nr.:";
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">BA_X</rdf:li>
+                        <rdf:li xml:lang="x-default"/>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.#subform.#variables.LV</dc:identifier>
@@ -429,108 +427,6 @@ var L_InvoiceNo = "Rēķina Nr.:";
       <currencySymbols>
          <currencySymbol name="symbol">Â£</currencySymbol>
          <currencySymbol name="isoname">GBP</currencySymbol>
-         <currencySymbol name="decimal">,</currencySymbol>
-      </currencySymbols>
-      <typefaces>
-         <typeface name="Myriad Pro"/>
-         <typeface name="Minion Pro"/>
-         <typeface name="Courier Std"/>
-         <typeface name="Adobe Pi Std"/>
-         <typeface name="Adobe Hebrew"/>
-         <typeface name="Adobe Arabic"/>
-         <typeface name="Adobe Thai"/>
-         <typeface name="Kozuka Gothic Pro-VI M"/>
-         <typeface name="Kozuka Mincho Pro-VI R"/>
-         <typeface name="Adobe Ming Std L"/>
-         <typeface name="Adobe Song Std L"/>
-         <typeface name="Adobe Myungjo Std M"/>
-      </typefaces>
-   </locale>
-   <locale name="no_NO" desc="Norsk, bokmål (Norge)">
-      <calendarSymbols name="gregorian">
-         <monthNames>
-            <month>januar</month>
-            <month>februar</month>
-            <month>mars</month>
-            <month>april</month>
-            <month>mai</month>
-            <month>juni</month>
-            <month>juli</month>
-            <month>august</month>
-            <month>september</month>
-            <month>oktober</month>
-            <month>november</month>
-            <month>desember</month>
-         </monthNames>
-         <monthNames abbr="1">
-            <month>jan.</month>
-            <month>feb.</month>
-            <month>mars</month>
-            <month>apr.</month>
-            <month>mai.</month>
-            <month>juni</month>
-            <month>juli</month>
-            <month>aug.</month>
-            <month>sep.</month>
-            <month>okt.</month>
-            <month>nov.</month>
-            <month>des.</month>
-         </monthNames>
-         <dayNames>
-            <day>søndag</day>
-            <day>mandag</day>
-            <day>tirsdag</day>
-            <day>onsdag</day>
-            <day>torsdag</day>
-            <day>fredag</day>
-            <day>lørdag</day>
-         </dayNames>
-         <dayNames abbr="1">
-            <day>søn.</day>
-            <day>man.</day>
-            <day>tir.</day>
-            <day>ons.</day>
-            <day>tor.</day>
-            <day>fre.</day>
-            <day>lør.</day>
-         </dayNames>
-         <meridiemNames>
-            <meridiem>AM</meridiem>
-            <meridiem>PM</meridiem>
-         </meridiemNames>
-         <eraNames>
-            <era>f.Kr.</era>
-            <era>e.Kr.</era>
-         </eraNames>
-      </calendarSymbols>
-      <datePatterns>
-         <datePattern name="full">EEEE D. MMMM YYYY</datePattern>
-         <datePattern name="long">D. MMMM YYYY</datePattern>
-         <datePattern name="med">D. MMM YYYY</datePattern>
-         <datePattern name="short">DD.MM.YY</datePattern>
-      </datePatterns>
-      <timePatterns>
-         <timePattern name="full">'kl. 'HH.MM.SS Z</timePattern>
-         <timePattern name="long">HH.MM.SS Z</timePattern>
-         <timePattern name="med">HH.MM.SS</timePattern>
-         <timePattern name="short">HH.MM</timePattern>
-      </timePatterns>
-      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
-      <numberPatterns>
-         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
-         <numberPattern name="currency">$ z,zz9.99</numberPattern>
-         <numberPattern name="percent">z,zz9 %</numberPattern>
-      </numberPatterns>
-      <numberSymbols>
-         <numberSymbol name="decimal">,</numberSymbol>
-         <numberSymbol name="grouping"> </numberSymbol>
-         <numberSymbol name="percent">%</numberSymbol>
-         <numberSymbol name="minus">-</numberSymbol>
-         <numberSymbol name="zero">0</numberSymbol>
-      </numberSymbols>
-      <currencySymbols>
-         <currencySymbol name="symbol">kr</currencySymbol>
-         <currencySymbol name="isoname">NOK</currencySymbol>
          <currencySymbol name="decimal">,</currencySymbol>
       </currencySymbols>
       <typefaces>
