@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-27T06:52:30Z" uuid="3d787fcd-442e-4a60-9d7c-13fe3e283f0a">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-27T10:49:13Z" uuid="60c53242-3578-4340-985e-0f98305b3c2e">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -8,8 +8,8 @@
          <pageArea>
             <contentArea x="15mm" y="43mm" w="190mm" h="227mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
-         </pageArea>
-      </pageSet>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
       <subform w="179mm" name="subAmountInEuro" layout="tb">
          <bind match="dataRef" ref="$.Document.CurrencySwap"/>
          <subform layout="tb" minH="4mm" name="subAmountLine" w="179mm">
@@ -46,7 +46,7 @@ else
                </event>
                <bind match="none"/>
             </field>
-            <field name="fldAmountInEuros" y="0mm" x="0mm" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
+            <field name="fldAmount" y="0mm" x="0mm" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -57,7 +57,7 @@ else
                <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                <bind match="dataRef" ref="$.AmountCurrency2"/>
             </field>
-            <field name="L_InvoiceTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField015023" presence="hidden" access="readOnly">
+            <field name="L_InvoiceEuroTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField015023" presence="hidden" access="readOnly">
                <ui>
                   <textEdit>
                      <border>
@@ -102,7 +102,7 @@ else
 </script>
                </event>
             </field>
-            <field name="L_DocTypePriceEstimate" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField025118" presence="hidden" access="readOnly">
+            <field name="L_PriceestimateEuroTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField025118" presence="hidden" access="readOnly">
                <ui>
                   <textEdit>
                      <border>
@@ -142,7 +142,7 @@ if(output != "")
 </script>
                </event>
             </field>
-            <field name="L_Confirmation" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField023059" presence="hidden" access="readOnly">
+            <field name="L_ConfirmationEuroTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField023059" presence="hidden" access="readOnly">
                <ui>
                   <textEdit>
                      <border>
@@ -182,7 +182,7 @@ if(output != "")
 </script>
                </event>
             </field>
-            <field name="L_DocTypeWorkOrder" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField012825" presence="hidden" access="readOnly">
+            <field name="L_WorkOrderEuroTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField012825" presence="hidden" access="readOnly">
                <ui>
                   <textEdit>
                      <border>
@@ -256,9 +256,10 @@ if(output != "")
             <?templateDesigner expand 1?></subform>
          <margin topInset="4mm"/>
          <occur min="0" max="-1"/>
-         <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle frg_AmountInEuro?></subform>
+         <?templateDesigner fragmentTitle frg_AmountInEuro?>
+         <?templateDesigner expand 1?></subform>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 132 33 00030024002600270028002C002F0032003300360037003A004200440046004700480049004C004E004F005000510052005300550056005700580059005C005E0060 ACDEILOPSTW_acdefiklmnoprstuvy{}?>
    </subform>
    <?templateDesigner SaveTaggedPDF 1?>
@@ -292,14 +293,14 @@ if(output != "")
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-08-27T06:52:30Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-08-27T10:49:13Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3d787fcd-442e-4a60-9d7c-13fe3e283f0a</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:60c53242-3578-4340-985e-0f98305b3c2e</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-54-26 08:54:52" uuid="24764236-989c-4ed6-8b8e-e2d6efb7dd14">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-30-27 12:30:01" uuid="260ee3f4-9b73-47d4-b831-7903626c4a5a">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -87,7 +87,7 @@ var L_PriceTotalSumPrepay = "Avanss ar PVN";
 var L_PriceType_B = "Kopējā summa ar PVN";
 var L_PriceType_N = "Kopējā summa bez PVN";
 var L_PriceVatTotalSum = "Kopā ar PVN:";
-var L_Sum = "Summa";
+var L_Sum = "summa";
 var L_PriceVatTotalSumLocal = "Kopējā pasūtījuma summa:";
 var L_PriceVatTotalToPay = "Jamaksā ar PVN";
 var L_Product = "Produkts";
@@ -98,6 +98,7 @@ var L_ReceivedText_D = "Esmu saņēmis visas rēķinā uzrādītās preces.";
 var L_ReceivedText_V = "Esmu saņēmis rēķinā uzrādītās preces un pakalpojumus, kā arī izmantotās rezerves daļas.";
 var L_ReferenceNo = "Pasūtijums Nr.";
 var L_RegistrationDesc = "Reģistrācijas izdevumi.";
+var L_InvoiceEuroTitle = "Rēķina";
 var L_RemarkDate = "Datums";
 var L_RemarkPriority = "Prioritāte";
 var L_RemarksText = "Esmu iepazīstināts ar piezīmēm.";
@@ -174,6 +175,9 @@ var L_VehiclePrice = "Automašīnas cena";
 var L_VisitAddress = "Adrese:";
 var L_YourServiceAdvisor = "Jūsu servisa konsultants,";
 var L_DateOfInvoice = "Rēķina datums:";
+var L_PriceestimateEuroTitle = "Piedāvājuma";
+var L_ConfirmationEuroTitle = "Pasūtijuma";
+var L_WorkOrderEuroTitle = "Pasūtijuma";
 var L_AdditionalInfo = "Papildus informācija";
 var L_AdditionalLease = "Papilus maksājumi mēnesī **";
 var L_AdditionalLeaseVat = "Papilus maksājumi mēnesī **";
@@ -317,7 +321,7 @@ var L_InvoiceNo = "Rēķina Nr.:";
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:24764236-989c-4ed6-8b8e-e2d6efb7dd14</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:260ee3f4-9b73-47d4-b831-7903626c4a5a</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
