@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-27T11:31:23Z" uuid="1a121aee-70c4-4874-8e7b-6b0c479810a9">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-27T11:36:38Z" uuid="0ca350cb-087b-4f62-8174-44dc640037ed">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -265,8 +265,9 @@ if(output != "")
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
    <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 135?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 135?></template>
+   <?templateDesigner Guidelines h:12786;h:18896;h:11673?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -293,14 +294,14 @@ if(output != "")
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-08-27T11:31:23Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-08-27T11:36:38Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:1a121aee-70c4-4874-8e7b-6b0c479810a9</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:0ca350cb-087b-4f62-8174-44dc640037ed</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
