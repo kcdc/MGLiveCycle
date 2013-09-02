@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-13T06:48:36Z" uuid="75b851e0-00fb-4062-95b9-0e01637462a6">
-=======
-<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-08T13:11:25Z" uuid="51d55f7e-2d4a-4afe-9a49-1a1e5cb21d33">
->>>>>>> test:Forms/Fragments/frg_LangEE.xdp
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-54-26 08:54:52" uuid="2b9c28be-148e-4494-a22e-29f58af7fb54">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -92,14 +87,14 @@ var L_PriceTotalSumCarSales = "Sõiduki maksumus kokku:";
 var L_PriceTotalSumPrepay = "Ettemaks:";
 var L_PriceType_B = "Summa koos KM";
 var L_PriceType_N = "Summa ilma KM";
-var L_PriceVatTotalSumLocal = "Arve kokku (EUR):";
-var L_PriceVatTotalToPay = "Maksta jäänud (EUR):";
+var L_PriceVatTotalSumLocal = "Arve kokku:";
+var L_PriceVatTotalToPay = "Maksta jäänud:";
 var L_Product = "Kirjeldus";
 var L_Quantity = "Kogus";
 var L_ReceivedText_D = "Olen kätte saanud kõik varuosad.";
 var L_ReceivedText_V = "Olen kätte saanud kõik varuosad ja hooldused.";
 var L_ReferenceNo = "Pakkumise nr:";
-var L_PriceVatTotalSum = "Arve kokku (EUR):";
+var L_PriceVatTotalSum = "Arve kokku:";
 var L_RemarkDate = "Kuupäev";
 var L_RemarkPriority = "Prioriteet";
 var L_RemarksText = "Tutvunud:";
@@ -107,7 +102,7 @@ var L_RemarkText = "Kirjeldus";
 var L_Remember = "Täiendavalt:";
 var L_RentalCalculation = "Kalkulatsiooni andmed (* = ilma KM)";
 var L_RepeatedRepair = "Korduvremont:";
-var L_RestPayTotal = "Maksta jäänud (EUR):";
+var L_RestPayTotal = "Maksta jäänud:";
 var L_Reviewed = "Üle vaadanud:";
 var L_RegistrationDesc = "Sõiduki registreerimise tasud ilma käibemaksuta:";
 var L_RemainingValue = "Jääkväärtus:";
@@ -116,11 +111,7 @@ var L_ServiceAdvisor = "Teeninduse konsultant,";
 var L_ServiceAdvisorColon = "Teeninduse konsultant:";
 var L_ServiceCharge = "Teenuslepingu kuumaks";
 var L_ServiceChargeVat = "Teenuslepingu kuumaks";
-<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
-var L_ServiceEUText = "??????";
-=======
 var L_ServiceEUText = "Applied KMS§ 15 lg.4 p.1, reverse charge.";
->>>>>>> test:Forms/Fragments/frg_LangEE.xdp
 var L_Signature = "Allkiri";
 var L_SignatureColon = "Allkiri:";
 var L_SignatureDate = "Kuupäev";
@@ -156,16 +147,16 @@ var L_TradeInRegno = "RegNr:";
 var L_TradeInText = "Tagastatava sõiduki hinnanguline ostuhind on indikatiivne ja võib muutuda. Täpsemat informatsiooni ostuhinna võimalike muutuste kohta palume küsida teid teenindava müügikonsultandi käest.";
 var L_TradeInVIN = "VIN:";
 var L_Unit = "Ühik";
-var L_VatAmount = "Käibemaks (EUR):";
+var L_VatAmount = "Käibemaks:";
 var L_VatAmountCash = "KM kokku:";
-var L_VatAmountColon = "Käibemaks (EUR):";
+var L_VatAmountColon = "Käibemaks:";
 var L_VatBasis = "KM alus:";
 var L_VatContract = "KM alus:";
 var L_VatIncluded = "Kõik hinnad sisaldavad käibemaksu";
 var L_VatPayerNo = "KMKR:";
 var L_VatRateCash = "Käibemaksu määr:";
 var L_VatText = "Ilma käibemaksuta";
-var L_VatZeroText = "KM 0% (EUR)";
+var L_VatZeroText = "KM 0%";
 var L_Upgrade = "Aktsioon:";
 var L_UserName = "Kasutaja:";
 var L_VisitAddress = "Aadress:";
@@ -216,11 +207,7 @@ var L_Code = "Kood";
 var L_ColorInfo = "Sõiduki värvus:";
 var L_CompanyRegno = "Registrikood:";
 var L_Confirmation = "Pakkumise kinnitus";
-<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
-var L_ContactTxt = "Siia tekst selle kohta et klient lubab kasutada tema andmeid tulevikus";
-=======
 var L_ContactTxt = "Parema teenuse pakkumiseks luban kasutada oma isikuandmeid (ees- ja perekonnanimi, aadress, telefoni number, sõiduki registrimärk, e-posti aadress), informatsiooni edastamiseks (nt SMS teavitus hooldusaja kohta) ja tagasiside saamiseks klienditeeninduse kvaliteedi kohta.";
->>>>>>> test:Forms/Fragments/frg_LangEE.xdp
 var L_ContNextPage = "Jätkub järgmisel lehel";
 var L_ContractNo = "Lepingu nr:";
 var L_ControlSignature = "Kontrollija allkiri:";
@@ -270,28 +257,19 @@ var L_InsuranceMileage = "Aastane läbisõit km:";
 var L_Interior = "Sõiduki sisu värvus:";
 
 		
-               
-               
-			   
-			   
-
                <?templateDesigner isFragment yes?>
                <?templateDesigner fragmentTitle frg_LangEE?>
-               <?templateDesigner fragmentDescription BA_X?></script>
+			   <?templateDesigner fragmentDescription BA_X?>
+			   </script>
          </variables>
       </subform>
    </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 125?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner SavePDFWithLog 0?>
-   <?templateDesigner FormTargetVersion 30?>
-<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 110?></template>
-=======
-   <?templateDesigner Zoom 133?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
->>>>>>> test:Forms/Fragments/frg_LangEE.xdp
+   <?templateDesigner SavePDFWithLog 0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -321,22 +299,14 @@ var L_Interior = "Sõiduki sisu värvus:";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
-         <xmp:MetadataDate>2013-06-13T06:48:36Z</xmp:MetadataDate>
-=======
-         <xmp:MetadataDate>2013-08-08T13:11:25Z</xmp:MetadataDate>
->>>>>>> test:Forms/Fragments/frg_LangEE.xdp
+         <xmp:MetadataDate>2013-01-30T09:43:33Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
-         <xmpMM:DocumentID>uuid:75b851e0-00fb-4062-95b9-0e01637462a6</xmpMM:DocumentID>
-=======
-         <xmpMM:DocumentID>uuid:51d55f7e-2d4a-4afe-9a49-1a1e5cb21d33</xmpMM:DocumentID>
->>>>>>> test:Forms/Fragments/frg_LangEE.xdp
+         <xmpMM:DocumentID>uuid:2b9c28be-148e-4494-a22e-29f58af7fb54</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -349,7 +319,7 @@ var L_Interior = "Sõiduki sisu värvus:";
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">BA_X</rdf:li>
+                        <rdf:li xml:lang="x-default"/>
                      </rdf:Alt>
                   </dc:description>
                   <dc:identifier>$template.form1.#subform.#variables.EE</dc:identifier>
@@ -446,108 +416,6 @@ var L_Interior = "Sõiduki sisu värvus:";
       <currencySymbols>
          <currencySymbol name="symbol">Â£</currencySymbol>
          <currencySymbol name="isoname">GBP</currencySymbol>
-         <currencySymbol name="decimal">,</currencySymbol>
-      </currencySymbols>
-      <typefaces>
-         <typeface name="Myriad Pro"/>
-         <typeface name="Minion Pro"/>
-         <typeface name="Courier Std"/>
-         <typeface name="Adobe Pi Std"/>
-         <typeface name="Adobe Hebrew"/>
-         <typeface name="Adobe Arabic"/>
-         <typeface name="Adobe Thai"/>
-         <typeface name="Kozuka Gothic Pro-VI M"/>
-         <typeface name="Kozuka Mincho Pro-VI R"/>
-         <typeface name="Adobe Ming Std L"/>
-         <typeface name="Adobe Song Std L"/>
-         <typeface name="Adobe Myungjo Std M"/>
-      </typefaces>
-   </locale>
-   <locale name="no_NO" desc="Norsk, bokmål (Norge)">
-      <calendarSymbols name="gregorian">
-         <monthNames>
-            <month>januar</month>
-            <month>februar</month>
-            <month>mars</month>
-            <month>april</month>
-            <month>mai</month>
-            <month>juni</month>
-            <month>juli</month>
-            <month>august</month>
-            <month>september</month>
-            <month>oktober</month>
-            <month>november</month>
-            <month>desember</month>
-         </monthNames>
-         <monthNames abbr="1">
-            <month>jan.</month>
-            <month>feb.</month>
-            <month>mars</month>
-            <month>apr.</month>
-            <month>mai.</month>
-            <month>juni</month>
-            <month>juli</month>
-            <month>aug.</month>
-            <month>sep.</month>
-            <month>okt.</month>
-            <month>nov.</month>
-            <month>des.</month>
-         </monthNames>
-         <dayNames>
-            <day>søndag</day>
-            <day>mandag</day>
-            <day>tirsdag</day>
-            <day>onsdag</day>
-            <day>torsdag</day>
-            <day>fredag</day>
-            <day>lørdag</day>
-         </dayNames>
-         <dayNames abbr="1">
-            <day>søn.</day>
-            <day>man.</day>
-            <day>tir.</day>
-            <day>ons.</day>
-            <day>tor.</day>
-            <day>fre.</day>
-            <day>lør.</day>
-         </dayNames>
-         <meridiemNames>
-            <meridiem>AM</meridiem>
-            <meridiem>PM</meridiem>
-         </meridiemNames>
-         <eraNames>
-            <era>f.Kr.</era>
-            <era>e.Kr.</era>
-         </eraNames>
-      </calendarSymbols>
-      <datePatterns>
-         <datePattern name="full">EEEE D. MMMM YYYY</datePattern>
-         <datePattern name="long">D. MMMM YYYY</datePattern>
-         <datePattern name="med">D. MMM YYYY</datePattern>
-         <datePattern name="short">DD.MM.YY</datePattern>
-      </datePatterns>
-      <timePatterns>
-         <timePattern name="full">'kl. 'HH.MM.SS Z</timePattern>
-         <timePattern name="long">HH.MM.SS Z</timePattern>
-         <timePattern name="med">HH.MM.SS</timePattern>
-         <timePattern name="short">HH.MM</timePattern>
-      </timePatterns>
-      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
-      <numberPatterns>
-         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
-         <numberPattern name="currency">$ z,zz9.99</numberPattern>
-         <numberPattern name="percent">z,zz9 %</numberPattern>
-      </numberPatterns>
-      <numberSymbols>
-         <numberSymbol name="decimal">,</numberSymbol>
-         <numberSymbol name="grouping"> </numberSymbol>
-         <numberSymbol name="percent">%</numberSymbol>
-         <numberSymbol name="minus">-</numberSymbol>
-         <numberSymbol name="zero">0</numberSymbol>
-      </numberSymbols>
-      <currencySymbols>
-         <currencySymbol name="symbol">kr</currencySymbol>
-         <currencySymbol name="isoname">NOK</currencySymbol>
          <currencySymbol name="decimal">,</currencySymbol>
       </currencySymbols>
       <typefaces>
