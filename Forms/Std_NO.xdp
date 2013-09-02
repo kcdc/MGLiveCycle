@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-08T11:36:16Z" uuid="41a124c1-598e-440b-bf95-7aea624106a8">
+<template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="STD" layout="tb" locale="sv_SE" restoreState="auto">
+      <pageSet>
+         <pageArea name="mpgSeparatorPage" id="1c2dc6f2-f85a-11e2-9454-00059a3c7a00">
+            <medium stock="a4Plain" short="210mm" long="297mm"/>
+            <contentArea w="210mm" h="296mm" name="areaPage1" id="areaPage1_ID_copy1_copy1"/>
+            <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="10mm" y="2mm">
+               <?templateDesigner expand 1?>
+            </subform>
+            <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="125mm" y="6mm">
+               <?templateDesigner expand 1?>
+            </subform>
+            <?templateDesigner expand 1?></pageArea>
+         <pageArea name="mpgPage1" id="facdd4fe-f859-11e2-9454-00059a3c7a00">
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea x="16mm" y="47mm" w="190mm" h="222mm" name="areaPage1" id="areaPage1_ID_copy2"/>
+            <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden" x="0in" y="0in">
+               <bind/>
+               <?templateDesigner expand 0?>
+            </subform>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="172mm" y="7mm">
+               <?templateDesigner expand 0?>
+            </subform>
+            <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="125mm" y="8mm">
+               <?templateDesigner expand 1?>
+            </subform>
+            <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
+               <?templateDesigner expand 1?>
+            </subform>
+            <subform x="1.931mm" y="3mm" w="203mm" h="53mm" name="subHeader">
+               <bind match="none"/>
+               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="14.069mm" y="7mm">
+                  <bind/>
+                  <subform layout="tb" presence="hidden" name="subDNMHolder" w="62mm" y="13mm">
+                     <field h="9mm" name="fldDealerNameMarketingBatch" w="37mm">
+                        <bind ref="Document.Pages[*].Page[*].PageHeader.DealerNameMarketing" match="dataRef"/>
+                     </field>
+                     <field h="9mm" name="fldDealerNameMarketing" w="37mm">
+                        <bind ref="Document.DocumentHeader.DealerNameMarketing" match="dataRef"/>
+                     </field>
+                     <field h="9mm" name="fldDealerName" w="37mm">
+                        <bind ref="Document.DocumentHeader.DealerName" match="dataRef"/>
+                     </field>
+                     <?templateDesigner expand 1?>
+                  </subform>
+                  <?templateDesigner expand 1?>
+               </subform>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="191mm">
+               <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
+               <subform name="sub_FooterA" layout="tb" w="45mm">
+                  <bind match="none"/>
+                  <field name="FooterA1" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA1"/>
+                  </field>
+                  <field name="FooterA2" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA2"/>
+                  </field>
+                  <field name="FooterA3" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA3"/>
+                  </field>
+                  <field name="FooterA4" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA4"/>
+                  </field>
+                  <field name="FooterA5" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA5"/>
+                  </field>
+                  <field name="FooterA6" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterA6"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="sub_FooterB" layout="tb" w="45mm">
+                  <bind match="none"/>
+                  <field name="FooterB1" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB1"/>
+                  </field>
+                  <field name="FooterB2" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB2"/>
+                  </field>
+                  <field name="FooterB3" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB3"/>
+                  </field>
+                  <field name="FooterB4" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB4"/>
+                  </field>
+                  <field name="FooterB5" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB5"/>
+                  </field>
+                  <field name="FooterB6" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterB6"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="sub_FooterC" layout="tb" w="45mm">
+                  <bind match="none"/>
+                  <field name="FooterC1" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC1"/>
+                  </field>
+                  <field name="FooterC2" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC2"/>
+                  </field>
+                  <field name="FooterC3" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC3"/>
+                  </field>
+                  <field name="FooterC4" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC4"/>
+                  </field>
+                  <field name="FooterC5" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC5"/>
+                  </field>
+                  <field name="FooterC6" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterC6"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <bind match="none"/>
+               <border>
+                  <edge thickness="0.4mm"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.4mm"/>
+                  <corner/>
+                  <corner/>
+                  <corner/>
+               </border>
+               <subform name="sub_FooterD" layout="tb" w="44mm">
+                  <bind match="none"/>
+                  <field name="FooterD1" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD1"/>
+                  </field>
+                  <field name="FooterD2" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD2"/>
+                  </field>
+                  <field name="FooterD3" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD3"/>
+                  </field>
+                  <field name="FooterD4" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD4"/>
+                  </field>
+                  <field name="FooterD5" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD5"/>
+                  </field>
+                  <field name="FooterD6" w="40mm" minH="2.4mm" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD6"/>
+                  </field>
+                  <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform name="pageContent" w="190mm" layout="tb">
+         <bind match="dataRef" ref="$.Document.Pages[*]"/>
+         <subform w="7.480319in" h="10.590542in" name="pageSeparator">
+            <bind match="dataRef" ref="$.SeparatorPage[*]"/>
+            <subform name="Subform2" x="0mm" y="0mm" w="190mm" h="242.939mm">
+               <bind match="none"/>
+               <margin topInset="5mm" leftInset="5mm"/>
+               <subform name="subWindow" x="7mm" y="22mm" w="91mm" h="45mm">
+                  <bind match="none"/>
+                  <field name="DealerNameMarketing" h="6mm" access="protected" minW="52mm" x="6mm" y="8mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.SeparatorDealerNameMarketing"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                  </field>
+                  <field name="DealerNumber" h="14.7mm" y="23mm" access="protected" x="66mm" hAlign="right" minW="16mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Times New Roman" size="36pt" weight="bold"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle" hAlign="right"/>
+                     <bind match="dataRef" ref="$.DealerNumber"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                  </field>
+                  <field name="TextToDisplay" h="6mm" access="protected" minW="46mm" x="6mm" y="34mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New" size="9pt"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.TextToDisplay"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge stroke="dotted" thickness="0.1mm"/>
+                     <corner stroke="dotted" thickness="0.1mm"/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <subform x="22mm" y="161mm" w="77mm" h="76.939mm" name="subLayout">
+                  <bind match="none"/>
+                  <field name="TextToDisplay" access="protected" y="70mm" x="0mm" minW="38mm" minH="6.234mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Times New Roman" weight="bold" size="14pt"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+
+this.rawValue = this.parent.parent.subWindow.TextToDisplay.rawValue;
+</script>
+                     </event>
+                  </field>
+                  <field name="DealerNumber" y="1mm" access="protected" x="43mm" hAlign="right" minW="16mm" minH="18.934mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="54pt" weight="bold"/>
+                     <margin topInset="1mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom" hAlign="right"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                        <corner thickness="0.1mm"/>
+                        <edge presence="hidden"/>
+                        <edge thickness="0.1mm"/>
+                        <edge presence="hidden"/>
+                     </border>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+this.rawValue = this.parent.parent.subWindow.DealerNumber.rawValue;
+</script>
+                     </event>
+                  </field>
+                  <field name="DealerNameMarketing" access="protected" minW="69mm" y="33mm" minH="9mm" x="1mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Times New Roman" size="22pt" weight="bold"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <event activity="docReady" ref="$host" name="event__docReady">
+                        <script contentType="application/x-javascript">
+this.rawValue = this.parent.parent.subWindow.DealerNameMarketing.rawValue;
+</script>
+                     </event>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <occur min="0" max="-1"/>
+            <breakBefore target="mpgSeparatorPage" targetType="pageArea"/>
+            <?templateDesigner expand 1?></subform>
+         <subform name="subPageHolder" w="190mm" h="222mm">
+            <bind match="dataRef" ref="$.Page[*]"/>
+            <occur min="0" max="-1"/>
+            <subform w="189mm" name="subFlowedPage" layout="tb">
+               <bind match="none"/>
+               <subform w="188mm" name="subPageDetail" layout="tb">
+                  <bind match="none"/>
+                  <field name="floPageDetail" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField013523" presence="hidden" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.PageDetail[*]"/>
+                  </field>
+                  <draw name="fldPageDetail" w="7.401569in" minH="3mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField013523"/></p></body>
+                        </exData>
+                     </value>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                  </draw>
+                  <occur min="0" max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <breakBefore target="mpgPage1" targetType="pageArea"/>
+            <?templateDesigner expand 1?></subform>
+         <breakBefore target="mpgSeparatorPage" targetType="pageArea"/>
+         <occur min="0" max="-1"/>
+         <event activity="initialize" name="event__initialize">
+            <script contentType="application/x-javascript">try
+{
+if(this.pageSeparator == null)
+{
+
+	this["#breakBefore"].target = "mpgPage1";
+
+}
+}
+catch(e)
+{
+	this["#breakBefore"].target = "mpgPage1";
+}
+
+
+</script>
+         </event>
+         <?templateDesigner expand 1?></subform>
+      <field name="exdataTemplate" w="7.480319in" h="1.64125in" presence="hidden">
+         <ui>
+            <textEdit multiLine="1">
+               <border>
+                  <?templateDesigner StyleID aped3?>
+                  <edge stroke="lowered"/>
+               </border>
+               <margin/>
+            </textEdit>
+         </ui>
+         <font typeface="Myriad Pro"/>
+         <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+         <para vAlign="middle"/>
+         <caption reserve="16mm">
+            <para vAlign="middle"/>
+            <value>
+               <text xliff:rid="CA2093A7-2A47-4B5E-B841-BB6B671EF914">Envelope</text>
+            </value>
+         </caption>
+         <value>
+            <text xliff:rid="AC58CDED-F9EE-4271-A3E6-838CF15AA931">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
+&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
+&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
+&gt;ccc&lt;/p&#xD;
+&gt;&lt;/body&#xD;
+&gt;&lt;/exData&#xD;
+&gt;</text>
+         </value>
+      </field>
+      <variables>
+         <script contentType="application/x-javascript" name="NO">
+		
+				var L_InvoiceNo = "Fakturanr.:";
+var L_InvoiceNo_K = "Kreditnota:";
+var L_InvoiceNo_N = "Kreditnota.:";
+var L_InvoiceSeries = "Fakturaserie:";
+var L_InvoiceTitle_F = "Faktura";
+var L_InvoiceTitle_I = "Intern faktura";
+var L_InvoiceTitle_K = "Kreditnota";
+var L_InvoiceTitle_N = "Intern Kreditnota";
+var L_InvoiceTitle_P = "Forskuddsfaktura";
+var L_InvoiceTitle_Q = "Prepayment Kreditnoa";
+var L_LeaseMonthVat = "Leie/Mnd";
+var L_LeaserFinancingCompany = "Selger tar forbehold om godkjennelse fra finansselskapet:";
+var L_LeaserFinancingCompany2 = "Eventuelt forbeh.fra kjøper om finansiering av kjøpet må uttrykkelig fremgå av kontrakten, jfr.pkt. 1, første ledd i vedlegg nr. 1";
+var L_LeaserName = "Leier:";
+var L_LeaserPersonalId = "Personnr.:";
+var L_LeaseTotal = "Sum leie/mnd";
+var L_LeaseTotalVat = "Sum leie/mnd";
+var L_Leasing = "Leier(kunde):";
+var L_Loan = "Finansiering";
+var L_LoanCondition = "Lånetilbud gitt med forbehold om endelig kredittgodkjennelse.";
+var L_LoanPrePaymentAmount = "Kontantinnsats";
+var L_LoanTradeInEncumbrance = "Heftelser på innbyttebil";
+var L_InvoiceTitle_S = "Samlefaktura";
+var L_InvoiceType = "Fakt.type";
+var L_KidLine = "KIDnr.:";
+var L_LeaseMonth = "Leie/Mnd";
+var L_MaterialTotAmount = "Sum materiell:";
+var L_MechanicNo = "Mekaniker id:";
+var L_MechanicSignature = "Signatur mekaniker:";
+var L_MvaOrg = "MVA";
+var L_Name = "Navn";
+var L_NationalOptionpriceTotal = "Norsk montert utstyr i følge spesifikasjon";
+var L_NationalOptions = "Norskmontert utstyr";
+var L_No = "Nr.";
+var L_LoanTradeInPrice = "Innbyttebil";
+var L_LoanVehiclePrice = "Sum";
+var L_LocationSparepart = "Lokasjon";
+var L_LocationSparepartPrepicked = "Deleplass:";
+var L_Nox = "Nox utslipp i mg/km:";
+var L_Of = "av";
+var L_OnDelivery = "Ved levering";
+var L_OnDeliveryCash = "Kontant ved levering";
+var L_OnDeliveryDesc = "Engangsleie";
+var L_OnDeliveryRentalAmount = "eks. mva";
+var L_OnDeliveryRentalAmountVat = "inkl. mva";
+var L_OnDeliveryVatAmount = "mva";
+var L_OptionDiscount = "Rabatt på tilleggsutstyr";
+var L_OptionPriceTotal = "Ekstrautstyr i følge spesifikasjon";
+var L_Options = "Ekstrautstyr";
+var L_OptionTotalVat = "Mva andel på tilleggsutstyr";
+var L_NumberOfPeriods = "Første leiefaktura inneholder etab.gebyr. Antall Terminer:";
+var L_OrderNo = "Ordrenr.:";
+var L_OurRef = "Referanse:";
+var L_OwnerName = "Eier:";
+var L_OwnRisk = "Egenandel, Kr:";
+var L_Page = "Side";
+var L_PaymentTerms = "Bet.betingelser:";
+var L_PaymentTerms_Kon = "Kontant";
+var L_PaymentTerms_Kre = "Kreditt";
+var L_PaymentType = "Betalingsmåte:";
+var L_PlannedValuation = "Takstavtale:";
+var L_PlannedVisit = "Bilen påbegynnes:";
+var L_PlannedWorks = "Planlagt arbeid:";
+var L_PreControl = "Behov for forkontroll/prøvekjøring:";
+var L_PrepaymentCar = "Forhåndsbetaling:";
+var L_PrepaymentAmount = "Forhåndsbetaling:";
+var L_PrePaymentCash = "Forhåndsbetaling:";
+var L_Preview = "Forhåndsvisning";
+var L_Price = "Pris";
+var L_PriceEstimateNo = "Prisoverslagnr.:";
+var L_PriceInfoEnd1 = "Mva-grunnlag";
+var L_PriceInfoEnd2 = "* = eks.mva";
+var L_PriceInformation = "Prisinformasjon";
+var L_PriceMileageExeeded = "Overkjørte km.";
+var L_PriceMileageExeededVat = "Overkjørte km.";
+var L_PriceTotal = "Total";
+var L_PriceTotalColumn = "Total";
+var L_PriceTotalSum = "Nettobeløp:";
+var L_PriceTotalSum2 = "Beløp u/mva";
+var L_PriceTotalSumCarSales = "Total kjøpesum:";
+var L_PriceTotalSumPrepay = "Beløp m/mva";
+var L_PriceType_B = "Beløp med MVA";
+var L_PriceType_N = "Beløp uten MVA";
+var L_PriceVatTotalPrepayment = "Herav mva";
+var L_Product = "Produkt";
+var L_Quantity = "Antall";
+var L_RebuildPriceTotal = "Ombygg i følge spesifikasjon";
+var L_ReBuilds = "Ombygging montert utstyr";
+var L_ReferenceNo = "Forskudd på gjennomgang";
+var L_RegistrationDesc = "Registrering pr..";
+var L_PriceVatTotalSum = "Totalt å betale:";
+var L_RemarkDate = "Dato opprettet";
+var L_RemarkPriority = "Prioritet";
+var L_RemarkText = "Beskrivelse";
+var L_Remember = "Avtalt:";
+var L_RentalCalculation = "Leieberegning (* = Eks.mva)";
+var L_RepeatedRepair = "Gjentatt reperasjon:";
+var L_RestPayTotal = "Totalt å betale:";
+var L_Reviewed = "Gjennomgått med kunde:";
+var L_Rounding = "Øreavrunding:";
+var L_RemainingValue = "Restverdi";
+var L_SalesRep = "Salgsrepresentant";
+var L_ServiceAdvisor = "Serviceleder,";
+var L_ServiceAdvisorColon = "Serviceleder:";
+var L_ServiceCharge = "Termingebyr";
+var L_ServiceChargeVat = "Termingebyr";
+var L_Signature = "Signatur:";
+var L_SignatureColon = "Signatur:";
+var L_SignatureDate = "Dato";
+var L_SignHere = "Kundens signatur";
+var L_SoldBy = "Solgt av:";
+var L_SparepartTotAmount = "Sum deler:";
+var L_SpProducer = "Leverandørkode deler:";
+var L_SumExtraOptions = "Sum ekstrautstyr";
+var L_SVAPriceTotal = "Service- og vedlikehold jfr. Egen avtale";
+var L_SwiftCode = "Swift kode";
+var L_Task = "Oppdrag";
+var L_TaskLetter = "Oppdr.";
+var L_ThankYouTextPriceestimate = "Vi takker for din henvendelse.";
+var L_TimeTotal = "Totalt:";
+var L_TotalCostPerYear = "Totalkostnad pr.år (inkl. engangsleie)";
+var L_TotalDiscount = "Totalt prisavslag";
+var L_TotalMileage = "Total kjørelengde";
+var L_TotalMileagePerYear = "Kjørelengde pr. år";
+var L_TPI = "Aktuelle TPI'er:";
+var L_TradeIn = "Innbyttebil";
+var L_TradeInCarBrand = "Merke:";
+var L_TradeInColor = "Farge:";
+var L_TradeInEncumbrance = "Heftelser i løsøreregisteret:";
+var L_TradeInMileage = "KM stand:";
+var L_ThroughputNo = "Gj.gangsnr.:";
+var L_TradeInModelDesc = "Modell:";
+var L_TradeInPrice = "Avtalt innbyttepris:";
+var L_TradeInRegDate = "Første gang registrert:";
+var L_TradeInRegisteredYear = "Årsmodell:";
+var L_TradeInRegistrationFeePaid = "Årsavgift betalt:";
+var L_TradeInRegno = "Regnr.:";
+var L_TradeInText = "Innbyttepris er gitt under forutsetninger av at bilen er i samme stand som ved takst. Rett til omtakst forbeholdes. Bilen leveres med det utstyr som ble avtalt ved taksering. Sommer- og vinterhjul som innleveres sammen med bilen har godkjent mønsterdybde. Kjøperen forsikrer at innbyttebilen er hans eiendom, at den ikke hefter ansvar for skatter og avgifter på bilen. Speedometerstand er korrekt.";
+var L_TradeInVIN = "Chassinr.:";
+var L_TransferRegNo = "Overføres fra:";
+var L_Unit = "Enhet";
+var L_UnitPrice = "Enhetspris";
+var L_VatAmountCash = "Mva beløp:";
+var L_VatAmountColon = "MVA:";
+var L_VatBasis = "Mva grunnlag:";
+var L_VatContract = "Mva-grunnlag";
+var L_VatIncluded = "Alle priser inkl. MVA";
+var L_VatRateCash = "Mva %";
+var L_VatText = "Uten mva";
+var L_Upgrade = "Oppgraderings behov:";
+var L_UserName = "Bruker:";
+var L_VatAmount = "Herav MVA:";
+var L_VWMBFLoan = "Lån i Volkswagen Møller Bilfinans (se eget vedlegg)";
+var L_VWMBFLoanAnnualRate = "Nom.rente:";
+var L_VWMBFLoanEffectiveRate = "Eff. Rente:";
+var L_VWMBFLoanEquity = "Kontantbeløp";
+var L_VWMBFLoanEstablishFee = "Etableringsgebyr";
+var L_VWMBFLoanNetAmount = "Nettobeløp";
+var L_VWMBFLoanPayPlan = "Betaling:";
+var L_VWMBFLoanPeriods = "Antall terminer";
+var L_VWMBFLoanTotalAmount = "Lånesum inkl. gebyr";
+var L_VWMBFLoanType = "Lånetype:";
+var L_VWMBFLoanTypeInput = "Lån";
+var L_VWMBFPeriodAmount = "Terminbeløp inkl. gebyr";
+var L_VWMBFPeriodLoanFee = "Termingebyr";
+var L_Work = "Arbeid";
+var L_WorkOrder = "Arbeidsordre";
+var L_WorkPosTot = "Sum arbeid:";
+var L_YesNo = "Ja       / Nei";
+var L_YourRef = "Deres ref.:";
+var L_VehicleDiscount = "Rabatt på bil";
+var L_VehiclePrice = "Bilens pris";
+var L_VisitAddress = "Besøksadresse:";
+var L_YourServiceAdvisor = "Din serviceleder,";
+var L_AdditionalInfo = "Tilleggsinformasjon";
+var L_AdditionalLease = "Tilleggsleie/mnd**";
+var L_AdditionalLeaseVat = "Tilleggsleie/mnd**";
+var L_AdditionalWorkText = "Tilleggsarbeid";
+var L_AdditonalProduct = "**Tilleggsleie inkluderer:";
+var L_AmountToPay = "Å betale:";
+var L_ApprovedBy = "Godkjent av:";
+var L_ArrangementFee = "Etableringsgebyr";
+var L_ArrangementFeeVat = "Etableringsgebyr";
+var L_AssumedTradeInPrice = "Antatt innbyttepris:";
+var L_YearFee = "Årsavgift";
+var L_Attention = "Att:";
+var L_BankName = "Bankgiro:";
+var L_BBAgreementNo = "BB avtalenummer:";
+var L_CarColor = "Farge:";
+var L_CarDelivery = "Bil leveres:";
+var L_CarEngine = "Motor:";
+var L_CarFinishedDate = "Avtalt ferdig:";
+var L_CarGearBox = "Girkasse:";
+var L_CarLocation = "Bilplass:";
+var L_CarMileage = "KM stand:";
+var L_CarMileageCur = "KM stand inn:";
+var L_CarMileageCurOut = "KM stand ut:";
+var L_CarModelDesc = "Modell:";
+var L_CarModelInfo = "Grunnpris:";
+var L_CarModelYear = "Årsmodell:";
+var L_CarPickUp = "Bil hentes:";
+var L_CarPriceestimateTerms = "Dette er å betrakte som et uforbindtlig prisoverslag. Vi tar derfor forbehold om prisenderinger, avgiftsendringer og leveringstid.";
+var L_CarRegDate = "Reg.dato:";
+var L_CarRegNo = "Reg.nr.:";
+var L_CarRemarks = "Anmerkninger:";
+var L_CarSalesContract = "Kontrakt";
+var L_CarSalesPriceestimate = "Prisoverslag";
+var L_CarType = "Biltype:";
+var L_CarVIN = "Chassinr.:";
+var L_Cash = "Kontantpris";
+var L_CheckList = "Sjekkliste:";
+var L_Co2 = "Co2 utslipp i gr/km:";
+var L_Code = "Kode";
+var L_ColorInfo = "Farge:";
+var L_CompanyRegno = "Organisasjonsnr.:";
+var L_Confirmation = "Bekreftelse";
+var L_ContactTxt = "Jeg godtar at forhandler/importør kan sende meg informasjon og gode tilbud via post/e-post/SMS basert på opplysninger om meg og bilen min. Opplysningene vil ikke bli utlevert til andre.";
+var L_ContNextPage = "Forts. neste side";
+var L_ContractNo = "Kontraktnr.:";
+var L_ControlSignature = "Kontrollsignatur:";
+var L_Coverage = "Dekning:";
+var L_CreditInvoice = "Kreditnota";
+var L_CreditNoRefInvoice = "Ref. fakturanr.:";
+var L_CreditReason = "Rabatt årsak";
+var L_CustomerAddress = "Leveringsadresse:";
+var L_CustomerCompanyRegNo = "Org.nr.:";
+var L_CustomerLedgerNo = "Reskontronr.:";
+var L_CustomerLegalAddressTotal = "Juridiskadresse:";
+var L_CustomerName = "Kjøper:";
+var L_CustomerPhoneMobile = "Mobil:";
+var L_CustomerPhoneNo = "Telefon";
+var L_CustomerPhoneOrder = "Tlf. dag:";
+var L_CustomerPhonePrivat = "Privat:";
+var L_CustomerPhoneWork = "Arbeid:";
+var L_Date = "Dato:";
+var L_DateOfInvoice = "Fakturadato:";
+var L_DateReviewed = "Dato/signatur kunde";
+var L_DealerCompanyRegno = "Foretaksregisteret NO:";
+var L_DealerIssueAddressTotal = "Leveringsadresse:";
+var L_DealerLegalAddressTotal = "Juridisk adresse:";
+var L_DealerNameLegal = "Selger";
+var L_DealerNameMarketing = "Selger";
+var L_DeltermsText1 = ".LEVERINGSVILKÅR 0. Det er på alle biler som er importert av Harald a. Møller AS, registrert fra og med";
+var L_DeltermsText2 = "Norgesgaranti";
+var L_DeltermsText3 = "avhengig av hva som først inntreffer.";
+var L_DeltermsText4 = "Kjøpet skjer forøvrig i henhold til betingelser beskrevet i leverings- vilkår (vedlegg 1) som er mottatt, lest og akseptert av kjøper.~~";
+var L_DeltermsText5 = "Leveringssted:";
+var L_DeltermsText6 = "Bilen er ordrebekreftet";
+var L_DeltermsText7 = "Antatt leveringsuke/år:";
+var L_DifferenceAmount = "Mellomlegg";
+var L_Discount = "Rabatt %";
+var L_DiscountPE = "Rabatt %";
+var L_DocTypeCreditInvoice = "Kredittfaktura";
+var L_DocTypeInvoice = "Faktura";
+var L_DocTypePrepayment = "Forskuddsordre";
+var L_DocTypePriceEstimate = "Prisoverslag";
+var L_DocTypeWorkOrder = "Arbeidsordre";
+var L_DueDate = "Betalingsfrist:";
+var L_DueDate_KON = "Betalt:";
+var L_DueDate_KRE = "Forfallsdato:";
+var L_EnvironmentalClass = "miljøklasse:";
+var L_Financing = "Finansiering";
+var L_ForeignSalesVat = "mva 0%";
+var L_FreightPriceTotal = "Frakt- og leveringsomkostninger";
+var L_GreetingsText = "Vennlig hilsen,";
+var L_Hour = "Timer:";
+var L_Insurance = "Forsikring";
+var L_InsuranceCompany = "Forhandler forikrer bilen i";
+var L_InsuranceMileage = "Kjørelengde pr. år, km:";
+var L_InsuranceNameRef = "Forsikringsref.:";
+var L_InsuranceVat = "Mva dekkes av forsikringstaker kr.:";
+var L_Interior = "Interiør: ";
+
+		
+               
+               
+
+               
+               
+               
+</script>
+         <script contentType="application/x-javascript" name="getLanguages">
+
+function getLanguageText(strLanguage, strObjName)
+{
+	var outputText = "";
+	//console.println(strLanguage);
+	
+	outputText = getLanguageFieldValue(strLanguage, strObjName)
+	
+	return outputText;
+}
+
+function getLanguageFieldValue(strLanguage, strObjName)
+{
+	languageDotFieldValue = strLanguage+"."+strObjName;
+	return eval(languageDotFieldValue);
+}
+
+function getLanguageSetting()
+{
+	var language = "";
+	var rootNode = "";
+	
+	try
+	{
+		rootNode = xfa.form.nodes.item(0);
+		language = rootNode.pageContent.subMetadata.LangCode.rawValue;
+	}
+	catch(e)
+	{
+		
+	}
+			
+	return language;
+}
+
+               
+               
+
+               
+               
+</script>
+         <?templateDesigner expand 1?></variables>
+      <proto>
+         <subform h="8.398mm" id="94a79372-cf64-11e2-917d-00059a3c7a00:overflowTrailer_ID" name="overflowTrailer" w="66mm">
+            <bind match="none"/>
+            <border>
+               <corner presence="hidden">
+                  <color value="7,157,196"/>
+               </corner>
+               <corner/>
+               <corner/>
+               <corner/>
+               <edge presence="hidden">
+                  <color value="7,157,196"/>
+               </edge>
+               <edge presence="hidden"/>
+               <edge presence="hidden"/>
+               <edge presence="hidden"/>
+            </border>
+            <margin bottomInset="0mm" leftInset="0mm" topInset="3mm"/>
+            <field minH="3.928mm" minW="66mm" name="L_ContNextPage" y="0.001mm">
+               <border>
+                  <corner presence="hidden" thickness="0.176mm">
+                     <color value="7,157,196"/>
+                  </corner>
+                  <edge presence="hidden">
+                     <color value="7,157,196"/>
+                  </edge>
+               </border>
+               <caption reserve="66mm">
+                  <value>
+                     <text>Forts. neste side</text>
+                  </value>
+               </caption>
+               <font typeface="Arial" baselineShift="0pt" size="8pt" weight="bold"/>
+               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+               <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" vAlign="bottom"/>
+               <ui>
+                  <textEdit>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></proto>
+      <desc>
+         <text name="version">10.0.2.20120224.1.869952.867557</text>
+      </desc>
+      <proto>
+         <subform name="designer__stylesheet">
+            <subform name="SubformStyle1" w="203.2mm">
+               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
+            </subform>
+            <field name="TextFieldStyle_Top" minW="37mm" minH="8mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Arial"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <caption reserve="4mm" placement="top">
+                  <font size="8.5pt" typeface="Arial" weight="bold"/>
+                  <para vAlign="bottom"/>
+               </caption>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+               <para vAlign="middle"/>
+            </field>
+            <field name="TextFieldStyle_Left" minW="62mm" h="4.318mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Arial"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="23.4266mm">
+                  <font size="8.5pt" typeface="Arial" weight="bold"/>
+                  <para vAlign="middle"/>
+               </caption>
+               <border>
+                  <edge presence="hidden"/>
+               </border>
+            </field>
+         </subform>
+      </proto>
+      <?templateDesigner expand 1?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 48 12 00270033004400480049004A004C004F00520057005E0060DPaefgilot{}?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 212 53 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F0020002200230025002600270029002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ABDEFHIMPTUVabcdefghilmnoprstvwxyz'?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 137?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\STD\010_STD_S001IT01_20130724_124542_D_B998FD_717_test.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines v:375000;v:50000?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <script>
+         <runScripts>server</runScripts>
+      </script>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="SymbolPS" psName="Symbol" weight="normal" posture="normal"/>
+      <font typeface="Berlin Sans FB" psName="BerlinSansFB-Bold" weight="bold" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="sv_SE" desc="Svenska (Sverige)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januari</month>
+            <month>februari</month>
+            <month>mars</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>augusti</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>söndag</day>
+            <day>måndag</day>
+            <day>tisdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lördag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sö</day>
+            <day>må</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lö</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>fm</meridiem>
+            <meridiem>em</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>f.Kr.</era>
+            <era>e.Kr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, YYYY MMMM DD</datePattern>
+         <datePattern name="long">YYYY MMMM D</datePattern>
+         <datePattern name="med">YYYY MMM D</datePattern>
+         <datePattern name="short">YYYY-MM-DD</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">'kl. 'HH.MM.SS Z</timePattern>
+         <timePattern name="long">HH.MM.SS Z</timePattern>
+         <timePattern name="med">HH.MM.SS</timePattern>
+         <timePattern name="short">HH.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $</numberPattern>
+         <numberPattern name="percent">z,zz9 %</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping"> </numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">SEK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="STD">
+      <uri>..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\STD_DocumentHeader.xsd</uri>
+      <rootElement>STD</rootElement>
+      <?templateDesigner fileDigest shaHash="Po293D6kBVjvjT23FrYWThaPuv0="?></xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="STD">
+      <STD>
+         <Header>
+            <DocType/>
+            <Country/>
+            <LangCode/>
+            <DocHeaderImpcode/>
+            <DocHeaderProdType/>
+            <Copies/>
+            <TwoSided/>
+            <LogoImage>
+               <VW/>
+               <Audi/>
+               <AudiService/>
+               <Skoda/>
+            </LogoImage>
+            <MediaControl>
+               <OutputTargets>
+                  <Preview>
+                     <PrintId/>
+                  </Preview>
+                  <File>
+                     <FileName/>
+                  </File>
+               </OutputTargets>
+            </MediaControl>
+         </Header>
+         <Document>
+            <DocumentHeader>
+               <FooterA1/>
+               <FooterA2/>
+               <FooterA3/>
+               <FooterA5/>
+               <FooterA6/>
+               <FooterB1/>
+               <FooterB4/>
+               <FooterB5/>
+               <FooterC1/>
+               <FooterC2/>
+               <FooterD1/>
+               <FooterD2/>
+               <DealerNameMarketing/>
+               <DocHeaderBrand/>
+            </DocumentHeader>
+            <Pages dd:maxOccur="-1">
+               <SeparatorPage dd:minOccur="0" dd:maxOccur="-1">
+                  <TextToDisplay/>
+                  <DealerNumber/>
+                  <SeparatorDealerNameMarketing/>
+               </SeparatorPage>
+               <Page dd:maxOccur="-1">
+                  <PageDetail dd:maxOccur="-1"/>
+               </Page>
+            </Pages>
+         </Document>
+      </STD>
+   </dd:dataDescription>
+</xfa:datasets>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-08-08T11:36:16Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:41a124c1-598e-440b-bf95-7aea624106a8</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
+      </rdf:Description>
+      <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <dc:format>application/pdf</dc:format>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>10.0.2.20120224.1.869952.867557</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFASchemaXSD">
+   <xs:element name="Copies">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Country">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="NO"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DealerNameMarketing">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Felgen Auto"/>
+            <xs:enumeration value="MØLLER TEST VEST"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DocHeaderBrand">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="A"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DocHeaderImpcode">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="A"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DocHeaderProdType">
+      <xs:simpleType>
+         <xs:restriction base="xs:byte">
+            <xs:enumeration value="2"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DocType">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="STD"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Document">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="DocumentHeader"/>
+            <xs:element ref="Pages" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="File">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="FileName"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="FileName">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="STD.pdf"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterA1">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Felgen Auto AS"/>
+            <xs:enumeration value="MØLLER TEST VEST AS"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterA2">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="DRAMMENSVEIEN 145"/>
+            <xs:enumeration value="Frysjaveien 31"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterA3">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="0411 Oslo"/>
+            <xs:enumeration value="BOKS 6685 ETTERSTAD"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterA5">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Volkswagen, Volkswagen Nytte, Audi, Skoda"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterA6">
+      <xs:simpleType>
+         <xs:restriction base="xs:QName">
+            <xs:enumeration value="WWW.MOLLER:NO"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterB1">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Felgen"/>
+            <xs:enumeration value="TEST VEST"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterB4">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Telefon 24033300"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterB5">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Homepage : www.moller.no"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterC1">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Kolonne 3, linje 1"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterC2">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Swift: 123456"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterD1">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Iban EU"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="FooterD2">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Swift EU"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="Header">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="DocType"/>
+            <xs:element ref="Country"/>
+            <xs:element ref="LangCode"/>
+            <xs:element ref="DocHeaderImpcode"/>
+            <xs:element ref="DocHeaderProdType"/>
+            <xs:element ref="Copies"/>
+            <xs:element ref="TwoSided"/>
+            <xs:element name="LogoImage">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="VW" type="xs:string"/>
+                     <xs:element name="Audi" type="xs:string"/>
+                     <xs:element name="AudiService" type="xs:string"/>
+                     <xs:element name="Skoda" type="xs:string"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element ref="MediaControl"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="LangCode">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="NO"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="LogoImage"/>
+   <xs:element name="MediaControl">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="OutputTargets"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="OutputTargets">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Preview"/>
+            <xs:element ref="File"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="Page">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="PageDetail" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="PageDetail">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="                                                    SIDE  1"/>
+            <xs:enumeration value="                                            BANKGIRO   6219.05.06970"/>
+            <xs:enumeration value="                                            DRAMMENSVEIEN 145"/>
+            <xs:enumeration value="                                            FRYSJAVEIEN 31"/>
+            <xs:enumeration value="                                            HTTP://WWW.MOLLERBIL.NO/SKOYEN"/>
+            <xs:enumeration value="                                            MØLLER BIL SKØYEN"/>
+            <xs:enumeration value="                                            NO   928481638 MVA"/>
+            <xs:enumeration value="   1900  FETSUND                            TLF  24032450  FAX 24032499"/>
+            <xs:enumeration value="   BRÅTEHEN VEIEN 4 B                       "/>
+            <xs:enumeration value="   BRÅTEHEN VEIEN 4 B                       0609  OSLO"/>
+            <xs:enumeration value="   PRAVEENA NISHANTHAN                      "/>
+            <xs:enumeration value="   PRAVEENA NISHANTHAN                      BOKS 6685, ETTERSTAD"/>
+            <xs:enumeration value="-------------------------------------------        ORDRENUMMER      267413"/>
+            <xs:enumeration value="--------------------------------------------------------------------------"/>
+            <xs:enumeration value="20&quot; 5-SEGMENTEIKERS DESIGN S L                          7.190,00"/>
+            <xs:enumeration value="3-SONERS KLIMAANLEGG                                    6.950,00"/>
+            <xs:enumeration value="391.807,20     97.951,80     210.241,00             700.000,00"/>
+            <xs:enumeration value="8RB0M9                   WAUZZZ8R7CA059918 KUNDENUMMER     2002212"/>
+            <xs:enumeration value="=========================================================================="/>
+            <xs:enumeration value="ADAPTIV CRUISE CONTROL TEKNIKK                         12.220,00"/>
+            <xs:enumeration value="AUTOMATISK AVBLENDBART INNV. S                          1.730,00"/>
+            <xs:enumeration value="BANG &amp; OLUFSEN HØYT.SYSTEM TEK                          7.660,00"/>
+            <xs:enumeration value="BEHOLDNINGSENDRING"/>
+            <xs:enumeration value="BILTYPE                  CHASSISNR         MOTTATT DATO 31-01-2012"/>
+            <xs:enumeration value="BLANKE SIDELISTER                                       1.930,00"/>
+            <xs:enumeration value="BLUETOOTH-FORBEREDELSE                                  3.590,00"/>
+            <xs:enumeration value="DE BLE EKSPEDERT AV CHRISTIAN REITAN"/>
+            <xs:enumeration value="EKSTRA MØRKE RUTER                                      4.780,00"/>
+            <xs:enumeration value="EL. FØRERSETE                                           4.610,00"/>
+            <xs:enumeration value="EL. INNKLAPPBARE UTVENDIGE SPE                          2.690,00"/>
+            <xs:enumeration value="ELEKTRISK BAKLUKE                                       5.870,00"/>
+            <xs:enumeration value="ENGANGSAVGIFT                                         210.241,00 *"/>
+            <xs:enumeration value="F A K T U R A                               FELGEN AUTO AS"/>
+            <xs:enumeration value="F A K T U R A                               MØLLER TEST VEST AS"/>
+            <xs:enumeration value="FAKTURADATO  31-01-2012"/>
+            <xs:enumeration value="FAKTURANUMMER   9332349"/>
+            <xs:enumeration value="FARGE   : FANTOMSORT                                              9.560,00"/>
+            <xs:enumeration value="FJERNBETJENT KUPEVARMER                                17.000,00"/>
+            <xs:enumeration value="FRAKT OG OMKOSTNINGER                                   9.900,00"/>
+            <xs:enumeration value="FRI LÅNEBIL VED SERVICE                                     1,00"/>
+            <xs:enumeration value="GR.LAG MVA  MVA BELØP 25%  *=AVGIFTSFRI SUM             TOTALT"/>
+            <xs:enumeration value="INTERIØR: SORT-SØLV/SORT/SORT"/>
+            <xs:enumeration value="LYS-/REGNSENSOR M/FJERNLYSASSI                          1.610,00"/>
+            <xs:enumeration value="LYSPAKKE                                                2.270,00"/>
+            <xs:enumeration value="MLF-SPORTSRATT S LINE                                   2.140,00"/>
+            <xs:enumeration value="NAVI.PLUS KOMB NAVIGASJONSPAKK                         11.020,00"/>
+            <xs:enumeration value="NAVIGASJONSPAKKE                                       18.900,00"/>
+            <xs:enumeration value="PARKERINGSSYSTEM FORAN/BAK TEK                          4.540,00"/>
+            <xs:enumeration value="PRISAVSLAG BIL                                                   42.701,00-"/>
+            <xs:enumeration value="Q5 2,0 TDI 170 HK Q                              FORFALLSDATO 31-01-2012"/>
+            <xs:enumeration value="Q5 2,0 TDI 170 HK Q                 2012                        319.959,00"/>
+            <xs:enumeration value="S LINE EKSTERIØRPAKKE KOMB. S                          15.920,00"/>
+            <xs:enumeration value="S LINE SPORTSPAKKE                                     35.900,00"/>
+            <xs:enumeration value="SKINN/PERFORERT ALCANTARA S LI                          7.620,00"/>
+            <xs:enumeration value="TEKNIKKPAKKE                                           16.900,00"/>
+            <xs:enumeration value="TEKST                                                     RAB% BELØP M/MVA"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="DocumentHeader">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="FooterA1"/>
+            <xs:element ref="FooterA2"/>
+            <xs:element ref="FooterA3"/>
+            <xs:element ref="FooterA5"/>
+            <xs:element ref="FooterA6"/>
+            <xs:element ref="FooterB1"/>
+            <xs:element ref="FooterB4"/>
+            <xs:element ref="FooterB5"/>
+            <xs:element ref="FooterC1"/>
+            <xs:element ref="FooterC2"/>
+            <xs:element ref="FooterD1"/>
+            <xs:element ref="FooterD2"/>
+            <xs:element ref="DealerNameMarketing"/>
+            <xs:element ref="DocHeaderBrand"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="Pages">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="TextToDisplay" type="xs:string"/>
+                     <xs:element name="DealerNumber" type="xs:string"/>
+                     <xs:element name="SeparatorDealerNameMarketing" type="xs:string"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element ref="Page" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="Preview">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="PrintId"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="PrintId">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="Test-Blokk"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="STD">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Header"/>
+            <xs:element ref="Document"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="TwoSided">
+      <xs:simpleType>
+         <xs:restriction base="xs:string">
+            <xs:enumeration value="no"/>
+         </xs:restriction>
+      </xs:simpleType>
+   </xs:element>
+</xs:schema></xdp:xdp>

@@ -15,6 +15,14 @@
 			<Lang>LT</Lang>
 			<Name>DarboUžsakymas</Name>
 		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>WorkOrder_EE</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>WorkOrder</Name>
+		</Target>
 	</DocType>
 	<DocType>
 		<Source>Invoice</Source>
@@ -29,7 +37,15 @@
 		</Target>
 		<Target>
 			<Lang>LT</Lang>
-			<Name>Faktūra</Name>
+			<Name>PVM SĄSKAITA-FAKTŪRA</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>Arve</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>Invoice</Name>
 		</Target>
 	</DocType>
 	<DocType>
@@ -47,6 +63,10 @@
 			<Lang>LT</Lang>
 			<Name>ValuationReport_LT</Name>
 		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>ValuationReport</Name>
+		</Target>
 	</DocType>
 	<DocType>
 		<Source>Contract</Source>
@@ -63,6 +83,14 @@
 			<Lang>LT</Lang>
 			<Name>Contract_LT</Name>
 		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>Contract_EE</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>Contract</Name>
+		</Target>
 	</DocType>
 	<DocType>
 		<Source>STD</Source>
@@ -78,6 +106,226 @@
 		<Target>
 			<Lang>LT</Lang>
 			<Name>STD_LT</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>Standard</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>CarPriceEstimate</Source>
+		<DocNumber>PriceestimateNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>Prisoverslag</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>Piedāvājums</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>Pakkumine</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>CarPriceEstimate_LT</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>CarPriceEstimate</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>PriceEstimate</Source>
+		<DocNumber>ThroughputNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>Prisoverslag</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>Piedāvājums</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>Pasiūlymas</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>Pakkumine</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>PriceEstimate</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>PreCalculation</Source>
+		<DocNumber>ThroughputNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>Forkalkyle</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>PreCalculation_LV</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>PreCalculation_LT</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>PreCalculation_EE</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>PreCalculation</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>Confirmation</Source>
+		<DocNumber>ThroughputNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>Bekreftelse</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>Apstiprinājums</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>Patvirtinimas</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>Pakkumise kinnitus</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>Confirmation</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>AcceptanceCheck</Source>
+		<DocNumber>ValuationNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>Mottakskontroll</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>AcceptanceCheck_LV</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>AcceptanceCheck_LT</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>AcceptanceCheck_EE</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>AcceptanceCheck</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>ConditionReport</Source>
+		<DocNumber>ValuationNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>Tilstandsrapport</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>ConditionReport_LV</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>ConditionReport_LT</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>ConditionReport_EE</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>ConditionReport</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>Requisition</Source>
+		<DocNumber>ValuationNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>Rekvisisjon</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>Requisition_LV</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>Requisition_LT</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>Requisition_EE</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>Requisition</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>CarSalesContract</Source>
+		<DocNumber>ContractNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>Kontrakt</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>Līgums</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>CarSalesContract_LT</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>Leping</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>CarSalesContract</Name>
+		</Target>
+	</DocType>
+	<DocType>
+		<Source>VehicleControl</Source>
+		<DocNumber>ContractNo</DocNumber>
+		<Target>
+			<Lang>NO</Lang>
+			<Name>PKK</Name>
+		</Target>
+		<Target>
+			<Lang>LV</Lang>
+			<Name>VehicleControl_LV</Name>
+		</Target>
+		<Target>
+			<Lang>LT</Lang>
+			<Name>VehicleControl_LT</Name>
+		</Target>
+		<Target>
+			<Lang>EE</Lang>
+			<Name>VehicleControl_EE</Name>
+		</Target>
+		<Target>
+			<Lang>EN</Lang>
+			<Name>VehicleControl</Name>
 		</Target>
 	</DocType>
 </FilenameConfiguration>

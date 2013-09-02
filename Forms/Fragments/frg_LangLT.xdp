@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:Forms/Fragments/frg_LangLT.xdp
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
 <xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-13T06:51:02Z" uuid="2c6d7f29-24ea-413d-8d30-29836b375c87">
+=======
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-08T13:09:37Z" uuid="1ed201c5-00f2-4dcb-80d3-30ed433b09f0">
+>>>>>>> test:Forms/Fragments/frg_LangLT.xdp
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -13,7 +18,11 @@
       <subform>
          <variables>
             <script contentType="application/x-javascript" name="LT">
+<<<<<<< HEAD:Forms/Fragments/frg_LangLT.xdp
 		
+=======
+
+>>>>>>> test:Forms/Fragments/frg_LangLT.xdp
 				var L_InvoiceSeries = "Serija:";
 var L_InvoiceTitle_F = "PVM SĄSKAITA-FAKTŪRA";
 var L_InvoiceTitle_I = "Vidinė sąskaita-faktūra";
@@ -181,8 +190,13 @@ var L_InvoiceNo = "Nr.:";
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?templateDesigner FormTargetVersion 30?>
+<<<<<<< HEAD:Forms/Fragments/frg_LangLT.xdp
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Zoom 110?></template>
+=======
+   <?templateDesigner Zoom 133?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+>>>>>>> test:Forms/Fragments/frg_LangLT.xdp
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -212,14 +226,22 @@ var L_InvoiceNo = "Nr.:";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+<<<<<<< HEAD:Forms/Fragments/frg_LangLT.xdp
          <xmp:MetadataDate>2013-06-13T06:51:02Z</xmp:MetadataDate>
+=======
+         <xmp:MetadataDate>2013-08-08T13:09:37Z</xmp:MetadataDate>
+>>>>>>> test:Forms/Fragments/frg_LangLT.xdp
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+<<<<<<< HEAD:Forms/Fragments/frg_LangLT.xdp
          <xmpMM:DocumentID>uuid:2c6d7f29-24ea-413d-8d30-29836b375c87</xmpMM:DocumentID>
+=======
+         <xmpMM:DocumentID>uuid:1ed201c5-00f2-4dcb-80d3-30ed433b09f0</xmpMM:DocumentID>
+>>>>>>> test:Forms/Fragments/frg_LangLT.xdp
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

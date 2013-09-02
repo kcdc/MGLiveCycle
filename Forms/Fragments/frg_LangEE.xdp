@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
 <xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-13T06:48:36Z" uuid="75b851e0-00fb-4062-95b9-0e01637462a6">
+=======
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-08T13:11:25Z" uuid="51d55f7e-2d4a-4afe-9a49-1a1e5cb21d33">
+>>>>>>> test:Forms/Fragments/frg_LangEE.xdp
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -111,13 +116,17 @@ var L_ServiceAdvisor = "Teeninduse konsultant,";
 var L_ServiceAdvisorColon = "Teeninduse konsultant:";
 var L_ServiceCharge = "Teenuslepingu kuumaks";
 var L_ServiceChargeVat = "Teenuslepingu kuumaks";
+<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
 var L_ServiceEUText = "??????";
+=======
+var L_ServiceEUText = "Applied KMS§ 15 lg.4 p.1, reverse charge.";
+>>>>>>> test:Forms/Fragments/frg_LangEE.xdp
 var L_Signature = "Allkiri";
 var L_SignatureColon = "Allkiri:";
 var L_SignatureDate = "Kuupäev";
 var L_SignHere = "Allkiri";
 var L_SoldBy = "Müüja:";
-var L_SparepartEU = "2006/112/EC 138";
+var L_SparepartEU = "Applied KMS§ 15 lg.3 p.2, reverse charge.";
 var L_SpProducer = "SP kood";
 var L_SumExtraOptions = "Müüja poolt paigaldatud lisavarustus ja teenused kokku";
 var L_SwiftCode = "SWIFT:";
@@ -207,7 +216,11 @@ var L_Code = "Kood";
 var L_ColorInfo = "Sõiduki värvus:";
 var L_CompanyRegno = "Registrikood:";
 var L_Confirmation = "Pakkumise kinnitus";
+<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
 var L_ContactTxt = "Siia tekst selle kohta et klient lubab kasutada tema andmeid tulevikus";
+=======
+var L_ContactTxt = "Parema teenuse pakkumiseks luban kasutada oma isikuandmeid (ees- ja perekonnanimi, aadress, telefoni number, sõiduki registrimärk, e-posti aadress), informatsiooni edastamiseks (nt SMS teavitus hooldusaja kohta) ja tagasiside saamiseks klienditeeninduse kvaliteedi kohta.";
+>>>>>>> test:Forms/Fragments/frg_LangEE.xdp
 var L_ContNextPage = "Jätkub järgmisel lehel";
 var L_ContractNo = "Lepingu nr:";
 var L_ControlSignature = "Kontrollija allkiri:";
@@ -272,8 +285,13 @@ var L_Interior = "Sõiduki sisu värvus:";
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?templateDesigner FormTargetVersion 30?>
+<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Zoom 110?></template>
+=======
+   <?templateDesigner Zoom 133?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+>>>>>>> test:Forms/Fragments/frg_LangEE.xdp
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -303,14 +321,22 @@ var L_Interior = "Sõiduki sisu värvus:";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
          <xmp:MetadataDate>2013-06-13T06:48:36Z</xmp:MetadataDate>
+=======
+         <xmp:MetadataDate>2013-08-08T13:11:25Z</xmp:MetadataDate>
+>>>>>>> test:Forms/Fragments/frg_LangEE.xdp
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+<<<<<<< HEAD:Forms/Fragments/frg_LangEE.xdp
          <xmpMM:DocumentID>uuid:75b851e0-00fb-4062-95b9-0e01637462a6</xmpMM:DocumentID>
+=======
+         <xmpMM:DocumentID>uuid:51d55f7e-2d4a-4afe-9a49-1a1e5cb21d33</xmpMM:DocumentID>
+>>>>>>> test:Forms/Fragments/frg_LangEE.xdp
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
