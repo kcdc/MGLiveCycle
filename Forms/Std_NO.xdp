@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-08T13:23:56Z" uuid="35ec6ebf-45b1-450a-a124-6a54727c2a4b">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-27T11:10:21Z" uuid="7a6732fa-22fd-422f-a197-2c51317d315f">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -386,7 +386,7 @@
                      <font typeface="Arial" size="9pt"/>
                      <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.SeparatorDealerNameMarketing"/>
+                     <bind match="dataRef" ref="$.SepDealerName"/>
                      <border>
                         <edge presence="hidden"/>
                         <corner presence="hidden"/>
@@ -401,7 +401,7 @@
                      <font typeface="Times New Roman" size="36pt" weight="bold"/>
                      <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                      <para vAlign="middle" hAlign="right"/>
-                     <bind match="dataRef" ref="$.DealerNumber"/>
+                     <bind match="dataRef" ref="$.SepDealerNo"/>
                      <border>
                         <edge presence="hidden"/>
                         <corner presence="hidden"/>
@@ -416,7 +416,7 @@
                      <font typeface="Courier New" size="9pt"/>
                      <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.TextToDisplay"/>
+                     <bind match="dataRef" ref="$.SepDescription"/>
                      <border>
                         <edge presence="hidden"/>
                         <corner presence="hidden"/>
@@ -1023,7 +1023,11 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 137?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Zoom 135?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines v:375000;v:50000?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -1037,13 +1041,9 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\010_STD_S001IT01_20130724_124542_D_B998FD.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\010_STD_S001IT01_20130724_124542_D_B998FD_717_test_stdTray4.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner SaveTaggedPDF 0?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:50000?></template>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -1055,6 +1055,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -1192,9 +1193,9 @@ this.caption.value.text = output;
 </localeSet>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="STD">
-      <uri>..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\STD_DocumentHeader.xsd</uri>
+      <uri>.\XSD\STD.xsd</uri>
       <rootElement>STD</rootElement>
-      <?templateDesigner fileDigest shaHash="Po293D6kBVjvjT23FrYWThaPuv0="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="6TgMMDmL8PZ8t6lZghLdMQs8L74="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -1244,9 +1245,9 @@ this.caption.value.text = output;
             </DocumentHeader>
             <Pages dd:maxOccur="-1">
                <SeparatorPage dd:minOccur="0" dd:maxOccur="-1">
-                  <TextToDisplay/>
-                  <DealerNumber/>
-                  <SeparatorDealerNameMarketing/>
+                  <SepDescription/>
+                  <SepDealerName/>
+                  <SepDealerNo/>
                </SeparatorPage>
                <Page dd:maxOccur="-1">
                   <PageDetail dd:maxOccur="-1"/>
@@ -1259,14 +1260,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-08-08T13:23:56Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-08-27T11:10:21Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:35ec6ebf-45b1-450a-a124-6a54727c2a4b</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:7a6732fa-22fd-422f-a197-2c51317d315f</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -1586,9 +1587,9 @@ this.caption.value.text = output;
             <xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
                <xs:complexType>
                   <xs:sequence>
-                     <xs:element name="TextToDisplay" type="xs:string"/>
-                     <xs:element name="DealerNumber" type="xs:string"/>
-                     <xs:element name="SeparatorDealerNameMarketing" type="xs:string"/>
+                     <xs:element name="SepDescription" type="xs:string"/>
+                     <xs:element name="SepDealerName" type="xs:string"/>
+                     <xs:element name="SepDealerNo" type="xs:string"/>
                   </xs:sequence>
                </xs:complexType>
             </xs:element>
