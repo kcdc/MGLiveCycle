@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-27T11:36:38Z" uuid="0ca350cb-087b-4f62-8174-44dc640037ed">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-02T06:04:53Z" uuid="583909ce-07e5-488e-bb78-52f64efc59dc">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -15,7 +15,7 @@
          <subform layout="tb" minH="4mm" name="subAmountLine" w="179mm">
             <keep intact="contentArea"/>
             <bind match="none"/>
-            <draw name="txtAttention" w="179mm" h="6.985mm">
+            <draw name="txtAttention" w="179mm" minH="4.343mm">
                <ui>
                   <textEdit/>
                </ui>
@@ -38,7 +38,7 @@
                   </textEdit>
                </ui>
                <font typeface="Arial" size="9pt" weight="bold"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
 
@@ -59,7 +59,7 @@ else
                </event>
                <bind match="none"/>
             </field>
-            <field name="fldAmount" y="0mm" x="0mm" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
+            <field name="Amount" y="0mm" x="0mm" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -67,10 +67,10 @@ else
                   </textEdit>
                </ui>
                <font typeface="Arial" size="9pt"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <bind match="dataRef" ref="$.AmountCurrency2"/>
             </field>
-            <field name="L_InvoiceEuroTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField015023" presence="hidden" access="readOnly">
+            <field name="L_InvoiceEuroTitle" y="0mm" x="0mm" w="62mm" id="floatingField015023" presence="hidden" access="readOnly" minH="9mm">
                <ui>
                   <textEdit>
                      <border>
@@ -80,7 +80,7 @@ else
                   </textEdit>
                </ui>
                <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <bind match="none"/>
                <event activity="initialize" name="event__initialize">
@@ -115,7 +115,7 @@ else
 </script>
                </event>
             </field>
-            <field name="L_PriceestimateEuroTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField025118" presence="hidden" access="readOnly">
+            <field name="L_PriceestimateEuroTitle" y="0mm" x="0mm" w="62mm" id="floatingField025118" presence="hidden" access="readOnly" minH="9mm">
                <ui>
                   <textEdit>
                      <border>
@@ -125,7 +125,7 @@ else
                   </textEdit>
                </ui>
                <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <?templateDesigner expand 1?>
                <event activity="initialize" name="event__initialize">
@@ -155,7 +155,7 @@ if(output != "")
 </script>
                </event>
             </field>
-            <field name="L_ConfirmationEuroTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField023059" presence="hidden" access="readOnly">
+            <field name="L_ConfirmationEuroTitle" y="0mm" x="0mm" w="62mm" id="floatingField023059" presence="hidden" access="readOnly" minH="9mm">
                <ui>
                   <textEdit>
                      <border>
@@ -165,7 +165,7 @@ if(output != "")
                   </textEdit>
                </ui>
                <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
@@ -195,7 +195,7 @@ if(output != "")
 </script>
                </event>
             </field>
-            <field name="L_WorkOrderEuroTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField012825" presence="hidden" access="readOnly">
+            <field name="L_WorkOrderEuroTitle" y="0mm" x="0mm" w="62mm" id="floatingField012825" presence="hidden" access="readOnly" minH="9mm">
                <ui>
                   <textEdit>
                      <border>
@@ -205,7 +205,7 @@ if(output != "")
                   </textEdit>
                </ui>
                <font typeface="Myriad Pro"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
@@ -249,7 +249,6 @@ if(output != "")
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <bind match="dataRef" ref="$.CurrencyRateTxt"/>
                <caption reserve="0in"/>
-               <para vAlign="middle"/>
             </field>
             <occur min="0" max="-1"/>
             <margin topInset="0mm"/>
@@ -262,12 +261,13 @@ if(output != "")
       <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 120 30 0003002400260028002C002F0032003300360037003A004200440046004700480049004C004E004F00500051005200550056005700580059005E0060 ACEILOPSTW_acdefiklmnorstuv{}?>
    </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(158750,158750), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 135?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines h:12786;h:18896;h:11673?></template>
+   <?templateDesigner Guidelines h:112800;h:166700;h:102900;h:9800?>
+   <?templateDesigner Zoom 135?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -279,7 +279,6 @@ if(output != "")
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -294,14 +293,14 @@ if(output != "")
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-08-27T11:36:38Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-02T06:04:53Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:0ca350cb-087b-4f62-8174-44dc640037ed</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:583909ce-07e5-488e-bb78-52f64efc59dc</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
