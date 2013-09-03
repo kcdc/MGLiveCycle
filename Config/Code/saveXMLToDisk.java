@@ -67,6 +67,12 @@ String value = xp.evaluate(document);
   strXPathNode = "//BELOP";
 XPathExpression xp = XPathFactory.newInstance().newXPath().compile(strXPathNode);
 String value = xp.evaluate(document);
+if( value.length() != 0)
+  {
+	String newValue = value.replaceFirst("\\.", "");
+	System.out.println("Belop formatted from: "+value+" to: "+newValue);
+	value = newValue;
+  }
   attr.setValue(value);
   invoice.setAttributeNode(attr);
 
@@ -168,6 +174,8 @@ else if(invoiceDate.length() == 10)
 	attr.setValue(formattedInvoiceDate);
 	
 }
+
+
 
 invoice.setAttributeNode(attr); 
 
