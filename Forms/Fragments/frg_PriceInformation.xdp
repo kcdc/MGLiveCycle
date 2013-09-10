@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T07:49:57Z" uuid="1c1d4292-1ac6-48df-8e24-54956fb64f65">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T12:02:43Z" uuid="4b1219f6-3910-4cdf-80cb-2eec3f0c2694">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -105,20 +105,7 @@ this.caption.value.text = output;
                   </caption>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.PriceInformation.ModelPriceWithoutFee"/>
@@ -258,27 +245,7 @@ this.caption.value.text = output;
                   </caption>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
-try
-{
-
-if(this.rawValue != "" &amp;&amp; this.rawValue != null)
-{
-	this.parent.numRegistrationStar.presence = "visible";
-	this.parent.parent.subMVAInfo.L_PriceInfoEnd2.presence = "visible";
-}
-
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.PriceInformation.RegistrationFee"/>
@@ -395,20 +362,7 @@ this.caption.value.text = output;
                   <bind match="dataRef" ref="$.Document.PriceInformation.ColorPrice"/>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -582,6 +536,11 @@ this.caption.value.text = output;
                   <format>
                      <picture>num{z,zzz,zz9}</picture>
                   </format>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+</script>
+                  </event>
                </field>
                <field name="numColorPriceAstr" minH="4mm" minW="2.001mm" access="readOnly">
                   <ui>
@@ -660,6 +619,11 @@ this.caption.value.text = output;
                   <format>
                      <picture>num{z,zzz,zz9}</picture>
                   </format>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+</script>
+                  </event>
                </field>
                <field name="numColorPriceAstr" minH="4mm" minW="2.001mm" access="readOnly">
                   <ui>
@@ -734,22 +698,7 @@ this.caption.value.text = output;
                      <para hAlign="right" vAlign="middle"/>
                   </caption>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.PriceInformation.RebuildPriceTotal"/>
@@ -830,21 +779,7 @@ this.caption.value.text = output;
                </caption>
                <bind match="dataRef" ref="$.Document.PriceInformation.SVAPriceTotal"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
             </field>
@@ -896,21 +831,7 @@ this.caption.value.text = output;
                </caption>
                <bind match="dataRef" ref="$.Document.PriceInformation.FreightPriceTotal"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
             </field>
@@ -964,21 +885,7 @@ this.caption.value.text = output;
                   </caption>
                   <bind match="dataRef" ref="$.Document.PriceInformation.TotalDiscount"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -1034,20 +941,7 @@ this.caption.value.text = output;
                   <bind match="dataRef" ref="$.Document.PriceInformation.YearFee"/>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -1102,21 +996,7 @@ this.caption.value.text = output;
                   </caption>
                   <bind match="dataRef" ref="$.Document.PriceInformation.PriceTotalSum"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -1167,6 +1047,11 @@ this.caption.value.text = output;
                   </caption>
                   <bind match="dataRef" ref="$.Document.PriceInformation.TradeinPrice"/>
                   <para hAlign="right"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+</script>
+                  </event>
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 0?></subform>
@@ -1215,6 +1100,11 @@ this.caption.value.text = output;
                   </caption>
                   <bind match="dataRef" ref="$.Document.PriceInformation.DifferenceAmount"/>
                   <para hAlign="right"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+</script>
+                  </event>
                </field>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
@@ -1339,28 +1229,7 @@ this.caption.value.text = output;
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
 
-try
-{
-
-/*if(this.rawValue == "" || this.rawValue == null)
-{
-	CarPriceEstimate.pageContent.SubPriceInformation.subMVAInfo.L_VatContract.presence = "hidden";
-	CarPriceEstimate.pageContent.SubPriceInformation.subMVAInfo.L_PriceInfoEnd2.presence = "hidden";
-	CarPriceEstimate.pageContent.SubPriceInformation.subResgistrationDesc.numRegistrationStar.presence = "hidden";
-}*/
-
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
             </field>
@@ -1369,17 +1238,21 @@ catch(e)
          <?templateDesigner isFragment yes?>
          <?templateDesigner fragmentTitle frg_PriceInformation?>
          <?templateDesigner fragmentDescription NO_A?>
-         <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 0?>
+         <variables>
+            <script usehref=".\frg_formattingScripts.xdp#som($template.#subform.#subform.#variables.formattingScripts)"/>
+            <?templateDesigner expand 1?></variables>
+      </subform>
       <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 164 43 0003000D00100011001D0020002400280029002A002C003000310032003500360037004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C006300A1 *-.:=AEFGIMNORSTabcdefghijklmnoprstuvyÅø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 40 10 003300440049004C004D00500051005200550056Pafijmnors?>
    </subform>
-   <?templateDesigner SaveTaggedPDF 1?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(158750,158750), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner SaveTaggedPDF 1?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 200?></template>
+   <?templateDesigner Zoom 151?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -1391,7 +1264,6 @@ catch(e)
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -1406,14 +1278,14 @@ catch(e)
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-10T07:49:57Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-10T12:02:43Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:1c1d4292-1ac6-48df-8e24-54956fb64f65</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:4b1219f6-3910-4cdf-80cb-2eec3f0c2694</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

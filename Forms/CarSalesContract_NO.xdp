@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T08:01:29Z" uuid="23040d87-3b26-4345-aea9-1d254be77c75">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T12:08:18Z" uuid="294a154c-0f55-427c-b2f7-3aa4737547e6">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -39,8 +39,7 @@ this.presence = "hidden";
                </subform>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <field name="fldTypeText" y="18mm" h="8mm" minW="91mm" x="0mm" access="readOnly">
                   <ui>
                      <textEdit>
@@ -341,8 +340,7 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
       <subform w="190mm" name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <subform name="subCarSalesContractMetadata" layout="tb" presence="hidden">
             <bind match="none"/>
             <field name="FinanceType" h="9mm" minW="6mm">
@@ -669,7 +667,7 @@ this.caption.value.text = output;
                      <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <caption reserve="11mm">
+                     <caption reserve="10.8332mm">
                         <font size="8.5pt" typeface="Arial" weight="bold"/>
                         <para vAlign="middle"/>
                         <value>
@@ -1329,21 +1327,7 @@ this.caption.value.text = output;
                      <para hAlign="right" vAlign="middle"/>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                      </event>
                      <bind match="dataRef" ref="$.OptionPrice"/>
@@ -1450,22 +1434,7 @@ this.caption.value.text = output;
                      <bind match="dataRef" ref="$.NationalOptionPrice"/>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
-
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                      </event>
                   </field>
@@ -1536,21 +1505,7 @@ this.caption.value.text = output;
                      <para hAlign="right" vAlign="middle"/>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                      </event>
                      <bind match="dataRef" ref="$.ReBuildPrice"/>
@@ -1608,19 +1563,7 @@ this.caption.value.text = output;
                   </format>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
-
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-this.rawValue = wordArray[0] + wordArray[1];
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -1709,21 +1652,7 @@ this.caption.value.text = output;
                      <para hAlign="right" vAlign="middle"/>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                      </event>
                      <bind match="dataRef" ref="$.Document.AdditionalInfo.OptionDiscount"/>
@@ -1774,21 +1703,7 @@ this.caption.value.text = output;
                      <para hAlign="right" vAlign="middle"/>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                      </event>
                      <bind match="dataRef" ref="$.Document.AdditionalInfo.VehicleDiscount"/>
@@ -2208,21 +2123,7 @@ this.caption.value.text = output;
                <bind match="dataRef" ref="$.Document.Financing.VehiclePrice"/>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}//app.alert(str);
-
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 
 </script>
                </event>
@@ -2808,19 +2709,7 @@ if(this.rawValue == "" || this.rawValue == null)
 }
 
 
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Financing.RemainingValue"/>
@@ -2883,21 +2772,7 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.LeaseMonthVat"/>
@@ -2942,21 +2817,7 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.AdditionalLeaseVat"/>
@@ -3018,21 +2879,7 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.LeaseTotalVat"/>
@@ -3077,21 +2924,7 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.ServiceChargeVat"/>
@@ -3133,21 +2966,7 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.ArrangementFeeVat"/>
@@ -3192,21 +3011,7 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.TotalMileagePerYear"/>
@@ -3251,21 +3056,7 @@ this.caption.value.text = output;
                <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                <para hAlign="right" vAlign="middle"/>
                <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
                <bind match="dataRef" ref="$.Document.Financing.PriceMileageExeededVat"/>
@@ -3516,21 +3307,7 @@ this.caption.value.text = output;
                </format>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                </event>
             </field>
@@ -3835,22 +3612,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.OnDelivery.RentalAmount"/>
@@ -3866,22 +3628,7 @@ catch(e)
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.OnDelivery.VatAmount"/>
@@ -3897,22 +3644,7 @@ catch(e)
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.OnDelivery.RentalAmountVat"/>
@@ -3969,22 +3701,7 @@ this.caption.value.text = output;
                   <para hAlign="right" vAlign="middle"/>
                   <bind match="dataRef" ref="$.Document.OnDelivery.Cash"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -4293,21 +4010,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Loan.Cash"/>
@@ -4353,21 +4056,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Loan.PrePaymentAmount"/>
@@ -4413,21 +4102,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Loan.LoanTradeinPrice"/>
@@ -4473,21 +4148,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Loan.LoanTradeinEncumbrance"/>
@@ -4533,21 +4194,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Loan.VWMBFLoan"/>
@@ -4596,21 +4243,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Loan.LoanVehiclePrice"/>
@@ -5719,17 +5352,17 @@ this.caption.value.text = output;
          <script usehref=".\Fragments\frg_ScriptGetLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
          <script usehref=".\Fragments\frg_LangNO.xdp#som($template.form1.#subform.#variables.NO)"/>
          <script usehref=".\Fragments\frg_LangEN.xdp#som($template.form1.#subform.#variables.EN)"/>
+         <script usehref=".\Fragments\frg_formattingScripts.xdp#som($template.form1.#subform.#variables.formattingScripts)"/>
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 248 65 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvwxy{}Ååø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 208 54 0003000B000C000D001000110012001D002400250026002700280029002C002D002E002F00300031003200330035003600370039004200440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 ()*-./:ABCDEFIJKLMNOPRSTV_abdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?>
@@ -5740,8 +5373,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 133?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -5757,6 +5388,8 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Tasks\Fase3\9559\998_CarSalesContract_UtenFrakt_B001HCR.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 151?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -5906,14 +5539,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-10T08:01:29Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-10T12:08:18Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:23040d87-3b26-4345-aea9-1d254be77c75</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:294a154c-0f55-427c-b2f7-3aa4737547e6</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
