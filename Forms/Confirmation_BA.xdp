@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-02T06:27:58Z" uuid="25fe62b3-20d4-4422-91d8-2fc976ea4c19">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-09T07:50:17Z" uuid="18da3a2e-5737-4383-a117-7add483329ab">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -348,8 +348,7 @@ this.caption.value.text = output;
       <subform w="190mm" name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <bind match="none"/>
          <event activity="initialize" name="event__initialize">
             <script contentType="application/x-javascript">/*
@@ -1427,7 +1426,7 @@ this.caption.value.text = output;
                            <margin/>
                         </textEdit>
                      </ui>
-                     <font size="9pt" typeface="Arial" weight="bold"/>
+                     <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
                      <caption reserve="37mm">
@@ -1460,7 +1459,7 @@ this.caption.value.text = output;
                            <margin/>
                         </textEdit>
                      </ui>
-                     <font size="9pt" typeface="Arial" weight="bold"/>
+                     <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
                      <caption reserve="37mm">
@@ -1497,7 +1496,7 @@ this.caption.value.text = output;
                            <margin/>
                         </textEdit>
                      </ui>
-                     <font size="9pt" typeface="Arial" weight="bold"/>
+                     <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
                      <caption reserve="37mm">
@@ -1529,7 +1528,7 @@ this.caption.value.text = output;
                            <margin/>
                         </textEdit>
                      </ui>
-                     <font size="9pt" typeface="Arial" weight="bold"/>
+                     <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
                      <caption reserve="37mm">
@@ -1761,119 +1760,129 @@ this.caption.value.text = output;
             <breakAfter/>
             <subform w="179mm" name="subTotal" layout="tb">
                <bind match="none"/>
-               <subform hAlign="right" name="subPriceTotals" w="178.896mm" h="12.463mm">
+               <subform hAlign="right" name="subPriceTotals" layout="tb">
                   <bind match="none"/>
-                  <field name="L_VatIncluded" w="73.103mm" h="4mm" access="readOnly" x="54.896mm" y="5.295mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                     <caption reserve="0mm" placement="right">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <value>
-                           <text>Alle priser inkl. MVA</text>
-                        </value>
-                        <para hAlign="right" vAlign="middle"/>
-                     </caption>
+                  <subform w="179mm" h="4mm" name="subPriceTotalToPay">
                      <bind match="none"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                     <field name="L_PriceVatTotalSum" w="41.103mm" h="4mm" access="readOnly" hAlign="right" x="87mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                        <caption reserve="0mm" placement="right">
+                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           <value>
+                              <text>Totalt å betale:</text>
+                           </value>
+                           <para vAlign="middle" hAlign="right"/>
+                        </caption>
+                        <bind match="none"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
 </script>
-                     </event>
-                  </field>
-                  <field name="L_PriceVatTotalSum" w="41.103mm" h="4mm" access="readOnly" hAlign="right" x="86.896mm" y="0.012mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                     <caption reserve="0mm" placement="right">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <value>
-                           <text>Totalt å betale:</text>
-                        </value>
+                        </event>
+                     </field>
+                     <field name="PriceVatTotalInfo" w="34mm" h="4mm" access="readOnly" hAlign="right" x="127.103mm">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
                         <para vAlign="middle" hAlign="right"/>
-                     </caption>
+                        <bind match="dataRef" ref="$record.Document.Total.PriceVatTotalInfo"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <?templateDesigner expand 1?></field>
+                     <field name="fldPriceVatTotalSum" w="17mm" h="4mm" access="readOnly" hAlign="right" x="162.103mm">
+                        <ui>
+                           <numericEdit>
+                              <margin/>
+                           </numericEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle" hAlign="right"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <bind match="dataRef" ref="$record.Document.Total.PriceVatTotalSum">
+                           <picture>num{zzz,zz9.99}</picture>
+                        </bind>
+                        <format>
+                           <picture>num{zzz,zz9.99}</picture>
+                        </format>
+                        <?templateDesigner expand 1?></field>
+                     <?templateDesigner expand 1?></subform>
+                  <subform w="179mm" name="subVatTextAndPercentValue">
                      <bind match="none"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                     <draw name="txtVatTextAndValue" w="61mm" h="4mm" hAlign="right" x="67mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField001959"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField002945"/></p></body>
+                           </exData>
+                        </value>
+                        <font size="9pt" typeface="Arial" weight="bold"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+                        <para vAlign="middle" hAlign="right"/>
+                        <caption placement="right" reserve="0mm">
+                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           <para vAlign="middle" hAlign="right"/>
+                        </caption>
+                     </draw>
+                     <field name="L_VatIncluded" w="62mm" h="9mm" id="floatingField001959" presence="hidden" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
+this.rawValue = output;
 </script>
-                     </event>
-                  </field>
-                  <field name="PriceVatTotalInfo" w="34mm" h="4mm" access="readOnly" hAlign="right" x="126.999mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                     <para vAlign="middle" hAlign="right"/>
-                     <bind match="dataRef" ref="$record.Document.Total.PriceVatTotalInfo"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                     <?templateDesigner expand 1?></field>
-                  <field name="fldVatPercent" w="17mm" h="4mm" access="readOnly" hAlign="right" x="125.999mm" y="5.307mm">
-                     <ui>
-                        <numericEdit>
-                           <margin/>
-                        </numericEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                     <para vAlign="middle" hAlign="right"/>
-                     <?templateDesigner expand 1?>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                     <bind match="dataRef" ref="$record.Document.Total.VatPercent">
-                        <picture>num{zzz,zz9.99}</picture>
-                     </bind>
-                     <format>
-                        <picture>num{zzz,zz9.99}</picture>
-                     </format>
-                  </field>
-                  <field name="fldPriceVatTotalSum" w="17mm" h="4mm" access="readOnly" hAlign="right" x="161.999mm">
-                     <ui>
-                        <numericEdit>
-                           <margin/>
-                        </numericEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                     <para vAlign="middle" hAlign="right"/>
-                     <?templateDesigner expand 1?>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                     <bind match="dataRef" ref="$record.Document.Total.PriceVatTotalSum">
-                        <picture>num{zzz,zz9.99}</picture>
-                     </bind>
-                     <format>
-                        <picture>num{zzz,zz9.99}</picture>
-                     </format>
-                  </field>
+                        </event>
+                     </field>
+                     <field name="fldVatPercent" w="62mm" h="9mm" id="floatingField002945" presence="hidden" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <bind match="dataRef" ref="$record.Document.Total.VatPercent"/>
+                     </field>
+                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
                <margin topInset="1mm"/>
                <border>
@@ -1888,11 +1897,10 @@ this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageCo
                </border>
                <keep intact="contentArea"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform usehref=".\Fragments\frg_AmountInEuro.xdp#som($template.form1.subAmountInEuro)">
             <bind ref="$.Document.CurrencySwap" match="dataRef"/>
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subExtensionsText" layout="tb">
             <bind match="dataRef" ref="$.Document.InfoText"/>
             <margin topInset="8mm" bottomInset="4mm"/>
@@ -2343,14 +2351,13 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)" x="0.001mm" y="7.388mm">
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 148 38 00030012001D00260027002E002F0031003200330035003600370038004200440045004600480049004A004D004E004F005000510052005300550056005700580059005C005E006000A1 /:CDKLNOPRSTU_abcefgjklmnoprstuvy{}ø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 204 53 0003001000110012001D00240025002600280029002A002C002D002E002F00300031003200330035003600370039003A0042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 -./:ABCEFGIJKLMNOPRSTVW_abcdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
@@ -2361,6 +2368,7 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 133?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -2374,14 +2382,13 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9489\755_Confirmation_S001IT05_20130830_130116_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Tasks\Fase3\755_Confirmation_S001IT05_20130823_134244_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:4850000;v:2675000;h:50000;h:500000;h:625000?>
-   <?templateDesigner Zoom 135?></template>
+   <?templateDesigner Guidelines v:375000;v:4850000;v:2675000;h:50000;h:500000;h:625000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -2524,14 +2531,14 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-02T06:27:58Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-09T07:50:17Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:25fe62b3-20d4-4422-91d8-2fc976ea4c19</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:18da3a2e-5737-4383-a117-7add483329ab</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">

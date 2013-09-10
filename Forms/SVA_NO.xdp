@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-03T14:00:49Z" uuid="4e237691-2751-4568-8ed2-69750f186ef6">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="ServiceAgreement" layout="tb" locale="sv_SE" restoreState="auto">
+      <pageSet>
+         <pageArea name="mpgPage1" id="Page1">
+            <subform x="15mm" y="6mm" w="190mm" h="179.339mm" name="subHeader">
+               <bind match="none"/>
+               <subform x="0mm" y="7mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
+                  <bind/>
+                  <?templateDesigner expand 0?>
+               </subform>
+               <field name="L_CarSalesContract" y="26mm" x="0mm" h="7mm" minW="91mm" access="readOnly">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Arial" baselineShift="0pt" size="12pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.rawValue = output;
+
+this.presence = "hidden";
+</script>
+                  </event>
+                  <bind match="none"/>
+               </field>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="103mm" y="22mm">
+                  <?templateDesigner expand 0?>
+                  <bind/>
+               </subform>
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
+                  <bind/>
+                  <?templateDesigner expand 1?></subform>
+               <field name="fldTypeText" y="18mm" h="8mm" minW="91mm" x="0mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="14pt" weight="bold"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.Document.DocumentHeader.TypeText"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var typeText = this.rawValue;
+//console.println(typeText);
+if(typeText.indexOf('Næringskjøp') != -1)
+{
+	CarSalesContract.pageSVI.subConditionsPrivateUser.presence = "hidden";
+	CarSalesContract.pageSVI.subConditionsCorporation.presence = "visible";
+	
+}
+if(typeText.indexOf('Forbrukerkjøp') != -1)
+{
+	CarSalesContract.pageSVI.subConditionsPrivateUser.presence = "visible";
+	CarSalesContract.pageSVI.subConditionsCorporation.presence = "hidden";
+}
+var firstTitlePart = xfa.resolveNode("#pageSet.mpgPage1.subHeader.L_CarSalesContract").rawValue;
+//app.alert(this.parent.parent.name);
+var secondTitlePart = this.rawValue;
+
+if(this.rawValue.indexOf(firstTitlePart) == -1)
+{
+	this.rawValue = firstTitlePart+" "+secondTitlePart;
+}
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform x="15mm" y="270mm" usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)">
+               <margin/>
+               <bind/>
+               <?templateDesigner expand 0?>
+            </subform>
+            <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="105mm">
+               <field h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm">
+                  <para/>
+                  <font/>
+                  <bind/>
+               </field>
+               <bind/>
+               <?templateDesigner expand 0?>
+            </subform>
+            <contentArea x="15mm" y="41mm" w="190mm" h="228mm" name="areaPage1"/>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="9mm">
+               <?templateDesigner expand 0?>
+            </subform>
+            <?templateDesigner expand 1?></pageArea>
+         <pageArea name="mpgPage2" id="Page1_ID">
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <subform w="190mm" h="188mm" name="subHeader" x="15mm">
+               <bind match="none"/>
+               <subform w="200.025mm" h="50mm" name="sub_RichTextEnvelope" x="4mm" y="5mm" presence="hidden">
+                  <bind match="none"/>
+                  <field name="exdataTemplate" w="7.875in" h="36.221mm" y="12.7mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border>
+                              <?templateDesigner StyleID aped3?>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Envelope</text>
+                        </value>
+                     </caption>
+                     <value>
+                        <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
+&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
+&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
+&gt;ccc&lt;/p&#xD;
+&gt;&lt;/body&#xD;
+&gt;&lt;/exData&#xD;
+&gt;</text>
+                     </value>
+                     <traversal>
+                        <traverse ref="txtTextArea2[0]"/>
+                     </traversal>
+                     <bind match="none"/>
+                  </field>
+                  <?templateDesigner expand 0?></subform>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="103mm" y="28mm">
+                  <bind/>
+                  <?templateDesigner expand 0?>
+               </subform>
+               <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="0mm" y="13mm">
+                  <bind/>
+                  <field access="readOnly" minW="155mm" name="DealerNameMarketing" y="0in" x="0mm"/>
+                  <?templateDesigner expand 0?>
+               </subform>
+               <field name="L_DocTypeCarSalesContract" y="32mm" x="0mm" h="7mm" minW="91mm" access="readOnly">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font typeface="Arial" baselineShift="0pt" size="12pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">//var LangCode = getLanguages.getLanguageSetting();
+
+//var output = getLanguages.getLanguageText(LangCode, this.name);
+
+//this.rawValue = output;
+
+//this.presence = "hidden";
+</script>
+                  </event>
+                  <bind match="none"/>
+               </field>
+               <field name="fldTypeText" y="24mm" h="8mm" minW="91mm" x="0mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="14pt" weight="bold"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.Document.DocumentHeader.TypeText"/>
+               </field>
+               <subform x="115mm" y="27mm" w="58mm" name="subDocInfo" layout="tb">
+                  <bind match="none"/>
+                  <field name="L_ContractNo" h="3.5mm" minW="58mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="18.5mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Kontraktnr.:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.ContractNo"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
+                  </field>
+                  <field name="L_OrderNo" h="3.5mm" minW="58mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="14.5711mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Ordrenr.:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.OrderNo"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
+                  </field>
+                  <field name="L_Date" h="3.5mm" minW="58mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="8.8mm">
+                        <font size="8.5pt" typeface="Arial" weight="bold"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>Dato:</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.DateCreated"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <subform x="164mm" y="9mm" usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)">
+               <bind/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+
+
+this.presence = "visible";
+this.access = "protected";
+</script>
+               </event>
+               <border>
+                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <edge presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
+                  <corner presence="hidden" stroke="solid" thickness="0.1mm"/>
+               </border>
+               <field presence="hidden" h="17mm" hAlign="right" name="imgLogo" w="30mm" x="0in" y="0in">
+                  <bind/>
+               </field>
+               <field h="20mm" hAlign="right" name="skodaLogo" w="18mm" x="14.04mm" y="2.081mm">
+                  <bind/>
+               </field>
+               <field h="15mm" hAlign="right" name="vwLogo" w="15mm" x="15.7mm" y="5.056mm">
+                  <bind/>
+               </field>
+               <field h="16mm" hAlign="right" name="audiLogo" w="29mm" x="1.561mm" y="3.16mm">
+                  <bind/>
+               </field>
+               <field h="24mm" hAlign="right" name="audiServiceLogo" w="21mm" x="9.56mm" y="0.402mm">
+                  <bind/>
+               </field>
+               <?templateDesigner expand 0?>
+            </subform>
+            <subform usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)" x="15mm" y="270mm">
+               <?templateDesigner expand 0?>
+               <margin/>
+               <bind/>
+            </subform>
+            <field name="fldVerticalLabel" minH="6mm" access="readOnly" minW="50mm" x="6mm" y="155mm" rotate="90">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="8pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <bind match="none"/>
+               <para lineHeight="8pt" vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLabel").rawValue;
+
+</script>
+               </event>
+               <value>
+                  <text>NameOfDocType_ServerDate</text>
+               </value>
+            </field>
+            <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
+            <?templateDesigner expand 1?></pageArea>
+         <pageArea name="mpgPage3" id="341ea2b5-b329-11e2-9a4f-00216a1a4cd5">
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea x="12mm" y="13mm" w="190mm" h="278mm" name="areaPage1"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="7.480319in" name="pageContent">
+         <bind match="none"/>
+         <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
+            <bind/>
+            <?templateDesigner expand 0?></subform>
+         <subform w="192mm" layout="lr-tb" name="subSVA1">
+            <subform w="186mm" name="subTitle" layout="tb">
+               <draw name="txtTitle" w="186mm" h="6mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>AVTALE OM SERVICE OG VEDLIKEHOLD</text>
+                  </value>
+                  <font size="12pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  <?renderCache.bounds 527244 17008 0 0 0 0 0 0?>
+                  <?renderCache.textRun 32 AVTALE OM SERVICE OG VEDLIKEHOLD 0 140935 11914 0 0 0 "Times New Roman" 1 0 12000 ISO-8859-1?></draw>
+               <bind match="none"/>
+               <breakBefore target="mpgPage3" targetType="pageArea"/>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subLeftColumn" w="87.001mm" layout="tb">
+               <subform w="87mm" layout="tb" name="subPreDynamicFields">
+                  <bind match="none"/>
+                  <draw name="txtConditions" w="87mm" h="29mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">1. Avtaledokument</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">    </span>Denne avtalen (heretter omtalt som ”Avtalen”) gjelder utførelse av</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">     </span>service og vedlikehold på bilen angitt i punkt 1.0.<span style="xfa-spacerun:yes">  </span>Avtalen trer i kraft</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">     </span>når den er signert av begge parter.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">1.0 Avtalens parter og Avtalens omfang<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">      </span>Selger, som angitt nedenfor, påtar seg å utføre service- og</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>vedlikeholdsarbeid på kundens bil som angitt nedenfor i henhold til</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>punkt 2, og med de begrensninger som følger av punkt 3.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p></body>
+                        </exData>
+                     </value>
+                     <font size="7pt" typeface="Times New Roman"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <para lineHeight="8pt"/>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <margin topInset="3mm"/>
+               <bind match="none"/>
+               <breakBefore target="mpgPage3" targetType="pageArea"/>
+               <subform name="subDynamicFields" w="87mm">
+                  <bind match="none"/>
+                  <subform x="0.001mm" name="subFieldHolder" y="0mm" layout="tb">
+                     <bind match="none"/>
+                     <field name="L_Customer" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.608mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Kunde:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.CustomerName"/>
+                        <?templateDesigner expand 1?></field>
+                     <field name="L_DealerName" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.608mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Selger:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.DealerName"/>
+                        <?templateDesigner expand 1?></field>
+                     <field name="L_CarModel" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.5733mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Bilmerke/type:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.CarModel"/>
+                        <?templateDesigner expand 1?></field>
+                     <field name="L_ContractNumber" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.5733mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Kontraktsnr.:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.ContractNo"/>
+                        <?templateDesigner expand 1?></field>
+                     <field name="L_Mileage" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.5733mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Avtalt kjørelengde(km):</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.Mileage"/>
+                        <?templateDesigner expand 1?></field>
+                     <field name="L_AgreementPeriod" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.5733mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Avtaleperiode (mndr.):</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.AgreementPeriod"/>
+                        <?templateDesigner expand 1?></field>
+                     <field name="L_PricePrKm" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.608mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Serviceavgift øre/km(eks. mva):</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.PricePerKm"/>
+                        <?templateDesigner expand 1?></field>
+                     <field name="L_ReplacementCar" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.608mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Erstatningsbil inkludert:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.ReplacementCar"/>
+                        <?templateDesigner expand 1?></field>
+                     <margin leftInset="3mm"/>
+                     <field name="L_InvoiceFrequency" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.5733mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Fakturering:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.PageInfo.InvoiceFrequency"/>
+                        <?templateDesigner expand 1?></field>
+                     <field name="L_ContractValidFrom" h="3mm" access="readOnly" w="84mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="7pt" typeface="Times New Roman"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="34.5733mm">
+                           <font size="7pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                           <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                           <value>
+                              <text>Avtale gjelder fra:</text>
+                           </value>
+                        </caption>
+                        <bind match="none"/>
+                        <?templateDesigner expand 1?>
+                        <value>
+                           <text>Bilens utleveringsdato</text>
+                        </value>
+                     </field>
+                     <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="tb" name="subPostDynamicFields" w="87mm">
+                  <bind match="none"/>
+                  <draw name="txtConditionsContinued" w="87mm" h="195mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold">2.0 Hva Avtalen inkluderer</p><p style="font-size:7pt">2.1<span style="xfa-spacerun:yes">  </span>Alle kostnader til bilens serviceprogram som foreskrevet av produsent.</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">2.2<span style="xfa-spacerun:yes">  </span>Nødvendige reparasjoner for å opprettholde bilens drifts- og</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>trafikksikkerhet, herunder, men ikke begrenset til, utskifting/reparasjon</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>av bremseklosser, bremseskiver og hjuloppheng.<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">2.3<span style="xfa-spacerun:yes">  </span>Vinduspusserblad, lyspærer og etterfylling av div. væsker i forbindelse</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>med service.<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">2.4<span style="xfa-spacerun:yes">  </span>Erstatningsbil ved verkstedbesøk i henhold til punkt 2.1 og 2.2, dersom</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>dette er inkludert iht. pkt 1.0.<span style="xfa-spacerun:yes">  </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">2.5<span style="xfa-spacerun:yes">  </span>Kjøretøykontroll (EU-kontroll) dersom dette i Avtaleperioden er<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>påkrevet.<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-weight:bold">3.0 Hva Avtalen ikke inkluderer<span style="xfa-spacerun:yes">  </span></p><p style="font-size:7pt">3.1<span style="xfa-spacerun:yes">  </span>Drivstoff og daglig vedlikehold som f.eks. vask, polering, etterfylling</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>av olje, kjølevæske og spylervæske mellom servicebesøk.</p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">3.2<span style="xfa-spacerun:yes">  </span>Enhver skade på bilen (uansett årsak), herunder, men ikke begrenset til:</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>- Motorskade som følge av for lite motorolje</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>- Reparasjoner som følge av påfylling av feil drivstoff</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>- Skader på dekk og felg</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>- Skader på karosseri, lakk, interiør, deksler og kledning</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>- Skader på glass, speil og lykter<span style="xfa-spacerun:yes">  </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>- Følgeskader grunnet manglende utført ettersyn, vedlikehold og</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">         </span>service<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>- For- og bakstillingskontroll som følge av ytre påvirkninger forårsaket</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">         </span>av bruker<span style="xfa-spacerun:yes">  </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">3.3<span style="xfa-spacerun:yes">  </span>Enhver slitasje som skyldes feil bruk eller som er forårsaket av ytre</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>påvirkninger og under enhver omstendighet utskifting av utslitte</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>stoler/stolputer/stoltrekk<span style="xfa-spacerun:yes">       </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">3.4<span style="xfa-spacerun:yes">  </span>Vedlikehold og reparasjoner på ettermontert utstyr som for eksempel:<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">        </span>- Påbygg/ombygg/utstyr som er utført/levert av 3.part<span style="xfa-spacerun:yes">      </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">        </span>- Fartsskriver<span style="xfa-spacerun:yes">  </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">        </span>- Radio/kommunikasjonsutstyr/cdspiller, navigasjon og antenner<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">        </span>- Dekor<span style="xfa-spacerun:yes">                                                                                                       </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">3.5<span style="xfa-spacerun:yes">  </span>Bergingskostnader og tauing utover bilens mobilitetsgaranti.</p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">3.6<span style="xfa-spacerun:yes">  </span>Dekk, hjulbalansering og lagring av dekk.<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">3.7<span style="xfa-spacerun:yes">  </span>De begrensninger som er angitt ovenfor innebærer ingen innskrenkning</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>av de rettigheter Kunden har iht. gjeldende lovgivning ved mangler på<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>bilen.</p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-weight:bold">4.0 Serviceavgift</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">      </span>Serviceavgiften som angitt i punkt 1.0 skal oppjusteres i samsvar med<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>økningen i konsumprisindeksen. Oppjusteringen finner sted per</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>den 1.januar hvert kalenderår. Basis for oppjusteringen er den siste</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>foreliggende konsumprisindeks fra Statistisk Sentralbyrå forut for</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>Avtalens inngåelse og stigningen i denne frem til den sist foreliggende</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>indeks forut for justeringstidspunktet. Oppjustering skal imidlertid ikke</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>finne sted før det har gått minst 12 måneder fra Avtalens inngåelse.</p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-weight:bold">5.0 Fakturering<span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">5.1<span style="xfa-spacerun:yes">  </span>Fakturering av Serviceavgiften skjer forskuddsvis for de avtalte</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>faktureringsintervaller i pkt. 1.0 og med grunnlag i en forutsetning om</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">       </span>at Avtalt Kjørelengde fordeler seg jevnt over Avtaleperioden.<span style="xfa-spacerun:yes">  </span></p><p style="font-size:7pt"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:7pt">5.2<span style="xfa-spacerun:yes">  </span>Dersom Avtalen skal inngå i Kundens leasing- eller låneavtale</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">      </span>faktureres vedkommendes finansieringsselskap. Slik fakturering har</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">      </span>imidlertid ingen innvirkning på partenes rettigheter og forpliktelser etter</p><p style="font-size:7pt"><span style="xfa-spacerun:yes">      </span>denne Avtalen.</p></body>
+                        </exData>
+                     </value>
+                     <font typeface="Times New Roman" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para lineHeight="8pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                     <?renderCache.bounds 243780 549922 0 0 1417 1417 0 0?>
+                     <?renderCache.textRun 27 2.0 Hva Avtalen inkluderer  0 1417 9259 0 0 0 "Times New Roman" 1 0 10000 ISO-8859-1?>
+                     <?renderCache.textRun 76 2.1  Alle kostnader til bilens serviceprogram som foreskrevet av produsent.  0 1417 14906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 8          0 1417 22906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 30906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 68 2.2  Nødvendige reparasjoner for å opprettholde bilens drifts- og  0 1417 38906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 81        trafikksikkerhet, herunder, men ikke begrenset til, utskifting/reparasjon  0 1417 46906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 55        av bremseklosser, bremseskiver og hjuloppheng.   0 1417 54906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 62906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 79 2.3  Vinduspusserblad, lyspærer og etterfylling av div. væsker i forbindelse  0 1417 70906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 21        med service.   0 1417 78906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 86906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 78 2.4  Erstatningsbil ved verkstedbesøk i henhold til punkt 2.1 og 2.2, dersom  0 1417 94906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 42        dette er inkludert iht. pkt 1.0.    0 1417 102906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 110906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 72 2.5  Kjøretøykontroll (EU-kontroll) dersom dette i Avtaleperioden er   0 1417 118906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 19        påkrevet.   0 1417 126906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 134906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 34 3.0 Hva Avtalen ikke inkluderer    0 1417 145259 0 0 0 "Times New Roman" 1 0 10000 ISO-8859-1?>
+                     <?renderCache.textRun 77 3.1  Drivstoff og daglig vedlikehold som f.eks. vask, polering, etterfylling  0 1417 150906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 67        av olje, kjølevæske og spylervæske mellom servicebesøk.  0 1417 158906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 166906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 80 3.2  Enhver skade på bilen (uansett årsak), herunder, men ikke begrenset til:  0 1417 174906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 53        - Motorskade som følge av for lite motorolje  0 1417 182906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 65        - Reparasjoner som følge av påfylling av feil drivstoff  0 1417 190906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 33        - Skader på dekk og felg  0 1417 198906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 68        - Skader på karosseri, lakk, interiør, deksler og kledning  0 1417 206906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 45        - Skader på glass, speil og lykter    0 1417 214906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 73        - Følgeskader grunnet manglende utført ettersyn, vedlikehold og  0 1417 222906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 18          service   0 1417 230906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 83        - For- og bakstillingskontroll som følge av ytre påvirkninger forårsaket  0 1417 238906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 21          av bruker    0 1417 246906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 254906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 76 3.3  Enhver slitasje som skyldes feil bruk eller som er forårsaket av ytre  0 1417 262906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 73        påvirkninger og under enhver omstendighet utskifting av utslitte  0 1417 270906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 41        stoler/stolputer/stoltrekk         0 1417 278906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 286906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 76 3.4  Vedlikehold og reparasjoner på ettermontert utstyr som for eksempel:   0 1417 294906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 70         - Påbygg/ombygg/utstyr som er utført/levert av 3.part        0 1417 302906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 25         - Fartsskriver    0 1417 310906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 72         - Radio/kommunikasjonsutstyr/cdspiller, navigasjon og antenner   0 1417 318906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 119         - Dekor                                                                                                         0 1417 326906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 334906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 66 3.5  Bergingskostnader og tauing utover bilens mobilitetsgaranti.  0 1417 342906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 350906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 48 3.6  Dekk, hjulbalansering og lagring av dekk.   0 1417 358906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 366906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 75 3.7  De begrensninger som er angitt ovenfor innebærer ingen innskrenkning  0 1417 374906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 79        av de rettigheter Kunden har iht. gjeldende lovgivning ved mangler på   0 1417 382906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 14        bilen.  0 1417 390906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 398906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 18 4.0 Serviceavgift  0 1417 409259 0 0 0 "Times New Roman" 1 0 10000 ISO-8859-1?>
+                     <?renderCache.textRun 77       Serviceavgiften som angitt i punkt 1.0 skal oppjusteres i samsvar med   0 1417 414906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 70        økningen i konsumprisindeksen. Oppjusteringen finner sted per  0 1417 422906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 77        den 1.januar hvert kalenderår. Basis for oppjusteringen er den siste  0 1417 430906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 75        foreliggende konsumprisindeks fra Statistisk Sentralbyrå forut for  0 1417 438906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 80        Avtalens inngåelse og stigningen i denne frem til den sist foreliggende  0 1417 446906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 81        indeks forut for justeringstidspunktet. Oppjustering skal imidlertid ikke  0 1417 454906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 80        finne sted før det har gått minst 12 måneder fra Avtalens inngåelse.  0 1417 462906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 470906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 17 5.0 Fakturering   0 1417 481259 0 0 0 "Times New Roman" 1 0 10000 ISO-8859-1?>
+                     <?renderCache.textRun 70 5.1  Fakturering av Serviceavgiften skjer forskuddsvis for de avtalte  0 1417 486906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 79        faktureringsintervaller i pkt. 1.0 og med grunnlag i en forutsetning om  0 1417 494906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 72        at Avtalt Kjørelengde fordeler seg jevnt over Avtaleperioden.    0 1417 502906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 2    0 1417 510906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 69 5.2  Dersom Avtalen skal inngå i Kundens leasing- eller låneavtale  0 1417 518906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 73       faktureres vedkommendes finansieringsselskap. Slik fakturering har  0 1417 526906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 83       imidlertid ingen innvirkning på partenes rettigheter og forpliktelser etter  0 1417 534906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?>
+                     <?renderCache.textRun 20       denne Avtalen. 0 1417 542906 0 0 0 "Times New Roman" 0 0 7000 ISO-8859-1?></draw>
+                  <?templateDesigner expand 1?>
+                  <margin topInset="3mm"/>
+               </subform>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subRightColumn">
+               <draw name="txtConditions" w="90mm" x="0mm" h="230mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">6.0 Kundens plikter<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">6.1<span style="xfa-spacerun:yes">  </span>Kunden forplikter seg til å bruke og behandle bilen iht. dens</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>instruksjonsbok og servicehefte.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">6.2<span style="xfa-spacerun:yes">  </span>Kunden er forpliktet til umiddelbart å kontakte Selger eller et autorisert</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>Volkswagen/Audi/Skoda verksted dersom feil oppstår ved bilen, slik at</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>unødig skade kan unngås.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">6.3<span style="xfa-spacerun:yes">  </span>Kunden kan ikke endre den bruk av bilen som den er ment for (for</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>eksempel bruke en personbil som varebil) eller foreta ombygging av bilen</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>uten Selgers skriftlige forhåndssamtykke.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">6.4<span style="xfa-spacerun:yes">  </span>Dersom Avtalt Kjørelengde i Avtaleperioden blir overskredet eller det er</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>åpenbart at den vil bli overskredet, skal dette omgående meldes til Selger</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>slik at Avtalen kan rekalkuleres i henhold til den kjørelengde bilen</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>faktisk vil ha i Avtaleperioden. Rekalkuleringen skal skje ved at Kunden</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>belastes for den Serviceavgift han skulle ha betalt for den faktiske</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>kjørelengde, basert på Selgers gjeldende prisliste for Serviceavgift på</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>tidspunktet for rekalkuleringen (beregnes fra første kjørte kilometer).</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>Allerede innbetalt Serviceavgift blir avregnet mot den rekalkulerte</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>Serviceavgiften. Rekalkulert Serviceavgift vil gjelde for resterende</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>Avtaleperiode.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">6.5<span style="xfa-spacerun:yes">  </span>Kunden forplikter seg til å bringe bilen i rett tid til Selgers verksted, ved</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>service</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">6.6<span style="xfa-spacerun:yes">  </span>Kunden er forpliktet til å benytte Selgers verksted for all service,</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>vedlikehold og reparasjoner.<span style="xfa-spacerun:yes">  </span>Andre autoriserte Volkswagen/Audi/Škoda</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>verksteder kan benyttes dersom dette på forhånd er skriftlig avtalt med</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>Selger.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">6.7<span style="xfa-spacerun:yes">  </span>Kunden har ikke rett til å benytte bilen til utleievirksomhet,<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>hastighetsløp eller tilsvarende former for konkurranse.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">6.8<span style="xfa-spacerun:yes">  </span>Dersom Kundens plikter som angitt ovenfor ikke overholdes vil de økte</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>kostnader som bruddet på pliktene har eller vil medføre med hensyn til</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>service og vedlikehold, bli belastet Kunden.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">7.0 Mislighold</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>7.1<span style="xfa-spacerun:yes">  </span>Avtalen kan av Selger heves med umiddelbar virkning dersom Kunden</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>vesentlig misligholder sine forpliktelser iht. Avtalen. Kunden kan ikke</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>gjøre gjeldende noen rettigheter etter Avtalen etter Selgers heving.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">7.2<span style="xfa-spacerun:yes">  </span>Som vesentlig mislighold skal uansett regnes (men er ikke begrenset til):</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>- Brudd på Kundens plikter iht. punkt 6.0.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>- Manglende betaling av Serviceavgiften på forfallsdag.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>- Bilen skifter eier uten at Selger på forhånd er skriftlig informert.<span style="xfa-spacerun:yes">      </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>- Manipulering av bilens kilometerstand.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>- Manipulering av styredata til motoren som gjør at motorytelsen øker.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">8.0 Oppsigelse og endringer<span style="xfa-spacerun:yes">  </span></p><p style="text-decoration:none;letter-spacing:0in">8.1<span style="xfa-spacerun:yes">  </span>Avtalen kan av Selger eller Kunden gjensidig sies opp med 1 måneds<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>skriftlig varsel regnet fra datoen for oppsigelsesmeldingen.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">9.0 Avregning<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">9.1<span style="xfa-spacerun:yes">  </span>Ved Avtalens ordinære utløp iht. punkt 1.0, ved opphør av Avtalen som</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>følge av heving (jfr. punkt 7.0) eller oppsigelse (jfr. punkt 8.0) skal</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>Kunden forevise bilen for Selger og kilometerstanden avleses.<span style="xfa-spacerun:yes">  </span></p><p style="text-decoration:none;letter-spacing:0in">9.2<span style="xfa-spacerun:yes">  </span>Selger skal innen 30 dager fra datoen for avlesning av kilometerstanden</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>foreta avregning overfor Kunden av Serviceavgiften i forhold til Bilens</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>kilometerstand. Dersom antall kjørte kilometer er høyere enn avtalt<span style="xfa-spacerun:yes">     </span><span style="xfa-tab-count:1">         </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>kjørelengde gjelder punkt 6.4 tilsvarende. Eventuelle underkjørte<span style="xfa-spacerun:yes">   </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>kilometer godtgjøres ikke.</p><p style="text-decoration:none;letter-spacing:0in">9.3<span style="xfa-spacerun:yes">  </span>Selger kan kreve dekket sitt økonomiske tap som skyldes Kundens</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>vesentlige mislighold av Avtalen. Selger har rett til å ta seg dekning for</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>slikt økonomisk tap i eventuelt for mye<span style="xfa-spacerun:yes">  </span>betalt / forskuddsfakturert</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">       </span>Serviceavgift.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">10.0 Overdragelse<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">10.1 Kunden har ikke rett til å overdra Avtalen uten Selgers skriftlige</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>forhåndssamtykke. Selger kan, helt eller delvis, overdra Avtalen til et</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>annet selskap i det konsern som Selger inngår i, dog slik at Selger har</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>plikt til å sørge for at Kunden får de ytelser han har krav på etter</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>Avtalen.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">11.0 Tvister<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">11.1 Enhver tvist som måtte springe ut av denne Avtalen skal løses for de</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>ordinære domstoler. Partene vedtar Selgers verneting for alle slike</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>tvister, dog slik at dersom Avtalen er overdratt av Selger i henhold til</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>punkt 10.0, er det vernetinget til det selskap som Avtalen er overdratt til</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">        </span>som skal gjelde.</p></body>
+                     </exData>
+                  </value>
+                  <font size="7pt" typeface="Times New Roman"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0.5mm"/>
+                  <para lineHeight="8pt"/>
+               </draw>
+               <margin leftInset="10mm" topInset="3mm"/>
+               <bind match="none"/>
+               <breakBefore target="mpgPage3" targetType="pageArea"/>
+               <?templateDesigner expand 1?></subform>
+            <keep intact="contentArea"/>
+            <bind match="none"/>
+            <?templateDesigner expand 1?></subform>
+         <subform w="192mm" layout="lr-tb" name="subSVA2" presence="hidden">
+            <subform w="186mm" h="6mm" name="subTitle">
+               <draw name="txtTitle" w="186mm" h="6mm" x="0mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>SALGS- OG LEVERINGSVILKÅR I FORBRUKERKJØP</text>
+                  </value>
+                  <font size="12pt" typeface="Times New Roman" weight="bold" baselineShift="0pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" hAlign="center" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <bind match="none"/>
+               <breakBefore target="mpgPage3" targetType="pageArea"/>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subLeftColumn" w="86mm">
+               <draw name="txtConditions" w="3.385833in" h="242mm" y="0mm" x="0.001mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">1. Forbrukerkjøpsloven - avtalen - garanti.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Kjøperen bekrefter ved sin omstående underskrift å ha gjort seg kjent med og godtar nedenstående vilkår og det som følger av selve kjøpskontrakten.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Bilen selges fri for heftelser. Den av partene som påberoper seg avtaler utenom den skriftlige kontrakten har bevisbyrden for dette.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Salgs- og leveringsvilkårene gjør ingen begrensninger i rettigheter som kjøperen har etter lov av 21. juni 2002 nr. 34 om forbrukerkjøp (f.kj.l)<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom bilen er solgt med garanti, gjør garantien ingen innskrenkinger i de rettigheter kjøperen ellers har etter forbrukerkjøpsloven.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">2. Forbrukerkjøp - næringskjøp.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Disse salgs- og leveringsvilkår forutsetter at kjøperen ikke hovedsaklig handler som ledd i næringsvirksomhet. Dersom bilen hovedsaklig skal brukes, eller hovedsaklig blir brukt i kjøperens næringsvirksomhet, er kjøpet ikke et forbrukerkjøp, og i mangel av annen avtale kommer NBF's standardkontrakt for næringskjøp automatisk til anvendelse.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">3. Pris.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom det før levering eller før utløpet av avtalt leveringstid finner sted endringer i toll- og avgiftssatser, eller prisen for den solgte bilen i samme tidsrom endres fra fabrikken/importøren, eller det finner sted endring i valutakurs, og disse forhold får innflytelse på selgerens innkjøpspris, blir kjøpesummen å endre tilsvarende - dog med følgende unntak: Dersom bilen på avtaletidspunktet var tatt inn i landet, og det er avtalt leveringstid innen 3 måneder, vil selgeren ved prisendring fra fabrikken eller importøren bare kunne forhøye den avtalte kjøpesummen med den delen av prisendringen som skyldes endret valutakurs.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom den avtalte prisen omfatter offentlige avgifter som påløper ved registrering av bilen (bl.a. engangsavgift eller omregistreringsavgift), og slike avgifter endres mellom kontraktsinngåelsen og registreringstidspunktet, blir kjøpesummen å endre tilsvarende. Unntatt er eventuell økning av slike avgifter som finner sted etter utløpet av avtalt leveringstid. Merverdiavgift påløper med den avgiftssatsen som gjelder til enhver tid. Ved prisøkninger som nevnt ovenfor og som overstiger 6% av avtalt kjøpesum, har kjøperen likevel rett til å heve kjøpet, uansett årsaken til prisøkningen. De begrensninger i selgerens adgang til å endre kjøpesummen som er nevnt ovenfor, gjelder ikke hvor:<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Avtalt eller forutsatt leveringstid er lengre enn 6 måneder etter kontraktsdato.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">- Bilen er bestilt med særskilte spesifikasjoner fra fabrikk, karosseribedrift eller</p><p style="margin-left:3.969pt;letter-spacing:0in">verksted. I disse tilfeller gjelder heller ikke kjøperens rett til å heve kjøpet dersom<span style="xfa-spacerun:yes"> </span></p><p style="margin-left:3.969pt;letter-spacing:0in">prisøkningen overstiger 6% av avtalt kjøpesum.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">4. Registrering og årsavgift.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Selgeren gis fullmakt til å registrere bilen. Ved salg av nybil tilkommer årsavgift. Ved salg av bruktbil betaler kjøperen eventuell årsavgift som er forhåndsbetalt av selgeren.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">5. Kredittkjøp med salgspant.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom kjøperen gis kreditt for kjøpesummen eller noen del av denne, har selgeren salgspant i bilen med utstyr og tilbehør som nevn i denne kontrakt inntil hele kjøpesummen/ kredittkjøpsprisen er betalt. Kjøperen plikter å medvirke til eventuell tinglysning av salgspantet, og betaler kostnadene ved dette.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Ved kredittkjøp undertegner kjøperen senest ved bilens levering kredittkjøpskontrakt for motorkjøretøyer og betalingsdokumenter. Kjøperen betaler kredittkostnader, herunder for kredittrisiko eventuelt dekket ved forsikring av tredjemanns interesse, fullstendig vognskadeforsikring samt trafikkforsikring.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom den alminnelige lånerente (markedsrenten) reguleres opp eller ned i perioden mellom denne kontrakts underskrift og utstedelse av kredittkjøpskontrakt og dette forhold får innvirkning på kredittkostnadene som skal betales av kjøperen, blir disse å endre tilsvarende.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Foretar myndighetene endringer i lov eller forskrift som regulerer kredittkjøp og dette får virkning for det som er avtalt i denne kontrakt m.h.t. kreditt-tid, kontantbeløp, kredittbeløp eller kredittkostnader, blir kontrakten å endre tilsvarende.<span style="xfa-spacerun:yes">  </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;letter-spacing:0in">6. Innbyttebil.</p><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Dersom innbyttebil etter avtale mellom partene brukes av kjøperen i tiden mellom kontraktsinngåelsen og levering av ny bil, skal innbyttebilen ved levering være i samme stand som ved kontraktsinngåelsen (taksttidspunktet), bortsett fra normal bruksslitasje. I dette tidsrom plikter kjøperen å holde bilen forsvarlig vedlike i henhold til produsentens/importørens anvisninger og eventuelle reparasjoner skal utføres på fagmessig måte, både med hensyn til deler og arbeid. Kjøperen har heller ikke anledning til å ombygge innbyttebilen, la den undergå vesentlig konstruksjonsmessig forandring eller bruke den i hastighetsløp e.l.<span style="xfa-spacerun:yes"> </span></p><p style="letter-spacing:0in">Bilen leveres rengjort og med utstyr og tilbehør som ble tatt hensyn til ved taksten.<span style="xfa-spacerun:yes"> </span></p></body>
+                     </exData>
+                  </value>
+                  <font size="7pt" typeface="Times New Roman"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para lineHeight="8pt"/>
+               </draw>
+               <margin topInset="8mm"/>
+               <bind match="none"/>
+               <breakBefore target="mpgPage3" targetType="pageArea"/>
+               <?templateDesigner expand 1?></subform>
+            <subform name="subRightColumn">
+               <draw name="txtConditions" w="89mm" h="9.800069in" x="1mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <font size="7pt" typeface="Times New Roman"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0.5mm"/>
+                  <para lineHeight="8pt"/>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="text-decoration:none;letter-spacing:0in">Er innbyttebilen forringet utover normal bruksslitasje i tiden mellom taksering og innlevering, har selgeren anledning til å avholde ny takst på innbyttebilen. Så fremt innbyttebilen er i vesentlig dårligere stand på leveringstidspunktet, står selger fritt m.h.t. om han vil kjøpe innbyttebilen på de avtalte vilkår.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren plikter likevel å levere nybilen/bruktbilen til avtalt pris.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selger plikter å sannsynliggjøre (bevise) at eventuelt manglende vedlikehold eller kollisjonsskade i den aktuelle tidsperioden har medført at innbyttebilen er i dårligere stand enn normal slitasje skulle tilsi. Selgeren står fritt m.h.t. å kjøpe innbyttebilen, dersom det ved innlevering av bilen oppdages vesentlige mangler som det ikke med rimelighet kunne ventes at han skulle ha oppdaget ved den tidligere takst. I slike tilfeller har kjøperen rett til å avstå fra salg av innbyttebil og kjøp av nybilen/bruktbilen, dersom hans muligheter for å finansiere kjøpet påvirkes i vesentlig grad.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Gjennomføres ikke salget av årsaker kjøperen er ansvarlig for, kan kjøperen bli forpliktet til å erstatte<span style="xfa-spacerun:yes">  </span>det påregnelige og påviselige økonomiske tap som dette har påført selger.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">7. Forsinket levering.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Blir bilen ikke levert til avtalt tid, og dette ikke skyldes kjøperen, kan kjøperen heve kjøpet dersom forsinkelsen er vesentlig. Er bilen levert, må hevingskravet framsettes innen rimelig tid etter at kjøperen fikk vite om leveringen (f.kj.l.§19 og §23).<span style="xfa-spacerun:yes">   </span>Ved forsinkelse kan kjøperen kreve erstatning for påregnelig økonomisk<span style="xfa-spacerun:yes">  </span>som er en følge av forsinkelsen (f.kj.l.§24, jfr §52).<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">8. Mangler og reklamasjoner.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Ved mangler som forelå på leveringstidspunktet, og som kjøperen ikke kjente eller måtte kjenne til ved kjøpet, har kjøperen reklamasjonsretti inntil 5 år fra leveringstidspunktet. Kjøperen plikter likevel å reklamere innen rimelig tid etter at han oppdaget eller burde ha oppdaget mangelen. Denne fristen kan aldri være kortere enn to måneder fra det tidspunktet da kjøperen oppdaget mangelen (f.kj.l. §27).<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Dersom det oppstår feil<span style="xfa-spacerun:yes">  </span>ved den leverte bilen som ikke kan tilbakeføres til leveringstidspunktet, anses ikke mangel å foreligge i forbrukerkjøpslovens forstand. Eksempler på dette kan<span style="xfa-spacerun:yes">  </span>være feil som oppstår etter leveringstidspunktet og som skyldes: -<span style="xfa-spacerun:yes">   </span>at bilen ikke har gjennomgått periodisk ettersyn i henhold til serviceheftet,<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>at bilen er ombygget eller har vært gjenstand for konstruksjonsmessig forandring.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>at bilen har vært overbelastet eller vært anvendt under hastighetsløp<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>bruk av reservedeler av lavere kvalitet enn originaldeler.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>kollisjonsskader.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">-<span style="xfa-spacerun:yes">   </span>normal slitasje og normal korrosjon.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Kjøperen kan kreve at selgeren avhjelper en mangel ved bilen, enten ved reparasjon eller omlevering. Dette gjelder ikke hvis gjennomføring av kravet er umulig eller volder selgeren urimelige kostnader i forhold til andre beføyelser (f.kj.l §28). Avhjelp skal skje uten kostnad eller vesentlig ulempe for kjøperen innen rimelig tid, og uten risiko for at kjøperen ikke får dekket sine utlegg av selgeren (f.kj.l. §30). Eventuell reparasjon av mangel foretas av selgeren, eller ved verksted anvist av eller på forhånd godkjent av selgeren.<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Selgeren er ansvarlig for kjøperens påregnelige og påviselige økonomiske tap som følge av mangel ved bilen. Kjøperen plikter å begrense sitt tap. Erstatning omfatter ikke tap som følge av personskade eller tap i kjøperens næringsvirksomhet (f.kj.l. §33 og §52).</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span><span style="font-size:10pt;font-weight:bold">9. Kjøperens avbestilling.</span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Før levering har skjedd, kan kjøperen avbestille bilen (f.kj.l. §41). Selgeren kan kreve erstatning for sitt påregnelige og påviselige økonomiske tap som følge av avbestillingen. Selgeren plikter ved rimelige tiltak å begrense sitt tap. Forsømmes dette, må selgeren selv bære den tilsvarende delen av tapet.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes">  </span></p><p style="font-size:10pt;font-weight:bold;text-decoration:none;letter-spacing:0in">10. Tvister.</p><p style="text-decoration:none;letter-spacing:0in"><span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Hvor selgeren er medlem i Norges Bilbransjeforbund og kjøperen medlem i Kongelig Norsk Automobilklubb, Motorførerernes Avholdsforbund eller Norges<span style="xfa-spacerun:yes"> </span></p><p style="text-decoration:none;letter-spacing:0in">Automobil-Forbund, kan tvister vedrørende bilkjøpet bringes inn for Klagenevnden for bilsaker. Den av partene som er klager i saken henvender seg først til sin organisasjon, som eventuelt vil ta saken opp med klagenevnden. I tvister vedrørende bruktbilkjøp, hvor kjøper er klager, kan nevndsbehandlingen skje selv om kjøperen ikke er medlem i en av bileierorganisasjonene. Nevndsbehandling av tvisten avskjærer ikke senere domstolsbehandling av samme tvist.<span style="xfa-spacerun:yes">    </span></p></body>
+                     </exData>
+                  </value>
+                  <?templateDesigner expand 1?></draw>
+               <margin leftInset="10mm" topInset="8mm"/>
+               <bind match="none"/>
+               <breakBefore target="mpgPage3" targetType="pageArea"/>
+               <?templateDesigner expand 1?></subform>
+            <keep intact="contentArea"/>
+            <bind match="none"/>
+            <?templateDesigner expand 0?></subform>
+         <?templateDesigner expand 1?></subform>
+      <field name="exdataTemplate" w="7.480319in" h="1.64125in" presence="hidden">
+         <ui>
+            <textEdit multiLine="1">
+               <border>
+                  <?templateDesigner StyleID aped3?>
+                  <edge stroke="lowered"/>
+               </border>
+               <margin/>
+            </textEdit>
+         </ui>
+         <font typeface="Myriad Pro"/>
+         <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+         <para vAlign="middle"/>
+         <caption reserve="16mm">
+            <para vAlign="middle"/>
+            <value>
+               <text>Envelope</text>
+            </value>
+         </caption>
+         <value>
+            <text>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#xD;
+&lt;exData contentType="text/html" xmlns="http://www.xfa.org/schema/xfa-template/2.8/"&#xD;
+&gt;&lt;body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acroform:2.7.0.0" xfa:spec="2.1"&#xD;
+&gt;&lt;p style="margin-top:0pt;margin-bottom:0pt;font-family:'Myriad Pro';font-size:10pt;text-decoration:none"&#xD;
+&gt;ccc&lt;/p&#xD;
+&gt;&lt;/body&#xD;
+&gt;&lt;/exData&#xD;
+&gt;</text>
+         </value>
+         <bind match="none"/>
+      </field>
+      <variables>
+         <script usehref=".\Fragments\frg_ScriptGetLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
+         <script usehref=".\Fragments\frg_LangNO.xdp#som($template.form1.#subform.#variables.NO)"/>
+         <script usehref=".\Fragments\frg_LangEN.xdp#som($template.form1.#subform.#variables.EN)"/>
+         <?templateDesigner expand 1?></variables>
+      <proto>
+         <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></proto>
+      <desc>
+         <text name="version">10.0.2.20120224.1.869952.867557</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 248 65 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvwxy{}Ååø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 212 55 0003000B000C000D001000110012001D002400250026002700280029002C002D002E002F00300031003200330035003600370039004200440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005C005E0060006E00A1 ()*-./:ABCDEFIJKLMNOPRSTV_abdefghijklmnoprstuvxy{}åø?>
+      <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 212 53 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F0020002200230025002600270029002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ABDEFHIMPTUVabcdefghilmnoprstvwxyz'?>
+      <?renderCache.subset "Times New Roman" 0 0 ISO-8859-1 4 268 74 00030008000A000B000C000F0010001100120013001400150016001700180019001A001B001C001D00240025002700280029002A002B002C002E002F00300031003200330035003600380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005C006E008600A000A100B400E2 %'(),-./0123456789:ABDEFGHIKLMNOPRSUVabcdefghijklmnoprstuvwyå§æø”Š?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 272 76 0003000B000C000F0010001100120013001400150016001700180019001A001B001C001D002400250026002700280029002A002B002C002D002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C0063006E0090009100A000A100B4 (),-./0123456789:ABCDEFGHIJKLMNOPRSTUVabcdefghijklmnoprstuvyÅåÆØæø”?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 3\Gruppe C - Blokk\SVA - ServiceAgreement\SVA - ServiceAgreement.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner Zoom 125?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines v:375000;v:4850000?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Eras Bold ITC" psName="ErasITC-Bold" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="sv_SE" desc="Svenska (Sverige)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januari</month>
+            <month>februari</month>
+            <month>mars</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>augusti</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>söndag</day>
+            <day>måndag</day>
+            <day>tisdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lördag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sö</day>
+            <day>må</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lö</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>fm</meridiem>
+            <meridiem>em</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>f.Kr.</era>
+            <era>e.Kr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, YYYY MMMM DD</datePattern>
+         <datePattern name="long">YYYY MMMM D</datePattern>
+         <datePattern name="med">YYYY MMM D</datePattern>
+         <datePattern name="short">YYYY-MM-DD</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">'kl. 'HH.MM.SS Z</timePattern>
+         <timePattern name="long">HH.MM.SS Z</timePattern>
+         <timePattern name="med">HH.MM.SS</timePattern>
+         <timePattern name="short">HH.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GyMdkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $</numberPattern>
+         <numberPattern name="percent">z,zz9 %</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping"> </numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">SEK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-09-03T14:00:49Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:4e237691-2751-4568-8ed2-69750f186ef6</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>10.0.2.20120224.1.869952.867557</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="ServiceAgreement">
+      <uri>.\XSD\ServiceAgreement.xsd</uri>
+      <rootElement>ServiceAgreement</rootElement>
+      <?templateDesigner fileDigest shaHash="x5MebvDw0nfvfh3Fzx48mODCNUY="?></xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="ServiceAgreement">
+      <ServiceAgreement>
+         <Header>
+            <MediaControl>
+               <OutputTargets>
+                  <Print>
+                     <PrinterName/>
+                  </Print>
+                  <File>
+                     <FileName/>
+                  </File>
+                  <Preview>
+                     <ClientAddress/>
+                  </Preview>
+                  <Archive dd:dataNode="dataGroup"/>
+               </OutputTargets>
+            </MediaControl>
+            <DocType/>
+            <Country/>
+            <LangCode/>
+            <DocHeaderImpcode/>
+            <DocHeaderProdType/>
+            <DocHeaderBrand/>
+            <InvoiceTitle/>
+            <PreviewCode/>
+            <Copies/>
+            <TwoSided/>
+         </Header>
+         <Document>
+            <DocumentHeader>
+               <DocVariant/>
+            </DocumentHeader>
+            <PageInfo>
+               <CustomerName/>
+               <OwnerName/>
+               <DealerName/>
+               <CarModel/>
+               <ContractNo/>
+               <Mileage/>
+               <AgreementPeriod/>
+               <PricePerKm/>
+               <ReplacementCar/>
+               <InvoiceFrequency/>
+            </PageInfo>
+         </Document>
+      </ServiceAgreement>
+   </dd:dataDescription>
+</xfa:datasets>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="XFASchemaXSD">
+   <xs:element name="ServiceAgreement">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="Header">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="MediaControl">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="OutputTargets">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="Print">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="PrinterName" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="File">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="FileName" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Preview">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="ClientAddress" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Archive">
+                                          <xs:complexType>
+                                             <xs:sequence/>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="DocType" type="xs:string"/>
+                     <xs:element name="Country" type="xs:string"/>
+                     <xs:element name="LangCode" type="xs:string"/>
+                     <xs:element name="DocHeaderImpcode" type="xs:string"/>
+                     <xs:element name="DocHeaderProdType" type="xs:string"/>
+                     <xs:element name="DocHeaderBrand" type="xs:string"/>
+                     <xs:element name="InvoiceTitle" type="xs:string"/>
+                     <xs:element name="PreviewCode" type="xs:string"/>
+                     <xs:element name="Copies" type="xs:string"/>
+                     <xs:element name="TwoSided" type="xs:string"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="Document">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="DocumentHeader">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="DocVariant" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PageInfo">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="CustomerName" type="xs:string"/>
+                              <xs:element name="OwnerName" type="xs:string"/>
+                              <xs:element name="DealerName" type="xs:string"/>
+                              <xs:element name="CarModel" type="xs:string"/>
+                              <xs:element name="ContractNo" type="xs:string"/>
+                              <xs:element name="Mileage" type="xs:string"/>
+                              <xs:element name="AgreementPeriod" type="xs:string"/>
+                              <xs:element name="PricePerKm" type="xs:string"/>
+                              <xs:element name="ReplacementCar" type="xs:string"/>
+                              <xs:element name="InvoiceFrequency" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema></xdp:xdp>

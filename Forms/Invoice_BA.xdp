@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-02T09:00:30Z" uuid="3d454b6d-3f79-403a-bdf5-40ba10bd3333">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-09T06:39:27Z" uuid="216875f7-0d83-45a4-a5a2-3e7a13af6647">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -68,8 +68,10 @@ else
                      <field h="9mm" name="fldDealerName" w="37mm">
                         <bind ref="Document.DocumentHeader.DealerName" match="dataRef"/>
                      </field>
-                     <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?>
+                  </subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <subform y="31mm" w="179mm" name="subHeaderPart" h="5mm" x="15mm">
                   <bind match="none"/>
                   <field name="DateOfInvoice" access="readOnly" w="30mm" h="4mm" x="149mm">
@@ -289,7 +291,8 @@ else
       <subform w="190mm" name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <subform name="subInvoiceMetadata" layout="lr-tb" presence="hidden">
             <bind match="none"/>
             <field name="InvoiceCode" h="9mm" minW="6mm">
@@ -1716,7 +1719,7 @@ this.caption.value.text = output;
                   </event>
                   <para hAlign="right"/>
                </field>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
             <subform w="179mm" name="subTask" layout="tb">
                <bind match="dataRef" ref="$.Task[*]"/>
                <subform w="178.999mm" name="subTaskDetail" minH="8mm" layout="lr-tb">
@@ -1736,7 +1739,7 @@ this.caption.value.text = output;
                         <caption reserve="0in"/>
                         <para vAlign="middle"/>
                      </field>
-                     <field name="fldPriceInfo" access="readOnly" w="16mm" h="3.6mm" x="144mm">
+                     <field name="fldPriceInfo" access="readOnly" w="21mm" h="3.6mm" x="139mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -1835,7 +1838,7 @@ catch(e)
                         <bind match="none"/>
                         <caption reserve="0in"/>
                      </field>
-                     <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 0?></subform>
                   <subform w="172mm" name="subTaskText">
                      <bind match="none"/>
                      <field name="fldTaskText" access="readOnly" w="153mm" x="7mm" minH="3.6mm">
@@ -2061,7 +2064,7 @@ catch(e)
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
                   <occur max="30" min="0"/>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
                <subform name="subSparePartHolder" w="179mm" layout="tb">
                   <subform w="179mm" name="subSparePart">
                      <bind match="none"/>
@@ -2263,7 +2266,7 @@ catch(e)
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
                   <occur max="30" min="0"/>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
                <subform name="subWorkHolder" w="179mm" layout="tb">
                   <subform w="179mm" name="subWork">
                      <bind match="none"/>
@@ -2466,7 +2469,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
                   <occur max="30" min="0"/>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
                <subform w="179mm" name="subPackageHolder" layout="tb">
                   <bind match="dataRef" ref="$.Package[*]"/>
                   <subform w="171mm" h="4mm" name="subPackageHeader">
@@ -3087,10 +3090,10 @@ catch(e)
                         </format>
                      </field>
                      <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
                <occur max="30" min="0"/>
                <overflow leader="subTaskHeading" trailer="overflowTrailer"/>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <margin topInset="2mm"/>
             <?templateDesigner expand 0?>
             <border>
@@ -3108,9 +3111,9 @@ catch(e)
             <bind match="none"/>
             <subform w="179mm" name="subPriceTotalSum" layout="tb">
                <bind match="none"/>
-               <subform w="179.001mm" name="subPrepaymentAmount" h="6mm">
+               <subform w="179.001mm" name="subPrepaymentAmount" h="6.206mm">
                   <bind match="none"/>
-                  <field name="L_PriceTotalSum" w="92mm" h="4mm" access="readOnly" x="85mm">
+                  <field name="L_PriceTotalSum" w="92mm" h="4mm" access="readOnly" x="85mm" y="0.206mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -3156,7 +3159,7 @@ catch(e)
                         <picture>num{zz,zzz,zz9.99}</picture>
                      </format>
                   </field>
-                  <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm">
+                  <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0.206mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -3192,22 +3195,169 @@ catch(e)
                </border>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
-            <subform w="179mm" name="subVatAmount" hAlign="right" h="4mm">
+            <subform name="subVatAmount">
                <bind match="none"/>
-               <field name="fldVatAmount" w="15mm" h="4mm" access="readOnly" hAlign="right" x="162mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font size="9pt" typeface="Arial"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.Document.Total.VatAmount">
-                     <picture>num{zz,zzz,zz9.99}</picture>
-                  </bind>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
+               <subform name="subCurrencyAmountFlowed" x="0.001mm" w="179mm">
+                  <bind match="none"/>
+                  <subform x="0mm" minH="4mm" layout="lr-tb" name="subVatTextMoveable">
+                     <bind match="none"/>
+                     <subform minH="4mm" layout="lr-tb" w="145mm" name="subVatTextHolder">
+                        <bind match="none"/>
+                        <subform layout="tb" name="subMVAText" hAlign="right">
+                           <bind match="none"/>
+                           <field name="L_VatAmountColon" y="0mm" x="0mm" h="9mm" id="floatingField030380" presence="hidden" access="readOnly" minW="9mm">
+                              <ui>
+                                 <textEdit>
+                                    <border>
+                                       <edge stroke="lowered"/>
+                                    </border>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Arial" size="9pt" weight="bold"/>
+                              <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                              <para vAlign="middle"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+
+//this.rawValue = Invoice.pageContent.subPriceTotal.subVatAmount.L_VatAmountColon.rawValue;
+
+if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue != "V")
+{
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+	this.rawValue = output;
+	}
+else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
+{
+
+	var LangCode = getLanguages.getLanguageSetting();
+
+	var output = getLanguages.getLanguageText(LangCode, "L_VatText");
+	
+	this.rawValue = output;
+	
+}
+</script>
+                              </event>
+                           </field>
+                           <draw name="fldVatAmount" h="4mm" minW="9mm">
+                              <ui>
+                                 <textEdit/>
+                              </ui>
+                              <value>
+                                 <exData contentType="text/html">
+                                    <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField030380"/></p></body>
+                                 </exData>
+                              </value>
+                              <font size="8.5pt" typeface="Arial" weight="bold"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <para hAlign="right" vAlign="middle"/>
+                           </draw>
+                           <?templateDesigner expand 0?></subform>
+                        <subform layout="lr-tb" name="subCurrency" hAlign="right">
+                           <bind match="none"/>
+                           <field name="CurrencyCode" h="9mm" id="floatingField015475" presence="hidden" access="readOnly" minW="15mm">
+                              <ui>
+                                 <textEdit>
+                                    <border>
+                                       <edge stroke="lowered"/>
+                                    </border>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Arial" size="9pt" weight="bold"/>
+                              <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                              <para vAlign="middle"/>
+                              <bind match="dataRef" ref="$.Document.Total.Currency"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+//this.rawValue = "("+this.rawValue+")";
+</script>
+                              </event>
+                           </field>
+                           <draw name="fldVatAmount" h="4mm">
+                              <ui>
+                                 <textEdit/>
+                              </ui>
+                              <value>
+                                 <exData contentType="text/html">
+                                    <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>(<span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField015475"/>)</p></body>
+                                 </exData>
+                              </value>
+                              <font size="8.5pt" typeface="Arial" weight="bold"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <para vAlign="middle" hAlign="right"/>
+                           </draw>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 1?></subform>
+                     <subform name="subVatPercent" layout="lr-tb" hAlign="right">
+                        <bind match="none"/>
+                        <field name="fldVatPercent" w="17mm" h="4mm" access="readOnly">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font size="9pt" typeface="Arial"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                           <bind match="dataRef" ref="$.Document.Total.VatPercent">
+                              <picture>num{zz,zzz,zz9.99}</picture>
+                           </bind>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+try
+{
+if(this.rawValue == "" || this.rawValue == null)
+{
+	//this.presence = "hidden";
+}
+else
+{
+var str = this.rawValue;
+
+var wordArray = str.split("-");
+if(wordArray.length &gt; 1)
+{
+	this.rawValue = wordArray[0];
+	this.parent.fldMinusHolder.rawValue = "-";
+}
+}
+}
+catch(e)
+{
+
+}
+</script>
+                           </event>
+                           <para vAlign="middle" hAlign="right"/>
+                           <format>
+                              <picture>num{zz,zzz,zz9.99}</picture>
+                           </format>
+                        </field>
+                        <?templateDesigner expand 1?></subform>
+                     <subform name="subVatAmount" layout="lr-tb" hAlign="right">
+                        <bind match="none"/>
+                        <field name="fldVatAmount" w="15mm" h="4mm" access="readOnly">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font size="9pt" typeface="Arial"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                           <bind match="dataRef" ref="$.Document.Total.VatAmount">
+                              <picture>num{zz,zzz,zz9.99}</picture>
+                           </bind>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">if(this.rawValue == "" || this.rawValue == null)
+{
+	this.parent.parent.subVatTextHolder.subCurrency.presence = "hidden";
+}
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
@@ -3238,91 +3388,27 @@ catch(e)
 
 }
 </script>
-                  </event>
-                  <para hAlign="right" vAlign="middle"/>
-                  <format>
-                     <picture>num{zz,zzz,zz9.99}</picture>
-                  </format>
-               </field>
-               <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" hAlign="right" x="177mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0.5mm" rightInset="0mm"/>
-                  <bind match="none"/>
-                  <caption reserve="0in"/>
-               </field>
-               <field name="L_VatAmountColon" w="114mm" h="4mm" access="readOnly" hAlign="right" x="48mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font size="9pt" typeface="Arial"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="2mm"/>
-                  <caption reserve="96.97mm">
-                     <font size="8.5pt" typeface="Arial" weight="bold"/>
-                     <value>
-                        <text>MVA:</text>
-                     </value>
-                     <para vAlign="middle" hAlign="right"/>
-                  </caption>
-                  <bind match="dataRef" ref="$.Document.Total.VatPercent">
-                     <picture>num{zz,zzz,zz9.99}</picture>
-                  </bind>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue != "V")
-{
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-//app.alert("here");
-this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
-
-//this.caption.value.text = output+" ("+Invoice.pageContent.subInvoiceMetadata.CurrencyCode.rawValue+")";
-}
-else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
-{
-
-	var LangCode = getLanguages.getLanguageSetting();
-
-	var output = getLanguages.getLanguageText(LangCode, "L_VatText");
-
-	this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
-	
-
-}
-
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
-
-}
-</script>
-                  </event>
-                  <para hAlign="right" vAlign="middle"/>
-                  <format>
-                     <picture>num{zz,zzz,zz9.99}</picture>
-                  </format>
-                  <?templateDesigner expand 1?></field>
+                           </event>
+                           <para hAlign="right" vAlign="middle"/>
+                           <format>
+                              <picture>num{zz,zzz,zz9.99}</picture>
+                           </format>
+                        </field>
+                        <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial" size="9pt"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="0.5mm" rightInset="0mm"/>
+                           <bind match="none"/>
+                           <caption reserve="0in"/>
+                        </field>
+                        <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <subform w="179mm" h="4mm" name="subPriceVatTotalSum">
                <bind match="none"/>
@@ -3389,7 +3475,6 @@ catch(e)
                   <caption reserve="0in"/>
                </field>
                <occur min="0" max="-1"/>
-               <?templateDesigner expand 1?>
                <border>
                   <edge presence="hidden"/>
                   <edge presence="hidden"/>
@@ -3400,7 +3485,7 @@ catch(e)
                   <corner thickness="0.5mm"/>
                   <corner/>
                </border>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="179mm" name="subMVAPriceTotalSums" layout="tb">
                <bind match="none"/>
                <subform w="179mm" h="4mm" name="subPrepaymentAmount">
@@ -3472,22 +3557,170 @@ catch(e)
                      <?templateDesigner expand 1?></subform>
                   <occur min="0" max="-1"/>
                   <?templateDesigner expand 1?></subform>
-               <subform w="179mm" name="subVatAmount">
+               <subform name="subVatAmount">
                   <bind match="none"/>
-                  <field name="fldVatAmountPrepayment" w="15mm" h="4mm" access="readOnly" x="162mm" y="0.207mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <bind match="dataRef" ref="$.Document.Total.VatAmountPrepayment">
-                        <picture>num{zz,zzz,zz9.99}</picture>
-                     </bind>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+                  <subform name="subCurrencyAmountFlowed" x="0.001mm" w="179mm">
+                     <bind match="none"/>
+                     <subform x="0mm" minH="4mm" layout="lr-tb" name="subVatTextMoveable">
+                        <bind match="none"/>
+                        <subform minH="4mm" layout="lr-tb" w="145mm" name="subVatTextHolder">
+                           <bind match="none"/>
+                           <subform layout="tb" name="subMVAText" hAlign="right">
+                              <bind match="none"/>
+                              <field name="L_VatAmountColon" y="0mm" x="0mm" h="9mm" presence="hidden" access="readOnly" minW="9mm" id="floatingField000797">
+                                 <ui>
+                                    <textEdit>
+                                       <border>
+                                          <edge stroke="lowered"/>
+                                       </border>
+                                       <margin/>
+                                    </textEdit>
+                                 </ui>
+                                 <font typeface="Arial" size="9pt" weight="bold"/>
+                                 <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                                 <para vAlign="middle"/>
+                                 <event activity="initialize" name="event__initialize">
+                                    <script contentType="application/x-javascript">
+
+//this.rawValue = Invoice.pageContent.subPriceTotal.subVatAmount.L_VatAmountColon.rawValue;
+
+if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue != "V")
+{
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+	this.rawValue = output;
+	}
+else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
+{
+
+	var LangCode = getLanguages.getLanguageSetting();
+
+	var output = getLanguages.getLanguageText(LangCode, "L_VatText");
+	
+	this.rawValue = output;
+	
+}
+</script>
+                                 </event>
+                              </field>
+                              <draw name="fldVatAmount" h="4mm" minW="9mm">
+                                 <ui>
+                                    <textEdit/>
+                                 </ui>
+                                 <value>
+                                    <exData contentType="text/html">
+                                       <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField000797"/></p></body>
+                                    </exData>
+                                 </value>
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                                 <para hAlign="right" vAlign="middle"/>
+                              </draw>
+                              <?templateDesigner expand 0?></subform>
+                           <subform layout="lr-tb" name="subCurrency" hAlign="right">
+                              <bind match="none"/>
+                              <field name="CurrencyCode" h="9mm" presence="hidden" access="readOnly" minW="15mm" id="floatingField012340">
+                                 <ui>
+                                    <textEdit>
+                                       <border>
+                                          <edge stroke="lowered"/>
+                                       </border>
+                                       <margin/>
+                                    </textEdit>
+                                 </ui>
+                                 <font typeface="Arial" size="9pt" weight="bold"/>
+                                 <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                                 <para vAlign="middle"/>
+                                 <bind match="dataRef" ref="$.Document.Tasks.Task[*].Package[*].PkgPart[*].Document.Total.Currency"/>
+                                 <event activity="initialize" name="event__initialize">
+                                    <script contentType="application/x-javascript">
+this.rawValue = subPriceTotal.subVatAmount.subCurrencyAmountFlowed.subVatTextMoveable.subVatTextHolder.subCurrency.CurrencyCode.rawValue;
+</script>
+                                 </event>
+                              </field>
+                              <draw name="fldVatAmount" h="4mm">
+                                 <ui>
+                                    <textEdit/>
+                                 </ui>
+                                 <value>
+                                    <exData contentType="text/html">
+                                       <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>(<span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField012340"/>)</p></body>
+                                    </exData>
+                                 </value>
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                                 <para vAlign="middle" hAlign="right"/>
+                              </draw>
+                              <?templateDesigner expand 1?></subform>
+                           <?templateDesigner expand 1?></subform>
+                        <subform name="subVatPercent" layout="lr-tb" hAlign="right">
+                           <bind match="none"/>
+                           <field name="fldVatPercent" w="17mm" h="4mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <bind match="none">
+                                 <picture>num{zz,zzz,zz9.99}</picture>
+                              </bind>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">this.rawValue = subPriceTotal.subVatAmount.subCurrencyAmountFlowed.subVatTextMoveable.subVatPercent.fldVatPercent.rawValue;
+try
+{
+if(this.rawValue == "" || this.rawValue == null)
+{
+	//this.presence = "hidden";
+}
+else
+{
+var str = this.rawValue;
+
+var wordArray = str.split("-");
+if(wordArray.length &gt; 1)
+{
+	this.rawValue = wordArray[0];
+	this.parent.fldMinusHolder.rawValue = "-";
+}
+}
+}
+catch(e)
+{
+
+}
+</script>
+                              </event>
+                              <para vAlign="middle" hAlign="right"/>
+                              <format>
+                                 <picture>num{zz,zzz,zz9.99}</picture>
+                              </format>
+                           </field>
+                           <?templateDesigner expand 1?></subform>
+                        <subform name="subVatAmount" layout="lr-tb" hAlign="right">
+                           <bind match="none"/>
+                           <field name="fldVatAmount" w="15mm" h="4mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <bind match="dataRef" ref="$.Document.Total.VatAmountPrepayment">
+                                 <picture>num{zz,zzz,zz9.99}</picture>
+                              </bind>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">if(this.rawValue == "" || this.rawValue == null)
+{
+	this.parent.parent.subVatTextHolder.subCurrency.presence = "hidden";
+}
+var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
@@ -3516,129 +3749,28 @@ catch(e)
 {
 
 }
-/*
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-
-if(this.isNull == 0)
-{
-	Invoice.pageContent.subTotalPrepaymentAmountToPay.subAmountToPayHolder.subRow2.subVatAmountToPay.L_VatAmountColon.rawValue = Invoice.pageContent.subPriceTotal.subMVAPriceTotalSums.subPrepaymentVatAmount.L_VatAmountColon.rawValue;
-}
-
-try
-{
-	if(this.rawValue == "" || this.rawValue == null)
-	{
-		this.presence = "hidden";
-	}
-	else
-	{
-		var str = this.rawValue;
-
-		var wordArray = str.split("-");
-		if(wordArray.length &gt; 1)
-		{
-			this.rawValue = wordArray[0];
-			this.parent.fldMinusHolder.rawValue = "-";
-		}
-		
-	}
-}
-catch(e)
-{
-
-}
-*/
 </script>
-                     </event>
-                     <para hAlign="right" vAlign="middle"/>
-                     <format>
-                        <picture>num{zz,zzz,zz9.99}</picture>
-                     </format>
-                  </field>
-                  <field name="L_VatAmountColon" w="113.999mm" h="4mm" access="readOnly" x="48mm" y="0.207mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="2mm"/>
-                     <caption reserve="96.97mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <value>
-                           <text>MVA:</text>
-                        </value>
-                        <para vAlign="middle" hAlign="right"/>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.Total.VatPercent">
-                        <picture>num{zz,zzz,zz9.99}</picture>
-                     </bind>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue != "V")
-{
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-//app.alert("here");
-this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
-
-//this.caption.value.text = output+" ("+Invoice.pageContent.subInvoiceMetadata.CurrencyCode.rawValue+")";
-}
-else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
-{
-
-	var LangCode = getLanguages.getLanguageSetting();
-
-	var output = getLanguages.getLanguageText(LangCode, "L_VatText");
-
-	this.caption.value.text = output+" ("+Invoice.pageContent.subInvoiceMetadata.CurrencyCode.rawValue+")";
-	
-
-}
-
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
-
-}
-</script>
-                     </event>
-                     <para hAlign="right" vAlign="middle"/>
-                     <format>
-                        <picture>num{zz,zzz,zz9.99}</picture>
-                     </format>
-                     <?templateDesigner expand 1?></field>
-                  <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0.207mm">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0.5mm" rightInset="0mm"/>
-                     <bind match="none"/>
-                     <caption reserve="0in"/>
-                  </field>
+                              </event>
+                              <para hAlign="right" vAlign="middle"/>
+                              <format>
+                                 <picture>num{zz,zzz,zz9.99}</picture>
+                              </format>
+                           </field>
+                           <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Arial" size="9pt"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0.5mm" rightInset="0mm"/>
+                              <bind match="none"/>
+                              <caption reserve="0in"/>
+                           </field>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
                <subform w="179.001mm" h="4mm" name="subPricetotalSumPrepayHolder">
                   <bind match="none"/>
@@ -3806,24 +3938,169 @@ catch(e)
                      <?templateDesigner expand 1?></subform>
                   <occur min="0" max="-1"/>
                   <?templateDesigner expand 1?></subform>
-               <subform w="179mm" h="4mm" name="subRow2">
+               <subform name="subVatAmount">
                   <bind match="none"/>
-                  <subform w="179.001mm" name="subVatAmountToPay" h="4mm" y="0.001mm" x="0.001mm">
+                  <subform name="subCurrencyAmountFlowed" x="0.001mm" w="179mm">
                      <bind match="none"/>
-                     <field name="fldVatAmountToPay" w="15mm" h="4mm" access="readOnly" x="161.999mm">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font size="9pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <bind match="dataRef" ref="$.Document.Total.VatAmountToPay">
-                           <picture>num{zz,zzz,zz9.99}</picture>
-                        </bind>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
+                     <subform x="0mm" minH="4mm" layout="lr-tb" name="subVatTextMoveable">
+                        <bind match="none"/>
+                        <subform minH="4mm" layout="lr-tb" w="145mm" name="subVatTextHolder">
+                           <bind match="none"/>
+                           <subform layout="tb" name="subMVAText" hAlign="right">
+                              <bind match="none"/>
+                              <field name="L_VatAmountColon" y="0mm" x="0mm" h="9mm" presence="hidden" access="readOnly" minW="9mm" id="floatingField008471">
+                                 <ui>
+                                    <textEdit>
+                                       <border>
+                                          <edge stroke="lowered"/>
+                                       </border>
+                                       <margin/>
+                                    </textEdit>
+                                 </ui>
+                                 <font typeface="Arial" size="9pt" weight="bold"/>
+                                 <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                                 <para vAlign="middle"/>
+                                 <event activity="initialize" name="event__initialize">
+                                    <script contentType="application/x-javascript">
+
+//this.rawValue = Invoice.pageContent.subPriceTotal.subVatAmount.L_VatAmountColon.rawValue;
+
+if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue != "V")
+{
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+	this.rawValue = output;
+	}
+else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
+{
+
+	var LangCode = getLanguages.getLanguageSetting();
+
+	var output = getLanguages.getLanguageText(LangCode, "L_VatText");
+	
+	this.rawValue = output;
+	
+}
+</script>
+                                 </event>
+                              </field>
+                              <draw name="fldVatAmount" h="4mm" minW="9mm">
+                                 <ui>
+                                    <textEdit/>
+                                 </ui>
+                                 <value>
+                                    <exData contentType="text/html">
+                                       <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField008471"/></p></body>
+                                    </exData>
+                                 </value>
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                                 <para hAlign="right" vAlign="middle"/>
+                              </draw>
+                              <?templateDesigner expand 0?></subform>
+                           <subform layout="lr-tb" name="subCurrency" hAlign="right">
+                              <bind match="none"/>
+                              <field name="CurrencyCode" h="9mm" presence="hidden" access="readOnly" minW="15mm" id="floatingField004842">
+                                 <ui>
+                                    <textEdit>
+                                       <border>
+                                          <edge stroke="lowered"/>
+                                       </border>
+                                       <margin/>
+                                    </textEdit>
+                                 </ui>
+                                 <font typeface="Arial" size="9pt" weight="bold"/>
+                                 <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                                 <para vAlign="middle"/>
+                                 <bind match="dataRef" ref="$.Document.Tasks.Task[*].Package[*].PkgPart[*].Document.Total.Currency"/>
+                                 <event activity="initialize" name="event__initialize">
+                                    <script contentType="application/x-javascript">
+this.rawValue = subPriceTotal.subVatAmount.subCurrencyAmountFlowed.subVatTextMoveable.subVatTextHolder.subCurrency.CurrencyCode.rawValue;
+</script>
+                                 </event>
+                              </field>
+                              <draw name="fldVatAmount" h="4mm">
+                                 <ui>
+                                    <textEdit/>
+                                 </ui>
+                                 <value>
+                                    <exData contentType="text/html">
+                                       <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span style="xfa-spacerun:yes"> </span>(<span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField004842"/>)</p></body>
+                                    </exData>
+                                 </value>
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                                 <para vAlign="middle" hAlign="right"/>
+                              </draw>
+                              <?templateDesigner expand 1?></subform>
+                           <?templateDesigner expand 1?></subform>
+                        <subform name="subVatPercent" layout="lr-tb" hAlign="right">
+                           <bind match="none"/>
+                           <field name="fldVatPercent" w="17mm" h="4mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <bind match="none">
+                                 <picture>num{zz,zzz,zz9.99}</picture>
+                              </bind>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">this.rawValue = subPriceTotal.subVatAmount.subCurrencyAmountFlowed.subVatTextMoveable.subVatPercent.fldVatPercent.rawValue;
+try
+{
+if(this.rawValue == "" || this.rawValue == null)
+{
+	//this.presence = "hidden";
+}
+else
+{
+var str = this.rawValue;
+
+var wordArray = str.split("-");
+if(wordArray.length &gt; 1)
+{
+	this.rawValue = wordArray[0];
+	this.parent.fldMinusHolder.rawValue = "-";
+}
+}
+}
+catch(e)
+{
+
+}
+</script>
+                              </event>
+                              <para vAlign="middle" hAlign="right"/>
+                              <format>
+                                 <picture>num{zz,zzz,zz9.99}</picture>
+                              </format>
+                           </field>
+                           <?templateDesigner expand 1?></subform>
+                        <subform name="subVatAmount" layout="lr-tb" hAlign="right">
+                           <bind match="none"/>
+                           <field name="fldVatAmount" w="15mm" h="4mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <bind match="dataRef" ref="$.Document.Total.VatAmountToPay">
+                                 <picture>num{zz,zzz,zz9.99}</picture>
+                              </bind>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">if(this.rawValue == "" || this.rawValue == null)
+{
+	this.parent.parent.subVatTextHolder.subCurrency.presence = "hidden";
+}
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
@@ -3854,89 +4131,27 @@ catch(e)
 
 }
 </script>
-                        </event>
-                        <para hAlign="right" vAlign="middle"/>
-                        <format>
-                           <picture>num{zz,zzz,zz9.99}</picture>
-                        </format>
-                     </field>
-                     <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font typeface="Arial" size="9pt"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0.5mm" rightInset="0mm"/>
-                        <bind match="none"/>
-                        <caption reserve="0in"/>
-                     </field>
-                     <field name="L_VatAmountColon" w="65mm" h="4mm" access="readOnly" x="96.999mm">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font size="9pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="2mm"/>
-                        <caption reserve="48mm">
-                           <font size="8.5pt" typeface="Arial" weight="bold"/>
-                           <value>
-                              <text>MVA:</text>
-                           </value>
-                           <para vAlign="middle" hAlign="right"/>
-                        </caption>
-                        <bind match="none">
-                           <picture>num{zz,zzz,zz9.99}</picture>
-                        </bind>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue != "V")
-{
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
-}
-else if(Invoice.pageContent.subInvoiceMetadata.ForeignSaleCode.rawValue == "V")
-{
-
-	var LangCode = getLanguages.getLanguageSetting();
-
-	var output = getLanguages.getLanguageText(LangCode, "L_VatText");
-
-	this.caption.value.text = output+" ("+getVariableValues.getVariableValue("pageContent.subMetadata.CurrencyCode")+")";
-	
-
-}
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
-
-}
-</script>
-                        </event>
-                        <para hAlign="right" vAlign="middle"/>
-                        <format>
-                           <picture>num{zz,zzz,zz9.99}</picture>
-                        </format>
-                     </field>
+                              </event>
+                              <para hAlign="right" vAlign="middle"/>
+                              <format>
+                                 <picture>num{zz,zzz,zz9.99}</picture>
+                              </format>
+                           </field>
+                           <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Arial" size="9pt"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0.5mm" rightInset="0mm"/>
+                              <bind match="none"/>
+                              <caption reserve="0in"/>
+                           </field>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 1?></subform>
                      <?templateDesigner expand 1?></subform>
-                  <occur min="0" max="-1"/>
                   <?templateDesigner expand 1?></subform>
                <subform w="179.027mm" h="4mm" name="subRow3">
                   <bind match="none"/>
@@ -4053,7 +4268,8 @@ catch(e)
             <margin topInset="2mm"/>
             <?templateDesigner expand 0?></subform>
          <subform usehref=".\Fragments\frg_AmountInEuro.xdp#som($template.#subform.subAmountInEuro)">
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <subform w="179mm" name="subFooterLines" layout="tb" x="0.001mm" y="0mm">
             <bind match="none"/>
             <subform w="179mm" name="subFooterLine" layout="tb">
@@ -4961,7 +5177,8 @@ this.caption.value.text = output;
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)" x="-0.0001mm" y="10mm">
             <bind/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
@@ -4969,7 +5186,7 @@ this.caption.value.text = output;
       <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 144 36 000300110012002500260027002D002F003100320033003500360038004200440045004700480049004A004B004C004E004F005000510052005300550056005700580059005E0060 ./BCDJLNOPRSU_abdefghiklmnoprstuv{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 204 54 0003000800110012001D00240025002600280029002A002C002D002E002F0030003200330035003600370039003A0042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005E00600063006E00A1 %./:ABCEFGIJKLMOPRSTVW_abcdefghijklmnoprstuvx{}Ååø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 216 57 00030008000B000C00110012001D00240025002600280029002A002C002D002E002F0030003200330035003600370039003A0042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005C005E00600063006E00A1 %()./:ABCEFGIJKLMOPRSTVW_abcdefghijklmnoprstuvxy{}Ååø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 64 16 000100100025002C0042004500460048004A004C004F00500053005400550056 /DKadegiknorstu?>
@@ -4979,7 +5196,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 200?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -4993,9 +5209,10 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\5-Fase 2\Fase 2 - eksempler\Gruppe A - Mverk\Baltikum\3 - Faktura\8 - Invoice_S001IT05_20130606_105243_D_B001OLS.dax?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\9546\755_Invoice_S001IT05_20130904_124020_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner Zoom 133?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -5147,14 +5364,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-02T09:00:30Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-09T06:39:27Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3d454b6d-3f79-403a-bdf5-40ba10bd3333</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:216875f7-0d83-45a4-a5a2-3e7a13af6647</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
