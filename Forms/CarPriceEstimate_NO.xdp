@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-26T12:50:30Z" uuid="55c754e8-31cc-45ba-9dd3-1eca714f45f5">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T08:02:27Z" uuid="319e4a80-576d-4c60-b306-44823df51d57">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -5958,13 +5958,13 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Defecter\8839\998_CarPriceEstimate_S001IT05_20130606_170106_D_B001HCR.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Tasks\Fase3\9559\998_CarPriceEstimate_ElBil_B001ALL.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 133?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 135?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:4850000;h:2725000;h:2750000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -5978,7 +5978,6 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -6113,14 +6112,14 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-08-26T12:50:30Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-10T08:02:27Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:55c754e8-31cc-45ba-9dd3-1eca714f45f5</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:319e4a80-576d-4c60-b306-44823df51d57</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -6132,9 +6131,9 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 </x:xmpmeta>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="CarPriceEstimate">
-      <uri>..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8527\CarPriceEstimate_Forsikring.xsd</uri>
+      <uri>.\XSD\CarPriceEstimate.xsd</uri>
       <rootElement>CarPriceEstimate</rootElement>
-      <?templateDesigner fileDigest shaHash="JeN7J8jiOCjqnzyzyWw2vXoHF7M="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="0M3NcwR2TNWTD1n+sfkzAXEEyIY="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -6241,16 +6240,23 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
             <PriceInformation>
                <CarModelYear/>
                <ModelPriceWithoutFee/>
+               <ModelPriceAstr/>
                <RegistrationDesc/>
                <RegistrationFee/>
+               <RegistrationFeeAstr/>
                <Color/>
                <ColorCode/>
                <ColorPrice/>
+               <ColorPriceAstr/>
                <Interior/>
                <InteriorCode/>
+               <InteriorPriceAstr/>
                <OptionPriceTotal/>
+               <OptionPriceAstr/>
                <NationalOptionPriceTotal/>
+               <NationalOptionPriceAstr/>
                <RebuildPriceTotal/>
+               <ReBuildPriceAstr/>
                <FreightDesc/>
                <SVAPriceTotal/>
                <FreightPriceTotal/>
@@ -6262,6 +6268,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                <TradeinPrice/>
                <PriceInfoAttachment/>
                <YearFee/>
+               <YearFeeAstr/>
             </PriceInformation>
             <TermsOfDelivery>
                <TermsOfDeliveryText/>
@@ -6565,16 +6572,23 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                            <xs:sequence>
                               <xs:element name="CarModelYear" type="xs:string"/>
                               <xs:element name="ModelPriceWithoutFee" type="xs:string"/>
+                              <xs:element name="ModelPriceAstr" type="xs:string"/>
                               <xs:element name="RegistrationDesc" type="xs:string"/>
                               <xs:element name="RegistrationFee" type="xs:string"/>
+                              <xs:element name="RegistrationFeeAstr" type="xs:string"/>
                               <xs:element name="Color" type="xs:string"/>
                               <xs:element name="ColorCode" type="xs:string"/>
                               <xs:element name="ColorPrice" type="xs:string"/>
+                              <xs:element name="ColorPriceAstr" type="xs:string"/>
                               <xs:element name="Interior" type="xs:string"/>
                               <xs:element name="InteriorCode" type="xs:string"/>
+                              <xs:element name="InteriorPriceAstr" type="xs:string"/>
                               <xs:element name="OptionPriceTotal" type="xs:string"/>
+                              <xs:element name="OptionPriceAstr" type="xs:string"/>
                               <xs:element name="NationalOptionPriceTotal" type="xs:string"/>
+                              <xs:element name="NationalOptionPriceAstr" type="xs:string"/>
                               <xs:element name="RebuildPriceTotal" type="xs:string"/>
+                              <xs:element name="ReBuildPriceAstr" type="xs:string"/>
                               <xs:element name="FreightDesc" type="xs:string"/>
                               <xs:element name="SVAPriceTotal" type="xs:string"/>
                               <xs:element name="FreightPriceTotal" type="xs:string"/>
@@ -6586,6 +6600,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                               <xs:element name="TradeinPrice" type="xs:string"/>
                               <xs:element name="PriceInfoAttachment" type="xs:string"/>
                               <xs:element name="YearFee" type="xs:string"/>
+                              <xs:element name="YearFeeAstr" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
