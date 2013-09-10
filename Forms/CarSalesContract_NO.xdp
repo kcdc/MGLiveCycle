@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T12:08:18Z" uuid="294a154c-0f55-427c-b2f7-3aa4737547e6">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T13:40:08Z" uuid="716c7833-3337-4590-b00b-28f87e4b1273">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -797,12 +797,12 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
             </field>
             <margin topInset="3mm"/>
             <keep intact="contentArea"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTermsOfDelivery" layout="tb" y="12.312mm">
-            <bind match="none"/>
+            <bind match="dataRef" ref="$.Document.TermsOfDelivery"/>
             <subform w="179mm" name="subTermsOfDeliveryText" layout="tb">
-               <bind match="none"/>
-               <field name="fldTermsOfDeliveryText" access="readOnly" w="179mm" h="8mm">
+               <bind match="dataRef" ref="$.DeliveryText"/>
+               <field name="fldTermsOfDeliveryText" access="readOnly" w="179mm" minH="4mm">
                   <ui>
                      <textEdit multiLine="1" hScrollPolicy="off" vScrollPolicy="off">
                         <border presence="hidden"/>
@@ -814,7 +814,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                   <caption reserve="0in">
                      <font typeface="Arial" size="9pt" weight="bold"/>
                   </caption>
-                  <bind match="dataRef" ref="$.Document.TermsOfDelivery.TermsOfDeliveryText"/>
+                  <bind match="dataRef" ref="$.TermsOfDeliveryText"/>
                </field>
                <border>
                   <edge presence="hidden"/>
@@ -828,7 +828,8 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                </border>
                <keep intact="contentArea"/>
                <margin topInset="0mm"/>
-               <?templateDesigner expand 0?></subform>
+               <occur min="0" max="-1"/>
+               <?templateDesigner expand 1?></subform>
             <subform y="8mm" w="179mm" minH="4mm" layout="tb" name="subDeltermsText4">
                <bind match="none"/>
                <margin topInset="1mm"/>
@@ -888,7 +889,7 @@ this.caption.value.text = output;
                   </ui>
                   <font typeface="Arial" size="9pt"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.Document.TermsOfDelivery.DeliveryPoint"/>
+                  <bind match="dataRef" ref="$.DeliveryPoint"/>
                   <caption reserve="0in">
                      <font typeface="Arial" size="9pt" weight="bold"/>
                   </caption>
@@ -908,7 +909,7 @@ this.caption.value.text = output;
                   </ui>
                   <font typeface="Arial" size="9pt"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.Document.TermsOfDelivery.DeliveryStatus"/>
+                  <bind match="dataRef" ref="$.DeliveryStatus"/>
                   <caption reserve="0in">
                      <font typeface="Arial" size="9pt" weight="bold"/>
                      <para vAlign="middle"/>
@@ -953,7 +954,7 @@ this.caption.value.text = output;
                   </ui>
                   <font typeface="Arial" size="9pt"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.Document.TermsOfDelivery.AssumedDelivery"/>
+                  <bind match="dataRef" ref="$.AssumedDelivery"/>
                   <caption reserve="0in">
                      <font typeface="Arial" size="9pt" weight="bold"/>
                   </caption>
@@ -973,6 +974,7 @@ if(this._subAssumedDelivery.count &lt; 1)
 
 </script>
             </event>
+            <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" layout="tb" name="subConsentHolder">
             <bind match="none"/>
@@ -5361,8 +5363,8 @@ this.caption.value.text = output;
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 248 65 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvwxy{}Ååø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 208 54 0003000B000C000D001000110012001D002400250026002700280029002C002D002E002F00300031003200330035003600370039004200440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 ()*-./:ABCDEFIJKLMNOPRSTV_abdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?>
@@ -5373,6 +5375,8 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 151?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -5385,11 +5389,9 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Tasks\Fase3\9559\998_CarSalesContract_UtenFrakt_B001HCR.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Tasks\Fase3\9559\998_CarSalesContract_S001IT05_20130910_152908_D_B001ALL.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 151?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -5539,14 +5541,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-10T12:08:18Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-10T13:40:08Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:294a154c-0f55-427c-b2f7-3aa4737547e6</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:716c7833-3337-4590-b00b-28f87e4b1273</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -5560,7 +5562,7 @@ this.caption.value.text = output;
    <xsdConnection name="DataConnection" dataDescription="CarSalesContract">
       <uri>.\XSD\CarSalesContract.xsd</uri>
       <rootElement>CarSalesContract</rootElement>
-      <?templateDesigner fileDigest shaHash="TZ5Au9qT0roDB683tvNJ39oHtSY="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="rehe2yLKlNKrGPQyfQ9Q4f9N5sg="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -5701,7 +5703,9 @@ this.caption.value.text = output;
                <ImportCarSubjectDesc dd:maxOccur="10"/>
             </ImportCarSubject>
             <TermsOfDelivery>
-               <TermsOfDeliveryText/>
+               <DeliveryText>
+                  <TermsOfDeliveryText/>
+               </DeliveryText>
                <DeliveryTermsDate/>
                <WarrantyTerms/>
                <DeliveryPoint/>
@@ -5976,10 +5980,10 @@ this.caption.value.text = output;
                      <xs:element name="TopTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="TopTextLines">
+                              <xs:element name="TopTextLines" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="10" name="TopTextLine" type="xs:string"/>
+                                       <xs:element name="TopTextLine" type="xs:string" maxOccurs="10"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6026,14 +6030,20 @@ this.caption.value.text = output;
                      <xs:element name="ImportCarSubject">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="ImportCarSubjectDesc" type="xs:string"/>
+                              <xs:element name="ImportCarSubjectDesc" type="xs:string" maxOccurs="10"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="TermsOfDelivery">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="TermsOfDeliveryText" type="xs:string"/>
+                              <xs:element name="DeliveryText">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="TermsOfDeliveryText" type="xs:string"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
                               <xs:element name="DeliveryTermsDate" type="xs:string"/>
                               <xs:element name="WarrantyTerms" type="xs:string"/>
                               <xs:element name="DeliveryPoint" type="xs:string"/>
@@ -6045,7 +6055,7 @@ this.caption.value.text = output;
                      <xs:element name="Options">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="200" name="Option">
+                              <xs:element name="Option" maxOccurs="200">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="OptionDesc" type="xs:string"/>
@@ -6059,7 +6069,7 @@ this.caption.value.text = output;
                      <xs:element name="NationalOptions">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="200" name="NationalOption">
+                              <xs:element name="NationalOption" maxOccurs="200">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="NationalOptionDesc" type="xs:string"/>
@@ -6073,7 +6083,7 @@ this.caption.value.text = output;
                      <xs:element name="ReBuilds">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="200" name="ReBuild">
+                              <xs:element name="ReBuild" maxOccurs="200">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ReBuildDesc" type="xs:string"/>
@@ -6113,17 +6123,17 @@ this.caption.value.text = output;
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element maxOccurs="10" name="ContractTextLines">
+                     <xs:element name="ContractTextLines" maxOccurs="10">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="ContractTextLine" type="xs:string"/>
+                              <xs:element name="ContractTextLine" type="xs:string" maxOccurs="10"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="BottomTextLines">
+                              <xs:element name="BottomTextLines" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -6136,10 +6146,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLinesMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="FooterLines">
+                              <xs:element name="FooterLines" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="10" name="FooterLine" type="xs:string"/>
+                                       <xs:element name="FooterLine" type="xs:string" maxOccurs="10"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6149,10 +6159,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLimitedMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="FooterLimitedLines">
+                              <xs:element name="FooterLimitedLines" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="10" name="FooterLimitedLine" type="xs:string"/>
+                                       <xs:element name="FooterLimitedLine" type="xs:string" maxOccurs="10"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6170,7 +6180,7 @@ this.caption.value.text = output;
                      <xs:element name="Financing">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="100" name="AdditionalProduct">
+                              <xs:element name="AdditionalProduct" maxOccurs="100">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ProductDesc" type="xs:string"/>
