@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T13:50:41Z" uuid="2e1c26cc-5834-4805-a920-5e1638906680">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-11T10:56:43Z" uuid="2b327fb8-0528-4141-a76e-067051fb2e11">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -749,100 +749,11 @@ this.caption.value.text = output;
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform usehref=".\Fragments\frg_PriceInformation.xdp#som($template.form1.subPriceInformation)">
-            <margin bottomInset="0mm"/>
-            <subform layout="lr-tb" name="subBasePrice" w="179mm">
-               <subform layout="lr-tb" name="subBAsePriceTextValue" w="139mm">
-                  <field access="readOnly" minH="4mm" minW="53mm" name="fldCarModelDesc">
-                     <bind ref="Document.HeaderInfo.CarModelDesc" match="dataRef"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <subform layout="lr-tb" name="subBasePriceAmount">
-                  <field access="readOnly" minH="4mm" minW="23mm" name="numModelPriceWithoutFee">
-                     <bind ref="Document.PriceInformation.ModelPriceWithoutFee" match="dataRef"/>
-                  </field>
-                  <field access="readOnly" minH="4mm" minW="2.001mm" name="numModelPriceAstr">
-                     <bind ref="Document.PriceInformation.ModelPriceAstr" match="dataRef"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <subform layout="lr-tb" name="subRegistrationDesc" w="179mm">
-               <subform h="4mm" name="subRegistrationTextValue" w="139mm">
-                  <field access="readOnly" minH="4mm" minW="53mm" name="fldRegistrationDesc" x="64.999mm">
-                     <bind ref="Document.PriceInformation.RegistrationDesc" match="dataRef"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <subform layout="lr-tb" name="subRegistrationAmount">
-                  <field access="readOnly" minH="4mm" minW="23mm" name="numRegistrationFee">
-                     <bind ref="Document.PriceInformation.RegistrationFee" match="dataRef"/>
-                  </field>
-                  <field access="readOnly" minH="4mm" minW="2.001mm" name="numRegistrationFeeAstr">
-                     <bind ref="Document.PriceInformation.RegistrationFeeAstr" match="dataRef"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <subform layout="lr-tb" name="subColorInfo" w="179mm">
-               <subform name="subColorTextInfo" w="139mm">
-                  <subform layout="lr-tb" name="subColor" w="72mm" x="64.999mm" y="0mm">
-                     <field access="readOnly" h="4mm" minW="18mm" name="fldColor">
-                        <bind ref="Document.PriceInformation.Color" match="dataRef"/>
-                     </field>
-                     <field access="readOnly" h="4mm" minW="18mm" name="fldColorCode">
-                        <bind ref="Document.PriceInformation.ColorCode" match="dataRef"/>
-                     </field>
-                     <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 1?></subform>
-               <subform layout="lr-tb" name="subColorPriceAmount">
-                  <field access="readOnly" minH="4mm" minW="23mm" name="numColorPrice">
-                     <bind ref="Document.PriceInformation.ColorPrice" match="dataRef"/>
-                  </field>
-                  <field access="readOnly" minH="4mm" minW="2.001mm" name="numColorPriceAstr">
-                     <bind ref="Document.PriceInformation.ColorPriceAstr" match="dataRef"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <subform layout="lr-tb" name="subInteriorInfo" w="179mm">
-               <subform layout="lr-tb" name="subInteriorTextValue" w="139mm">
-                  <subform layout="lr-tb" name="subInterior" w="72mm">
-                     <field access="readOnly" h="4mm" minW="18mm" name="fldInterior">
-                        <bind ref="Document.PriceInformation.Interior" match="dataRef"/>
-                     </field>
-                     <field access="readOnly" h="4mm" minW="18mm" name="fldInteriorCode">
-                        <bind ref="Document.PriceInformation.InteriorCode" match="dataRef"/>
-                     </field>
-                     <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 1?></subform>
-               <subform layout="lr-tb" hAlign="right" name="subInteriorPriceAstr">
-                  <field access="readOnly" minH="4mm" minW="2.001mm" name="numInteriorPriceAstr">
-                     <bind ref="Document.PriceInformation.InteriorPriceAstr" match="dataRef"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <subform layout="lr-tb" name="subOptionPriceTotal" w="179mm">
-               <subform layout="lr-tb" name="subOptionPrice">
-                  <field access="readOnly" minH="4mm" minW="23mm" name="numOptionPriceTotal">
-                     <bind ref="Document.PriceInformation.OptionPriceTotal" match="dataRef"/>
-                  </field>
-                  <field access="readOnly" minH="4mm" minW="2.001mm" name="numColorPriceAstr">
-                     <bind ref="Document.PriceInformation.OptionPriceAstr" match="dataRef"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <subform layout="lr-tb" name="subNationalOptionPriceTotal" w="179mm">
-               <subform layout="lr-tb" name="subNationalOptionPrice">
-                  <field access="readOnly" minH="4mm" minW="23mm" name="numNationalOptionPriceTotal">
-                     <bind ref="Document.PriceInformation.NationalOptionPriceTotal" match="dataRef"/>
-                  </field>
-                  <field access="readOnly" minH="4mm" minW="2.001mm" name="numColorPriceAstr">
-                     <bind ref="Document.PriceInformation.NationalOptionPriceAstr" match="dataRef"/>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></subform>
          <bind match="none"/>
+         <subform usehref=".\Fragments\frg_PriceInformation.xdp#som($template.form1.subPriceInformation)"/>
          <subform w="179mm" name="subTermsOfDelivery" layout="tb">
             <bind match="none"/>
-            <subform w="179mm" layout="tb">
+            <subform w="179mm" layout="tb" name="subTermsOfDeliveryTextHolder">
                <bind match="none"/>
                <subform w="179mm" name="subTermsOfDeliveryText" layout="tb">
                   <bind match="none"/>
@@ -874,7 +785,6 @@ this.caption.value.text = output;
                   <margin topInset="3mm"/>
                   <occur min="0" max="-1"/>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?>
                <border>
                   <edge presence="hidden"/>
                   <edge presence="hidden"/>
@@ -885,7 +795,7 @@ this.caption.value.text = output;
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subDeliveryPoint" layout="lr-tb">
                <bind match="none"/>
                <field name="L_DeltermsText5" minW="20mm" access="readOnly" h="4mm">
@@ -1036,7 +946,7 @@ if(this._subAssumedDelivery.count &lt; 1)
                <occur min="0" max="10"/>
                <?templateDesigner expand 0?></subform>
             <margin topInset="4mm"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subSignature" h="55.711mm">
             <bind match="none"/>
             <field name="L_CarPriceestimateTerms" access="readOnly" w="179mm" h="4mm" x="0.001mm" y="0.007mm">
@@ -1286,7 +1196,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                <?templateDesigner expand 0?></subform>
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" layout="tb" name="subRebuildsHolder" x="0.001mm" y="0mm">
             <bind match="none"/>
             <field name="L_ReBuilds" access="readOnly" w="179mm" h="4mm">
@@ -1425,7 +1335,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                <?templateDesigner expand 0?></subform>
             <margin topInset="2mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subAdditionalInfo" layout="tb">
             <bind match="none"/>
             <field name="L_AdditionalInfo" access="readOnly" w="179mm" h="4mm">
@@ -5952,14 +5862,14 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-10T13:50:41Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-11T10:56:43Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:2e1c26cc-5834-4805-a920-5e1638906680</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:2b327fb8-0528-4141-a76e-067051fb2e11</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
