@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-06-04T11:22:27Z" uuid="31be17e0-5990-4cac-8d82-14731b735a6b">
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-16T12:02:22Z" uuid="69033b4f-3040-4f5e-b3e7-2d9443e43b61">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -984,72 +984,144 @@ this.caption.value.text = output;
                <subform x="0mm" layout="tb" name="subCustomerAddress" w="70mm">
                   <bind match="none"/>
                   <keep intact="contentArea"/>
-                  <field access="readOnly" minH="4mm" name="fldCustomerName_new" w="70mm">
-                     <font typeface="Arial" size="9pt"/>
-                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
-                     <para lineHeight="8pt"/>
-                     <ui>
-                        <textEdit multiLine="1">
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-if(this.rawValue != null &amp;&amp; this.rawValue != "")
-{	
-	xfa.resolveNode("pageContent.subCarInformation.subEierBruker.L_UserName").rawValue = this.rawValue;
-}
-</script>
-                     </event>
-                  </field>
-                  <subform layout="tb" minH="4mm" name="subUN" w="70mm" y="4.079mm">
+                  <subform layout="tb" minH="4mm" name="subCustomerName" w="70mm">
                      <keep intact="contentArea"/>
-                     <occur max="-1" min="0"/>
                      <bind match="none"/>
-                     <field access="readOnly" minH="4mm" name="L_CO" w="70mm">
-                        <caption reserve="4.878mm">
-                           <value>
-                              <text>c/o</text>
-                           </value>
-                           <font typeface="Arial" size="8pt" weight="bold"/>
-                           <para vAlign="middle"/>
-                        </caption>
-                        <font typeface="Arial" size="9pt" weight="bold"/>
-                        <margin bottomInset="1mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                     <field name="floatCustomerName" y="0mm" x="0mm" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField018753">
                         <ui>
-                           <textEdit multiLine="1">
+                           <textEdit>
                               <border presence="hidden"/>
                               <margin/>
                            </textEdit>
                         </ui>
-                        <bind ref="$.Document.HeaderInfo.CustomerName" match="dataRef"/>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerName"/>
+                     </field>
+                     <draw name="txtAttention" w="70mm" h="4.168mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField018753"/></p></body>
+                           </exData>
+                        </value>
+                        <font size="9pt" typeface="Arial" weight="bold"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     </draw>
+                     <?templateDesigner expand 1?></subform>
+                  <subform layout="tb" minH="4mm" name="subUserName" w="70mm">
+                     <keep intact="contentArea"/>
+                     <bind match="none"/>
+                     <field name="floatUserName" y="0mm" x="0mm" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField008976">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
                         <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">/*
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-if(output != "")
+                           <script contentType="application/x-javascript">
+if(this.rawValue != null)
 {
-	this.caption.value.text = output;
-}
-
-else
-{
-		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
-}*/
-
-//app.alert(this.rawValue);
-if (this.rawValue == null)
-{
-	this.parent.presence = "hidden";
+	this.parent.parent.subCustomerName.presence = "hidden";
 }
 </script>
                         </event>
                      </field>
-                     <?templateDesigner expand 1?></subform>
+                     <draw name="txtAttention" w="70mm" h="4.168mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField008976"/></p></body>
+                           </exData>
+                        </value>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     </draw>
+                     <?templateDesigner expand 1?>
+                     <occur min="0" max="-1"/>
+                  </subform>
+                  <subform layout="tb" minH="4mm" name="subOwnerName" w="70mm">
+                     <keep intact="contentArea"/>
+                     <bind match="none"/>
+                     <field name="L_Attention" y="0mm" x="0mm" w="62mm" id="floatingField002019" presence="hidden" access="readOnly" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <bind match="none"/>
+                        <value>
+                           <text>c/o </text>
+                        </value>
+                     </field>
+                     <field name="floatOwnerName" y="0mm" x="0mm" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.OwnerName"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">try
+{
+	var userName = subUserName.floatUserName.rawValue;
+}
+catch(e)
+{
+	userName = "";
+}
+
+
+if (this.rawValue == null || this.rawValue == userName)
+{
+	this.parent.presence = "hidden";
+}
+//app.alert(xfa.resolveNode("pageContent.subHeaderInformation.subOuterHolder.subCustomerAddress.subUserName.floatUserName").rawValue);
+
+if(userName == "")
+{
+	this.parent.L_Attention.rawValue = "";
+}
+
+if(this.rawValue != null)
+{
+	this.parent.parent.subCustomerName.presence = "hidden";
+}
+</script>
+                        </event>
+                        <para hAlign="justify"/>
+                     </field>
+                     <draw name="txtAttention" w="70mm" h="4.168mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField002019"/><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField008232"/></p></body>
+                           </exData>
+                        </value>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     </draw>
+                     <?templateDesigner expand 1?>
+                     <occur min="0" max="-1"/>
+                  </subform>
                   <field access="readOnly" minH="4mm" name="fldCustomerPostalAddress" w="70mm">
                      <font typeface="Arial" size="9pt"/>
                      <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
@@ -1091,8 +1163,7 @@ if (this.rawValue == null)
             <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <border>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
@@ -1108,8 +1179,7 @@ if (this.rawValue == null)
                <occur min="0" max="-1"/>
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subReasonForCreditLine" layout="tb">
             <bind match="none"/>
@@ -3727,10 +3797,10 @@ this.caption.value.text = output;
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 148 37 000300120024002500260027002F00300031003200330035003600370039004200440045004600480049004A004C004E004F005000510052005300550056005700580059005C005E0060 /ABCDLMNOPRSTV_abcefgiklmnoprstuvy{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 200 53 00030008000F00110012001D002400250026002700280029002A002B002C002E002F00300031003200330035003600370039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B006E009100A1 %,./:ABCDEFGHIKLMNOPRSTVabcdefghijklmnoprstuvxåØø?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 152 38 000300120024002500260027002F003000310032003300350036003700380039004200440045004600480049004A004C004E004F005000510052005300550056005700580059005C005E0060 /ABCDLMNOPRSTUV_abcefgiklmnoprstuvy{}?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 220 58 00030008000F00110012001D002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005E0060006E009100A1 %,./:ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvwx{}åØø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 60 15 0001001000250042004500460048004A004C004F00500053005400550056 /Dadegiknorstu?>
@@ -3740,7 +3810,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 113?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -3754,9 +3823,10 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8499\030_Invoice_S001IT01_20130513_144322_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9366\030_Invoice_S001IT05_20130828_144927_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner Zoom 151?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -3908,14 +3978,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-06-04T11:22:27Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-16T12:02:22Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:31be17e0-5990-4cac-8d82-14731b735a6b</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:69033b4f-3040-4f5e-b3e7-2d9443e43b61</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
