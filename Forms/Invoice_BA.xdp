@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-09T06:39:27Z" uuid="216875f7-0d83-45a4-a5a2-3e7a13af6647">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-17T08:52:46Z" uuid="000c1599-4635-4609-a145-505b4deb6d31">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -721,7 +721,7 @@ if(this.rawValue == "" || this.rawValue == null)
                               </event>
                            </field>
                            <?templateDesigner expand 1?></subform>
-                        <subform y="8mm" w="86mm" minH="4mm" layout="tb">
+                        <subform y="8mm" w="86mm" minH="4mm" layout="tb" name="subCustomerLedgerNo">
                            <bind match="none"/>
                            <field access="readOnly" name="L_CustomerLedgerNo" w="86mm" h="4mm">
                               <font typeface="Arial" size="9pt"/>
@@ -767,7 +767,7 @@ else
                               </event>
                            </field>
                            <?templateDesigner expand 1?></subform>
-                        <subform y="12mm" w="86mm" minH="4mm" layout="tb">
+                        <subform y="12mm" w="86mm" minH="4mm" layout="tb" name="subCustomerRegno">
                            <bind match="none"/>
                            <field access="readOnly" name="L_CompanyRegno" w="86mm" h="4mm">
                               <font typeface="Arial" size="9pt"/>
@@ -813,9 +813,9 @@ else
                               </event>
                            </field>
                            <?templateDesigner expand 1?></subform>
-                        <subform y="16.001mm" w="86mm" minH="4mm" layout="tb">
+                        <subform y="16.001mm" w="86mm" minH="4mm" layout="tb" name="subCustomerVatPayer">
                            <bind match="none"/>
-                           <field access="readOnly" name="L_VatPayerNo" w="86mm" h="4mm">
+                           <field access="readOnly" name="L_CustomerVatPayerNo" w="86mm" h="4mm">
                               <font typeface="Arial" size="9pt"/>
                               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                               <ui>
@@ -824,7 +824,7 @@ else
                                     <margin/>
                                  </textEdit>
                               </ui>
-                              <bind ref="$.Document.HeaderInfo.VatPayerNo" match="dataRef"/>
+                              <bind ref="$.Document.HeaderInfo.CustomerVatPayer" match="dataRef"/>
                               <caption reserve="29mm">
                                  <value>
                                     <text>Saknas</text>
@@ -859,7 +859,7 @@ else
                               </event>
                            </field>
                            <?templateDesigner expand 1?></subform>
-                        <subform y="20.001mm" w="86mm" minH="4mm" layout="tb">
+                        <subform y="20.001mm" w="86mm" minH="4mm" layout="tb" name="subPaymentTerms">
                            <bind match="none"/>
                            <field name="L_PaymentTerms" h="4mm" minW="86mm" access="readOnly">
                               <ui>
@@ -5209,10 +5209,10 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\9546\755_Invoice_S001IT05_20130904_124020_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\866_Invoice_S866SP02_20130917_094429_D_B866JKR.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Zoom 133?>
+   <?templateDesigner Zoom 151?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -5364,14 +5364,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-09T06:39:27Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-09-17T08:52:46Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:216875f7-0d83-45a4-a5a2-3e7a13af6647</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:000c1599-4635-4609-a145-505b4deb6d31</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
