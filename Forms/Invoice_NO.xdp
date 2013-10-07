@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-16T12:02:22Z" uuid="69033b4f-3040-4f5e-b3e7-2d9443e43b61">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-07T09:25:40Z" uuid="3c840835-329c-4f67-97b3-2ab616245de5">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -111,7 +111,8 @@ else
                </field>
                <subform x="0mm" y="7mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
                   <bind/>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <?templateDesigner expand 1?></subform>
             <subform x="15mm" y="270mm" usehref=".\Fragments\frg_Footer.xdp#som($template.form1.subFooter)">
                <margin/>
@@ -119,7 +120,8 @@ else
                <bind/>
             </subform>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="9mm">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="6mm" y="105mm">
                <field h="6mm" name="verticalTextLabel" rotate="90" w="50mm" x="0mm" y="50mm">
                   <para/>
@@ -127,7 +129,8 @@ else
                   <bind/>
                </field>
                <bind/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <contentArea x="15mm" y="41mm" w="190mm" h="229mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
             <?templateDesigner expand 1?></pageArea>
@@ -135,7 +138,8 @@ else
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="15mm" y="47mm" w="190mm" h="220mm" name="areaPage1"/>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="4mm">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform w="204.15mm" h="282.633mm" name="subHeader">
                <bind match="none"/>
                <subform x="90mm" minH="22.225mm" name="subWatermark" layout="tb" y="76mm">
@@ -218,10 +222,12 @@ else
                   <?templateDesigner expand 1?></subform>
                <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="118mm" y="22mm">
                   <bind/>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="7mm">
                   <bind/>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <field name="fldInvoiceTypeText" y="26mm" x="15mm" h="7mm" minW="91mm" access="readOnly">
                   <ui>
                      <textEdit/>
@@ -431,7 +437,8 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
       <subform w="190mm" name="pageContent" layout="tb">
          <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
             <bind/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <subform name="subInvoiceMetadata" layout="lr-tb" presence="hidden">
             <bind match="none"/>
             <field name="InvoiceCode" h="9mm" minW="6mm">
@@ -540,7 +547,8 @@ this.rawValue = PaymentTermsCode.rawValue[0].toUpperCase()+stringTail;
                   <subform usehref=".\Fragments\frg_DealerAddress.xdp#som($template.form1.subDealerAddress)">
                      <bind/>
                      <keep/>
-                     <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?>
+                  </subform>
                   <?templateDesigner expand 1?></subform>
                <subform x="114.999mm" y="12mm" w="64mm" name="subBankGiro" layout="tb">
                   <bind match="none"/>
@@ -1023,12 +1031,25 @@ this.caption.value.text = output;
                         </ui>
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.UserName"/>
+                        <bind match="none"/>
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
+
+try
+{
+	this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
+}
+catch(e)
+{
+
+}
 if(this.rawValue != null)
 {
 	this.parent.parent.subCustomerName.presence = "hidden";
+}
+else
+{
+	this.parent.presence = "hidden";
 }
 </script>
                         </event>
@@ -1045,9 +1066,7 @@ if(this.rawValue != null)
                         <font size="9pt" typeface="Arial"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      </draw>
-                     <?templateDesigner expand 1?>
-                     <occur min="0" max="-1"/>
-                  </subform>
+                     <?templateDesigner expand 1?></subform>
                   <subform layout="tb" minH="4mm" name="subOwnerName" w="70mm">
                      <keep intact="contentArea"/>
                      <bind match="none"/>
@@ -1076,17 +1095,23 @@ if(this.rawValue != null)
                         </ui>
                         <font typeface="Arial" size="9pt"/>
                         <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.OwnerName"/>
+                        <bind match="none"/>
+                        <para hAlign="justify"/>
                         <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">try
+                           <script contentType="application/x-javascript">
+
+
+try
 {
-	var userName = subUserName.floatUserName.rawValue;
+	this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_OwnerName.rawValue;
+	var userName = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
+
 }
 catch(e)
 {
 	userName = "";
+	//app.alert("catch")
 }
-
 
 if (this.rawValue == null || this.rawValue == userName)
 {
@@ -1094,7 +1119,7 @@ if (this.rawValue == null || this.rawValue == userName)
 }
 //app.alert(xfa.resolveNode("pageContent.subHeaderInformation.subOuterHolder.subCustomerAddress.subUserName.floatUserName").rawValue);
 
-if(userName == "")
+if(userName == "" || userName == null)
 {
 	this.parent.L_Attention.rawValue = "";
 }
@@ -1103,9 +1128,12 @@ if(this.rawValue != null)
 {
 	this.parent.parent.subCustomerName.presence = "hidden";
 }
+else
+{
+	this.parent.presence = "hidden";
+}
 </script>
                         </event>
-                        <para hAlign="justify"/>
                      </field>
                      <draw name="txtAttention" w="70mm" h="4.168mm">
                         <ui>
@@ -1119,9 +1147,7 @@ if(this.rawValue != null)
                         <font size="9pt" typeface="Arial"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      </draw>
-                     <?templateDesigner expand 1?>
-                     <occur min="0" max="-1"/>
-                  </subform>
+                     <?templateDesigner expand 1?></subform>
                   <field access="readOnly" minH="4mm" name="fldCustomerPostalAddress" w="70mm">
                      <font typeface="Arial" size="9pt"/>
                      <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
@@ -1163,7 +1189,8 @@ if(this.rawValue != null)
             <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <border>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
@@ -1179,6 +1206,83 @@ if(this.rawValue != null)
                <occur min="0" max="-1"/>
                <bind/>
                <keep/>
+               <?templateDesigner expand 1?>
+            </subform>
+            <subform w="179.064mm" minH="8mm" name="subBilplass" layout="lr-tb">
+               <bind match="none"/>
+               <subform w="106.999mm" minH="8mm" name="subCarLocation">
+                  <bind match="none"/>
+                  <keep intact="none"/>
+                  <field name="L_CarLocation" minH="8mm" minW="36.999mm" access="readOnly" x="0mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <caption placement="top" reserve="4mm">
+                        <value>
+                           <text>Bilplass:</text>
+                        </value>
+                        <font typeface="Arial" size="8.5pt" weight="bold"/>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.CarLocation"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  </field>
+                  <?templateDesigner expand 1?>
+                  <occur min="0" max="-1"/>
+               </subform>
+               <subform w="37mm" minH="8mm" layout="tb" name="subLocationSparepartPrepicked">
+                  <bind match="none"/>
+                  <field name="L_LocationSparepartPrepicked" minH="8mm" minW="37mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <caption placement="top" reserve="4mm">
+                        <value>
+                           <text>Deleplass</text>
+                        </value>
+                        <font typeface="Arial" size="8.5pt" weight="bold"/>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.HeaderInfo.LocationPartsPrepicked"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                     </event>
+                     <font typeface="Arial" size="9pt"/>
+                     <para vAlign="middle"/>
+                     <border>
+                        <edge presence="hidden"/>
+                     </border>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  </field>
+                  <?templateDesigner expand 1?>
+                  <occur min="0" max="-1"/>
+               </subform>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subReasonForCreditLine" layout="tb">
@@ -1549,22 +1653,8 @@ this.caption.value.text = output;
                         <caption reserve="0in"/>
                         <para hAlign="right" vAlign="middle"/>
                         <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
-
-}
+                           <script contentType="application/x-javascript">var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                         </event>
                         <format>
@@ -1583,21 +1673,11 @@ catch(e)
                         <para hAlign="right" vAlign="middle"/>
                         <caption reserve="0in"/>
                         <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">try
-{
-var str = this.rawValue;
+                           <script contentType="application/x-javascript">
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
 
-}
 </script>
                         </event>
                         <bind match="dataRef" ref="$.PriceTotalTask">
@@ -1805,24 +1885,8 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                         </format>
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-
-
-}
-catch(e)
-{
-
-}
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                         </event>
                      </field>
@@ -1845,7 +1909,7 @@ catch(e)
                      <edge presence="hidden"/>
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-                  <occur max="30" min="0"/>
+                  <occur max="-1" min="0"/>
                   <?templateDesigner expand 1?></subform>
                <subform name="subSparePartHolder" w="179mm" layout="tb">
                   <subform w="179mm" name="subSparePart">
@@ -2008,23 +2072,8 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
 
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-
-
-}
-catch(e)
-{
-
-}
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                         </event>
                      </field>
@@ -2047,8 +2096,8 @@ catch(e)
                      <edge presence="hidden"/>
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-                  <occur max="30" min="0"/>
-                  <?templateDesigner expand 0?></subform>
+                  <occur max="-1" min="0"/>
+                  <?templateDesigner expand 1?></subform>
                <subform name="subWorkHolder" w="179mm" layout="tb">
                   <subform w="179mm" name="subWork">
                      <bind match="none"/>
@@ -2146,24 +2195,8 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                         </format>
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
-
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-
-
-}
-catch(e)
-{
-
-}
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                         </event>
                      </field>
@@ -2186,7 +2219,7 @@ catch(e)
                      <edge presence="hidden"/>
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-                  <occur max="30" min="0"/>
+                  <occur max="-1" min="0"/>
                   <?templateDesigner expand 1?></subform>
                <subform w="179mm" name="subPackageHolder" layout="tb">
                   <bind match="dataRef" ref="$.Package[*]"/>
@@ -2210,7 +2243,7 @@ catch(e)
                      <occur min="0" max="-1"/>
                      <margin topInset="0mm"/>
                      <?templateDesigner expand 1?></subform>
-                  <occur max="30" min="0"/>
+                  <occur max="-1" min="0"/>
                   <subform w="179mm" name="subPkgWork">
                      <bind match="dataRef" ref="$.PkgWork[*]"/>
                      <keep intact="none"/>
@@ -2301,21 +2334,8 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                         </border>
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
-
-}
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                         </event>
                         <bind match="dataRef" ref="$.WorkPosAmount">
@@ -2325,7 +2345,7 @@ catch(e)
                            <picture>num{zz,zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <occur max="30" min="0"/>
+                     <occur max="-1" min="0"/>
                      <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm">
                         <ui>
                            <textEdit>
@@ -2449,22 +2469,8 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                            <corner presence="hidden"/>
                         </border>
                         <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
-
-}
+                           <script contentType="application/x-javascript">var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                         </event>
                         <bind match="dataRef" ref="$.SparePartAmount">
@@ -2473,8 +2479,24 @@ catch(e)
                         <format>
                            <picture>num{zz,zzz,zz9.99}</picture>
                         </format>
+                        <event activity="mouseEnter" name="event__mouseEnter">
+                           <script contentType="application/x-javascript"> Invoice.pageContent.subTasks.subTask.subPackageHolder.subPkgSparePart.fldSparePartAmount::mouseEnter - (JavaScript, client)
+</script>
+                        </event>
+                        <event activity="mouseExit" name="event__mouseExit">
+                           <script contentType="application/x-javascript"> Invoice.pageContent.subTasks.subTask.subPackageHolder.subPkgSparePart.fldSparePartAmount::mouseExit - (JavaScript, client)
+</script>
+                        </event>
+                        <event activity="click" name="event__click">
+                           <script contentType="application/x-javascript"> Invoice.pageContent.subTasks.subTask.subPackageHolder.subPkgSparePart.fldSparePartAmount::initialize - (JavaScript, client)
+</script>
+                        </event>
+                        <event activity="preSave" ref="$host" name="event__preSave">
+                           <script contentType="application/x-javascript"> Invoice.pageContent.subTasks.subTask.subPackageHolder.subPkgSparePart.fldSparePartAmount::preSave - (JavaScript, client)
+</script>
+                        </event>
                      </field>
-                     <occur max="30" min="0"/>
+                     <occur max="-1" min="0"/>
                      <field name="fldSparePartUnit" w="8mm" h="3.6mm" access="readOnly" x="96mm">
                         <ui>
                            <textEdit>
@@ -2685,23 +2707,8 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                         </border>
                         <event activity="initialize" name="event__initialize">
                            <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-
-
-}
-catch(e)
-{
-
-}
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                         </event>
                         <bind match="dataRef" ref="$.PkgMatr[*].MaterialAmount">
@@ -2711,7 +2718,7 @@ catch(e)
                            <picture>num{zz,zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <occur max="30" min="0"/>
+                     <occur max="-1" min="0"/>
                      <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0.4mm">
                         <ui>
                            <textEdit>
@@ -2745,7 +2752,7 @@ catch(e)
                      </field>
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <occur max="30" min="0"/>
+               <occur max="-1" min="0"/>
                <overflow leader="subTaskHeading" trailer="overflowTrailer"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="2mm"/>
@@ -2782,24 +2789,18 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 
-
 try
 {
-if(this.rawValue == "" || this.rawValue == null)
-{
-	this.presence = "hidden";
-}
-else
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
+	if(this.rawValue == "" || this.rawValue == null)
+	{
+		this.presence = "hidden";
+	}
+	else
+	{	
+		this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+		var oField = this.parent.fldMinusHolder;
+		formattingScripts.setMinusValueInMinusholder(oField, this);		
+	}
 }
 catch(e)
 {
@@ -2855,21 +2856,8 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 this.caption.value.text = output;
 
 
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
-
-}
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                   </event>
                   <para hAlign="right" vAlign="middle"/>
@@ -2930,21 +2918,8 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split("-");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0];
-	this.parent.fldMinusHolder.rawValue = "-";
-}
-}
-catch(e)
-{
-
-}
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                   </event>
                   <para hAlign="right" vAlign="middle"/>
@@ -3135,7 +3110,7 @@ catch(e)
                      </value>
                   </caption>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">try
+                     <script contentType="application/x-javascript">/*try
 {
 var str = this.rawValue;
 
@@ -3171,7 +3146,12 @@ else
 catch(e)
 {
 
-}
+}*/
+
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
+
 </script>
                   </event>
                </field>
@@ -3255,7 +3235,7 @@ catch(e)
                   </event>
                </field>
                <occur min="0" max="-1"/>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subMaterial" layout="lr-tb">
                <bind match="none"/>
                <field name="L_MaterialTotAmount" w="50mm" h="4mm" access="readOnly">
@@ -3281,7 +3261,7 @@ catch(e)
                      </value>
                   </caption>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">try
+                     <script contentType="application/x-javascript">/*try
 {
 var str = this.rawValue;
 
@@ -3317,7 +3297,10 @@ else
 catch(e)
 {
 
-}
+}*/
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+var oField = this.parent.fldMinusHolder;
+formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                   </event>
                </field>
@@ -3356,7 +3339,7 @@ catch(e)
                   </caption>
                   <para vAlign="middle"/>
                </field>
-               <occur min="0" max="10"/>
+               <occur min="0" max="-1"/>
                <margin topInset="0mm"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="4mm"/>
@@ -3382,7 +3365,7 @@ catch(e)
                   </caption>
                   <para vAlign="middle"/>
                </field>
-               <occur min="0" max="30"/>
+               <occur min="0" max="-1"/>
                <margin topInset="0mm"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="4mm"/>
@@ -3408,7 +3391,7 @@ catch(e)
                   </caption>
                   <para vAlign="middle"/>
                </field>
-               <occur min="0" max="30"/>
+               <occur min="0" max="-1"/>
                <margin topInset="4mm"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="0mm"/>
@@ -3788,19 +3771,21 @@ this.caption.value.text = output;
          <script usehref=".\Fragments\frg_ScriptGetLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
          <script usehref=".\Fragments\frg_LangNO.xdp#som($template.form1.#subform.#variables.NO)"/>
          <script usehref=".\Fragments\frg_LangEN.xdp#som($template.form1.#subform.#variables.EN)"/>
+         <script usehref=".\Fragments\frg_formattingScripts.xdp#som($template.form1.#subform.#variables.formattingScripts)"/>
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)" x="-0.0001mm" y="10mm">
             <bind/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?>
+         </subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 152 38 000300120024002500260027002F003000310032003300350036003700380039004200440045004600480049004A004C004E004F005000510052005300550056005700580059005C005E0060 /ABCDLMNOPRSTUV_abcefgiklmnoprstuvy{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 220 58 00030008000F00110012001D002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005E0060006E009100A1 %,./:ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvwx{}åØø?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 148 37 000300120024002500260027002F00300031003200330035003600370039004200440045004600480049004A004C004E004F005000510052005300550056005700580059005C005E0060 /ABCDLMNOPRSTV_abcefgiklmnoprstuvy{}?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 216 57 00030008000F00110012001D002400250026002700280029002A002B002C002E002F003000310032003300350036003700380039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005E0060006E009100A1 %,./:ABCDEFGHIKLMNOPRSTUVabcdefghijklmnoprstuvwx{}åØø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 60 15 0001001000250042004500460048004A004C004F00500053005400550056 /Dadegiknorstu?>
@@ -3810,6 +3795,7 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 151?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -3823,10 +3809,9 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9366\030_Invoice_S001IT05_20130828_144927_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9752\030_Invoice_S001IT05_20131002_124556_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Zoom 151?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -3978,14 +3963,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-16T12:02:22Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-10-07T09:25:40Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:69033b4f-3040-4f5e-b3e7-2d9443e43b61</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:3c840835-329c-4f67-97b3-2ab616245de5</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
