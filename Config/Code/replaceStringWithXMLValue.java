@@ -34,8 +34,15 @@ for (int i = 0; i < numChildren; i++)
 
 	NodeList nodes = (NodeList) result;
 	//System.out.println("Test: "+nodes.item(0).getTextContent());
-	strValue = strValue.replaceFirst("\\$", nodes.item(0).getTextContent());
-   
+	try
+	{
+		strValue = strValue.replaceFirst("\\$", nodes.item(0).getTextContent());
+	}
+	catch(e)
+	{
+		System.out.println("Error replacing for: "+strValue);
+		System.out.println("CurrentNode: "+currentNode+" ChildNodes: "+childNodes);
+	}
 	
 }
 
