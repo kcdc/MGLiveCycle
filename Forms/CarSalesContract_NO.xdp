@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-24T07:38:05Z" uuid="6aab2ed1-0dcb-4a0b-b777-5f9c51225d21">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-14T07:08:41Z" uuid="756060e2-604b-4aae-865d-44b94f9a6e88">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -853,6 +853,22 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                      </value>
                   </caption>
                   <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+try
+{
+	var LangCode = getLanguages.getLanguageSetting();
+
+	var output = getLanguages.getLanguageText(LangCode, this.name);
+
+	this.caption.value.text = output;
+}
+catch(e)
+{
+	this.caption.value.text = "TRANSLATION NOT FOUND FOR: "+this.name;	
+}
+</script>
+                  </event>
                </field>
             </subform>
             <subform name="subDeliveryPoint" layout="lr-tb">
@@ -5352,8 +5368,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 151?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -5366,9 +5380,11 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9667\3-998_CarSalesContract_S001IT05_20130924_082841_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\Arkiv (Defects som er resolved)\9667\998_CarSalesContract_S001IT05_20130923_133044_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 140?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -5518,14 +5534,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-24T07:38:05Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-10-14T07:08:41Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:6aab2ed1-0dcb-4a0b-b777-5f9c51225d21</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:756060e2-604b-4aae-865d-44b94f9a6e88</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -5539,7 +5555,7 @@ this.caption.value.text = output;
    <xsdConnection name="DataConnection" dataDescription="CarSalesContract">
       <uri>.\XSD\CarSalesContract.xsd</uri>
       <rootElement>CarSalesContract</rootElement>
-      <?templateDesigner fileDigest shaHash="rehe2yLKlNKrGPQyfQ9Q4f9N5sg="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="j/cVrV80hdBAhYMQ+ZwbiO9C0Ns="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -5666,6 +5682,7 @@ this.caption.value.text = output;
                <FreightDesc/>
                <SVAPriceTotal/>
                <FreightPriceTotal/>
+               <FreightPriceTotalAstr/>
                <TotalDiscount/>
                <PriceVatTotalSum/>
                <Currency/>
@@ -5681,7 +5698,7 @@ this.caption.value.text = output;
             </ImportCarSubject>
             <TermsOfDelivery>
                <DeliveryText>
-                  <TermsOfDeliveryText/>
+                  <TermsOfDeliveryText dd:maxOccur="10"/>
                </DeliveryText>
                <DeliveryTermsDate/>
                <WarrantyTerms/>
@@ -5957,10 +5974,10 @@ this.caption.value.text = output;
                      <xs:element name="TopTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="TopTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="TopTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="TopTextLine" type="xs:string" maxOccurs="10"/>
+                                       <xs:element maxOccurs="10" name="TopTextLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -5992,6 +6009,7 @@ this.caption.value.text = output;
                               <xs:element name="FreightDesc" type="xs:string"/>
                               <xs:element name="SVAPriceTotal" type="xs:string"/>
                               <xs:element name="FreightPriceTotal" type="xs:string"/>
+                              <xs:element name="FreightPriceTotalAstr" type="xs:string"/>
                               <xs:element name="TotalDiscount" type="xs:string"/>
                               <xs:element name="PriceVatTotalSum" type="xs:string"/>
                               <xs:element name="Currency" type="xs:string"/>
@@ -6007,7 +6025,7 @@ this.caption.value.text = output;
                      <xs:element name="ImportCarSubject">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="ImportCarSubjectDesc" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="ImportCarSubjectDesc" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -6017,7 +6035,7 @@ this.caption.value.text = output;
                               <xs:element name="DeliveryText">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="TermsOfDeliveryText" type="xs:string"/>
+                                       <xs:element maxOccurs="10" name="TermsOfDeliveryText" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6032,7 +6050,7 @@ this.caption.value.text = output;
                      <xs:element name="Options">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Option" maxOccurs="200">
+                              <xs:element maxOccurs="200" name="Option">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="OptionDesc" type="xs:string"/>
@@ -6046,7 +6064,7 @@ this.caption.value.text = output;
                      <xs:element name="NationalOptions">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="NationalOption" maxOccurs="200">
+                              <xs:element maxOccurs="200" name="NationalOption">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="NationalOptionDesc" type="xs:string"/>
@@ -6060,7 +6078,7 @@ this.caption.value.text = output;
                      <xs:element name="ReBuilds">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="ReBuild" maxOccurs="200">
+                              <xs:element maxOccurs="200" name="ReBuild">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ReBuildDesc" type="xs:string"/>
@@ -6100,17 +6118,17 @@ this.caption.value.text = output;
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element name="ContractTextLines" maxOccurs="10">
+                     <xs:element maxOccurs="10" name="ContractTextLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="ContractTextLine" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="ContractTextLine" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="BottomTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="BottomTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -6123,10 +6141,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLinesMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="FooterLines">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLine" type="xs:string" maxOccurs="10"/>
+                                       <xs:element maxOccurs="10" name="FooterLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6136,10 +6154,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLimitedMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLimitedLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="FooterLimitedLines">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLimitedLine" type="xs:string" maxOccurs="10"/>
+                                       <xs:element maxOccurs="10" name="FooterLimitedLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6157,7 +6175,7 @@ this.caption.value.text = output;
                      <xs:element name="Financing">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="AdditionalProduct" maxOccurs="100">
+                              <xs:element maxOccurs="100" name="AdditionalProduct">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ProductDesc" type="xs:string"/>
