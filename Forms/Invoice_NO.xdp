@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-14T08:02:25Z" uuid="66772142-64ba-4b3a-9fb3-7a4852be002c">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-21T09:28:19Z" uuid="394f13ff-5834-453b-ade0-4eb35e22738d">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -1006,23 +1006,28 @@ this.caption.value.text = output;
                         <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                         <bind match="none"/>
                         <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-var customerName = Invoice.pageContent.subHeaderInformation.subOuterHolder.subCustomerAddress.subCustomerName.floatCustomerName.rawValue;
-var ownerName = Invoice.pageContent.subCarInformation.subEierBruker.L_OwnerName.rawValue;
-
-if(customerName == ownerName)
+                           <script contentType="application/x-javascript">try
 {
-	this.parent.presence = "visible";
-	if(Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue.length &gt; 0)
+	var customerName = Invoice.pageContent.subHeaderInformation.subOuterHolder.subCustomerAddress.subCustomerName.floatCustomerName.rawValue;
+	var ownerName = Invoice.pageContent.subCarInformation.subEierBruker.L_OwnerName.rawValue;
+	if(customerName == ownerName)
 	{
-		this.parent.parent.subCustomerName.presence = "hidden";
-		this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
-	}
-	else
-	{
+		this.parent.presence = "visible";
+		if(Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue.length &gt; 0)
+		{
+			this.parent.parent.subCustomerName.presence = "hidden";
+			this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
+		}
+		else
+		{
 		
+		}
+		//this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
 	}
-	//this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
+}
+catch(e)
+{
+	
 }
 
 </script>
@@ -1728,7 +1733,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
                   <subform w="179mm" name="subMaterial">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldMaterialNo" access="readOnly" w="27mm" x="4mm" h="3.6mm">
+                     <field name="fldMaterialNo" access="readOnly" w="30mm" x="4mm" h="3.6mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -1743,7 +1748,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
                         </caption>
                         <para vAlign="middle"/>
                      </field>
-                     <field name="fldMaterialText" w="64.036mm" h="3.6mm" access="readOnly" x="30.964mm">
+                     <field name="fldMaterialText" w="64.036mm" h="3.6mm" access="readOnly" x="30.964mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -1758,7 +1763,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
                            <corner presence="hidden"/>
                         </border>
                      </field>
-                     <field name="fldMaterialUnit" w="8mm" h="3.6mm" access="readOnly" x="96mm">
+                     <field name="fldMaterialUnit" w="8mm" h="3.6mm" access="readOnly" x="96mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -1773,7 +1778,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
                            <corner presence="hidden"/>
                         </border>
                         <?templateDesigner expand 1?></field>
-                     <field name="fldMaterialQuantity" w="8mm" h="3.6mm" access="readOnly" x="109.001mm">
+                     <field name="fldMaterialQuantity" w="8mm" h="3.6mm" access="readOnly" x="109.001mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -1801,7 +1806,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 </script>
                         </event>
                      </field>
-                     <field name="fldMaterialPrice" x="117mm" w="17mm" h="3.6mm" access="readOnly">
+                     <field name="fldMaterialPrice" x="117mm" w="17mm" h="3.6mm" access="readOnly" y="0mm">
                         <ui>
                            <numericEdit>
                               <margin/>
@@ -1822,7 +1827,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                            <picture>num{zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <field name="fldPriceInfo" w="26mm" h="3.6mm" access="readOnly" x="136mm">
+                     <field name="fldPriceInfo" w="26mm" h="3.6mm" access="readOnly" x="136mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -1837,7 +1842,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                            <corner presence="hidden"/>
                         </border>
                         <?templateDesigner expand 1?></field>
-                     <field name="fldMaterialDiscount" w="8mm" h="3.6mm" access="readOnly" x="143mm">
+                     <field name="fldMaterialDiscount" w="8mm" h="3.6mm" access="readOnly" x="143mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -1863,7 +1868,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 </script>
                         </event>
                      </field>
-                     <field name="fldMaterialAmount" x="160mm" w="17mm" h="3.6mm" access="readOnly">
+                     <field name="fldMaterialAmount" x="160mm" w="17mm" h="3.6mm" access="readOnly" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -1890,7 +1895,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
 </script>
                         </event>
                      </field>
-                     <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm">
+                     <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -1915,7 +1920,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
                   <subform w="179mm" name="subSparePart">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldSparePartNo" access="readOnly" w="27mm" x="4mm" h="3.6mm" y="0mm">
+                     <field name="fldSparePartNo" access="readOnly" w="30mm" x="4mm" h="3.6mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2102,7 +2107,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
                   <subform w="179mm" name="subWork">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldWorkPosNo" access="readOnly" w="27mm" x="4mm" y="0mm" h="3.6mm">
+                     <field name="fldWorkPosNo" access="readOnly" w="30mm" x="4mm" y="0mm" h="3.6mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2247,7 +2252,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
                   <subform w="179mm" name="subPkgWork">
                      <bind match="dataRef" ref="$.PkgWork[*]"/>
                      <keep intact="none"/>
-                     <field name="fldWorkPosNo" access="readOnly" w="27mm" x="4mm" h="3.6mm">
+                     <field name="fldWorkPosNo" access="readOnly" w="30mm" x="4mm" h="3.6mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2362,7 +2367,7 @@ formattingScripts.setMinusValueInMinusholder(oField, this);
                   <subform w="179mm" name="subPkgSparePart">
                      <bind match="dataRef" ref="$.PkgPart[*]"/>
                      <keep intact="none"/>
-                     <field name="fldSparePartNo" access="readOnly" w="27mm" x="4mm" h="3.6mm">
+                     <field name="fldSparePartNo" access="readOnly" w="30mm" x="4mm" h="3.6mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2556,7 +2561,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                   <subform w="179mm" name="subPkgMaterial">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldMaterialNo" access="readOnly" w="27mm" x="4mm" h="3.6mm" y="0.4mm">
+                     <field name="fldMaterialNo" access="readOnly" w="30mm" x="4mm" h="3.6mm" y="0.4mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -3809,7 +3814,7 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9809\994_Invoice_S001IT05_20131014_083345_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9884\030_Invoice_S001IT05_20131018_133118_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
@@ -3963,14 +3968,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-10-14T08:02:25Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-10-21T09:28:19Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:66772142-64ba-4b3a-9fb3-7a4852be002c</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:394f13ff-5834-453b-ade0-4eb35e22738d</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
