@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T12:02:43Z" uuid="4b1219f6-3910-4cdf-80cb-2eec3f0c2694">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-14T06:38:43Z" uuid="46fd5d60-1352-4298-8c26-494c24941a01">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -129,7 +129,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                      <script contentType="application/x-javascript">
 if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 {
-	xfa.resolveNode("subPriceInformation.subMVAInfo.L_PriceInfoEnd2").presence = "visible";
+	xfa.resolveNode("subPriceInformation.subMVAInfo.subPriceInfoEnd.L_PriceInfoEnd2").presence = "visible";
 }
 
 </script>
@@ -269,7 +269,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                      <script contentType="application/x-javascript">
 if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 {
-	xfa.resolveNode("subPriceInformation.subMVAInfo.L_PriceInfoEnd2").presence = "visible";
+	xfa.resolveNode("subPriceInformation.subMVAInfo.subPriceInfoEnd.L_PriceInfoEnd2").presence = "visible";
 }
 </script>
                   </event>
@@ -385,11 +385,13 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                      <script contentType="application/x-javascript">
 if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 {
-	xfa.resolveNode("subPriceInformation.subMVAInfo.L_PriceInfoEnd2").presence = "visible";
+	xfa.resolveNode("subPriceInformation.subMVAInfo.subPriceInfoEnd.L_PriceInfoEnd2").presence = "visible";
 }
 </script>
                   </event>
                </field>
+               <bind match="none"/>
+               <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subInteriorInfo" layout="lr-tb">
@@ -480,11 +482,13 @@ this.caption.value.text = output;
                      <script contentType="application/x-javascript">
 if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 {
-	xfa.resolveNode("subPriceInformation.subMVAInfo.L_PriceInfoEnd2").presence = "visible";
+	xfa.resolveNode("subPriceInformation.subMVAInfo.subPriceInfoEnd.L_PriceInfoEnd2").presence = "visible";
 }
 </script>
                   </event>
                </field>
+               <occur min="0" max="-1"/>
+               <bind match="none"/>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subOptionPriceTotal" layout="lr-tb">
@@ -561,7 +565,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                      <script contentType="application/x-javascript">
 if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 {
-	xfa.resolveNode("subPriceInformation.subMVAInfo.L_PriceInfoEnd2").presence = "visible";
+	xfa.resolveNode("subPriceInformation.subMVAInfo.subPriceInfoEnd.L_PriceInfoEnd2").presence = "visible";
 }
 </script>
                   </event>
@@ -644,7 +648,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                      <script contentType="application/x-javascript">
 if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 {
-	xfa.resolveNode("subPriceInformation.subMVAInfo.L_PriceInfoEnd2").presence = "visible";
+	xfa.resolveNode("subPriceInformation.subMVAInfo.subPriceInfoEnd.L_PriceInfoEnd2").presence = "visible";
 }
 </script>
                   </event>
@@ -653,7 +657,6 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subRebuildPriceTotal" layout="lr-tb">
             <bind match="none"/>
-            <?templateDesigner expand 0?>
             <subform w="139mm" layout="tb" name="subRebuildText">
                <field name="L_RebuildPriceTotal" minH="4mm" minW="65mm" access="readOnly">
                   <ui>
@@ -682,7 +685,7 @@ this.caption.value.text = output;
                   </event>
                </field>
                <?templateDesigner expand 1?></subform>
-            <subform layout="lr-tb">
+            <subform layout="lr-tb" name="subRebuildPrice">
                <field name="numRebuildPriceTotal" access="readOnly" minH="4mm" minW="23mm">
                   <ui>
                      <numericEdit>
@@ -725,14 +728,14 @@ this.caption.value.text = output;
                      <script contentType="application/x-javascript">
 if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 {
-	xfa.resolveNode("subPriceInformation.subMVAInfo.L_PriceInfoEnd2").presence = "visible";
+	xfa.resolveNode("subPriceInformation.subMVAInfo.subPriceInfoEnd.L_PriceInfoEnd2").presence = "visible";
 }
 </script>
                   </event>
                </field>
                <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" h="4mm" name="subSVAPriceTotal">
             <bind match="none"/>
             <subform x="0.001mm" w="139mm" layout="tb" name="subSVAText">
@@ -785,10 +788,10 @@ this.caption.value.text = output;
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform w="179mm" h="4mm" name="subFreightPriceTotal">
+         <subform w="179mm" name="subFreightPriceTotal" layout="lr-tb">
             <bind match="none"/>
-            <subform x="0.001mm" w="139mm" h="4mm" name="subFreightText">
-               <field name="L_FreightPriceTotal" minH="4mm" minW="65mm" access="readOnly" x="0mm">
+            <subform w="139mm" h="4mm" name="subFreightText">
+               <field name="L_FreightPriceTotal" minH="4mm" minW="65mm" access="readOnly" x="0mm" y="0mm">
                   <ui>
                      <textEdit>
                         <border presence="hidden"/>
@@ -815,26 +818,52 @@ this.caption.value.text = output;
                   </event>
                </field>
                <?templateDesigner expand 1?></subform>
-            <field name="numFreightPriceTotal" x="139mm" access="readOnly" minH="4mm" minW="23mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <para hAlign="right"/>
-               <caption reserve="0in">
-                  <font typeface="Arial" size="9pt" weight="bold"/>
-                  <para hAlign="right" vAlign="middle"/>
-               </caption>
-               <bind match="dataRef" ref="$.Document.PriceInformation.FreightPriceTotal"/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+            <subform name="subFreightPriceTotal" layout="lr-tb">
+               <field name="numFreightPriceTotal" access="readOnly" minH="4mm" minW="23mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para hAlign="right"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para hAlign="right" vAlign="middle"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.Document.PriceInformation.FreightPriceTotal"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
-               </event>
-            </field>
+                  </event>
+               </field>
+               <field name="numFreightPriceAstr" minH="4mm" minW="2.001mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.PriceInformation.FreightPriceTotalAstr"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para hAlign="right"/>
+                  </caption>
+                  <para hAlign="right"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+if(this.rawValue != "" &amp;&amp; this.rawValue != null)
+{
+	xfa.resolveNode("subPriceInformation.subMVAInfo.subPriceInfoEnd.L_PriceInfoEnd2").presence = "visible";
+}
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTotalDiscount" layout="tb">
@@ -1120,42 +1149,43 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                <corner/>
             </border>
             <?templateDesigner expand 1?></subform>
-         <subform w="179mm" name="subMVAInfo">
+         <subform w="179mm" name="subMVAInfo" layout="lr-tb">
             <bind match="none"/>
-            <field name="fldPriceInfoAttachment" access="readOnly" w="89mm" h="4mm" y="0mm" x="0.001mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <bind match="dataRef" ref="$.Document.PriceInformation.PriceInfoAttachment"/>
-               <caption reserve="0in">
-                  <font typeface="Arial" size="9pt" weight="bold"/>
-                  <para vAlign="middle"/>
-               </caption>
-               <para vAlign="bottom"/>
-            </field>
-            <field name="L_PriceInfoEnd2" minH="4mm" minW="20mm" access="readOnly" x="89mm" presence="invisible">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <bind match="none"/>
-               <caption reserve="0in">
-                  <value>
-                     <text>* = eks.mva</text>
-                  </value>
+            <subform name="subPriceInfoEnd" layout="lr-tb" w="139mm">
+               <field name="fldPriceInfoAttachment" access="readOnly" w="89mm" h="4mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.PriceInformation.PriceInfoAttachment"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
                   <para vAlign="bottom"/>
-               </caption>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">/*if(this.parent.parent.subRegistrationDesc.numRegistrationStar.rawValue != "")
+               </field>
+               <field name="L_PriceInfoEnd2" minH="4mm" minW="20mm" access="readOnly" presence="invisible">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="none"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>* = eks.mva</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">/*if(this.parent.parent.subRegistrationDesc.numRegistrationStar.rawValue != "")
 {
 	this.presence = "visible";
 }*/
@@ -1165,74 +1195,80 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-               </event>
-               <para vAlign="bottom"/>
-            </field>
-            <field name="L_VatContract" minH="4mm" minW="21mm" access="readOnly" x="115mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <bind match="none"/>
-               <caption reserve="0in">
-                  <value>
-                     <text>Mva-grunnlag</text>
-                  </value>
+                  </event>
                   <para vAlign="bottom"/>
-               </caption>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
+               </field>
+               <field name="L_VatContract" minH="4mm" minW="21mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="none"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Mva-grunnlag</text>
+                     </value>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-               </event>
-               <para vAlign="bottom"/>
-            </field>
-            <field name="numCurrency" access="readOnly" minH="4mm" minW="4mm" x="136mm">
-               <ui>
-                  <numericEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </numericEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <caption reserve="0in">
-                  <font typeface="Arial" size="9pt" weight="bold"/>
+                  </event>
                   <para vAlign="bottom"/>
-               </caption>
-               <bind match="dataRef" ref="$.Document.PriceInformation.Currency"/>
-               <para vAlign="bottom"/>
-            </field>
-            <field name="numPriceVatTotalSum" access="readOnly" minH="4mm" minW="23mm" x="139mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <para hAlign="right" vAlign="bottom"/>
-               <caption reserve="0in">
-                  <font typeface="Arial" size="9pt" weight="bold"/>
-                  <para vAlign="middle"/>
-               </caption>
-               <bind match="dataRef" ref="$.Document.PriceInformation.PriceVatTotalSum"/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
+               </field>
+               <field name="numCurrency" access="readOnly" minH="4mm" minW="4mm">
+                  <ui>
+                     <numericEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </numericEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="bottom"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.Document.PriceInformation.Currency"/>
+                  <para vAlign="bottom"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform w="23mm" name="subPriceVatTotalSum" layout="tb">
+               <field name="numPriceVatTotalSum" access="readOnly" minH="4mm" minW="23mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para hAlign="right" vAlign="bottom"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="dataRef" ref="$.Document.PriceInformation.PriceVatTotalSum"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
 
 this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
-               </event>
-            </field>
+                  </event>
+               </field>
+               <bind match="none"/>
+               <occur min="0" max="-1"/>
+               <?templateDesigner expand 1?></subform>
+            <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
          <margin topInset="2mm"/>
          <?templateDesigner isFragment yes?>
@@ -1248,11 +1284,11 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 40 10 003300440049004C004D00500051005200550056Pafijmnors?>
    </subform>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(158750,158750), objsnap:0, guidesnap:0, pagecentersnap:0?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Zoom 151?></template>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 140?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -1264,6 +1300,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo/>
@@ -1278,14 +1315,14 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-10T12:02:43Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-10-14T06:38:43Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:4b1219f6-3910-4cdf-80cb-2eec3f0c2694</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:46fd5d60-1352-4298-8c26-494c24941a01</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

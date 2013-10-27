@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-10T12:02:27Z" uuid="5bf72637-31b8-4be7-94fa-09cc365f7dfd">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-26T21:20:33Z" uuid="785120b0-3f3f-49fe-ae32-0d3142920bc7">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -279,7 +279,7 @@ this.rawValue = xfa.resolveNode("#pageSet.mpgPage1.verticalLabel.verticalTextLab
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.Financing.FinanceType"/>
             </field>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform name="subHeaderInformation" w="189.999mm" h="31.5mm">
             <bind match="none"/>
             <subform w="189.999mm" name="subOuterHolder" x="0.001mm" h="31.5mm">
@@ -708,7 +708,8 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <border>
                <edge thickness="0.1mm"/>
                <edge presence="hidden"/>
@@ -723,7 +724,8 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)">
                <bind/>
                <keep/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTopTextMain" layout="tb">
             <bind match="none"/>
@@ -749,27 +751,42 @@ this.caption.value.text = output;
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
-         <subform usehref=".\Fragments\frg_PriceInformation.xdp#som($template.form1.subPriceInformation)">
-            <?templateDesigner expand 1?></subform>
          <bind match="none"/>
+         <subform usehref=".\Fragments\frg_PriceInformation.xdp#som($template.form1.subPriceInformation)"/>
          <subform w="179mm" name="subTermsOfDelivery" layout="tb">
             <bind match="none"/>
-            <subform w="179mm" name="subTermsOfDeliveryText" layout="tb">
+            <subform w="179mm" layout="tb" name="subTermsOfDeliveryTextHolder">
                <bind match="none"/>
-               <field name="fldTermsOfDeliveryText" access="readOnly" w="179mm" h="8mm">
-                  <ui>
-                     <textEdit multiLine="1" hScrollPolicy="off" vScrollPolicy="off">
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <font typeface="Arial" size="9pt" weight="bold"/>
-                  </caption>
-                  <bind match="dataRef" ref="$.Document.TermsOfDelivery.TermsOfDeliveryText"/>
-               </field>
+               <subform w="179mm" name="subTermsOfDeliveryText" layout="tb">
+                  <bind match="none"/>
+                  <field name="fldTermsOfDeliveryText" access="readOnly" w="179mm" minH="4mm">
+                     <ui>
+                        <textEdit multiLine="1" hScrollPolicy="off" vScrollPolicy="off">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                     </caption>
+                     <bind match="dataRef" ref="$.Document.TermsOfDelivery.DeliveryText.TermsOfDeliveryText"/>
+                  </field>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge thickness="0.1mm" presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner/>
+                     <corner/>
+                     <corner thickness="0.1mm" presence="hidden"/>
+                     <corner/>
+                  </border>
+                  <keep intact="contentArea"/>
+                  <margin topInset="3mm"/>
+                  <occur min="0" max="-1"/>
+                  <?templateDesigner expand 1?></subform>
                <border>
                   <edge presence="hidden"/>
                   <edge presence="hidden"/>
@@ -780,9 +797,7 @@ this.caption.value.text = output;
                   <corner thickness="0.1mm"/>
                   <corner/>
                </border>
-               <keep intact="contentArea"/>
-               <margin topInset="0mm"/>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <subform name="subDeliveryPoint" layout="lr-tb">
                <bind match="none"/>
                <field name="L_DeltermsText5" minW="20mm" access="readOnly" h="4mm">
@@ -894,7 +909,7 @@ this.caption.value.text = output;
                <keep intact="contentArea"/>
                <occur min="0" max="-1"/>
                <?templateDesigner expand 0?></subform>
-            <margin topInset="3mm"/>
+            <margin topInset="0mm"/>
             <event activity="initialize" name="event__initialize">
                <script contentType="application/x-javascript">//Logic for removing header or text line
 /*
@@ -905,7 +920,7 @@ if(this._subAssumedDelivery.count &lt; 1)
 
 </script>
             </event>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform y="160.999mm" w="179mm" minH="4mm" layout="tb" name="subFirstPageInfoLinesMargin">
             <bind match="none"/>
             <subform w="179mm" name="subFirstPageInfoLines" layout="tb">
@@ -933,7 +948,7 @@ if(this._subAssumedDelivery.count &lt; 1)
                <occur min="0" max="10"/>
                <?templateDesigner expand 0?></subform>
             <margin topInset="4mm"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subSignature" h="55.711mm">
             <bind match="none"/>
             <field name="L_CarPriceestimateTerms" access="readOnly" w="179mm" h="4mm" x="0.001mm" y="0.007mm">
@@ -1102,16 +1117,13 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                      </event>
                      <bind match="dataRef" ref="$.OptionPrice"/>
                   </field>
-                  <keep intact="contentArea"/>
-                  <?templateDesigner expand 0?></subform>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
             <margin topInset="6mm"/>
-            <keep intact="contentArea"/>
             <overflow target="mpgPage2"/>
             <occur min="0" max="-1"/>
             <breakBefore target="mpgPage2" targetType="pageArea"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" layout="tb" name="subNationalOptionsHolder" x="0.001mm">
             <bind match="none"/>
             <field name="L_NationalOptions" access="readOnly" w="179mm" h="4mm">
@@ -1183,7 +1195,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                <?templateDesigner expand 0?></subform>
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" layout="tb" name="subRebuildsHolder" x="0.001mm" y="0mm">
             <bind match="none"/>
             <field name="L_ReBuilds" access="readOnly" w="179mm" h="4mm">
@@ -1322,7 +1334,7 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                <?templateDesigner expand 0?></subform>
             <margin topInset="2mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subAdditionalInfo" layout="tb">
             <bind match="none"/>
             <field name="L_AdditionalInfo" access="readOnly" w="179mm" h="4mm">
@@ -2391,7 +2403,7 @@ this.caption.value.text = output;
                      <para vAlign="middle"/>
                   </field>
                   <keep intact="contentArea"/>
-                  <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
                <field name="L_RentalCalculation" access="readOnly" w="179mm" h="4mm">
                   <ui>
                      <textEdit>
@@ -2564,9 +2576,8 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
                      </field>
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 1?>
                   <margin leftInset="17mm"/>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <subform w="86.995mm" h="4.003mm" name="subLeaseMonth" y="15.997mm" x="0.001mm">
                <bind match="none"/>
@@ -2627,17 +2638,12 @@ else
 {
 	this.parent.subAsterisk.presence = "hidden";
 }
-
-wordArray = wordArray[0].split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
 }
 catch(e)
 {
-
+	this.parent.subAsterisk.presence = "hidden";
 }
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -2695,8 +2701,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
+                     <script contentType="application/x-javascript">try
 {
 var str = this.rawValue;
 
@@ -2711,17 +2716,12 @@ else
 {
 	this.parent.subAsterisk.presence = "hidden";
 }
-
-wordArray = wordArray[0].split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
 }
 catch(e)
 {
-
+	this.parent.subAsterisk.presence = "hidden";
 }
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Financing.AdditionalLease"/>
@@ -2783,8 +2783,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
+                     <script contentType="application/x-javascript">try
 {
 var str = this.rawValue;
 
@@ -2799,17 +2798,12 @@ else
 {
 	this.parent.subAsterisk.presence = "hidden";
 }
-
-wordArray = wordArray[0].split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
 }
 catch(e)
 {
-
+	this.parent.subAsterisk.presence = "hidden";
 }
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Financing.LeaseTotal"/>
@@ -2875,8 +2869,7 @@ this.caption.value.text = output;
                      <picture>num{zzzz9.zzz}</picture>
                   </format>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
+                     <script contentType="application/x-javascript">try
 {
 var str = this.rawValue;
 
@@ -2885,24 +2878,18 @@ var wordArray = str.split("*");
 if(wordArray.length &gt; 1)
 {
 	wordArray = wordArray[0].split(" ");	
-	
 	this.rawValue = wordArray[0];
 }
 else
 {
 	this.parent.subAsterisk.presence = "hidden";
 }
-
-wordArray = wordArray[0].split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
 }
 catch(e)
 {
-
+	this.parent.subAsterisk.presence = "hidden";
 }
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -2960,8 +2947,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
+                     <script contentType="application/x-javascript">try
 {
 var str = this.rawValue;
 
@@ -2969,7 +2955,6 @@ var wordArray = str.split("*");
 
 if(wordArray.length &gt; 1)
 {
-	
 	wordArray = wordArray[0].split(" ");	
 	this.rawValue = wordArray[0];
 }
@@ -2977,17 +2962,12 @@ else
 {
 	this.parent.subAsterisk.presence = "hidden";
 }
-
-wordArray = wordArray[0].split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
 }
 catch(e)
 {
-
+	this.parent.subAsterisk.presence = "hidden";
 }
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.Financing.ArrangementFee"/>
@@ -3049,8 +3029,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
+                     <script contentType="application/x-javascript">try
 {
 var str = this.rawValue;
 
@@ -3065,16 +3044,10 @@ else
 {
 	this.parent.subAsterisk.presence = "hidden";
 }
-
-wordArray = wordArray[0].split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
 }
 catch(e)
 {
-
+	this.parent.subAsterisk.presence = "hidden";
 }
 </script>
                   </event>
@@ -3752,7 +3725,7 @@ catch(e)
                </border>
                <?templateDesigner expand 0?></subform>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subAdditionalProductsHolder" layout="tb">
             <bind match="none"/>
             <margin topInset="4mm"/>
@@ -3979,21 +3952,7 @@ this.caption.value.text = output;
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
                      <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.OnDelivery.RentalAmount"/>
@@ -4009,22 +3968,7 @@ catch(e)
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.OnDelivery.VatAmount"/>
@@ -4040,22 +3984,7 @@ catch(e)
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Document.OnDelivery.RentalAmountVat"/>
@@ -4112,22 +4041,7 @@ this.caption.value.text = output;
                   <para hAlign="right" vAlign="middle"/>
                   <bind match="dataRef" ref="$.Document.OnDelivery.Cash"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
-
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                </field>
@@ -4331,7 +4245,7 @@ this.caption.value.text = output;
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
             <keep intact="contentArea"/>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" h="52mm" name="subTradeInCar">
             <bind match="dataRef" ref="$.Document.TradeInCar"/>
             <margin topInset="4mm"/>
@@ -4662,14 +4576,19 @@ this.caption.value.text = output;
                </field>
                <field name="fldTradeinPrice" access="readOnly" minH="4mm" minW="30mm">
                   <ui>
-                     <textEdit>
+                     <numericEdit>
                         <border presence="hidden"/>
                         <margin/>
-                     </textEdit>
+                     </numericEdit>
                   </ui>
                   <font typeface="Arial" size="9pt"/>
                   <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$record.Document.PriceInformation.TradeinPrice"/>
+                  <bind match="dataRef" ref="$record.Document.PriceInformation.TradeinPrice">
+                     <picture>num{zzzzzzzzzzzz9}</picture>
+                  </bind>
+                  <format>
+                     <picture>num{zzzzzzzzzzzz9}</picture>
+                  </format>
                </field>
                <keep intact="contentArea"/>
                <?templateDesigner expand 0?></subform>
@@ -5196,7 +5115,7 @@ this.caption.value.text = output;
                <margin topInset="1mm"/>
                <overflow trailer="overflowTrailer"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <subform w="179mm" name="subLoan" layout="tb">
             <bind match="dataRef" ref="$.Document.Loan"/>
             <subform w="178.999mm" h="4mm" name="subFinancingHeader">
@@ -5269,21 +5188,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.Cash"/>
@@ -5329,21 +5234,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.PrePaymentAmount"/>
@@ -5389,21 +5280,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.LoanTradeinPrice"/>
@@ -5449,21 +5326,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.LoanTradeinEncumbrance"/>
@@ -5509,21 +5372,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.VWMBFLoan"/>
@@ -5532,6 +5381,52 @@ catch(e)
                <?templateDesigner expand 0?></subform>
             <margin topInset="4mm"/>
             <occur min="0" max="-1"/>
+            <subform w="174.999mm" h="4mm" name="subCashByDelivery">
+               <bind match="none"/>
+               <field name="L_CashByDelivery" access="readOnly" h="4mm" x="0mm" y="0mm" w="132.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Sum å betale ved levering</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+                  </event>
+               </field>
+               <field name="numCashByDelivery" y="0mm" x="148.999mm" w="26mm" h="4mm" access="protected">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para hAlign="right" vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+</script>
+                  </event>
+                  <bind match="dataRef" ref="$.CashByDelivery"/>
+               </field>
+               <occur min="0" max="-1"/>
+               <?templateDesigner expand 1?></subform>
             <subform w="174.999mm" h="4mm" name="subVehiclePrice">
                <bind match="none"/>
                <field name="L_LoanVehiclePrice" access="readOnly" w="132.999mm" h="3.999mm" x="0mm" y="0mm">
@@ -5572,21 +5467,7 @@ this.caption.value.text = output;
                   <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                   <para hAlign="right" vAlign="middle"/>
                   <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-try
-{
-var str = this.rawValue;
-
-var wordArray = str.split(".");
-if(wordArray.length &gt; 1)
-{
-	this.rawValue = wordArray[0] +" "+ wordArray[1];
-}
-}
-catch(e)
-{
-
-}
+                     <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 </script>
                   </event>
                   <bind match="dataRef" ref="$.LoanVehiclePrice"/>
@@ -5602,32 +5483,86 @@ catch(e)
                   <corner/>
                </border>
                <occur min="0" max="-1"/>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 0?></subform>
          <event activity="initialize" name="event__initialize">
-            <script contentType="application/x-javascript">/*
+            <script contentType="application/x-javascript">
 //Logic for Financetype
 
 if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue == "VWMBFLoan")
 {
 	//app.alert("Text");
-	CarPriceEstimate.pageContent.subFinancingHolder.presence = "hidden";
-	CarPriceEstimate.pageContent.subLeasing.presence = "hidden";
-	CarPriceEstimate.pageContent.subOnDelivery.presence = "hidden";
+	try
+	{
+		CarPriceEstimate.pageContent.subFinancingHolder.presence = "hidden";
+	}
+	catch(e)
+	{
+		
+	}
+	try
+	{
+		CarPriceEstimate.pageContent.subLeasing.presence = "hidden";
+	}
+	catch(e)
+	{
+		
+	}
+	try
+	{
+		CarPriceEstimate.pageContent.subOnDelivery.presence = "hidden";
+	}
+	catch(e)
+	{
+		
+	}
 }
 else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue == "Leasing")
 {
-	CarPriceEstimate.pageContent.subVWMBFLoanHolder.presence = "hidden";
-	
+	try
+	{
+		CarPriceEstimate.pageContent.subVWMBFLoanHolder.presence = "hidden";
+	}
+	catch(e)
+	{
+		
+	}
 }
 else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue == "Cash")
 {
-	CarPriceEstimate.pageContent.subFinancingHolder.presence = "hidden";
-	CarPriceEstimate.pageContent.subLeasing.presence = "hidden";
-	CarPriceEstimate.pageContent.subOnDelivery.presence = "hidden";
-	CarPriceEstimate.pageContent.subVWMBFLoanHolder.presence = "hidden";
+	try
+	{
+		CarPriceEstimate.pageContent.subFinancingHolder.presence = "hidden";
+	}
+	catch(e)
+	{
+	
+	}
+	try
+	{
+		CarPriceEstimate.pageContent.subLeasing.presence = "hidden";
+	}
+	catch(e)
+	{
+		
+	}
+	try
+	{
+		CarPriceEstimate.pageContent.subOnDelivery.presence = "hidden";
+	}
+	catch(e)
+	{
+		
+	}
+	try
+	{
+		CarPriceEstimate.pageContent.subVWMBFLoanHolder.presence = "hidden";
+	}
+	catch(e)
+	{
+		
+	}
 }
-*/
 </script>
          </event>
          <?templateDesigner expand 1?></subform>
@@ -5673,8 +5608,8 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 248 65 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvwxy{}Ååø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 196 50 0003000B000C000D000F0011001D002400250026002700280029002C002E002F00300031003200330035003600370039004200440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E ()*,.:ABCDEFIKLMNOPRSTV_abdefghijklmnoprstuvy{}å?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
@@ -5683,6 +5618,8 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 147?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -5695,11 +5632,9 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Tasks\Fase3\9559\998_CarPriceEstimate_ElBil_B001ALL.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9882\998_CarPriceEstimate_S001IT05_20131018_095359_D_B001HCR.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Zoom 133?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -5849,14 +5784,14 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-10T12:02:27Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-10-26T21:20:33Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:5bf72637-31b8-4be7-94fa-09cc365f7dfd</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:785120b0-3f3f-49fe-ae32-0d3142920bc7</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -5870,7 +5805,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
    <xsdConnection name="DataConnection" dataDescription="CarPriceEstimate">
       <uri>.\XSD\CarPriceEstimate.xsd</uri>
       <rootElement>CarPriceEstimate</rootElement>
-      <?templateDesigner fileDigest shaHash="0M3NcwR2TNWTD1n+sfkzAXEEyIY="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="4XILCuPG9WANmugCaLXtid2nhE0="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -5997,6 +5932,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                <FreightDesc/>
                <SVAPriceTotal/>
                <FreightPriceTotal/>
+               <FreightPriceTotalAstr/>
                <TotalDiscount/>
                <PriceVatTotalSum/>
                <Currency/>
@@ -6008,7 +5944,9 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                <YearFeeAstr/>
             </PriceInformation>
             <TermsOfDelivery>
-               <TermsOfDeliveryText/>
+               <DeliveryText>
+                  <TermsOfDeliveryText dd:maxOccur="10"/>
+               </DeliveryText>
                <DeliveryTermsDate/>
                <WarrantyTerms/>
                <DeliveryPoint/>
@@ -6146,6 +6084,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                <LoanTradeinEncumbrance/>
                <LoanTradeinPrice/>
                <LoanVehiclePrice/>
+               <CashByDelivery/>
                <Cash/>
                <VWMBFLoan/>
             </Loan>
@@ -6329,6 +6268,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                               <xs:element name="FreightDesc" type="xs:string"/>
                               <xs:element name="SVAPriceTotal" type="xs:string"/>
                               <xs:element name="FreightPriceTotal" type="xs:string"/>
+                              <xs:element name="FreightPriceTotalAstr" type="xs:string"/>
                               <xs:element name="TotalDiscount" type="xs:string"/>
                               <xs:element name="PriceVatTotalSum" type="xs:string"/>
                               <xs:element name="Currency" type="xs:string"/>
@@ -6344,7 +6284,13 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                      <xs:element name="TermsOfDelivery">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="TermsOfDeliveryText" type="xs:string"/>
+                              <xs:element name="DeliveryText">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element maxOccurs="10" name="TermsOfDeliveryText" type="xs:string"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
                               <xs:element name="DeliveryTermsDate" type="xs:string"/>
                               <xs:element name="WarrantyTerms" type="xs:string"/>
                               <xs:element name="DeliveryPoint" type="xs:string"/>
@@ -6578,6 +6524,7 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                               <xs:element name="LoanTradeinEncumbrance" type="xs:string"/>
                               <xs:element name="LoanTradeinPrice" type="xs:string"/>
                               <xs:element name="LoanVehiclePrice" type="xs:string"/>
+                              <xs:element name="CashByDelivery" type="xs:string"/>
                               <xs:element name="Cash" type="xs:string"/>
                               <xs:element name="VWMBFLoan" type="xs:string"/>
                            </xs:sequence>

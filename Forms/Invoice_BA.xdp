@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-09T06:39:27Z" uuid="216875f7-0d83-45a4-a5a2-3e7a13af6647">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-22T08:27:56Z" uuid="2db50736-7692-4657-8932-071163507168">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -721,7 +721,7 @@ if(this.rawValue == "" || this.rawValue == null)
                               </event>
                            </field>
                            <?templateDesigner expand 1?></subform>
-                        <subform y="8mm" w="86mm" minH="4mm" layout="tb">
+                        <subform y="8mm" w="86mm" minH="4mm" layout="tb" name="subCustomerLedgerNo">
                            <bind match="none"/>
                            <field access="readOnly" name="L_CustomerLedgerNo" w="86mm" h="4mm">
                               <font typeface="Arial" size="9pt"/>
@@ -733,7 +733,7 @@ if(this.rawValue == "" || this.rawValue == null)
                                  </textEdit>
                               </ui>
                               <bind ref="$.Document.HeaderInfo.CustomerLedgerNo" match="dataRef"/>
-                              <caption reserve="29mm">
+                              <caption reserve="35.8291mm">
                                  <value>
                                     <text>Reskontronr.:</text>
                                  </value>
@@ -767,7 +767,7 @@ else
                               </event>
                            </field>
                            <?templateDesigner expand 1?></subform>
-                        <subform y="12mm" w="86mm" minH="4mm" layout="tb">
+                        <subform y="12mm" w="86mm" minH="4mm" layout="tb" name="subCustomerRegno">
                            <bind match="none"/>
                            <field access="readOnly" name="L_CompanyRegno" w="86mm" h="4mm">
                               <font typeface="Arial" size="9pt"/>
@@ -779,7 +779,7 @@ else
                                  </textEdit>
                               </ui>
                               <bind ref="$.Document.HeaderInfo.CustomerCompanyRegNo" match="dataRef"/>
-                              <caption reserve="29.0139mm">
+                              <caption reserve="35.8291mm">
                                  <value>
                                     <text>Organisasjonsnr.:</text>
                                  </value>
@@ -813,9 +813,9 @@ else
                               </event>
                            </field>
                            <?templateDesigner expand 1?></subform>
-                        <subform y="16.001mm" w="86mm" minH="4mm" layout="tb">
+                        <subform y="16.001mm" w="86mm" minH="4mm" layout="tb" name="subCustomerVatPayer">
                            <bind match="none"/>
-                           <field access="readOnly" name="L_VatPayerNo" w="86mm" h="4mm">
+                           <field access="readOnly" name="L_CustomerVatPayerNo" w="86mm" h="4mm">
                               <font typeface="Arial" size="9pt"/>
                               <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                               <ui>
@@ -824,8 +824,8 @@ else
                                     <margin/>
                                  </textEdit>
                               </ui>
-                              <bind ref="$.Document.HeaderInfo.VatPayerNo" match="dataRef"/>
-                              <caption reserve="29mm">
+                              <bind ref="$.Document.HeaderInfo.CustomerVatPayer" match="dataRef"/>
+                              <caption reserve="35.8291mm">
                                  <value>
                                     <text>Saknas</text>
                                  </value>
@@ -859,7 +859,7 @@ else
                               </event>
                            </field>
                            <?templateDesigner expand 1?></subform>
-                        <subform y="20.001mm" w="86mm" minH="4mm" layout="tb">
+                        <subform y="20.001mm" w="86mm" minH="4mm" layout="tb" name="subPaymentTerms">
                            <bind match="none"/>
                            <field name="L_PaymentTerms" h="4mm" minW="86mm" access="readOnly">
                               <ui>
@@ -871,7 +871,7 @@ else
                               <font size="9pt" typeface="Arial"/>
                               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                               <para vAlign="middle"/>
-                              <caption reserve="29mm">
+                              <caption reserve="35.8291mm">
                                  <font size="8.5pt" typeface="Arial" weight="bold"/>
                                  <para vAlign="middle"/>
                                  <value>
@@ -929,7 +929,7 @@ if(this.rawValue == "" || this.rawValue == null)
                            <font size="9pt" typeface="Arial" weight="bold"/>
                            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                            <para vAlign="middle"/>
-                           <caption reserve="29mm">
+                           <caption reserve="35.8291mm">
                               <font size="8.5pt" typeface="Arial" weight="bold"/>
                               <para vAlign="middle"/>
                               <value>
@@ -1866,7 +1866,7 @@ catch(e)
                   <subform w="179mm" name="subMaterial">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldMaterialNo" access="readOnly" w="27mm" x="4mm" h="3.6mm">
+                     <field name="fldMaterialNo" access="readOnly" w="30mm" x="4mm" h="3.6mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2063,13 +2063,13 @@ catch(e)
                      <edge presence="hidden"/>
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-                  <occur max="30" min="0"/>
+                  <occur max="-1" min="0"/>
                   <?templateDesigner expand 1?></subform>
                <subform name="subSparePartHolder" w="179mm" layout="tb">
                   <subform w="179mm" name="subSparePart">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldSparePartNo" access="readOnly" w="27mm" x="4mm" h="3.6mm">
+                     <field name="fldSparePartNo" access="readOnly" w="30mm" x="4mm" h="3.6mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2084,7 +2084,7 @@ catch(e)
                         </caption>
                         <para vAlign="middle"/>
                      </field>
-                     <field name="fldSparePartText" w="64.036mm" access="readOnly" x="30.964mm" minH="3.6mm">
+                     <field name="fldSparePartText" w="64.036mm" access="readOnly" x="30.964mm" minH="3.6mm" y="0mm">
                         <ui>
                            <textEdit multiLine="1">
                               <margin/>
@@ -2099,7 +2099,7 @@ catch(e)
                            <corner presence="hidden"/>
                         </border>
                      </field>
-                     <field name="fldSparePartUnit" w="8mm" h="3.6mm" access="readOnly" x="96mm">
+                     <field name="fldSparePartUnit" w="8mm" h="3.6mm" access="readOnly" x="96mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -2114,7 +2114,7 @@ catch(e)
                            <corner presence="hidden"/>
                         </border>
                         <?templateDesigner expand 1?></field>
-                     <field name="fldSparePartQuantity" w="8mm" h="3.6mm" access="readOnly" x="109.001mm">
+                     <field name="fldSparePartQuantity" w="8mm" h="3.6mm" access="readOnly" x="109.001mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -2142,7 +2142,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 </script>
                         </event>
                      </field>
-                     <field name="fldSparePartPrice" x="117mm" w="17mm" h="3.6mm" access="readOnly">
+                     <field name="fldSparePartPrice" x="117mm" w="17mm" h="3.6mm" access="readOnly" y="0mm">
                         <ui>
                            <numericEdit>
                               <margin/>
@@ -2163,7 +2163,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                            <picture>num{zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <field name="fldPriceInfo" w="26mm" h="3.6mm" access="readOnly" x="136mm">
+                     <field name="fldPriceInfo" w="26mm" h="3.6mm" access="readOnly" x="136mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -2178,7 +2178,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                            <corner presence="hidden"/>
                         </border>
                         <?templateDesigner expand 1?></field>
-                     <field name="fldSparePartDiscount" w="8mm" h="3.6mm" access="readOnly" x="143mm">
+                     <field name="fldSparePartDiscount" w="8mm" h="3.6mm" access="readOnly" x="143mm" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -2203,7 +2203,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
 </script>
                         </event>
                      </field>
-                     <field name="fldSparePartAmount" x="160mm" w="17mm" h="3.6mm" access="readOnly">
+                     <field name="fldSparePartAmount" x="160mm" w="17mm" h="3.6mm" access="readOnly" y="0mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -2246,7 +2246,7 @@ catch(e)
 </script>
                         </event>
                      </field>
-                     <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm">
+                     <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2265,13 +2265,13 @@ catch(e)
                      <edge presence="hidden"/>
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-                  <occur max="30" min="0"/>
+                  <occur max="-1" min="0"/>
                   <?templateDesigner expand 1?></subform>
                <subform name="subWorkHolder" w="179mm" layout="tb">
                   <subform w="179mm" name="subWork">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldWorkPosNo" access="readOnly" w="27mm" x="4mm" h="3.6mm" y="0mm">
+                     <field name="fldWorkPosNo" access="readOnly" w="30mm" x="4mm" h="3.6mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2468,7 +2468,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                      <edge presence="hidden"/>
                   </border>
                   <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-                  <occur max="30" min="0"/>
+                  <occur max="-1" min="0"/>
                   <?templateDesigner expand 1?></subform>
                <subform w="179mm" name="subPackageHolder" layout="tb">
                   <bind match="dataRef" ref="$.Package[*]"/>
@@ -2491,12 +2491,12 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                      </field>
                      <occur min="0" max="-1"/>
                      <margin topInset="0mm"/>
-                     <?templateDesigner expand 0?></subform>
-                  <occur max="30" min="0"/>
+                     <?templateDesigner expand 1?></subform>
+                  <occur max="-1" min="0"/>
                   <subform w="179mm" name="subPkgWork">
                      <bind match="dataRef" ref="$.PkgWork[*]"/>
                      <keep intact="none"/>
-                     <field name="fldWorkPosNo" access="readOnly" w="27mm" x="4mm" h="3.6mm" y="0mm">
+                     <field name="fldWorkPosNo" access="readOnly" w="30mm" x="4mm" h="3.6mm" y="0mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2607,7 +2607,7 @@ catch(e)
                            <picture>num{zz,zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <occur max="30" min="0"/>
+                     <occur max="-1" min="0"/>
                      <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0mm">
                         <ui>
                            <textEdit>
@@ -2688,7 +2688,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                   <subform w="179mm" name="subPkgSparePart">
                      <bind match="dataRef" ref="$.PkgPart[*]"/>
                      <keep intact="none"/>
-                     <field name="fldSparePartNo" access="readOnly" w="27mm" x="4mm" h="3.6mm">
+                     <field name="fldSparePartNo" access="readOnly" w="30mm" x="4mm" h="3.6mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -2820,7 +2820,7 @@ catch(e)
                            <picture>num{zz,zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <occur max="30" min="0"/>
+                     <occur max="-1" min="0"/>
                      <field name="fldSparePartUnit" w="8mm" h="3.6mm" access="readOnly" x="96mm">
                         <ui>
                            <textEdit>
@@ -2880,7 +2880,7 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                   <subform w="179mm" name="subPkgMaterial">
                      <bind match="none"/>
                      <keep intact="none"/>
-                     <field name="fldMaterialNo" access="readOnly" w="27mm" x="4mm" h="3.6mm" y="0.4mm">
+                     <field name="fldMaterialNo" access="readOnly" w="30mm" x="4mm" h="3.6mm" y="0.4mm">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -3057,7 +3057,7 @@ catch(e)
                            <picture>num{zz,zzz,zz9.99}</picture>
                         </format>
                      </field>
-                     <occur max="30" min="0"/>
+                     <occur max="-1" min="0"/>
                      <field name="fldMinusHolder" minH="3.6mm" minW="2.001mm" access="readOnly" x="177mm" y="0.4mm">
                         <ui>
                            <textEdit>
@@ -3091,7 +3091,7 @@ catch(e)
                      </field>
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <occur max="30" min="0"/>
+               <occur max="-1" min="0"/>
                <overflow leader="subTaskHeading" trailer="overflowTrailer"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="2mm"/>
@@ -3488,9 +3488,9 @@ catch(e)
                <?templateDesigner expand 1?></subform>
             <subform w="179mm" name="subMVAPriceTotalSums" layout="tb">
                <bind match="none"/>
-               <subform w="179mm" h="4mm" name="subPrepaymentAmount">
+               <subform w="179mm" h="4.412mm" name="subPrepaymentAmount">
                   <bind match="none"/>
-                  <subform w="179mm" h="4mm" name="subPrepaymentAmountHolder" x="0.001mm">
+                  <subform w="179mm" h="4mm" name="subPrepaymentAmountHolder" x="0.001mm" y="0mm">
                      <bind match="none"/>
                      <field name="L_PrepaymentAmount" w="65mm" h="4mm" access="readOnly" x="111.999mm">
                         <ui>
@@ -4289,7 +4289,7 @@ catch(e)
                   </caption>
                   <para vAlign="middle"/>
                </field>
-               <occur min="0" max="30"/>
+               <occur min="0" max="-1"/>
                <margin topInset="0mm"/>
                <?templateDesigner expand 1?></subform>
             <margin topInset="4mm"/>
@@ -5196,7 +5196,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -5209,14 +5208,15 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\9546\755_Invoice_S001IT05_20130904_124020_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9709\862_Invoice_S001IT05_20130927_141412_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner Zoom 133?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:4850000;v:4050000;h:500000;h:675000;h:650000?></template>
+   <?templateDesigner Guidelines v:375000;v:4850000;v:4050000;h:500000;h:675000;h:650000?>
+   <?templateDesigner Zoom 140?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -5228,6 +5228,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -5364,14 +5365,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-09T06:39:27Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-10-22T08:27:56Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:216875f7-0d83-45a4-a5a2-3e7a13af6647</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:2db50736-7692-4657-8932-071163507168</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -5385,7 +5386,7 @@ this.caption.value.text = output;
    <xsdConnection name="DataConnection" dataDescription="Invoice">
       <uri>.\XSD\Invoice.xsd</uri>
       <rootElement>Invoice</rootElement>
-      <?templateDesigner fileDigest shaHash="JMxhqZI+2XBPn6HeyJj6Ar7TLh8="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="aEvivLZIRsCP39qell99qSBUGs0="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -5506,7 +5507,7 @@ this.caption.value.text = output;
                <GearCode/>
                <Color/>
                <CarType/>
-               <ReasonForCreditLine dd:maxOccur="2"/>
+               <ReasonForCreditLine/>
                <InsuranceNameRef/>
                <WarrentyRef/>
                <WarrentyRefLabel/>
@@ -5515,7 +5516,7 @@ this.caption.value.text = output;
                <Task dd:maxOccur="30">
                   <TaskDetail>
                      <TaskTexts dd:maxOccur="30">
-                        <TaskText dd:maxOccur="-1"/>
+                        <TaskText dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
                      </TaskTexts>
                      <TaskId/>
                      <TaskName/>
@@ -5589,7 +5590,6 @@ this.caption.value.text = output;
                </Task>
             </Tasks>
             <Total>
-               <Currency/>
                <VatPercent/>
                <PriceTotalSum/>
                <VatAmount/>
@@ -5603,10 +5603,6 @@ this.caption.value.text = output;
                <PriceVatTotalToPay/>
                <AmountInWords/>
             </Total>
-            <CurrencySwap>
-               <AmountCurrency2/>
-               <CurrencyRateTxt/>
-            </CurrencySwap>
             <Insurance>
                <InsuranceVat/>
                <VatBasis/>
@@ -5627,9 +5623,9 @@ this.caption.value.text = output;
             </BottomTextMain>
             <FooterLines>
                <FooterLine dd:maxOccur="30">
-                  <FotterLines dd:maxOccur="30">
-                     <FooterLine dd:maxOccur="-1"/>
-                  </FotterLines>
+                  <FooterLines dd:maxOccur="30">
+                     <FooterLine dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
+                  </FooterLines>
                </FooterLine>
             </FooterLines>
             <FooterLimitedLines>
@@ -5811,7 +5807,7 @@ this.caption.value.text = output;
                               <xs:element name="GearCode" type="xs:string"/>
                               <xs:element name="Color" type="xs:string"/>
                               <xs:element name="CarType" type="xs:string"/>
-                              <xs:element maxOccurs="2" name="ReasonForCreditLine" type="xs:string"/>
+                              <xs:element name="ReasonForCreditLine" type="xs:string"/>
                               <xs:element name="InsuranceNameRef" type="xs:string"/>
                               <xs:element name="WarrentyRef" type="xs:string"/>
                               <xs:element name="WarrentyRefLabel" type="xs:string"/>
@@ -5821,16 +5817,16 @@ this.caption.value.text = output;
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="30" name="Task">
+                              <xs:element name="Task" maxOccurs="30">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskDetail">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element maxOccurs="30" name="TaskTexts">
+                                                <xs:element name="TaskTexts" maxOccurs="30">
                                                    <xs:complexType>
                                                       <xs:sequence>
-                                                         <xs:element maxOccurs="unbounded" name="TaskText" type="xs:string"/>
+                                                         <xs:element name="TaskText" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
@@ -5842,7 +5838,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element maxOccurs="30" name="Work">
+                                       <xs:element name="Work" maxOccurs="30">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="WorkPosNo" type="xs:string"/>
@@ -5856,7 +5852,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element maxOccurs="200" name="SparePart">
+                                       <xs:element name="SparePart" maxOccurs="200">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="SparePartNo" type="xs:string"/>
@@ -5870,7 +5866,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element maxOccurs="30" name="Material">
+                                       <xs:element name="Material" maxOccurs="30">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="MaterialNo" type="xs:string"/>
@@ -5884,10 +5880,10 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element maxOccurs="30" name="Package">
+                                       <xs:element name="Package" maxOccurs="30">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element maxOccurs="30" name="PkgWork">
+                                                <xs:element name="PkgWork" maxOccurs="30">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="WorkPosNo" type="xs:string"/>
@@ -5901,7 +5897,7 @@ this.caption.value.text = output;
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
-                                                <xs:element maxOccurs="200" name="PkgPart">
+                                                <xs:element name="PkgPart" maxOccurs="200">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="SparePartNo" type="xs:string"/>
@@ -5915,7 +5911,7 @@ this.caption.value.text = output;
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
-                                                <xs:element maxOccurs="30" name="PkgMatr">
+                                                <xs:element name="PkgMatr" maxOccurs="30">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="MaterialNo" type="xs:string"/>
@@ -5942,7 +5938,6 @@ this.caption.value.text = output;
                      <xs:element name="Total">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Currency" type="xs:string"/>
                               <xs:element name="VatPercent" type="xs:string"/>
                               <xs:element name="PriceTotalSum" type="xs:string"/>
                               <xs:element name="VatAmount" type="xs:string"/>
@@ -5955,14 +5950,6 @@ this.caption.value.text = output;
                               <xs:element name="VatAmountToPay" type="xs:string"/>
                               <xs:element name="PriceVatTotalToPay" type="xs:string"/>
                               <xs:element name="AmountInWords" type="xs:string"/>
-                           </xs:sequence>
-                        </xs:complexType>
-                     </xs:element>
-                     <xs:element name="CurrencySwap">
-                        <xs:complexType>
-                           <xs:sequence>
-                              <xs:element name="AmountCurrency2" type="xs:string"/>
-                              <xs:element name="CurrencyRateTxt" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -5998,7 +5985,7 @@ this.caption.value.text = output;
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="BottomTextLines">
+                              <xs:element name="BottomTextLines" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -6011,13 +5998,13 @@ this.caption.value.text = output;
                      <xs:element name="FooterLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="30" name="FooterLine">
+                              <xs:element name="FooterLine" maxOccurs="30">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="30" name="FotterLines">
+                                       <xs:element name="FooterLines" maxOccurs="30">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element maxOccurs="unbounded" name="FooterLine" type="xs:string"/>
+                                                <xs:element name="FooterLine" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
@@ -6030,10 +6017,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLimitedLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="30" name="FooterLimitedLine">
+                              <xs:element name="FooterLimitedLine" maxOccurs="30">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="10" name="FooterLimitedLine" type="xs:string"/>
+                                       <xs:element name="FooterLimitedLine" type="xs:string" maxOccurs="10"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6043,7 +6030,7 @@ this.caption.value.text = output;
                      <xs:element name="CarRemarks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="30" name="CarRemark">
+                              <xs:element name="CarRemark" maxOccurs="30">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="RemarkPriority" type="xs:string"/>
@@ -6059,7 +6046,7 @@ this.caption.value.text = output;
                         <xs:complexType>
                            <xs:sequence>
                               <xs:element name="ServiceAdvisor" type="xs:string"/>
-                              <xs:element maxOccurs="10" name="AdvertText" type="xs:string"/>
+                              <xs:element name="AdvertText" type="xs:string" maxOccurs="10"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>

@@ -18,10 +18,11 @@ import org.xml.sax.InputSource;
 
 import org.xml.sax.SAXException;
 
-public String validateXML(String docString, String accExceptionDescription, int exceptionFound)
+public String validateXML(String docString, String accExceptionDescription, int exceptionFound, String unchangedDoc)
 {
-
-
+//to avoid that the recursion goes on forever without changing anything
+if(exceptionFound == 0 || unchangedDoc != docString)
+{
 try
 {
 // the "parse" method also validates XML, will throw an exception if misformatted
@@ -52,17 +53,24 @@ if(exceptionFound == 1)
 exceptionFound = 1;
 
 
-System.out.println("Removing line: "+nodeLine);
-String cleanedXML = docString.replaceFirst(nodeLine, "");
+System.out.println("Removing line from XML: "+nodeLine);
+//regex must be escaped otherwise it might cause trouble and not remove anything (hence the \\Q and \\E escapes)
+String cleanedXML = docString.replaceFirst("\\Q"+nodeLine+"\\E", "");
 
 accExceptionDescription += e.getMessage()+" Error found in node "+nodeName+" at line "+e.getLineNumber()+", column "+e.getColumnNumber();
-//System.out.println("Error: " +accExceptionDescription);
+System.out.println("Error: " +accExceptionDescription);
 //System.out.println("Newest cleanedXML: "+cleanedXML);
 
-accExceptionDescription = validateXML(cleanedXML, accExceptionDescription, exceptionFound);
+accExceptionDescription = validateXML(cleanedXML, accExceptionDescription, exceptionFound, docString);
 
 return accExceptionDescription;
 
+}
+}
+else
+{
+	accExceptionDescription += "LiveCycle Found Unrecoverable Errors in the XML";
+	return accExceptionDescription;
 }
 
 }
@@ -102,7 +110,7 @@ String docString = getStringFromDocument(document);
 //System.out.println("docString: "+docString);
 String trimmedString = docString.substring(0, docString.lastIndexOf('>')+1);
 docString = trimmedString;
-
+String origString = docString;
 
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 factory.setValidating(false);
@@ -112,7 +120,7 @@ DocumentBuilder builder = factory.newDocumentBuilder();
 
 builder.setErrorHandler(null);
 
-String exceptionDescription = validateXML(docString, "", 0);
+String exceptionDescription = validateXML(docString, "", 0, origString);
 
 //patExecContext.setProcessDataValue("/process_data/inData", myNewString);
 //patExecContext.setProcessDataIntValue("/process_data/exceptionFound", exceptionFound);
