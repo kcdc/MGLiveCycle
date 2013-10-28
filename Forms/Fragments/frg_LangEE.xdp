@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-46-14 08:46:14" uuid="ee529203-7c72-43f5-aa2b-f50f4e0988a9">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-13-25 04:13:54" uuid="e99a6a32-04ba-4398-b97e-2b47f0f80dd4">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -21,8 +21,8 @@ var L_InvoiceTitle_K = "Kreeditarve";
 var L_InvoiceTitle_N = "Sisemine kreeditarve";
 var L_InvoiceTitle_P = "Ettemaksuarve";
 var L_LeaseMonthVat = "Indikatiivne kuumakse koos KM";
-var L_LeaserFinancingCompany = "Liisingu pakkumine on soovituslik ja peab heaks kiitma:";
-var L_LeaserFinancingCompany2 = "Sissemakse, kuumakse ja jääkväärtuse näidiskalkulatsioon ei ole finantsteenuse pakkumine. Antud kalkulatsioon on indikatiivne ja ei ole pooltele siduv.";
+var L_LeaserFinancingCompany = " ";
+var L_LeaserFinancingCompany2 = " ";
 var L_LeaserName = "Rentnik:";
 var L_LeaserPersonalId = "Isikukood:";
 var L_LeaseTotal = "Kuumaksud kokku";
@@ -225,7 +225,7 @@ var L_CustomerPhoneNo = "Telefon:";
 var L_CustomerPhonePrivat = "Telefon:";
 var L_CustomerPhoneWork = "Telefon:";
 var L_CustomerVatPayerNo = "Maksja KMKR:";
-var L_Date = "Kuupäev";
+var L_Date = "Kuupäev:";
 var L_DateOfInvoice = "Arve kuupäev:";
 var L_DateReviewed = "Kuupäev";
 var L_DealerCompanyRegno = "Registrikood:";
@@ -306,7 +306,7 @@ var L_Interior = "Sõiduki sisu värvus:";
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:ee529203-7c72-43f5-aa2b-f50f4e0988a9</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:e99a6a32-04ba-4398-b97e-2b47f0f80dd4</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
