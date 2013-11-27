@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-46-14 08:46:14" uuid="16e7402f-238e-43d3-bc8f-72a8d71ffe1b">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-05 08:07:12" uuid="affd5f7f-2494-426f-99c7-5de9d8767e13">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -102,10 +102,107 @@ var L_YourRef = "Pastaba:";
 var L_VisitAddress = "Adresas:";
 var L_YourServiceAdvisor = "Jūsų serviso konsultantas,";
 var L_ConfirmationLegalText = "Už paliktus automobilyje daiktus įmonė neatsako. Darbai atliekami tik pagal užsakovo užsakymą, remiantis įmonėje galiojančiomis taisyklėmis, koncerno - gamintojo patvirtintomis technologijomis bei standartu LST1438. Šalys susitarė, kad remonto imonė turi teisę užlaikyti a/m dirbtuvėse iki visiško apmokėjimo už atliktus darbus. Su numatoma darbų verte ir užsakymą reglamentuojančiomis sutarties sąlygomis susipažinau. Detalių ir darbų apmokėjimą garantuoju.";
+var L_AssumedTradeInPrice = "Numatoma išpirkimo kaina:";
 var L_CarSalesPriceestimate = "Pasiūlymas";
 var L_OnDeliveryRentalAmount = "de PVM";
 var L_OnDeliveryRentalAmountVat = "su PVM";
 var L_OnDeliveryVatAmount = "PVM";
+var L_LeaseMonth = "Mėnesinė įmoka";
+var L_NationalOptionpriceTotal = "Vietinė papildoma įranga:";
+var L_NationalOptions = "Vietinė papildoma įranga";
+var L_AdditionalInfo = "Papildoma informacija";
+var L_AdditionalLease = "Papildomi mokėjimai per mėnesį**";
+var L_AdditionalLeaseVat = "Papildomi mokėjimai per mėnesį**";
+var L_AdditonalProduct = "** Papildomi mokėjimai";
+var L_ApprovedBy = "Patvirtino:";
+var L_ArrangementFee = "Sutarties mokestis";
+var L_ArrangementFeeVat = "Sutarties mokestis";
+var L_ConfirmationEuroTitle = "Patvirtinimas";
+var L_CarModelInfo = "Bazinė kaina:";
+var L_CarModelYear = "Modelio metai:";
+var L_CarPriceestimateTerms = "Siūloma kaina ir finansavimo sąlygos yra orientacinės ir neįpareigoja sutarties šalių prieš pasirašant sutartį!";
+var L_CarSalesContract = "Sutartis";
+var L_Co2 = "Išmetamo CO2 g/km:";
+var L_ColorInfo = "Spalva:";
+var L_ContractNo = "Kontrakto Nr.:";
+var L_CustomerCompanyRegNo = "Įmonės kodas:";
+var L_CustomerPhoneMobile = "Mob.:";
+var L_CustomerPhonePrivat = "Privat.:";
+var L_CustomerPhoneWork = "Darbo:";
+var L_DeltermsText5 = "Pristatymo vieta:";
+var L_DeltermsText7 = "Numatomas pristatymas SAV/MET:";
+var L_DifferenceAmount = "Suma apmokėjimui:";
+var L_EnvironmentalClass = "Aplinkos klasė:";
+var L_FreightPriceTotal = "Siuntimo išlaidos";
+var L_Financing = "Finansavimas";
+var L_Insurance = "Draudimas";
+var L_InsuranceMileage = "Rida metai, km:";
+var L_LeaseMonthVat = "Mėnesinė įmoka";
+var L_LeaserFinancingCompany = " ";
+var L_LeaserFinancingCompany2 = " ";
+var L_LeaserName = "Nuomininkas:";
+var L_LeaserPersonalId = "AK:";
+var L_LeaseTotal = "Viso suma";
+var L_LeaseTotalVat = "Viso suma";
+var L_Leasing = "Nuomininkas:";
+var L_Loan = "Finansiering";
+var L_LoanCondition = "Lånetilbud gitt med forbehold om endelig kredittgodkjennelse.";
+var L_InvoiceTitle_S = "Bendra sąskaita";
+var L_Nox = "Nox išmetimas mg/km:";
+var L_OnDelivery = "Mokėjimai";
+var L_OnDeliveryCash = "Mokėjimas pristatymo metu???";
+var L_NumberOfPeriods = "Nuomos terminas (mėnesiais):";
+var L_InvoiceEuroTitle = "Sąskaita";
+var L_Interior = "Interjeras:";
+var L_OptionDiscount = "Nuolaida papildomai įrangai";
+var L_OnDeliveryDesc = "Pradinė įmoka";
+var L_Sum = "Suma";
+var L_OptionPriceTotal = "Originali papildoma įranga:";
+var L_Options = "Papildoma įranga";
+var L_OrderNo = "Užs.Nr.";
+var L_PaymentType = "Mokėjimo sąlygos:";
+var L_PrepaymentCar = "Avansas";
+var L_PrePaymentCash = "Avansas:";
+var L_PrePaymentComCar = "Avansas a/m:";
+var L_PrePaymentTotal = "Avanso suma viso:";
+var L_PriceInfoEnd1 = "PVM bazė";
+var L_PriceInfoEnd2 = "* = be PVM";
+var L_PriceInformation = "Kainos informacija";
+var L_PriceMileageExeeded = "Viršyta rida km";
+var L_PriceMileageExeededVat = "Viršyta rida km";
+var L_PriceTotalSumCarSales = "Automobilio kaina viso:";
+var L_PriceType_B = "Suma su PVM";
+var L_RegistrationDesc = "Registracijos išlaidos be PVM:";
+var L_RentalCalculation = "Lizingo sąmata (* = be PVM)";
+var L_SalesRep = "Pardavimo vadovas:";
+var L_RemainingValue = "Likutinė vertė:";
+var L_ServiceCharge = "Mėnesio komisiniai";
+var L_ServiceChargeVat = "Mėnesio komisiniai";
+var L_SignatureDate = "Data";
+var L_SumExtraOptions = "Papildoma įranga suma viso";
+var L_SVAPriceTotal = "Paslaugų sutartis";
+var L_TotalCostPerYear = "Metinės išlaidos (įskaitant pirmą įmoką)";
+var L_TotalDiscount = "Nuolaida viso:";
+var L_TotalMileage = "Rida iš viso";
+var L_TotalMileagePerYear = "Rida iš viso per metus";
+var L_TradeIn = "Kliento automobilis";
+var L_TradeInCarBrand = "Gamintojas:";
+var L_TradeInColor = "Spalva:";
+var L_TradeInEncumbrance = "Įkeistas:";
+var L_TradeInMileage = "Rida:";
+var L_TradeInModelDesc = "Modelis:";
+var L_TradeInPrice = "Planuojama atpirkimo kaina:";
+var L_PriceestimateEuroTitle = "Kaina pasiūlymo";
+var L_TradeInRegDate = "Pirma registracija:";
+var L_TradeInRegisteredYear = "Modelio metai:";
+var L_TradeInRegistrationFeePaid = "Metiniai mokesčiai sumokėti:";
+var L_TradeInRegno = "Reg.Nr.:";
+var L_TradeInText = "Pirkimo sąlygos .....";
+var L_TradeInVIN = "Kėbulo Nr.:";
+var L_VatBasis = "PVM bazė:";
+var L_VatContract = "PVM bazė:";
+var L_VehicleDiscount = "Nuolaida a/m";
+var L_VehiclePrice = "A/m kaina";
 var L_AdditionalWorkText = "Papildomas darbas, kuris yra patvirtintas kliento";
 var L_AmountToPay = "Mokėti:";
 var L_Attention = "Kam:";
@@ -145,14 +242,14 @@ var L_CustomerLedgerNo = "Pirkėjo Nr.:";
 var L_CustomerLegalAddressTotal = "Juridinis adresas:";
 var L_CustomerName = "Klientas:";
 var L_CustomerPhoneNo = "Telefonas:";
-var L_CustomerVatPayerNo = "PVM mokėtojo kodas:";
-var L_Date = "Data";
+var L_CustomerVatPayerNo = "PVM mok. kodas:";
+var L_Date = "Data:";
 var L_DateReviewed = "Data";
 var L_DealerCompanyRegno = "Įmonės kodas:";
 var L_DealerLegalAddressTotal = "Juridinis adresas:";
 var L_DealerNameLegal = "Pardavėjas:";
 var L_DealerNameMarketing = "Pardavėjas:";
-var L_DealerVatPayerNo = "PVM mokėtojo kodas:";
+var L_DealerVatPayerNo = "PVM mok. kodas:";
 var L_Discount = "N. %";
 var L_DiscountPE = "N. %";
 var L_DocTypeCreditInvoice = "Kreditinė PVM sąskaita-faktūra";
@@ -219,7 +316,7 @@ var L_InvoiceNo = "Nr.:";
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:16e7402f-238e-43d3-bc8f-72a8d71ffe1b</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:affd5f7f-2494-426f-99c7-5de9d8767e13</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-21T09:28:19Z" uuid="394f13ff-5834-453b-ade0-4eb35e22738d">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-26T21:30:32Z" uuid="6c375b6f-6731-471f-af66-094c029a141c">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -542,96 +542,107 @@ this.rawValue = PaymentTermsCode.rawValue[0].toUpperCase()+stringTail;
             <subform w="180.999mm" name="subOuterHolder" x="0.001mm" h="48mm">
                <bind match="none"/>
                <keep intact="none"/>
-               <subform x="114.999mm" name="subDealerInfo" layout="tb">
+               <subform x="114.999mm" w="64mm" minH="44mm" layout="tb" name="subRightFlowedHeader">
                   <bind match="none"/>
-                  <subform usehref=".\Fragments\frg_DealerAddress.xdp#som($template.form1.subDealerAddress)">
-                     <bind/>
-                     <keep/>
+                  <subform name="subDealerInfo" layout="tb">
+                     <bind match="none"/>
+                     <subform usehref=".\Fragments\frg_DealerAddress.xdp#som($template.form1.subDealerAddress)">
+                        <bind/>
+                        <keep/>
+                        <?templateDesigner expand 1?>
+                     </subform>
+                     <?templateDesigner expand 1?></subform>
+                  <subform w="64mm" name="subBankGiro" layout="tb">
+                     <bind match="none"/>
+                     <field name="L_BankName" h="3mm" minW="55mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="8pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="17mm">
+                           <font size="8pt" typeface="Arial" weight="bold"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Bankgiro:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.BankAccLocal"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                     </field>
+                     <margin topInset="0mm"/>
+                     <?templateDesigner expand 1?></subform>
+                  <subform w="58mm" minH="9mm" name="subThroughputNo">
+                     <bind match="none"/>
+                     <keep intact="none"/>
+                     <field name="L_ThroughputNo" h="4mm" minW="58mm" access="readOnly" x="0mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="9pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="20mm">
+                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Gj.gangsnr.:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                        </event>
+                     </field>
                      <?templateDesigner expand 1?>
+                     <margin topInset="5mm" bottomInset="4mm"/>
                   </subform>
-                  <?templateDesigner expand 1?></subform>
-               <subform x="114.999mm" y="12mm" w="64mm" name="subBankGiro" layout="tb">
-                  <bind match="none"/>
-                  <field name="L_BankName" h="3mm" minW="55mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="8pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="17mm">
-                        <font size="8pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Bankgiro:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.BankAccLocal"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <margin topInset="0mm"/>
-                  <?templateDesigner expand 1?></subform>
-               <field name="L_ThroughputNo" h="4mm" minW="58mm" access="readOnly" x="114.999mm" y="20mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font size="9pt" typeface="Arial"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <caption reserve="20mm">
-                     <font size="8.5pt" typeface="Arial" weight="bold"/>
-                     <para vAlign="middle"/>
-                     <value>
-                        <text>Gj.gangsnr.:</text>
-                     </value>
-                  </caption>
-                  <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <subform y="28.001mm" w="59.999mm" x="114.999mm" name="subInvoiceNo" layout="tb">
-                  <bind match="none"/>
-                  <field name="L_InvoiceNo" h="4mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="18mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Fakturanr.:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.DocumentHeader.InvoiceNo"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  <subform w="59.999mm" minH="15.999mm" name="subInvoiceInfo">
+                     <bind match="none"/>
+                     <keep intact="none"/>
+                     <subform y="0mm" w="59.999mm" x="0mm" name="subInvoiceNo" layout="tb">
+                        <bind match="none"/>
+                        <field name="L_InvoiceNo" h="4mm" minW="58mm" access="readOnly">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font size="9pt" typeface="Arial"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="18mm">
+                              <font size="8.5pt" typeface="Arial" weight="bold"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>Fakturanr.:</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="$.Document.DocumentHeader.InvoiceNo"/>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
 try
 {
 var invoiceCode = Invoice.pageContent.subInvoiceMetadata.InvoiceCode.rawValue;
@@ -656,96 +667,96 @@ catch(e)
 	
 }
 </script>
-                     </event>
-                  </field>
-                  <field name="L_DateOfInvoice" h="4mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="20mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Fakturadato:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.DocumentHeader.DateOfInvoice"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <subform x="114.999mm" y="36mm" w="58mm" minH="4mm" name="subFlowCreditNoRefInvoice" layout="tb">
-                  <bind match="none"/>
-                  <subform w="58mm" minH="4mm" layout="tb" name="subCreditNoRefInvoice">
-                     <bind match="none"/>
-                     <field name="L_CreditNoRefInvoice" h="4mm" minW="58mm" access="readOnly">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font size="9pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <para vAlign="middle"/>
-                        <caption reserve="22mm">
-                           <font size="8.5pt" typeface="Arial" weight="bold"/>
+                           </event>
+                        </field>
+                        <field name="L_DateOfInvoice" h="4mm" minW="58mm" access="readOnly">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font size="9pt" typeface="Arial"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                            <para vAlign="middle"/>
-                           <value>
-                              <text>Ref. fakturanr.:</text>
-                           </value>
-                        </caption>
-                        <bind match="dataRef" ref="$.Document.DocumentHeader.CreditNoRefInvoice"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
+                           <caption reserve="20mm">
+                              <font size="8.5pt" typeface="Arial" weight="bold"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>Fakturadato:</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="$.Document.DocumentHeader.DateOfInvoice"/>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                        </event>
-                     </field>
-                     <occur max="-1" min="0"/>
-                     <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 0?></subform>
-               <subform w="58mm" name="subFlowKidLine" x="114.999mm" y="40mm" minH="4mm" layout="tb">
-                  <bind match="none"/>
-                  <subform w="58mm" name="subKidLIne" minH="4mm" layout="tb">
-                     <bind match="none"/>
-                     <field name="L_KidLine" h="4mm" minW="58mm" access="readOnly">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font size="9pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <para vAlign="middle"/>
-                        <caption reserve="12mm">
-                           <font size="8.5pt" typeface="Arial" weight="bold"/>
-                           <para vAlign="middle"/>
-                           <value>
-                              <text>KIDnr.:</text>
-                           </value>
-                        </caption>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.KidLine"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
+                           </event>
+                        </field>
+                        <?templateDesigner expand 1?></subform>
+                     <subform x="0mm" y="7.999mm" w="58mm" minH="4mm" name="subFlowCreditNoRefInvoice" layout="tb">
+                        <bind match="none"/>
+                        <subform w="58mm" minH="4mm" layout="tb" name="subCreditNoRefInvoice">
+                           <bind match="none"/>
+                           <field name="L_CreditNoRefInvoice" h="4mm" minW="58mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <para vAlign="middle"/>
+                              <caption reserve="22mm">
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>Ref. fakturanr.:</text>
+                                 </value>
+                              </caption>
+                              <bind match="dataRef" ref="$.Document.DocumentHeader.CreditNoRefInvoice"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                              </event>
+                           </field>
+                           <occur max="-1" min="0"/>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 0?></subform>
+                     <subform w="58mm" name="subFlowKidLine" x="0mm" y="11.999mm" minH="4mm" layout="tb">
+                        <bind match="none"/>
+                        <subform w="58mm" name="subKidLIne" minH="4mm" layout="tb">
+                           <bind match="none"/>
+                           <field name="L_KidLine" h="4mm" minW="58mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border presence="hidden"/>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font size="9pt" typeface="Arial"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <para vAlign="middle"/>
+                              <caption reserve="12mm">
+                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>KIDnr.:</text>
+                                 </value>
+                              </caption>
+                              <bind match="dataRef" ref="$.Document.HeaderInfo.KidLine"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
 
 var LangCode = getLanguages.getLanguageSetting();
 
@@ -753,9 +764,11 @@ var output = getLanguages.getLanguageText(LangCode, this.name);
 
 this.caption.value.text = output;
 </script>
-                        </event>
-                     </field>
-                     <occur max="-1" min="0"/>
+                              </event>
+                           </field>
+                           <occur max="-1" min="0"/>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 1?></subform>
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
                <subform y="24mm" w="58mm" minH="4mm" name="subFlowInsuranceNameRef" layout="tb">
@@ -2802,7 +2815,7 @@ try
 	}
 	else
 	{	
-		this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+		//this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 		var oField = this.parent.fldMinusHolder;
 		formattingScripts.setMinusValueInMinusholder(oField, this);		
 	}
@@ -3800,7 +3813,7 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 140?>
+   <?templateDesigner Zoom 147?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -3814,7 +3827,7 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9884\030_Invoice_S001IT05_20131018_133118_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9964\030_Invoice_S001IT05_20131025_160509_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
@@ -3968,14 +3981,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-10-21T09:28:19Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-10-26T21:30:32Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:394f13ff-5834-453b-ade0-4eb35e22738d</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:6c375b6f-6731-471f-af66-094c029a141c</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">

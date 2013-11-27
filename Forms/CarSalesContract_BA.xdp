@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-21T09:33:20Z" uuid="41197cd3-6265-48db-aba7-2da921a44c1d">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-26T22:02:58Z" uuid="5af12ac7-4150-4007-bf9f-458e7dc82e76">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -248,7 +248,7 @@ this.caption.value.text = output;
                      <font size="9pt" typeface="Arial"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
-                     <caption reserve="8.8mm">
+                     <caption reserve="17mm">
                         <font size="8.5pt" typeface="Arial" weight="bold"/>
                         <para vAlign="middle"/>
                         <value>
@@ -504,7 +504,7 @@ this.caption.value.text = output;
                         <font size="9pt" typeface="Arial"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                         <para vAlign="middle"/>
-                        <caption reserve="8.8mm">
+                        <caption reserve="17mm">
                            <font size="8.5pt" typeface="Arial" weight="bold"/>
                            <para vAlign="middle"/>
                            <value>
@@ -1345,16 +1345,13 @@ catch(e)
                      </event>
                      <bind match="dataRef" ref="$.OptionPrice"/>
                   </field>
-                  <keep intact="contentArea"/>
                   <?templateDesigner expand 1?></subform>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
+               <?templateDesigner expand 1?></subform>
             <margin topInset="6mm"/>
-            <keep intact="contentArea"/>
             <overflow target="mpgPage2"/>
             <occur min="0" max="-1"/>
             <breakBefore target="mpgPage2" targetType="pageArea"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform y="259.001mm" w="179mm" minH="8mm" layout="tb" name="subFooterLimitedMain">
             <bind match="dataRef" ref="$.Document.FooterLimitedMain"/>
             <subform w="179mm" name="subFooterLimitedLines" layout="tb">
@@ -5655,8 +5652,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 140?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -5669,11 +5664,13 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9805\755_CarSalesContract_S001IT05_20131008_102215_D_B001MAJ.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9942\862_CarSalesContract_S001IT05_20131025_131212_D_B001MAJ.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 147?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:4850000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -5687,6 +5684,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -5821,14 +5819,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-10-21T09:33:20Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-10-26T22:02:58Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:41197cd3-6265-48db-aba7-2da921a44c1d</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:5af12ac7-4150-4007-bf9f-458e7dc82e76</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -5842,7 +5840,7 @@ this.caption.value.text = output;
    <xsdConnection name="DataConnection" dataDescription="CarSalesContract">
       <uri>.\XSD\CarSalesContract.xsd</uri>
       <rootElement>CarSalesContract</rootElement>
-      <?templateDesigner fileDigest shaHash="j/cVrV80hdBAhYMQ+ZwbiO9C0Ns="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="Ch8T6KC4Q/9ahAmCmOXrk+uwJuc="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -6079,6 +6077,7 @@ this.caption.value.text = output;
                <LoanTradeinEncumbrance/>
                <LoanTradeinPrice/>
                <LoanVehiclePrice/>
+               <CashByDelivery/>
                <Cash/>
                <VWMBFLoan/>
             </Loan>
@@ -6498,6 +6497,7 @@ this.caption.value.text = output;
                               <xs:element name="LoanTradeinEncumbrance" type="xs:string"/>
                               <xs:element name="LoanTradeinPrice" type="xs:string"/>
                               <xs:element name="LoanVehiclePrice" type="xs:string"/>
+                              <xs:element name="CashByDelivery" type="xs:string"/>
                               <xs:element name="Cash" type="xs:string"/>
                               <xs:element name="VWMBFLoan" type="xs:string"/>
                            </xs:sequence>

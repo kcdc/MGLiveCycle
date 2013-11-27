@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-11-27T12:56:07Z" uuid="080720cf-0ca0-4620-8472-63f8252854c2">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="RegistrationCard" layout="tb" locale="da_DK" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="0.25in" y="0.25in" w="197.3mm" h="284.3mm"/>
+            <subform x="128mm" y="4mm" w="76.15mm" minH="12.7mm" name="subHeader">
+               <bind match="none"/>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="0mm" y="0mm">
+                  <?templateDesigner expand 1?></subform>
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="6mm" y="11mm">
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <subform name="subBackground" presence="hidden">
+               <bind match="none"/>
+               <field name="fldShowBackground" y="6mm" x="6mm" w="14mm" h="9mm" presence="hidden">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.Header.ShowBackground"/>
+               </field>
+               <draw name="imgBackground" y="1mm" x="4mm" w="202mm" h="296mm">
+                  <value>
+                     <image contentType="application/octet-stream"/>
+                  </value>
+                  <ui>
+                     <imageEdit/>
+                  </ui>
+               </draw>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
+{
+	this.presence = "hidden";	
+}
+</script>
+               </event>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <proto/>
+      <desc>
+         <text name="version">10.0.2.20120224.1.869952.867557</text>
+      </desc>
+      <subform w="197.3mm" name="pageContent" layout="tb">
+         <bind match="none"/>
+         <subform w="197.3mm" name="subPositionedCanvas" h="175.531mm">
+            <bind match="none"/>
+            <keep intact="none"/>
+            <field name="fldEUApprovalNo" minH="4mm" x="8.65mm" y="36.65mm" minW="30mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.EUApprovalNo[*]"/>
+            </field>
+            <field name="fldCarVIN" minH="4mm" x="80.65mm" y="36.65mm" minW="30mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.CarVIN[*]"/>
+            </field>
+            <field name="fldCarBrand" minH="4mm" x="8.65mm" y="45.65mm" minW="30mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.CarBrand[*]"/>
+            </field>
+            <field name="fldCarCode" minH="5.881mm" x="55.65mm" y="45.65mm" minW="11mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.CarCode[*]"/>
+            </field>
+            <field name="fldCarModel" minH="4mm" x="80.65mm" y="45.65mm" minW="30mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.CarModel[*]"/>
+            </field>
+            <field name="fldCarType" x="80.65mm" y="54.65mm" minW="30mm" h="4mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.CarType[*]"/>
+            </field>
+            <field name="fldDealerCompanyRegNo" x="1.65mm" y="65.65mm" minW="30mm" h="4mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.DealerCompanyRegNo[*]"/>
+            </field>
+            <field name="fldPrintedDate" w="30mm" x="25.65mm" y="72.65mm" h="4mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.PrintedDate"/>
+            </field>
+            <draw name="Image1" w="11mm" h="8mm" x="44.65mm" y="80.65mm">
+               <value>
+                  <image contentType="image/jpeg" href=".\Images\F001Terje.jpg"/>
+               </value>
+               <ui>
+                  <imageEdit/>
+               </ui>
+            </draw>
+            <draw name="fldDealerCompanyRegNo" y="76.65mm" x="25.65mm" w="45mm" minH="4mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <text>pr.pr. Harald A. Møller AS</text>
+               </value>
+               <font typeface="Times New Roman" baselineShift="0pt" weight="bold"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+            </draw>
+            <field name="fldDeclaredLine1" minH="4mm" x="122.65mm" y="64.65mm" minW="30mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.DeclaredLine1"/>
+            </field>
+            <field name="fldDeclaredLine2" minH="4mm" x="122.65mm" y="68.65mm" minW="30mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.DeclaredLine2"/>
+            </field>
+            <field name="fldEkspeditionDate" minH="4mm" x="122.65mm" y="76.65mm" minW="30mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.EkspeditionDate"/>
+            </field>
+            <field name="fldImporterName" minH="4mm" x="122.65mm" y="80.65mm" minW="30mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.ImporterName"/>
+            </field>
+            <field name="fldVehicleGroupText" w="30mm" x="5.65mm" y="139.65mm" h="4mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.VehicleGroupText"/>
+            </field>
+            <field name="fldVehicleGroupCode" w="18mm" x="71.65mm" y="139.65mm" h="4mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.VehicleGroupCode"/>
+            </field>
+            <field name="fldColor" w="30mm" x="151.65mm" y="139.65mm" h="4mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.Color"/>
+            </field>
+            <field name="floCustomsLocation" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField000403" presence="hidden" access="readOnly">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.CustomsLocation"/>
+            </field>
+            <field name="floEkspeditionYear" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField016410" presence="hidden" access="readOnly">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.EkspeditionYear"/>
+            </field>
+            <field name="floEkspiditionNo" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField005108" presence="hidden" access="readOnly">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.EkspeditionNo"/>
+            </field>
+            <draw name="fldDeclaredLine2" y="72.65mm" x="122.65mm" w="72.65mm" h="4mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField000403"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField016410"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField005108"/></p></body>
+                  </exData>
+               </value>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </draw>
+            <field name="floOrderNo" y="83.65mm" x="109.65mm" w="62mm" h="9mm" presence="hidden" access="readOnly" id="floatingField001415">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.OrderNo"/>
+            </field>
+            <field name="floDealerName" y="83.65mm" x="109.65mm" w="62mm" h="9mm" presence="hidden" access="readOnly" id="floatingField022303">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.DealerName"/>
+            </field>
+            <field name="floDealerNo" y="83.65mm" x="109.65mm" w="62mm" h="9mm" presence="hidden" access="readOnly" id="floatingField026196">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Myriad Pro"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.DealerNo"/>
+            </field>
+            <draw name="fldOrderNoDealerNameDealerNo" y="93.65mm" x="63.65mm" minW="93.55mm" minH="4mm">
+               <ui>
+                  <textEdit/>
+               </ui>
+               <value>
+                  <exData contentType="text/html">
+                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField001415"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField022303"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField026196"/></p></body>
+                  </exData>
+               </value>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+            </draw>
+            <field name="fldExhibitionText" x="88.65mm" y="88.65mm" minW="30mm" h="4mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.ExhibitionText"/>
+            </field>
+            <field name="fldDeclarationReferance" w="30mm" x="151.65mm" y="171.65mm" h="3.881mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="11pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PageInfo.DeclarationReference"/>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 104 26 0001002400250026002D002F0030003A00420044004500460047004A004C004D004E004F005000510053005400550056005C005E CDELNOYacdefiklmnoprstu{}?>
+      <?renderCache.subset "Times New Roman" 1 0 ISO-8859-1 4 52 14 000300110024002B00300036004400470048004F0053005500A1 .AHMSadelprø?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 3\Gruppe C&D - XML\SF - RegistrationCard\SF - RegistrationCard_data_new.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Arial;size:9;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Arial;size:9;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 144?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <script>
+         <runScripts>server</runScripts>
+      </script>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="da_DK" desc="Dansk (Danmark)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>marts</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sø</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lø</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="RegistrationCard">
+      <uri>.\XSD\RegistrationCard.xsd</uri>
+      <rootElement>RegistrationCard</rootElement>
+      <?templateDesigner fileDigest shaHash="VQcjp9w/E1HQq9RUPfRnFIpBaGM="?></xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="RegistrationCard">
+      <RegistrationCard>
+         <Header>
+            <DocType/>
+            <Country/>
+            <LangCode/>
+            <ShowBackground/>
+            <MediaControl>
+               <OutputTargets>
+                  <Preview>
+                     <PrintId/>
+                  </Preview>
+                  <File>
+                     <FileName/>
+                  </File>
+               </OutputTargets>
+            </MediaControl>
+         </Header>
+         <Document>
+            <PageInfo>
+               <ImporterName/>
+               <EUApprovalNo/>
+               <CarBrand/>
+               <CarCode/>
+               <CarVIN/>
+               <CarModel/>
+               <CarType/>
+               <DealerCompanyRegNo/>
+               <DeclaredLine1/>
+               <DeclaredLine2/>
+               <EkspeditionDate/>
+               <PrintedDate/>
+               <CustomsLocation/>
+               <EkspeditionNo/>
+               <EkspeditionYear/>
+               <Color/>
+               <DealerName/>
+               <DealerNo/>
+               <DeclarationReference/>
+               <ExhibitionText/>
+               <OrderNo/>
+               <VehicleGroupCode/>
+               <VehicleGroupText/>
+            </PageInfo>
+         </Document>
+      </RegistrationCard>
+   </dd:dataDescription>
+</xfa:datasets>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-11-27T12:56:07Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:080720cf-0ca0-4620-8472-63f8252854c2</xmpMM:DocumentID>
+         <xmpMM:InstanceID>uuid:02496fe8-47ad-409a-8664-28ab1e3c4f87</xmpMM:InstanceID>
+      </rdf:Description>
+      <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <dc:format>application/pdf</dc:format>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>10.0.2.20120224.1.869952.867557</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+   <annots/>
+</xfdf>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" id="XFASchemaXSD">
+   <xs:element name="CarBrand" type="xs:string"/>
+   <xs:element name="CarCode" type="xs:string"/>
+   <xs:element name="CarModel" type="xs:string"/>
+   <xs:element name="CarType" type="xs:string"/>
+   <xs:element name="CarVIN" type="xs:string"/>
+   <xs:element name="Color" type="xs:string"/>
+   <xs:element name="Country" type="xs:string"/>
+   <xs:element name="CustomsLocation" type="xs:string"/>
+   <xs:element name="DealerCompanyRegNo" type="xs:string"/>
+   <xs:element name="DealerName" type="xs:string"/>
+   <xs:element name="DealerNo" type="xs:string"/>
+   <xs:element name="DeclarationReference" type="xs:string"/>
+   <xs:element name="DeclaredLine1" type="xs:string"/>
+   <xs:element name="DeclaredLine2" type="xs:string"/>
+   <xs:element name="DocType" type="xs:string"/>
+   <xs:element name="Document">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="PageInfo"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="EUApprovalNo" type="xs:string"/>
+   <xs:element name="EkspeditionDate" type="xs:string"/>
+   <xs:element name="EkspeditionNo" type="xs:string"/>
+   <xs:element name="EkspeditionYear" type="xs:string"/>
+   <xs:element name="ExhibitionText" type="xs:string"/>
+   <xs:element name="File">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="FileName"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="FileName" type="xs:string"/>
+   <xs:element name="Header">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="DocType"/>
+            <xs:element ref="Country"/>
+            <xs:element ref="LangCode"/>
+            <xs:element name="ShowBackground" type="xs:string"/>
+            <xs:element ref="MediaControl"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="ImporterName" type="xs:string"/>
+   <xs:element name="LangCode" type="xs:string"/>
+   <xs:element name="MediaControl">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="OutputTargets"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="OrderNo" type="xs:string"/>
+   <xs:element name="OutputTargets">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Preview"/>
+            <xs:element ref="File"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="PageInfo">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="ImporterName"/>
+            <xs:element ref="EUApprovalNo"/>
+            <xs:element ref="CarBrand"/>
+            <xs:element ref="CarCode"/>
+            <xs:element ref="CarVIN"/>
+            <xs:element ref="CarModel"/>
+            <xs:element ref="CarType"/>
+            <xs:element ref="DealerCompanyRegNo"/>
+            <xs:element ref="DeclaredLine1"/>
+            <xs:element ref="DeclaredLine2"/>
+            <xs:element ref="EkspeditionDate"/>
+            <xs:element ref="PrintedDate"/>
+            <xs:element ref="CustomsLocation"/>
+            <xs:element ref="EkspeditionNo"/>
+            <xs:element ref="EkspeditionYear"/>
+            <xs:element ref="Color"/>
+            <xs:element ref="DealerName"/>
+            <xs:element ref="DealerNo"/>
+            <xs:element ref="DeclarationReference"/>
+            <xs:element ref="ExhibitionText"/>
+            <xs:element ref="OrderNo"/>
+            <xs:element ref="VehicleGroupCode"/>
+            <xs:element ref="VehicleGroupText"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="Preview">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="PrintId"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="PrintId" type="xs:string"/>
+   <xs:element name="PrintedDate" type="xs:string"/>
+   <xs:element name="RegistrationCard">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Header"/>
+            <xs:element ref="Document"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="VehicleGroupCode" type="xs:string"/>
+   <xs:element name="VehicleGroupText" type="xs:string"/>
+</xs:schema></xdp:xdp>

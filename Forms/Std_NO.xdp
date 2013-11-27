@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-08-27T11:10:21Z" uuid="7a6732fa-22fd-422f-a197-2c51317d315f">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-11-04T13:51:40Z" uuid="5a6b644e-4c9d-473c-ac6c-4ea93fb96da3">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -529,7 +529,6 @@ this.rawValue = this.parent.parent.subWindow.SeparatorDealerNameMarketing.rawVal
                            <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField013523"/></p></body>
                         </exData>
                      </value>
-                     <font typeface="Courier New"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                   </draw>
                   <occur min="0" max="-1"/>
@@ -1017,18 +1016,13 @@ this.caption.value.text = output;
       <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 48 12 00270033004400480049004A004C004F00520057005E0060DPaefgilot{}?>
+      <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 48 12 002500310042004600470048004A004D00500055005C005EDPaefgilot{}?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 212 53 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F0020002200230025002600270029002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ABDEFHIMPTUVabcdefghilmnoprstvwxyz'?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner SaveTaggedPDF 0?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner Zoom 135?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:50000?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -1043,7 +1037,13 @@ this.caption.value.text = output;
    <?templateDesigner XDPPreviewFormat 20?>
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Batch\010_STD_S001IT01_20130724_124542_D_B998FD_717_test_stdTray4.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?></template>
+   <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 147?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Guidelines v:375000;v:50000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -1055,7 +1055,6 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -1260,14 +1259,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-08-27T11:10:21Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-11-04T13:51:40Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7a6732fa-22fd-422f-a197-2c51317d315f</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:5a6b644e-4c9d-473c-ac6c-4ea93fb96da3</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">

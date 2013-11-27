@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-11-27T08:40:47Z" uuid="4b4c044d-317f-43b9-984f-2eae4d5b7165">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="ShipmentNote" layout="tb" locale="da_DK" restoreState="auto">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea y="5mm" w="293mm" h="205mm" name="contentArea" x="3mm"/>
+            <medium stock="a4" short="210mm" long="297mm" orientation="landscape"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform layout="lr-tb" name="pageContent" w="305mm">
+         <bind match="none"/>
+         <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+         <subform name="subPageInfo" layout="tb">
+            <subform name="subContent" w="150mm" layout="tb">
+               <bind match="none"/>
+               <subform w="150mm" layout="lr-tb" name="subCarVinDateBarcode">
+                  <bind match="none"/>
+                  <subform minH="13.173mm" layout="tb" name="subDateCarVin">
+                     <bind match="none"/>
+                     <field name="fldDateOfReport" w="70mm" minH="4mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="6pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <bind match="dataRef" ref="$.DateOfReport"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <keep intact="contentArea"/>
+                     </field>
+                     <field name="fldCarVIN" w="78mm" minH="9.056mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="20pt" weight="bold"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <bind match="none"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+this.rawValue = subBarcodeCarVin.barCarVin.rawValue;
+</script>
+                        </event>
+                     </field>
+                     <?templateDesigner expand 1?></subform>
+                  <subform x="3.070861in" name="subBarcodeCarVin" layout="tb" hAlign="center">
+                     <bind match="none"/>
+                     <field name="barCarVin" w="51mm" h="20mm" access="readOnly">
+                        <ui>
+                           <barcode type="code128B" wideNarrowRatio="fixed" checksum="auto" dataLength="17"/>
+                        </ui>
+                        <font typeface="Courier New"/>
+                        <value>
+                           <text>1234567890</text>
+                        </value>
+                        <bind match="dataRef" ref="$.CarVIN"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+this.font.size = "8pt";
+</script>
+                        </event>
+                     </field>
+                     <margin leftInset="2mm"/>
+                     <?templateDesigner expand 1?></subform>
+                  <keep intact="contentArea"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="150mm" minH="54mm" layout="lr-tb" name="subDealerOrderCarBrandCarModelColor">
+                  <bind match="none"/>
+                  <subform w="98mm" minH="36.64mm" layout="tb" name="subCarContent">
+                     <bind match="none"/>
+                     <field name="fldDealerNameDest" minW="98mm" access="readOnly" h="5mm">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Courier New" weight="bold"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="bottom"/>
+                        <bind match="dataRef" ref="$.DealerNameDest"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <caption reserve="27mm">
+                           <value>
+                              <text>Forhandler:</text>
+                           </value>
+                           <para vAlign="bottom"/>
+                           <font typeface="Courier Std" size="8pt"/>
+                        </caption>
+                     </field>
+                     <field name="fldOrderNo" minW="98mm" access="readOnly" h="5mm">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Courier New" weight="bold"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="bottom"/>
+                        <bind match="dataRef" ref="$.OrderNo"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <caption reserve="27mm">
+                           <value>
+                              <text>Ordrenr:</text>
+                           </value>
+                           <para vAlign="bottom"/>
+                           <font typeface="Courier Std" size="8pt"/>
+                        </caption>
+                     </field>
+                     <field name="fldCarBrand" minW="98mm" access="readOnly" h="5mm">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Courier New"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="bottom"/>
+                        <bind match="dataRef" ref="$.CarBrand"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <caption reserve="27mm">
+                           <value>
+                              <text>Merke:</text>
+                           </value>
+                           <para vAlign="bottom"/>
+                           <font typeface="Courier Std" size="8pt"/>
+                        </caption>
+                     </field>
+                     <field name="fldCarModelDesc" access="readOnly" h="5mm" w="98mm">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Courier New"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="bottom"/>
+                        <bind match="dataRef" ref="$.CarModelDesc"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <caption reserve="27mm">
+                           <value>
+                              <text>Modelltekst:</text>
+                           </value>
+                           <para vAlign="bottom"/>
+                           <font typeface="Courier Std" size="8pt"/>
+                        </caption>
+                     </field>
+                     <subform w="98mm" minH="18mm" layout="lr-tb" name="subColor">
+                        <bind match="none"/>
+                        <field name="fldColorCode" access="readOnly" h="5mm" w="43.65mm">
+                           <ui>
+                              <textEdit>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Courier New"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="bottom"/>
+                           <bind match="dataRef" ref="$.ColorCode"/>
+                           <border>
+                              <edge presence="hidden"/>
+                              <corner presence="hidden"/>
+                           </border>
+                           <caption reserve="27mm">
+                              <value>
+                                 <text>Farge:</text>
+                              </value>
+                              <para vAlign="bottom"/>
+                              <font typeface="Courier Std" size="8pt"/>
+                           </caption>
+                        </field>
+                        <field name="fldColor" access="readOnly" h="5mm" w="54mm">
+                           <ui>
+                              <textEdit>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Courier New"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="bottom"/>
+                           <bind match="dataRef" ref="$.Color"/>
+                           <border>
+                              <edge presence="hidden"/>
+                              <corner presence="hidden"/>
+                           </border>
+                           <value>
+                              <text maxChars="20"/>
+                           </value>
+                        </field>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                        <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?></subform>
+                  <subform w="52mm" name="subSequencePriority" h="25mm">
+                     <bind match="none"/>
+                     <keep intact="none"/>
+                     <field name="fldSequence" w="9mm" minH="5mm" x="34.65mm" y="0.056mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="9pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <bind match="dataRef" ref="$.Sequence"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                     </field>
+                     <field name="fldPriority" w="13mm" h="10.467mm" x="16.65mm" y="6.056mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font size="24pt" weight="bold"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <bind match="dataRef" ref="$.Priority"/>
+                        <border>
+                           <edge presence="hidden"/>
+                           <corner presence="hidden"/>
+                        </border>
+                     </field>
+                     <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="150mm" minH="54mm" layout="tb" name="subCategoryRemarkSupplierActivity">
+                  <bind match="none"/>
+                  <field name="fldCarOrderCategory" access="readOnly" h="5mm" w="150mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New" weight="bold"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom"/>
+                     <bind match="dataRef" ref="$.CarOrderCategory"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <value>
+                           <text>Kategori:</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                        <font typeface="Courier Std" size="8pt"/>
+                     </caption>
+                  </field>
+                  <field name="fldRemarkText" access="readOnly" h="5mm" w="150mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom"/>
+                     <bind match="dataRef" ref="$.RemarkText"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <value>
+                           <text>Merknad:</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                        <font typeface="Courier Std" size="8pt"/>
+                     </caption>
+                  </field>
+                  <field name="fldImporterRemarkText" w="150mm" access="readOnly" h="5mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom"/>
+                     <bind match="dataRef" ref="$.ImporterRemarkText"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <font size="9pt" typeface="Arial"/>
+                        <para vAlign="bottom"/>
+                     </caption>
+                  </field>
+                  <field name="fldSupplierActivity" access="readOnly" h="5mm" w="150mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom"/>
+                     <bind match="dataRef" ref="$.SupplierActivity"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <value>
+                           <text>Ombyggning:</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                        <font typeface="Courier Std" size="8pt"/>
+                     </caption>
+                  </field>
+                  <field name="fldSupplierActivityLong" h="12.725mm" w="150mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <bind match="dataRef" ref="$.SupplierActivityLong"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <font size="9pt" typeface="Arial"/>
+                        <para vAlign="middle"/>
+                     </caption>
+                     <keep intact="contentArea"/>
+                  </field>
+                  <margin topInset="1mm"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform w="150mm" minH="27.64mm" layout="tb" name="subDestinationTransportationSupplierDates">
+                  <bind match="none"/>
+                  <field name="fldCarDestination" access="readOnly" h="5mm" w="150mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom"/>
+                     <bind match="dataRef" ref="$.CarDestination"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <value>
+                           <text>Destinasjon:</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                        <font typeface="Courier Std" size="8pt"/>
+                     </caption>
+                  </field>
+                  <field name="fldTransportation" access="readOnly" h="5mm" w="150mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom"/>
+                     <bind match="dataRef" ref="$.Transportation"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <value>
+                           <text>Forsendelse:</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                        <font typeface="Courier Std" size="8pt"/>
+                     </caption>
+                  </field>
+                  <field name="fldSupplier" access="readOnly" h="5mm" w="150mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom"/>
+                     <bind match="dataRef" ref="$.Supplier"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <value>
+                           <text>Ombygger:</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                        <font typeface="Courier Std" size="8pt"/>
+                     </caption>
+                  </field>
+                  <field name="fldCarArrivalDate" access="readOnly" h="5mm" w="150mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="bottom"/>
+                     <bind match="dataRef" ref="$.CarArrivalDate"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <value>
+                           <text>Ank.dato:</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                        <font typeface="Courier Std" size="8pt"/>
+                     </caption>
+                  </field>
+                  <field name="fldOrderDate" minH="5mm" access="readOnly" w="150mm">
+                     <ui>
+                        <textEdit>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.OrderDate"/>
+                     <border>
+                        <edge presence="hidden"/>
+                        <corner presence="hidden"/>
+                     </border>
+                     <caption reserve="27mm">
+                        <value>
+                           <text>Best.dato:</text>
+                        </value>
+                        <para vAlign="middle"/>
+                        <font typeface="Courier Std" size="8pt"/>
+                     </caption>
+                  </field>
+                  <margin topInset="0mm"/>
+                  <?templateDesigner expand 1?></subform>
+               <field name="NumberOfKeys" w="90mm" h="0.354333in" presence="hidden">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Courier New"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.NumberOfKeys"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+               </field>
+               <margin bottomInset="2mm" rightInset="0mm"/>
+               <?templateDesigner expand 1?></subform>
+            <subform w="150mm" minH="54mm" layout="lr-tb" name="subDealerOrderCarBrandCarModelColor">
+               <bind match="none"/>
+               <subform minH="23.594mm" layout="tb" name="subLeft" w="150mm">
+                  <bind match="none"/>
+                  <subform minH="36.64mm" layout="lr-tb" name="subCarContentBarcodes" w="150mm">
+                     <bind match="none"/>
+                     <subform w="85mm" name="subContentLeft" layout="tb">
+                        <bind match="none"/>
+                        <subform minH="13.594mm" layout="lr-tb" name="subBarcodeCarVin">
+                           <bind match="none"/>
+                           <field name="barCarVin" w="51mm" h="9mm" hAlign="center" access="readOnly">
+                              <ui>
+                                 <barcode type="code128B" wideNarrowRatio="fixed" checksum="auto" dataLength="17"/>
+                              </ui>
+                              <font typeface="Courier New"/>
+                              <value>
+                                 <text>1234567890</text>
+                              </value>
+                              <bind match="none"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+this.rawValue = subContent.subCarVinDateBarcode.subBarcodeCarVin.barCarVin.rawValue;
+this.font.size = "7pt";
+</script>
+                              </event>
+                           </field>
+                           <margin leftInset="3mm"/>
+                           <?templateDesigner expand 1?></subform>
+                        <field name="fldDealerNameDest" h="4mm" access="readOnly" w="85mm">
+                           <ui>
+                              <textEdit hScrollPolicy="off">
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font size="8pt" weight="bold"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="bottom"/>
+                           <bind match="none"/>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+this.rawValue = subContent.subDealerOrderCarBrandCarModelColor.subCarContent.fldDealerNameDest.rawValue;
+</script>
+                           </event>
+                           <value>
+                              <exData contentType="text/html"/>
+                           </value>
+                           <caption reserve="19mm">
+                              <para vAlign="bottom"/>
+                              <font size="7pt"/>
+                              <value>
+                                 <text>Forhandler:</text>
+                              </value>
+                           </caption>
+                        </field>
+                        <subform minH="8.823mm" layout="lr-tb" name="subOrderColor" w="85mm">
+                           <bind match="none"/>
+                           <field name="fldOrderNo" access="readOnly" h="4mm" w="38mm">
+                              <ui>
+                                 <textEdit>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Courier New" size="8pt"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                              <para vAlign="bottom"/>
+                              <bind match="dataRef" ref="$.OrderNo"/>
+                              <border>
+                                 <edge presence="hidden"/>
+                                 <corner presence="hidden"/>
+                              </border>
+                              <caption reserve="19mm">
+                                 <value>
+                                    <text>Ordrenr:</text>
+                                 </value>
+                                 <para vAlign="bottom"/>
+                                 <font typeface="Courier Std" size="7pt"/>
+                              </caption>
+                           </field>
+                           <field name="fldColor" h="4mm" w="47mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Courier New" size="8pt"/>
+                              <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                              <para vAlign="bottom"/>
+                              <bind match="dataRef" ref="$.Color"/>
+                              <border>
+                                 <edge presence="hidden"/>
+                                 <corner presence="hidden"/>
+                              </border>
+                              <value>
+                                 <text maxChars="20"/>
+                              </value>
+                           </field>
+                           <?templateDesigner expand 1?></subform>
+                        <field name="fldSupplierActivity" minW="85mm" access="readOnly" h="4mm">
+                           <ui>
+                              <textEdit hScrollPolicy="off">
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Courier New" size="8pt"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="bottom"/>
+                           <bind match="none"/>
+                           <border>
+                              <edge presence="hidden"/>
+                              <corner presence="hidden"/>
+                           </border>
+                           <caption reserve="19mm">
+                              <value>
+                                 <text>Ombyggning:</text>
+                              </value>
+                              <para vAlign="bottom"/>
+                              <font typeface="Courier Std" size="7pt"/>
+                           </caption>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+this.rawValue = subContent.subCategoryRemarkSupplierActivity.fldSupplierActivity.rawValue;
+</script>
+                           </event>
+                        </field>
+                        <field name="fldSupplier" access="readOnly" h="4mm" w="85mm">
+                           <ui>
+                              <textEdit hScrollPolicy="off">
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Courier New" size="8pt"/>
+                           <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="bottom"/>
+                           <bind match="none"/>
+                           <border>
+                              <edge presence="hidden"/>
+                              <corner presence="hidden"/>
+                           </border>
+                           <caption reserve="19mm">
+                              <value>
+                                 <text>Ombygger:</text>
+                              </value>
+                              <para vAlign="bottom"/>
+                              <font typeface="Courier Std" size="7pt"/>
+                           </caption>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">
+this.rawValue = subContent.subDestinationTransportationSupplierDates.fldSupplier.rawValue;
+</script>
+                           </event>
+                        </field>
+                        <margin bottomInset="1mm" topInset="3mm"/>
+                        <?templateDesigner expand 1?></subform>
+                     <subform minH="42.594mm" layout="tb" name="subContentRight">
+                        <bind match="none"/>
+                        <subform minH="13.594mm" layout="tb" name="subCarVinContentRight" w="65mm">
+                           <bind match="none"/>
+                           <subform minH="13.594mm" layout="tb" name="subBarcodeCarVin" w="65mm">
+                              <bind match="none"/>
+                              <field name="barCarVin" w="51mm" h="9mm" access="readOnly">
+                                 <ui>
+                                    <barcode type="code128B" wideNarrowRatio="fixed" checksum="auto" dataLength="17"/>
+                                 </ui>
+                                 <font typeface="Courier New"/>
+                                 <value>
+                                    <text>1234567890</text>
+                                 </value>
+                                 <bind match="none"/>
+                                 <event activity="initialize" name="event__initialize">
+                                    <script contentType="application/x-javascript">
+this.rawValue = subContent.subCarVinDateBarcode.subBarcodeCarVin.barCarVin.rawValue;
+
+this.font.size = "7pt";
+</script>
+                                 </event>
+                              </field>
+                              <margin leftInset="2mm" bottomInset="3mm" topInset="3mm"/>
+                              <?templateDesigner expand 1?></subform>
+                           <occur max="-1" initial="2"/>
+                           <?templateDesigner expand 1?></subform>
+                        <?templateDesigner expand 1?></subform>
+                     <occur max="-1" initial="3"/>
+                     <?templateDesigner expand 1?></subform>
+                  <margin topInset="3mm"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <assist role="TR"/>
+            <occur max="-1" min="0"/>
+            <bind match="dataRef" ref="$.Document.PageInfo[*]"/>
+            <border>
+               <edge presence="hidden"/>
+            </border>
+            <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
+            <?templateDesigner expand 1?></subform>
+         <event activity="initialize" name="event__initialize">
+            <script contentType="application/x-javascript">
+//subPageInfo.subDealerOrderCarBrandCarModelColor._subCarContentLeft.setInstances(3);
+//subPageInfo.subDealerOrderCarBrandCarModelColor._subCarVinContentRight.addInstance(6);
+</script>
+         </event>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">10.0.2.20120224.1.869952.867557</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 44 11 0013001400150016001700180019001A001B001C003A0123456789W?>
+      <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 104 26 000F001B0022002300250027002C002E0030004200430045004600480049004A004B004C004D004E004F0050005300540055005A.:ABDFKMOabdeghijklmnorsty?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 102?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\BIL1\002_ShipmentNote_S001IT05_20131126_100954_D_.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Arial;size:9;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Arial;size:9;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <psMap>
+      <font typeface="Calibri" psName="Calibri" weight="normal" posture="normal"/>
+   </psMap>
+</config>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="ShipmentNote">
+      <uri>.\XSD\ShipmentNote.xsd</uri>
+      <rootElement>ShipmentNote</rootElement>
+      <?templateDesigner fileDigest shaHash="GYndU+PvOnTHprHLWCpllPk8y/g="?></xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="ShipmentNote">
+      <ShipmentNote>
+         <Header>
+            <MediaControl>
+               <OutputTargets>
+                  <Print>
+                     <PrinterName/>
+                  </Print>
+                  <File>
+                     <FileName/>
+                  </File>
+                  <Preview>
+                     <PrintId/>
+                  </Preview>
+                  <Archive dd:dataNode="dataGroup"/>
+               </OutputTargets>
+            </MediaControl>
+            <DocType/>
+            <Country/>
+            <LangCode/>
+            <DocHeaderImpcode/>
+            <DocHeaderProdType/>
+            <DocHeaderBrand/>
+            <PreviewCode/>
+            <Copies/>
+            <TwoSided/>
+         </Header>
+         <Document>
+            <PageInfo dd:maxOccur="-1">
+               <CarVIN/>
+               <DateOfReport/>
+               <Sequence/>
+               <DealerNameDest/>
+               <OrderNo/>
+               <CarBrand/>
+               <CarModelDesc/>
+               <ColorCode/>
+               <Color/>
+               <CarOrderCategory/>
+               <RemarkText/>
+               <ImporterRemarkText/>
+               <Priority/>
+               <SupplierActivity/>
+               <SupplierActivityLong/>
+               <Supplier/>
+               <CarDestination/>
+               <Transportation/>
+               <NumberOfKeys/>
+               <CarArrivalDate/>
+               <OrderDate/>
+            </PageInfo>
+         </Document>
+      </ShipmentNote>
+   </dd:dataDescription>
+</xfa:datasets>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2013-11-27T08:40:47Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:4b4c044d-317f-43b9-984f-2eae4d5b7165</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>10.0.2.20120224.1.869952.867557</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="da_DK" desc="Dansk (Danmark)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>marts</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sø</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lø</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="XFASchemaXSD">
+   <xs:element name="ShipmentNote">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="Header">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="MediaControl">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="OutputTargets">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="Print">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="PrinterName" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="File">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="FileName" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Preview">
+                                          <xs:complexType>
+                                             <xs:sequence>
+                                                <xs:element name="PrintId" type="xs:string"/>
+                                             </xs:sequence>
+                                          </xs:complexType>
+                                       </xs:element>
+                                       <xs:element name="Archive">
+                                          <xs:complexType>
+                                             <xs:sequence/>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="DocType" type="xs:string"/>
+                     <xs:element name="Country" type="xs:string"/>
+                     <xs:element name="LangCode" type="xs:string"/>
+                     <xs:element name="DocHeaderImpcode" type="xs:string"/>
+                     <xs:element name="DocHeaderProdType" type="xs:string"/>
+                     <xs:element name="DocHeaderBrand" type="xs:string"/>
+                     <xs:element name="PreviewCode" type="xs:string"/>
+                     <xs:element name="Copies" type="xs:string"/>
+                     <xs:element name="TwoSided" type="xs:string"/>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="Document">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="PageInfo" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="CarVIN" type="xs:string"/>
+                              <xs:element name="DateOfReport" type="xs:string"/>
+                              <xs:element name="Sequence" type="xs:string"/>
+                              <xs:element name="DealerNameDest" type="xs:string"/>
+                              <xs:element name="OrderNo" type="xs:string"/>
+                              <xs:element name="CarBrand" type="xs:string"/>
+                              <xs:element name="CarModelDesc" type="xs:string"/>
+                              <xs:element name="ColorCode" type="xs:string"/>
+                              <xs:element name="Color" type="xs:string"/>
+                              <xs:element name="CarOrderCategory" type="xs:string"/>
+                              <xs:element name="RemarkText" type="xs:string"/>
+                              <xs:element name="ImporterRemarkText" type="xs:string"/>
+                              <xs:element name="Priority" type="xs:string"/>
+                              <xs:element name="SupplierActivity" type="xs:string"/>
+                              <xs:element name="SupplierActivityLong" type="xs:string"/>
+                              <xs:element name="Supplier" type="xs:string"/>
+                              <xs:element name="CarDestination" type="xs:string"/>
+                              <xs:element name="Transportation" type="xs:string"/>
+                              <xs:element name="NumberOfKeys" type="xs:string"/>
+                              <xs:element name="CarArrivalDate" type="xs:string"/>
+                              <xs:element name="OrderDate" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema></xdp:xdp>

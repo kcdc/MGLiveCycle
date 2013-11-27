@@ -66,7 +66,7 @@
 										<xs:element name="CarVIN" type="xs:string"/>
 										<xs:element name="DateOfReport" type="xs:string"/>
 										<xs:element name="Sequence" type="xs:string"/>
-										<xs:element name="DealerName" type="xs:string"/>
+										<xs:element name="DealerNameDest" type="xs:string"/>
 										<xs:element name="OrderNo" type="xs:string"/>
 										<xs:element name="CarBrand" type="xs:string"/>
 										<xs:element name="CarModelDesc" type="xs:string"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-56-14 02:56:11" uuid="16078c0e-f337-4704-af10-f3eb7554a3d8">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-05 08:07:12" uuid="a8de01a3-1326-45ce-9078-871673d1996d">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -21,8 +21,8 @@ var L_InvoiceTitle_N = "Iekšējais kredītrēķins";
 var L_InvoiceTitle_P = "Avansa rēķins";
 var L_InvoiceTitle_Q = "Avansa kredītrēķins";
 var L_LeaseMonthVat = "Maksājums mēnesī";
-var L_LeaserFinancingCompany = "Finansējuma piedāvājums jāapstiprina:";
-var L_LeaserFinancingCompany2 = "Jebkuri labojumi pirceja un finansētāja sakarā ir jaapraksta ....... Līguma punktā....";
+var L_LeaserFinancingCompany = " ";
+var L_LeaserFinancingCompany2 = " ";
 var L_LeaserName = "Nomnieks:";
 var L_LeaserPersonalId = "PK:";
 var L_LeaseTotal = "Kopā mēnesī";
@@ -35,7 +35,7 @@ var L_LeaseMonth = "Maksājums mēnesī";
 var L_MechanicNo = "Mehāniķa Nr.";
 var L_MechanicSignature = "Mehāniķa paraksts";
 var L_Name = "Vārds";
-var L_NationalOptionpriceTotal = "Vietējais papildaprīkojums";
+var L_NationalOptionpriceTotal = "Vietējais papildaprīkojums:";
 var L_NationalOptions = "Vietējais papildaprīkojums";
 var L_No = "Nr.";
 var L_Nox = "Nox izmeši mg/km:";
@@ -50,7 +50,7 @@ var L_OnDeliveryRentalAmount = "bez PVN";
 var L_OnDeliveryRentalAmountVat = "ar PVN";
 var L_OnDeliveryVatAmount = "PVN";
 var L_OptionDiscount = "Atlaide papildaprīkojumam";
-var L_OptionPriceTotal = "Ražotāja papildaprīkojums";
+var L_OptionPriceTotal = "Ražotāja papildaprīkojums:";
 var L_Options = "Papildaprīkojums";
 var L_NumberOfPeriods = "Līzinga termiņš (Mēneši):";
 var L_OrderNo = "Pas. Nr.:";
@@ -97,7 +97,7 @@ var L_ReBuilds = "Pārbūves specifikācija";
 var L_ReceivedText_D = "Esmu saņēmis visas rēķinā uzrādītās preces.";
 var L_ReceivedText_V = "Esmu saņēmis rēķinā uzrādītās preces un pakalpojumus, kā arī izmantotās rezerves daļas.";
 var L_ReferenceNo = "Pasūtijums Nr.";
-var L_RegistrationDesc = "Reģistrācijas izdevumi.";
+var L_RegistrationDesc = "Reģistrācijas izdevumi bez PVN:";
 var L_InvoiceEuroTitle = "Rēķina";
 var L_RemarkDate = "Datums";
 var L_RemarkPriority = "Prioritāte";
@@ -108,7 +108,7 @@ var L_RentalCalculation = "Līzinga aprēķins (* = bez PVN)";
 var L_RepeatedRepair = "Atkārtots remonts:";
 var L_RestPayTotal = "Jamaksā ar PVN";
 var L_Reviewed = "Klients iepazīstināts:";
-var L_SalesRep = "Pārdevējs2";
+var L_SalesRep = "Pārdošanas vadītājs:";
 var L_RemainingValue = "Atlikusī vērtība:";
 var L_ServiceAdvisor = "Servisa konsultants,";
 var L_ServiceAdvisorColon = "Servisa konsultants:";
@@ -133,7 +133,7 @@ var L_ThankYouTextPriceestimate = "Pateicamies par izrādīto interesi par mūsu
 var L_ThroughputNo = "Pasūtijums Nr.:";
 var L_TimeTotal = "Laiks kopā";
 var L_TotalCostPerYear = "Kopējās gada izmaksas (ar pirmo iemaksu)";
-var L_TotalDiscount = "Kopējā atlaide";
+var L_TotalDiscount = "Kopējā atlaide:";
 var L_TotalMileage = "Kopējais nobraukums";
 var L_TotalMileagePerYear = "Kopējais nobraukums gadā";
 var L_TPI = "Aktuālie TPI:";
@@ -156,7 +156,7 @@ var L_TransType_V = "Pakalpojumu sniegšana";
 var L_Unit = "Mērv.";
 var L_VatAmountColon = "PVN:";
 var L_VatBasis = "PVN bāze:";
-var L_VatContract = "PVN bāze";
+var L_VatContract = "PVN bāze:";
 var L_VatIncluded = "Visas cenas norādītas ar PVN";
 var L_VatPayerNo = "PVN maksātāja Nr.:";
 var L_VatText = "PVN Netiek aprēķināts";
@@ -241,7 +241,7 @@ var L_CustomerPhoneNo = "Telefons:";
 var L_CustomerPhonePrivat = "Privāts:";
 var L_CustomerPhoneWork = "Darba:";
 var L_CustomerVatPayerNo = "PVN maksātāja Nr.:";
-var L_Date = "Datums";
+var L_Date = "Datums:";
 var L_DateReviewed = "Datums";
 var L_DealerCompanyRegno = "Reģistrācijas Nr.:";
 var L_DealerIssueAddressTotal = "Izsniegšanas adr.:";
@@ -325,7 +325,7 @@ var L_InvoiceNo = "Rēķina Nr.:";
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:16078c0e-f337-4704-af10-f3eb7554a3d8</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:a8de01a3-1326-45ce-9078-871673d1996d</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
