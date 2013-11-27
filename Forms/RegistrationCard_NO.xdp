@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-11-27T12:56:07Z" uuid="080720cf-0ca0-4620-8472-63f8252854c2">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-11-27T13:43:10Z" uuid="215f29ec-3e18-4690-b2df-1ebb42fe3023">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -12,12 +12,14 @@
             <subform x="128mm" y="4mm" w="76.15mm" minH="12.7mm" name="subHeader">
                <bind match="none"/>
                <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="0mm" y="0mm">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="6mm" y="11mm">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <?templateDesigner expand 1?></subform>
             <medium stock="a4" short="210mm" long="297mm"/>
-            <subform name="subBackground" presence="hidden">
+            <subform name="subBackground">
                <bind match="none"/>
                <field name="fldShowBackground" y="6mm" x="6mm" w="14mm" h="9mm" presence="hidden">
                   <ui>
@@ -33,7 +35,7 @@
                </field>
                <draw name="imgBackground" y="1mm" x="4mm" w="202mm" h="296mm">
                   <value>
-                     <image contentType="application/octet-stream"/>
+                     <image contentType="image/jpeg" href="..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\SF\Background.jpg"/>
                   </value>
                   <ui>
                      <imageEdit/>
@@ -59,7 +61,7 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
          <subform w="197.3mm" name="subPositionedCanvas" h="175.531mm">
             <bind match="none"/>
             <keep intact="none"/>
-            <field name="fldEUApprovalNo" minH="4mm" x="8.65mm" y="36.65mm" minW="30mm">
+            <field name="fldEUApprovalNo" x="8.65mm" y="36.65mm" minW="30mm" h="4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -67,11 +69,11 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                   </textEdit>
                </ui>
                <font size="11pt"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.EUApprovalNo[*]"/>
             </field>
-            <field name="fldCarVIN" minH="4mm" x="80.65mm" y="36.65mm" minW="30mm">
+            <field name="fldCarVIN" x="80.65mm" y="36.65mm" minW="30mm" h="4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -79,11 +81,11 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                   </textEdit>
                </ui>
                <font size="11pt"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.CarVIN[*]"/>
             </field>
-            <field name="fldCarBrand" minH="4mm" x="8.65mm" y="45.65mm" minW="30mm">
+            <field name="fldCarBrand" x="8.65mm" y="46.65mm" minW="30mm" h="4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -91,11 +93,11 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                   </textEdit>
                </ui>
                <font size="11pt"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.CarBrand[*]"/>
             </field>
-            <field name="fldCarCode" minH="5.881mm" x="55.65mm" y="45.65mm" minW="11mm">
+            <field name="fldCarCode" x="55.65mm" y="46.65mm" minW="11mm" h="4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -103,11 +105,11 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                   </textEdit>
                </ui>
                <font size="11pt"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.CarCode[*]"/>
             </field>
-            <field name="fldCarModel" minH="4mm" x="80.65mm" y="45.65mm" minW="30mm">
+            <field name="fldCarModel" x="80.65mm" y="46.65mm" minW="30mm" h="4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -115,11 +117,11 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                   </textEdit>
                </ui>
                <font size="11pt"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.CarModel[*]"/>
             </field>
-            <field name="fldCarType" x="80.65mm" y="54.65mm" minW="30mm" h="4mm">
+            <field name="fldCarType" x="80.65mm" y="56.65mm" minW="30mm" h="4mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -174,7 +176,7 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                <para vAlign="middle" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
             </draw>
-            <field name="fldDeclaredLine1" minH="4mm" x="122.65mm" y="64.65mm" minW="30mm">
+            <field name="fldDeclaredLine1" minH="4mm" x="123.65mm" y="65.65mm" minW="30mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -186,7 +188,7 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.DeclaredLine1"/>
             </field>
-            <field name="fldDeclaredLine2" minH="4mm" x="122.65mm" y="68.65mm" minW="30mm">
+            <field name="fldDeclaredLine2" minH="4mm" x="123.65mm" y="69.65mm" minW="30mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -198,7 +200,7 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.DeclaredLine2"/>
             </field>
-            <field name="fldEkspeditionDate" minH="4mm" x="122.65mm" y="76.65mm" minW="30mm">
+            <field name="fldEkspeditionDate" minH="4mm" x="123.65mm" y="77.65mm" minW="30mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -210,7 +212,7 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.EkspeditionDate"/>
             </field>
-            <field name="fldImporterName" minH="4mm" x="122.65mm" y="80.65mm" minW="30mm">
+            <field name="fldImporterName" minH="4mm" x="123.65mm" y="81.65mm" minW="30mm">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -300,7 +302,7 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.EkspeditionNo"/>
             </field>
-            <draw name="fldDeclaredLine2" y="72.65mm" x="122.65mm" w="72.65mm" h="4mm">
+            <draw name="fldDeclaredLine2" y="73.65mm" x="123.65mm" w="72.65mm" h="4mm">
                <ui>
                   <textEdit/>
                </ui>
@@ -380,7 +382,7 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
                <para vAlign="middle"/>
                <bind match="dataRef" ref="$.Document.PageInfo.ExhibitionText"/>
             </field>
-            <field name="fldDeclarationReferance" w="30mm" x="151.65mm" y="171.65mm" h="3.881mm">
+            <field name="fldDeclarationReferance" w="30mm" x="151.65mm" y="168.65mm" h="4mm" access="readOnly">
                <ui>
                   <textEdit>
                      <border presence="hidden"/>
@@ -418,10 +420,10 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\6-Fase 3\Gruppe C&D - XML\SF - RegistrationCard\SF - RegistrationCard_data_new.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Arial;size:9;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Arial;size:9;weight:normal;style:normal?>
-   <?templateDesigner SaveTaggedPDF 0?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Zoom 144?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
@@ -434,7 +436,6 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -625,14 +626,14 @@ if(fldShowBackground.rawValue != "1" || fldShowBackground.isNull)
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-11-27T12:56:07Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-11-27T13:43:10Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:080720cf-0ca0-4620-8472-63f8252854c2</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:215f29ec-3e18-4690-b2df-1ebb42fe3023</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:02496fe8-47ad-409a-8664-28ab1e3c4f87</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
