@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-26T21:30:32Z" uuid="6c375b6f-6731-471f-af66-094c029a141c">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-12-09T08:57:06Z" uuid="2c5e739c-3444-4095-bc72-236068386138">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -615,9 +615,8 @@ this.caption.value.text = output;
 </script>
                         </event>
                      </field>
-                     <?templateDesigner expand 1?>
                      <margin topInset="5mm" bottomInset="4mm"/>
-                  </subform>
+                     <?templateDesigner expand 1?></subform>
                   <subform w="59.999mm" minH="15.999mm" name="subInvoiceInfo">
                      <bind match="none"/>
                      <keep intact="none"/>
@@ -1001,14 +1000,14 @@ this.caption.value.text = output;
                      </field>
                      <occur min="0" max="-1"/>
                      <?templateDesigner expand 1?></subform>
-                  <?templateDesigner expand 0?></subform>
-               <subform x="0mm" layout="tb" name="subCustomerAddress" w="70mm">
+                  <?templateDesigner expand 1?></subform>
+               <subform layout="tb" name="subCustomerAddress_Deprecated" w="70mm" y="4.168mm" presence="hidden">
                   <bind match="none"/>
                   <keep intact="contentArea"/>
                   <subform layout="tb" minH="4mm" name="subUserName" w="70mm" presence="hidden">
                      <keep intact="contentArea"/>
                      <bind match="none"/>
-                     <field name="floatUserName" y="0mm" x="0mm" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField012092">
+                     <field name="floatUserName" y="0mm" x="0mm" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField019666">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -1023,26 +1022,27 @@ this.caption.value.text = output;
 {
 	var customerName = Invoice.pageContent.subHeaderInformation.subOuterHolder.subCustomerAddress.subCustomerName.floatCustomerName.rawValue;
 	var ownerName = Invoice.pageContent.subCarInformation.subEierBruker.L_OwnerName.rawValue;
+	//if customername and owner is the same the entire UserName is set to visible
 	if(customerName == ownerName)
 	{
 		this.parent.presence = "visible";
+		//if there is a Username it will be copied here - otherwise the value is empty
 		if(Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue.length &gt; 0)
 		{
+			// CustomerName is hidden and Username is user as "CustomerName"
 			this.parent.parent.subCustomerName.presence = "hidden";
 			this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
 		}
 		else
 		{
 		
-		}
-		//this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
+		}		
 	}
 }
 catch(e)
 {
 	
 }
-
 </script>
                         </event>
                      </field>
@@ -1052,7 +1052,7 @@ catch(e)
                         </ui>
                         <value>
                            <exData contentType="text/html">
-                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField012092"/></p></body>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField019666"/></p></body>
                            </exData>
                         </value>
                         <font size="9pt" typeface="Arial" weight="bold"/>
@@ -1062,7 +1062,7 @@ catch(e)
                   <subform layout="tb" minH="4mm" name="subCustomerName" w="70mm">
                      <keep intact="contentArea"/>
                      <bind match="none"/>
-                     <field name="floatCustomerName" y="0mm" x="0mm" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField018753">
+                     <field name="floatCustomerName" y="0mm" x="0mm" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField025725">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -1079,17 +1079,17 @@ catch(e)
                         </ui>
                         <value>
                            <exData contentType="text/html">
-                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField018753"/></p></body>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField025725"/></p></body>
                            </exData>
                         </value>
                         <font size="9pt" typeface="Arial" weight="bold"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      </draw>
-                     <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 0?></subform>
                   <subform layout="tb" minH="4mm" name="subOwnerName" w="70mm">
                      <keep intact="contentArea"/>
                      <bind match="none"/>
-                     <field name="L_Attention" y="0mm" x="0mm" w="62mm" id="floatingField002019" presence="hidden" access="readOnly" minH="9mm">
+                     <field name="L_Attention" y="0mm" x="0mm" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField023960">
                         <ui>
                            <textEdit>
                               <border>
@@ -1105,7 +1105,7 @@ catch(e)
                            <text>c/o </text>
                         </value>
                      </field>
-                     <field name="floatOwnerName" y="0mm" x="0mm" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
+                     <field name="floatOwnerName" y="0mm" x="0mm" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField026782">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
@@ -1117,39 +1117,36 @@ catch(e)
                         <bind match="none"/>
                         <para hAlign="justify"/>
                         <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-
-
-try
+                           <script contentType="application/x-javascript">try
 {
+	//Values for Owner and Username are attempted to be fetched
 	this.rawValue = Invoice.pageContent.subCarInformation.subEierBruker.L_OwnerName.rawValue;
 	var userName = Invoice.pageContent.subCarInformation.subEierBruker.L_UserName.rawValue;
-
 }
 catch(e)
 {
+	//if either of these fail the username will be empty
 	userName = "";
-	//app.alert("catch")
 }
-
+//if ownername is null or ownername is the same as username
 if (this.rawValue == null || this.rawValue == userName)
 {
+	//ownername will be hidden
 	this.parent.presence = "hidden";
 }
-//app.alert(xfa.resolveNode("pageContent.subHeaderInformation.subOuterHolder.subCustomerAddress.subUserName.floatUserName").rawValue);
-
+//if username is empty or null
 if(userName == "" || userName == null)
 {
-	//this.parent.L_Attention.rawValue = "";
+	//ownername will be hidden	
 	this.parent.presence = "hidden";
 }
-
 if(this.rawValue != null)
 {
-	//this.parent.parent.subCustomerName.presence = "hidden";
+	
 }
 else
 {
+	//if owner name has not got a  value - then hide it
 	this.parent.presence = "hidden";
 }
 </script>
@@ -1161,12 +1158,68 @@ else
                         </ui>
                         <value>
                            <exData contentType="text/html">
-                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField002019"/><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField008232"/></p></body>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField023960"/><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField026782"/></p></body>
                            </exData>
                         </value>
                         <font size="9pt" typeface="Arial"/>
                         <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                      </draw>
+                     <?templateDesigner expand 1?></subform>
+                  <field access="readOnly" minH="4mm" name="fldCustomerPostalAddress" w="70mm">
+                     <font typeface="Arial" size="9pt"/>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <bind match="none"/>
+                  </field>
+                  <field access="readOnly" minH="4mm" name="fldCustomerPostalCityZip" w="70mm">
+                     <font typeface="Arial" size="9pt"/>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <bind match="none"/>
+                  </field>
+                  <field access="readOnly" minH="4mm" name="fldCustomerCountry" w="70mm">
+                     <font typeface="Arial" size="9pt"/>
+                     <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <bind match="none"/>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+               <subform x="0mm" layout="tb" name="subCustomerAddress" w="70mm">
+                  <bind match="none"/>
+                  <keep intact="contentArea"/>
+                  <subform layout="tb" minH="4mm" name="subCustomerName" w="70mm">
+                     <keep intact="contentArea"/>
+                     <bind match="none"/>
+                     <field name="fldCustomerName" w="70mm" h="4.168mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <font size="9pt" typeface="Arial" weight="bold"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                        <caption>
+                           <value>
+                              <exData contentType="text/html">
+                                 <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField018753"/></p></body>
+                              </exData>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerName"/>
+                     </field>
                      <?templateDesigner expand 1?></subform>
                   <field access="readOnly" minH="4mm" name="fldCustomerPostalAddress" w="70mm">
                      <font typeface="Arial" size="9pt"/>
@@ -3803,7 +3856,7 @@ this.caption.value.text = output;
       <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 148 37 000300120024002500260027002F00300031003200330035003600370039004200440045004600480049004A004C004E004F005000510052005300550056005700580059005C005E0060 /ABCDLMNOPRSTV_abcefgiklmnoprstuvy{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 212 56 00030008000F00110012001D002400250026002700280029002A002B002C002E002F00300031003200330035003600370039004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005E0060006E009100A1 %,./:ABCDEFGHIKLMNOPRSTVabcdefghijklmnoprstuvwx{}åØø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 192 51 00030008000F0011001D002400250026002700280029002A002B002C002E002F0030003100320033003500360037003900440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B006E009100A1 %,.:ABCDEFGHIKLMNOPRSTVabdefghijklmnoprstuvxåØø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
       <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 60 15 0001001000250042004500460048004A004C004F00500053005400550056 /Dadegiknorstu?>
@@ -3813,8 +3866,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 147?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -3827,13 +3878,15 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\9964\030_Invoice_S001IT05_20131025_160509_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til task\10329\030_Invoice_S001IT05_20131205_094518_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:4850000;v:4425000;h:500000?></template>
+   <?templateDesigner Guidelines v:375000;v:4850000;v:4425000;h:500000?>
+   <?templateDesigner Zoom 144?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -3981,14 +4034,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-10-26T21:30:32Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2013-12-09T08:57:06Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:6c375b6f-6731-471f-af66-094c029a141c</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:2c5e739c-3444-4095-bc72-236068386138</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -4002,7 +4055,7 @@ this.caption.value.text = output;
    <xsdConnection name="DataConnection" dataDescription="Invoice">
       <uri>.\XSD\Invoice.xsd</uri>
       <rootElement>Invoice</rootElement>
-      <?templateDesigner fileDigest shaHash="aEvivLZIRsCP39qell99qSBUGs0="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="kfPmy5PJ7Gg+ca41pe+hThNecyA="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -4115,6 +4168,7 @@ this.caption.value.text = output;
                <CarModelDesc/>
                <CarMileage/>
                <OwnerName/>
+               <LeaserName/>
                <UserName/>
                <OurRef/>
                <YourRef/>
@@ -4123,16 +4177,16 @@ this.caption.value.text = output;
                <GearCode/>
                <Color/>
                <CarType/>
-               <ReasonForCreditLine/>
                <InsuranceNameRef/>
                <WarrentyRef/>
                <WarrentyRefLabel/>
+               <ReasonForCreditLine dd:maxOccur="2"/>
             </HeaderInfo>
             <Tasks>
                <Task dd:maxOccur="30">
                   <TaskDetail>
                      <TaskTexts dd:maxOccur="30">
-                        <TaskText dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
+                        <TaskText dd:maxOccur="-1"/>
                      </TaskTexts>
                      <TaskId/>
                      <TaskName/>
@@ -4206,6 +4260,7 @@ this.caption.value.text = output;
                </Task>
             </Tasks>
             <Total>
+               <Currency/>
                <VatPercent/>
                <PriceTotalSum/>
                <VatAmount/>
@@ -4219,6 +4274,10 @@ this.caption.value.text = output;
                <PriceVatTotalToPay/>
                <AmountInWords/>
             </Total>
+            <CurrencySwap>
+               <AmountCurrency2/>
+               <CurrencyRateTxt/>
+            </CurrencySwap>
             <Insurance>
                <InsuranceVat/>
                <VatBasis/>
@@ -4240,7 +4299,7 @@ this.caption.value.text = output;
             <FooterLines>
                <FooterLine dd:maxOccur="30">
                   <FooterLines dd:maxOccur="30">
-                     <FooterLine dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
+                     <FooterLine dd:maxOccur="-1"/>
                   </FooterLines>
                </FooterLine>
             </FooterLines>
@@ -4415,6 +4474,7 @@ this.caption.value.text = output;
                               <xs:element name="CarModelDesc" type="xs:string"/>
                               <xs:element name="CarMileage" type="xs:string"/>
                               <xs:element name="OwnerName" type="xs:string"/>
+                              <xs:element name="LeaserName" type="xs:string"/>
                               <xs:element name="UserName" type="xs:string"/>
                               <xs:element name="OurRef" type="xs:string"/>
                               <xs:element name="YourRef" type="xs:string"/>
@@ -4423,26 +4483,26 @@ this.caption.value.text = output;
                               <xs:element name="GearCode" type="xs:string"/>
                               <xs:element name="Color" type="xs:string"/>
                               <xs:element name="CarType" type="xs:string"/>
-                              <xs:element name="ReasonForCreditLine" type="xs:string"/>
                               <xs:element name="InsuranceNameRef" type="xs:string"/>
                               <xs:element name="WarrentyRef" type="xs:string"/>
                               <xs:element name="WarrentyRefLabel" type="xs:string"/>
+                              <xs:element maxOccurs="2" name="ReasonForCreditLine" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Task" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Task">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskDetail">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="TaskTexts" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="TaskTexts">
                                                    <xs:complexType>
                                                       <xs:sequence>
-                                                         <xs:element name="TaskText" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                         <xs:element maxOccurs="unbounded" name="TaskText" type="xs:string"/>
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
@@ -4454,7 +4514,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Work" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Work">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="WorkPosNo" type="xs:string"/>
@@ -4468,7 +4528,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="SparePart" maxOccurs="200">
+                                       <xs:element maxOccurs="200" name="SparePart">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="SparePartNo" type="xs:string"/>
@@ -4482,7 +4542,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Material" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Material">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="MaterialNo" type="xs:string"/>
@@ -4496,10 +4556,10 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Package" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Package">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="PkgWork" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="PkgWork">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="WorkPosNo" type="xs:string"/>
@@ -4513,7 +4573,7 @@ this.caption.value.text = output;
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
-                                                <xs:element name="PkgPart" maxOccurs="200">
+                                                <xs:element maxOccurs="200" name="PkgPart">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="SparePartNo" type="xs:string"/>
@@ -4527,7 +4587,7 @@ this.caption.value.text = output;
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
-                                                <xs:element name="PkgMatr" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="PkgMatr">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="MaterialNo" type="xs:string"/>
@@ -4554,6 +4614,7 @@ this.caption.value.text = output;
                      <xs:element name="Total">
                         <xs:complexType>
                            <xs:sequence>
+                              <xs:element name="Currency" type="xs:string"/>
                               <xs:element name="VatPercent" type="xs:string"/>
                               <xs:element name="PriceTotalSum" type="xs:string"/>
                               <xs:element name="VatAmount" type="xs:string"/>
@@ -4566,6 +4627,14 @@ this.caption.value.text = output;
                               <xs:element name="VatAmountToPay" type="xs:string"/>
                               <xs:element name="PriceVatTotalToPay" type="xs:string"/>
                               <xs:element name="AmountInWords" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="CurrencySwap">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="AmountCurrency2" type="xs:string"/>
+                              <xs:element name="CurrencyRateTxt" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -4601,7 +4670,7 @@ this.caption.value.text = output;
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="BottomTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="BottomTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -4614,13 +4683,13 @@ this.caption.value.text = output;
                      <xs:element name="FooterLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLine" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="FooterLine">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLines" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="FooterLines">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="FooterLine" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                <xs:element maxOccurs="unbounded" name="FooterLine" type="xs:string"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
@@ -4633,10 +4702,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLimitedLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLimitedLine" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="FooterLimitedLine">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLimitedLine" type="xs:string" maxOccurs="10"/>
+                                       <xs:element maxOccurs="10" name="FooterLimitedLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -4646,7 +4715,7 @@ this.caption.value.text = output;
                      <xs:element name="CarRemarks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CarRemark" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="CarRemark">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="RemarkPriority" type="xs:string"/>
@@ -4662,7 +4731,7 @@ this.caption.value.text = output;
                         <xs:complexType>
                            <xs:sequence>
                               <xs:element name="ServiceAdvisor" type="xs:string"/>
-                              <xs:element name="AdvertText" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="AdvertText" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
