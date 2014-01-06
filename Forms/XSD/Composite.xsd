@@ -4,6 +4,9 @@
 	<xs:element name="Composite">
 		<xs:complexType>
 			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>This construct must consist of  the following (optional in paranthesis): Document, Header, (PageSeparator) and either one of the Document Types (ListeS/ListeLF2A/B/C)</xs:documentation>
+				</xs:annotation>
 				<xs:element name="Document">
 					<xs:complexType>
 						<xs:sequence>
@@ -37,6 +40,81 @@
 										<xs:element name="Watermark" type="xs:string"/>
 										<xs:element name="DealerNameMarketing" type="xs:string"/>
 										<xs:element name="TestLabel" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="F2A">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Pages" maxOccurs="10000">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SepDescription" type="xs:string"/>
+													<xs:element name="SepDealerName" type="xs:string"/>
+													<xs:element name="SepDealerNo" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Page" maxOccurs="10000">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PageDetail" type="xs:string" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="F2B">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Pages" maxOccurs="10000">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SepDescription" type="xs:string"/>
+													<xs:element name="SepDealerName" type="xs:string"/>
+													<xs:element name="SepDealerNo" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Page" maxOccurs="10000">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PageDetail" type="xs:string" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="F2C">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Pages" maxOccurs="10000">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Page" maxOccurs="10000">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PageDetail" type="xs:string" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
@@ -99,69 +177,21 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="F2A">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Pages" maxOccurs="10000">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Page" maxOccurs="10000">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="PageDetail" type="xs:string" maxOccurs="unbounded"/>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="F2B">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Pages" maxOccurs="10000">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Page" maxOccurs="10000">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="PageDetail" type="xs:string" maxOccurs="unbounded"/>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="F2C">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Pages" maxOccurs="10000">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="Page" maxOccurs="10000">
-											<xs:complexType>
-												<xs:sequence>
-													<xs:element name="PageDetail" type="xs:string" maxOccurs="unbounded"/>
-												</xs:sequence>
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
 				<xs:element name="ListeL">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="Pages" maxOccurs="10000">
 								<xs:complexType>
 									<xs:sequence>
+										<xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SepDescription" type="xs:string"/>
+													<xs:element name="SepDealerName" type="xs:string"/>
+													<xs:element name="SepDealerNo" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
 										<xs:element name="Page" maxOccurs="10000">
 											<xs:complexType>
 												<xs:sequence>

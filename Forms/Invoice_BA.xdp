@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-11-11T11:20:59Z" uuid="16cd163f-1847-4b8b-9658-16110cb804c2">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-01-05T16:56:22Z" uuid="047a7755-4caa-456b-a99c-679b2c19489e">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -1178,44 +1178,107 @@ else
                         <keep intact="contentArea"/>
                         <subform w="90mm" name="subEconomicalTransType" layout="lr-tb" x="9.999mm" y="14.997mm">
                            <bind match="none"/>
-                           <field name="L_EconomicalTransType" h="4mm" access="readOnly" w="89mm">
+                           <field name="L_EconomicalTransType" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField014876" presence="hidden" access="readOnly">
                               <ui>
                                  <textEdit>
-                                    <border presence="hidden"/>
+                                    <border>
+                                       <edge stroke="lowered"/>
+                                    </border>
                                     <margin/>
                                  </textEdit>
                               </ui>
-                              <font size="9pt" typeface="Arial"/>
-                              <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                              <font typeface="Myriad Pro"/>
+                              <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                               <para vAlign="middle"/>
-                              <caption reserve="55mm">
-                                 <font size="8.5pt" typeface="Arial" weight="bold"/>
-                                 <para vAlign="middle"/>
-                                 <value>
-                                    <text>Saknas</text>
-                                 </value>
-                              </caption>
-                              <bind match="dataRef" ref="$.Document.HeaderInfo.EconomicalTransType"/>
                               <event activity="initialize" name="event__initialize">
-                                 <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+                                 <script contentType="application/x-javascript">this.rawValue = "";
+var LangCode = getLanguages.getLanguageSetting();
+var output = "";
+	try
+	{
+		output = getLanguages.getLanguageText(LangCode, this.name);
+		
+		if(output != undefined)
+		{
+			this.rawValue = output;
+		}
 
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-if(output != "")
-{
-	this.caption.value.text = output;
-}
-
-else
-{
-		this.caption.value.text = "VAR FOR: "+this.name+" NOT FOUND";	
-}
+		else
+		{
+			//this.rawValue = "VAR FOR: "+this.name+" NOT FOUND";	
+		}
+	}
+	catch(e)
+	{
+		///output = "";
+		app.alert(output)
+		//this.rawValue = output;	
+	}
 </script>
                               </event>
                            </field>
+                           <field name="L_TransType" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField027881" presence="hidden" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border>
+                                       <edge stroke="lowered"/>
+                                    </border>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Myriad Pro"/>
+                              <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                              <para vAlign="middle"/>
+                              <bind match="none"/>
+                              <event activity="initialize" name="event__initialize">
+                                 <script contentType="application/x-javascript">
+
+var LangCode = getLanguages.getLanguageSetting();
+//app.alert(LangCode);
+
+	var output = getLanguages.getLanguageText(LangCode, this.name+"_"+subInvoiceMetadata.ThroughputType.rawValue);
+	//app.alert(this.name+"_"+subInvoiceMetadata.ThroughputType.rawValue);
+	//app.alert(output);
+	if(output != undefined)
+	{
+		this.rawValue = output;
+	}
+
+	else
+	{
+		//this.rawValue = "VAR FOR: "+this.name+" NOT FOUND";	
+	}
+</script>
+                              </event>
+                           </field>
+                           <draw name="L_EconomicalTransTypeText" w="90mm" h="4.175mm">
+                              <ui>
+                                 <textEdit/>
+                              </ui>
+                              <value>
+                                 <exData contentType="text/html">
+                                    <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;text-decoration:none;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField014876"/><span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:9pt;font-weight:normal"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField027881"/></span></p></body>
+                                 </exData>
+                              </value>
+                              <font size="8.5pt" typeface="Arial"/>
+                              <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0.5mm"/>
+                           </draw>
                            <keep intact="contentArea"/>
-                           <occur min="0" max="-1"/>
-                           <?templateDesigner expand 1?></subform>
+                           <?templateDesigner expand 1?>
+                           <event activity="initialize" name="event__initialize">
+                              <script contentType="application/x-javascript">//app.alert(subInvoiceMetadata.ThroughputType.rawValue);
+if(subInvoiceMetadata.ThroughputType.rawValue == "D" || subInvoiceMetadata.ThroughputType.rawValue == "P" || subInvoiceMetadata.ThroughputType.rawValue == "V")
+{
+	this.presence = "visible";
+}
+else
+{
+	this.presence = "hidden";
+}
+
+</script>
+                           </event>
+                        </subform>
                         <margin leftInset="1mm" topInset="1mm"/>
                         <border>
                            <edge presence="hidden"/>
@@ -5185,7 +5248,7 @@ this.caption.value.text = output;
       </desc>
       <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 144 36 000300110012002500260027002D002F003100320033003500360038004200440045004700480049004A004B004C004E004F005000510052005300550056005700580059005E0060 ./BCDJLNOPRSU_abdefghiklmnoprstuv{}?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 152 38 000300110012002500260027002D002F0031003200330035003600370038004200440045004700480049004A004B004C004E004F005000510052005300550056005700580059005C005E0060 ./BCDJLNOPRSTU_abdefghiklmnoprstuvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 216 57 00030008000B000C00110012001D00240025002600280029002A002C002D002E002F0030003200330035003600370039003A0042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005B005C005E00600063006E00A1 %()./:ABCEFGIJKLMOPRSTVW_abcdefghijklmnoprstuvxy{}Ååø?>
       <?renderCache.subset "Arial" 0 1 ISO-8859-1 4 24 6 00330048004C00550059005APeirvw?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
@@ -5196,6 +5259,7 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 144?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -5209,14 +5273,13 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til defecter\10026\862_Invoice_S001IT05_20131108_100233_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\BA\Invoice\755_Invoice_S854IT02_20140103_151010_D_B870KVA.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
-   <?templateDesigner Guidelines v:375000;v:4850000;v:4050000;h:500000;h:675000;h:650000?>
-   <?templateDesigner Zoom 147?></template>
+   <?templateDesigner Guidelines v:375000;v:4850000;v:4050000;h:500000;h:675000;h:650000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -5364,14 +5427,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-11-11T11:20:59Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-01-05T16:56:22Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:16cd163f-1847-4b8b-9658-16110cb804c2</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:047a7755-4caa-456b-a99c-679b2c19489e</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -5385,7 +5448,7 @@ this.caption.value.text = output;
    <xsdConnection name="DataConnection" dataDescription="Invoice">
       <uri>.\XSD\Invoice.xsd</uri>
       <rootElement>Invoice</rootElement>
-      <?templateDesigner fileDigest shaHash="aEvivLZIRsCP39qell99qSBUGs0="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="kfPmy5PJ7Gg+ca41pe+hThNecyA="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -5498,6 +5561,7 @@ this.caption.value.text = output;
                <CarModelDesc/>
                <CarMileage/>
                <OwnerName/>
+               <LeaserName/>
                <UserName/>
                <OurRef/>
                <YourRef/>
@@ -5506,16 +5570,16 @@ this.caption.value.text = output;
                <GearCode/>
                <Color/>
                <CarType/>
-               <ReasonForCreditLine/>
                <InsuranceNameRef/>
                <WarrentyRef/>
                <WarrentyRefLabel/>
+               <ReasonForCreditLine dd:maxOccur="2"/>
             </HeaderInfo>
             <Tasks>
                <Task dd:maxOccur="30">
                   <TaskDetail>
                      <TaskTexts dd:maxOccur="30">
-                        <TaskText dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
+                        <TaskText dd:maxOccur="-1"/>
                      </TaskTexts>
                      <TaskId/>
                      <TaskName/>
@@ -5589,6 +5653,7 @@ this.caption.value.text = output;
                </Task>
             </Tasks>
             <Total>
+               <Currency/>
                <VatPercent/>
                <PriceTotalSum/>
                <VatAmount/>
@@ -5602,6 +5667,10 @@ this.caption.value.text = output;
                <PriceVatTotalToPay/>
                <AmountInWords/>
             </Total>
+            <CurrencySwap>
+               <AmountCurrency2/>
+               <CurrencyRateTxt/>
+            </CurrencySwap>
             <Insurance>
                <InsuranceVat/>
                <VatBasis/>
@@ -5623,7 +5692,7 @@ this.caption.value.text = output;
             <FooterLines>
                <FooterLine dd:maxOccur="30">
                   <FooterLines dd:maxOccur="30">
-                     <FooterLine dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
+                     <FooterLine dd:maxOccur="-1"/>
                   </FooterLines>
                </FooterLine>
             </FooterLines>
@@ -5798,6 +5867,7 @@ this.caption.value.text = output;
                               <xs:element name="CarModelDesc" type="xs:string"/>
                               <xs:element name="CarMileage" type="xs:string"/>
                               <xs:element name="OwnerName" type="xs:string"/>
+                              <xs:element name="LeaserName" type="xs:string"/>
                               <xs:element name="UserName" type="xs:string"/>
                               <xs:element name="OurRef" type="xs:string"/>
                               <xs:element name="YourRef" type="xs:string"/>
@@ -5806,26 +5876,26 @@ this.caption.value.text = output;
                               <xs:element name="GearCode" type="xs:string"/>
                               <xs:element name="Color" type="xs:string"/>
                               <xs:element name="CarType" type="xs:string"/>
-                              <xs:element name="ReasonForCreditLine" type="xs:string"/>
                               <xs:element name="InsuranceNameRef" type="xs:string"/>
                               <xs:element name="WarrentyRef" type="xs:string"/>
                               <xs:element name="WarrentyRefLabel" type="xs:string"/>
+                              <xs:element maxOccurs="2" name="ReasonForCreditLine" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Task" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Task">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskDetail">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="TaskTexts" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="TaskTexts">
                                                    <xs:complexType>
                                                       <xs:sequence>
-                                                         <xs:element name="TaskText" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                         <xs:element maxOccurs="unbounded" name="TaskText" type="xs:string"/>
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
@@ -5837,7 +5907,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Work" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Work">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="WorkPosNo" type="xs:string"/>
@@ -5851,7 +5921,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="SparePart" maxOccurs="200">
+                                       <xs:element maxOccurs="200" name="SparePart">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="SparePartNo" type="xs:string"/>
@@ -5865,7 +5935,7 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Material" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Material">
                                           <xs:complexType>
                                              <xs:sequence>
                                                 <xs:element name="MaterialNo" type="xs:string"/>
@@ -5879,10 +5949,10 @@ this.caption.value.text = output;
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
-                                       <xs:element name="Package" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="Package">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="PkgWork" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="PkgWork">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="WorkPosNo" type="xs:string"/>
@@ -5896,7 +5966,7 @@ this.caption.value.text = output;
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
-                                                <xs:element name="PkgPart" maxOccurs="200">
+                                                <xs:element maxOccurs="200" name="PkgPart">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="SparePartNo" type="xs:string"/>
@@ -5910,7 +5980,7 @@ this.caption.value.text = output;
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
-                                                <xs:element name="PkgMatr" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="PkgMatr">
                                                    <xs:complexType>
                                                       <xs:sequence>
                                                          <xs:element name="MaterialNo" type="xs:string"/>
@@ -5937,6 +6007,7 @@ this.caption.value.text = output;
                      <xs:element name="Total">
                         <xs:complexType>
                            <xs:sequence>
+                              <xs:element name="Currency" type="xs:string"/>
                               <xs:element name="VatPercent" type="xs:string"/>
                               <xs:element name="PriceTotalSum" type="xs:string"/>
                               <xs:element name="VatAmount" type="xs:string"/>
@@ -5949,6 +6020,14 @@ this.caption.value.text = output;
                               <xs:element name="VatAmountToPay" type="xs:string"/>
                               <xs:element name="PriceVatTotalToPay" type="xs:string"/>
                               <xs:element name="AmountInWords" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="CurrencySwap">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="AmountCurrency2" type="xs:string"/>
+                              <xs:element name="CurrencyRateTxt" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -5984,7 +6063,7 @@ this.caption.value.text = output;
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="BottomTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="BottomTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -5997,13 +6076,13 @@ this.caption.value.text = output;
                      <xs:element name="FooterLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLine" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="FooterLine">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLines" maxOccurs="30">
+                                       <xs:element maxOccurs="30" name="FooterLines">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="FooterLine" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                <xs:element maxOccurs="unbounded" name="FooterLine" type="xs:string"/>
                                              </xs:sequence>
                                           </xs:complexType>
                                        </xs:element>
@@ -6016,10 +6095,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLimitedLines">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLimitedLine" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="FooterLimitedLine">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLimitedLine" type="xs:string" maxOccurs="10"/>
+                                       <xs:element maxOccurs="10" name="FooterLimitedLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6029,7 +6108,7 @@ this.caption.value.text = output;
                      <xs:element name="CarRemarks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CarRemark" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="CarRemark">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="RemarkPriority" type="xs:string"/>
@@ -6045,7 +6124,7 @@ this.caption.value.text = output;
                         <xs:complexType>
                            <xs:sequence>
                               <xs:element name="ServiceAdvisor" type="xs:string"/>
-                              <xs:element name="AdvertText" type="xs:string" maxOccurs="10"/>
+                              <xs:element maxOccurs="10" name="AdvertText" type="xs:string"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>

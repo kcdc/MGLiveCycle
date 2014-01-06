@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-05 08:07:12" uuid="a8de01a3-1326-45ce-9078-871673d1996d">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-41-16 12:41:44" uuid="dad1bd4d-8bb9-40f2-a7a6-29cb2e46d0cf">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -194,8 +194,8 @@ var L_ArrangementFee = "Līguma komisija";
 var L_ArrangementFeeVat = "Līguma komisija";
 var L_AssumedTradeInPrice = "Aptuvena atpirkuma vērtība klienta a/m:";
 var L_Attention = "Kam:";
-var L_BankAccEUR = "Konts EUR:";
-var L_BankAccLVL = "Konts LVL:";
+var L_BankAccEUR = " ";
+var L_BankAccLVL = "Konts EUR:";
 var L_BankName = "Banka:";
 var L_CarColor = "Krāsa:";
 var L_CarDelivery = "Nodošanas laiks:";
@@ -223,7 +223,7 @@ var L_Code = "Kods";
 var L_ColorInfo = "Krāsa:";
 var L_CompanyRegno = "Reģistrācijas Nr.:";
 var L_Confirmation = "Apstiprinājums";
-var L_ContactTxt = "Es piekrītu, ka mani personas dati (e-pasts, adrese, telefona Nr.) tiek izmantoti mērķiem, kas saistīti ar klientu ~apkalpošanu, aptauju veikšanai un man paredzētas informācijas nosūtīšanai.";
+var L_ContactTxt = "Es piekrītu, ka mani personas dati (e-pasts, adrese, telefona Nr.) tiek izmantoti darbībām, kas saistītas ar klientu apkalpošanu un tās kvalitātes uzlabošanu un man paredzētās informācijas nosūtīšanai.";
 var L_ContNextPage = "Turpinājums nākamajā lapā.";
 var L_ContractNo = "Līguma Nr.:";
 var L_ControlSignature = "Darbnīcas vadītāja paraksts";
@@ -325,7 +325,7 @@ var L_InvoiceNo = "Rēķina Nr.:";
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:a8de01a3-1326-45ce-9078-871673d1996d</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:dad1bd4d-8bb9-40f2-a7a6-29cb2e46d0cf</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
