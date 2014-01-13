@@ -7,7 +7,7 @@
 	</xsl:template>
 	<xsl:template match="Document">
 		<xsl:variable name="Type">
-			<xsl:value-of select="//Type"/>
+			<xsl:value-of select="//DocSubType"/>
 		</xsl:variable>
 		<xsl:element name="{$Type}">
 			<xsl:apply-templates select="Pages"/>
