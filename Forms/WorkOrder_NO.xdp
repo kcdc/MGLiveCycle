@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-12-03T13:47:24Z" uuid="6b88181e-1b7d-4c69-853e-41e238be6744">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-01-21T08:56:33Z" uuid="0b7e06f3-455b-443a-b408-0f4e6da071a9">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -53,9 +53,9 @@ this.rawValue = output;
                <subform x="13.069mm" y="9mm" usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)">
                   <bind/>
                   <?templateDesigner expand 1?></subform>
-               <subform x="100.069mm" w="62mm" h="11mm" name="subBarcode">
+               <subform x="98.069mm" w="64mm" name="subBarcode">
                   <bind match="dataRef" ref="$.Document.HeaderInfo.Barcode"/>
-                  <field name="barBarcodeValue" x="0mm" w="62mm" h="11mm" access="readOnly">
+                  <field name="barBarcodeValue" w="62mm" h="16mm" access="readOnly" y="0mm">
                      <ui>
                         <barcode type="code128A" wideNarrowRatio="fixed" checksum="auto" dataLength="17"/>
                      </ui>
@@ -1044,7 +1044,7 @@ this.caption.value.text = output;
                            <margin/>
                         </textEdit>
                      </ui>
-                     <font typeface="Arial" size="9pt"/>
+                     <font typeface="Arial" size="9pt" weight="bold"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
                      <para vAlign="middle"/>
                      <bind match="dataRef" ref="$.TaskId"/>
@@ -1057,7 +1057,7 @@ this.caption.value.text = output;
                            <margin/>
                         </textEdit>
                      </ui>
-                     <font typeface="Arial" size="9pt"/>
+                     <font typeface="Arial" size="9pt" weight="bold"/>
                      <margin topInset="0mm" bottomInset="0mm" leftInset="3mm" rightInset="0mm"/>
                      <para vAlign="middle"/>
                      <bind match="dataRef" ref="$.TaskName"/>
@@ -2649,6 +2649,7 @@ this.caption.value.text = output;
          <script usehref=".\Fragments\frg_LangNO.xdp#som($template.form1.#subform.#variables.NO)"/>
          <script usehref=".\Fragments\frg_ScriptGetLanguages.xdp#som($template.form1.#subform.#variables.getLanguages)"/>
          <script usehref=".\Fragments\frg_LangEN.xdp#som($template.form1.#subform.#variables.EN)"/>
+         <script usehref=".\Fragments\frg_LangSE.xdp#som($template.form1.#subform.#variables.SE)"/>
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)" w="179mm">
@@ -2732,10 +2733,10 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Tasks\Fase3\010_WorkOrder_S010VE09_20130620_070317_D_B010FRJ.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 144?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 144?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:4850000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -2749,6 +2750,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -3133,14 +3135,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-12-03T13:47:24Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-01-21T08:56:33Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:6b88181e-1b7d-4c69-853e-41e238be6744</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:0b7e06f3-455b-443a-b408-0f4e6da071a9</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">

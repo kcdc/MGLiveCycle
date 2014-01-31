@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by Kim Christensen (Dafolo A/S) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:element name="Composite">
+	<xs:element name="PlainListLC">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:annotation>
@@ -52,12 +52,17 @@
 							<xs:element name="Pages" maxOccurs="10000">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="SeparatorPage" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="SepDescription" type="xs:string"/>
-													<xs:element name="SepDealerName" type="xs:string"/>
-													<xs:element name="SepDealerNo" type="xs:string"/>
+													<xs:element name="ParamSepId" type="xs:string"/>
+													<xs:element name="ParamProgram" type="xs:string"/>
+													<xs:element name="ParamTitle" type="xs:string"/>
+													<xs:element name="SepPageDetail1" type="xs:string"/>
+													<xs:element name="SepPageDetail2" type="xs:string"/>
+													<xs:element name="SepPageDetail3" type="xs:string"/>
+													<xs:element name="SepPageDetail4" type="xs:string"/>
+													<xs:element name="SepPageDetail5" type="xs:string"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
@@ -80,12 +85,17 @@
 							<xs:element name="Pages" maxOccurs="10000">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="SeparatorPage" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="SepDescription" type="xs:string"/>
-													<xs:element name="SepDealerName" type="xs:string"/>
-													<xs:element name="SepDealerNo" type="xs:string"/>
+													<xs:element name="ParamSepId" type="xs:string"/>
+													<xs:element name="ParamProgram" type="xs:string"/>
+													<xs:element name="ParamTitle" type="xs:string"/>
+													<xs:element name="SepPageDetail1" type="xs:string"/>
+													<xs:element name="SepPageDetail2" type="xs:string"/>
+													<xs:element name="SepPageDetail3" type="xs:string"/>
+													<xs:element name="SepPageDetail4" type="xs:string"/>
+													<xs:element name="SepPageDetail5" type="xs:string"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
@@ -183,12 +193,17 @@
 							<xs:element name="Pages" maxOccurs="10000">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="SeparatorPage" minOccurs="0">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="SepDescription" type="xs:string"/>
-													<xs:element name="SepDealerName" type="xs:string"/>
-													<xs:element name="SepDealerNo" type="xs:string"/>
+													<xs:element name="ParamSepId" type="xs:string"/>
+													<xs:element name="ParamProgram" type="xs:string"/>
+													<xs:element name="ParamTitle" type="xs:string"/>
+													<xs:element name="SepPageDetail1" type="xs:string"/>
+													<xs:element name="SepPageDetail2" type="xs:string"/>
+													<xs:element name="SepPageDetail3" type="xs:string"/>
+													<xs:element name="SepPageDetail4" type="xs:string"/>
+													<xs:element name="SepPageDetail5" type="xs:string"/>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>

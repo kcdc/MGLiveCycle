@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-12-10T16:03:10Z" uuid="475d7ab9-6ee1-4820-b9ec-4fe1602c3c3b">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-01-27T08:22:53Z" uuid="1d172663-4816-4fa9-829b-3db23dd471a8">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
    <?formServer formModel both?>
-   <subform name="Composite" layout="tb" locale="da_DK" restoreState="auto">
+   <subform name="PlainListLC" layout="tb" locale="da_DK" restoreState="auto">
       <pageSet>
          <pageArea name="mpgSeparatorPage" id="2f1ef74e-61b2-11e3-901f-00059a3c7a00">
             <medium stock="a4Plain" short="210mm" long="297mm"/>
             <contentArea x="6mm" y="12mm" w="197mm" h="284mm" name="contentArea1"/>
-            <?templateDesigner expand 1?>
-            <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="125mm" y="5mm">
-               <bind/>
+            <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="1mm" y="2mm">
                <?templateDesigner expand 1?>
             </subform>
-            <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="1mm" y="2mm">
+            <?templateDesigner expand 1?>
+            <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="125mm" y="6mm">
+               <bind/>
                <?templateDesigner expand 1?>
             </subform>
          </pageArea>
@@ -25,50 +25,52 @@
             <subform x="53mm" y="4mm" w="220.15mm" minH="50mm" name="subHeader">
                <bind match="none"/>
                <keep intact="none"/>
-               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="144mm" y="1mm">
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0in" y="0mm">
                   <bind/>
                   <?templateDesigner expand 1?>
                </subform>
-               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
+               <?templateDesigner expand 1?>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="144mm" y="2mm">
                   <bind/>
                   <?templateDesigner expand 1?>
                </subform>
-               <?templateDesigner expand 1?></subform>
+            </subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPageF2B" id="eb24fddf-60df-11e3-982c-00059a3c7a00">
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="6mm" y="9mm" w="197mm" h="284mm" name="contentArea1"/>
             <subform w="220.15mm" minH="50mm" name="subHeader">
                <bind match="none"/>
-               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="126mm" y="3mm">
-                  <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
                   <bind/>
                   <?templateDesigner expand 1?>
                </subform>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="126mm" y="6mm">
+                  <bind/>
+                  <?templateDesigner expand 1?>
+               </subform>
+            </subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPageListeL" id="Page1">
             <contentArea x="7mm" w="284mm" h="197mm" name="contentArea1" y="9mm"/>
             <medium stock="a4" short="210mm" long="297mm" orientation="landscape"/>
             <subform x="68mm" w="220.15mm" minH="50mm" name="subHeader">
                <bind match="none"/>
-               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="144mm" y="1mm">
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0in">
                   <bind/>
                   <?templateDesigner expand 1?>
                </subform>
-               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="144mm" y="6mm">
                   <bind/>
                   <?templateDesigner expand 1?>
                </subform>
                <?templateDesigner expand 1?></subform>
-            <subform x="7mm" w="284mm" name="subPyjamasStribes" y="8mm" layout="tb">
+            <subform x="7mm" w="284mm" name="subPyjamasStribes" y="9mm" layout="tb">
                <bind match="none"/>
-               <subform w="284mm" minH="9.525mm" layout="tb" name="subPyjamasStripeWithMargin">
+               <subform w="284mm" minH="12.5mm" layout="tb" name="subPyjamasStripeWithMargin">
                   <bind match="none"/>
-                  <subform w="284mm" name="subPyjamasStripe" h="9.525mm">
+                  <subform w="284mm" name="subPyjamasStripe" h="12.5mm">
                      <bind match="none"/>
                      <?templateDesigner expand 1?>
                      <margin bottomInset="0mm"/>
@@ -80,12 +82,12 @@
                         <corner thickness="0.1mm" presence="hidden"/>
                      </border>
                   </subform>
-                  <occur min="10" max="-1"/>
-                  <margin bottomInset="9.525mm"/>
+                  <occur min="8" max="-1"/>
+                  <margin bottomInset="12.5mm"/>
                   <?templateDesigner expand 1?></subform>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
-if(Composite.Header.Pyjamas.rawValue != "YES")
+if(PlainListLC.Header.Pyjamas.rawValue.toUpperCase() != "YES")
 {
 	this.presence = "hidden";
 }
@@ -96,11 +98,11 @@ if(Composite.Header.Pyjamas.rawValue != "YES")
          <pageArea name="mpgPageListeS" id="Page1_ID">
             <medium stock="a4" short="210mm" long="297mm"/>
             <contentArea x="6mm" y="12mm" w="197mm" h="284mm" name="contentArea1"/>
-            <subform y="11mm" w="197mm" name="subPyjamasStripes" x="6mm" layout="tb">
+            <subform y="12mm" w="197mm" name="subPyjamasStripes" x="6mm" layout="tb">
                <bind match="none"/>
                <subform w="197mm" layout="tb" name="subPyjamasStripeWithMargin">
                   <bind match="none"/>
-                  <subform w="197mm" name="subPyjamasStripe" h="9.525mm">
+                  <subform w="197mm" name="subPyjamasStripe" h="12.5mm">
                      <bind match="none"/>
                      <?templateDesigner expand 1?>
                      <margin bottomInset="0mm"/>
@@ -112,12 +114,12 @@ if(Composite.Header.Pyjamas.rawValue != "YES")
                         <corner thickness="0.1mm" presence="hidden"/>
                      </border>
                   </subform>
-                  <margin bottomInset="9.525mm"/>
-                  <occur min="15" max="-1"/>
+                  <margin bottomInset="12.5mm"/>
+                  <occur min="12" max="-1"/>
                   <?templateDesigner expand 1?></subform>
                <event activity="initialize" name="event__initialize">
                   <script contentType="application/x-javascript">
-if(Composite.Header.Pyjamas.rawValue != "YES")
+if(PlainListLC.Header.Pyjamas.rawValue.toUpperCase() != "YES")
 {
 	this.presence = "hidden";
 }
@@ -126,17 +128,18 @@ if(Composite.Header.Pyjamas.rawValue != "YES")
                <?templateDesigner expand 1?></subform>
             <subform minH="50mm" name="subHeader" w="203.15mm" y="5mm">
                <bind match="none"/>
-               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="127mm" y="1mm">
-                  <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0mm">
                   <bind/>
                   <?templateDesigner expand 1?>
                </subform>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="127mm" y="1mm">
+                  <bind/>
+                  <?templateDesigner expand 1?>
+               </subform>
+            </subform>
             <?templateDesigner expand 1?></pageArea>
-         <?templateDesigner expand 1?></pageSet>
+         <?templateDesigner expand 0?></pageSet>
       <subform name="Header" presence="hidden">
          <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
          <subform name="MediaControl">
@@ -468,64 +471,19 @@ if(Composite.Header.Pyjamas.rawValue != "YES")
       <subform layout="lr-tb" name="pageContentF2A" w="284mm">
          <bind match="dataRef" ref="$.F2A.Pages[*]"/>
          <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
-         <subform w="7.480319in" h="10.590542in" name="pageSeparator">
+         <subform w="190.4mm" h="10.590542in" name="pageSeparator">
             <bind match="dataRef" ref="$.SeparatorPage[*]"/>
-            <subform name="Subform2" x="0mm" y="0mm" w="190mm" h="242.939mm">
+            <subform name="Subform2" x="0.001mm" y="3.999mm" w="190.399mm" h="242.939mm">
                <bind match="none"/>
-               <margin topInset="5mm" leftInset="5mm"/>
-               <subform name="subWindow" x="7mm" y="22mm" w="91mm" h="45mm">
+               <margin topInset="0mm" leftInset="5mm"/>
+               <subform name="subWindow" x="88.999mm" y="66.001mm" w="91mm" h="45mm">
                   <bind match="none"/>
-                  <field name="SeparatorDealerNameMarketing" h="6mm" access="protected" minW="52mm" x="6mm" y="8mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$record.F2A.Pages[*].Page[*].SeparatorPage[*].SepDealerName"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                  </field>
-                  <field name="DealerNumber" h="14.7mm" y="23mm" access="protected" x="66mm" hAlign="right" minW="16mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Times New Roman" size="36pt" weight="bold"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle" hAlign="right"/>
-                     <bind match="dataRef" ref="$record.F2A.Pages[*].Page[*].SeparatorPage[*].SepDealerNo"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                  </field>
-                  <field name="TextToDisplay" h="6mm" access="protected" minW="46mm" x="6mm" y="34mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Courier New" size="9pt"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$record.F2A.Pages[*].Page[*].SeparatorPage[*].SepDescription"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                  </field>
                   <border>
                      <edge stroke="dotted" thickness="0.1mm"/>
                      <corner stroke="dotted" thickness="0.1mm"/>
                   </border>
                   <?templateDesigner expand 1?></subform>
-               <subform x="22mm" y="161mm" w="77mm" h="76.939mm" name="subLayout">
+               <subform x="22mm" y="161.001mm" w="77mm" h="76.939mm" name="subLayout">
                   <bind match="none"/>
                   <field name="TextToDisplay" access="protected" y="70mm" x="0mm" minW="38mm" minH="6.234mm">
                      <ui>
@@ -544,7 +502,7 @@ if(Composite.Header.Pyjamas.rawValue != "YES")
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
 
-this.rawValue = this.parent.parent.subWindow.TextToDisplay.rawValue;
+//this.rawValue = this.parent.parent.subWindow.TextToDisplay.rawValue;
 </script>
                      </event>
                   </field>
@@ -568,7 +526,7 @@ this.rawValue = this.parent.parent.subWindow.TextToDisplay.rawValue;
                      </border>
                      <event activity="initialize" name="event__initialize">
                         <script contentType="application/x-javascript">
-this.rawValue = this.parent.parent.subWindow.DealerNumber.rawValue;
+//this.rawValue = this.parent.parent.subWindow.DealerNumber.rawValue;
 </script>
                      </event>
                   </field>
@@ -588,14 +546,79 @@ this.rawValue = this.parent.parent.subWindow.DealerNumber.rawValue;
                      </border>
                      <event activity="docReady" ref="$host" name="event__docReady">
                         <script contentType="application/x-javascript">
-this.rawValue = this.parent.parent.subWindow.SeparatorDealerNameMarketing.rawValue;
+//this.rawValue = this.parent.parent.subWindow.SeparatorDealerNameMarketing.rawValue;
 </script>
                      </event>
                   </field>
                   <?templateDesigner expand 1?></subform>
+               <draw name="Circle1" y="0.001mm" x="170.999mm" w="14mm" h="14mm">
+                  <value>
+                     <arc hand="right" circular="1">
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </arc>
+                  </value>
+                  <para vAlign="middle" hAlign="center"/>
+               </draw>
+               <field name="DealerNumber" h="15mm" y="18.001mm" access="protected" x="37.999mm" hAlign="right" minW="42mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="36pt" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle" hAlign="right"/>
+                  <bind match="dataRef" ref="$record.ListeL.Pages[*].SeparatorPage.ParamSepId"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+               </field>
+               <field name="TextToDisplay" access="protected" minW="46mm" x="37.999mm" y="43.001mm" minH="15mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Courier New" size="36pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.ListeL.Pages[*].SeparatorPage.ParamProgram"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+               </field>
+               <field name="SeparatorDealerNameMarketing" h="8mm" access="protected" minW="52mm" x="11.999mm" y="69.001mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="14pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.ListeL.Pages[*].SeparatorPage.ParamTitle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+               </field>
                <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
             <breakBefore target="mpgSeparatorPage" targetType="pageArea"/>
+            <draw name="Circle1" y="255mm" x="0.001mm" w="14mm" h="14mm">
+               <value>
+                  <arc hand="right" circular="1">
+                     <fill>
+                        <color value="0,0,0"/>
+                     </fill>
+                  </arc>
+               </value>
+               <para vAlign="middle" hAlign="center"/>
+            </draw>
             <?templateDesigner expand 1?></subform>
          <subform name="subPageHolder" w="141mm" layout="tb">
             <bind match="dataRef" ref="$.Page[*]"/>
@@ -634,9 +657,8 @@ this.rawValue = this.parent.parent.subWindow.SeparatorDealerNameMarketing.rawVal
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?>
             <breakBefore target="mpgPageF2A" targetType="pageArea"/>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <event activity="initialize" name="event__initialize">
             <script contentType="application/x-javascript">
 //subPageInfo.subDealerOrderCarBrandCarModelColor._subCarContentLeft.setInstances(3);
@@ -878,135 +900,80 @@ this.rawValue = this.parent.parent.subWindow.SeparatorDealerNameMarketing.rawVal
          <occur min="0" max="-1"/>
          <?templateDesigner expand 1?></subform>
       <subform w="284mm" layout="tb" name="pageContentListeL">
-         <subform w="7.480319in" h="10.590542in" name="pageSeparator">
+         <subform w="193.4mm" h="10.590542in" name="pageSeparator">
             <bind match="dataRef" ref="$.SeparatorPage[*]"/>
-            <subform name="Subform2" x="0mm" y="0mm" w="190mm" h="242.939mm">
+            <subform name="Subform2" x="0.001mm" y="0.001mm" w="193.399mm" h="269mm">
                <bind match="none"/>
-               <margin topInset="5mm" leftInset="5mm"/>
-               <subform name="subWindow" x="7mm" y="22mm" w="91mm" h="45mm">
-                  <bind match="none"/>
-                  <field name="SeparatorDealerNameMarketing" h="6mm" access="protected" minW="52mm" x="6mm" y="8mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$record.ListeL.Pages[*].Page[*].SeparatorPage[*].SepDealerName"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                  </field>
-                  <field name="DealerNumber" h="14.7mm" y="23mm" access="protected" x="66mm" hAlign="right" minW="16mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Times New Roman" size="36pt" weight="bold"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle" hAlign="right"/>
-                     <bind match="dataRef" ref="$record.ListeL.Pages[*].Page[*].SeparatorPage[*].SepDealerNo"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                  </field>
-                  <field name="TextToDisplay" h="6mm" access="protected" minW="46mm" x="6mm" y="34mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Courier New" size="9pt"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$record.ListeL.Pages[*].Page[*].SeparatorPage[*].SepDescription"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                  </field>
+               <margin topInset="2mm" leftInset="5mm"/>
+               <field name="SeparatorDealerNameMarketing" h="8mm" access="protected" minW="52mm" x="21.999mm" y="65.999mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="14pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.ParamTitle"/>
                   <border>
-                     <edge stroke="dotted" thickness="0.1mm"/>
-                     <corner stroke="dotted" thickness="0.1mm"/>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
                   </border>
-                  <?templateDesigner expand 1?></subform>
-               <subform x="22mm" y="161mm" w="77mm" h="76.939mm" name="subLayout">
-                  <bind match="none"/>
-                  <field name="TextToDisplay" access="protected" y="70mm" x="0mm" minW="38mm" minH="6.234mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Times New Roman" weight="bold" size="14pt"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="none"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-
-this.rawValue = this.parent.parent.subWindow.TextToDisplay.rawValue;
-</script>
-                     </event>
-                  </field>
-                  <field name="DealerNumber" y="1mm" access="protected" x="43mm" hAlign="right" minW="16mm" minH="18.934mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="54pt" weight="bold"/>
-                     <margin topInset="1mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="bottom" hAlign="right"/>
-                     <bind match="none"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                        <corner thickness="0.1mm"/>
-                        <edge presence="hidden"/>
-                        <edge thickness="0.1mm"/>
-                        <edge presence="hidden"/>
-                     </border>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-this.rawValue = this.parent.parent.subWindow.DealerNumber.rawValue;
-</script>
-                     </event>
-                  </field>
-                  <field name="DealerNameMarketing" access="protected" minW="69mm" y="33mm" minH="9mm" x="1mm">
-                     <ui>
-                        <textEdit>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Times New Roman" size="22pt" weight="bold"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="none"/>
-                     <border>
-                        <edge presence="hidden"/>
-                        <corner presence="hidden"/>
-                     </border>
-                     <event activity="docReady" ref="$host" name="event__docReady">
-                        <script contentType="application/x-javascript">
-this.rawValue = this.parent.parent.subWindow.SeparatorDealerNameMarketing.rawValue;
-</script>
-                     </event>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
+               </field>
+               <field name="TextToDisplay" access="protected" minW="46mm" x="47.999mm" y="39.999mm" minH="15mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Courier New" size="36pt" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.ParamProgram"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+               </field>
+               <field name="DealerNumber" h="15mm" y="14.999mm" access="protected" x="47.999mm" hAlign="right" minW="42mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="36pt" weight="bold"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.ParamSepId"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+               </field>
+               <draw name="Circle1" y="-0.001mm" x="173.999mm" w="14mm" h="14mm">
+                  <value>
+                     <arc hand="right" circular="1">
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </arc>
+                  </value>
+                  <para vAlign="middle" hAlign="center"/>
+               </draw>
+               <draw name="Circle1" y="252.999mm" x="-0.001mm" w="14mm" h="14mm">
+                  <value>
+                     <arc hand="right" circular="1">
+                        <fill>
+                           <color value="0,0,0"/>
+                        </fill>
+                     </arc>
+                  </value>
+                  <para vAlign="middle" hAlign="center"/>
+               </draw>
                <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
             <breakBefore target="mpgSeparatorPage" targetType="pageArea"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform name="subPageHolder" h="203.2mm" w="284mm">
             <bind match="dataRef" ref="$.Page[*]"/>
             <occur min="0" max="-1"/>
@@ -1028,7 +995,7 @@ this.rawValue = this.parent.parent.subWindow.SeparatorDealerNameMarketing.rawVal
                      <bind match="dataRef" ref="$.PageDetail[*]"/>
                      <font size="11pt"/>
                   </field>
-                  <draw name="fldPageDetail" w="266.7mm" h="3.175mm">
+                  <draw name="fldPageDetail" w="266.7mm" h="4.175mm">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -1038,26 +1005,24 @@ this.rawValue = this.parent.parent.subWindow.SeparatorDealerNameMarketing.rawVal
                         </exData>
                      </value>
                      <font size="11pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1mm" rightInset="1mm"/>
                   </draw>
                   <occur min="0" max="-1"/>
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?>
             <breakBefore target="mpgPageListeL" targetType="pageArea"/>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <breakBefore target="mpgSeparatorPage" targetType="pageArea"/>
          <occur min="0" max="-1"/>
-         <?templateDesigner expand 1?>
          <bind match="dataRef" ref="$.ListeL.Pages[*]"/>
          <event activity="initialize" name="event__initialize">
-            <script contentType="application/x-javascript">
+            <script contentType="application/x-javascript">//this code handles the separatorpage and sets the normal masterpage when there is no separatorpage
 try
 {
 if(this.pageSeparator == null)
 {
 
-	this["#breakBefore"].target = "mpgPageListeL";
+		this["#breakBefore"].target = "mpgPageListeL";
 
 }
 }
@@ -1065,9 +1030,10 @@ catch(e)
 {
 	this["#breakBefore"].target = "mpgPageListeL";
 }
+
 </script>
          </event>
-      </subform>
+         <?templateDesigner expand 1?></subform>
       <subform w="196.999mm" layout="tb" name="pageContentListeS">
          <subform name="subPageHolder" h="203.2mm" w="196.999mm">
             <bind match="dataRef" ref="$record.ListeS.Pages[*].Page[*]"/>
@@ -1132,7 +1098,7 @@ catch(e)
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Gruppe C\Composite_from_MG.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\001_PlainList_S001IT01_20140113_123258_D_SYS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner FormTargetVersion 30?>
@@ -1163,7 +1129,7 @@ catch(e)
       <common>
          <data>
             <xsl>
-               <uri>.\XSD\TransformToComposite.xsl</uri>
+               <uri>.\XSD\TransformToPlainListLC.xsl</uri>
             </xsl>
             <outputXSL>
                <uri/>
@@ -1176,15 +1142,15 @@ catch(e)
    </present>
 </config>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
-   <xsdConnection name="DataConnection" dataDescription="Composite">
-      <uri>.\XSD\Composite.xsd</uri>
-      <rootElement>Composite</rootElement>
-      <?templateDesigner fileDigest shaHash="mUtU4qXaNEbgmuY1oVH/E4irQk8="?></xsdConnection>
+   <xsdConnection name="DataConnection" dataDescription="PlainListLC">
+      <uri>.\XSD\PlainListLC.xsd</uri>
+      <rootElement>PlainListLC</rootElement>
+      <?templateDesigner fileDigest shaHash="7HUvx3aMESsth46/1B8Y+i+cRu4="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
-   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="Composite">
-      <Composite>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="PlainListLC">
+      <PlainListLC>
          <Document>
             <DocumentHeader>
                <FooterA1/>
@@ -1218,10 +1184,15 @@ catch(e)
          </Document>
          <F2A>
             <Pages dd:maxOccur="10000">
-               <SeparatorPage dd:minOccur="0" dd:maxOccur="-1">
-                  <SepDescription/>
-                  <SepDealerName/>
-                  <SepDealerNo/>
+               <SeparatorPage dd:minOccur="0">
+                  <ParamSepId/>
+                  <ParamProgram/>
+                  <ParamTitle/>
+                  <SepPageDetail1/>
+                  <SepPageDetail2/>
+                  <SepPageDetail3/>
+                  <SepPageDetail4/>
+                  <SepPageDetail5/>
                </SeparatorPage>
                <Page dd:maxOccur="10000">
                   <PageDetail dd:maxOccur="-1"/>
@@ -1230,10 +1201,15 @@ catch(e)
          </F2A>
          <F2B>
             <Pages dd:maxOccur="10000">
-               <SeparatorPage dd:minOccur="0" dd:maxOccur="-1">
-                  <SepDescription/>
-                  <SepDealerName/>
-                  <SepDealerNo/>
+               <SeparatorPage dd:minOccur="0">
+                  <ParamSepId/>
+                  <ParamProgram/>
+                  <ParamTitle/>
+                  <SepPageDetail1/>
+                  <SepPageDetail2/>
+                  <SepPageDetail3/>
+                  <SepPageDetail4/>
+                  <SepPageDetail5/>
                </SeparatorPage>
                <Page dd:maxOccur="10000">
                   <PageDetail dd:maxOccur="-1"/>
@@ -1277,10 +1253,15 @@ catch(e)
          </Header>
          <ListeL>
             <Pages dd:maxOccur="10000">
-               <SeparatorPage dd:minOccur="0" dd:maxOccur="-1">
-                  <SepDescription/>
-                  <SepDealerName/>
-                  <SepDealerNo/>
+               <SeparatorPage dd:minOccur="0">
+                  <ParamSepId/>
+                  <ParamProgram/>
+                  <ParamTitle/>
+                  <SepPageDetail1/>
+                  <SepPageDetail2/>
+                  <SepPageDetail3/>
+                  <SepPageDetail4/>
+                  <SepPageDetail5/>
                </SeparatorPage>
                <Page dd:maxOccur="10000">
                   <PageDetail dd:maxOccur="-1"/>
@@ -1294,7 +1275,7 @@ catch(e)
                </Page>
             </Pages>
          </ListeS>
-      </Composite>
+      </PlainListLC>
    </dd:dataDescription>
 </xfa:datasets>
 <localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
@@ -1404,14 +1385,14 @@ catch(e)
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-12-10T16:03:10Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-01-27T08:22:53Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:475d7ab9-6ee1-4820-b9ec-4fe1602c3c3b</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:1d172663-4816-4fa9-829b-3db23dd471a8</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -1422,7 +1403,7 @@ catch(e)
    </rdf:RDF>
 </x:xmpmeta>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="XFASchemaXSD">
-   <xs:element name="Composite">
+   <xs:element name="PlainListLC">
       <xs:complexType>
          <xs:sequence>
             <xs:annotation>
@@ -1473,12 +1454,17 @@ catch(e)
                      <xs:element name="Pages" maxOccurs="10000">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+                              <xs:element name="SeparatorPage" minOccurs="0">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="SepDescription" type="xs:string"/>
-                                       <xs:element name="SepDealerName" type="xs:string"/>
-                                       <xs:element name="SepDealerNo" type="xs:string"/>
+                                       <xs:element name="ParamSepId" type="xs:string"/>
+                                       <xs:element name="ParamProgram" type="xs:string"/>
+                                       <xs:element name="ParamTitle" type="xs:string"/>
+                                       <xs:element name="SepPageDetail1" type="xs:string"/>
+                                       <xs:element name="SepPageDetail2" type="xs:string"/>
+                                       <xs:element name="SepPageDetail3" type="xs:string"/>
+                                       <xs:element name="SepPageDetail4" type="xs:string"/>
+                                       <xs:element name="SepPageDetail5" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -1501,12 +1487,17 @@ catch(e)
                      <xs:element name="Pages" maxOccurs="10000">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+                              <xs:element name="SeparatorPage" minOccurs="0">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="SepDescription" type="xs:string"/>
-                                       <xs:element name="SepDealerName" type="xs:string"/>
-                                       <xs:element name="SepDealerNo" type="xs:string"/>
+                                       <xs:element name="ParamSepId" type="xs:string"/>
+                                       <xs:element name="ParamProgram" type="xs:string"/>
+                                       <xs:element name="ParamTitle" type="xs:string"/>
+                                       <xs:element name="SepPageDetail1" type="xs:string"/>
+                                       <xs:element name="SepPageDetail2" type="xs:string"/>
+                                       <xs:element name="SepPageDetail3" type="xs:string"/>
+                                       <xs:element name="SepPageDetail4" type="xs:string"/>
+                                       <xs:element name="SepPageDetail5" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -1604,12 +1595,17 @@ catch(e)
                      <xs:element name="Pages" maxOccurs="10000">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="SeparatorPage" minOccurs="0" maxOccurs="unbounded">
+                              <xs:element name="SeparatorPage" minOccurs="0">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="SepDescription" type="xs:string"/>
-                                       <xs:element name="SepDealerName" type="xs:string"/>
-                                       <xs:element name="SepDealerNo" type="xs:string"/>
+                                       <xs:element name="ParamSepId" type="xs:string"/>
+                                       <xs:element name="ParamProgram" type="xs:string"/>
+                                       <xs:element name="ParamTitle" type="xs:string"/>
+                                       <xs:element name="SepPageDetail1" type="xs:string"/>
+                                       <xs:element name="SepPageDetail2" type="xs:string"/>
+                                       <xs:element name="SepPageDetail3" type="xs:string"/>
+                                       <xs:element name="SepPageDetail4" type="xs:string"/>
+                                       <xs:element name="SepPageDetail5" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
