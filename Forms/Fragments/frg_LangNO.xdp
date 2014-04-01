@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-17-26 11:17:57" uuid="542bf5c7-2789-417f-bf6a-b01ce9b1db31">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-35-31 10:35:26" uuid="1ccc4153-65eb-4377-aece-c520cc17278f">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -16,7 +16,7 @@
 		
 				var L_InvoiceNo = "Fakturanr.:";
 var L_InvoiceNo_K = "Kreditnota:";
-var L_InvoiceNo_N = "Kreditnota.:";
+var L_InvoiceNo_N = "Kreditnota:";
 var L_InvoiceSeries = "Fakturaserie:";
 var L_InvoiceTitle_F = "Faktura";
 var L_InvoiceTitle_I = "Intern faktura";
@@ -37,6 +37,7 @@ var L_LoanCondition = "Lånetilbud gitt med forbehold om endelig kredittgodkjenn
 var L_LoanPrePaymentAmount = "Kontantinnsats";
 var L_LoanTradeInEncumbrance = "Heftelser på innbyttebil";
 var L_LeaserNameSign = "Leier";
+var L_SAPriceTotal = "Serviceavtale jfr. Egen avtale";
 var L_InvoiceTitle_S = "Samlefaktura";
 var L_InvoiceType = "Fakt.type";
 var L_KidLine = "KIDnr.:";
@@ -67,7 +68,7 @@ var L_Options = "Ekstrautstyr";
 var L_OptionTotalVat = "Mva andel på tilleggsutstyr";
 var L_NumberOfPeriods = "Første leiefaktura inneholder etab.gebyr. Antall Terminer:";
 var L_OrderNo = "Ordrenr.:";
-var L_OurRef = "Referanse:";
+var L_OurRef = "Ref.:";
 var L_OwnerName = "Eier:";
 var L_OwnRisk = "Egenandel, Kr:";
 var L_Page = "Side";
@@ -285,7 +286,7 @@ var L_FreightPriceTotal = "Frakt- og leveringsomkostninger";
 var L_GreetingsText = "Vennlig hilsen,";
 var L_Hour = "Timer:";
 var L_Insurance = "Forsikring";
-var L_InsuranceCompany = "Forhandler forikrer bilen i";
+var L_InsuranceCompany = "Forhandler forsikrer bilen i";
 var L_InsuranceMileage = "Kjørelengde pr. år, km:";
 var L_InsuranceNameRef = "Forsikringsref.:";
 var L_InsuranceVat = "Mva dekkes av forsikringstaker kr.:";
@@ -341,7 +342,7 @@ var L_Interior = "Interiør:";
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:542bf5c7-2789-417f-bf6a-b01ce9b1db31</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:1ccc4153-65eb-4377-aece-c520cc17278f</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

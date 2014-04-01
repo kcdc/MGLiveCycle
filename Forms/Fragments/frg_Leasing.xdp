@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-02-28T12:11:38Z" uuid="3b782ac1-5b3b-4940-9185-4fae267b4baa">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-03-25T07:04:07Z" uuid="7a692dd5-27c9-41ba-8f2f-7ce479b758d4">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -108,6 +108,38 @@ this.caption.value.text = output;
                </field>
                <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
+            <field name="fldLeaserRegNo" access="readOnly" minH="4mm" x="147.999mm" y="0.764mm" w="31mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+               <bind match="dataRef" ref="$.Document.Leasing.LeaserRegNo"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+               </event>
+            </field>
+            <field name="fldLLeaserIdLabel" access="readOnly" minH="4mm" x="116.999mm" y="0.764mm" w="31mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+               <bind match="dataRef" ref="$.Document.Leasing.LeaserIdLabel"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+               </event>
+            </field>
             <?templateDesigner expand 1?></subform>
          <subform h="4mm" name="subFinancingCompany">
             <bind match="none"/>
@@ -212,14 +244,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-02-28T12:11:38Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-03-25T07:04:07Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:3b782ac1-5b3b-4940-9185-4fae267b4baa</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:7a692dd5-27c9-41ba-8f2f-7ce479b758d4</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

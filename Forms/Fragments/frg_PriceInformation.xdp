@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-10-14T06:38:43Z" uuid="46fd5d60-1352-4298-8c26-494c24941a01">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-03-12T15:12:21Z" uuid="20e1002d-13be-4819-9391-368240ce0eff">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -736,6 +736,58 @@ if(this.rawValue != "" &amp;&amp; this.rawValue != null)
                <?templateDesigner expand 1?></subform>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
+         <subform w="179mm" h="4mm" name="subSAPriceTotal">
+            <bind match="none"/>
+            <subform x="0.001mm" w="139mm" layout="tb" name="subSAText">
+               <field name="L_SAPriceTotal" minH="4mm" minW="65mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="none"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Serviceavtale jfr. Egen avtale</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <field name="numSAPriceTotal" x="139mm" access="readOnly" minH="4mm" minW="23mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <para hAlign="right"/>
+               <caption reserve="0in">
+                  <font typeface="Arial" size="9pt" weight="bold"/>
+                  <para hAlign="right" vAlign="middle"/>
+               </caption>
+               <bind match="dataRef" ref="$.Document.PriceInformation.SAPriceTotal"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
+</script>
+               </event>
+            </field>
+            <occur min="0" max="-1"/>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" h="4mm" name="subSVAPriceTotal">
             <bind match="none"/>
             <subform x="0.001mm" w="139mm" layout="tb" name="subSVAText">
@@ -1287,8 +1339,8 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
    <?templateDesigner SaveTaggedPDF 1?>
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 140?>
-   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 144?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -1315,14 +1367,14 @@ this.rawValue = formattingScripts.replaceDotsWithSpaces(this.rawValue);
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-10-14T06:38:43Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-03-12T15:12:21Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:46fd5d60-1352-4298-8c26-494c24941a01</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:20e1002d-13be-4819-9391-368240ce0eff</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
