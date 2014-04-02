@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-02-28T11:59:45Z" uuid="513c6cd5-39df-41b2-b216-6b457ad13c52">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-04-01T12:15:09Z" uuid="15900592-6f7e-4e50-bccc-4e70486c6b2d">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -296,97 +296,12 @@ this.caption.value.text = output;
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></subform>
-         <subform w="179mm" name="subInformation" layout="tb">
-            <bind match="none"/>
-            <subform w="179mm" minH="33mm" name="subCustomerInfo" layout="lr-tb">
-               <bind match="none"/>
-               <subform w="179mm" name="subCustomerPhone" layout="lr-tb">
-                  <bind match="none"/>
-                  <field name="L_CustomerPhoneNo" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="31mm" h="4mm" access="readOnly">
-                     <ui>
-                        <textEdit/>
-                     </ui>
-                     <caption reserve="12mm">
-                        <value>
-                           <text xliff:rid="DDBB11D0-D7FC-4250-8B35-76BFE25E72B2">Tlf.dag:</text>
-                        </value>
-                        <font>
-                           <fill>
-                              <color/>
-                           </fill>
-                        </font>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneOrder"/>
-                     <event activity="initialize" ref="$" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="L_CustomerPhonePrivat" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="28mm" h="4mm" access="readOnly">
-                     <ui>
-                        <textEdit/>
-                     </ui>
-                     <caption reserve="11mm">
-                        <value>
-                           <text xliff:rid="A249450A-EC87-4962-A436-77A43EB88988">Privat:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneFixed"/>
-                  </field>
-                  <field name="L_CustomerPhoneWork" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="29mm" h="4mm" access="readOnly">
-                     <ui>
-                        <textEdit/>
-                     </ui>
-                     <caption reserve="12mm">
-                        <value>
-                           <text xliff:rid="ACBFAB57-82F8-4C65-B070-397274BB5FF4">Arbeid:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneWork"/>
-                     <event activity="initialize" ref="$" name="event__initialize">
-                        <script contentType="application/x-javascript">
-
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="L_CustomerPhoneMobile" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="28mm" h="4mm" access="readOnly">
-                     <ui>
-                        <textEdit/>
-                     </ui>
-                     <caption reserve="11mm">
-                        <value>
-                           <text xliff:rid="37E6C001-C032-4E21-BFB4-71FFA2D544CD">Mobil:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.HeaderInfo.CustomerPhoneMobile"/>
-                     <event activity="initialize" ref="$" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
+         <subform usehref=".\Fragments\frg_TelephoneRow.xdp#som($template.form1.subInformation)">
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subCarInformation" layout="tb">
             <bind match="none"/>
             <subform usehref=".\Fragments\frg_CarInfoRow.xdp#som($template.form1.subCarInfo)">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="179mm" name="subDetailedCarInfo" layout="lr-tb">
                <bind match="none"/>
                <field name="L_CarType" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Top)" minH="8mm" minW="22mm" access="readOnly">
@@ -487,8 +402,7 @@ this.caption.value.text = output;
             </border>
             <margin topInset="1mm"/>
             <subform usehref=".\Fragments\frg_OwnerLeaserUser.xdp#som($template.form1.subEierBruker)">
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <subform w="179.064mm" minH="8mm" name="subBilplass">
                <bind match="none"/>
                <keep intact="none"/>
@@ -2758,8 +2672,8 @@ this.caption.value.text = output;
       <proto>
          <field name="designer__defaultHyphenation"/>
       </proto>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 152 38 000300120024002500260027002F003000310032003300350036003700380039004200440045004600480049004A004C004E004F005000510052005300550056005700580059005C005E0060 /ABCDLMNOPRSTUV_abcefgiklmnoprstuvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 200 52 0003000A00110012001D002400250026002700280029002A002C002E002F003000310032003300350036003700390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 './:ABCDEFGIKLMNOPRSTV_abcdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Arial" 1 1 ISO-8859-1 4 36 9 001D00240048004A004C004E005000510055:Aegikmnr?>
@@ -2770,8 +2684,6 @@ this.caption.value.text = output;
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
-   <?templateDesigner Zoom 144?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -2784,9 +2696,11 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til task\10936\027_WorkOrder_S001IT05_20140212_100724611_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 3\Vedlegg til task\11408\994_WorkOrder_S001IT05_20140331_091043649_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 144?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -3187,14 +3101,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-02-28T11:59:45Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-04-01T12:15:09Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:513c6cd5-39df-41b2-b216-6b457ad13c52</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:15900592-6f7e-4e50-bccc-4e70486c6b2d</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
