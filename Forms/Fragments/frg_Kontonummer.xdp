@@ -1,137 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-04-11T12:13:42Z" uuid="737140eb-67ff-48aa-979f-5fd110393b76">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-05-06T08:37:02Z" uuid="05f27579-3bde-4733-b152-178e5c42785c">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
       <pageSet>
          <pageArea>
+            <contentArea x="15mm" y="41mm" w="190mm" h="229mm" name="areaPage1"/>
             <medium stock="a4" short="210mm" long="297mm"/>
-            <contentArea x="15mm" y="75mm" w="190mm" h="194mm" name="areaPage1" id="areaPage1_ID"/>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
-      <subform name="subDocInfo" layout="lr-tb" w="70mm">
+      <subform name="frg_Kontonummer" layout="tb">
          <bind match="none"/>
-         <subform w="70mm" minH="9mm" layout="lr-tb" name="subThroughputNo">
-            <field name="L_ThroughputNo" w="62mm" id="floatingField002019" presence="hidden" access="readOnly" minH="9mm">
-               <ui>
-                  <textEdit>
-                     <border>
-                        <edge stroke="lowered"/>
-                     </border>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="8.5pt" weight="bold"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle frg_Kontonummer?>
+         <field name="L_BankName" y="0mm" x="0mm" h="3mm" id="floatingField017785" presence="hidden" access="readOnly" minW="62mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
 
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-if(output != "")
-{
-	this.rawValue = output;
-}
-
-else
-{
-		this.rawValue = "VAR FOR: "+this.name+" NOT FOUND";	
-}
+this.rawValue = output;
 </script>
-               </event>
-               <bind match="none"/>
-            </field>
-            <field name="floatThroughputNo" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-               <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
-            </field>
-            <draw name="txt_ThroughputNo" h="4.168mm" minW="70mm">
-               <ui>
-                  <textEdit/>
-               </ui>
-               <value>
-                  <exData contentType="text/html">
-                     <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField002019"/><span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:9pt"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField008232"/></span></p></body>
-                  </exData>
-               </value>
-               <font size="8.5pt" typeface="Arial"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-            </draw>
-            <?templateDesigner expand 1?></subform>
-         <subform y="4.168mm" w="70mm" minH="4.168mm" layout="lr-tb" name="subReceivedDate">
-            <subform usehref=".\frg_ReceivedDate.xdp#som($template.form1.frg_ReceivedDate)">
-               <?templateDesigner expand 1?></subform>
-            <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
-         <?templateDesigner isFragment yes?>
-         <?templateDesigner fragmentTitle frg_DocInfo?>
-         <?templateDesigner fragmentDescription GEN_A?>
-         <subform y="8.336mm" w="70mm" minH="4.168mm" layout="lr-tb" name="subOurRef">
-            <subform usehref=".\frg_OurRef.xdp#som($template.form1.subOurRef)">
-               <?templateDesigner expand 1?></subform>
-            <occur min="0" max="-1"/>
-            <?templateDesigner expand 1?></subform>
+            </event>
+         </field>
+         <field name="fldAccountNumber" y="0mm" x="0mm" h="3mm" id="floatingField032381" presence="hidden" access="readOnly" minW="62mm">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Myriad Pro"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <para vAlign="middle"/>
+            <bind match="dataRef" ref="$.Document.HeaderInfo.BankAccLocal"/>
+         </field>
+         <draw name="fldBankInformation" h="3mm" minW="17mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField017785"/><span style="xfa-spacerun:yes"> </span><span style="font-weight:normal"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField032381"/></span></p></body>
+               </exData>
+            </value>
+            <font size="8pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+         </draw>
          <?templateDesigner expand 1?></subform>
-      <proto>
-         <subform name="designer__stylesheet">
-            <subform name="SubformStyle1" w="203.2mm">
-               <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
-            </subform>
-            <field name="TextFieldStyle_Top" minW="37mm" minH="8mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font size="9pt" typeface="Arial"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <caption reserve="4mm" placement="top">
-                  <font size="8.5pt" typeface="Arial" weight="bold"/>
-                  <para vAlign="bottom"/>
-               </caption>
-               <border>
-                  <edge presence="hidden"/>
-               </border>
-               <para vAlign="middle"/>
-            </field>
-            <field name="TextFieldStyle_Left" minW="62mm" h="4.318mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font size="9pt" typeface="Arial"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <para vAlign="middle"/>
-               <caption reserve="23.4266mm">
-                  <font size="8.5pt" typeface="Arial" weight="bold"/>
-                  <para vAlign="middle"/>
-               </caption>
-               <border>
-                  <edge presence="hidden"/>
-               </border>
-            </field>
-         </subform>
-      </proto>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 56 14 0003002700320035004400480049004F0052005500570058005E0060 DORaeflortu{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 96 24 0027002F0031003200350037004200440046004700480049004A004B004C004F005200530055005700580059005E0060DLNORT_acdefghiloprtuv{}?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 64 16 0024003100450046004700480049004F005000510052005500570058005E0060ANbcdeflmnortu{}?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 48 12 00030025002F0031004200440048004E00500051005E0060 BLN_aekmn{}?>
    </subform>
-   <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
-   <?templateDesigner SaveTaggedPDF 1?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 1?>
+   <?templateDesigner Grid show:1, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Zoom 144?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
@@ -161,14 +99,14 @@ else
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-04-11T12:13:42Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-05-06T08:37:02Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:737140eb-67ff-48aa-979f-5fd110393b76</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:05f27579-3bde-4733-b152-178e5c42785c</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
@@ -176,15 +114,15 @@ else
                <rdf:li rdf:parseType="Resource">
                   <dc:title>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">frg_DocInfo</rdf:li>
+                        <rdf:li xml:lang="x-default">frg_Kontonummer</rdf:li>
                      </rdf:Alt>
                   </dc:title>
                   <dc:description>
                      <rdf:Alt>
-                        <rdf:li xml:lang="x-default">GEN_A</rdf:li>
+                        <rdf:li xml:lang="x-default"/>
                      </rdf:Alt>
                   </dc:description>
-                  <dc:identifier>$template.form1.subDocInfo</dc:identifier>
+                  <dc:identifier>$template.form1.frg_Kontonummer</dc:identifier>
                   <lcd:fragmentRole>Subform</lcd:fragmentRole>
                </rdf:li>
             </rdf:Seq>

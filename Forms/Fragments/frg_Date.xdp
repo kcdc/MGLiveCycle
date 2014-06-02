@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <contentArea x="15mm" y="41mm" w="190mm" h="227mm" name="areaPage1"/>
+            <medium stock="a4" short="210mm" long="297mm"/>
+         </pageArea>
+      </pageSet>
+      <subform w="70mm" minH="9mm" layout="lr-tb" name="subDate">
+         <field name="L_Date" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField019586">
+            <ui>
+               <textEdit>
+                  <border>
+                     <edge stroke="lowered"/>
+                  </border>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial" size="8.5pt" weight="bold"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.rawValue = output;
+}
+
+else
+{
+		this.rawValue = "VAR FOR: "+this.name+" NOT FOUND";	
+}
+</script>
+            </event>
+            <bind match="none"/>
+         </field>
+         <field name="floatDate" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField010452">
+            <ui>
+               <textEdit>
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial" size="9pt"/>
+            <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+            <bind match="dataRef" ref="Document.DocumentHeader.DateCreated"/>
+         </field>
+         <draw name="txt_Date" h="4.168mm" minW="70mm">
+            <ui>
+               <textEdit/>
+            </ui>
+            <value>
+               <exData contentType="text/html">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField019586"/><span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:9pt;font-weight:normal"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField010452"/></span></p></body>
+               </exData>
+            </value>
+            <font size="8.5pt" typeface="Arial"/>
+            <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+         </draw>
+         <?templateDesigner expand 1?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle frg_Date?></subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">frg_Date</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default"/>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.subDate</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

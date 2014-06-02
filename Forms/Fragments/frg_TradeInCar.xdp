@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-05-26T17:08:30Z" uuid="0e2a32c6-3a9b-4d93-b2f2-2eea61f36276">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1static?>
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea x="15mm" y="41mm" w="190mm" h="223mm" name="areaPage1"/>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="179mm" name="subTradeInCar" layout="lr-tb">
+         <bind match="none"/>
+         <margin topInset="4mm"/>
+         <subform w="178.999mm" h="4mm" name="subTradeInTitle">
+            <bind match="none"/>
+            <field name="L_TradeIn" access="readOnly" w="178.999mm" h="4mm" x="0mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <caption reserve="0in">
+                  <font typeface="Arial" size="9pt" weight="bold"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>Innbyttebil</text>
+                  </value>
+               </caption>
+               <bind match="none"/>
+               <para vAlign="middle"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+               </event>
+            </field>
+            <?templateDesigner expand 1?></subform>
+         <subform w="88.991mm" h="24mm" name="subTradeInLeftSide">
+            <bind match="none"/>
+            <subform x="0.001mm" y="0mm" name="subCarBrand" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInCarBrand" access="readOnly" h="4mm" minW="9.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Merke:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldCarBrand" access="readOnly" minH="4mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.CarBrand"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <subform x="0.001mm" y="4mm" name="subRegisteredYear" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInRegisteredYear" access="readOnly" h="4mm" minW="12.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Årsmodell:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldTradeInRegisteredYear" access="readOnly" minH="4mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.RegisteredYear"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <subform x="0.001mm" y="8mm" name="subColor" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInColor" access="readOnly" h="4mm" minW="9.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Farge:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldTradeInColor" access="readOnly" minH="4mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.TradeinColor"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <subform x="0.001mm" y="12mm" name="subVin" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInVIN" access="readOnly" h="4mm" minW="11.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Chassinr.:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldTradeInVIN" access="readOnly" minH="4mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.TradeinVIN"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <subform x="0.001mm" y="16mm" name="subRegDate" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInRegDate" access="readOnly" h="4mm" minW="25.999mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Første gang registrert:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldTradeInRegDate" access="readOnly" minH="4mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.TradeinRegDate"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <subform name="subEncumbrance" layout="lr-tb" y="20mm" x="0.001mm">
+               <bind match="none"/>
+               <field name="L_TradeInEncumbrance" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField015426" presence="hidden" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.rawValue = output;
+</script>
+                  </event>
+               </field>
+               <field name="fldTradeinEncumbrance" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField018465" presence="hidden" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="9pt" typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.TradeinEncumbrance"/>
+               </field>
+               <field name="L_Pr" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField023842" presence="hidden" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+if(subEncumbrance.fldTradeinEncumbranceDate.rawValue != null)
+{
+		var LangCode = getLanguages.getLanguageSetting();
+
+		var output = getLanguages.getLanguageText(LangCode, this.name);
+
+		if(output!= null)
+		{
+			this.rawValue = " "+output;
+		}
+		else
+		{
+			output = "";
+		}
+}
+else
+{
+	this.rawValue = "";
+}
+</script>
+                  </event>
+               </field>
+               <field name="fldTradeinEncumbranceDate" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField027058" presence="hidden" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Myriad Pro"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.TradeinEncumbranceDate"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+this.rawValue = " "+this.rawValue;
+</script>
+                  </event>
+               </field>
+               <draw name="fldTradeinEncumbranceLine" h="0.157472in" w="3.503542in">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField015426"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField018465"/><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField023842"/><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField027058"/></p></body>
+                     </exData>
+                  </value>
+                  <font size="9pt" typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <para vAlign="middle" lineHeight="16.8pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
+         <subform w="51.882mm" h="16mm" name="subTradeInRightSide">
+            <bind match="none"/>
+            <subform x="0mm" y="0mm" name="subModelDesc" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInModelDesc" access="readOnly" h="4mm" minW="7.951mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Modell:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldTradeInModelDesc" access="readOnly" minH="4.001mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.TradeinModelDesc"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <subform x="0mm" y="4mm" name="subRegNo" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInRegno" access="readOnly" h="4mm" minW="7.951mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Regnr.:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldTradeInRegNo" access="readOnly" minH="4mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.TradeinRegNo"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <subform x="0mm" y="8mm" name="subMileage" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInMileage" access="readOnly" h="4mm" minW="7.951mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>KM stand:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldTradeInMileage" access="readOnly" minH="4mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.TradeinMileage"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <subform x="0mm" y="12mm" name="subRegistrationFeePaid" layout="lr-tb">
+               <bind match="none"/>
+               <field name="L_TradeInRegistrationFeePaid" access="readOnly" h="4mm" minW="7.951mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <caption reserve="0in">
+                     <value>
+                        <text>Årsavgift betalt:</text>
+                     </value>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <field name="fldRegistrationFeePaid" access="readOnly" minH="4mm" minW="30mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.Document.TradeInCar.RegistrationFeePaid"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+//app.alert(this.rawValue);
+</script>
+                  </event>
+                  <para vAlign="middle"/>
+               </field>
+               <keep intact="contentArea"/>
+               <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
+         <subform w="179mm" name="subEncumbranceDesc" layout="tb">
+            <bind match="dataRef" ref="$.Document.TradeInCar.TradeinFreeText[*]"/>
+            <subform w="179mm" name="subEncumbranceLine" layout="tb">
+               <bind match="none"/>
+               <field name="fldEncumbranceDescLine" access="readOnly" w="179mm" h="4mm">
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="9pt"/>
+                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                  <bind match="dataRef" ref="$.TradeinFreeTextdesc[*]"/>
+                  <caption reserve="0in">
+                     <font typeface="Arial" size="9pt" weight="bold"/>
+                     <para vAlign="middle"/>
+                  </caption>
+                  <para vAlign="middle"/>
+               </field>
+               <occur min="0" max="-1"/>
+               <?templateDesigner expand 1?></subform>
+            <margin topInset="0mm"/>
+            <occur min="0" max="-1"/>
+            <?templateDesigner expand 1?></subform>
+         <subform name="subInPrice" layout="lr-tb">
+            <bind match="none"/>
+            <field name="L_TradeInPrice" access="readOnly" h="4mm" minW="24.999mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+               <caption reserve="0in">
+                  <value>
+                     <text>Avtalt innbyttepris:</text>
+                  </value>
+                  <para vAlign="middle"/>
+               </caption>
+               <bind match="none"/>
+               <event activity="initialize" name="event__initialize">
+                  <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+               </event>
+               <para vAlign="middle"/>
+            </field>
+            <field name="fldTradeinPrice" access="readOnly" minH="4mm" minW="30mm">
+               <ui>
+                  <numericEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </numericEdit>
+               </ui>
+               <font typeface="Arial" size="9pt"/>
+               <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$.Document.PriceInformation.TradeinPrice">
+                  <picture>num{zzzzzzzzzzzz9}</picture>
+               </bind>
+               <format>
+                  <picture>num{z,zzz,zzz,zz9}</picture>
+               </format>
+            </field>
+            <keep intact="contentArea"/>
+            <?templateDesigner expand 1?></subform>
+         <field name="L_TradeInText" access="readOnly" minH="16mm" w="178.999mm">
+            <ui>
+               <textEdit multiLine="1">
+                  <border presence="hidden"/>
+                  <margin/>
+               </textEdit>
+            </ui>
+            <font typeface="Arial" size="9pt"/>
+            <margin topInset="0.5mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+            <caption reserve="0in">
+               <value>
+                  <text>Innbyttepris er gitt under forutsetninger av at bilen er i samme stand som ved takst. Rett til omtakst forbeholdes. Bilen leveres med det utstyr som ble avtalt ved taksering. Sommer- og vinterhjul som innleveres sammen med bilen har godkjent mønsterdybde. Kjøperen forsikrer at innbyttebilen er hans eiendom, at den ikke hefter ansvar for skatter og avgifter på bilen. Speedometerstand er korrekt.</text>
+               </value>
+            </caption>
+            <bind match="none"/>
+            <para vAlign="middle"/>
+            <event activity="initialize" name="event__initialize">
+               <script contentType="application/x-javascript">
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+this.caption.value.text = output;
+</script>
+            </event>
+         </field>
+         <occur min="0" max="-1"/>
+         <?templateDesigner expand 0?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle frg_TradeInCar?>
+         <?templateDesigner fragmentDescription NO_X?></subform>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 188 50 0003000F00100011001D002400250026002700280029002C002E002F003000330035003600370042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E00600063006E00A1 ,-.:ABCDEFIKLMPRST_abcdefghijklmnoprstuvy{}Ååø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 32 8 002C00450048004C004F00510057005CIbeilnty?>
+   </subform>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
+   <?templateDesigner Zoom 150?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2014-05-26T17:08:30Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:0e2a32c6-3a9b-4d93-b2f2-2eea61f36276</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">frg_TradeInCar</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">NO_X</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.subTradeInCar</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="da_DK" desc="Dansk (Danmark)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>marts</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sø</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lø</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet></xdp:xdp>

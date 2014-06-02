@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <subform name="form1" locale="da_DK" layout="tb">
+      <pageSet>
+         <pageArea>
+            <medium stock="a4" short="210mm" long="297mm"/>
+            <contentArea x="15mm" y="43mm" w="190mm" h="225mm" name="areaPage1" id="areaPage1_ID"/>
+         </pageArea>
+      </pageSet>
+      <subform w="179mm" minH="8mm" layout="tb" name="subCommentsArea">
+         <bind match="none"/>
+         <subform w="179mm" layout="tb" name="subComments">
+            <bind match="dataRef" ref="$.Document.Comments[*]"/>
+            <subform w="179mm" minH="10mm" layout="tb" name="subCommentMarginTop">
+               <bind match="none"/>
+               <subform name="subCustomerComment" layout="tb">
+                  <bind match="none"/>
+                  <field name="CustomerComment" minH="4mm" access="readOnly" w="179mm">
+                     <ui>
+                        <textEdit multiLine="1">
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="dataRef" ref="$.CustomerComments[*].CustomerComment[*]"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                     </caption>
+                  </field>
+                  <occur max="10" min="0"/>
+                  <?templateDesigner expand 1?></subform>
+               <occur min="0" max="-1"/>
+               <margin bottomInset="5mm" topInset="0mm"/>
+               <?templateDesigner expand 1?></subform>
+            <subform y="9mm" w="179mm" minH="5mm" layout="tb" name="subCommentsMarginBottom">
+               <bind match="none"/>
+               <subform name="subInternalComment" layout="tb">
+                  <bind match="none"/>
+                  <field name="InternalComment" access="readOnly" w="179mm" h="4mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="9pt"/>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="dataRef" ref="$.Internalcomments[*].InternalComment[*]"/>
+                     <caption reserve="0in">
+                        <font typeface="Arial" size="9pt" weight="bold"/>
+                     </caption>
+                  </field>
+                  <occur max="10" min="0"/>
+                  <margin topInset="0mm"/>
+                  <?templateDesigner expand 1?></subform>
+               <margin bottomInset="5mm"/>
+               <?templateDesigner expand 1?>
+               <occur min="0" max="-1"/>
+            </subform>
+            <?templateDesigner expand 1?></subform>
+         <margin topInset="0mm"/>
+         <occur max="-1" min="0"/>
+         <?templateDesigner expand 1?>
+         <?templateDesigner isFragment yes?>
+         <?templateDesigner fragmentTitle frg_CommentsArea?>
+         <?templateDesigner fragmentDescription GEN_X?></subform>
+   </subform>
+</template>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
+         <lcd:fragmentCatalog>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <dc:title>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">frg_CommentsArea</rdf:li>
+                     </rdf:Alt>
+                  </dc:title>
+                  <dc:description>
+                     <rdf:Alt>
+                        <rdf:li xml:lang="x-default">GEN_X</rdf:li>
+                     </rdf:Alt>
+                  </dc:description>
+                  <dc:identifier>$template.form1.subCommentsArea</dc:identifier>
+                  <lcd:fragmentRole>Subform</lcd:fragmentRole>
+               </rdf:li>
+            </rdf:Seq>
+         </lcd:fragmentCatalog>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-04-18T12:20:17Z" uuid="1a7724cd-57bb-4491-bade-3874196b17cc">
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-05-07T09:02:25Z" uuid="021b4a5d-0053-42a9-9db0-5a755ed06530">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="da_DK" layout="tb">
@@ -323,7 +323,7 @@
                <bind match="dataRef" ref="$.Document.DocumentHeader.FooterD6"/>
             </field>
             <?templateDesigner expand 1?></subform>
-         <subform layout="lr-tb" hAlign="right" name="subPageNumering" w="166mm" anchorType="topRight" x="7.047236in" y="0.566917in">
+         <subform layout="lr-tb" hAlign="right" name="subPageNumbering" w="166mm" anchorType="topRight" x="7.047236in" y="0.566917in">
             <bind match="none"/>
             <field name="L_Page" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField004334" presence="hidden" access="readOnly">
                <ui>
@@ -386,7 +386,7 @@ this.rawValue = output;
                <calculate override="error"/>
                <bind match="none"/>
                <?templateDesigner floatingFieldPlaceholder ##?></field>
-            <draw h="7.985mm" hAlign="right" name="txtPageNumering" w="21.484mm">
+            <draw h="7.985mm" hAlign="right" name="txtPageNumbering" w="21.484mm">
                <font typeface="Arial" baselineShift="0pt" size="9pt"/>
                <margin bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm" topInset="0.5mm"/>
                <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" hAlign="right"/>
@@ -402,10 +402,10 @@ this.rawValue = output;
                </value>
             </draw>
             <?templateDesigner expand 1?></subform>
-         <?templateDesigner expand 1?>
          <?templateDesigner isFragment yes?>
          <?templateDesigner fragmentTitle frg_Footer?>
-         <?templateDesigner fragmentDescription GEN_A?></subform>
+         <?templateDesigner fragmentDescription GEN_A?>
+         <?templateDesigner expand 1?></subform>
       <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 44 11 000300060012002F0033004200440048004A005E0060 #/LP_aeg{}?>
    </subform>
@@ -413,7 +413,7 @@ this.rawValue = output;
    <?templateDesigner SavePDFWithEmbeddedFonts 1?>
    <?templateDesigner Grid show:0, snap:0, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 131?>
+   <?templateDesigner Zoom 144?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
@@ -441,14 +441,14 @@ this.rawValue = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-04-18T12:20:17Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-05-07T09:02:25Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:1a7724cd-57bb-4491-bade-3874196b17cc</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:021b4a5d-0053-42a9-9db0-5a755ed06530</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>
