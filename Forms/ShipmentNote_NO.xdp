@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-06-18T07:40:43Z" uuid="6c567e62-2d2a-4e7d-8c31-2df8382d0a63">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-06-24T12:34:43Z" uuid="49a9630d-35fb-494e-aeae-15737da14c13">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -16,9 +16,9 @@
          <bind match="none"/>
          <?templateDesigner rowpattern first:1, next:1, firstcolor:f0f0f0, nextcolor:ffffff, apply:0?>
          <subform name="subPageInfo" layout="tb">
-            <subform name="subContent" w="150mm" layout="tb">
+            <subform name="subContent" layout="tb" w="151mm">
                <bind match="none"/>
-               <subform w="150mm" layout="lr-tb" name="subCarVinDateBarcode">
+               <subform w="148mm" layout="lr-tb" name="subCarVinDateBarcode">
                   <bind match="none"/>
                   <subform minH="13.173mm" layout="tb" name="subDateCarVin">
                      <bind match="none"/>
@@ -80,7 +80,7 @@ this.font.size = "8pt";
                      <?templateDesigner expand 1?></subform>
                   <keep intact="contentArea"/>
                   <?templateDesigner expand 1?></subform>
-               <subform w="150mm" minH="54mm" layout="lr-tb" name="subDealerOrderCarBrandCarModelColor">
+               <subform w="148mm" minH="54mm" layout="lr-tb" name="subDealerOrderCarBrandCarModelColor">
                   <bind match="none"/>
                   <subform w="98mm" minH="36.64mm" layout="tb" name="subCarContent">
                      <bind match="none"/>
@@ -217,7 +217,7 @@ this.font.size = "8pt";
                         </border>
                         <?templateDesigner expand 1?></subform>
                      <?templateDesigner expand 1?></subform>
-                  <subform w="52mm" name="subSequencePriority" h="25mm">
+                  <subform w="49mm" name="subSequencePriority" h="25mm">
                      <bind match="none"/>
                      <keep intact="none"/>
                      <field name="fldSequence" w="9mm" minH="5mm" x="34.65mm" y="0.056mm" access="readOnly">
@@ -252,9 +252,9 @@ this.font.size = "8pt";
                      </field>
                      <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
-               <subform w="150mm" minH="54mm" layout="tb" name="subCategoryRemarkSupplierActivity">
+               <subform minH="54mm" layout="tb" name="subCategoryRemarkSupplierActivity" w="148mm">
                   <bind match="none"/>
-                  <field name="fldCarOrderCategory" access="readOnly" h="5mm" w="150mm">
+                  <field name="fldCarOrderCategory" access="readOnly" h="5mm" w="148mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -276,7 +276,7 @@ this.font.size = "8pt";
                         <font size="8pt"/>
                      </caption>
                   </field>
-                  <field name="fldRemarkText" access="readOnly" h="5mm" w="150mm">
+                  <field name="fldRemarkText" access="readOnly" h="5mm" w="148mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -297,7 +297,7 @@ this.font.size = "8pt";
                         <font size="8pt"/>
                      </caption>
                   </field>
-                  <field name="fldImporterRemarkText" w="150mm" access="readOnly" h="5mm">
+                  <field name="fldImporterRemarkText" w="148mm" access="readOnly" h="5mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -316,7 +316,7 @@ this.font.size = "8pt";
                         <para vAlign="bottom"/>
                      </caption>
                   </field>
-                  <field name="fldSupplierActivity1" access="readOnly" h="4.5mm" w="150mm">
+                  <field name="fldSupplierActivity1" access="readOnly" h="4.5mm" w="148mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -337,7 +337,7 @@ this.font.size = "8pt";
                         <font size="8pt"/>
                      </caption>
                   </field>
-                  <field name="fldSupplierActivity2" h="4.5mm" w="150mm" access="readOnly">
+                  <field name="fldSupplierActivity2" h="4.5mm" w="148mm" access="readOnly">
                      <ui>
                         <textEdit multiLine="1">
                            <margin/>
@@ -356,7 +356,7 @@ this.font.size = "8pt";
                      <keep intact="contentArea"/>
                      <para vAlign="bottom"/>
                   </field>
-                  <field name="fldSupplierActivity3" h="4.5mm" w="150mm" access="readOnly">
+                  <field name="fldSupplierActivity3" h="4.5mm" w="148mm" access="readOnly">
                      <ui>
                         <textEdit multiLine="1">
                            <margin/>
@@ -375,7 +375,7 @@ this.font.size = "8pt";
                      <keep intact="contentArea"/>
                      <para vAlign="bottom"/>
                   </field>
-                  <field name="fldSupplierActivity4" h="4.5mm" w="150mm" access="readOnly">
+                  <field name="fldSupplierActivity4" h="4.5mm" w="148mm" access="readOnly">
                      <ui>
                         <textEdit multiLine="1">
                            <margin/>
@@ -394,7 +394,7 @@ this.font.size = "8pt";
                      <keep intact="contentArea"/>
                      <para vAlign="bottom"/>
                   </field>
-                  <field name="fldSupplierActivity5" h="4.5mm" w="150mm" access="readOnly">
+                  <field name="fldSupplierActivity5" h="4.5mm" w="148mm" access="readOnly">
                      <ui>
                         <textEdit multiLine="1">
                            <margin/>
@@ -415,9 +415,9 @@ this.font.size = "8pt";
                   </field>
                   <margin topInset="1mm"/>
                   <?templateDesigner expand 1?></subform>
-               <subform w="150mm" minH="27.64mm" layout="tb" name="subDestinationTransportationSupplierDates">
+               <subform minH="27.64mm" layout="tb" name="subDestinationTransportationSupplierDates" w="148mm">
                   <bind match="none"/>
-                  <field name="fldCarDestination" access="readOnly" h="5mm" w="150mm">
+                  <field name="fldCarDestination" access="readOnly" h="5mm" w="148mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -438,7 +438,7 @@ this.font.size = "8pt";
                         <font size="8pt"/>
                      </caption>
                   </field>
-                  <field name="fldTransportation" access="readOnly" h="5mm" w="150mm">
+                  <field name="fldTransportation" access="readOnly" h="5mm" w="148mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -459,7 +459,7 @@ this.font.size = "8pt";
                         <font size="8pt"/>
                      </caption>
                   </field>
-                  <field name="fldSupplier" access="readOnly" h="5mm" w="150mm">
+                  <field name="fldSupplier" access="readOnly" h="5mm" w="148mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -480,7 +480,7 @@ this.font.size = "8pt";
                         <font size="8pt"/>
                      </caption>
                   </field>
-                  <field name="fldCarArrivalDate" access="readOnly" h="5mm" w="150mm">
+                  <field name="fldCarArrivalDate" access="readOnly" h="5mm" w="148mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -501,7 +501,7 @@ this.font.size = "8pt";
                         <font size="8pt"/>
                      </caption>
                   </field>
-                  <field name="fldOrderDate" minH="5mm" access="readOnly" w="150mm">
+                  <field name="fldOrderDate" minH="5mm" access="readOnly" w="148mm">
                      <ui>
                         <textEdit>
                            <margin/>
@@ -539,7 +539,7 @@ this.font.size = "8pt";
                      <corner presence="hidden"/>
                   </border>
                </field>
-               <margin bottomInset="2mm" rightInset="0mm"/>
+               <margin bottomInset="2mm" rightInset="0mm" leftInset="3mm"/>
                <?templateDesigner expand 1?></subform>
             <subform w="150mm" minH="54mm" layout="lr-tb" name="subDealerOrderCarBrandCarModelColor">
                <bind match="none"/>
@@ -567,11 +567,11 @@ this.font.size = "7pt";
 </script>
                               </event>
                            </field>
-                           <margin leftInset="5mm"/>
+                           <margin leftInset="7mm"/>
                            <?templateDesigner expand 1?></subform>
                         <subform y="9mm" w="85mm" minH="16.001mm" layout="tb" name="subStickerContent">
                            <bind match="none"/>
-                           <field name="fldDealerNameDest" h="4mm" access="readOnly" w="85mm">
+                           <field name="fldDealerNameDest" h="4mm" access="readOnly" w="81mm">
                               <ui>
                                  <textEdit hScrollPolicy="off">
                                     <border presence="hidden"/>
@@ -598,7 +598,7 @@ this.rawValue = subContent.subDealerOrderCarBrandCarModelColor.subCarContent.fld
                                  </value>
                               </caption>
                            </field>
-                           <subform minH="8.823mm" layout="lr-tb" name="subOrderNoAndColor" w="85mm">
+                           <subform minH="8.823mm" layout="lr-tb" name="subOrderNoAndColor">
                               <bind match="none"/>
                               <field name="fldOrderNo" access="readOnly" h="4mm" w="38mm">
                                  <ui>
@@ -606,8 +606,8 @@ this.rawValue = subContent.subDealerOrderCarBrandCarModelColor.subCarContent.fld
                                        <margin/>
                                     </textEdit>
                                  </ui>
-                                 <font typeface="Courier New" size="8pt"/>
-                                 <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                                 <font size="8pt"/>
+                                 <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
                                  <para vAlign="bottom"/>
                                  <bind match="dataRef" ref="$.OrderNo"/>
                                  <border>
@@ -619,17 +619,17 @@ this.rawValue = subContent.subDealerOrderCarBrandCarModelColor.subCarContent.fld
                                        <text>Ordrenr:</text>
                                     </value>
                                     <para vAlign="bottom"/>
-                                    <font typeface="Courier Std" size="7pt"/>
+                                    <font size="7pt"/>
                                  </caption>
                               </field>
-                              <field name="fldColor" h="4mm" w="47mm" access="readOnly">
+                              <field name="fldColor" h="4mm" w="43mm" access="readOnly">
                                  <ui>
                                     <textEdit>
                                        <margin/>
                                     </textEdit>
                                  </ui>
                                  <font size="8pt"/>
-                                 <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                                 <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
                                  <para vAlign="bottom"/>
                                  <bind match="dataRef" ref="$.Color"/>
                                  <border>
@@ -641,7 +641,7 @@ this.rawValue = subContent.subDealerOrderCarBrandCarModelColor.subCarContent.fld
                                  </value>
                               </field>
                               <?templateDesigner expand 1?></subform>
-                           <field name="fldSupplierActivity1" minW="85mm" access="readOnly" h="4mm">
+                           <field name="fldSupplierActivity1" minW="81mm" access="readOnly" h="4mm">
                               <ui>
                                  <textEdit hScrollPolicy="off">
                                     <margin/>
@@ -668,7 +668,7 @@ this.rawValue = subContent.subCategoryRemarkSupplierActivity.fldSupplierActivity
 </script>
                               </event>
                            </field>
-                           <field name="fldSupplier" access="readOnly" h="4mm" w="85mm">
+                           <field name="fldSupplier" access="readOnly" h="4mm" w="81mm">
                               <ui>
                                  <textEdit hScrollPolicy="off">
                                     <margin/>
@@ -695,7 +695,7 @@ this.rawValue = subContent.subDestinationTransportationSupplierDates.fldSupplier
 </script>
                               </event>
                            </field>
-                           <margin leftInset="2mm"/>
+                           <margin leftInset="4mm"/>
                            <?templateDesigner expand 1?></subform>
                         <margin bottomInset="1mm" topInset="2mm"/>
                         <?templateDesigner expand 1?></subform>
@@ -888,14 +888,14 @@ this.font.size = "7pt";
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-06-18T07:40:43Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-06-24T12:34:43Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:6c567e62-2d2a-4e7d-8c31-2df8382d0a63</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:49a9630d-35fb-494e-aeae-15737da14c13</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
