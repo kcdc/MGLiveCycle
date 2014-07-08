@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-03-25T07:06:33Z" uuid="74e16376-5208-42d2-b8a5-65893ef640d5">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-05-20T08:26:13Z" uuid="41900138-7b98-42e6-a260-19b410a37a84">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -38,8 +38,7 @@ this.presence = "hidden";
                </field>
                <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="3.069mm" y="3mm">
                   <bind/>
-                  <?templateDesigner expand 1?>
-               </subform>
+                  <?templateDesigner expand 1?></subform>
                <field name="fldTypeText" y="18mm" h="8mm" minW="91mm" x="0mm" access="readOnly">
                   <ui>
                      <textEdit>
@@ -234,15 +233,14 @@ this.caption.value.text = output;
             <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)" x="15mm" y="262mm" presence="visible">
                <event activity="docReady" ref="$host" name="event__docReady">
                   <script contentType="application/x-javascript">
-//app.alert(this.parent.subFooter.subPageNumering.NumberofPages.rawValue);
-if(this.parent.subFooter.subPageNumering.NumberofPages.rawValue &lt; 3)
+//app.alert(this.parent.subFooter.subPageNumbering.NumberofPages.rawValue);
+if(this.parent.subFooter.subPageNumbering.NumberofPages.rawValue &lt; 3)
 {
 	this.presence = "hidden";	
 }
 </script>
                </event>
-               <?templateDesigner expand 1?>
-            </subform>
+               <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 1?></pageArea>
          <pageArea name="mpgPage2" id="Page1_ID">
             <subform x="164mm" y="9mm" usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)">
@@ -551,34 +549,9 @@ catch(e)
                   </subform>
                   <subform w="64mm" name="subCompanyRegNo" layout="tb">
                      <bind match="none"/>
-                     <field name="L_BankName" h="3mm" minW="55mm" access="readOnly">
-                        <ui>
-                           <textEdit>
-                              <border presence="hidden"/>
-                              <margin/>
-                           </textEdit>
-                        </ui>
-                        <font size="8pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <para vAlign="middle"/>
-                        <caption reserve="17mm">
-                           <font size="8pt" typeface="Arial" weight="bold"/>
-                           <para vAlign="middle"/>
-                           <value>
-                              <text>Bankgiro:</text>
-                           </value>
-                        </caption>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.BankAccLocal"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                        </event>
-                     </field>
+                     <subform usehref=".\Fragments\frg_Kontonummer.xdp#som($template.form1.frg_Kontonummer)">
+                        <?templateDesigner expand 1?>
+                     </subform>
                      <margin topInset="0mm" bottomInset="2mm"/>
                      <?templateDesigner expand 1?></subform>
                   <subform w="58.092mm" name="subHolderOrderNo" layout="lr-tb">
@@ -3470,7 +3443,7 @@ catch(e)
                </border>
                <?templateDesigner expand 0?></subform>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subAdditionalProductsHolder" layout="tb">
             <bind match="none"/>
             <margin topInset="4mm"/>
@@ -4209,582 +4182,7 @@ this.caption.value.text = output;
                <occur min="0" max="-1"/>
                <?templateDesigner expand 1?></subform>
             <?templateDesigner expand 0?></subform>
-         <subform w="179mm" h="52mm" name="subTradeInCar" y="8mm">
-            <bind match="dataRef" ref="$.Document.TradeInCar"/>
-            <margin topInset="4mm"/>
-            <field name="L_TradeIn" access="readOnly" w="178.999mm" h="4mm" x="0.001mm" y="0mm">
-               <ui>
-                  <textEdit>
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <caption reserve="0in">
-                  <font typeface="Arial" size="9pt" weight="bold"/>
-                  <para vAlign="middle"/>
-                  <value>
-                     <text>Innbyttebil</text>
-                  </value>
-               </caption>
-               <bind match="none"/>
-               <para vAlign="middle"/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-               </event>
-            </field>
-            <subform x="0.001mm" y="4mm" name="subCarBrand" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInCarBrand" access="readOnly" h="4mm" minW="9.999mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Merke:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="fldCarBrand" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.CarBrand"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="0.001mm" y="8mm" name="subRegisteredYear" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInRegisteredYear" access="readOnly" h="4mm" minW="12.999mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Årsmodell:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeInRegisteredYear" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.RegisteredYear"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="0.001mm" y="12mm" name="subColor" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInColor" access="readOnly" h="4mm" minW="9.999mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Farge:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeInColor" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.TradeinColor"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="0.001mm" y="16mm" name="subVin" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInVIN" access="readOnly" h="4mm" minW="11.999mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Chassinr.:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeInVIN" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.TradeinVIN"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="0.001mm" y="20mm" name="subRegDate" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInRegDate" access="readOnly" h="4mm" minW="25.999mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Første gang registrert:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeInRegDate" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.TradeinRegDate"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="0.001mm" y="24mm" name="subEncumbrance" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInEncumbrance" access="readOnly" h="4mm" minW="29.999mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Heftelser i løsøreregisteret:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeInEncumbrance" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.TradeinEncumbrance"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="0.001mm" y="28mm" name="subInPrice" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInPrice" access="readOnly" h="4mm" minW="24.999mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Avtalt innbyttepris:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeinPrice" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <numericEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </numericEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <para vAlign="middle"/>
-                  <bind match="dataRef" ref="$record.Document.PriceInformation.TradeinPrice">
-                     <picture>num{zzzzzzzzzzzz9}</picture>
-                  </bind>
-                  <format>
-                     <picture>num{zzzzzzzzzzzz9}</picture>
-                  </format>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 1?></subform>
-            <subform x="89mm" y="4mm" name="subModelDesc" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInModelDesc" access="readOnly" h="4mm" minW="7.951mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Modell:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeInModelDesc" access="readOnly" minH="4.001mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.TradeinModelDesc"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="89mm" y="8mm" name="subRegNo" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInRegno" access="readOnly" h="4mm" minW="7.951mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Regnr.:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeInRegNo" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.TradeinRegNo"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="89mm" y="12mm" name="subMileage" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInMileage" access="readOnly" h="4mm" minW="7.951mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>KM stand:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="fldTradeInMileage" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.TradeinMileage"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <subform x="89mm" y="16mm" name="subRegistrationFeePaid" layout="lr-tb">
-               <bind match="none"/>
-               <field name="L_TradeInRegistrationFeePaid" access="readOnly" h="4mm" minW="7.951mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                  <caption reserve="0in">
-                     <value>
-                        <text>Årsavgift betalt:</text>
-                     </value>
-                     <para vAlign="middle"/>
-                  </caption>
-                  <bind match="none"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-
-</script>
-                  </event>
-               </field>
-               <field name="fldRegistrationFeePaid" access="readOnly" minH="4mm" minW="30mm">
-                  <ui>
-                     <textEdit>
-                        <border presence="hidden"/>
-                        <margin/>
-                     </textEdit>
-                  </ui>
-                  <font typeface="Arial" size="9pt"/>
-                  <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="0mm"/>
-                  <bind match="dataRef" ref="$.RegistrationFeePaid"/>
-                  <event activity="initialize" name="event__initialize">
-                     <script contentType="application/x-javascript">
-//app.alert(this.rawValue);
-</script>
-                  </event>
-                  <para vAlign="middle"/>
-               </field>
-               <keep intact="contentArea"/>
-               <?templateDesigner expand 0?></subform>
-            <field name="L_TradeInText" access="readOnly" x="0.001mm" y="32mm" minH="16mm" w="178.999mm">
-               <ui>
-                  <textEdit multiLine="1">
-                     <border presence="hidden"/>
-                     <margin/>
-                  </textEdit>
-               </ui>
-               <font typeface="Arial" size="9pt"/>
-               <margin topInset="0.5mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-               <caption reserve="0in">
-                  <value>
-                     <text>Innbyttepris er gitt under forutsetninger av at bilen er i samme stand som ved takst. Rett til omtakst forbeholdes. Bilen leveres med det utstyr som ble avtalt ved taksering. Sommer- og vinterhjul som innleveres sammen med bilen har godkjent mønsterdybde. Kjøperen forsikrer at innbyttebilen er hans eiendom, at den ikke hefter ansvar for skatter og avgifter på bilen. Speedometerstand er korrekt.</text>
-                  </value>
-               </caption>
-               <bind match="none"/>
-               <para vAlign="middle"/>
-               <event activity="initialize" name="event__initialize">
-                  <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-               </event>
-            </field>
-            <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
+         <subform usehref=".\Fragments\frg_TradeInCar.xdp#som($template.#subform.subTradeInCar)"/>
          <subform w="178.945mm" name="subInsurance" layout="tb" x="0.001mm">
             <bind match="dataRef" ref="$.Document.Insurance"/>
             <margin topInset="4mm" bottomInset="4mm"/>
@@ -5150,7 +4548,7 @@ this.caption.value.text = output;
                <margin topInset="1mm"/>
                <overflow trailer="overflowTrailer"/>
                <?templateDesigner expand 1?></subform>
-            <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 0?></subform>
          <overflow target="mpgPage2" trailer="overflowTrailer"/>
          <?templateDesigner expand 1?></subform>
       <subform w="7.480319in" name="pageSVI">
@@ -5310,14 +4708,13 @@ this.caption.value.text = output;
          <?templateDesigner expand 1?></variables>
       <proto>
          <subform usehref=".\Fragments\frg_OverflowTrailer.xdp#som($template.form1.overflowTrailer)">
-            <?templateDesigner expand 1?>
-         </subform>
+            <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></proto>
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner expand 1?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 248 65 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvwxy{}Ååø?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 208 54 0003000B000C000D001000110012001D002400250026002700280029002C002D002E002F00300031003200330035003600370039004200440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 ()*-./:ABCDEFIJKLMNOPRSTV_abdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?>
@@ -5328,7 +4725,6 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -5341,14 +4737,15 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\CSC\998_CarSalesContract_S001IT05_20140325_072910677_D_B001HCR.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\CSC\040_CarSalesContract_S001IT01_20140513_095444585_D_B001ALL.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:4850000?>
-   <?templateDesigner Zoom 144?></template>
+   <?templateDesigner Zoom 142?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
    <agent name="designer">
       <!--  [0..n]  -->
@@ -5360,6 +4757,7 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
+      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -5385,6 +4783,7 @@ this.caption.value.text = output;
    </present>
    <psMap>
       <font typeface="Eras Bold ITC" psName="ErasITC-Bold" weight="normal" posture="normal"/>
+      <font typeface="Segoe UI" psName="SegoeUI" weight="normal" posture="normal"/>
    </psMap>
 </config>
 <localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
@@ -5494,14 +4893,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-03-25T07:06:33Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-05-20T08:26:13Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:74e16376-5208-42d2-b8a5-65893ef640d5</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:41900138-7b98-42e6-a260-19b410a37a84</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -5515,7 +4914,7 @@ this.caption.value.text = output;
    <xsdConnection name="DataConnection" dataDescription="CarSalesContract">
       <uri>.\XSD\CarSalesContract.xsd</uri>
       <rootElement>CarSalesContract</rootElement>
-      <?templateDesigner fileDigest shaHash="4Mu2MdXc6bczaYGvjuGTk6Oee6Q="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="xxJcYbnjQNYEGuf6LjxNuIrJwNE="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -5615,8 +5014,8 @@ this.caption.value.text = output;
                <AdvertText/>
             </HeaderInfo>
             <TopTextMain>
-               <TopTextLines dd:maxOccur="10">
-                  <TopTextLine dd:maxOccur="10"/>
+               <TopTextLines dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude">
+                  <TopTextLine dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude"/>
                </TopTextLines>
             </TopTextMain>
             <PriceInformation>
@@ -5659,7 +5058,7 @@ this.caption.value.text = output;
             </ImportCarSubject>
             <TermsOfDelivery>
                <DeliveryText>
-                  <TermsOfDeliveryText dd:maxOccur="10"/>
+                  <TermsOfDeliveryText dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude"/>
                </DeliveryText>
                <DeliveryTermsDate/>
                <WarrantyTerms/>
@@ -5702,22 +5101,22 @@ this.caption.value.text = output;
                <PrePaymentCommissionCar/>
                <SumPrePaymentTotal/>
             </PrePayment>
-            <ContractTextLines dd:maxOccur="10">
-               <ContractTextLine dd:maxOccur="10"/>
+            <ContractTextLines dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude">
+               <ContractTextLine dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude"/>
             </ContractTextLines>
             <BottomTextMain>
-               <BottomTextLines dd:maxOccur="10">
+               <BottomTextLines dd:minOccur="0" dd:maxOccur="10">
                   <BottomTextLine/>
                </BottomTextLines>
             </BottomTextMain>
             <FooterLinesMain>
-               <FooterLines dd:maxOccur="10">
-                  <FooterLine dd:maxOccur="10"/>
+               <FooterLines dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude">
+                  <FooterLine dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude"/>
                </FooterLines>
             </FooterLinesMain>
             <FooterLimitedMain>
-               <FooterLimitedLines dd:maxOccur="10">
-                  <FooterLimitedLine dd:maxOccur="10"/>
+               <FooterLimitedLines dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude">
+                  <FooterLimitedLine dd:minOccur="0" dd:maxOccur="10" dd:nullType="exclude"/>
                </FooterLimitedLines>
             </FooterLimitedMain>
             <Signature>
@@ -5773,6 +5172,9 @@ this.caption.value.text = output;
                <LeaserRegNo/>
             </Leasing>
             <TradeInCar>
+               <TradeinFreeText dd:minOccur="0" dd:maxOccur="4" dd:nullType="exclude">
+                  <TradeinFreeTextdesc dd:minOccur="0" dd:maxOccur="4" dd:nullType="exclude"/>
+               </TradeinFreeText>
                <CarBrand/>
                <RegisteredYear/>
                <TradeinRegNo/>
@@ -5937,10 +5339,10 @@ this.caption.value.text = output;
                      <xs:element name="TopTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="TopTextLines">
+                              <xs:element name="TopTextLines" minOccurs="0" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="10" name="TopTextLine" type="xs:string"/>
+                                       <xs:element name="TopTextLine" type="xs:string" minOccurs="0" maxOccurs="10"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -5989,7 +5391,7 @@ this.caption.value.text = output;
                      <xs:element name="ImportCarSubject">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="ImportCarSubjectDesc" type="xs:string"/>
+                              <xs:element name="ImportCarSubjectDesc" type="xs:string" maxOccurs="10"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
@@ -5999,7 +5401,7 @@ this.caption.value.text = output;
                               <xs:element name="DeliveryText">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="10" name="TermsOfDeliveryText" type="xs:string"/>
+                                       <xs:element name="TermsOfDeliveryText" type="xs:string" minOccurs="0" maxOccurs="10"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6014,7 +5416,7 @@ this.caption.value.text = output;
                      <xs:element name="Options">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="200" name="Option">
+                              <xs:element name="Option" maxOccurs="200">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="OptionDesc" type="xs:string"/>
@@ -6028,7 +5430,7 @@ this.caption.value.text = output;
                      <xs:element name="NationalOptions">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="200" name="NationalOption">
+                              <xs:element name="NationalOption" maxOccurs="200">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="NationalOptionDesc" type="xs:string"/>
@@ -6042,7 +5444,7 @@ this.caption.value.text = output;
                      <xs:element name="ReBuilds">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="200" name="ReBuild">
+                              <xs:element name="ReBuild" maxOccurs="200">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ReBuildDesc" type="xs:string"/>
@@ -6082,17 +5484,17 @@ this.caption.value.text = output;
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element maxOccurs="10" name="ContractTextLines">
+                     <xs:element name="ContractTextLines" minOccurs="0" maxOccurs="10">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="ContractTextLine" type="xs:string"/>
+                              <xs:element name="ContractTextLine" type="xs:string" minOccurs="0" maxOccurs="10"/>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="BottomTextLines">
+                              <xs:element name="BottomTextLines" minOccurs="0" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -6105,10 +5507,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLinesMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="FooterLines">
+                              <xs:element name="FooterLines" minOccurs="0" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="10" name="FooterLine" type="xs:string"/>
+                                       <xs:element name="FooterLine" type="xs:string" minOccurs="0" maxOccurs="10"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6118,10 +5520,10 @@ this.caption.value.text = output;
                      <xs:element name="FooterLimitedMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="FooterLimitedLines">
+                              <xs:element name="FooterLimitedLines" minOccurs="0" maxOccurs="10">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element maxOccurs="10" name="FooterLimitedLine" type="xs:string"/>
+                                       <xs:element name="FooterLimitedLine" type="xs:string" minOccurs="0" maxOccurs="10"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -6139,7 +5541,7 @@ this.caption.value.text = output;
                      <xs:element name="Financing">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="100" name="AdditionalProduct">
+                              <xs:element name="AdditionalProduct" maxOccurs="100">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ProductDesc" type="xs:string"/>
@@ -6207,6 +5609,13 @@ this.caption.value.text = output;
                      <xs:element name="TradeInCar">
                         <xs:complexType>
                            <xs:sequence>
+                              <xs:element name="TradeinFreeText" minOccurs="0" maxOccurs="4">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="TradeinFreeTextdesc" type="xs:string" minOccurs="0" maxOccurs="4"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
                               <xs:element name="CarBrand" type="xs:string"/>
                               <xs:element name="RegisteredYear" type="xs:string"/>
                               <xs:element name="TradeinRegNo" type="xs:string"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-01-21T08:56:58Z" uuid="67a26b9c-6220-4bab-aa70-33e27e7d014e">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-04-02T12:58:07Z" uuid="015507be-448a-487e-8e48-05e74a4628e2">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -157,7 +157,68 @@ this.presence = "hidden";
                   <?templateDesigner expand 1?></subform>
                <subform x="126mm" y="27mm" layout="lr-tb" name="subDocInfo" w="62mm">
                   <bind match="none"/>
-                  <field access="readOnly" h="4mm" minW="62mm" name="L_ThroughputNo">
+                  <subform w="70mm" minH="9mm" layout="lr-tb" name="subThroughputNo">
+                     <field name="L_ThroughputNo" w="62mm" id="floatingField002019" presence="hidden" access="readOnly" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="8.5pt" weight="bold"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.rawValue = output;
+}
+
+else
+{
+		this.rawValue = "VAR FOR: "+this.name+" NOT FOUND";	
+}
+</script>
+                        </event>
+                        <bind match="none"/>
+                     </field>
+                     <field name="floatThroughputNo" w="62mm" id="floatingField008232" presence="hidden" access="readOnly" minH="9mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <bind match="none"/>
+                        <?templateDesigner expand 1?></field>
+                     <draw name="txt_ThroughputNo" h="4.168mm" minW="70mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField002019"/><span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:9pt;font-weight:normal"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField008232"/></span></p></body>
+                           </exData>
+                        </value>
+                        <font size="8.5pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     </draw>
+                     <bind match="none"/>
+                     <?templateDesigner expand 1?></subform>
+                  <subform usehref=".\Fragments\frg_Date.xdp#som($template.form1.subDate)">
+                     <?templateDesigner expand 1?></subform>
+                  <subform usehref=".\Fragments\frg_OurRef.xdp#som($template.form1.subOurRef)">
+                     <?templateDesigner expand 1?></subform>
+                  <field access="readOnly" h="4mm" minW="62mm" name="L_ThroughputNo" presence="hidden">
                      <border>
                         <edge presence="hidden"/>
                      </border>
@@ -188,7 +249,7 @@ this.caption.value.text = output;
 </script>
                      </event>
                   </field>
-                  <field access="readOnly" h="4mm" minW="62mm" name="L_Date">
+                  <field access="readOnly" h="4mm" minW="62mm" name="L_Date" presence="hidden">
                      <border>
                         <edge presence="hidden"/>
                      </border>
@@ -221,7 +282,7 @@ this.caption.value.text = output;
                   </field>
                   <subform y="8mm" w="62mm" minH="4mm" layout="lr-tb" name="subOurRef">
                      <bind match="none"/>
-                     <field access="readOnly" h="4mm" minW="62mm" name="L_OurRef">
+                     <field access="readOnly" h="4mm" minW="62mm" name="L_OurRef" presence="hidden">
                         <border>
                            <edge presence="hidden"/>
                         </border>
@@ -391,99 +452,70 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
                      <?templateDesigner expand 1?>
                   </subform>
                   <?templateDesigner expand 0?></subform>
-               <subform x="117.999mm" y="20mm" w="58mm" minH="11.5mm" name="subHolderOrderNo" layout="tb">
+               <subform x="117.999mm" y="19mm" w="58mm" minH="11.5mm" name="subHolderOrderNo" layout="tb">
                   <bind match="none"/>
-                  <field name="L_ThroughputNo" h="3.5mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="23mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Gj.gangsnr.:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.DocumentHeader.ThroughputNo"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
+                  <keep intact="contentArea"/>
+                  <subform w="70mm" minH="9mm" layout="lr-tb" name="subThroughputNo">
+                     <field name="L_ThroughputNo" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField009296">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="8.5pt" weight="bold"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <event activity="initialize" name="event__initialize">
+                           <script contentType="application/x-javascript">
+
 var LangCode = getLanguages.getLanguageSetting();
 
 var output = getLanguages.getLanguageText(LangCode, this.name);
 
-this.caption.value.text = output;
-</script>
-                     </event>
-                  </field>
-                  <field name="L_Date" h="3.5mm" minW="58mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                     <para vAlign="middle"/>
-                     <caption reserve="8.8074mm">
-                        <font size="8.5pt" typeface="Arial" weight="bold"/>
-                        <para vAlign="middle"/>
-                        <value>
-                           <text>Dato:</text>
-                        </value>
-                     </caption>
-                     <bind match="dataRef" ref="$.Document.DocumentHeader.DateCreated"/>
-                     <event activity="initialize" name="event__initialize">
-                        <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
+if(output != "")
+{
+	this.rawValue = output;
+}
 
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
+else
+{
+		this.rawValue = "VAR FOR: "+this.name+" NOT FOUND";	
+}
 </script>
-                     </event>
-                  </field>
-                  <subform y="7mm" w="58mm" layout="tb" name="subOurRef">
-                     <bind match="none"/>
-                     <field name="L_OurRef" h="3.5mm" minW="58mm" access="readOnly">
+                        </event>
+                        <bind match="none"/>
+                     </field>
+                     <field name="floatThroughputNo" w="62mm" presence="hidden" access="readOnly" minH="9mm" id="floatingField016491">
                         <ui>
                            <textEdit>
                               <border presence="hidden"/>
                               <margin/>
                            </textEdit>
                         </ui>
-                        <font size="9pt" typeface="Arial"/>
-                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
-                        <para vAlign="middle"/>
-                        <caption reserve="16.7309mm">
-                           <font size="8.5pt" typeface="Arial" weight="bold"/>
-                           <para vAlign="middle"/>
-                           <value>
-                              <text>Referanse:</text>
-                           </value>
-                        </caption>
-                        <bind match="dataRef" ref="$.Document.HeaderInfo.OurRef"/>
-                        <event activity="initialize" name="event__initialize">
-                           <script contentType="application/x-javascript">
-var LangCode = getLanguages.getLanguageSetting();
-
-var output = getLanguages.getLanguageText(LangCode, this.name);
-
-this.caption.value.text = output;
-</script>
-                        </event>
+                        <font typeface="Arial" size="9pt"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <bind match="dataRef" ref="Document.DocumentHeader.ThroughputNo"/>
                      </field>
-                     <occur min="0" max="-1"/>
-                     <keep intact="contentArea"/>
+                     <draw name="txt_ThroughputNo" h="4.168mm" minW="70mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="font-weight:bold;letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField009296"/><span style="font-weight:normal"><span style="xfa-spacerun:yes"> </span></span><span style="font-size:9pt;font-weight:normal"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField016491"/></span></p></body>
+                           </exData>
+                        </value>
+                        <font size="8.5pt" typeface="Arial"/>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="0mm"/>
+                     </draw>
                      <?templateDesigner expand 1?></subform>
-                  <keep intact="contentArea"/>
-                  <?templateDesigner expand 0?></subform>
+                  <subform usehref=".\Fragments\frg_Date.xdp#som($template.form1.subDate)">
+                     <?templateDesigner expand 1?></subform>
+                  <subform usehref=".\Fragments\frg_OurRef.xdp#som($template.form1.subOurRef)">
+                     <?templateDesigner expand 0?></subform>
+                  <?templateDesigner expand 1?></subform>
                <field name="fldWarrentyRefLabel" h="3.5mm" access="readOnly" x="117.999mm" y="31mm" w="17mm">
                   <ui>
                      <textEdit>
@@ -1472,7 +1504,7 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
       </desc>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 140 35 00030012002400260027002F003000310032003300350036003700380039004200440045004600480049004A004F005000510052005300550056005700580059005C005E0060 /ACDLMNOPRSTUV_abcefglmnoprstuvy{}?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 152 38 000300120024002600270028002F003000310032003300350036003700380039004200440045004600480049004A004B004C004F005000510052005300550056005700580059005C005E0060 /ACDELMNOPRSTUV_abcefghilmnoprstuvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 204 53 0003001000110012001D002400250026002700280029002A002B002D002E002F003000310032003300350036003700390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 -./:ABCDEFGHJKLMNOPRSTV_abcdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Courier Std" 0 1 ISO-8859-1 4 48 12 0001002C0042004500460048004A004F0053005400550056 Kadeginrstu?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
@@ -1496,10 +1528,10 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Defects\8708\773_Confirmation_S001IT01_20130531_095017_D_B001OLS_utenSjekkliste.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner SaveTaggedPDF 0?>
-   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner Zoom 144?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:4850000;v:2675000;h:50000;h:500000;h:625000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -1513,7 +1545,6 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -1645,14 +1676,14 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-01-21T08:56:58Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-04-02T12:58:07Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:67a26b9c-6220-4bab-aa70-33e27e7d014e</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:015507be-448a-487e-8e48-05e74a4628e2</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">

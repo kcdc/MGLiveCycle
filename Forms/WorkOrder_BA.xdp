@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-09-17T07:24:19Z" uuid="7b376443-0af4-41d3-ab16-799c134a59eb">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-05-20T11:38:45Z" uuid="78640c8e-77e3-49d7-b5d0-7357019f40a0">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -11,9 +11,11 @@
             <medium stock="a4" short="210mm" long="297mm"/>
             <subform usehref=".\Fragments\frg_VerticalLabel.xdp#som($template.form1.verticalLabel)" x="5mm" y="106mm">
                <bind/>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform usehref=".\Fragments\frg_Logo.xdp#som($template.form1.subLogo)" x="164mm" y="6mm">
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform w="210mm" h="197.547mm" name="subHeader">
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
                   <bind match="none"/>
@@ -388,9 +390,11 @@ this.caption.value.text = output;
                   <margin leftInset="1mm"/>
                   <?templateDesigner expand 0?></subform>
                <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="93mm" y="27mm">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="8mm">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <?templateDesigner expand 1?></subform>
             <subform w="67mm" minH="4.318mm" name="subCompanyRegNo" layout="lr-tb" x="98mm" y="22.7mm">
                <bind match="none"/>
@@ -708,7 +712,7 @@ this.caption.value.text = output;
                   <corner/>
                   <corner/>
                </border>
-               <subform w="178mm" layout="lr-tb" name="subPageNumering" hAlign="right">
+               <subform w="178mm" layout="lr-tb" name="subPageNumbering" hAlign="right">
                   <bind match="none"/>
                   <field name="CurrentPageNumber" y="0mm" x="0mm" w="62mm" h="9mm" access="readOnly" presence="hidden" id="floatingField025818">
                      <ui>
@@ -728,7 +732,8 @@ this.caption.value.text = output;
                      </event>
                      <calculate override="error"/>
                      <bind match="none"/>
-                     <?templateDesigner floatingFieldPlaceholder #?></field>
+                     <?templateDesigner floatingFieldPlaceholder #?>
+                     <?templateDesigner expand 1?></field>
                   <field name="NumberofPages" y="0mm" x="0mm" w="62mm" h="9mm" access="readOnly" presence="hidden" id="floatingField008521">
                      <ui>
                         <numericEdit>
@@ -770,7 +775,7 @@ this.rawValue = output;
 </script>
                      </event>
                   </field>
-                  <draw name="txtPageNumering" w="21mm" h="7.985mm" hAlign="right">
+                  <draw name="txtPageNumbering" w="21mm" h="7.985mm" hAlign="right">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -800,7 +805,8 @@ this.presence = "visible";
 this.access = "protected";
 </script>
                </event>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+            </subform>
             <subform w="210mm" h="193.339mm" name="subHeader">
                <bind match="none"/>
                <subform x="93mm" minH="22.225mm" name="subWatermark" layout="tb" y="84mm">
@@ -961,9 +967,11 @@ this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verti
                   </value>
                </field>
                <subform usehref=".\Fragments\frg_DealerNameMarketing.xdp#som($template.form1.DealerNameMarketing)" x="15mm" y="7mm">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="124mm" y="20mm">
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+               </subform>
                <?templateDesigner expand 1?></subform>
             <subform name="subFooter" layout="lr-tb" x="15mm" y="270mm" w="179mm">
                <margin leftInset="0mm" rightInset="0mm" topInset="1mm" bottomInset="1mm"/>
@@ -1278,7 +1286,7 @@ this.rawValue = xfa.resolveNode("WorkOrder.#pageSet.mpgPage1.verticalLabel.verti
                   <corner/>
                   <corner/>
                </border>
-               <subform w="178mm" layout="lr-tb" name="subPageNumering" hAlign="right">
+               <subform w="178mm" layout="lr-tb" name="subPageNumbering" hAlign="right">
                   <bind match="none"/>
                   <field name="CurrentPageNumber" y="0mm" x="0mm" w="62mm" h="9mm" access="readOnly" presence="hidden" id="floatingField004305">
                      <ui>
@@ -1340,7 +1348,7 @@ this.rawValue = output;
 </script>
                      </event>
                   </field>
-                  <draw name="txtPageNumering" w="23mm" h="7.985mm" hAlign="right">
+                  <draw name="txtPageNumbering" w="23mm" h="7.985mm" hAlign="right">
                      <ui>
                         <textEdit/>
                      </ui>
@@ -2114,8 +2122,8 @@ this.caption.value.text = output;
             </field>
             <occur min="0" max="-1"/>
             <?templateDesigner expand 0?></subform>
-         <subform w="179mm" minH="4mm" layout="tb" name="subReminderList">
-            <bind match="none"/>
+         <subform w="179mm" name="subReminderList" layout="tb">
+            <bind match="dataRef" ref="$.Document.ReminderList"/>
             <subform w="24mm" minH="4mm" layout="lr-tb" name="subReminderTitle">
                <bind match="none"/>
                <field name="L_Remember" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="24mm" h="4mm" access="readOnly">
@@ -2143,9 +2151,11 @@ this.caption.value.text = output;
 </script>
                   </event>
                </field>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?>
+               <occur max="-1" min="0"/>
+            </subform>
             <subform w="179mm" layout="lr-tb" name="subReminder">
-               <bind match="dataRef" ref="$.Document.ReminderList.Reminder[*]"/>
+               <bind match="dataRef" ref="$.Reminder[*]"/>
                <field name="L_ReminderDescription" minH="4mm" minW="96mm" access="readOnly">
                   <ui>
                      <textEdit>
@@ -2194,60 +2204,19 @@ this.caption.value.text = output;
                   </border>
                   <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
                </field>
+               <?templateDesigner expand 1?>
                <occur min="0" max="-1"/>
-               <?templateDesigner expand 1?></subform>
-            <margin topInset="0mm"/>
+            </subform>
+            <margin topInset="0mm" bottomInset="5mm"/>
             <occur min="0" max="-1"/>
-            <?templateDesigner expand 0?></subform>
-         <subform y="134.093mm" w="179mm" minH="8mm" layout="tb" name="subCommentsArea">
-            <bind match="none"/>
-            <subform w="179mm" layout="tb" name="subComments">
-               <bind match="dataRef" ref="$.Document.Comments[*]"/>
-               <subform name="subCustomerComment" layout="tb">
-                  <bind match="none"/>
-                  <field name="CustomerComment" minH="4mm" access="readOnly" w="179mm">
-                     <ui>
-                        <textEdit multiLine="1">
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                     <bind match="dataRef" ref="$.CustomerComment[*]"/>
-                     <caption reserve="0in">
-                        <font typeface="Arial" size="9pt" weight="bold"/>
-                     </caption>
-                  </field>
-                  <occur max="10" min="0"/>
-                  <?templateDesigner expand 1?></subform>
-               <subform name="subInternalComment" layout="tb" w="179mm">
-                  <bind match="none"/>
-                  <field name="InternalComment" minH="8mm" access="readOnly" w="179mm">
-                     <ui>
-                        <textEdit multiLine="1">
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font typeface="Arial" size="9pt"/>
-                     <margin topInset="5mm" bottomInset="0mm" leftInset="0mm" rightInset="1mm"/>
-                     <bind match="dataRef" ref="$.InternalComment[*]"/>
-                     <caption reserve="0in">
-                        <font typeface="Arial" size="9pt" weight="bold"/>
-                     </caption>
-                  </field>
-                  <occur max="10" min="0"/>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <margin topInset="4mm"/>
-            <occur max="-1" min="0"/>
+            <?templateDesigner expand 1?></subform>
+         <subform usehref=".\Fragments\frg_CommentsArea.xdp#som($template.form1.subCommentsArea)">
             <?templateDesigner expand 0?></subform>
          <subform name="SubTasks" layout="tb" w="179mm">
             <margin leftInset="0mm" rightInset="0mm" topInset="0mm" bottomInset="0mm"/>
             <subform w="179mm" name="subTaskTitle" id="subTaskTitle_ID">
                <bind match="none"/>
-               <field name="L_Task" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="0in" y="0in">
+               <field name="L_Task" usehref=".#som($template.#subform.designer__stylesheet.TextFieldStyle_Left)" minW="159mm" h="4mm" access="readOnly" x="0.001mm" y="0.178mm">
                   <ui>
                      <textEdit/>
                   </ui>
@@ -2282,7 +2251,7 @@ this.caption.value.text = output;
                   <edge thickness="0.1mm"/>
                   <edge presence="hidden"/>
                </border>
-               <margin topInset="4mm"/>
+               <margin topInset="0mm"/>
                <breakAfter/>
                <breakBefore/>
                <occur max="-1"/>
@@ -3930,6 +3899,7 @@ this.caption.value.text = output;
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -3942,13 +3912,12 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Fase3\9544\755_WorkOrder_S001IT05_20130904_100440_D_B001OLS.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\WO\755_WorkOrder_S001IT05_20140520_130922597_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
+   <?templateDesigner Zoom 159?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 151?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:50000;v:4850000;v:1000000;v:375000;h:2350000;h:1325000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -3962,7 +3931,6 @@ this.caption.value.text = output;
    </agent>
    <present>
       <!--  [0..n]  -->
-      <destination>pdf</destination>
       <pdf>
          <!--  [0..n]  -->
          <fontInfo>
@@ -4102,7 +4070,7 @@ this.caption.value.text = output;
    <xsdConnection name="DataConnection" dataDescription="WorkOrder">
       <uri>.\XSD\WorkOrder.xsd</uri>
       <rootElement>WorkOrder</rootElement>
-      <?templateDesigner fileDigest shaHash="cmQewMx9hkAoKwNy3UZEzwYVkAw="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="toxSCaB14EfMbcZU6ovDg3W+D9c="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -4170,11 +4138,15 @@ this.caption.value.text = output;
                <FooterD6/>
                <ThroughputNo/>
                <DealerNameMarketing/>
+               <ReceivedDate/>
                <DateCreated/>
                <TypeText/>
                <TestLabel/>
             </DocumentHeader>
             <HeaderInfo>
+               <Barcode>
+                  <BarcodeValue/>
+               </Barcode>
                <CustomerVatPayer/>
                <CustomerLegalAddressTotal/>
                <CustomerLedgerNo/>
@@ -4216,6 +4188,7 @@ this.caption.value.text = output;
                <CustomerPhoneWork/>
                <LocationPartsPrepicked/>
                <OurRef/>
+               <WarrentyRef/>
                <WarrentyRefLabel/>
                <CustomerRef/>
             </HeaderInfo>
@@ -4257,9 +4230,13 @@ this.caption.value.text = output;
                   <ReminderDescComment/>
                </Reminder>
             </ReminderList>
-            <Comments dd:maxOccur="30">
-               <CustomerComment dd:maxOccur="10"/>
-               <InternalComment dd:maxOccur="10"/>
+            <Comments>
+               <CustomerComments dd:maxOccur="30">
+                  <CustomerComment dd:maxOccur="-1"/>
+               </CustomerComments>
+               <Internalcomments dd:maxOccur="30">
+                  <InternalComment dd:maxOccur="-1"/>
+               </Internalcomments>
             </Comments>
             <Tasks>
                <Task dd:maxOccur="30">
@@ -4344,14 +4321,14 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2013-09-17T07:24:19Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-05-20T11:38:45Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:7b376443-0af4-41d3-ab16-799c134a59eb</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:78640c8e-77e3-49d7-b5d0-7357019f40a0</xmpMM:DocumentID>
          <xmpMM:InstanceID>uuid:159721d8-bc34-4d25-a678-23df65a1251c</xmpMM:InstanceID>
       </rdf:Description>
       <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
@@ -4470,6 +4447,7 @@ this.caption.value.text = output;
                               <xs:element name="FooterD6" type="xs:string"/>
                               <xs:element name="ThroughputNo" type="xs:string"/>
                               <xs:element name="DealerNameMarketing" type="xs:string"/>
+                              <xs:element name="ReceivedDate" type="xs:string"/>
                               <xs:element name="DateCreated" type="xs:string"/>
                               <xs:element name="TypeText" type="xs:string"/>
                               <xs:element name="TestLabel" type="xs:string"/>
@@ -4479,6 +4457,13 @@ this.caption.value.text = output;
                      <xs:element name="HeaderInfo">
                         <xs:complexType>
                            <xs:sequence>
+                              <xs:element name="Barcode">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="BarcodeValue" type="xs:string"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
                               <xs:element name="CustomerVatPayer" type="xs:string"/>
                               <xs:element name="CustomerLegalAddressTotal" type="xs:string"/>
                               <xs:element name="CustomerLedgerNo" type="xs:string"/>
@@ -4520,6 +4505,7 @@ this.caption.value.text = output;
                               <xs:element name="CustomerPhoneWork" type="xs:string"/>
                               <xs:element name="LocationPartsPrepicked" type="xs:string"/>
                               <xs:element name="OurRef" type="xs:string"/>
+                              <xs:element name="WarrentyRef" type="xs:string"/>
                               <xs:element name="WarrentyRefLabel" type="xs:string"/>
                               <xs:element name="CustomerRef" type="xs:string"/>
                            </xs:sequence>
@@ -4607,11 +4593,23 @@ this.caption.value.text = output;
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element maxOccurs="30" name="Comments">
+                     <xs:element name="Comments">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element maxOccurs="10" name="CustomerComment" type="xs:string"/>
-                              <xs:element maxOccurs="10" name="InternalComment" type="xs:string"/>
+                              <xs:element maxOccurs="30" name="CustomerComments">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element maxOccurs="unbounded" name="CustomerComment" type="xs:string"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element maxOccurs="30" name="Internalcomments">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element maxOccurs="unbounded" name="InternalComment" type="xs:string"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>

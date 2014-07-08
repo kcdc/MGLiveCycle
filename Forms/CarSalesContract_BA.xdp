@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-06-02T11:14:45Z" uuid="623f6b53-5988-4206-80e6-46286fed7871">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-06-30T13:19:17Z" uuid="623f6b53-5988-4206-80e6-46286fed7871">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -798,7 +798,92 @@ else if (CarPriceEstimate.pageContent.subFinancingMetadata.FinanceType.rawValue 
             </field>
             <margin topInset="3mm"/>
             <keep intact="contentArea"/>
-            <?templateDesigner expand 0?></subform>
+            <?templateDesigner expand 1?></subform>
+         <subform layout="tb" name="subAmountInEuro" w="179mm">
+            <margin topInset="4mm"/>
+            <occur max="-1" min="0"/>
+            <bind ref="$.Document.CurrencySwap" match="dataRef"/>
+            <subform layout="tb" minH="4mm" name="subAmountLine" w="179mm">
+               <keep intact="contentArea"/>
+               <occur max="-1" min="0"/>
+               <bind match="none"/>
+               <draw minH="4.343mm" name="txtAttention" w="162mm">
+                  <font typeface="Arial" baselineShift="0pt" size="9pt" weight="bold"/>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <para marginLeft="0pt" marginRight="0pt" spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" hAlign="right"/>
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField029914"/><span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField017859"/></p></body>
+                     </exData>
+                  </value>
+               </draw>
+               <field presence="hidden" access="readOnly" minH="9mm" name="L_Sum" w="62mm" x="0mm" y="0mm" id="floatingField029914">
+                  <font typeface="Arial" size="9pt" weight="bold"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind match="none"/>
+                  <event activity="initialize" name="event__initialize">
+                     <script contentType="application/x-javascript">
+
+var LangCode = getLanguages.getLanguageSetting();
+
+var output = getLanguages.getLanguageText(LangCode, this.name);
+
+if(output != "")
+{
+	this.rawValue = output;
+}
+
+else
+{
+		this.rawValue = "VAR FOR: "+this.name+" NOT FOUND";	
+}
+</script>
+                  </event>
+               </field>
+               <field presence="hidden" access="readOnly" minH="9mm" name="Amount" w="62mm" x="0mm" y="0mm" id="floatingField017859">
+                  <font typeface="Arial" size="9pt"/>
+                  <margin bottomInset="0mm" leftInset="1mm" rightInset="1mm" topInset="0mm"/>
+                  <ui>
+                     <textEdit>
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind ref="$.AmountCurrency2" match="dataRef"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <subform layout="tb" name="subCurrencyRate" w="179mm">
+               <margin topInset="0mm"/>
+               <occur max="-1" min="0"/>
+               <bind match="none"/>
+               <field access="readOnly" minH="4mm" name="fldCurrencyRateEuro" w="162mm">
+                  <caption reserve="0in"/>
+                  <font typeface="Arial" size="9pt" weight="bold"/>
+                  <margin bottomInset="0mm" leftInset="0mm" rightInset="0mm" topInset="0mm"/>
+                  <ui>
+                     <textEdit multiLine="1">
+                        <border presence="hidden"/>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <bind ref="$.CurrencyRateTxt" match="dataRef"/>
+                  <para hAlign="right"/>
+               </field>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
          <subform w="179mm" name="subTermsOfDelivery" layout="tb" y="12.312mm">
             <bind match="none"/>
             <subform w="179mm" name="subTermsOfDeliveryText" layout="tb">
@@ -5116,14 +5201,13 @@ this.caption.value.text = output;
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
       <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 248 65 0003000B000C000D000F00100011001200140015001D0020002400250026002700280029002A002B002C002E002F0030003100320033003500360037003800390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005A005B005C005E00600063006E00A1 ()*,-./12:=ABCDEFGHIKLMNOPRSTUV_abcdefghijklmnoprstuvwxy{}Ååø?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 208 54 0003000B000C000D001000110012001D002400250026002700280029002C002D002E002F00300031003200330035003600370039004200440045004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 ()*-./:ABCDEFIJKLMNOPRSTV_abdefghijklmnoprstuvy{}åø?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 216 56 0003000B000C000D001000110012001D002400250026002700280029002C002D002E002F00300031003200330035003600370039003A0042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 ()*-./:ABCDEFIJKLMNOPRSTVW_abcdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
-   <?templateDesigner Zoom 150?>
    <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -5137,11 +5221,12 @@ this.caption.value.text = output;
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\BA\CSC\854_CarSalesContract_S001IT01_20140602_105738990_D_B001HCR.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\BA\CSC\862_CarSalesContract_S001IT05_20140623_090702350_D_B001MAJ.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Zoom 100?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
    <?templateDesigner Guidelines v:375000;v:4850000?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -5289,7 +5374,7 @@ this.caption.value.text = output;
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-06-02T11:14:45Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-06-30T13:19:17Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">

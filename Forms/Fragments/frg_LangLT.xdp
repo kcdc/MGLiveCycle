@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.2.20120224.1.869952" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2013-07-05 08:07:12" uuid="affd5f7f-2494-426f-99c7-5de9d8767e13">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-56-18 01:56:58" uuid="1aef8fef-ce84-4bb1-a03e-33e7d9c1255a">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1static?>
    <subform name="form1" locale="no_NO" layout="tb">
@@ -117,7 +117,7 @@ var L_AdditonalProduct = "** Papildomi mokėjimai";
 var L_ApprovedBy = "Patvirtino:";
 var L_ArrangementFee = "Sutarties mokestis";
 var L_ArrangementFeeVat = "Sutarties mokestis";
-var L_ConfirmationEuroTitle = "Patvirtinimas";
+var L_ConfirmationEuroTitle = "Patvirtinimo";
 var L_CarModelInfo = "Bazinė kaina:";
 var L_CarModelYear = "Modelio metai:";
 var L_CarPriceestimateTerms = "Siūloma kaina ir finansavimo sąlygos yra orientacinės ir neįpareigoja sutarties šalių prieš pasirašant sutartį!";
@@ -152,11 +152,11 @@ var L_Nox = "Nox išmetimas mg/km:";
 var L_OnDelivery = "Mokėjimai";
 var L_OnDeliveryCash = "Mokėjimas pristatymo metu???";
 var L_NumberOfPeriods = "Nuomos terminas (mėnesiais):";
-var L_InvoiceEuroTitle = "Sąskaita";
+var L_InvoiceEuroTitle = "Sąskaitos";
 var L_Interior = "Interjeras:";
 var L_OptionDiscount = "Nuolaida papildomai įrangai";
 var L_OnDeliveryDesc = "Pradinė įmoka";
-var L_Sum = "Suma";
+var L_Sum = "suma";
 var L_OptionPriceTotal = "Originali papildoma įranga:";
 var L_Options = "Papildoma įranga";
 var L_OrderNo = "Užs.Nr.";
@@ -192,7 +192,7 @@ var L_TradeInEncumbrance = "Įkeistas:";
 var L_TradeInMileage = "Rida:";
 var L_TradeInModelDesc = "Modelis:";
 var L_TradeInPrice = "Planuojama atpirkimo kaina:";
-var L_PriceestimateEuroTitle = "Kaina pasiūlymo";
+var L_PriceestimateEuroTitle = "Pasiūlymo";
 var L_TradeInRegDate = "Pirma registracija:";
 var L_TradeInRegisteredYear = "Modelio metai:";
 var L_TradeInRegistrationFeePaid = "Metiniai mokesčiai sumokėti:";
@@ -203,6 +203,7 @@ var L_VatBasis = "PVM bazė:";
 var L_VatContract = "PVM bazė:";
 var L_VehicleDiscount = "Nuolaida a/m";
 var L_VehiclePrice = "A/m kaina";
+var L_WorkOrderEuroTitle = "Užsakymo";
 var L_AdditionalWorkText = "Papildomas darbas, kuris yra patvirtintas kliento";
 var L_AmountToPay = "Mokėti:";
 var L_Attention = "Kam:";
@@ -316,7 +317,7 @@ var L_InvoiceNo = "Nr.:";
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:affd5f7f-2494-426f-99c7-5de9d8767e13</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:1aef8fef-ce84-4bb1-a03e-33e7d9c1255a</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:lcd="http://ns.adobe.com/livecycle/designer/" xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:about="">
          <lcd:fragmentCatalog>

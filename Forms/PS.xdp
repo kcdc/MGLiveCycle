@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-06-24T13:49:25Z" uuid="0a96374c-4aea-413e-8f69-6361763e62c8">
+<template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
+   <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
+   <?formServer allowRenderCaching 0?>
+   <?formServer formModel both?>
+   <subform name="PS" layout="tb" locale="da_DK" restoreState="auto">
+      <pageSet>
+         <pageArea name="mpgPage" id="Page1">
+            <medium stock="a4" short="210mm" long="297mm" orientation="landscape"/>
+            <contentArea w="284mm" h="190mm" name="contentArea1" y="17mm" x="7mm"/>
+            <subform x="61mm" w="220.15mm" minH="50mm" name="subHeader" y="9.525mm">
+               <bind match="none"/>
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0in">
+                  <bind/>
+                  <?templateDesigner expand 1?></subform>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="144mm" y="6mm">
+                  <bind/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <subform x="7mm" y="10mm" w="282.575mm" name="subTableHeader" layout="tb">
+               <bind match="none"/>
+               <subform name="subTopTitleRow" layout="lr-tb">
+                  <bind match="none"/>
+                  <field name="L_Customer" access="readOnly" h="6.35mm" w="19mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>KUNDE</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_DeliveryMethod" access="readOnly" h="6.35mm" w="30mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>FORS. MÅTE</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_OrderType" access="readOnly" h="6.35mm" w="32mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>ORDRETYPE</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_OrderNumber" access="readOnly" h="6.35mm" w="25mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>ORDRENR</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_Date" access="readOnly" h="6.35mm" w="24mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>DATO</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_PaymentAgreement" access="readOnly" h="6.35mm" w="19mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>BET.BET.</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_ServedBy" access="readOnly" h="6.35mm" w="14mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>EKSP.</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_Page" access="readOnly" h="6.35mm" w="10mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>SIDE</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge thickness="0.2mm"/>
+                     <corner thickness="0.2mm"/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subTopValueRow" layout="lr-tb">
+                  <bind match="none"/>
+                  <field name="TextField1" w="19mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="30mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="32mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="25mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="24mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="19mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="14mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="10mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge thickness="0.2mm"/>
+                     <corner thickness="0.2mm"/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subBottomTitleRow" layout="lr-tb">
+                  <bind match="none"/>
+                  <field name="L_Customer" access="readOnly" h="13mm" w="49mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="5mm" leftInset="10mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>DELENUMMER</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <edge thickness="0.3mm"/>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_DeliveryMethod" access="readOnly" h="13mm" w="32mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>TEKST</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <edge thickness="0.3mm"/>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_OrderType" access="readOnly" h="13mm" w="32mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>REG. NR</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <edge thickness="0.3mm"/>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_OrderNumber" access="readOnly" h="13mm" w="25mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>ENHETSPRIS UTEN MOMS</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <edge thickness="0.3mm"/>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_Date" access="readOnly" h="13mm" w="24mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>RABATT</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <edge thickness="0.3mm"/>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <subform w="43mm" minH="9.3mm" layout="lr-tb" name="subSpecielRow">
+                     <bind match="none"/>
+                     <field name="L_PaymentAgreement" access="readOnly" h="8mm" w="17mm">
+                        <ui>
+                           <textEdit>
+                              <border presence="hidden"/>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial" size="6pt"/>
+                        <margin topInset="0mm" bottomInset="2mm" leftInset="1mm" rightInset="0mm"/>
+                        <bind match="none"/>
+                        <caption reserve="0in">
+                           <value>
+                              <text>LEVERT</text>
+                           </value>
+                           <para vAlign="bottom"/>
+                        </caption>
+                        <para vAlign="bottom"/>
+                        <border>
+                           <edge thickness="0.3mm"/>
+                           <corner thickness="0.3mm"/>
+                           <corner thickness="0.3mm"/>
+                           <corner thickness="0.3mm" presence="hidden"/>
+                           <corner thickness="0.3mm"/>
+                           <edge thickness="0.3mm"/>
+                           <edge thickness="0.3mm" presence="hidden"/>
+                           <edge thickness="0.3mm"/>
+                        </border>
+                     </field>
+                     <subform x="19mm" minH="6.3mm" layout="lr-tb" name="subMissing" w="26mm">
+                        <bind match="none"/>
+                        <field name="L_PaymentAgreement" access="readOnly" h="3.3mm" w="26mm">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial" size="6pt"/>
+                           <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                           <bind match="none"/>
+                           <caption reserve="0in">
+                              <value>
+                                 <text>NOTERT RESTORDERE</text>
+                              </value>
+                              <para vAlign="bottom"/>
+                           </caption>
+                           <para vAlign="bottom"/>
+                           <border>
+                              <edge thickness="0.3mm"/>
+                              <corner thickness="0.3mm"/>
+                           </border>
+                        </field>
+                        <field name="L_Yes" access="readOnly" h="4.7mm" w="13mm">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial" size="6pt"/>
+                           <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                           <bind match="none"/>
+                           <caption reserve="0in">
+                              <value>
+                                 <text>JA</text>
+                              </value>
+                              <para vAlign="bottom"/>
+                           </caption>
+                           <para vAlign="bottom"/>
+                           <border>
+                              <edge thickness="0.3mm" presence="hidden"/>
+                              <corner thickness="0.3mm" presence="hidden"/>
+                              <edge thickness="0.3mm"/>
+                              <edge thickness="0.3mm"/>
+                              <edge thickness="0.3mm"/>
+                              <corner thickness="0.3mm"/>
+                              <corner thickness="0.3mm"/>
+                              <corner thickness="0.3mm"/>
+                           </border>
+                        </field>
+                        <field name="L_No" access="readOnly" h="4.7mm" w="12.9mm">
+                           <ui>
+                              <textEdit>
+                                 <border presence="hidden"/>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial" size="6pt"/>
+                           <margin topInset="0mm" bottomInset="0.5mm" leftInset="1mm" rightInset="0mm"/>
+                           <bind match="none"/>
+                           <caption reserve="0in">
+                              <value>
+                                 <text>NEI</text>
+                              </value>
+                              <para vAlign="bottom"/>
+                           </caption>
+                           <para vAlign="bottom"/>
+                           <border>
+                              <edge thickness="0.3mm" presence="hidden"/>
+                              <corner thickness="0.3mm" presence="hidden"/>
+                           </border>
+                        </field>
+                        <border>
+                           <edge thickness="0.1mm"/>
+                           <corner thickness="0.1mm"/>
+                        </border>
+                        <?templateDesigner expand 1?></subform>
+                     <margin topInset="5mm"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
+                  <field name="L_Date" access="readOnly" h="13mm" w="14mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>OPDR. ORDRENR.</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <edge thickness="0.3mm"/>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="L_Date" access="readOnly" h="13mm" w="15mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="5mm" leftInset="1mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>FORH. LOCATION</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <edge thickness="0.3mm"/>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <border>
+                     <edge thickness="0.3mm"/>
+                     <corner thickness="0.3mm"/>
+                  </border>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform w="288.925mm" name="Page" layout="tb">
+         <bind match="dataRef" ref="$.Document.Pages"/>
+         <occur min="0" max="-1"/>
+         <subform name="subPageHolder" h="203.2mm" w="284mm">
+            <bind match="dataRef" ref="$.Page[*]"/>
+            <occur min="0" max="-1"/>
+            <subform name="subFlowedPage" layout="tb">
+               <bind match="none"/>
+               <subform name="subPageDetail" layout="tb" w="284mm">
+                  <bind match="none"/>
+                  <field name="floPageDetail" y="0mm" x="0mm" w="267mm" h="9mm" id="floatingField013523" presence="hidden" access="protected">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.PageDetail[*]"/>
+                     <font size="11pt"/>
+                  </field>
+                  <draw name="fldPageDetail" w="266.7mm" h="4.175mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField013523"/></p></body>
+                        </exData>
+                     </value>
+                     <font size="11pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1mm" rightInset="1mm"/>
+                  </draw>
+                  <occur min="0" max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <breakBefore/>
+            <?templateDesigner expand 1?></subform>
+         <subform w="288.925mm" h="187.85mm" name="CopyPage">
+            <bind match="dataRef" ref="$.CopyPage[*]"/>
+            <occur min="0" max="-1"/>
+            <subform name="subFlowedPage" layout="tb" y="0.075mm">
+               <bind match="none"/>
+               <subform name="subPageDetail" layout="tb" w="284mm">
+                  <bind match="none"/>
+                  <field name="floPageDetail" y="0mm" x="0mm" w="267mm" h="9mm" presence="hidden" access="protected" id="floatingField001921">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.PageDetail[*]"/>
+                     <font size="11pt"/>
+                  </field>
+                  <draw name="fldPageDetail" w="266.7mm" h="4.175mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField001921"/></p></body>
+                        </exData>
+                     </value>
+                     <font size="11pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1mm" rightInset="1mm"/>
+                  </draw>
+                  <occur min="0" max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 1?></subform>
+            <?templateDesigner expand 1?></subform>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <desc>
+         <text name="version">10.0.2.20120224.1.869952.867557</text>
+      </desc>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?templateDesigner expand 1?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 100 26 00030011002400250026002700280029002A002B002C002D002E002F003000310032003300350036003700380039003C0063 .ABCDEFGHIJKLMNOPRSTUVYÅ?>
+      <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 84 21 00040011001200130014001600250027003100420045004600470048004A004D004F00500055005C005E#01235DFPadefgilnot{}?></subform>
+   <?templateDesigner DefaultPreviewDynamic 1?>
+   <?templateDesigner WidowOrphanControl 0?>
+   <?templateDesigner SavePDFWithLog 0?>
+   <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
+   <?templateDesigner Zoom 125?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner DefaultLanguage JavaScript?>
+   <?templateDesigner DefaultRunAt client?>
+   <?acrobat JavaScript strictScoping?>
+   <?PDFPrintOptions embedViewerPrefs 0?>
+   <?PDFPrintOptions embedPrintOnFormOpen 0?>
+   <?PDFPrintOptions scalingPrefs 0?>
+   <?PDFPrintOptions enforceScalingPrefs 0?>
+   <?PDFPrintOptions paperSource 0?>
+   <?PDFPrintOptions duplexMode 0?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner DefaultPreviewPagination simplex?>
+   <?templateDesigner XDPPreviewFormat 20?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\PS\PS_example.xml?>
+   <?templateDesigner DefaultCaptionFontSettings face:Arial;size:9;weight:normal;style:normal?>
+   <?templateDesigner DefaultValueFontSettings face:Arial;size:9;weight:normal;style:normal?>
+   <?templateDesigner SaveTaggedPDF 0?>
+   <?templateDesigner SavePDFWithEmbeddedFonts 0?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/3.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+            <embed>0</embed>
+         </fontInfo>
+         <tagged>0</tagged>
+         <version>1.7</version>
+         <adobeExtensionLevel>5</adobeExtensionLevel>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri>..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\PS\Eksperiment\CreateCopyFields.xsl</uri>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
+   <xsdConnection name="DataConnection" dataDescription="PS">
+      <uri>.\XSD\PSLC.xsd</uri>
+      <rootElement>PS</rootElement>
+      <?templateDesigner fileDigest shaHash="px1T9FgTzezHHAysMVnF2sVUXg0="?></xsdConnection>
+</connectionSet>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="PS">
+      <PS>
+         <Header>
+            <DocType/>
+            <DocSubType/>
+            <Country/>
+            <LangCode/>
+            <StdTray/>
+            <TwoSided/>
+            <MediaControl>
+               <OutputTargets>
+                  <Print>
+                     <PrinterName/>
+                  </Print>
+                  <File>
+                     <FileName/>
+                  </File>
+                  <Preview>
+                     <ClientAddress/>
+                  </Preview>
+                  <Archive dd:dataNode="dataGroup"/>
+               </OutputTargets>
+            </MediaControl>
+         </Header>
+         <Document>
+            <DocumentHeader>
+               <TestLabel/>
+            </DocumentHeader>
+            <Pages>
+               <Page dd:maxOccur="-1">
+                  <PageInfo dd:minOccur="0">
+                     <OrderType/>
+                     <OrderNo/>
+                     <InvoiceNo/>
+                  </PageInfo>
+                  <PageDetail dd:maxOccur="-1"/>
+               </Page>
+               <CopyPage dd:minOccur="0" dd:maxOccur="-1">
+                  <PageInfo dd:minOccur="0">
+                     <OrderType/>
+                     <OrderNo/>
+                     <InvoiceNo/>
+                  </PageInfo>
+                  <PageDetail dd:maxOccur="-1"/>
+               </CopyPage>
+            </Pages>
+         </Document>
+      </PS>
+   </dd:dataDescription>
+</xfa:datasets>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.7/">
+   <locale name="da_DK" desc="Dansk (Danmark)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>januar</month>
+            <month>februar</month>
+            <month>marts</month>
+            <month>april</month>
+            <month>maj</month>
+            <month>juni</month>
+            <month>juli</month>
+            <month>august</month>
+            <month>september</month>
+            <month>oktober</month>
+            <month>november</month>
+            <month>december</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>jan</month>
+            <month>feb</month>
+            <month>mar</month>
+            <month>apr</month>
+            <month>maj</month>
+            <month>jun</month>
+            <month>jul</month>
+            <month>aug</month>
+            <month>sep</month>
+            <month>okt</month>
+            <month>nov</month>
+            <month>dec</month>
+         </monthNames>
+         <dayNames>
+            <day>søndag</day>
+            <day>mandag</day>
+            <day>tirsdag</day>
+            <day>onsdag</day>
+            <day>torsdag</day>
+            <day>fredag</day>
+            <day>lørdag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>sø</day>
+            <day>ma</day>
+            <day>ti</day>
+            <day>on</day>
+            <day>to</day>
+            <day>fr</day>
+            <day>lø</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>F.KR.</era>
+            <era>E.KR.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE 'den' D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMM YYYY</datePattern>
+         <datePattern name="med">DD/MM/YYYY</datePattern>
+         <datePattern name="short">DD/MM/YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM.SS Z</timePattern>
+         <timePattern name="long">H.MM.SS Z</timePattern>
+         <timePattern name="med">H.MM.SS</timePattern>
+         <timePattern name="short">H.MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GuMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">$ z,zz9.99</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+         <numberSymbol name="zero">0</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">kr</currencySymbol>
+         <currencySymbol name="isoname">DKK</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+      <typefaces>
+         <typeface name="Myriad Pro"/>
+         <typeface name="Minion Pro"/>
+         <typeface name="Courier Std"/>
+         <typeface name="Adobe Pi Std"/>
+         <typeface name="Adobe Hebrew"/>
+         <typeface name="Adobe Arabic"/>
+         <typeface name="Adobe Thai"/>
+         <typeface name="Kozuka Gothic Pro-VI M"/>
+         <typeface name="Kozuka Mincho Pro-VI R"/>
+         <typeface name="Adobe Ming Std L"/>
+         <typeface name="Adobe Song Std L"/>
+         <typeface name="Adobe Myungjo Std M"/>
+      </typefaces>
+   </locale>
+</localeSet>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
+         <xmp:MetadataDate>2014-06-24T13:49:25Z</xmp:MetadataDate>
+         <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
+      </rdf:Description>
+      <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
+         <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
+      </rdf:Description>
+      <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
+         <xmpMM:DocumentID>uuid:0a96374c-4aea-413e-8f69-6361763e62c8</xmpMM:DocumentID>
+      </rdf:Description>
+      <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
+         <desc:version rdf:parseType="Resource">
+            <rdf:value>10.0.2.20120224.1.869952.867557</rdf:value>
+            <desc:ref>/template/subform[1]</desc:ref>
+         </desc:version>
+      </rdf:Description>
+   </rdf:RDF>
+</x:xmpmeta></xdp:xdp>
