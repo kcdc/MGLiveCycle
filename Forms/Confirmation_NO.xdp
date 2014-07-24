@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-04-02T12:58:07Z" uuid="015507be-448a-487e-8e48-05e74a4628e2">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-07-11T09:01:59Z" uuid="36ea7917-0572-4530-bf3b-6e3a6f0e338e">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -512,9 +512,11 @@ else
                      </draw>
                      <?templateDesigner expand 1?></subform>
                   <subform usehref=".\Fragments\frg_Date.xdp#som($template.form1.subDate)">
-                     <?templateDesigner expand 1?></subform>
+                     <?templateDesigner expand 1?>
+                  </subform>
                   <subform usehref=".\Fragments\frg_OurRef.xdp#som($template.form1.subOurRef)">
-                     <?templateDesigner expand 0?></subform>
+                     <?templateDesigner expand 0?>
+                  </subform>
                   <?templateDesigner expand 1?></subform>
                <field name="fldWarrentyRefLabel" h="3.5mm" access="readOnly" x="117.999mm" y="31mm" w="17mm">
                   <ui>
@@ -901,6 +903,8 @@ this.caption.value.text = output;
                <margin leftInset="3mm"/>
                <?templateDesigner expand 1?></subform>
             <occur min="0"/>
+            <?templateDesigner expand 1?></subform>
+         <subform usehref=".\Fragments\frg_CommentsArea.xdp#som($template.form1.subCommentsArea)">
             <?templateDesigner expand 1?></subform>
          <subform w="179mm" minH="7.2mm" layout="tb" name="Tasks" y="8.713mm">
             <bind match="dataRef" ref="$.Document.Tasks"/>
@@ -1502,9 +1506,9 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
       <desc>
          <text name="version">10.0.2.20120224.1.869952.867557</text>
       </desc>
-      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 152 38 000300120024002600270028002F003000310032003300350036003700380039004200440045004600480049004A004B004C004F005000510052005300550056005700580059005C005E0060 /ACDELMNOPRSTUV_abcefghilmnoprstuvy{}?>
+      <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 144 36 00030012002400260027002F003000310032003300350036003700380039004200440045004600480049004A004B004F005000510052005300550056005700580059005C005E0060 /ACDLMNOPRSTUV_abcefghlmnoprstuvy{}?>
       <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 204 53 0003001000110012001D002400250026002700280029002A002B002D002E002F003000310032003300350036003700390042004400450046004700480049004A004B004C004D004E004F005000510052005300550056005700580059005C005E0060006E00A1 -./:ABCDEFGHJKLMNOPRSTV_abcdefghijklmnoprstuvy{}åø?>
       <?renderCache.subset "Courier Std" 0 1 ISO-8859-1 4 48 12 0001002C0042004500460048004A004F0053005400550056 Kadeginrstu?>
       <?renderCache.subset "Myriad Pro" 0 0 ISO-8859-1 4 204 51 00010003000E000F0010001100120013001400180019001A001B001C001D001E001F00200022002500260027002A002E003100350036003700420043004400450046004700480049004A004D004E004F00500051005300540055005700580059005A005B0068 "-./0123789:;<=>?ADEFIMPTUVabcdefghilmnoprstvwxyz'?></subform>
@@ -1513,6 +1517,8 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
+   <?templateDesigner Zoom 167?>
+   <?templateDesigner FormTargetVersion 30?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
    <?acrobat JavaScript strictScoping?>
@@ -1525,11 +1531,9 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2013\Defect\Defects\8708\773_Confirmation_S001IT01_20130531_095017_D_B001OLS_utenSjekkliste.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\Confirmation\REST_030_Confirmation_S001IT05_20140710_125447856_D_B001OLS.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Myriad Pro;size:10;weight:normal;style:normal?>
-   <?templateDesigner FormTargetVersion 30?>
-   <?templateDesigner Zoom 144?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?>
@@ -1676,14 +1680,14 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-04-02T12:58:07Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-07-11T09:01:59Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:015507be-448a-487e-8e48-05e74a4628e2</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:36ea7917-0572-4530-bf3b-6e3a6f0e338e</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
@@ -1695,9 +1699,9 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
 </x:xmpmeta>
 <connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.8/">
    <xsdConnection name="DataConnection" dataDescription="Confirmation">
-      <uri>..\..\..\Dropbox\MG_LiveCycle\7- Testing Fase 2\Vedlegg til Task\8422\Confirmation_KC.xsd</uri>
+      <uri>.\XSD\Confirmation.xsd</uri>
       <rootElement>Confirmation</rootElement>
-      <?templateDesigner fileDigest shaHash="FZydRvhDW4mznm3Q2EZhWyO/aOg="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="pMNf/V7fh/yyg//hgitcbW2nR94="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -1844,7 +1848,7 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                <Task dd:maxOccur="30">
                   <TaskHeader>
                      <TaskTexts dd:maxOccur="30">
-                        <TaskText dd:minOccur="0" dd:maxOccur="-1" dd:nullType="exclude"/>
+                        <TaskText dd:maxOccur="-1"/>
                      </TaskTexts>
                      <TaskId/>
                      <TaskName/>
@@ -1854,14 +1858,21 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                </Task>
             </Tasks>
             <Total>
+               <Currency/>
                <VatPercent/>
                <VatAmount/>
                <PriceVatTotalInfo/>
                <PriceVatTotalSum/>
             </Total>
-            <InfoText>
-               <CustomerComment dd:maxOccur="10"/>
-            </InfoText>
+            <CurrencySwap>
+               <AmountCurrency2/>
+               <CurrencyRateTxt/>
+            </CurrencySwap>
+            <Comments>
+               <CustomerComments dd:maxOccur="30">
+                  <CustomerComment dd:maxOccur="-1"/>
+               </CustomerComments>
+            </Comments>
             <BottomTextMain>
                <BottomTextLines dd:maxOccur="10">
                   <BottomTextLine/>
@@ -2040,7 +2051,7 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                      <xs:element name="TopTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="TopTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="TopTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TopTextLine" type="xs:string"/>
@@ -2097,7 +2108,7 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                      <xs:element name="ReminderList">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Reminder" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Reminder">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="ReminderDescription" type="xs:string"/>
@@ -2111,16 +2122,16 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                      <xs:element name="Tasks">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="Task" maxOccurs="30">
+                              <xs:element maxOccurs="30" name="Task">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="TaskHeader">
                                           <xs:complexType>
                                              <xs:sequence>
-                                                <xs:element name="TaskTexts" maxOccurs="30">
+                                                <xs:element maxOccurs="30" name="TaskTexts">
                                                    <xs:complexType>
                                                       <xs:sequence>
-                                                         <xs:element name="TaskText" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                                         <xs:element maxOccurs="unbounded" name="TaskText" type="xs:string"/>
                                                       </xs:sequence>
                                                    </xs:complexType>
                                                 </xs:element>
@@ -2140,6 +2151,7 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                      <xs:element name="Total">
                         <xs:complexType>
                            <xs:sequence>
+                              <xs:element name="Currency" type="xs:string"/>
                               <xs:element name="VatPercent" type="xs:string"/>
                               <xs:element name="VatAmount" type="xs:string"/>
                               <xs:element name="PriceVatTotalInfo" type="xs:string"/>
@@ -2147,17 +2159,31 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
-                     <xs:element name="InfoText">
+                     <xs:element name="CurrencySwap">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="CustomerComment" type="xs:string" maxOccurs="10"/>
+                              <xs:element name="AmountCurrency2" type="xs:string"/>
+                              <xs:element name="CurrencyRateTxt" type="xs:string"/>
+                           </xs:sequence>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="Comments">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element maxOccurs="30" name="CustomerComments">
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element maxOccurs="unbounded" name="CustomerComment" type="xs:string"/>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
                            </xs:sequence>
                         </xs:complexType>
                      </xs:element>
                      <xs:element name="BottomTextMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="BottomTextLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="BottomTextLines">
                                  <xs:complexType>
                                     <xs:sequence>
                                        <xs:element name="BottomTextLine" type="xs:string"/>
@@ -2178,10 +2204,10 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                      <xs:element name="FooterLinesMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="FooterLines">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLine" type="xs:string" maxOccurs="10"/>
+                                       <xs:element maxOccurs="10" name="FooterLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>
@@ -2191,10 +2217,10 @@ if(Confirmation.pageContent.subConfirmationMetadata.DocHeaderShowConsent.rawValu
                      <xs:element name="FooterLimitedMain">
                         <xs:complexType>
                            <xs:sequence>
-                              <xs:element name="FooterLimitedLines" maxOccurs="10">
+                              <xs:element maxOccurs="10" name="FooterLimitedLines">
                                  <xs:complexType>
                                     <xs:sequence>
-                                       <xs:element name="FooterLimitedLine" type="xs:string" maxOccurs="10"/>
+                                       <xs:element maxOccurs="10" name="FooterLimitedLine" type="xs:string"/>
                                     </xs:sequence>
                                  </xs:complexType>
                               </xs:element>

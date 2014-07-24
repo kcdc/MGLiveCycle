@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesignerES_V10.0.4.20120927.1.878567" APIVersion="3.5.12002.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-06-24T13:49:25Z" uuid="0a96374c-4aea-413e-8f69-6361763e62c8">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2014-07-14T08:54:47Z" uuid="2f654838-7f5e-4e7e-971a-203f0d111a4b">
 <template xmlns="http://www.xfa.org/schema/xfa-template/3.0/">
    <?formServer defaultPDFRenderFormat acrobat9.1dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -9,21 +9,56 @@
       <pageSet>
          <pageArea name="mpgPage" id="Page1">
             <medium stock="a4" short="210mm" long="297mm" orientation="landscape"/>
-            <contentArea w="284mm" h="190mm" name="contentArea1" y="17mm" x="7mm"/>
-            <subform x="61mm" w="220.15mm" minH="50mm" name="subHeader" y="9.525mm">
+            <subform w="297mm" minH="50mm" name="subHeader" y="10mm">
                <bind match="none"/>
-               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="0mm" y="0in">
+               <subform usehref=".\Fragments\frg_RichTextEnvelope.xdp#som($template.form1.sub_RichTextEnvelope)" x="61mm" y="0in">
                   <bind/>
-                  <?templateDesigner expand 1?></subform>
-               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" x="144mm" y="6mm">
+                  <?templateDesigner expand 1?>
+               </subform>
+               <subform usehref=".\Fragments\frg_TestLabel.xdp#som($template.form1.sub_TestLabel)" y="32mm" x="222.85mm" w="74.15mm">
                   <bind/>
+                  <?templateDesigner expand 1?>
+               </subform>
+               <subform x="234mm" y="1.475mm" w="57.127mm" minH="6.644mm" name="subLogo">
+                  <bind match="none"/>
+                  <keep intact="none"/>
+                  <subform name="subDocTitle" x="0mm" y="0mm" layout="tb">
+                     <bind match="none"/>
+                     <draw name="txtDocTitle" w="57.127mm" h="6.644mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <text>MØLLER LOGISTIKK</text>
+                        </value>
+                        <font size="16pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                        <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                        <?templateDesigner expand 1?>
+                        <?renderCache.bounds 159101 15999 0 0 1417 1417 0 0?>
+                        <?renderCache.textRun 17 MØLLER LOGISTIKK 0 1417 14050 0 0 0 "Arial" 1 0 16000 ISO-8859-1?></draw>
+                     <border>
+                        <edge thickness="0.1mm"/>
+                        <corner thickness="0.1mm"/>
+                     </border>
+                     <?templateDesigner expand 1?></subform>
                   <?templateDesigner expand 1?></subform>
+               <draw name="txtSparepartsDepartment" h="5.2331mm" x="239mm" y="10mm" minW="38.765mm">
+                  <ui>
+                     <textEdit/>
+                  </ui>
+                  <value>
+                     <text>Reservedelsavd. Skedsmo</text>
+                  </value>
+                  <font size="12pt" typeface="Arial"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               </draw>
                <?templateDesigner expand 1?></subform>
-            <subform x="7mm" y="10mm" w="282.575mm" name="subTableHeader" layout="tb">
+            <subform x="7mm" y="12.475mm" w="282.575mm" name="subTableHeader" layout="tb">
                <bind match="none"/>
                <subform name="subTopTitleRow" layout="lr-tb">
                   <bind match="none"/>
-                  <field name="L_Customer" access="readOnly" h="6.35mm" w="19mm">
+                  <field name="L_Customer" access="readOnly" h="6.35mm" w="12mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -45,7 +80,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_DeliveryMethod" access="readOnly" h="6.35mm" w="30mm">
+                  <field name="L_DeliveryMethod" access="readOnly" h="6.35mm" w="24mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -67,7 +102,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_OrderType" access="readOnly" h="6.35mm" w="32mm">
+                  <field name="L_OrderType" access="readOnly" h="6.35mm" w="36mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -89,7 +124,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_OrderNumber" access="readOnly" h="6.35mm" w="25mm">
+                  <field name="L_OrderNumber" access="readOnly" h="6.35mm" w="19mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -111,7 +146,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_Date" access="readOnly" h="6.35mm" w="24mm">
+                  <field name="L_Date" access="readOnly" h="6.35mm" w="21mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -133,7 +168,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_PaymentAgreement" access="readOnly" h="6.35mm" w="19mm">
+                  <field name="L_PaymentAgreement" access="readOnly" h="6.35mm" w="12mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -155,7 +190,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_ServedBy" access="readOnly" h="6.35mm" w="14mm">
+                  <field name="L_ServedBy" access="readOnly" h="6.35mm" w="8mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -177,7 +212,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_Page" access="readOnly" h="6.35mm" w="10mm">
+                  <field name="L_Page" access="readOnly" h="6.35mm" w="6mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -203,58 +238,10 @@
                      <edge thickness="0.2mm"/>
                      <corner thickness="0.2mm"/>
                   </border>
-                  <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 0?></subform>
                <subform name="subTopValueRow" layout="lr-tb">
                   <bind match="none"/>
-                  <field name="TextField1" w="19mm" h="8.65mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="none"/>
-                     <border>
-                        <edge thickness="0.3mm"/>
-                        <corner thickness="0.3mm"/>
-                     </border>
-                  </field>
-                  <field name="TextField1" w="30mm" h="8.65mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="none"/>
-                     <border>
-                        <edge thickness="0.3mm"/>
-                        <corner thickness="0.3mm"/>
-                     </border>
-                  </field>
-                  <field name="TextField1" w="32mm" h="8.65mm" access="readOnly">
-                     <ui>
-                        <textEdit>
-                           <border presence="hidden"/>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <font size="9pt" typeface="Arial"/>
-                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="none"/>
-                     <border>
-                        <edge thickness="0.3mm"/>
-                        <corner thickness="0.3mm"/>
-                     </border>
-                  </field>
-                  <field name="TextField1" w="25mm" h="8.65mm" access="readOnly">
+                  <field name="TextField1" w="12mm" h="8.65mm" access="readOnly">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -286,6 +273,22 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
+                  <field name="TextField1" w="36mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
                   <field name="TextField1" w="19mm" h="8.65mm" access="readOnly">
                      <ui>
                         <textEdit>
@@ -302,7 +305,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="TextField1" w="14mm" h="8.65mm" access="readOnly">
+                  <field name="TextField1" w="21mm" h="8.65mm" access="readOnly">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -318,7 +321,39 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="TextField1" w="10mm" h="8.65mm" access="readOnly">
+                  <field name="TextField1" w="12mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="8mm" h="8.65mm" access="readOnly">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font size="9pt" typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="none"/>
+                     <border>
+                        <edge thickness="0.3mm"/>
+                        <corner thickness="0.3mm"/>
+                     </border>
+                  </field>
+                  <field name="TextField1" w="6mm" h="8.65mm" access="readOnly">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -369,7 +404,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_DeliveryMethod" access="readOnly" h="13mm" w="32mm">
+                  <field name="L_DeliveryMethod" access="readOnly" h="13mm" w="24mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -397,7 +432,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_OrderType" access="readOnly" h="13mm" w="32mm">
+                  <field name="L_OrderType" access="readOnly" h="13mm" w="21mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -425,7 +460,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_OrderNumber" access="readOnly" h="13mm" w="25mm">
+                  <field name="L_OrderNumber" access="readOnly" h="13mm" w="22mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -453,7 +488,7 @@
                         <corner thickness="0.3mm"/>
                      </border>
                   </field>
-                  <field name="L_Date" access="readOnly" h="13mm" w="24mm">
+                  <field name="L_Date" access="readOnly" h="13mm" w="12mm">
                      <ui>
                         <textEdit>
                            <border presence="hidden"/>
@@ -657,58 +692,37 @@
                      <corner thickness="0.3mm"/>
                   </border>
                   <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
+               <?templateDesigner expand 0?></subform>
+            <contentArea w="284mm" h="190mm" name="contentArea1" y="11mm" x="7mm"/>
             <?templateDesigner expand 1?></pageArea>
          <?templateDesigner expand 1?></pageSet>
       <subform w="288.925mm" name="Page" layout="tb">
          <bind match="dataRef" ref="$.Document.Pages"/>
-         <occur min="0" max="-1"/>
-         <subform name="subPageHolder" h="203.2mm" w="284mm">
-            <bind match="dataRef" ref="$.Page[*]"/>
-            <occur min="0" max="-1"/>
-            <subform name="subFlowedPage" layout="tb">
-               <bind match="none"/>
-               <subform name="subPageDetail" layout="tb" w="284mm">
-                  <bind match="none"/>
-                  <field name="floPageDetail" y="0mm" x="0mm" w="267mm" h="9mm" id="floatingField013523" presence="hidden" access="protected">
-                     <ui>
-                        <textEdit>
-                           <border>
-                              <edge stroke="lowered"/>
-                           </border>
-                           <margin/>
-                        </textEdit>
-                     </ui>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
-                     <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.PageDetail[*]"/>
-                     <font size="11pt"/>
-                  </field>
-                  <draw name="fldPageDetail" w="266.7mm" h="4.175mm">
-                     <ui>
-                        <textEdit/>
-                     </ui>
-                     <value>
-                        <exData contentType="text/html">
-                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField013523"/></p></body>
-                        </exData>
-                     </value>
-                     <font size="11pt"/>
-                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1mm" rightInset="1mm"/>
-                  </draw>
-                  <occur min="0" max="-1"/>
-                  <?templateDesigner expand 1?></subform>
-               <?templateDesigner expand 1?></subform>
-            <breakBefore/>
+         <subform usehref=".\Fragments\frg_Metadata.xdp#som($template.form1.subMetadata)" presence="hidden">
+            <?templateDesigner expand 1?>
+         </subform>
+         <subform name="subPSMetadata" layout="tb" presence="hidden">
+            <bind match="none"/>
+            <field name="DocSubType" h="6mm" minW="3mm">
+               <ui>
+                  <textEdit>
+                     <border presence="hidden"/>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font size="9pt" typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <bind match="dataRef" ref="$record.Header.DocSubType"/>
+            </field>
             <?templateDesigner expand 1?></subform>
-         <subform w="288.925mm" h="187.85mm" name="CopyPage">
-            <bind match="dataRef" ref="$.CopyPage[*]"/>
-            <occur min="0" max="-1"/>
-            <subform name="subFlowedPage" layout="tb" y="0.075mm">
-               <bind match="none"/>
-               <subform name="subPageDetail" layout="tb" w="284mm">
+         <subform w="288.925mm" layout="tb" name="subPageAndCopy">
+            <bind match="dataRef" ref="$.CopyAndPage[*]"/>
+            <subform name="subPageHolder" w="284mm" h="189.999mm">
+               <bind match="dataRef" ref="$.Page"/>
+               <subform name="subPageTitle" x="221.999mm" w="62mm" h="21mm" y="7mm">
                   <bind match="none"/>
-                  <field name="floPageDetail" y="0mm" x="0mm" w="267mm" h="9mm" presence="hidden" access="protected" id="floatingField001921">
+                  <field name="floPageTitle" y="0mm" x="0mm" w="62mm" h="9mm" id="floatingField007189" presence="hidden" access="readOnly">
                      <ui>
                         <textEdit>
                            <border>
@@ -717,26 +731,337 @@
                            <margin/>
                         </textEdit>
                      </ui>
-                     <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                      <para vAlign="middle"/>
-                     <bind match="dataRef" ref="$.PageDetail[*]"/>
-                     <font size="11pt"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">if(PS.Page.subPSMetadata.DocSubType.rawValue == "PS20" || PS.Page.subPSMetadata.DocSubType.rawValue == "PS21" || PS.Page.subPSMetadata.DocSubType.rawValue == "PS22")
+{
+	this.rawValue = "Pakkseddel";
+}
+else
+{
+	this.rawValue = "Ordreseddel";
+}
+
+</script>
+                     </event>
                   </field>
-                  <draw name="fldPageDetail" w="266.7mm" h="4.175mm">
+                  <draw name="fldPageTitle" y="13mm" x="21.001mm" w="29.2864mm" h="5.2331mm">
                      <ui>
                         <textEdit/>
                      </ui>
                      <value>
                         <exData contentType="text/html">
-                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField001921"/></p></body>
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField007189"/></p></body>
                         </exData>
                      </value>
-                     <font size="11pt"/>
-                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1mm" rightInset="1mm"/>
+                     <font size="12pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
                   </draw>
-                  <occur min="0" max="-1"/>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subFlowedPage" layout="tb">
+                  <bind match="none"/>
+                  <subform name="subPageDetail" layout="tb" w="284mm">
+                     <bind match="none"/>
+                     <field name="floPageDetail" y="0mm" x="0mm" w="267mm" h="9mm" id="floatingField013523" presence="hidden" access="protected">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <bind match="dataRef" ref="$.PageDetail[*]"/>
+                        <font size="11pt"/>
+                     </field>
+                     <draw name="fldPageDetail" w="266.7mm" h="4.175mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField013523"/></p></body>
+                           </exData>
+                        </value>
+                        <font size="11pt"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1mm" rightInset="1mm"/>
+                     </draw>
+                     <occur min="0" max="-1"/>
+                     <?templateDesigner expand 1?></subform>
+                  <margin topInset="9mm"/>
+                  <?templateDesigner expand 1?></subform>
+               <breakBefore/>
+               <subform name="subPageInfo" x="162mm" w="121.999mm" h="184.998mm">
+                  <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                  <bind match="dataRef" ref="$.PageInfo"/>
+                  <field name="floOrderType" x="0mm" w="62mm" h="9mm" id="floatingField007724" presence="hidden" access="readOnly" y="1mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.OrderType"/>
+                  </field>
+                  <draw name="txtOrderType" rotate="270" minW="20.999mm" minH="6mm" x="100.466mm" y="52mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField007724"/><span style="xfa-spacerun:yes">  </span></p></body>
+                        </exData>
+                     </value>
+                     <font size="24pt" typeface="Arial" weight="bold"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                  </draw>
+                  <field name="fldInvoiceNo" access="readOnly" h="3mm" w="10mm" x="25mm" y="0.001mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Fraktnr</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                     </border>
+                  </field>
+                  <field name="barInvoiceNo" w="33mm" h="12mm" access="readOnly" x="25mm" y="3mm">
+                     <ui>
+                        <barcode type="code128B" wideNarrowRatio="fixed" checksum="auto" dataLength="6"/>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <value>
+                        <text>654321</text>
+                     </value>
+                     <bind match="dataRef" ref="$.InvoiceNo"/>
+                  </field>
+                  <field name="barOrderNo" w="33mm" h="12mm" access="readOnly" x="82mm" y="171mm">
+                     <ui>
+                        <barcode type="code128B" wideNarrowRatio="fixed" checksum="auto" dataLength="5"/>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <value>
+                        <text>12345</text>
+                     </value>
+                     <bind match="dataRef" ref="$.OrderNo"/>
+                  </field>
+                  <field name="txtOrdreNo" access="readOnly" h="3mm" w="10mm" x="82mm" y="168mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Ordrenr.</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                     </border>
+                  </field>
                   <?templateDesigner expand 1?></subform>
                <?templateDesigner expand 1?></subform>
+            <subform w="288.925mm" h="190mm" name="subCopyPageHolder">
+               <bind match="dataRef" ref="$.CopyPage"/>
+               <occur min="0" max="-1"/>
+               <subform name="subPageTitle" x="221.999mm" w="62mm" h="25.233mm" y="0.001mm">
+                  <bind match="none"/>
+                  <field name="floPageTitle" y="0mm" x="0mm" w="62mm" h="9mm" presence="hidden" access="readOnly" id="floatingField007401">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <event activity="initialize" name="event__initialize">
+                        <script contentType="application/x-javascript">
+this.rawValue = "Ordrekopi";
+</script>
+                     </event>
+                  </field>
+                  <draw name="fldPageTitle" y="20mm" x="21.001mm" w="29.2864mm" h="5.2331mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField007401"/></p></body>
+                        </exData>
+                     </value>
+                     <font size="12pt" typeface="Arial" weight="bold" baselineShift="0pt"/>
+                     <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+                  </draw>
+                  <?templateDesigner expand 1?></subform>
+               <subform name="subFlowedPage" layout="tb" y="0.001mm">
+                  <bind match="none"/>
+                  <subform name="subPageDetail" layout="tb" w="284mm">
+                     <bind match="none"/>
+                     <field name="floPageDetail" y="0mm" x="0mm" w="267mm" h="9mm" presence="hidden" access="protected" id="floatingField001921">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <margin topInset="0mm" bottomInset="0mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <bind match="dataRef" ref="$.PageDetail[*]"/>
+                        <font size="11pt"/>
+                     </field>
+                     <draw name="fldPageDetail" w="266.7mm" h="4.175mm">
+                        <ui>
+                           <textEdit/>
+                        </ui>
+                        <value>
+                           <exData contentType="text/html">
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField001921"/></p></body>
+                           </exData>
+                        </value>
+                        <font size="11pt"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="1mm" rightInset="1mm"/>
+                     </draw>
+                     <occur min="0" max="-1"/>
+                     <?templateDesigner expand 1?></subform>
+                  <?templateDesigner expand 1?>
+                  <margin topInset="9mm"/>
+               </subform>
+               <?templateDesigner expand 1?>
+               <subform name="subPageInfo" x="162mm" w="121.999mm" h="184.998mm">
+                  <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                  <bind match="dataRef" ref="$.PageInfo"/>
+                  <field name="floOrderType" x="0mm" w="62mm" h="9mm" presence="hidden" access="readOnly" y="1mm" id="floatingField027548">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Myriad Pro"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <bind match="dataRef" ref="$.OrderType"/>
+                  </field>
+                  <draw name="txtOrderType" rotate="270" minW="20.999mm" minH="6mm" x="100.466mm" y="52mm">
+                     <ui>
+                        <textEdit/>
+                     </ui>
+                     <value>
+                        <exData contentType="text/html">
+                           <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/"><p style="letter-spacing:0in"><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField027548"/><span style="xfa-spacerun:yes">  </span></p></body>
+                        </exData>
+                     </value>
+                     <font size="24pt" typeface="Arial" weight="bold"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                  </draw>
+                  <field name="fldInvoiceNo" access="readOnly" h="3mm" w="10mm" x="25mm" y="0.001mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Fraktnr</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                     </border>
+                  </field>
+                  <field name="barInvoiceNo" w="33mm" h="12mm" access="readOnly" x="25mm" y="3mm">
+                     <ui>
+                        <barcode type="code128B" wideNarrowRatio="fixed" checksum="auto" dataLength="6"/>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <value>
+                        <text>654321</text>
+                     </value>
+                     <bind match="dataRef" ref="$.InvoiceNo"/>
+                  </field>
+                  <field name="barOrderNo" w="33mm" h="12mm" access="readOnly" x="82mm" y="170.999mm">
+                     <ui>
+                        <barcode type="code128B" wideNarrowRatio="fixed" checksum="auto" dataLength="5"/>
+                     </ui>
+                     <font typeface="Courier New"/>
+                     <value>
+                        <text>12345</text>
+                     </value>
+                     <bind match="dataRef" ref="$.OrderNo"/>
+                  </field>
+                  <field name="txtOrdreNo" access="readOnly" h="3mm" w="10mm" x="82mm" y="168mm">
+                     <ui>
+                        <textEdit>
+                           <border presence="hidden"/>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial" size="6pt"/>
+                     <margin topInset="0mm" bottomInset="0.5mm" leftInset="0mm" rightInset="0mm"/>
+                     <bind match="none"/>
+                     <caption reserve="0in">
+                        <value>
+                           <text>Ordrenr.</text>
+                        </value>
+                        <para vAlign="bottom"/>
+                     </caption>
+                     <para vAlign="bottom"/>
+                     <border>
+                        <edge thickness="0.3mm" presence="hidden"/>
+                        <corner thickness="0.3mm" presence="hidden"/>
+                     </border>
+                  </field>
+                  <?templateDesigner expand 1?></subform>
+            </subform>
+            <occur min="0" max="-1"/>
             <?templateDesigner expand 1?></subform>
          <?templateDesigner expand 1?></subform>
       <proto/>
@@ -745,14 +1070,14 @@
       </desc>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 100 26 00030011002400250026002700280029002A002B002C002D002E002F003000310032003300350036003700380039003C0063 .ABCDEFGHIJKLMNOPRSTUVYÅ?>
-      <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 84 21 00040011001200130014001600250027003100420045004600470048004A004D004F00500055005C005E#01235DFPadefgilnot{}?></subform>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 148 38 00030011002400250026002700280029002A002B002C002D002E002F003000310032003300350036003700380039003C004400470048004E004F00500051005200550056005700590063 .ABCDEFGHIJKLMNOPRSTUVYadeklmnorstvÅ?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 108 28 00030028002A002C002E002F0030003200330035003600370044004700480049004A004C004F0052005300550057005C005E00600091 EGIKLMOPRSTadefgiloprty{}Ø?>
+      <?renderCache.subset "Courier New" 0 0 ISO-8859-1 4 24 6 001400150016001700180019123456?>
+      <?renderCache.subset "Courier Std" 0 0 ISO-8859-1 4 48 12 002500310042004600470048004A004D00500055005C005EDPaefgilot{}?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner SavePDFWithLog 0?>
    <?templateDesigner Grid show:1, snap:1, units:17, color:ff8080, origin:(0,0), interval:(25000,25000), objsnap:0, guidesnap:0, pagecentersnap:0?>
-   <?templateDesigner Zoom 125?>
-   <?templateDesigner FormTargetVersion 30?>
    <?originalXFAVersion http://www.xfa.org/schema/xfa-template/3.0/?>
    <?templateDesigner DefaultLanguage JavaScript?>
    <?templateDesigner DefaultRunAt client?>
@@ -766,9 +1091,11 @@
    <?templateDesigner DefaultPreviewType interactive?>
    <?templateDesigner DefaultPreviewPagination simplex?>
    <?templateDesigner XDPPreviewFormat 20?>
-   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\PS\PS_example.xml?>
+   <?templateDesigner DefaultPreviewDataFileName ..\..\..\Dropbox\Dafolo\Kunder\MøllerGruppen\2014\Udvikling\NO\PS\PS_example_updated.xml?>
    <?templateDesigner DefaultCaptionFontSettings face:Arial;size:9;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Arial;size:9;weight:normal;style:normal?>
+   <?templateDesigner FormTargetVersion 30?>
+   <?templateDesigner Zoom 118?>
    <?templateDesigner SaveTaggedPDF 0?>
    <?templateDesigner SavePDFWithEmbeddedFonts 0?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
@@ -811,7 +1138,7 @@
    <xsdConnection name="DataConnection" dataDescription="PS">
       <uri>.\XSD\PSLC.xsd</uri>
       <rootElement>PS</rootElement>
-      <?templateDesigner fileDigest shaHash="px1T9FgTzezHHAysMVnF2sVUXg0="?></xsdConnection>
+      <?templateDesigner fileDigest shaHash="bnm2eYKag0JUyfvfT3Qta+2qsUA="?></xsdConnection>
 </connectionSet>
 <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
    <xfa:data xfa:dataNode="dataGroup"/>
@@ -844,22 +1171,24 @@
                <TestLabel/>
             </DocumentHeader>
             <Pages>
-               <Page dd:maxOccur="-1">
-                  <PageInfo dd:minOccur="0">
-                     <OrderType/>
-                     <OrderNo/>
-                     <InvoiceNo/>
-                  </PageInfo>
-                  <PageDetail dd:maxOccur="-1"/>
-               </Page>
-               <CopyPage dd:minOccur="0" dd:maxOccur="-1">
-                  <PageInfo dd:minOccur="0">
-                     <OrderType/>
-                     <OrderNo/>
-                     <InvoiceNo/>
-                  </PageInfo>
-                  <PageDetail dd:maxOccur="-1"/>
-               </CopyPage>
+               <PageAndCopy dd:maxOccur="-1">
+                  <Page>
+                     <PageInfo dd:minOccur="0">
+                        <OrderType/>
+                        <OrderNo/>
+                        <InvoiceNo/>
+                     </PageInfo>
+                     <PageDetail dd:maxOccur="-1"/>
+                  </Page>
+                  <CopyPage dd:minOccur="0">
+                     <PageInfo dd:minOccur="0">
+                        <OrderType/>
+                        <OrderNo/>
+                        <InvoiceNo/>
+                     </PageInfo>
+                     <PageDetail dd:maxOccur="-1"/>
+                  </CopyPage>
+               </PageAndCopy>
             </Pages>
          </Document>
       </PS>
@@ -972,14 +1301,14 @@
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.2-c001 63.139439, 2011/06/07-10:39:26        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" rdf:about="">
-         <xmp:MetadataDate>2014-06-24T13:49:25Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2014-07-14T08:54:47Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer ES 10.0</xmp:CreatorTool>
       </rdf:Description>
       <rdf:Description xmlns:pdf="http://ns.adobe.com/pdf/1.3/" rdf:about="">
          <pdf:Producer>Adobe LiveCycle Designer ES 10.0</pdf:Producer>
       </rdf:Description>
       <rdf:Description xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" rdf:about="">
-         <xmpMM:DocumentID>uuid:0a96374c-4aea-413e-8f69-6361763e62c8</xmpMM:DocumentID>
+         <xmpMM:DocumentID>uuid:2f654838-7f5e-4e7e-971a-203f0d111a4b</xmpMM:DocumentID>
       </rdf:Description>
       <rdf:Description xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
          <desc:version rdf:parseType="Resource">
